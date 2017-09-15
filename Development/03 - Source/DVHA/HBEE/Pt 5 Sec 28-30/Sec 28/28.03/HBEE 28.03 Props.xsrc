@@ -1,0 +1,391 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b32" type="boolean" public-name="si_person_fulltime_student_b">
+        <text>
+          <base>the person is a full-time student</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('a full-time student'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b34" type="boolean" public-name="si_person_receiving_mediciad_b">
+        <text>
+          <base>the person is currently receiving Medicaid benefits</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('currently receiving Medicaid benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" public-name="si_person_filetaxreturn_b">
+        <text>
+          <base>the person is going to file a federal income tax return for the benefit year</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('going to file a federal income tax return for the benefit year'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b39" type="boolean" public-name="si_person_custody_b">
+        <text>
+          <base>the person's parents have a court order or binding separation, divorce, or custody agreement establishing the parent who has sole physical custody of the person</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person''s parents',plural),o('a court order or binding separation, divorce, or custody agreement establishing the parent who has sole physical custody of the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b41" type="boolean" public-name="si_person_sponsor_204INA_b">
+        <text>
+          <base>the person was admitted to the United States based on a sponsorship under 204 of the INA</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person',singular),o('admitted to the United States based on a sponsorship under 204 of the INA'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b48" type="boolean" public-name="so_HBEE28.03BdgtMon20150715_b">
+        <text>
+          <base>the budgeting period is monthly for the person's financial group under HBEE 28.03(g)(1) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the budgeting period',singular),o('monthly for the person''s financial group under HBEE 28.03(g)(1) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b49" type="boolean" public-name="so_HBEE28.03BdgtYr20150715_b">
+        <text>
+          <base>the budgeting period is annual for the person's financial group under HBEE 28.03(g)(2) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the budgeting period',singular),o('annual for the person''s financial group under HBEE 28.03(g)(2) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b60" type="boolean" public-name="si_tax-file-year-bene_b">
+        <text>
+          <base>the person is required to file a federal income tax return for the benefit year</base>
+          <parse>s(ver('10.4.6.76'),v(require,t(simple,present,normal)),ob('the person',singular),o('to file a federal income tax return for the benefit year'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b23" type="boolean" public-name="st_program_incomestandard_28.03_b">
+        <text>
+          <base>the program is the eligibility group with the highest income standard under which the person may be determined eligible using MAGI-based methodologies</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('the eligibility group with the highest income standard under which the person may be determined eligible using MAGI-based methodologies'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p6" type="currency" public-name="si_person_income_disregard_28.03c4_c">
+        <text>
+          <base>the monthly income disregard for the person's financial group for the program under HBEE 28.03(c)(4) (eff. 07/15/2015)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p7" type="currency" public-name="si_person_income_disregard_28.03c4datesyr_c">
+        <text>
+          <base>the annual income disregard for the person's financial group for the program under HBEE 28.03(c)(4)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" public-name="so_person_altreqs_28.03h_b">
+        <text>
+          <base>the person meets the alternative eligibility requirements for the program under HBEE 28.03(h) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the alternative eligibility requirements for the program under HBEE 28.03(h) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b45" type="boolean" public-name="so_program_altreqs_28.03h_b">
+        <text>
+          <base>there are alternative eligibility requirements for the program under HBEE 28.03(h) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',plural),o('alternative eligibility requirements for the program under HBEE 28.03(h) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b50" type="boolean" public-name="st_pgPrsnMtsAltElgbltyRqmtsUndHBEE2803h_b">
+        <text>
+          <base>the person meets the alternative eligibility requirements for the program under HBEE 28.03(h)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the alternative eligibility requirements for the program under HBEE 28.03(h)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p17" type="currency" public-name="si_person_5perFPL_28.03c4_c">
+        <text>
+          <base>5 percent of the FPL for the person's applicable family size for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p20" type="currency" public-name="si_person_income_disregard_28.03c4dates_c">
+        <text>
+          <base>the monthly income disregard for the person's financial group for the program under HBEE 28.03(c)(4)</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="p21" type="currency" public-name="si_person_income_disregard_28.03c4yr_c">
+        <text>
+          <base>the annual income disregard for the person's financial group for the program under HBEE 28.03(c)(4) (eff. 07/15/2015)</base>
+          <parse />
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+      <attribute name="b30" type="boolean" public-name="si_person_income_provided_28.03c3_b">
+        <text>
+          <base>the person's income is provided by the tax filer claiming the person as a tax dependent</base>
+          <parse>s(ver('10.4.6.76'),v(provide,t(simple,present,normal)),ob('the person''s income',singular),o('by the tax filer claiming the person as a tax dependent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean" public-name="so_person_income_exclusion_28.03c3_b">
+        <text>
+          <base>the person's income is excluded under HBEE 28.03(c)(3) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 28.03(c)(3) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b44" type="boolean" public-name="so_person_income_exclusion_28.03d_b">
+        <text>
+          <base>the person's income is excluded under HBEE 28.03(d)(3) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 28.03(d)(3) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p10" type="currency" public-name="si_piAmtIncmUsdFrEdctnPrps_c">
+        <text>
+          <base>the amount of the person's income used for education purposes</base>
+        </text>
+      </attribute>
+      <attribute name="b47" type="boolean" public-name="so_HBEE28.03IncExcl20150715_b">
+        <text>
+          <base>the person's income is excluded under HBEE 28.03 (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 28.03 (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p12" type="currency" public-name="st_piEdctlIncmExclsUndHBEE2803d2Eff071515_c">
+        <text>
+          <base>the educational income exclusion for the person's income under HBEE 28.03(d)(2) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p13" type="currency" public-name="st_piEdctlIncmExclsnUndHBEE2803d2_c">
+        <text>
+          <base>the educational income exclusion for the person's income under HBEE 28.03(d)(2)</base>
+        </text>
+      </attribute>
+      <attribute name="b61" type="boolean" public-name="so_HBEE28.03IncExcl_b">
+        <text>
+          <base>the person's income is excluded under HBEE 28.03</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 28.03'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b62" type="boolean" public-name="si_IncTypScholarship_b">
+        <text>
+          <base>the person's income is a scholarship, award, or fellowship grant</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a scholarship, award, or fellowship grant'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b63" type="boolean" public-name="si_incAianOffresResourceDist_b">
+        <text>
+          <base>the person's income is a distribution from federally protected rights regarding off-reservation hunting, fishing, gathering, or usage of natural resources</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a distribution from federally protected rights regarding off-reservation hunting, fishing, gathering, or usage of natural resources'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b64" type="boolean" public-name="si_incAianRentUsageDist_b">
+        <text>
+          <base>the person's income is a distribution and payments from rents, leases, rights of way, royalties, usage rights, or natural resource extraction and harvest</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a distribution and payments from rents, leases, rights of way, royalties, usage rights, or natural resource extraction and harvest'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b65" type="boolean" public-name="si_incTypeCashSupport_b">
+        <text>
+          <base>the person's income is cash support</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('cash support'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b66" type="boolean" public-name="si_incTypeAlaskaDist_b">
+        <text>
+          <base>the person's income is a distribution from Alaska Native Corporations and Settlement Trusts</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a distribution from Alaska Native Corporations and Settlement Trusts'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b67" type="boolean" public-name="si_incTypeBiaEdu_b">
+        <text>
+          <base>the person's income is student financial assistance provided under the Bureau of Indian Affairs education programs</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('student financial assistance provided under the Bureau of Indian Affairs education programs'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b68" type="boolean" public-name="si_incTypePropertyNatRes_b">
+        <text>
+          <base>the person's income is a distribution resulting from real property ownership interests related to natural resources and improvements</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a distribution resulting from real property ownership interests related to natural resources and improvements'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b69" type="boolean" public-name="si_incAianCultural_b">
+        <text>
+          <base>the person's income is a payment resulting from ownership interests in or usage rights to items that have unique religious, spiritual, traditional, or cultural significance or rights that support subsistence or a traditional lifestyle according to applicable tribal law or custom</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a payment resulting from ownership interests in or usage rights to items that have unique religious, spiritual, traditional, or cultural significance or rights that support subsistence or a traditional lifestyle according to applicable tribal law or custom'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b70" type="boolean" public-name="si_incAianPropUnderSecInt_b">
+        <text>
+          <base>the person's income is a distribution from any property held in trust, subject to federal restrictions, located within the most recent boundaries of a prior federal reservation, or otherwise under the supervision of the Secretary of the Interior</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a distribution from any property held in trust, subject to federal restrictions, located within the most recent boundaries of a prior federal reservation, or otherwise under the supervision of the Secretary of the Interior'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b71" type="boolean" public-name="si_piIsDstrbnRsltgFrmExcsOfFedPrtctdRghts_b">
+        <text>
+          <base>the person's income is a distribution resulting from the exercise of federally-protected rights relating to such real property ownership interests</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a distribution resulting from the exercise of federally-protected rights relating to such real property ownership interests'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+      <attribute name="b1" type="boolean" public-name="st_gmPersonChildUndHBEE28.03e1iEff071515_b">
+        <text>
+          <base>the group member is considered to be the person's child under HBEE 28.03(e)(1)(i) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the group member',singular),o('to be the person''s child under HBEE 28.03(e)(1)(i) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b2" type="boolean" public-name="st_groupmem_person_parent_28.03e1ii_b">
+        <text>
+          <base>the group member is considered to be the person's parent under HBEE 28.03(e)(1)(ii) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the group member',singular),o('to be the person''s parent under HBEE 28.03(e)(1)(ii) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" public-name="st_groupmem_person_sibling_28.03e1iii_b">
+        <text>
+          <base>the group member is considered to be the person's sibling under HBEE 28.03(e)(1)(iii) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the group member',singular),o('to be the person''s sibling under HBEE 28.03(e)(1)(iii) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" public-name="st_groupmem_person_hh_28.03e_b">
+        <text>
+          <base>the group member is included in the person's household under HBEE 28.03(e) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(include,t(simple,present,normal)),ob('the group member',singular),o('in the person''s household under HBEE 28.03(e) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" public-name="st_groupmem_person_hh_28.03e3_b">
+        <text>
+          <base>the group member is included in the person's household under HBEE 28.03(e)(3) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(include,t(simple,present,normal)),ob('the group member',singular),o('in the person''s household under HBEE 28.03(e)(3) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" public-name="st_groupmem_person_hh_28.03e4_b">
+        <text>
+          <base>the group member is included in the person's household under HBEE 28.03(e)(4) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(include,t(simple,present,normal)),ob('the group member',singular),o('in the person''s household under HBEE 28.03(e)(4) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" public-name="st_groupmem_person_hh_28.03e5_b">
+        <text>
+          <base>the group member is included in the person's household under HBEE 28.03(e)(5) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(include,t(simple,present,normal)),ob('the group member',singular),o('in the person''s household under HBEE 28.03(e)(5) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" public-name="st_groupmem_finresp_group_28.03c5i_b">
+        <text>
+          <base>the group member is a member of the person's financial responsibility group under HBEE 28.03(c)(5)(i) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('a member of the person''s financial responsibility group under HBEE 28.03(c)(5)(i) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" public-name="so_groupmem_income_inc_28.03c1_b">
+        <text>
+          <base>the group member's MAGI-based income is included in the person's household income under HBEE 28.03(c)(1) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(include,t(simple,present,normal)),ob('the group member''s MAGI-based income',singular),o('in the person''s household income under HBEE 28.03(c)(1) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" public-name="st_groupmem_person_tax_depen_28.03a_b">
+        <text>
+          <base>the group member is considered to be the person's tax dependent under HBEE 28.03(a) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the group member',singular),o('to be the person''s tax dependent under HBEE 28.03(a) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" public-name="st_person_groupmem_tax_depen_28.03a_b">
+        <text>
+          <base>the person is considered to be the group member's tax dependent under HBEE 28.03(a) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be the group member''s tax dependent under HBEE 28.03(a) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" public-name="st_groupmem_custodial_par_28.03e3iii_b">
+        <text>
+          <base>the group member is considered to be the person's custodial parent under HBEE 28.03(e)(3)(iii) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the group member',singular),o('to be the person''s custodial parent under HBEE 28.03(e)(3)(iii) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" public-name="st_groupmem_custodial_par_28.03e3iiiA_b">
+        <text>
+          <base>the group member is considered to be the person's custodial parent under HBEE 28.03(e)(3)(iii)(A) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the group member',singular),o('to be the person''s custodial parent under HBEE 28.03(e)(3)(iii)(A) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" public-name="st_groupmem_custodial_par_28.03e3iiiB_b">
+        <text>
+          <base>the group member is considered to be the person's custodial parent under HBEE 28.03(e)(3)(iii)(B) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the group member',singular),o('to be the person''s custodial parent under HBEE 28.03(e)(3)(iii)(B) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b53" type="boolean" public-name="st_gmIsIncldInHshldUndHBEE2803e2Eff071515_b">
+        <text>
+          <base>the group member is included in the person's household under HBEE 28.03(e)(2) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(include,t(simple,present,normal)),ob('the group member',singular),o('in the person''s household under HBEE 28.03(e)(2) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b54" type="boolean" public-name="st_gmIsIncldInHshldUndHBEE2803j1Eff071515_b">
+        <text>
+          <base>the group member is included in the person's household under HBEE 28.03(j)(1) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(include,t(simple,present,normal)),ob('the group member',singular),o('in the person''s household under HBEE 28.03(j)(1) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b55" type="boolean" public-name="st_gmMAGIBsdIncmIsIncldInHshldIncUndHBEE2803j2Eff071515_b">
+        <text>
+          <base>the group member's MAGI-based income is included in the person's household income under HBEE 28.03(j)(2) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(include,t(simple,present,normal)),ob('the group member''s MAGI-based income',singular),o('in the person''s household income under HBEE 28.03(j)(2) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+      <attribute name="b56" type="boolean" public-name="st_gmpMAGIBsdIncIsIncldInHshldIncUndHBEE2803_b">
+        <text>
+          <base>the group member's MAGI-based income is included in the person's household income for the group member program under HBEE 28.03</base>
+          <parse>s(ver('10.4.6.76'),v(include,t(simple,present,normal)),ob('the group member''s MAGI-based income',singular),o('in the person''s household income for the group member program under HBEE 28.03'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b57" type="boolean" public-name="so_HBEE28.03GrpFin201500715_b">
+        <text>
+          <base>the group member's MAGI-based income is included in the person's household income for the group member program under HBEE 28.03 (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(include,t(simple,present,normal)),ob('the group member''s MAGI-based income',singular),o('in the person''s household income for the group member program under HBEE 28.03 (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b58" type="boolean" public-name="st_gmpIsIncldInHshldUndHBEE2803Eff071515_b">
+        <text>
+          <base>the group member is included in the person's household for the group member program under HBEE 28.03 (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(include,t(simple,present,normal)),ob('the group member',singular),o('in the person''s household for the group member program under HBEE 28.03 (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b59" type="boolean" public-name="st_gmpMbrIsIncldInHshldUndHBEE2803_b">
+        <text>
+          <base>the group member is included in the person's household for the group member program under HBEE 28.03</base>
+          <parse>s(ver('10.4.6.76'),v(include,t(simple,present,normal)),ob('the group member',singular),o('in the person''s household for the group member program under HBEE 28.03'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p18" type="number" public-name="st_gmpNmbrAdtlPplToIncldInFmlySzUndHBEE2803j3Eff071515_n">
+        <text>
+          <base>the number of additional people to include in the person's family size for the group member program under HBEE 28.03(j)(3) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p19" type="number" public-name="st_gmpNumAdtlPplToIncldInFmlySzUndHBEE2803j3_n">
+        <text>
+          <base>the number of additional people to include in the person's family size for the group member program under HBEE 28.03(j)(3)</base>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

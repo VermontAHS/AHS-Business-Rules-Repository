@@ -1,0 +1,1652 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-script product-version="10.4.6.76" schema-version="4">
+  <test-case-set>
+    <test-case name="Alex/Bobby divorced. both apply. Income &lt;133 FPL, Chris 16 yr old in institution, passes VT residency" notes="Scenario 36.    21.04 - Residency - Placement in OOS institution + basic scenario #6. &#xD;&#xA;                         Chris is placed by the State of Vermont in a New Hampshire inpatient mental health facility. &#xD;&#xA;	      Chris is 16 years of age.  &#xD;&#xA;	      Result = Chris passes the VT residency test&#xD;&#xA;">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <attr-inst name="i_g_timestamp" text="the transaction date time" type="datetime">
+            <val>
+              <datetime-val>2017-02-08T08:34:58</datetime-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_g_application-date" text="the application date" type="date">
+            <val>
+              <date-val>2017-02-08</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_g_primary-ID" text="the primary person's ID" type="text">
+            <val>
+              <text-val>Bobby</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true">
+              <ent-inst-ref ref-id="CSR-AIAN-300" />
+              <ent-inst-ref ref-id="CSR-Tier3" />
+              <ent-inst-ref ref-id="APTC" />
+              <ent-inst-ref ref-id="CSR-Tier1" />
+              <ent-inst-ref ref-id="MCA-Pregnant" />
+              <ent-inst-ref ref-id="CSR-Tier4" />
+              <ent-inst-ref ref-id="MN-MCA" />
+              <ent-inst-ref ref-id="MCA-Adult" />
+              <ent-inst-ref ref-id="MCA-Child" />
+              <ent-inst-ref ref-id="CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="MCA-TMA-1925" />
+              <ent-inst-ref ref-id="VPR" />
+              <ent-inst-ref ref-id="MCA-EXT" />
+              <ent-inst-ref ref-id="QHP" />
+              <ent-inst-ref ref-id="MCA-PCR" />
+              <ent-inst-ref ref-id="CSR-Tier2" />
+            </relationship-inst>
+            <relationship-inst type="existingbenefitplans" complete="true" />
+            <relationship-inst type="caseresults" complete="true">
+              <ent-inst-ref ref-id="Insurance Premium Tax Credit" />
+              <ent-inst-ref ref-id="Insurance Cost-Sharing Reduction" />
+              <ent-inst-ref ref-id="Insurance Premium Reduction" />
+              <ent-inst-ref ref-id="Medical Care Benefits" />
+              <ent-inst-ref ref-id="Insurance Exchange Access" />
+            </relationship-inst>
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+              <ent-inst-ref ref-id="person 2" />
+              <ent-inst-ref ref-id="person 3" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="true">
+              <ent-inst-ref ref-id="address 1" />
+              <ent-inst-ref ref-id="address 2" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="program" entity-text="the program" inferred="yes" identifying-attribute="rb_p_ID">
+        <ent-inst id="Bobby|CSR-AIAN-IHP" />
+        <ent-inst id="Alex|CSR-AIAN-300" />
+        <ent-inst id="Bobby|MN-MCA" />
+        <ent-inst id="Alex|MN-MCA" />
+        <ent-inst id="Alex|CSR-Tier1" />
+        <ent-inst id="Alex|MCA-TMA-1925" />
+        <ent-inst id="Bobby|APTC" />
+        <ent-inst id="Bobby|CSR-Tier4" />
+        <ent-inst id="Alex|MCA-Adult" />
+        <ent-inst id="Alex|MCA-PCR" />
+        <ent-inst id="Bobby|CSR-Tier3" />
+        <ent-inst id="Bobby|MCA-Child" />
+        <ent-inst id="Alex|CSR-Tier4" />
+        <ent-inst id="Bobby|CSR-AIAN-300" />
+        <ent-inst id="Alex|MCA-Pregnant" />
+        <ent-inst id="Bobby|MCA-EXT" />
+        <ent-inst id="Alex|CSR-Tier3" />
+        <ent-inst id="Bobby|MCA-PCR" />
+        <ent-inst id="Alex|QHP" />
+        <ent-inst id="Bobby|MCA-Pregnant" />
+        <ent-inst id="Alex|MCA-EXT" />
+        <ent-inst id="Bobby|QHP" />
+        <ent-inst id="Bobby|CSR-Tier1" />
+        <ent-inst id="Bobby|MCA-TMA-1925" />
+        <ent-inst id="Alex|MCA-Child" />
+        <ent-inst id="Bobby|CSR-Tier2" />
+        <ent-inst id="Alex|APTC" />
+        <ent-inst id="Bobby|MCA-Adult">
+          <attr-inst name="rb_p_req-eligibility" text="the person meets all of the eligibility requirements for the program" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2016-08-01">
+                <boolean-val>true</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="rb_p_numGrpNeed" text="the number of people in the person's need group for the program" type="number">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2016-01-01">
+                <number-val>3.0</number-val>
+              </change-point>
+              <change-point date="2017-01-01">
+                <number-val>2.0</number-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Alex|CSR-Tier2" />
+        <ent-inst id="Alex|CSR-AIAN-IHP" />
+        <ent-inst id="Alex|VPR" />
+        <ent-inst id="Bobby|VPR" />
+        <ent-inst id="Chris|CSR-Tier2" />
+        <ent-inst id="Chris|CSR-Tier3" />
+        <ent-inst id="Chris|MCA-EXT" />
+        <ent-inst id="Chris|MCA-Adult" />
+        <ent-inst id="Chris|MCA-Child">
+          <attr-inst name="rb_p_numGrpNeed" text="the number of people in the person's need group for the program" type="number">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2016-08-01">
+                <number-val>2.0</number-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="rb_p_req-eligibility" text="the person meets all of the eligibility requirements for the program" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2016-08-01">
+                <boolean-val>true</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Chris|CSR-Tier1" />
+        <ent-inst id="Chris|CSR-AIAN-300" />
+        <ent-inst id="Chris|VPR" />
+        <ent-inst id="Chris|MN-MCA" />
+        <ent-inst id="Chris|CSR-AIAN-IHP" />
+        <ent-inst id="Chris|MCA-PCR" />
+        <ent-inst id="Chris|MCA-Pregnant" />
+        <ent-inst id="Chris|QHP" />
+        <ent-inst id="Chris|CSR-Tier4" />
+        <ent-inst id="Chris|MCA-TMA-1925" />
+        <ent-inst id="Chris|APTC" />
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="si_bPerWillFileJointRet_b" text="the person will file a joint return for the benefit year" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesHomeOwn_b" text="the person lives in the person's own home" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_enroll703a1Past_b" text="it is the case that the person was eligible for and enrolled in Medicaid coverage under HBEE 7.03(a)(1)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_cPerOtherTaxFilerClaimDed_b" text="another tax filer can claim the person as a dependent for a benefit year beginning in the calendar year in which the person's benefit year begins" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personStRsdncIsVermont_b" text="the person lives in Vermont" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_eligMedicareB_b" text="it is the case that the person is entitled to or enrolled in Medicare part B" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_eligMedicareA_b" text="it is the case that the person is entitled to or enrolled in Medicare part A" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsMntlAge7BsdOnTstAcptToAHS_b" text="the person has a mental age of 7 years or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsIQ49BsdOnTstAcptToAHS_b" text="the person has an I.Q. of 49 or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_AHSDetermineEligibility_b" text="it is the case that HHS has notified AHS that the person, or the person's spouse if married, did not comply with the requirement to file an income tax return in order to reconcile APTC payments for a year for which tax data would be utilized for verification of household income and family size" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resIntendVT_b" text="the person intends to reside in Vermont" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personJgdLglyCompetent_b" text="the person is judged legally incompetent" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personRcvgFedPymtsFrFostrCrAdptnAsstUndHBEE2107Eff073014_b" text="the person is receiving federal payments for foster care or adoption assistance under Title IV-E of the Social Security Act" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_filetaxreturn_b" text="the person is going to file a federal income tax return for the benefit year" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_recvAABD_b" text="the person is receiving AABD" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_AttestEstPatObtSup_b" text="the person is cooperating in establishing paternity and obtaining medical support and payments" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ResOutOfState_b" text="the person is currently out of state" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesFacCorrections_b" text="the person is living in a correctional facility" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ineligMedicaidPast12_b" text="the person became ineligible for Medicaid coverage during the preceding 12 months" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perIncarcerated_b" text="the person is incarcerated" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personReasonablyExpectsBeACitiOrNational_b" text="the person is reasonably expected to be a citizen or national for the entire period for which QHP enrollment is sought" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_aPerTaxFiler_b" text="the person is expected to file a federal income tax return for the benefit year" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personFndIncpblIndctIntBsdOnMedDocs_b" text="the person is found incapable of indicating intent based on medical documentation obtained from a physician, psychologist, or other person licensed by the state in the field of intellectual disabilities" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_ssn-none" text="it is the case that the person does not have a social security number" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ineligMedicaidPast4_b" text="the person became ineligible for Medicaid coverage during the preceding 4 months" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesInst_b" text="the person lives in an institution" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_receiving_mediciad_b" text="the person is currently receiving Medicaid benefits" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Alex</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_interstateAgree_b" text="the person's residency is subject to an interstate agreement" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1988-08-08</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personSSNVrfdbyAHS_b" text="the person has provided the person's social security number" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_bPerConsMarr1.7703-1_b" text="the person is considered married at the close of the benefit year under 26 CFR 1.7703-1" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_Pregnant_b" text="the person is pregnant" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="rb_per_AGI-Adjustment-Grp" text="the total adjustment to taxable gross income for the person's tax household" type="currency">
+            <val>
+              <currency-val>0.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citUsNat_b" text="the person is a U.S. Citizen or National" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="true" />
+            <relationship-inst type="personsresources" complete="true" />
+            <relationship-inst type="personsincomes" complete="true" />
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 1" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="related-party 3" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="true" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Alex|Chris" />
+              <ent-inst-ref ref-id="Alex|Alex" />
+              <ent-inst-ref ref-id="Alex|Bobby" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true">
+              <ent-inst-ref ref-id="Alex|CSR-Tier3" />
+              <ent-inst-ref ref-id="Alex|MCA-Child" />
+              <ent-inst-ref ref-id="Alex|MCA-Adult" />
+              <ent-inst-ref ref-id="Alex|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Alex|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Alex|QHP" />
+              <ent-inst-ref ref-id="Alex|CSR-Tier4" />
+              <ent-inst-ref ref-id="Alex|VPR" />
+              <ent-inst-ref ref-id="Alex|CSR-AIAN-300" />
+              <ent-inst-ref ref-id="Alex|MN-MCA" />
+              <ent-inst-ref ref-id="Alex|CSR-Tier2" />
+              <ent-inst-ref ref-id="Alex|MCA-EXT" />
+              <ent-inst-ref ref-id="Alex|CSR-Tier1" />
+              <ent-inst-ref ref-id="Alex|APTC" />
+              <ent-inst-ref ref-id="Alex|MCA-PCR" />
+              <ent-inst-ref ref-id="Alex|CSR-AIAN-IHP" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 2">
+          <attr-inst name="si_livesHomeOwn_b" text="the person lives in the person's own home" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_enroll703a1Past_b" text="it is the case that the person was eligible for and enrolled in Medicaid coverage under HBEE 7.03(a)(1)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_cPerOtherTaxFilerClaimDed_b" text="another tax filer can claim the person as a dependent for a benefit year beginning in the calendar year in which the person's benefit year begins" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personStRsdncIsVermont_b" text="the person lives in Vermont" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_eligMedicareB_b" text="it is the case that the person is entitled to or enrolled in Medicare part B" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_eligMedicareA_b" text="it is the case that the person is entitled to or enrolled in Medicare part A" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_employeeESP_HBEE23.01c_b" text="the person is an employee of an employer offering an eligible employer-sponsored plan" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personAtstIsTxFlrWhoNotAplctHsSSNFldTxRtrn_b" text="the person attests that there is a tax filer who is not an applicant, has a Social Security number, and filed a tax return for the year for which the person's tax data would be utilized for verification of household income and family size" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsMntlAge7BsdOnTstAcptToAHS_b" text="the person has a mental age of 7 years or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsIQ49BsdOnTstAcptToAHS_b" text="the person has an I.Q. of 49 or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_partc_title_xviii_b" text="the person is eligible for a Medicare advantage plan pursuant to part C of Title XVIII of the Act" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_AHSDetermineEligibility_b" text="it is the case that HHS has notified AHS that the person, or the person's spouse if married, did not comply with the requirement to file an income tax return in order to reconcile APTC payments for a year for which tax data would be utilized for verification of household income and family size" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_refugeeMedicalAssist_b" text="the person is eligible for refugee medical assistance supported by the Administration for Children and Families" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resIntendVT_b" text="the person intends to reside in Vermont" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personJgdLglyCompetent_b" text="the person is judged legally incompetent" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_HBEE23.01c_canEnroll_b" text="the person can enroll in an offered eligible employer-sponsored plan as a qualified related individual to the employee" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personRcvgFedPymtsFrFostrCrAdptnAsstUndHBEE2107Eff073014_b" text="the person is receiving federal payments for foster care or adoption assistance under Title IV-E of the Social Security Act" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_filetaxreturn_b" text="the person is going to file a federal income tax return for the benefit year" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_recvAABD_b" text="the person is receiving AABD" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_AttestEstPatObtSup_b" text="the person is cooperating in establishing paternity and obtaining medical support and payments" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ResOutOfState_b" text="the person is currently out of state" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesFacCorrections_b" text="the person is living in a correctional facility" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_req-iap" text="the person is requesting insurance affordability assistance" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personStateHighRiskPool" text="the person is eligible for coverage under a State high risk pool coverage plan" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personSelfFundedStudentInst_b" text="the person is eligible for self-funded student health coverage offered to students by an institution of higher education where the institution assumes the risk for payment of claims" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perIncarcerated_b" text="the person is incarcerated" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personReasonablyExpectsBeACitiOrNational_b" text="the person is reasonably expected to be a citizen or national for the entire period for which QHP enrollment is sought" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_aPerTaxFiler_b" text="the person is expected to file a federal income tax return for the benefit year" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personFndIncpblIndctIntBsdOnMedDocs_b" text="the person is found incapable of indicating intent based on medical documentation obtained from a physician, psychologist, or other person licensed by the state in the field of intellectual disabilities" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_ssn-none" text="it is the case that the person does not have a social security number" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ineligMedicaidPast4_b" text="the person became ineligible for Medicaid coverage during the preceding 4 months" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesInst_b" text="the person lives in an institution" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_elig703a2Past_b" text="it is the case that the person was eligible for and enrolled in Medicaid coverage under HBEE 7.03(a)(2)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_receiving_mediciad_b" text="the person is currently receiving Medicaid benefits" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Bobby</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_interstateAgree_b" text="the person's residency is subject to an interstate agreement" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1988-08-08</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personSSNVrfdbyAHS_b" text="the person has provided the person's social security number" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_Pregnant_b" text="the person is pregnant" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citUsNat_b" text="the person is a U.S. Citizen or National" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_coopTPL_b" text="the person is cooperating in identifying and providing information to assist in pursuing third parties who may be liable to pay for care and services under the plan" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="rb_per_AGI-Adjustment-Grp" text="the total adjustment to taxable gross income for the person's tax household" type="currency">
+            <val>
+              <currency-val>0.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_bPerWillFileJointRet_b" text="the person will file a joint return for the benefit year" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="true" />
+            <relationship-inst type="personsresources" complete="true" />
+            <relationship-inst type="personsincomes" complete="true">
+              <ent-inst-ref ref-id="income 2" />
+            </relationship-inst>
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 2" />
+              <ent-inst-ref ref-id="person-address 4" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestedbenefits" complete="true">
+              <ent-inst-ref ref-id="Bobby|Insurance Premium Tax Credit" />
+              <ent-inst-ref ref-id="Bobby|Insurance Cost-Sharing Reduction" />
+              <ent-inst-ref ref-id="Bobby|Insurance Premium Reduction" />
+              <ent-inst-ref ref-id="Bobby|Medical Care Benefits" />
+              <ent-inst-ref ref-id="Bobby|Insurance Exchange Access" />
+            </relationship-inst>
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="related-party 1" />
+              <ent-inst-ref ref-id="related-party 2" />
+              <ent-inst-ref ref-id="related-party 6" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true">
+              <ent-inst-ref ref-id="Bobby|Insurance Affordability Assistance" />
+            </relationship-inst>
+            <relationship-inst type="personsexpenses" complete="true" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Bobby|Bobby" />
+              <ent-inst-ref ref-id="Bobby|Alex" />
+              <ent-inst-ref ref-id="Bobby|Chris" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true">
+              <ent-inst-ref ref-id="Bobby|MCA-EXT" />
+              <ent-inst-ref ref-id="Bobby|CSR-Tier2" />
+              <ent-inst-ref ref-id="Bobby|CSR-Tier3" />
+              <ent-inst-ref ref-id="Bobby|MCA-PCR" />
+              <ent-inst-ref ref-id="Bobby|MCA-Adult" />
+              <ent-inst-ref ref-id="Bobby|CSR-Tier1" />
+              <ent-inst-ref ref-id="Bobby|MN-MCA" />
+              <ent-inst-ref ref-id="Bobby|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Bobby|CSR-Tier4" />
+              <ent-inst-ref ref-id="Bobby|QHP" />
+              <ent-inst-ref ref-id="Bobby|CSR-AIAN-300" />
+              <ent-inst-ref ref-id="Bobby|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Bobby|VPR" />
+              <ent-inst-ref ref-id="Bobby|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Bobby|MCA-Child" />
+              <ent-inst-ref ref-id="Bobby|APTC" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 3">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Chris</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_req-iap" text="the person is requesting insurance affordability assistance" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_cPerOtherTaxFilerClaimDed_b" text="another tax filer can claim the person as a dependent for a benefit year beginning in the calendar year in which the person's benefit year begins" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_aPerTaxFiler_b" text="the person is expected to file a federal income tax return for the benefit year" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_filetaxreturn_b" text="the person is going to file a federal income tax return for the benefit year" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_Pregnant_b" text="the person is pregnant" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>2001-03-13</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_interstateAgree_b" text="the person's residency is subject to an interstate agreement" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesInst_b" text="the person lives in an institution" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_recvAABD_b" text="the person is receiving AABD" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personRcvgFedPymtsFrFostrCrAdptnAsstUndHBEE2107Eff073014_b" text="the person is receiving federal payments for foster care or adoption assistance under Title IV-E of the Social Security Act" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsIQ49BsdOnTstAcptToAHS_b" text="the person has an I.Q. of 49 or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsMntlAge7BsdOnTstAcptToAHS_b" text="the person has a mental age of 7 years or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personJgdLglyCompetent_b" text="the person is judged legally incompetent" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personFndIncpblIndctIntBsdOnMedDocs_b" text="the person is found incapable of indicating intent based on medical documentation obtained from a physician, psychologist, or other person licensed by the state in the field of intellectual disabilities" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_Emancipated_b" text="the person is emancipated from the person's parent" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_IsMarried_b" text="the person is married" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personStRsdncIsVermont_b" text="the person lives in Vermont" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personReasonablyExpectsBeACitiOrNational_b" text="the person is reasonably expected to be a citizen or national for the entire period for which QHP enrollment is sought" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citUsNat_b" text="the person is a U.S. Citizen or National" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_ssn-none" text="it is the case that the person does not have a social security number" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personSSNVrfdbyAHS_b" text="the person has provided the person's social security number" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesHomeOwn_b" text="the person lives in the person's own home" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesHomeOther_b" text="the person lives in the household of another person" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesFacCorrections_b" text="the person is living in a correctional facility" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_AttestEstPatObtSup_b" text="the person is cooperating in establishing paternity and obtaining medical support and payments" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_coopTPL_b" text="the person is cooperating in identifying and providing information to assist in pursuing third parties who may be liable to pay for care and services under the plan" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_receiving_mediciad_b" text="the person is currently receiving Medicaid benefits" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_tax-file-year-bene_b" text="the person is required to file a federal income tax return for the benefit year" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="rb_per_AGI-Adjustment-Grp" text="the total adjustment to taxable gross income for the person's tax household" type="currency">
+            <val>
+              <currency-val>0.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_StatePlacedPerson_b" text="the person has been placed in an institution by a state agency or entity recognized under state law as being under contract with the state for such purposes" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_StatePlacedPersonVT_b" text="the person has been placed in an institution located in another state by a State of Vermont agency or entity recognized under state law as being under contract with the state for such purposes" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ResidenceInTimeOfPlacement_b" text="the person's parent's (or legal guardian's if parental rights were terminated) state of residence was Vermont at the time the person was placed in the institution" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ResidenceParentOrGuardianWhoFiled_b" text="the current state of residence of the person's parent (or legal guardian if parental rights are terminated) who filed the application is Vermont" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resIntendVT_b" text="the person intends to reside in Vermont" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resHomeOtherStateReturn_b" text="the person owns a home as defined in 29.08(a)(1) in another state to which the person intends to return" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="true" />
+            <relationship-inst type="personsresources" complete="true" />
+            <relationship-inst type="personsincomes" complete="true" />
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 3" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestedbenefits" complete="true">
+              <ent-inst-ref ref-id="Chris|Insurance Premium Tax Credit" />
+              <ent-inst-ref ref-id="Chris|Insurance Exchange Access" />
+              <ent-inst-ref ref-id="Chris|Medical Care Benefits" />
+              <ent-inst-ref ref-id="Chris|Insurance Cost-Sharing Reduction" />
+              <ent-inst-ref ref-id="Chris|Insurance Premium Reduction" />
+            </relationship-inst>
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true">
+              <ent-inst-ref ref-id="Chris|Insurance Affordability Assistance" />
+            </relationship-inst>
+            <relationship-inst type="personsexpenses" complete="true" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Chris|Alex" />
+              <ent-inst-ref ref-id="Chris|Bobby" />
+              <ent-inst-ref ref-id="Chris|Chris" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true">
+              <ent-inst-ref ref-id="Chris|VPR" />
+              <ent-inst-ref ref-id="Chris|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Chris|CSR-AIAN-300" />
+              <ent-inst-ref ref-id="Chris|MN-MCA" />
+              <ent-inst-ref ref-id="Chris|CSR-Tier4" />
+              <ent-inst-ref ref-id="Chris|CSR-Tier3" />
+              <ent-inst-ref ref-id="Chris|APTC" />
+              <ent-inst-ref ref-id="Chris|CSR-Tier1" />
+              <ent-inst-ref ref-id="Chris|QHP" />
+              <ent-inst-ref ref-id="Chris|MCA-Child" />
+              <ent-inst-ref ref-id="Chris|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Chris|MCA-Adult" />
+              <ent-inst-ref ref-id="Chris|MCA-PCR" />
+              <ent-inst-ref ref-id="Chris|CSR-Tier2" />
+              <ent-inst-ref ref-id="Chris|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Chris|MCA-EXT" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Bobby|Bobby">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Bobby|Bobby|CSR-AIAN-300" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MN-MCA" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MCA-PCR" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MCA-Child" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Bobby|Bobby|CSR-Tier2" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Bobby|Bobby|CSR-Tier3" />
+              <ent-inst-ref ref-id="Bobby|Bobby|QHP" />
+              <ent-inst-ref ref-id="Bobby|Bobby|CSR-Tier1" />
+              <ent-inst-ref ref-id="Bobby|Bobby|CSR-Tier4" />
+              <ent-inst-ref ref-id="Bobby|Bobby|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MCA-EXT" />
+              <ent-inst-ref ref-id="Bobby|Bobby|APTC" />
+              <ent-inst-ref ref-id="Bobby|Bobby|VPR" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MCA-Adult" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Chris|Alex">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Chris|Alex|APTC" />
+              <ent-inst-ref ref-id="Chris|Alex|QHP" />
+              <ent-inst-ref ref-id="Chris|Alex|CSR-Tier1" />
+              <ent-inst-ref ref-id="Chris|Alex|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Chris|Alex|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Chris|Alex|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Chris|Alex|MN-MCA" />
+              <ent-inst-ref ref-id="Chris|Alex|CSR-Tier4" />
+              <ent-inst-ref ref-id="Chris|Alex|MCA-EXT" />
+              <ent-inst-ref ref-id="Chris|Alex|CSR-AIAN-300" />
+              <ent-inst-ref ref-id="Chris|Alex|CSR-Tier2" />
+              <ent-inst-ref ref-id="Chris|Alex|MCA-Adult" />
+              <ent-inst-ref ref-id="Chris|Alex|MCA-Child" />
+              <ent-inst-ref ref-id="Chris|Alex|VPR" />
+              <ent-inst-ref ref-id="Chris|Alex|MCA-PCR" />
+              <ent-inst-ref ref-id="Chris|Alex|CSR-Tier3" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Alex|Alex">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Alex|Alex|MCA-Child" />
+              <ent-inst-ref ref-id="Alex|Alex|CSR-Tier4" />
+              <ent-inst-ref ref-id="Alex|Alex|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Alex|Alex|APTC" />
+              <ent-inst-ref ref-id="Alex|Alex|MCA-EXT" />
+              <ent-inst-ref ref-id="Alex|Alex|MCA-Adult" />
+              <ent-inst-ref ref-id="Alex|Alex|VPR" />
+              <ent-inst-ref ref-id="Alex|Alex|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Alex|Alex|CSR-Tier2" />
+              <ent-inst-ref ref-id="Alex|Alex|CSR-Tier1" />
+              <ent-inst-ref ref-id="Alex|Alex|CSR-AIAN-300" />
+              <ent-inst-ref ref-id="Alex|Alex|CSR-Tier3" />
+              <ent-inst-ref ref-id="Alex|Alex|MCA-PCR" />
+              <ent-inst-ref ref-id="Alex|Alex|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Alex|Alex|MN-MCA" />
+              <ent-inst-ref ref-id="Alex|Alex|QHP" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Alex|Bobby">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Alex|Bobby|QHP" />
+              <ent-inst-ref ref-id="Alex|Bobby|MCA-PCR" />
+              <ent-inst-ref ref-id="Alex|Bobby|CSR-Tier1" />
+              <ent-inst-ref ref-id="Alex|Bobby|CSR-AIAN-300" />
+              <ent-inst-ref ref-id="Alex|Bobby|APTC" />
+              <ent-inst-ref ref-id="Alex|Bobby|VPR" />
+              <ent-inst-ref ref-id="Alex|Bobby|CSR-Tier3" />
+              <ent-inst-ref ref-id="Alex|Bobby|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Alex|Bobby|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Alex|Bobby|MN-MCA" />
+              <ent-inst-ref ref-id="Alex|Bobby|MCA-EXT" />
+              <ent-inst-ref ref-id="Alex|Bobby|CSR-Tier2" />
+              <ent-inst-ref ref-id="Alex|Bobby|MCA-Child" />
+              <ent-inst-ref ref-id="Alex|Bobby|MCA-Adult" />
+              <ent-inst-ref ref-id="Alex|Bobby|CSR-Tier4" />
+              <ent-inst-ref ref-id="Alex|Bobby|MCA-Pregnant" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bobby|Chris">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Bobby|Chris|CSR-Tier2" />
+              <ent-inst-ref ref-id="Bobby|Chris|CSR-AIAN-300" />
+              <ent-inst-ref ref-id="Bobby|Chris|MCA-Child" />
+              <ent-inst-ref ref-id="Bobby|Chris|CSR-Tier4" />
+              <ent-inst-ref ref-id="Bobby|Chris|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Bobby|Chris|CSR-Tier3" />
+              <ent-inst-ref ref-id="Bobby|Chris|CSR-Tier1" />
+              <ent-inst-ref ref-id="Bobby|Chris|MN-MCA" />
+              <ent-inst-ref ref-id="Bobby|Chris|APTC" />
+              <ent-inst-ref ref-id="Bobby|Chris|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Bobby|Chris|MCA-EXT" />
+              <ent-inst-ref ref-id="Bobby|Chris|MCA-PCR" />
+              <ent-inst-ref ref-id="Bobby|Chris|QHP" />
+              <ent-inst-ref ref-id="Bobby|Chris|VPR" />
+              <ent-inst-ref ref-id="Bobby|Chris|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Bobby|Chris|MCA-Adult" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Chris|Bobby">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Chris|Bobby|MCA-Child" />
+              <ent-inst-ref ref-id="Chris|Bobby|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Chris|Bobby|MCA-EXT" />
+              <ent-inst-ref ref-id="Chris|Bobby|APTC" />
+              <ent-inst-ref ref-id="Chris|Bobby|CSR-Tier2" />
+              <ent-inst-ref ref-id="Chris|Bobby|CSR-Tier3" />
+              <ent-inst-ref ref-id="Chris|Bobby|CSR-Tier1" />
+              <ent-inst-ref ref-id="Chris|Bobby|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Chris|Bobby|CSR-Tier4" />
+              <ent-inst-ref ref-id="Chris|Bobby|CSR-AIAN-300" />
+              <ent-inst-ref ref-id="Chris|Bobby|MN-MCA" />
+              <ent-inst-ref ref-id="Chris|Bobby|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Chris|Bobby|VPR" />
+              <ent-inst-ref ref-id="Chris|Bobby|MCA-PCR" />
+              <ent-inst-ref ref-id="Chris|Bobby|QHP" />
+              <ent-inst-ref ref-id="Chris|Bobby|MCA-Adult" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bobby|Alex">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Bobby|Alex|MN-MCA" />
+              <ent-inst-ref ref-id="Bobby|Alex|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Bobby|Alex|APTC" />
+              <ent-inst-ref ref-id="Bobby|Alex|CSR-Tier4" />
+              <ent-inst-ref ref-id="Bobby|Alex|VPR" />
+              <ent-inst-ref ref-id="Bobby|Alex|CSR-AIAN-300" />
+              <ent-inst-ref ref-id="Bobby|Alex|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Bobby|Alex|MCA-Child" />
+              <ent-inst-ref ref-id="Bobby|Alex|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Bobby|Alex|CSR-Tier2" />
+              <ent-inst-ref ref-id="Bobby|Alex|CSR-Tier3" />
+              <ent-inst-ref ref-id="Bobby|Alex|MCA-Adult" />
+              <ent-inst-ref ref-id="Bobby|Alex|MCA-EXT" />
+              <ent-inst-ref ref-id="Bobby|Alex|MCA-PCR" />
+              <ent-inst-ref ref-id="Bobby|Alex|QHP" />
+              <ent-inst-ref ref-id="Bobby|Alex|CSR-Tier1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Chris|Chris">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Chris|Chris|VPR" />
+              <ent-inst-ref ref-id="Chris|Chris|CSR-Tier4" />
+              <ent-inst-ref ref-id="Chris|Chris|QHP" />
+              <ent-inst-ref ref-id="Chris|Chris|CSR-Tier1" />
+              <ent-inst-ref ref-id="Chris|Chris|MCA-EXT" />
+              <ent-inst-ref ref-id="Chris|Chris|CSR-Tier3" />
+              <ent-inst-ref ref-id="Chris|Chris|CSR-Tier2" />
+              <ent-inst-ref ref-id="Chris|Chris|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Chris|Chris|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Chris|Chris|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Chris|Chris|MCA-Adult" />
+              <ent-inst-ref ref-id="Chris|Chris|MN-MCA" />
+              <ent-inst-ref ref-id="Chris|Chris|APTC" />
+              <ent-inst-ref ref-id="Chris|Chris|MCA-PCR" />
+              <ent-inst-ref ref-id="Chris|Chris|MCA-Child" />
+              <ent-inst-ref ref-id="Chris|Chris|CSR-AIAN-300" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Alex|Chris">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Alex|Chris|MCA-EXT" />
+              <ent-inst-ref ref-id="Alex|Chris|MN-MCA" />
+              <ent-inst-ref ref-id="Alex|Chris|MCA-Child" />
+              <ent-inst-ref ref-id="Alex|Chris|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Alex|Chris|CSR-Tier2" />
+              <ent-inst-ref ref-id="Alex|Chris|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Alex|Chris|CSR-Tier4" />
+              <ent-inst-ref ref-id="Alex|Chris|CSR-Tier1" />
+              <ent-inst-ref ref-id="Alex|Chris|CSR-AIAN-300" />
+              <ent-inst-ref ref-id="Alex|Chris|MCA-Adult" />
+              <ent-inst-ref ref-id="Alex|Chris|MCA-PCR" />
+              <ent-inst-ref ref-id="Alex|Chris|CSR-Tier3" />
+              <ent-inst-ref ref-id="Alex|Chris|QHP" />
+              <ent-inst-ref ref-id="Alex|Chris|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Alex|Chris|APTC" />
+              <ent-inst-ref ref-id="Alex|Chris|VPR" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmemberprogram" entity-text="the group member program" inferred="yes" identifying-attribute="rb_gmp_ID">
+        <ent-inst id="Bobby|Alex|MN-MCA" />
+        <ent-inst id="Bobby|Alex|CSR-Tier3" />
+        <ent-inst id="Bobby|Chris|MCA-TMA-1925" />
+        <ent-inst id="Bobby|Alex|QHP" />
+        <ent-inst id="Bobby|Alex|CSR-Tier4" />
+        <ent-inst id="Bobby|Alex|CSR-AIAN-300" />
+        <ent-inst id="Bobby|Alex|CSR-Tier2" />
+        <ent-inst id="Bobby|Bobby|CSR-AIAN-IHP" />
+        <ent-inst id="Bobby|Chris|MCA-Child" />
+        <ent-inst id="Bobby|Bobby|CSR-Tier3" />
+        <ent-inst id="Bobby|Bobby|CSR-Tier4" />
+        <ent-inst id="Bobby|Alex|MCA-Pregnant" />
+        <ent-inst id="Bobby|Chris|CSR-Tier3" />
+        <ent-inst id="Bobby|Alex|CSR-Tier1" />
+        <ent-inst id="Bobby|Bobby|CSR-Tier1" />
+        <ent-inst id="Bobby|Chris|CSR-AIAN-IHP" />
+        <ent-inst id="Bobby|Bobby|MCA-Adult" />
+        <ent-inst id="Bobby|Bobby|APTC" />
+        <ent-inst id="Bobby|Chris|APTC" />
+        <ent-inst id="Bobby|Alex|MCA-TMA-1925" />
+        <ent-inst id="Bobby|Bobby|MCA-TMA-1925" />
+        <ent-inst id="Bobby|Chris|CSR-Tier2" />
+        <ent-inst id="Bobby|Chris|CSR-AIAN-300" />
+        <ent-inst id="Bobby|Bobby|MN-MCA" />
+        <ent-inst id="Bobby|Chris|MCA-Pregnant" />
+        <ent-inst id="Bobby|Bobby|VPR" />
+        <ent-inst id="Bobby|Chris|MN-MCA" />
+        <ent-inst id="Bobby|Chris|VPR" />
+        <ent-inst id="Bobby|Bobby|MCA-PCR" />
+        <ent-inst id="Bobby|Bobby|MCA-Pregnant" />
+        <ent-inst id="Bobby|Alex|MCA-PCR" />
+        <ent-inst id="Bobby|Bobby|MCA-Child" />
+        <ent-inst id="Bobby|Bobby|MCA-EXT" />
+        <ent-inst id="Bobby|Chris|MCA-EXT" />
+        <ent-inst id="Bobby|Bobby|CSR-Tier2" />
+        <ent-inst id="Bobby|Bobby|CSR-AIAN-300" />
+        <ent-inst id="Bobby|Alex|MCA-Adult" />
+        <ent-inst id="Bobby|Alex|MCA-EXT" />
+        <ent-inst id="Bobby|Alex|APTC" />
+        <ent-inst id="Bobby|Alex|MCA-Child" />
+        <ent-inst id="Bobby|Alex|VPR" />
+        <ent-inst id="Bobby|Alex|CSR-AIAN-IHP" />
+        <ent-inst id="Bobby|Chris|MCA-Adult" />
+        <ent-inst id="Bobby|Chris|MCA-PCR" />
+        <ent-inst id="Bobby|Chris|CSR-Tier1" />
+        <ent-inst id="Bobby|Chris|QHP" />
+        <ent-inst id="Bobby|Bobby|QHP" />
+        <ent-inst id="Bobby|Chris|CSR-Tier4" />
+        <ent-inst id="Chris|Chris|CSR-AIAN-300" />
+        <ent-inst id="Chris|Bobby|MCA-TMA-1925" />
+        <ent-inst id="Chris|Alex|CSR-AIAN-IHP" />
+        <ent-inst id="Chris|Alex|CSR-Tier4" />
+        <ent-inst id="Chris|Bobby|CSR-AIAN-IHP" />
+        <ent-inst id="Chris|Alex|MCA-Pregnant" />
+        <ent-inst id="Chris|Alex|QHP" />
+        <ent-inst id="Chris|Bobby|VPR" />
+        <ent-inst id="Chris|Alex|APTC" />
+        <ent-inst id="Chris|Alex|CSR-AIAN-300" />
+        <ent-inst id="Chris|Alex|MCA-Adult" />
+        <ent-inst id="Chris|Alex|VPR" />
+        <ent-inst id="Chris|Alex|CSR-Tier3" />
+        <ent-inst id="Chris|Bobby|CSR-Tier4" />
+        <ent-inst id="Chris|Chris|MCA-Pregnant" />
+        <ent-inst id="Chris|Chris|MCA-Child" />
+        <ent-inst id="Chris|Bobby|MN-MCA" />
+        <ent-inst id="Chris|Chris|MCA-TMA-1925" />
+        <ent-inst id="Chris|Chris|CSR-Tier4" />
+        <ent-inst id="Chris|Chris|MCA-Adult" />
+        <ent-inst id="Chris|Alex|CSR-Tier1" />
+        <ent-inst id="Chris|Chris|CSR-AIAN-IHP" />
+        <ent-inst id="Chris|Bobby|MCA-Adult" />
+        <ent-inst id="Chris|Chris|CSR-Tier1" />
+        <ent-inst id="Chris|Alex|MCA-EXT" />
+        <ent-inst id="Chris|Chris|APTC" />
+        <ent-inst id="Chris|Chris|MCA-PCR" />
+        <ent-inst id="Chris|Chris|VPR" />
+        <ent-inst id="Chris|Chris|CSR-Tier3" />
+        <ent-inst id="Chris|Chris|QHP" />
+        <ent-inst id="Chris|Bobby|MCA-Child" />
+        <ent-inst id="Chris|Bobby|APTC" />
+        <ent-inst id="Chris|Bobby|CSR-Tier2" />
+        <ent-inst id="Chris|Bobby|CSR-Tier3" />
+        <ent-inst id="Chris|Bobby|MCA-EXT" />
+        <ent-inst id="Chris|Chris|MCA-EXT" />
+        <ent-inst id="Chris|Alex|MCA-Child" />
+        <ent-inst id="Chris|Bobby|MCA-Pregnant" />
+        <ent-inst id="Chris|Alex|MCA-TMA-1925" />
+        <ent-inst id="Chris|Bobby|QHP" />
+        <ent-inst id="Chris|Bobby|CSR-Tier1" />
+        <ent-inst id="Chris|Bobby|CSR-AIAN-300" />
+        <ent-inst id="Chris|Alex|CSR-Tier2" />
+        <ent-inst id="Chris|Alex|MN-MCA" />
+        <ent-inst id="Chris|Chris|MN-MCA" />
+        <ent-inst id="Chris|Chris|CSR-Tier2" />
+        <ent-inst id="Chris|Bobby|MCA-PCR" />
+        <ent-inst id="Chris|Alex|MCA-PCR" />
+        <ent-inst id="Alex|Chris|CSR-AIAN-300" />
+        <ent-inst id="Alex|Chris|CSR-AIAN-IHP" />
+        <ent-inst id="Alex|Alex|MCA-EXT" />
+        <ent-inst id="Alex|Bobby|CSR-AIAN-IHP" />
+        <ent-inst id="Alex|Bobby|MCA-Child" />
+        <ent-inst id="Alex|Alex|CSR-Tier2" />
+        <ent-inst id="Alex|Chris|MCA-Adult" />
+        <ent-inst id="Alex|Alex|CSR-Tier3" />
+        <ent-inst id="Alex|Alex|MN-MCA" />
+        <ent-inst id="Alex|Chris|APTC" />
+        <ent-inst id="Alex|Bobby|MCA-EXT" />
+        <ent-inst id="Alex|Bobby|MCA-Adult" />
+        <ent-inst id="Alex|Bobby|MN-MCA" />
+        <ent-inst id="Alex|Alex|QHP" />
+        <ent-inst id="Alex|Alex|CSR-Tier1" />
+        <ent-inst id="Alex|Chris|MCA-EXT" />
+        <ent-inst id="Alex|Bobby|CSR-Tier3" />
+        <ent-inst id="Alex|Bobby|CSR-Tier4" />
+        <ent-inst id="Alex|Bobby|MCA-Pregnant" />
+        <ent-inst id="Alex|Bobby|MCA-TMA-1925" />
+        <ent-inst id="Alex|Chris|QHP" />
+        <ent-inst id="Alex|Bobby|MCA-PCR" />
+        <ent-inst id="Alex|Bobby|CSR-Tier2" />
+        <ent-inst id="Alex|Alex|CSR-AIAN-IHP" />
+        <ent-inst id="Alex|Bobby|VPR" />
+        <ent-inst id="Alex|Alex|CSR-Tier4" />
+        <ent-inst id="Alex|Chris|CSR-Tier1" />
+        <ent-inst id="Alex|Alex|MCA-TMA-1925" />
+        <ent-inst id="Alex|Alex|MCA-Child" />
+        <ent-inst id="Alex|Alex|MCA-Pregnant" />
+        <ent-inst id="Alex|Chris|MCA-PCR" />
+        <ent-inst id="Alex|Alex|MCA-PCR" />
+        <ent-inst id="Alex|Chris|MCA-TMA-1925" />
+        <ent-inst id="Alex|Alex|MCA-Adult" />
+        <ent-inst id="Alex|Bobby|CSR-AIAN-300" />
+        <ent-inst id="Alex|Chris|CSR-Tier3" />
+        <ent-inst id="Alex|Chris|CSR-Tier2" />
+        <ent-inst id="Alex|Bobby|CSR-Tier1" />
+        <ent-inst id="Alex|Alex|CSR-AIAN-300" />
+        <ent-inst id="Alex|Chris|VPR" />
+        <ent-inst id="Alex|Alex|VPR" />
+        <ent-inst id="Alex|Chris|MCA-Pregnant" />
+        <ent-inst id="Alex|Chris|CSR-Tier4" />
+        <ent-inst id="Alex|Chris|MN-MCA" />
+        <ent-inst id="Alex|Bobby|APTC" />
+        <ent-inst id="Alex|Chris|MCA-Child" />
+        <ent-inst id="Alex|Alex|APTC" />
+        <ent-inst id="Alex|Bobby|QHP" />
+      </ent-set>
+      <ent-set entity-type="income" entity-text="the person's income">
+        <ent-inst id="income 2">
+          <attr-inst name="i_inc_type" text="the person's income's type" type="text">
+            <val>
+              <text-val>Self-Employment</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incAianRentUsageDist_b" text="the person's income is a distribution and payments from rents, leases, rights of way, royalties, usage rights, or natural resource extraction and harvest" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeAlaskaDist_b" text="the person's income is a distribution from Alaska Native Corporations and Settlement Trusts" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeBiaEdu_b" text="the person's income is student financial assistance provided under the Bureau of Indian Affairs education programs" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_inc_freq" text="the person's income's payment frequency" type="text">
+            <val>
+              <text-val>Annually</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_IncTypScholarship_b" text="the person's income is a scholarship, award, or fellowship grant" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypePropertyNatRes_b" text="the person's income is a distribution resulting from real property ownership interests related to natural resources and improvements" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incAianCultural_b" text="the person's income is a payment resulting from ownership interests in or usage rights to items that have unique religious, spiritual, traditional, or cultural significance or rights that support subsistence or a traditional lifestyle according to applicable tribal law or custom" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_inc_amt" text="the person's income's amount" type="currency">
+            <val>
+              <currency-val>20000.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incAianPropUnderSecInt_b" text="the person's income is a distribution from any property held in trust, subject to federal restrictions, located within the most recent boundaries of a prior federal reservation, or otherwise under the supervision of the Secretary of the Interior" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsincomesincomeprograms" complete="true">
+              <ent-inst-ref ref-id="Self-Employment ($20,000.00; Annually)|MCA-Adult" />
+              <ent-inst-ref ref-id="Self-Employment ($20,000.00; Annually)|CSR-Tier2" />
+              <ent-inst-ref ref-id="Self-Employment ($20,000.00; Annually)|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Self-Employment ($20,000.00; Annually)|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Self-Employment ($20,000.00; Annually)|MCA-PCR" />
+              <ent-inst-ref ref-id="Self-Employment ($20,000.00; Annually)|CSR-Tier1" />
+              <ent-inst-ref ref-id="Self-Employment ($20,000.00; Annually)|CSR-AIAN-300" />
+              <ent-inst-ref ref-id="Self-Employment ($20,000.00; Annually)|VPR" />
+              <ent-inst-ref ref-id="Self-Employment ($20,000.00; Annually)|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Self-Employment ($20,000.00; Annually)|MCA-EXT" />
+              <ent-inst-ref ref-id="Self-Employment ($20,000.00; Annually)|APTC" />
+              <ent-inst-ref ref-id="Self-Employment ($20,000.00; Annually)|QHP" />
+              <ent-inst-ref ref-id="Self-Employment ($20,000.00; Annually)|MN-MCA" />
+              <ent-inst-ref ref-id="Self-Employment ($20,000.00; Annually)|MCA-Child" />
+              <ent-inst-ref ref-id="Self-Employment ($20,000.00; Annually)|CSR-Tier3" />
+              <ent-inst-ref ref-id="Self-Employment ($20,000.00; Annually)|CSR-Tier4" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="incomeprogram" entity-text="the income program" inferred="yes" identifying-attribute="rb_incp_ID">
+        <ent-inst id="Self-Employment ($20,000.00; Annually)|QHP" />
+        <ent-inst id="Self-Employment ($20,000.00; Annually)|CSR-Tier1" />
+        <ent-inst id="Self-Employment ($20,000.00; Annually)|CSR-AIAN-IHP" />
+        <ent-inst id="Self-Employment ($20,000.00; Annually)|MN-MCA" />
+        <ent-inst id="Self-Employment ($20,000.00; Annually)|APTC" />
+        <ent-inst id="Self-Employment ($20,000.00; Annually)|MCA-TMA-1925" />
+        <ent-inst id="Self-Employment ($20,000.00; Annually)|CSR-Tier2" />
+        <ent-inst id="Self-Employment ($20,000.00; Annually)|MCA-EXT" />
+        <ent-inst id="Self-Employment ($20,000.00; Annually)|VPR" />
+        <ent-inst id="Self-Employment ($20,000.00; Annually)|CSR-Tier3" />
+        <ent-inst id="Self-Employment ($20,000.00; Annually)|MCA-PCR" />
+        <ent-inst id="Self-Employment ($20,000.00; Annually)|MCA-Adult" />
+        <ent-inst id="Self-Employment ($20,000.00; Annually)|CSR-AIAN-300" />
+        <ent-inst id="Self-Employment ($20,000.00; Annually)|CSR-Tier4" />
+        <ent-inst id="Self-Employment ($20,000.00; Annually)|MCA-Child" />
+        <ent-inst id="Self-Employment ($20,000.00; Annually)|MCA-Pregnant" />
+      </ent-set>
+      <ent-set entity-type="personsrequestedbenefit" entity-text="the person's requested benefit" inferred="yes" identifying-attribute="rb_reqb_ID">
+        <ent-inst id="Bobby|Medical Care Benefits">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bobby|Medical Care Benefits|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bobby|Insurance Exchange Access">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bobby|Insurance Exchange Access|1" />
+              <ent-inst-ref ref-id="Bobby|Insurance Exchange Access|3" />
+              <ent-inst-ref ref-id="Bobby|Insurance Exchange Access|2" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bobby|Insurance Premium Reduction">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bobby|Insurance Premium Reduction|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bobby|Insurance Cost-Sharing Reduction">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bobby|Insurance Cost-Sharing Reduction|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bobby|Insurance Premium Tax Credit">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bobby|Insurance Premium Tax Credit|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Chris|Insurance Exchange Access">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Chris|Insurance Exchange Access|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Chris|Insurance Premium Tax Credit">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Chris|Insurance Premium Tax Credit|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Chris|Insurance Cost-Sharing Reduction">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Chris|Insurance Cost-Sharing Reduction|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Chris|Insurance Premium Reduction">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Chris|Insurance Premium Reduction|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Chris|Medical Care Benefits">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Chris|Medical Care Benefits|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="result" entity-text="the result" inferred="yes" identifying-attribute="rb_rslt_ID">
+        <ent-inst id="Bobby|Medical Care Benefits|1" />
+        <ent-inst id="Bobby|Insurance Exchange Access|2" />
+        <ent-inst id="Bobby|Insurance Premium Tax Credit|1" />
+        <ent-inst id="Bobby|Insurance Exchange Access|3" />
+        <ent-inst id="Bobby|Insurance Exchange Access|1" />
+        <ent-inst id="Bobby|Insurance Premium Reduction|1" />
+        <ent-inst id="Bobby|Insurance Cost-Sharing Reduction|1" />
+        <ent-inst id="Chris|Insurance Cost-Sharing Reduction|1" />
+        <ent-inst id="Chris|Medical Care Benefits|1" />
+        <ent-inst id="Chris|Insurance Exchange Access|1" />
+        <ent-inst id="Chris|Insurance Premium Tax Credit|1" />
+        <ent-inst id="Chris|Insurance Premium Reduction|1" />
+      </ent-set>
+      <ent-set entity-type="case-result" entity-text="the case result" inferred="yes" identifying-attribute="o_crslt_type">
+        <ent-inst id="Insurance Exchange Access" />
+        <ent-inst id="Medical Care Benefits" />
+        <ent-inst id="Insurance Cost-Sharing Reduction" />
+        <ent-inst id="Insurance Premium Tax Credit" />
+        <ent-inst id="Insurance Premium Reduction" />
+      </ent-set>
+      <ent-set entity-type="personsrequestforassistance" entity-text="the person's request for assistance" inferred="yes" identifying-attribute="rb_reqa_ID">
+        <ent-inst id="Chris|Insurance Affordability Assistance" />
+        <ent-inst id="Bobby|Insurance Affordability Assistance" />
+      </ent-set>
+      <ent-set entity-type="baseprogram" entity-text="the base program" inferred="yes" identifying-attribute="the_base_program">
+        <ent-inst id="CSR-Tier3" />
+        <ent-inst id="MCA-TMA-1925" />
+        <ent-inst id="MCA-Pregnant" />
+        <ent-inst id="APTC" />
+        <ent-inst id="CSR-AIAN-300" />
+        <ent-inst id="CSR-Tier2" />
+        <ent-inst id="MCA-PCR" />
+        <ent-inst id="CSR-Tier1" />
+        <ent-inst id="CSR-Tier4" />
+        <ent-inst id="MCA-Child" />
+        <ent-inst id="VPR" />
+        <ent-inst id="MCA-EXT" />
+        <ent-inst id="MCA-Adult" />
+        <ent-inst id="QHP" />
+        <ent-inst id="MN-MCA" />
+        <ent-inst id="CSR-AIAN-IHP" />
+      </ent-set>
+      <ent-set entity-type="person-address" entity-text="the person's address">
+        <ent-inst id="person-address 2">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>184 Main St</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_date-start" text="the person's address's start date" type="date">
+            <val>
+              <date-val>2016-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_date-end" text="the person's address's end date" type="date">
+            <val>
+              <date-val>2016-12-31</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person-address 1">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>184 Main St</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_date-start" text="the person's address's start date" type="date">
+            <val>
+              <date-val>2016-01-01</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person-address 3">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>184 Main St</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_date-start" text="the person's address's start date" type="date">
+            <val>
+              <date-val>2016-01-01</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person-address 4">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>999 Vermont Ave</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_date-start" text="the person's address's start date" type="date">
+            <val>
+              <date-val>2017-01-02</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="address" entity-text="the address">
+        <ent-inst id="address 1">
+          <attr-inst name="i_addr_city" text="the address's city" type="text">
+            <val>
+              <text-val>Waterbury</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_addr_postal" text="the address's postal code" type="text">
+            <val>
+              <text-val>05676</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_addr_state-abbr" text="the address's state" type="text">
+            <val>
+              <text-val>VT</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_addr_street" text="the address's street" type="text">
+            <val>
+              <text-val>184 Main St</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="address 2">
+          <attr-inst name="i_addr_ID" text="the address's unique ID" type="text">
+            <val>
+              <text-val>999 Vermont Ave</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_addr_street" text="the address's street" type="text">
+            <val>
+              <text-val>999 Vermont Ave</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_addr_city" text="the address's city" type="text">
+            <val>
+              <text-val>Burlington</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_addr_state-abbr" text="the address's state" type="text">
+            <val>
+              <text-val>VT</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_addr_postal" text="the address's postal code" type="text">
+            <val>
+              <text-val>05405</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="related-party" entity-text="the related party">
+        <ent-inst id="related-party 1">
+          <attr-inst name="i_rp_date-start" text="the start date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2012-12-21</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Alex</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Spouse</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_date-end" text="the end date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2016-12-31</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="related-party 2">
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Chris</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Tax Dependent</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_date-start" text="the start date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2016-01-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="related-party 3">
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Chris</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Biological Child</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_date-start" text="the start date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2016-01-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="related-party 6">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Unrelated</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Alex</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_date-start" text="the start date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2017-01-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2015" />
+        <ent-inst id="2016" />
+        <ent-inst id="2013" />
+        <ent-inst id="2014" />
+        <ent-inst id="2017" />
+      </ent-set>
+    </test-case>
+  </test-case-set>
+  <outcome-set>
+    <outcome name="rb_p_req-eligibility" display-name="Person meets all of the eligibility requirements" text="the person meets all of the eligibility requirements for the program" type="boolean" entity-type="program" entity-text="the program">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+    <outcome name="rb_p_numGrpNeed" display-name="Size of person's need group for program" text="the number of people in the person's need group for the program" type="number" entity-type="program" entity-text="the program">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+  </outcome-set>
+</test-script>

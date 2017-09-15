@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-script product-version="10.4.6.76" schema-version="4">
+  <test-case-set>
+    <test-case name="Refugee" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Bob</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Loblaw</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perMtsDfntOfRfgeeUndINA101a42_b" text="the person meets the definitions of a refugee under INA 101(a)(42)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_RMA5110Cat20051201_b" text="the person meets the categorical requirements under RMA 5110 (eff. 12/01/2005)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Bob Loblaw|Bob Loblaw">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2015" />
+        <ent-inst id="2017" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+      </ent-set>
+    </test-case>
+    <test-case name="Asylee" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Bob</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Loblaw</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perMtsDfntOfRfgeeUndINA101a42_b" text="the person meets the definitions of a refugee under INA 101(a)(42)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_RMA5110Cat20051201_b" text="the person meets the categorical requirements under RMA 5110 (eff. 12/01/2005)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_personAsyleeUndINA208UndHBEE1701d4Eff073014_b" text="the person has been granted asylum under INA 208" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Bob Loblaw|Bob Loblaw">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2015" />
+        <ent-inst id="2017" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+      </ent-set>
+    </test-case>
+    <test-case name="Not considered refugee" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Bob</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Loblaw</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perMtsDfntOfRfgeeUndINA101a42_b" text="the person meets the definitions of a refugee under INA 101(a)(42)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_RMA5110Cat20051201_b" text="the person meets the categorical requirements under RMA 5110 (eff. 12/01/2005)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_personAsyleeUndINA208UndHBEE1701d4Eff073014_b" text="the person has been granted asylum under INA 208" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Bob Loblaw|Bob Loblaw">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2015" />
+        <ent-inst id="2017" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+      </ent-set>
+    </test-case>
+  </test-case-set>
+  <outcome-set>
+    <outcome name="so_RMA5110Cat20051201_b" display-name="Meets categorical" text="the person meets the categorical requirements under RMA 5110 (eff. 12/01/2005)" type="boolean" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+  </outcome-set>
+</test-script>

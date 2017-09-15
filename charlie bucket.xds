@@ -1,0 +1,943 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session-data xmlns="http://oracle.com/determinations/engine/sessiondata/10.2">
+	<entity id="global" complete="false">
+		<instance id="global 1">
+			<attribute id="p5@00Framework_03Interpretive_InterpretiveFrameworkProps_xsrc" type="date" inferred="false">
+				<date-val>2014-09-05</date-val>
+			</attribute>
+			<attribute id="i_g_primary-ID" type="text" inferred="false">
+				<text-val>Mr Bucket</text-val>
+			</attribute>
+			<entity id="person" complete="true">
+				<instance id="person 1">
+					<attribute id="i_per_cit-US" type="boolean" inferred="false">
+						<boolean-val>true</boolean-val>
+					</attribute>
+					<attribute id="i_per_med-disabled" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="i_per_ssn-none" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="p163@00Framework_01Eligibility_EligibilityFrameworkProps_xsrc" type="text" inferred="false">
+						<text-val>Mr Bucket</text-val>
+					</attribute>
+					<attribute id="i_per_med-blind" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="i_per_dob" type="date" inferred="false">
+						<date-val>1954-12-07</date-val>
+					</attribute>
+					<entity id="program" complete="true">
+						<instance id="0x90eb788ae158266e" />
+					</entity>
+					<entity id="groupmember" complete="true">
+						<instance id="0xbc18e091fbaba961">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x5baeaf97d59acb9" />
+							</entity>
+						</instance>
+						<instance id="0x7455cd705303ebe8">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x5f0ed6942bed4bb6" />
+							</entity>
+						</instance>
+						<instance id="0xa7d9a44b5935fffc">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x512ef5450c2364a2" />
+							</entity>
+						</instance>
+						<instance id="0x67aef45ada4f1ca3">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0xf39bd7acee33df7" />
+							</entity>
+						</instance>
+						<instance id="0xfe46a18929a4f5d2">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x5a6e5031f99ebc58" />
+							</entity>
+						</instance>
+						<instance id="0xb428c1e15c50588">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0xeb986b5aa6c2ea9b" />
+							</entity>
+						</instance>
+						<instance id="0x965c0e28b8838e1e">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x301c86cd0ad2e2b0" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="income" complete="true">
+						<instance id="personsincome 1">
+							<attribute id="i_inc_type" type="text" inferred="false">
+								<text-val>Wages</text-val>
+							</attribute>
+							<attribute id="i_inc_freq" type="text" inferred="false">
+								<text-val>Weekly</text-val>
+							</attribute>
+							<attribute id="i_inc_amt" type="currency" inferred="false">
+								<currency-val>200</currency-val>
+							</attribute>
+							<entity id="incomeprogram" complete="true">
+								<instance id="0x8b77c1eb51c71082" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="expense" complete="true">
+						<instance id="personsexpense 1">
+							<attribute id="i_exp_type" type="text" inferred="false">
+								<text-val>Housing</text-val>
+							</attribute>
+							<attribute id="i_exp_freq" type="text" inferred="false">
+								<text-val>Monthly</text-val>
+							</attribute>
+							<attribute id="i_exp_amt" type="currency" inferred="false">
+								<currency-val>500</currency-val>
+							</attribute>
+							<entity id="expenseprogram" complete="true">
+								<instance id="0x848272c1f2a5f904" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="resource" complete="true">
+						<instance id="personsresource 1">
+							<attribute id="i_res_type" type="text" inferred="false">
+								<text-val>Certificate of Deposit</text-val>
+							</attribute>
+							<attribute id="i_res_value-cash" type="currency" inferred="false">
+								<currency-val>1500</currency-val>
+							</attribute>
+							<entity id="resourceprogram" complete="true">
+								<instance id="0x4dc468895f821a47" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="personsrequestedbenefit" complete="true">
+						<instance id="0x7a5860a6207591b2">
+							<entity id="result" complete="true">
+								<instance id="0xf76d6cacef992578" />
+								<instance id="0xc529304e00967143" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="personsrequestforassistance" complete="true">
+						<instance id="0x8149cb7fcd16a942" />
+					</entity>
+					<entity id="related-party" complete="true">
+						<instance id="relatedparty 2">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Purchase and Prepare</text-val>
+							</attribute>
+							<attribute id="i_rp_date-end" type="date" inferred="false">
+								<date-val>2009-09-09</date-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Charlie</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 3">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Spouse</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Mrs Bucket</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 5">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Purchase and Prepare</text-val>
+							</attribute>
+							<attribute id="i_rp_date-end" type="date" inferred="false">
+								<date-val>2009-09-09</date-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Mrs Bucket</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 1">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Child</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Charlie</text-val>
+							</attribute>
+						</instance>
+					</entity>
+					<entity id="person-address" complete="true">
+						<instance id="person-address 1">
+							<attribute id="i_per-addr_target-ID" type="text" inferred="false">
+								<text-val>123 Main</text-val>
+							</attribute>
+							<attribute id="i_per-addr_type" type="text" inferred="false">
+								<text-val>Residential</text-val>
+							</attribute>
+						</instance>
+					</entity>
+				</instance>
+				<instance id="person 6">
+					<attribute id="i_per_cit-US" type="boolean" inferred="false">
+						<boolean-val>true</boolean-val>
+					</attribute>
+					<attribute id="i_per_med-disabled" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="i_per_ssn-none" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="p163@00Framework_01Eligibility_EligibilityFrameworkProps_xsrc" type="text" inferred="false">
+						<text-val>Grandpa George</text-val>
+					</attribute>
+					<attribute id="i_per_med-blind" type="boolean" inferred="false">
+						<boolean-val>true</boolean-val>
+					</attribute>
+					<attribute id="i_per_dob" type="date" inferred="false">
+						<date-val>1914-11-14</date-val>
+					</attribute>
+					<entity id="program" complete="true">
+						<instance id="0x8e6867fcf08d65df" />
+					</entity>
+					<entity id="groupmember" complete="true">
+						<instance id="0x4659f45a4515be52">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x2fc9528a6990a97f" />
+							</entity>
+						</instance>
+						<instance id="0xd0089e176102e1a">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0xe55bea739db67d65" />
+							</entity>
+						</instance>
+						<instance id="0xdae0b10dfea0a3dd">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x87ac738da306b0cf" />
+							</entity>
+						</instance>
+						<instance id="0x87a0fe9b55d01b8b">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0xf8ccdf4e622ee13f" />
+							</entity>
+						</instance>
+						<instance id="0xcbdeb8666a7de6e2">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x14d846793f5873c0" />
+							</entity>
+						</instance>
+						<instance id="0x758116e21f3a2a0d">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x2816996847809b7b" />
+							</entity>
+						</instance>
+						<instance id="0xb6b95c155a1bffc3">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x826818ce08b6fd33" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="income" complete="true" />
+					<entity id="expense" complete="true" />
+					<entity id="resource" complete="true" />
+					<entity id="personsrequestedbenefit" complete="true">
+						<instance id="0xb27746010dc43214">
+							<entity id="result" complete="true">
+								<instance id="0xcd041c009ada411b" />
+								<instance id="0xa315115af7e69458" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="personsrequestforassistance" complete="true">
+						<instance id="0xbf45c6e1b3ef1471" />
+					</entity>
+					<entity id="related-party" complete="true">
+						<instance id="relatedparty 14">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Child</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Mr Bucket</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 24">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Purchase and Prepare</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Mr Bucket</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 28">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Purchase and Prepare</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Grandma Josephine</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 25">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Purchase and Prepare</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Charlie</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 26">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Purchase and Prepare</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Mrs Bucket</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 15">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Child</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Mrs Bucket</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 27">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Purchase and Prepare</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Grandpa Joe</text-val>
+							</attribute>
+						</instance>
+					</entity>
+					<entity id="person-address" complete="true">
+						<instance id="person-address 2">
+							<attribute id="i_per-addr_target-ID" type="text" inferred="false">
+								<text-val>123 Main</text-val>
+							</attribute>
+							<attribute id="i_per-addr_type" type="text" inferred="false">
+								<text-val>Residential</text-val>
+							</attribute>
+						</instance>
+					</entity>
+				</instance>
+				<instance id="person 3">
+					<attribute id="i_per_cit-US" type="boolean" inferred="false">
+						<boolean-val>true</boolean-val>
+					</attribute>
+					<attribute id="i_per_med-disabled" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="i_per_ssn-none" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="p163@00Framework_01Eligibility_EligibilityFrameworkProps_xsrc" type="text" inferred="false">
+						<text-val>Mrs Bucket</text-val>
+					</attribute>
+					<attribute id="i_per_med-blind" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="i_per_dob" type="date" inferred="false">
+						<date-val>1964-04-04</date-val>
+					</attribute>
+					<entity id="program" complete="true">
+						<instance id="0x687b46f2224377bc" />
+					</entity>
+					<entity id="groupmember" complete="true">
+						<instance id="0x5bc4d17a19a41385">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x8d3edb60da4ce987" />
+							</entity>
+						</instance>
+						<instance id="0x1f7cce8e4d92b5d0">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0xf310306c0e486dcb" />
+							</entity>
+						</instance>
+						<instance id="0xa61251a87c7acdd7">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x163e2c56115d981a" />
+							</entity>
+						</instance>
+						<instance id="0x3bfccc95c1772762">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0xff60b689a052e92d" />
+							</entity>
+						</instance>
+						<instance id="0xe20aed90dfbcbdf9">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x318807e834c0fa5b" />
+							</entity>
+						</instance>
+						<instance id="0x5548c26738dfd178">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0xf6e4de363bc3a669" />
+							</entity>
+						</instance>
+						<instance id="0x63cacf8d3cd5a8d9">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x187f51f67315218" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="income" complete="true" />
+					<entity id="expense" complete="true" />
+					<entity id="resource" complete="true" />
+					<entity id="personsrequestedbenefit" complete="true">
+						<instance id="0xc280332dc06c766b">
+							<entity id="result" complete="true">
+								<instance id="0x4a652591f07fbc7e" />
+								<instance id="0x1b167204459e4429" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="personsrequestforassistance" complete="true">
+						<instance id="0x400c44c41cf39654" />
+					</entity>
+					<entity id="related-party" complete="true" />
+					<entity id="person-address" complete="true">
+						<instance id="person-address 3">
+							<attribute id="i_per-addr_target-ID" type="text" inferred="false">
+								<text-val>123 Main</text-val>
+							</attribute>
+							<attribute id="i_per-addr_type" type="text" inferred="false">
+								<text-val>Residential</text-val>
+							</attribute>
+						</instance>
+					</entity>
+				</instance>
+				<instance id="person 5">
+					<attribute id="i_per_cit-US" type="boolean" inferred="false">
+						<boolean-val>true</boolean-val>
+					</attribute>
+					<attribute id="i_per_med-disabled" type="boolean" inferred="false">
+						<boolean-val>true</boolean-val>
+					</attribute>
+					<attribute id="i_per_ssn-none" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="p163@00Framework_01Eligibility_EligibilityFrameworkProps_xsrc" type="text" inferred="false">
+						<text-val>Grandma Josephine</text-val>
+					</attribute>
+					<attribute id="i_per_med-blind" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="i_per_dob" type="date" inferred="false">
+						<date-val>1913-01-01</date-val>
+					</attribute>
+					<entity id="program" complete="true">
+						<instance id="0xa345359404bc5a89" />
+					</entity>
+					<entity id="groupmember" complete="true">
+						<instance id="0xb269807b014d8f29">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x38d3f08f5b29b861" />
+							</entity>
+						</instance>
+						<instance id="0xffe70213225bf4cd">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0xa119347fa1bde680" />
+							</entity>
+						</instance>
+						<instance id="0x3f1d34a2f01d47d1">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x453eff9a15f18209" />
+							</entity>
+						</instance>
+						<instance id="0x91663ee3b42f0c00">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x383cd4491b581f9" />
+							</entity>
+						</instance>
+						<instance id="0xb2d5d7feff8be344">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0xee944eede80a8843" />
+							</entity>
+						</instance>
+						<instance id="0x36dd43a3f6c8eafa">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x55ac4ce40dbb0987" />
+							</entity>
+						</instance>
+						<instance id="0xa1f5c4f543857f0d">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x6ecd04de1155c628" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="income" complete="true" />
+					<entity id="expense" complete="true" />
+					<entity id="resource" complete="true" />
+					<entity id="personsrequestedbenefit" complete="true">
+						<instance id="0x6faa9d4ca3f6b278">
+							<entity id="result" complete="true">
+								<instance id="0xe7e91e0bc2cec008" />
+								<instance id="0x42e8114dd61f4a1" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="personsrequestforassistance" complete="true">
+						<instance id="0xccab1da6d5663f01" />
+					</entity>
+					<entity id="related-party" complete="true">
+						<instance id="relatedparty 23">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Purchase and Prepare</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Grandpa Joe</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 12">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Spouse</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Grandpa Joe</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 10">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Child</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Mr Bucket</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 22">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Purchase and Prepare</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Mrs Bucket</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 20">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Purchase and Prepare</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Mr Bucket</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 21">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Purchase and Prepare</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Charlie</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 11">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Child</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Mrs Bucket</text-val>
+							</attribute>
+						</instance>
+					</entity>
+					<entity id="person-address" complete="true">
+						<instance id="person-address 4">
+							<attribute id="i_per-addr_target-ID" type="text" inferred="false">
+								<text-val>123 Main</text-val>
+							</attribute>
+							<attribute id="i_per-addr_type" type="text" inferred="false">
+								<text-val>Residential</text-val>
+							</attribute>
+						</instance>
+					</entity>
+				</instance>
+				<instance id="person 2">
+					<attribute id="i_per_cit-US" type="boolean" inferred="false">
+						<boolean-val>true</boolean-val>
+					</attribute>
+					<attribute id="i_per_med-disabled" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="i_per_ssn-none" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="p163@00Framework_01Eligibility_EligibilityFrameworkProps_xsrc" type="text" inferred="false">
+						<text-val>Charlie</text-val>
+					</attribute>
+					<attribute id="i_per_med-blind" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="i_per_dob" type="date" inferred="false">
+						<date-val>2002-02-02</date-val>
+					</attribute>
+					<entity id="program" complete="true">
+						<instance id="0x1d01781d40c1b357" />
+					</entity>
+					<entity id="groupmember" complete="true">
+						<instance id="0xa18c93ecbdbdb88e">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x8f05e692e359876a" />
+							</entity>
+						</instance>
+						<instance id="0x63d7834ee240cd60">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0xca8bf1e4180678a8" />
+							</entity>
+						</instance>
+						<instance id="0xd543dbef29f073c">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x58380cab48b52949" />
+							</entity>
+						</instance>
+						<instance id="0x534284269dae1a4">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x1d76a6b2a3d3a84" />
+							</entity>
+						</instance>
+						<instance id="0x959d4915607c5416">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0xb2718ffe80e873b4" />
+							</entity>
+						</instance>
+						<instance id="0x24356f33ad2b2c01">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x6669ecff7be78c91" />
+							</entity>
+						</instance>
+						<instance id="0xa976bd41a169473">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x5a48a9c4db3c5e10" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="income" complete="true" />
+					<entity id="expense" complete="true" />
+					<entity id="resource" complete="true" />
+					<entity id="personsrequestedbenefit" complete="true">
+						<instance id="0x1658c72aafe6dee5">
+							<entity id="result" complete="true">
+								<instance id="0xe1dd0f13390f7732" />
+								<instance id="0x6cf73935e88833a9" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="personsrequestforassistance" complete="true">
+						<instance id="0xd2945de893fbb7c3" />
+					</entity>
+					<entity id="related-party" complete="true">
+						<instance id="relatedparty 4">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Parent</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Mrs Bucket</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 6">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Purchase and Prepare</text-val>
+							</attribute>
+							<attribute id="i_rp_date-end" type="date" inferred="false">
+								<date-val>2009-09-09</date-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Mrs Bucket</text-val>
+							</attribute>
+						</instance>
+					</entity>
+					<entity id="person-address" complete="true">
+						<instance id="person-address 5">
+							<attribute id="i_per-addr_target-ID" type="text" inferred="false">
+								<text-val>123 Main</text-val>
+							</attribute>
+							<attribute id="i_per-addr_type" type="text" inferred="false">
+								<text-val>Residential</text-val>
+							</attribute>
+						</instance>
+					</entity>
+				</instance>
+				<instance id="person 7">
+					<attribute id="i_per_cit-US" type="boolean" inferred="false">
+						<boolean-val>true</boolean-val>
+					</attribute>
+					<attribute id="i_per_med-disabled" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="i_per_ssn-none" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="p163@00Framework_01Eligibility_EligibilityFrameworkProps_xsrc" type="text" inferred="false">
+						<text-val>Grandma Georgina</text-val>
+					</attribute>
+					<attribute id="i_per_med-blind" type="boolean" inferred="false">
+						<boolean-val>true</boolean-val>
+					</attribute>
+					<attribute id="i_per_dob" type="date" inferred="false">
+						<date-val>1915-01-05</date-val>
+					</attribute>
+					<entity id="program" complete="true">
+						<instance id="0x3aa403de4fddfb68" />
+					</entity>
+					<entity id="groupmember" complete="true">
+						<instance id="0x14b281dccf572e35">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x1c928e860849116d" />
+							</entity>
+						</instance>
+						<instance id="0xe64392682f58a552">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x3682d47e5a9bb32d" />
+							</entity>
+						</instance>
+						<instance id="0xe6f0024c8c25ae17">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x222468e63519b260" />
+							</entity>
+						</instance>
+						<instance id="0xb344c932182b3ced">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x86b200a0f6c18b40" />
+							</entity>
+						</instance>
+						<instance id="0x4fa2f772b7432e6f">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x4f0755abb9da54ec" />
+							</entity>
+						</instance>
+						<instance id="0xf398cde0649e7de7">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0xd238d9284c898526" />
+							</entity>
+						</instance>
+						<instance id="0xd5766983b87700ec">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0xf8fbe8a5c85d3368" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="income" complete="true" />
+					<entity id="expense" complete="true" />
+					<entity id="resource" complete="true" />
+					<entity id="personsrequestedbenefit" complete="true">
+						<instance id="0xbb3df0feacdfb26b">
+							<entity id="result" complete="true">
+								<instance id="0xed5ccb7ceebe0b9" />
+								<instance id="0x1f9d9e6ae1d10dcb" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="personsrequestforassistance" complete="true">
+						<instance id="0xd1bcd1915099820" />
+					</entity>
+					<entity id="related-party" complete="true">
+						<instance id="relatedparty 33">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Purchase and Prepare</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Grandma Josephine</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 34">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Purchase and Prepare</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Grandpa George</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 31">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Purchase and Prepare</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Mrs Bucket</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 29">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Purchase and Prepare</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Mr Bucket</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 35">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Spouse</text-val>
+							</attribute>
+							<attribute id="i_rp_date-start" type="date" inferred="false">
+								<date-val>1935-04-01</date-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Grandpa George</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 32">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Purchase and Prepare</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Grandpa Joe</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 30">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Purchase and Prepare</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Charlie</text-val>
+							</attribute>
+						</instance>
+					</entity>
+					<entity id="person-address" complete="true">
+						<instance id="person-address 6">
+							<attribute id="i_per-addr_target-ID" type="text" inferred="false">
+								<text-val>123 Main</text-val>
+							</attribute>
+							<attribute id="i_per-addr_type" type="text" inferred="false">
+								<text-val>Residential</text-val>
+							</attribute>
+						</instance>
+					</entity>
+				</instance>
+				<instance id="person 4">
+					<attribute id="i_per_cit-US" type="boolean" inferred="false">
+						<boolean-val>true</boolean-val>
+					</attribute>
+					<attribute id="i_per_med-disabled" type="boolean" inferred="false">
+						<boolean-val>true</boolean-val>
+					</attribute>
+					<attribute id="i_per_ssn-none" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="p163@00Framework_01Eligibility_EligibilityFrameworkProps_xsrc" type="text" inferred="false">
+						<text-val>Grandpa Joe</text-val>
+					</attribute>
+					<attribute id="i_per_med-blind" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="i_per_dob" type="date" inferred="false">
+						<date-val>1912-12-12</date-val>
+					</attribute>
+					<entity id="program" complete="true">
+						<instance id="0x45780344ecaf6cf" />
+					</entity>
+					<entity id="groupmember" complete="true">
+						<instance id="0xd92fbc72f62625d3">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0xe387b3bd40690448" />
+							</entity>
+						</instance>
+						<instance id="0x9d77b6bad8ae6a68">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x90eb22f54f5e05bf" />
+							</entity>
+						</instance>
+						<instance id="0x3d1eef3abb018da2">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0xee018f9efdbc25b2" />
+							</entity>
+						</instance>
+						<instance id="0xfe9bde19d66d3064">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x397b97075098bd85" />
+							</entity>
+						</instance>
+						<instance id="0xab48e51a1e132230">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x1519877d8187559c" />
+							</entity>
+						</instance>
+						<instance id="0x7b3519db3723e7e2">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0xaef14fbce53bdf84" />
+							</entity>
+						</instance>
+						<instance id="0xd9d822864aed39a0">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x590e91873308685d" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="income" complete="true" />
+					<entity id="expense" complete="true" />
+					<entity id="resource" complete="true" />
+					<entity id="personsrequestedbenefit" complete="true">
+						<instance id="0x6e7de403590e43cd">
+							<entity id="result" complete="true">
+								<instance id="0xa4eacc65372f85d8" />
+								<instance id="0xabd0fd1001dd4611" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="personsrequestforassistance" complete="true">
+						<instance id="0x9bfacf47a6f0aac9" />
+					</entity>
+					<entity id="related-party" complete="true">
+						<instance id="relatedparty 7">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Child</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Mr Bucket</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 19">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Purchase and Prepare</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Mrs Bucket</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 9">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Child</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Mrs Bucket</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 17">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Purchase and Prepare</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Mr Bucket</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 18">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Purchase and Prepare</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Charlie</text-val>
+							</attribute>
+						</instance>
+					</entity>
+					<entity id="person-address" complete="true">
+						<instance id="person-address 7">
+							<attribute id="i_per-addr_target-ID" type="text" inferred="false">
+								<text-val>123 Main</text-val>
+							</attribute>
+							<attribute id="i_per-addr_type" type="text" inferred="false">
+								<text-val>Residential</text-val>
+							</attribute>
+						</instance>
+					</entity>
+				</instance>
+			</entity>
+			<entity id="baseprogram" complete="true">
+				<instance id="0xb25223904a897cdd" />
+			</entity>
+			<entity id="address" complete="true">
+				<instance id="address 1">
+					<attribute id="i_addr_state-abbr" type="text" inferred="false">
+						<text-val>HI</text-val>
+					</attribute>
+					<attribute id="i_addr_street" type="text" inferred="false">
+						<text-val>123 Main</text-val>
+					</attribute>
+				</instance>
+			</entity>
+			<entity id="povertyguideline" complete="true">
+				<instance id="0x39463222f471492" />
+				<instance id="0x82786741b24ec020" />
+			</entity>
+		</instance>
+	</entity>
+</session-data>

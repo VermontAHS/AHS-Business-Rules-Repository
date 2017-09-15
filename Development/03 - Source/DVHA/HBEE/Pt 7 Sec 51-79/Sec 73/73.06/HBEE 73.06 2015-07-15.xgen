@@ -1,0 +1,281 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 73.06 applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 73.06',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is QHP</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('QHP'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b2" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the benefit end date is the end of the month for the person under HBEE 73.06(a) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the benefit end date',singular),o('the end of the month for the person under HBEE 73.06(a) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 73.06(e) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 73.06(e)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 73.06(a)(2) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 73.06(a)(2)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's QHP eligibility changed due to an appeal decision</base>
+          <parse>s(ver('10.4.6.76'),v(change,t(simple,past,normal)),sb('the person''s QHP eligibility',plural),o('due to an appeal decision'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the benefit end date is the end of the following month for the person under HBEE 73.06(b) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the benefit end date',singular),o('the end of the following month for the person under HBEE 73.06(b) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it is after the point in the month after which changes to QHP eligibility are effective on the first day of the month after the following month</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('after the point in the month after which changes to QHP eligibility are effective on the first day of the month after the following month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the benefit end date is the end of the following month for the person under HBEE 73.06(c) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the benefit end date',singular),o('the end of the following month for the person under HBEE 73.06(c) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's APTC amount is decreasing</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s APTC amount',singular),o('decreasing'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's CSR level is changing</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s CSR level',singular),o('changing'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it is after the 15th day of the current month</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('after the 15th day of the current month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 71.03(d)(4) is satisfied for the person</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(4)',singular),o('for the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 71.03(d)(5) is satisfied for the person</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(5)',singular),o('for the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 71.03(d)(9) is satisfied for the person</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(9)',singular),o('for the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the benefit end date is the end of the month for the person under HBEE 73.06 (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the benefit end date',singular),o('the end of the month for the person under HBEE 73.06 (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the benefit end date is the end of the following month for the person under HBEE 73.06 (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the benefit end date',singular),o('the end of the following month for the person under HBEE 73.06 (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="HBEE 73.06 applies to the program (eff. 07/15/2015)" ruleburst="true" concludes="b1" folder="1" source-offset="104">
+      <rule-xml>
+        <conclude attr-id="b1" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b23" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the benefit end date is the end of the month for the person under HBEE 73.06 (eff. 07/15/2015)" ruleburst="true" concludes="b21" folder="1" source-offset="208">
+      <rule-xml>
+        <conclude attr-id="b21" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b2" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="the benefit end date is the end of the following month for the person under HBEE 73.06 (eff. 07/15/2015)" ruleburst="true" concludes="b22" folder="1" source-offset="416">
+      <rule-xml>
+        <conclude attr-id="b22" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b10" />
+              <attribute attr-id="b12" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="the benefit end date is the end of the month for the person under HBEE 73.06(a) (eff. 07/15/2015)" ruleburst="true" concludes="b2" folder="2" source-offset="774">
+      <rule-xml>
+        <conclude attr-id="b2" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <not>
+                <attribute attr-id="b10" />
+              </not>
+              <not>
+                <attribute attr-id="b12" />
+              </not>
+              <not>
+                <attribute attr-id="b7" />
+              </not>
+              <not>
+                <attribute attr-id="b8" />
+              </not>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="HBEE 73.06(a)(2) is satisfied for the person (eff. 07/15/2015)" ruleburst="true" concludes="b8" folder="2" source-offset="1422">
+      <rule-xml>
+        <conclude attr-id="b8" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b9" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="the benefit end date is the end of the following month for the person under HBEE 73.06(b) (eff. 07/15/2015)" ruleburst="true" concludes="b10" folder="3" source-offset="1574">
+      <rule-xml>
+        <conclude attr-id="b10" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <not>
+                <attribute attr-id="b12" />
+              </not>
+              <not>
+                <attribute attr-id="b7" />
+              </not>
+              <attribute attr-id="b11" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="the benefit end date is the end of the following month for the person under HBEE 73.06(c) (eff. 07/15/2015)" ruleburst="true" concludes="b12" folder="4" source-offset="2057">
+      <rule-xml>
+        <conclude attr-id="b12" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <not>
+                <attribute attr-id="b7" />
+              </not>
+              <or>
+                <attribute attr-id="b13" />
+                <attribute attr-id="b14" />
+              </or>
+              <attribute attr-id="b15" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="7" name="HBEE 73.06(e) is satisfied for the person (eff. 07/15/2015)" ruleburst="true" concludes="b7" folder="5" source-offset="2657">
+      <rule-xml>
+        <conclude attr-id="b7" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b18" />
+              <attribute attr-id="b19" />
+              <attribute attr-id="b20" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="73.06 Effective dates for QHP eligibility redeterminations (07/15/2015, 15-02)" parent="0" id="1" />
+    <folder text="Para (a)" parent="1" id="2" />
+    <folder text="Para (b)" parent="1" id="3" />
+    <folder text="Para (c)" parent="1" id="4" />
+    <folder text="Para (e)" parent="1" id="5" />
+  </rule-folders>
+</root>

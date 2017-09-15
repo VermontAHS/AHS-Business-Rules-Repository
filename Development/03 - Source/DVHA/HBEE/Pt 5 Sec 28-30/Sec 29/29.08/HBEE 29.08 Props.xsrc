@@ -1,0 +1,2281 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+      <attribute name="p10" type="number" public-name="st_gPctCnsdToBeSgnfctIncUndHBEE2908a7iEff080116_n">
+        <text>
+          <base>the percentage considered to be significant income under HBEE 29.08(a)(7)(i) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p11" type="currency" public-name="st_gMaxWhlLfInsExclsnPrPrsnUndHBEE2908b1iEff080116_c">
+        <text>
+          <base>the maximum whole life insurance exclusion per person under HBEE 29.08(b)(1)(i) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p34" type="currency" public-name="st_gMaxBrlFndExclnPerPrsnUnd2908c1Eff080116_c">
+        <text>
+          <base>the maximum burial fund exclusion per person under HBEE 29.08(c)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="p12" type="currency" public-name="si_pCmbdFcVlsOfWhlLfInsncPlcys_c">
+        <text>
+          <base>the combined face values of the person's whole life insurance policies</base>
+        </text>
+      </attribute>
+      <attribute name="p14" type="currency">
+        <text>
+          <base>the whole life insurance exclusion for the person under HBEE 29.08(b)(1)(i) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p16" type="currency">
+        <text>
+          <base>the total amount of the person's excludable burial funds under HBEE 29.08(c)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p17" type="currency">
+        <text>
+          <base>the total amount of the person's excludable burial funds under HBEE 29.08(c)(3) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p18" type="currency">
+        <text>
+          <base>the total amount of the person's excludable burial funds under HBEE 29.08(c)(4) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p24" type="currency" public-name="st_HBEE29.08cExclusion20160801_c">
+        <text>
+          <base>the burial funds exclusion for the person under HBEE 29.08(c) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="b472" type="boolean" public-name="si_resPrincipalOwnInterest_b">
+        <text>
+          <base>the person has an ownership interest in the person's principal place of residence</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('an ownership interest in the person''s principal place of residence'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b473" type="boolean" public-name="si_homePrincipalLTC_b">
+        <text>
+          <base>the person is receiving long-term care service and supports in the person's principal place of residence</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('receiving long-term care service and supports in the person''s principal place of residence'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p35" type="currency">
+        <text>
+          <base>the total amount of the person's excludable burial funds under HBEE 29.08(c) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p36" type="currency">
+        <text>
+          <base>the maximum burial fund exclusion for the person under HBEE 29.08(c) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="b505" type="boolean" public-name="si_pIsRcvgSvcsUndAHSChcFrCrPrgm_b">
+        <text>
+          <base>the person is receiving services under AHS's Choices for Care program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('receiving services under AHS''s Choices for Care program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b506" type="boolean" public-name="si_pIsCsThtTrmsOfTrstPrmtRvkWthtTrsteeInvtn_b">
+        <text>
+          <base>it is the case that the terms of the trust permit the person to revoke the trust or have access to it without trustee intervention</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the terms of the trust permit the person to revoke the trust or have access to it without trustee intervention'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b507" type="boolean" public-name="si_pHsBnRcvgLTCCvgInInstnFrMT6MthsAftrCrInHm_b">
+        <text>
+          <base>the person has been receiving coverage of long term care services and supports under MABD in an institution or residential care home that provides enhanced residential care services for more than 6 months after having care provided in the person's home</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,perfect)),sb('the person',singular),o('receiving coverage of long term care services and supports under MABD in an institution or residential care home that provides enhanced residential care services for more than 6 months after having care provided in the person''s home'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b508" type="boolean" public-name="si_pIsElgblFrHmUpkpDdctnUndHBEE2404d_b">
+        <text>
+          <base>the person is eligible for the home upkeep deduction under HBEE 24.04(d)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('eligible for the home upkeep deduction under HBEE 24.04(d)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b509" type="boolean" public-name="si_pRsdsInPrncplPlcOfRes_b">
+        <text>
+          <base>the person resides in the person's principal place of residence</base>
+          <parse>s(ver('10.4.6.76'),v(reside,t(simple,present,normal)),sb('the person',singular),o('in the person''s principal place of residence'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b404" type="boolean" public-name="so_HBEE29.08Applies_b">
+        <text>
+          <base>HBEE 29.08 applies to the program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08',singular),o('to the program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p29" type="currency">
+        <text>
+          <base>the countable resource exclusion for the person for the program under HBEE 29.08</base>
+        </text>
+      </attribute>
+      <attribute name="p37" type="currency" public-name="so_HBEE29.08CntResExcl20160801_c">
+        <text>
+          <base>the countable resource exclusion for the person for the program under HBEE 29.08 (eff. 08/01/2016)</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="p38" type="currency">
+        <text>
+          <base>the home-based long-term care disregard for the person for the program under HBEE 29.08(i)(12) (eff. 08/01/2016)</base>
+          <parse />
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+      <attribute name="b478" type="boolean" public-name="si_incValueNSLACNA_b">
+        <text>
+          <base>the person's income is the value of meals and food commodities distributed under the National School Lunch Act and the Child Nutrition Act</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('the value of meals and food commodities distributed under the National School Lunch Act and the Child Nutrition Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b479" type="boolean" public-name="si_incValue3Sqaures_b">
+        <text>
+          <base>the person's income is the value of 3SquaresVT or 3SquaresVT cash-out checks</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('the value of 3SquaresVT or 3SquaresVT cash-out checks'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b480" type="boolean" public-name="si_incValueRecWCProgram_b">
+        <text>
+          <base>the person's income is the value of the food or vouchers received through the WIC Program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('the value of the food or vouchers received through the WIC Program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b481" type="boolean" public-name="si_incOldAmericansAct_b">
+        <text>
+          <base>the person's income is the value of food or meals received under the Older Americans Act</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('the value of food or meals received under the Older Americans Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b482" type="boolean" public-name="si_incFosterProgramsEtc_b">
+        <text>
+          <base>the person's income is compensation or remuneration received for volunteer work in ACTION programs including foster grandparents, RSVP, SCORE, ACV, ACE, VISTA, Senior Companion Program, and UYA</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('compensation or remuneration received for volunteer work in ACTION programs including foster grandparents, RSVP, SCORE, ACV, ACE, VISTA, Senior Companion Program, and UYA'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b483" type="boolean" public-name="si_incUSHousingActEtc_b">
+        <text>
+          <base>the person's income is the value of assistance received under the U.S. Housing Act, U.S. Housing Authorization Act and the Housing and Urban Development Act</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('the value of assistance received under the U.S. Housing Act, U.S. Housing Authorization Act and the Housing and Urban Development Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b484" type="boolean" public-name="si_incRelocationAssistance_b">
+        <text>
+          <base>the person's income is the value of relocation assistance to displaced persons under the Uniform Relocation and Real Properties Acquisition Policies Act</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('the value of relocation assistance to displaced persons under the Uniform Relocation and Real Properties Acquisition Policies Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b485" type="boolean" public-name="si_incPerCapitaInidianTribes_b">
+        <text>
+          <base>the person's income is the per capita distribution to certain Indian Tribes</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('the per capita distribution to certain Indian Tribes'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b486" type="boolean" public-name="si_incLandsHeldIndianTribes_b">
+        <text>
+          <base>the person's income is receipts from lands held in trust for certain Indian Tribes</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('receipts from lands held in trust for certain Indian Tribes'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b487" type="boolean" public-name="si_incAlaskaNASettlements_b">
+        <text>
+          <base>the person's income is received under the Alaska Native Claims Settlement Act</base>
+          <parse>s(ver('10.4.6.76'),v(receive,t(simple,present,normal)),ob('the person''s income',singular),o('under the Alaska Native Claims Settlement Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b488" type="boolean" public-name="si_incGrantsUSDofE_b">
+        <text>
+          <base>the person's income is a grant or loan received for educational purposes under any U.S. Department of Education program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a grant or loan received for educational purposes under any U.S. Department of Education program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b489" type="boolean" public-name="si_incAssistanceEECorECP_b">
+        <text>
+          <base>the person's income is assistance received under the Emergency Energy Conservation or Energy Crisis Program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('assistance received under the Emergency Energy Conservation or Energy Crisis Program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b490" type="boolean" public-name="si_incAssRecLowIncomeEnergyAssistance_b">
+        <text>
+          <base>the person's income is assistance received under the Low-Income Home Energy Assistance Act, either in cash or through vendor payments</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('assistance received under the Low-Income Home Energy Assistance Act, either in cash or through vendor payments'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b491" type="boolean" public-name="si_increstWWII_b">
+        <text>
+          <base>the person's income is compensation paid to Americans of Japanese or Aleut ancestry as restitution for their incarceration during World War II</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('compensation paid to Americans of Japanese or Aleut ancestry as restitution for their incarceration during World War II'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b492" type="boolean" public-name="si_incAgentOrangeSettlementPayments_b">
+        <text>
+          <base>the person's income is Agent Orange Settlement payments</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('Agent Orange Settlement payments'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b493" type="boolean" public-name="si_incHolocaustReparations_b">
+        <text>
+          <base>the person's income is German reparations to concentration camp survivors, slave laborers, partisans, and other victims of the Holocaust</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('German reparations to concentration camp survivors, slave laborers, partisans, and other victims of the Holocaust'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b494" type="boolean" public-name="si_incConfAssetsWWII_b">
+        <text>
+          <base>the person's income is settlement payments to victims of Nazi persecution or their legal heirs resulting from the confiscation of the assets during World War II</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('settlement payments to victims of Nazi persecution or their legal heirs resulting from the confiscation of the assets during World War II'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b495" type="boolean" public-name="si_incAustGovernmentPensionSystem_b">
+        <text>
+          <base>the person's income is war reparations paid under the Austrian government's pension system</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('war reparations paid under the Austrian government''s pension system'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b496" type="boolean" public-name="si_incRadiationExposureComp_b">
+        <text>
+          <base>the person's income is payments from the Radiation Exposure Compensation Trust Fund</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('payments from the Radiation Exposure Compensation Trust Fund'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b497" type="boolean" public-name="si_incDisReliefEmergenceAssistance_b">
+        <text>
+          <base>the person's income is assistance received under the Disaster Relief and Emergency Assistance Act or other comparable assistance provided by Federal, State, or local government or from a disaster assistance organization</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('assistance received under the Disaster Relief and Emergency Assistance Act or other comparable assistance provided by Federal, State, or local government or from a disaster assistance organization'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b498" type="boolean" public-name="si_incNetherlandsAct_b">
+        <text>
+          <base>the person's income is Netherlands Act on Benefits for Victims of Persecution 1940-1945 payments</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('Netherlands Act on Benefits for Victims of Persecution 1940-1945 payments'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b499" type="boolean" public-name="si_incSection163a2f_b">
+        <text>
+          <base>the person's income is an account established and maintained in accordance with Section 1631(a)(2)(F) of the Act</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('an account established and maintained in accordance with Section 1631(a)(2)(F) of the Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b500" type="boolean" public-name="si_incDepTangCentralCVAC_b">
+        <text>
+          <base>the person's income is earnings deposited in a special savings account under the Tangible Assets project managed by the Central Vermont Community Action Council and authorized by PRWORA</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('earnings deposited in a special savings account under the Tangible Assets project managed by the Central Vermont Community Action Council and authorized by PRWORA'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b502" type="boolean" public-name="si_incSusanWalker_b">
+        <text>
+          <base>the person's income is payments as a result of a settlement in the case of Susan Walker v. Bayer Corporation et al</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('payments as a result of a settlement in the case of Susan Walker v. Bayer Corporation et al'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+      <attribute name="b3" type="boolean" public-name="st_HBEE29.08bExcluded_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(b) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(b) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" public-name="st_HBEE29.08cExcluded_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(c) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(c) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" public-name="st_HBEE29.08dExcluded_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(d) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(d) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" public-name="st_HBEE29.08eExcluded_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(e) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(e) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" public-name="st_HBEE29.08hExcluded_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(h) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(h) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" public-name="st_HBEE29.08iExcluded_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(i) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(i) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" public-name="st_HBEE29.08a2Excluded_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(a)(2) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(a)(2) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" public-name="st_HBEE29.08bApplies_b">
+        <text>
+          <base>HBEE 29.08(b) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(b)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" public-name="st_HBEE29.08cApplies_b">
+        <text>
+          <base>HBEE 29.08(c) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(c)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" public-name="st_HBEE29.08dApplies_b">
+        <text>
+          <base>HBEE 29.08(d) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(d)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" public-name="st_HBEE29.08eApplies_b">
+        <text>
+          <base>HBEE 29.08(e) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(e)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" public-name="st_HBEE29.08iApplies_b">
+        <text>
+          <base>HBEE 29.08(i) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(i)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" public-name="st_HBEE29.08hApplies_b">
+        <text>
+          <base>HBEE 29.08(h) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(h)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" public-name="st_HBEE29.08aApplies_b">
+        <text>
+          <base>HBEE 29.08(a) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(a)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" public-name="si_HBEE29.08SaleExcludedHome_b">
+        <text>
+          <base>the person's resource is proceeds from the sale of an excluded home</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('proceeds from the sale of an excluded home'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" public-name="si_HBEE29.08RealPropUpForSale_b">
+        <text>
+          <base>the person's resource is real property up-for-sale</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('real property up-for-sale'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" public-name="si_JointlyOwnedRealEstateProp_b">
+        <text>
+          <base>the person's resources is jointly-owned real property</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resources',singular),o('jointly-owned real property'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" public-name="si_HBEE29.08IncomeProdRealProp_b">
+        <text>
+          <base>the person's resource is income-producing real property</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('income-producing real property'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" public-name="si_HBEE29.08GoodsHomeConsump_b">
+        <text>
+          <base>the person's resource is real property used to produce goods for home consumption</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('real property used to produce goods for home consumption'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean" public-name="st_HBEE29.08a3Excluded_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(a)(3) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(a)(3) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b34" type="boolean" public-name="st_HBEE29.08a4Excluded_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(a)(4) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(a)(4) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" public-name="st_HBEE29.08a5Excluded_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(a)(5) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(a)(5) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" public-name="st_HBEE29.08a6Excluded_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(a)(6) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(a)(6) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" public-name="st_HBEE29.08a7Excluded_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(a)(7) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(a)(7) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b38" type="boolean" public-name="st_HBEE29.08a8Excluded_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(a)(8) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(a)(8) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b39" type="boolean" public-name="st_HBEE29.08a5Applies_b">
+        <text>
+          <base>HBEE 29.08(a)(5) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(a)(5)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b40" type="boolean" public-name="st_HBEE29.08a3Applies_b">
+        <text>
+          <base>HBEE 29.08(a)(3) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(a)(3)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b41" type="boolean" public-name="st_HBEE29.08a4Applies_b">
+        <text>
+          <base>HBEE 29.08(a)(4) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(a)(4)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b42" type="boolean" public-name="st_HBEE29.08a7Applies_b">
+        <text>
+          <base>HBEE 29.08(a)(7) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(a)(7)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b43" type="boolean" public-name="st_HBEE29.08a6Applies_b">
+        <text>
+          <base>HBEE 29.08(a)(6) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(a)(6)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b44" type="boolean" public-name="st_HBEE29.08a8Applies_b">
+        <text>
+          <base>HBEE 29.08(a)(8) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(a)(8)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b45" type="boolean" public-name="st_HBEE29.08a2Applies_b">
+        <text>
+          <base>HBEE 29.08(a)(2) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(a)(2)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b47" type="boolean" public-name="si_HBEE29.08a1iPrinciplePlaceRes_b">
+        <text>
+          <base>the person's resource serves as the person's principal place of residence</base>
+          <parse>s(ver('10.4.6.76'),v(serve,t(simple,present,normal)),sb('the person''s resource',singular),o('as the person''s principal place of residence'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b56" type="boolean" public-name="st_HBEE29.08a1iiDIISat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(a)(1)(ii)(D)(II) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(a)(1)(ii)(D)(II) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b57" type="boolean" public-name="st_HBEE29.08a1iiDISat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(a)(1)(ii)(D)(I) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(a)(1)(ii)(D)(I) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b58" type="boolean" public-name="st_HBEE29.08a1iiDIIISat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(a)(1)(ii)(D)(III) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(a)(1)(ii)(D)(III) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b67" type="boolean" public-name="si_IntendPurchaseHome3Months_b">
+        <text>
+          <base>the person's resource is intended to purchase or construct another home</base>
+          <parse>s(ver('10.4.6.76'),v(intend,t(simple,present,normal)),ob('the person''s resource',singular),o('to purchase or construct another home'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b80" type="boolean" public-name="st_HBEE29.08a3iSat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(a)(3)(i) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(a)(3)(i) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b82" type="boolean" public-name="st_HBEE29.08a3vSat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(a)(3)(v) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(a)(3)(v) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b85" type="boolean" public-name="si_PreventedSellHomeFairMarketValue_b">
+        <text>
+          <base>the person is prevented by circumstance beyond the person's control from taking the necessary steps to sell the person's resource for the fair market value</base>
+          <parse>s(ver('10.4.6.76'),v(prevent,t(simple,present,normal)),ob('the person',singular),o('by circumstance beyond the person''s control from taking the necessary steps to sell the person''s resource for the fair market value'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b86" type="boolean" public-name="st_HBEE29.08a3ivSat_b">
+        <text>
+          <base>HBEE 29.08(a)(3)(iv) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(a)(3)(iv)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b87" type="boolean" public-name="st_HBEE29.08a3iiiSat_b">
+        <text>
+          <base>HBEE 29.08(a)(3)(iii) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(a)(3)(iii)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b88" type="boolean" public-name="si_ListedRealAgent_b">
+        <text>
+          <base>the person's resource is listed with a real estate agent</base>
+          <parse>s(ver('10.4.7.86'),v(list,t(simple,present,normal)),ob('the person''s resource',singular),o('with a real estate agent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b89" type="boolean" public-name="si_NecStepsListingResource_b">
+        <text>
+          <base>the person has taken the necessary steps of listing the person's resource</base>
+          <parse>s(ver('10.4.7.86'),v(take,t(simple,present,perfect)),sb('the person',singular),o('the necessary steps of listing the person''s resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b90" type="boolean" public-name="si_CooperatingRealAgent_b">
+        <text>
+          <base>the person is cooperating with the real estate agents effort to sell the person's resource</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person',singular),o('cooperating with the real estate agents effort to sell the person''s resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b92" type="boolean" public-name="st_HBEE29.08a3ivCSat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(a)(3)(iv)(C) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(a)(3)(iv)(C) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b93" type="boolean" public-name="st_HBEE29.08a3ivDSat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(a)(3)(iv)(D) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(a)(3)(iv)(D) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b94" type="boolean" public-name="st_HBEE29.08a3ivASat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(a)(3)(iv)(A) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(a)(3)(iv)(A) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b95" type="boolean" public-name="st_HBEE29.08a3ivBSat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(a)(3)(iv)(B) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(a)(3)(iv)(B) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b96" type="boolean" public-name="si_AdvertisedCont_b">
+        <text>
+          <base>the person's resource is continuously advertised in at least one of the appropriate local media</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('continuously advertised in at least one of the appropriate local media'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b97" type="boolean" public-name="si_ForSaleSign_b">
+        <text>
+          <base>the person's resource has a "For Sale" sign on it</base>
+          <parse>s(ver('10.4.7.86'),v(have,t(simple,present,normal)),sb('the person''s resource',singular),o('a "For Sale" sign on it'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b98" type="boolean" public-name="si_ZoningProhibitsForSaleSign_b">
+        <text>
+          <base>zoning regulations prohibit placing a "For Sale" sign on the person's resource</base>
+          <parse>s(ver('10.4.6.76'),v(prohibit,t(simple,present,normal)),sb('zoning regulations',plural),o('placing a "For Sale" sign on the person''s resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b99" type="boolean" public-name="si_OpenHouse_b">
+        <text>
+          <base>the person shows the person's resource to prospective buyers</base>
+          <parse>s(ver('10.4.6.76'),v(show,t(simple,present,normal)),sb('the person',singular),o('the person''s resource to prospective buyers'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b100" type="boolean" public-name="si_AttemptedSoldAppropMethods_b">
+        <text>
+          <base>the person attempts to sell the person's resource through other appropriate methods of sale</base>
+          <parse>s(ver('10.4.6.76'),v(attempt,t(simple,present,normal)),sb('the person',singular),o('to sell the person''s resource through other appropriate methods of sale'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b101" type="boolean" public-name="si_PropBuyerOffer_b">
+        <text>
+          <base>the person has accepted all reasonable offers from prospective buyers of the person's resource</base>
+          <parse>s(ver('10.4.6.76'),v(accept,t(simple,present,perfect)),sb('the person',singular),o('all reasonable offers from prospective buyers of the person''s resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b107" type="boolean" public-name="si_ReverseMortgage_b">
+        <text>
+          <base>the person's resource is from a reverse mortgage</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('from a reverse mortgage'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b108" type="boolean" public-name="si_ReverseAnnuityMortgages_b">
+        <text>
+          <base>the person's resource is from a reverse annuity mortgage</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('from a reverse annuity mortgage'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b109" type="boolean" public-name="si_Sale-Leasebacks_b">
+        <text>
+          <base>the person's resource is from a sale-leaseback arrangement</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('from a sale-leaseback arrangement'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b110" type="boolean" public-name="si_TimeSaleAgreements_b">
+        <text>
+          <base>the person's resource is from a time-sale agreement</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('from a time-sale agreement'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b111" type="boolean" public-name="si_DeferredPaymentLoans_b">
+        <text>
+          <base>the person's resource is from a deferred payment loan</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('from a deferred payment loan'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b113" type="boolean" public-name="st_HBEE29.08a5iSat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(a)(5)(i) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(a)(5)(i) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b114" type="boolean" public-name="st_HBEE29.08a5iiSat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(a)(5)(ii) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(a)(5)(ii) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b115" type="boolean" public-name="st_HBEE29.08a5iASat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(a)(5)(i)(A) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(a)(5)(i)(A) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b116" type="boolean" public-name="si_RefusesSell_b">
+        <text>
+          <base>there is another joint owner person who refuses to sell the person's resource</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('another joint owner person who refuses to sell the person''s resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b117" type="boolean" public-name="si_JointOwndership60MonthsMABD_b">
+        <text>
+          <base>the joint ownership in the person's resource was created more than 60 months before the date of the MABD application</base>
+          <parse>s(ver('10.4.6.76'),v(create,t(simple,past,normal)),ob('the joint ownership in the person''s resource',singular),o('more than 60 months before the date of the MABD application'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b118" type="boolean" public-name="st_SaleUndueHardshipHBEE29.08a5ii_b">
+        <text>
+          <base>the sale of the person's resource would cause another owner undue hardship under HBEE 29.08(a)(5)(ii) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(cause+would,t(simple,modal,normal)),sb('the sale of the person''s resource',plural),o('another owner undue hardship under HBEE 29.08(a)(5)(ii) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b119" type="boolean" public-name="st_HBEE29.08a5iiCSat_b">
+        <text>
+          <base>HBEE 29.08(a)(5)(ii)(C) is satisfied for the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(a)(5)(ii)(C)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b120" type="boolean" public-name="st_HBEE29.08a5iiBSat_b">
+        <text>
+          <base>HBEE 29.08(a)(5)(ii)(B) is satisfied for the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(a)(5)(ii)(B)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b121" type="boolean" public-name="st_HBEE29.08a5iiASat_b">
+        <text>
+          <base>HBEE 29.08(a)(5)(ii)(A) is satisfied for the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(a)(5)(ii)(A)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b122" type="boolean" public-name="si_PrinciplePlaceResJointOwners_b">
+        <text>
+          <base>the person's resource serves as the principal place of residence for another joint owner</base>
+          <parse>s(ver('10.4.6.76'),v(serve,t(simple,present,normal)),sb('the person''s resource',singular),o('as the principal place of residence for another joint owner'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b123" type="boolean" public-name="si_SaleLossPrincipleRes_b">
+        <text>
+          <base>the sale of the person's resource would result in the loss of the principal residence of another joint owner</base>
+          <parse>s(ver('10.4.6.76'),v(result+would,t(simple,modal,normal)),sb('the sale of the person''s resource',plural),o('in the loss of the principal residence of another joint owner'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b124" type="boolean" public-name="si_NoOtherHouseAvailability_b">
+        <text>
+          <base>the sale of the person's resource would result in there being no other housing readily available for the displaced other owner</base>
+          <parse>s(ver('10.4.6.76'),v(result+would,t(simple,modal,normal)),sb('the sale of the person''s resource',plural),o('in there being no other housing readily available for the displaced other owner'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b125" type="boolean" public-name="st_HBEE29.08a6iSat_b">
+        <text>
+          <base>HBEE 29.08(a)(6)(i) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(a)(6)(i)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b127" type="boolean" public-name="st_HBEE29.08a6iiSat_b">
+        <text>
+          <base>HBEE 29.08(a)(6)(ii) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(a)(6)(ii)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b129" type="boolean" public-name="si_InterestCreatedOnLater07012002_b">
+        <text>
+          <base>the person's resource's interest was created on or later than 07/01/2002</base>
+          <parse>s(ver('10.4.7.86'),v(create,t(simple,past,normal)),ob('the person''s resource''s interest',singular),o('on or later than 07/01/2002'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b130" type="boolean" public-name="st_HBEES29.08a6iBSat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(a)(6)(i)(B) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(a)(6)(i)(B) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b131" type="boolean" public-name="st_HBEES29.08a6iASat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(a)(6)(i)(A) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(a)(6)(i)(A) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b134" type="boolean" public-name="si_RetainsPowerSellMortgageReal_b">
+        <text>
+          <base>the person retains the power to sell or mortgage the person's resource</base>
+          <parse>s(ver('10.4.6.76'),v(retain,t(simple,present,normal)),sb('the person',singular),o('the power to sell or mortgage the person''s resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b138" type="boolean" public-name="st_HBEE29.08a7iSat_b">
+        <text>
+          <base>HBEE 29.08(a)(7)(ii) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(a)(7)(ii)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b140" type="boolean" public-name="st_ProducesSignificantIncomeHBEE29.08a7i_b">
+        <text>
+          <base>the person's resource is considered to produce significant income under HBEE 29.08(a)(7)(i) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person''s resource',singular),o('to produce significant income under HBEE 29.08(a)(7)(i) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b141" type="boolean" public-name="si_UsedTradeBusiness_b">
+        <text>
+          <base>the person's resource is used in trade or business</base>
+          <parse>s(ver('10.4.7.86'),v(use,t(simple,present,normal)),ob('the person''s resource',singular),o('in trade or business'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b142" type="boolean" public-name="si_EssentialOwnerSelfSupport_b">
+        <text>
+          <base>the person's resource is essential to the owner's self-support</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('essential to the owner''s self-support'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b143" type="boolean" public-name="si_CurrentUseTypeActivityQualEss_b">
+        <text>
+          <base>the person's resource is in current use in the type of activity that qualifies it as essential</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('in current use in the type of activity that qualifies it as essential'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b144" type="boolean" public-name="st_HBEE29.08b1Applies_b">
+        <text>
+          <base>HBEE 29.08(b)(1) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(b)(1)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b145" type="boolean" public-name="si_ResourceLifeInsurance_b">
+        <text>
+          <base>the person's resource is life insurance</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('life insurance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b146" type="boolean" public-name="si_ExcludedHBEE29.08b1_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(b)(1) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(b)(1) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b148" type="boolean" public-name="st_HBEE29.08b2Applies_b">
+        <text>
+          <base>HBEE 29.08(b)(2) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(b)(2)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b152" type="boolean" public-name="st_ExcludedHBEE29.08b2_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(b)(2) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(b)(2) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b153" type="boolean" public-name="si_BenefUnderLongTermInsurParPolicy_b">
+        <text>
+          <base>the person's resource is a qualified State long-term care insurance partnership policy</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a qualified State long-term care insurance partnership policy'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b154" type="boolean" public-name="si_BurialFunds_b">
+        <text>
+          <base>the person's resource is burial funds</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('burial funds'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b157" type="boolean" public-name="si_DesBurialExpenseTitleFunds_b">
+        <text>
+          <base>the person is able to demonstrate that the person's resource is designated for burial expenses through the title to the funds</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('able to demonstrate that the person''s resource is designated for burial expenses through the title to the funds'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b158" type="boolean" public-name="si_DesignBurialExpensesSwornStatement_b">
+        <text>
+          <base>the person has provided a sworn statement that the person's resource is designated for burial expenses</base>
+          <parse>s(ver('10.4.6.76'),v(provide,t(simple,present,perfect)),sb('the person',singular),o('a sworn statement that the person''s resource is designated for burial expenses'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b159" type="boolean" public-name="st_HBEE29.08d1_b">
+        <text>
+          <base>HBEE 29.08(d)(1) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(d)(1)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b160" type="boolean" public-name="st_ExcludedHBEE29.08d1_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(d)(1) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(d)(1) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b161" type="boolean" public-name="st_HBEE29.08d2Applies_b">
+        <text>
+          <base>HBEE 29.08(d)(2) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(d)(2)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b162" type="boolean" public-name="st_ExcludedHBEE29.08d2_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(d)(2) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(d)(2) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b163" type="boolean" public-name="si_Annuity_b">
+        <text>
+          <base>the person's resource is an annuity</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('an annuity'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b164" type="boolean" public-name="si_PayOutPhase_b">
+        <text>
+          <base>the person's resource is in its pay-out phase</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('in its pay-out phase'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b165" type="boolean" public-name="si_NoBenePersonSpouse_b">
+        <text>
+          <base>the person's resource has a beneficiary other than the person or the person's spouse</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person''s resource',singular),o('a beneficiary other than the person or the person''s spouse'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b166" type="boolean" public-name="si_PromNote_b">
+        <text>
+          <base>the person's resource is a promissory note or similar resource</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a promissory note or similar resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b169" type="boolean" public-name="st_ExcludedHBEE29.08e1_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(e)(1) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(e)(1) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b171" type="boolean" public-name="si_Trusts_b">
+        <text>
+          <base>the person's resource is a trust</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a trust'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b172" type="boolean" public-name="st_HBEE29.08e1iiSat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(e)(1)(ii) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(e)(1)(ii) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b173" type="boolean" public-name="st_HBEE29.08e1iSat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(e)(1)(i) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(e)(1)(i) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b175" type="boolean" public-name="si_TrustGrantor_b">
+        <text>
+          <base>the person is the grantor of the person's resource</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('the grantor of the person''s resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b176" type="boolean" public-name="si_RevokeTrustProp_b">
+        <text>
+          <base>the person cannot revoke the trust or receive trust property</base>
+          <parse>s(ver('10.4.7.86'),v(can,t(simple,past,normal)),sb('the person',plural),o('revoke the trust or receive trust property'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b177" type="boolean" public-name="si_GrantorMemberFinResGroup_b">
+        <text>
+          <base>the person's resource's grantor is a member of the person's financial responsibility group</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource''s grantor',singular),o('a member of the person''s financial responsibility group'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b178" type="boolean" public-name="si_EstWillTrust_b">
+        <text>
+          <base>the person's resource is a trust established by will, a.k.a. a testamentary trust</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a trust established by will, a.k.a. a testamentary trust'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b179" type="boolean" public-name="st_HBEE29.08e1iiCSat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(e)(1)(ii)(C) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(e)(1)(ii)(C) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b180" type="boolean" public-name="st_HBEE29.08e1iiBSat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(e)(1)(ii)(B) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(e)(1)(ii)(B) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b181" type="boolean" public-name="st_HBEE29.08e1iiDSat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(e)(1)(ii)(D) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(e)(1)(ii)(D) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b182" type="boolean" public-name="st_HBEE29.08e1iiFSat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(e)(1)(ii)(F) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(e)(1)(ii)(F) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b183" type="boolean" public-name="st_HBEE29.08e1iiGSat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(e)(1)(ii)(G) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(e)(1)(ii)(G) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b184" type="boolean" public-name="st_HBEE29.08e1iiASat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(e)(1)(ii)(A) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(e)(1)(ii)(A) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b185" type="boolean" public-name="st_HBEE29.08e1iiESat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(e)(1)(ii)(E) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(e)(1)(ii)(E) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b186" type="boolean" public-name="si_EstBefore04.07.1986_b">
+        <text>
+          <base>the person's resource is established before 04/07/1986</base>
+          <parse>s(ver('10.4.7.86'),v(establish,t(simple,present,normal)),ob('the person''s resource',singular),o('before 04/07/1986'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b187" type="boolean" public-name="si_SoleBenefitDevDis_b">
+        <text>
+          <base>the person's resource is for the sole benefit of a person who is residing in an intermediate care facility for the developmentally disabled</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('for the sole benefit of a person who is residing in an intermediate care facility for the developmentally disabled'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b188" type="boolean" public-name="si_DisabledChildSullivan_b">
+        <text>
+          <base>the person's resource's grantee is a disabled child under the decision in Sullivan v. Zebley, 493 U. S. 521 (1990)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource''s grantee',singular),o('a disabled child under the decision in Sullivan v. Zebley, 493 U. S. 521 (1990)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b190" type="boolean" public-name="si_FullyAvailablePerson_b">
+        <text>
+          <base>the person's resource can be made available to the person</base>
+          <parse>s(ver('10.4.6.76'),v(make+can,t(simple,modal,normal)),ob('the person''s resource',singular),o('available to the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b191" type="boolean" public-name="si_EstByAnotherPerson_b">
+        <text>
+          <base>the person's resource was establishes by another person besides the person or the person's spouse</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,past,normal)),sb('the person''s resource',singular),o('establishes by another person besides the person or the person''s spouse'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b192" type="boolean" public-name="si_IrrTrust_b">
+        <text>
+          <base>the person's resource is an irrevocable trust</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('an irrevocable trust'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b193" type="boolean" public-name="si_SpecNeedsTrust_b">
+        <text>
+          <base>the person's resource is a special needs trust</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a special needs trust'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b194" type="boolean" public-name="si_Assets65Older_b">
+        <text>
+          <base>the person's resource contains the assets of an individual whose age is below 65 years old</base>
+          <parse>s(ver('10.4.7.86'),v(contain,t(simple,present,normal)),sb('the person''s resource',singular),o('the assets of an individual whose age is below 65 years old'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b196" type="boolean" public-name="st_HBEE29.08e1iiFIISat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(e)(1)(ii)(F)(II) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(e)(1)(ii)(F)(II) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b197" type="boolean" public-name="st_HBEE29.08e1iiFISat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(e)(1)(ii)(F)(I) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(e)(1)(ii)(F)(I) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b198" type="boolean" public-name="st_HBEE29.08e1iiFIIISat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(e)(1)(ii)(F)(III) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(e)(1)(ii)(F)(III) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b199" type="boolean" public-name="si_ResEstActionParentGrandParent_b">
+        <text>
+          <base>the person's resource is established through the actions of a parent, grandparent, or legal guardian of the disabled individual</base>
+          <parse>s(ver('10.4.7.86'),v(establish,t(simple,present,normal)),ob('the person''s resource',singular),o('through the actions of a parent, grandparent, or legal guardian of the disabled individual'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b200" type="boolean" public-name="si_EstCourt_b">
+        <text>
+          <base>the person's resource is established by the court</base>
+          <parse>s(ver('10.4.7.86'),v(establish,t(simple,present,normal)),ob('the person''s resource',singular),o('by the court'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b201" type="boolean" public-name="si_SoleBenefitDisabledPerson_b">
+        <text>
+          <base>the person's resource was established for the sole benefit of the disabled person</base>
+          <parse>s(ver('10.4.7.86'),v(establish,t(simple,past,normal)),ob('the person''s resource',singular),o('for the sole benefit of the disabled person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b202" type="boolean" public-name="si_BackPaymentProvision_b">
+        <text>
+          <base>the person's resource includes a payback provision which requires that any amount remaining in the trust after the death of the disabled individual will be paid to Vermont Medicaid in an amount equal to the total Medicaid payments made on behalf of the disabled individual</base>
+          <parse>s(ver('10.4.7.86'),v(include,t(simple,present,normal)),sb('the person''s resource',singular),o('a payback provision which requires that any amount remaining in the trust after the death of the disabled individual will be paid to Vermont Medicaid in an amount equal to the total Medicaid payments made on behalf of the disabled individual'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b203" type="boolean" public-name="si_PooledTrust_b">
+        <text>
+          <base>the person's resource is a pooled trust</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a pooled trust'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b204" type="boolean" public-name="si_AssetsSSICriteriaDisability_b">
+        <text>
+          <base>the person's resource contains the assets of an individual who does or would meet the SSI criteria for disability</base>
+          <parse>s(ver('10.4.7.86'),v(contain,t(simple,present,normal)),sb('the person''s resource',singular),o('the assets of an individual who does or would meet the SSI criteria for disability'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b206" type="boolean" public-name="st_HBEE29.08e1iiGISat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(e)(1)(ii)(G)(IV) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(e)(1)(ii)(G)(IV) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b207" type="boolean" public-name="st_HBEE29.08e1iiGIISat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(e)(1)(ii)(G)(II) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(e)(1)(ii)(G)(II) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b208" type="boolean" public-name="st_HBEE29.08e1iiGIIISat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(e)(1)(ii)(G)(III) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(e)(1)(ii)(G)(III) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b209" type="boolean" public-name="st_HBEE29.08e1iiGVSat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(e)(1)(ii)(G)(V) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(e)(1)(ii)(G)(V) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b210" type="boolean" public-name="si_AdminNonProfit_b">
+        <text>
+          <base>the person's resource was administered by a non-profit organization</base>
+          <parse>s(ver('10.4.7.86'),v(administer,t(simple,past,normal)),ob('the person''s resource',singular),o('by a non-profit organization'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b211" type="boolean" public-name="si_MaintainSeperateAccountDis_b">
+        <text>
+          <base>the person's resource maintains a separate account for the disabled individual</base>
+          <parse>s(ver('10.4.7.86'),v(maintain,t(simple,present,normal)),sb('the person''s resource',singular),o('a separate account for the disabled individual'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b214" type="boolean" public-name="si_EstDisabledIndividual_b">
+        <text>
+          <base>the person's resource was established through the actions of the disabled individual, their parent, grandparent, legal guardian, or the court</base>
+          <parse>s(ver('10.4.7.86'),v(establish,t(simple,past,normal)),ob('the person''s resource',singular),o('through the actions of the disabled individual, their parent, grandparent, legal guardian, or the court'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b218" type="boolean" public-name="st_HBEE29.08e2iiiSat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(e)(2)(iii) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(e)(2)(iii) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b221" type="boolean" public-name="st_HBEE29.08e2vSat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(e)(2)(v) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(e)(2)(v) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b224" type="boolean" public-name="si_WithoutLifeSustainingServices_b">
+        <text>
+          <base>counting the person's resource would cause the person or the person's spouse, child, brother, sister, or parent to go without life-sustaining services</base>
+          <parse>s(ver('10.4.6.76'),v(cause+would,t(simple,modal,normal)),sb('counting the person''s resource',plural),o('the person or the person''s spouse, child, brother, sister, or parent to go without life-sustaining services'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b226" type="boolean" public-name="si_SoleSoureIncome_b">
+        <text>
+          <base>selling income-producing property from the person's resource would cause the person or the person's spouse, child, brother, sister, or parent to lose the sole source of income</base>
+          <parse>s(ver('10.4.6.76'),v(cause+would,t(simple,modal,normal)),sb('selling income-producing property from the person''s resource',plural),o('the person or the person''s spouse, child, brother, sister, or parent to lose the sole source of income'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b228" type="boolean" public-name="si_SoldQualSSIResearchUpEtc_b">
+        <text>
+          <base>selling income-producing property from the person's resource would cause the person or the person's spouse, child, brother, sister, or parent to qualify for SSI, Reach Up, AABD, General Assistance, 3SquaresVT, or another public assistance program requiring a comparable showing of financial need</base>
+          <parse>s(ver('10.4.6.76'),v(cause+would,t(simple,modal,normal)),sb('selling income-producing property from the person''s resource',plural),o('the person or the person''s spouse, child, brother, sister, or parent to qualify for SSI, Reach Up, AABD, General Assistance, 3SquaresVT, or another public assistance program requiring a comparable showing of financial need'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b230" type="boolean" public-name="si_WrittenRequestHarship_b">
+        <text>
+          <base>the person submitted a written request and supporting documentation for an undue hardship related to counting the person's resource</base>
+          <parse>s(ver('10.4.6.76'),v(submit,t(simple,past,normal)),sb('the person',plural),o('a written request and supporting documentation for an undue hardship related to counting the person''s resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b232" type="boolean" public-name="st_ExludedHBEE29.08f2_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(h)(2) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(h)(2) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b234" type="boolean" public-name="si_DesignatedJointFid_b">
+        <text>
+          <base>the person is designated as a fiduciary of the person's resource</base>
+          <parse>s(ver('10.4.6.76'),v(designate,t(simple,present,normal)),ob('the person',singular),o('as a fiduciary of the person''s resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b236" type="boolean" public-name="st_HBEE29.08i5App_b">
+        <text>
+          <base>HBEE 29.08(i)(5) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(i)(5)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b237" type="boolean" public-name="st_HBEE29.08i3App_b">
+        <text>
+          <base>HBEE 29.08(i)(3) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(i)(3)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b238" type="boolean" public-name="st_HBEE29.08i6App_b">
+        <text>
+          <base>HBEE 29.08(i)(6) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(i)(6)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b239" type="boolean" public-name="st_HBEE29.08i7App_b">
+        <text>
+          <base>HBEE 29.08(i)(7) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(i)(7)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b240" type="boolean" public-name="st_HBEE29.08i4App_b">
+        <text>
+          <base>HBEE 29.08(i)(4) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(i)(4)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b241" type="boolean" public-name="st_HBEE29.08i1App_b">
+        <text>
+          <base>HBEE 29.08(i)(1) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(i)(1)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b242" type="boolean" public-name="st_HBEE29.08i2App_b">
+        <text>
+          <base>HBEE 29.08(i)(2) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(i)(2)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b243" type="boolean" public-name="st_HBEE29.08i8App_b">
+        <text>
+          <base>HBEE 29.08(i)(8) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(i)(8)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b244" type="boolean" public-name="st_HBEE29.08i9App_b">
+        <text>
+          <base>HBEE 29.08(i)(9) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(i)(9)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b245" type="boolean" public-name="st_ExcludedHBEE29.08i1_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(i)(1) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(i)(1) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b246" type="boolean" public-name="st_ExcludedHBEE29.08i2_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(i)(2) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(i)(2) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b247" type="boolean" public-name="st_ExcludedHBEE29.08i8_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(i)(8) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(i)(8) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b248" type="boolean" public-name="st_ExcludedHBEE29.08i6_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(i)(6) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(i)(6) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b249" type="boolean" public-name="st_ExcludedHBEE29.08i5_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(i)(5) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(i)(5) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b250" type="boolean" public-name="st_ExcludedHBEE29.08i4_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(i)(4) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(i)(4) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b251" type="boolean" public-name="st_ExcludedHBEE29.08i7_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(i)(7) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(i)(7) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b252" type="boolean" public-name="st_ExcludedHBEE29.08i3_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(i)(3) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(i)(3) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b253" type="boolean" public-name="st_ExcludedHBEE29.08i9_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(i)(9) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(i)(9) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b254" type="boolean" public-name="si_HouseHoldGoods_b">
+        <text>
+          <base>the person's resource is household goods, personal effects and other personal property</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('household goods, personal effects and other personal property'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b258" type="boolean" public-name="si_Vehicle_b">
+        <text>
+          <base>the person's resource is a vehicle</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a vehicle'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b259" type="boolean" public-name="si_NecTrans_b">
+        <text>
+          <base>the person's resource is used to provide necessary transportation</base>
+          <parse>s(ver('10.4.6.76'),v(use,t(simple,present,normal)),ob('the person''s resource',singular),o('to provide necessary transportation'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b262" type="boolean" public-name="si_IndLivingContractMedCare_b">
+        <text>
+          <base>the person's resource is an independent living contract for medical care</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('an independent living contract for medical care'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b263" type="boolean" public-name="si_IndLivingContractAssTech_b">
+        <text>
+          <base>the person's resource is an independent living contract for assistive technology devices</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('an independent living contract for assistive technology devices'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b264" type="boolean" public-name="si_IndContractHomeModifications_b">
+        <text>
+          <base>the person's resource is an independent living contact for home modifications</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('an independent living contact for home modifications'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b275" type="boolean" public-name="si_WritingSignedBefore_b">
+        <text>
+          <base>the contract for the person's resource is a written contract that was signed before any services were provided</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the contract for the person''s resource',singular),o('a written contract that was signed before any services were provided'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b276" type="boolean" public-name="st_EqualLess30000_b">
+        <text>
+          <base>the person's resource includes funds equal to or less than $30,000</base>
+          <parse>s(ver('10.4.7.86'),v(include,t(simple,present,normal)),sb('the person''s resource',singular),o('funds equal to or less than $30,000'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b278" type="boolean" public-name="si_DuesPaidAfterServices_b">
+        <text>
+          <base>payments have been made from the person's resource before services are rendered</base>
+          <parse>s(ver('10.4.6.76'),v(make,t(simple,present,perfect)),ob('payments',plural),o('from the person''s resource before services are rendered'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b279" type="boolean" public-name="st_HBEE29.08i3DIISat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(i)(3)(ii)(D)(II) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(i)(3)(ii)(D)(II) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b280" type="boolean" public-name="st_HBEE29.08i3DISat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(i)(3)(ii)(D)(I) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(i)(3)(ii)(D)(I) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b285" type="boolean" public-name="si_PeriodicAccountings_b">
+        <text>
+          <base>periodic accountings for the person's resource have been provided as requested by AHS specifying the amount of each expenditure, who was paid, the service given, and the number of hours and dates of service covered</base>
+          <parse>s(ver('10.4.6.76'),v(provide,t(simple,present,perfect)),ob('periodic accountings for the person''s resource',plural),o('as requested by AHS specifying the amount of each expenditure, who was paid, the service given, and the number of hours and dates of service covered'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b286" type="boolean" public-name="si_PowerModifyRevTermCare_b">
+        <text>
+          <base>the person has the power to modify, revoke or terminate the contract for the person's resource</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('the power to modify, revoke or terminate the contract for the person''s resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b287" type="boolean" public-name="si_ResourceCeasesUponDeath_b">
+        <text>
+          <base>the contract for the person's resource ceases upon the person's death</base>
+          <parse>s(ver('10.4.6.76'),v(cease,t(simple,present,normal)),sb('the contract for the person''s resource',singular),o('upon the person''s death'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b288" type="boolean" public-name="si_CeasesRevoTerm_b">
+        <text>
+          <base>the agreement for the person's resource ceases upon revocation or termination of the contact</base>
+          <parse>s(ver('10.4.6.76'),v(cease,t(simple,present,normal)),sb('the agreement for the person''s resource',singular),o('upon revocation or termination of the contact'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b289" type="boolean" public-name="si_CeaseAdminInstit45Days_b">
+        <text>
+          <base>the contract for the person's resource ceases upon the person's admission to an institution for long-term care for more than 45 days</base>
+          <parse>s(ver('10.4.6.76'),v(cease,t(simple,present,normal)),sb('the contract for the person''s resource',singular),o('upon the person''s admission to an institution for long-term care for more than 45 days'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b291" type="boolean" public-name="si_CeasesAdminInstitMoreThan6Months_b">
+        <text>
+          <base>the contract for the person's resource ceases upon the person's admission to an institution for long-term care for more than 6 months</base>
+          <parse>s(ver('10.4.6.76'),v(cease,t(simple,present,normal)),sb('the contract for the person''s resource',singular),o('upon the person''s admission to an institution for long-term care for more than 6 months'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b292" type="boolean" public-name="si_CashLiquid_b">
+        <text>
+          <base>the person's resource is a cash or liquid resource</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a cash or liquid resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b295" type="boolean" public-name="si_UsedOperationTradePropEssential_b">
+        <text>
+          <base>the person's resource is used in the operation of person's trade or business as property essential to self-support</base>
+          <parse>s(ver('10.4.7.86'),v(use,t(simple,present,normal)),ob('the person''s resource',singular),o('in the operation of person''s trade or business as property essential to self-support'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b297" type="boolean" public-name="st_HBEE29.08i5iiSat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(i)(5)(ii) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(i)(5)(ii) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b298" type="boolean" public-name="st_HBEE29.08i5iSat_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(i)(5)(i) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(i)(5)(i) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b299" type="boolean" public-name="st_HBEE29.08i5iA_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(i)(5)(i)(A) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(i)(5)(i)(A) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b300" type="boolean" public-name="st_HBEE29.08i5iB_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(i)(5)(i)(B) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(i)(5)(i)(B) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b301" type="boolean" public-name="st_HBEE29.08i5iC_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(i)(5)(i)(C) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(i)(5)(i)(C) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b302" type="boolean" public-name="si_TermEmpObtPayment_b">
+        <text>
+          <base>the person's resource requires the person to terminate employment in order to obtain any payment</base>
+          <parse>s(ver('10.4.6.76'),v(require,t(simple,present,normal)),sb('the person''s resource',singular),o('the person to terminate employment in order to obtain any payment'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b305" type="boolean" public-name="si_DrawingRetirementConsistRate_b">
+        <text>
+          <base>the person is drawing on the person's resource at a rate consistent with the person's life expectancy as specified in HBEE 25.03(b)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('drawing on the person''s resource at a rate consistent with the person''s life expectancy as specified in HBEE 25.03(b)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b306" type="boolean" public-name="si_PeriodPayment_b">
+        <text>
+          <base>the person is eligible for periodic payments from the person's resource</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('eligible for periodic payments from the person''s resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b307" type="boolean" public-name="si_EligLumpSums_b">
+        <text>
+          <base>the person has the option to withdraw a lump sum from the person's resource</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('the option to withdraw a lump sum from the person''s resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b308" type="boolean" public-name="si_RecPeriodicPayments_b">
+        <text>
+          <base>the person is receiving periodic payments from the person's resource</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('receiving periodic payments from the person''s resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b309" type="boolean" public-name="si_TaxRefunds_b">
+        <text>
+          <base>the person's resource is a tax refund</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a tax refund'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b310" type="boolean" public-name="si_TaxRefundRealProp_b">
+        <text>
+          <base>the person's resource is a tax refund on real property, income, or food</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a tax refund on real property, income, or food'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b311" type="boolean" public-name="si_StudentBenefits_b">
+        <text>
+          <base>the person's resource is a grant, scholarship, or fellowship</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a grant, scholarship, or fellowship'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b314" type="boolean" public-name="si_ExcludedIncome_b">
+        <text>
+          <base>the person's resource is savings from excluded income</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('savings from excluded income'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b316" type="boolean" public-name="si_HBEE29.08i9iSat_b">
+        <text>
+          <base>HBEE 29.08(i)(9)(i) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(9)(i)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b317" type="boolean" public-name="si_HBEE29.08i9xxiiiSat_b">
+        <text>
+          <base>HBEE 29.08(i)(9)(xxiii) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(9)(xxiii)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b318" type="boolean" public-name="si_HBEE29.08i9xxiiSat_b">
+        <text>
+          <base>HBEE 29.08(i)(9)(xxii) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(9)(xxii)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b319" type="boolean" public-name="si_HBEE29.08i9xxiSat_b">
+        <text>
+          <base>HBEE 29.08(i)(9)(xxi) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(9)(xxi)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b320" type="boolean" public-name="si_HBEE29.08i9xxSat_b">
+        <text>
+          <base>HBEE 29.08(i)(9)(xx) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(9)(xx)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b321" type="boolean" public-name="si_HBEE29.08i9xixSat_b">
+        <text>
+          <base>HBEE 29.08(i)(9)(xix) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(9)(xix)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b322" type="boolean" public-name="si_HBEE29.08i9xviiiSat_b">
+        <text>
+          <base>HBEE 29.08(i)(9)(xviii) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(9)(xviii)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b323" type="boolean" public-name="si_HBEE29.08i9xviiSat_b">
+        <text>
+          <base>HBEE 29.08(i)(9)(xvii) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(9)(xvii)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b324" type="boolean" public-name="si_HBEE29.08i9xviSat_b">
+        <text>
+          <base>HBEE 29.08(i)(9)(xvi) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(9)(xvi)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b325" type="boolean" public-name="si_HBEE29.08i9xvSat_b">
+        <text>
+          <base>HBEE 29.08(i)(9)(xv) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(9)(xv)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b326" type="boolean" public-name="si_HBEE29.08i9xivSat_b">
+        <text>
+          <base>HBEE 29.08(i)(9)(xiv) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(9)(xiv)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b327" type="boolean" public-name="si_HBEE29.08i9xiiiSat_b">
+        <text>
+          <base>HBEE 29.08(i)(9)(xiii) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(9)(xiii)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b328" type="boolean" public-name="si_HBEE29.08i9xiiSat_b">
+        <text>
+          <base>HBEE 29.08(i)(9)(xii) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(9)(xii)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b329" type="boolean" public-name="si_HBEE29.08i9xiSat_b">
+        <text>
+          <base>HBEE 29.08(i)(9)(xi) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(9)(xi)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b330" type="boolean" public-name="si_HBEE29.08i9xSat_b">
+        <text>
+          <base>HBEE 29.08(i)(9)(x) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(9)(x)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b331" type="boolean" public-name="si_HBEE29.08i9ixSat_b">
+        <text>
+          <base>HBEE 29.08(i)(9)(ix) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(9)(ix)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b332" type="boolean" public-name="si_HBEE29.08i9viiiSat_b">
+        <text>
+          <base>HBEE 29.08(i)(9)(viii) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(9)(viii)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b333" type="boolean" public-name="si_HBEE29.08i9viiSat_b">
+        <text>
+          <base>HBEE 29.08(i)(9)(vii) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(9)(vii)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b334" type="boolean" public-name="si_HBEE29.08i9viSat_b">
+        <text>
+          <base>HBEE 29.08(i)(9)(vi) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(9)(vi)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b335" type="boolean" public-name="si_HBEE29.08i9vSat_b">
+        <text>
+          <base>HBEE 29.08(i)(9)(v) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(9)(v)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b336" type="boolean" public-name="si_HBEE29.08i9ivSat_b">
+        <text>
+          <base>HBEE 29.08(i)(9)(iv) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(9)(iv)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b337" type="boolean" public-name="si_HBEE29.08iii9iSat_b">
+        <text>
+          <base>HBEE 29.08(i)(9)(iii) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(9)(iii)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b338" type="boolean" public-name="si_HBEE29.08i9iiSat_b">
+        <text>
+          <base>HBEE 29.08(i)(9)(ii) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(9)(ii)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b339" type="boolean" public-name="si_ValueNSLACNA_b">
+        <text>
+          <base>the person's resource is the value of meals and food commodities distributed under the National School Lunch Act and the Child Nutrition Act</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('the value of meals and food commodities distributed under the National School Lunch Act and the Child Nutrition Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b340" type="boolean" public-name="si_Value3Sqaures_b">
+        <text>
+          <base>the person's resource is the value of 3SquaresVT or 3SquaresVT cash-out checks</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('the value of 3SquaresVT or 3SquaresVT cash-out checks'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b341" type="boolean" public-name="si_ValueRecWCProgram_b">
+        <text>
+          <base>the person's resource is the value of the food or vouchers received through the WIC Program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('the value of the food or vouchers received through the WIC Program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b342" type="boolean" public-name="si_OldAmericansAct_b">
+        <text>
+          <base>the person's resource is the value of food or meals received under the Older Americans Act</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('the value of food or meals received under the Older Americans Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b343" type="boolean" public-name="si_FosterProgramsEtc_b">
+        <text>
+          <base>the person's resource is compensation or remuneration received for volunteer work in ACTION programs including foster grandparents, RSVP, SCORE, ACV, ACE, VISTA, Senior Companion Program, and UYA</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('compensation or remuneration received for volunteer work in ACTION programs including foster grandparents, RSVP, SCORE, ACV, ACE, VISTA, Senior Companion Program, and UYA'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b344" type="boolean" public-name="si_USHousingActEtc_b">
+        <text>
+          <base>the person's resource is the value of assistance received under the U.S. Housing Act, U.S. Housing Authorization Act and the Housing and Urban Development Act</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('the value of assistance received under the U.S. Housing Act, U.S. Housing Authorization Act and the Housing and Urban Development Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b345" type="boolean" public-name="si_RelocationAssistance_b">
+        <text>
+          <base>the person's resource is the value of relocation assistance to displaced persons under the Uniform Relocation and Real Properties Acquisition Policies Act</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('the value of relocation assistance to displaced persons under the Uniform Relocation and Real Properties Acquisition Policies Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b346" type="boolean" public-name="si_PerCapitaInidianTribes_b">
+        <text>
+          <base>the person's resource is the per capita distribution to certain Indian Tribes</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('the per capita distribution to certain Indian Tribes'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b347" type="boolean" public-name="si_LandsHeldIndianTribes_b">
+        <text>
+          <base>the person's resource is receipts from lands held in trust for certain Indian Tribes</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('receipts from lands held in trust for certain Indian Tribes'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b348" type="boolean" public-name="si_AlaskaNASettlements_b">
+        <text>
+          <base>the person's resource is received under the Alaska Native Claims Settlement Act</base>
+          <parse>s(ver('10.4.7.86'),v(receive,t(simple,present,normal)),ob('the person''s resource',singular),o('under the Alaska Native Claims Settlement Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b349" type="boolean" public-name="si_GrantsUSDofE_b">
+        <text>
+          <base>the person's resource is a grant or loan received for educational purposes under any U.S. Department of Education program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a grant or loan received for educational purposes under any U.S. Department of Education program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b350" type="boolean" public-name="si_AssistanceEECorECP_b">
+        <text>
+          <base>the person's resource is assistance received under the Emergency Energy Conservation or Energy Crisis Program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('assistance received under the Emergency Energy Conservation or Energy Crisis Program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b351" type="boolean" public-name="si_AssRecLowIncomeEnergyAssistance_b">
+        <text>
+          <base>the person's resource is assistance received under the Low-Income Home Energy Assistance Act, either in cash or through vendor payments</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('assistance received under the Low-Income Home Energy Assistance Act, either in cash or through vendor payments'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b352" type="boolean" public-name="si_restWWII_b">
+        <text>
+          <base>the person's resource is compensation paid to Americans of Japanese or Aleut ancestry as restitution for their incarceration during World War II</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('compensation paid to Americans of Japanese or Aleut ancestry as restitution for their incarceration during World War II'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b353" type="boolean" public-name="si_AgentOrangeSettlementPayments_b">
+        <text>
+          <base>the person's resource is Agent Orange Settlement payments</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('Agent Orange Settlement payments'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b354" type="boolean" public-name="si_HolocaustReparations_b">
+        <text>
+          <base>the person's resource is German reparations to concentration camp survivors, slave laborers, partisans, and other victims of the Holocaust</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('German reparations to concentration camp survivors, slave laborers, partisans, and other victims of the Holocaust'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b355" type="boolean" public-name="si_ConfAssetsWWII_b">
+        <text>
+          <base>the person's resource is settlement payments to victims of Nazi persecution or their legal heirs resulting from the confiscation of the assets during World War II</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('settlement payments to victims of Nazi persecution or their legal heirs resulting from the confiscation of the assets during World War II'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b356" type="boolean" public-name="si_AustGovernmentPensionSystem_b">
+        <text>
+          <base>the person's resource is war reparations paid under the Austrian government's pension system</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('war reparations paid under the Austrian government''s pension system'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b357" type="boolean" public-name="si_RadiationExposureComp_b">
+        <text>
+          <base>the person's resource is payments from the Radiation Exposure Compensation Trust Fund</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('payments from the Radiation Exposure Compensation Trust Fund'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b358" type="boolean" public-name="si_DisReliefEmergenceAssistance_b">
+        <text>
+          <base>the person's resource is assistance received under the Disaster Relief and Emergency Assistance Act or other comparable assistance provided by Federal, State, or local government or from a disaster assistance organization</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('assistance received under the Disaster Relief and Emergency Assistance Act or other comparable assistance provided by Federal, State, or local government or from a disaster assistance organization'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b363" type="boolean" public-name="si_NetherlandsAct_b">
+        <text>
+          <base>the person's resource is Netherlands Act on Benefits for Victims of Persecution 1940-1945 payments</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('Netherlands Act on Benefits for Victims of Persecution 1940-1945 payments'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b364" type="boolean" public-name="si_Section163a2f_b">
+        <text>
+          <base>the person's resource is an account established and maintained in accordance with Section 1631(a)(2)(F) of the Act</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('an account established and maintained in accordance with Section 1631(a)(2)(F) of the Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b365" type="boolean" public-name="si_DepTangCentralCVAC_b">
+        <text>
+          <base>the person's resource is earnings deposited in a special savings account under the Tangible Assets project managed by the Central Vermont Community Action Council and authorized by PRWORA</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('earnings deposited in a special savings account under the Tangible Assets project managed by the Central Vermont Community Action Council and authorized by PRWORA'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b367" type="boolean" public-name="si_PASS_b">
+        <text>
+          <base>the person's resource is necessary for them to carry out the person's approved Plan for Achieving Self-Support (PASS)</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('necessary for them to carry out the person''s approved Plan for Achieving Self-Support (PASS)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b369" type="boolean" public-name="si_HBEE29.08i10iSat_b">
+        <text>
+          <base>HBEE 29.08(i)(10)(i) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(10)(i)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b370" type="boolean" public-name="si_HBEE29.08ii10iSat_b">
+        <text>
+          <base>HBEE 29.08(i)(10)(ii) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(10)(ii)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b371" type="boolean" public-name="si_HBEE29.08iii10iSat_b">
+        <text>
+          <base>HBEE 29.08(i)(10)(iii) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(10)(iii)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b372" type="boolean" public-name="si_HBEE29.08i10ivSat_b">
+        <text>
+          <base>HBEE 29.08(i)(10)(iv) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(10)(iv)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b373" type="boolean" public-name="si_HBEE29.08i10ivat_b">
+        <text>
+          <base>HBEE 29.08(i)(10)(v) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(10)(v)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b374" type="boolean" public-name="si_HBEE29.08i10viSat_b">
+        <text>
+          <base>HBEE 29.08(i)(10)(vi) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(10)(vi)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b375" type="boolean" public-name="si_HBEE29.08i10viiSat_b">
+        <text>
+          <base>HBEE 29.08(i)(10)(vii) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.08(i)(10)(vii)',singular),o('for the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b376" type="boolean" public-name="si_RetroactivePaymentsSSI_b">
+        <text>
+          <base>the person's resource is retroactive payments of SSI, the AABD supplement to SSI, or Social Security Benefits</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('retroactive payments of SSI, the AABD supplement to SSI, or Social Security Benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b377" type="boolean" public-name="si_ResourceProvided9Months_b">
+        <text>
+          <base>the person's resource was first provided within the past 9 months</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,past,normal)),sb('the person''s resource',singular),o('first provided within the past 9 months'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b378" type="boolean" public-name="si_RecCurrentMonth_b">
+        <text>
+          <base>the person's resource was received in the current month</base>
+          <parse>s(ver('10.4.7.86'),v(receive,t(simple,past,normal)),ob('the person''s resource',singular),o('in the current month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b379" type="boolean" public-name="si_CashInterestFixingExcludedResource_b">
+        <text>
+          <base>the person's resource is cash and interest earned on cash received from any source for the purpose of repairing or replacing an excluded resource that is lost, stolen, or damaged</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('cash and interest earned on cash received from any source for the purpose of repairing or replacing an excluded resource that is lost, stolen, or damaged'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b381" type="boolean" public-name="si_StateFedEITCRefund_b">
+        <text>
+          <base>the person's resource is a state or federal earned income tax credit refund or advance payment</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a state or federal earned income tax credit refund or advance payment'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b382" type="boolean" public-name="si_CashRecMedicalPayment_b">
+        <text>
+          <base>the person's resource was cash received for medical or social services</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,past,normal)),sb('the person''s resource',singular),o('cash received for medical or social services'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b383" type="boolean" public-name="si_State-AdminVictimsCompPayment_b">
+        <text>
+          <base>the person's resource is state-administered victims compensation payments</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('state-administered victims compensation payments'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b384" type="boolean" public-name="si_StateLocalGovRelocation_b">
+        <text>
+          <base>the person's resource is state or local government relocation payments</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('state or local government relocation payments'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b385" type="boolean" public-name="si_PaymentsGiftResultDeath_b">
+        <text>
+          <base>the person's resource is payments, gifts, and inheritances received in result of death of another person</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('payments, gifts, and inheritances received in result of death of another person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b388" type="boolean" public-name="si_USSavingsBond_b">
+        <text>
+          <base>the person's resource is U.S. Savings Bonds</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('U.S. Savings Bonds'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b389" type="boolean" public-name="si_MinRetentionPeriod_b">
+        <text>
+          <base>the person's resource is in its minimum retention period</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('in its minimum retention period'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b390" type="boolean" public-name="si_HardshipWaver_b">
+        <text>
+          <base>the person's resource requested a hardship waiver based on financial need due to medical expenses</base>
+          <parse>s(ver('10.4.7.86'),v(request,t(simple,past,normal)),sb('the person''s resource',plural),o('a hardship waiver based on financial need due to medical expenses'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b391" type="boolean" public-name="si_DeniedUSDeptTreasury_b">
+        <text>
+          <base>the person received a denial from the United States Department of Treasury, Bureau of Public Debt for a hardship waiver for the person's resource</base>
+          <parse>s(ver('10.4.6.76'),v(receive,t(simple,past,normal)),sb('the person',plural),o('a denial from the United States Department of Treasury, Bureau of Public Debt for a hardship waiver for the person''s resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b392" type="boolean" public-name="si_PurchasedBefore06.15.2004_b">
+        <text>
+          <base>the person's resource was purchased before 06/15/2004</base>
+          <parse>s(ver('10.4.7.86'),v(purchase,t(simple,past,normal)),ob('the person''s resource',singular),o('before 06/15/2004'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b403" type="boolean" public-name="si_MaintainsSepAccountSoleBenefitDisabled_b">
+        <text>
+          <base>the person's resource maintains a separate account for the disabled individual for the sole benefit of the disabled person</base>
+          <parse>s(ver('10.4.7.86'),v(maintain,t(simple,present,normal)),sb('the person''s resource',singular),o('a separate account for the disabled individual for the sole benefit of the disabled person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b405" type="boolean" public-name="si_ExcludedHBEE29.08i10_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(i)(10) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(i)(10) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b406" type="boolean" public-name="st_ExludedHBEE29.08e2_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(e)(2) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(e)(2) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b407" type="boolean" public-name="st_ExludedProgramHBEE29.08i11_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(i)(11) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(i)(11) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b411" type="boolean" public-name="st_HBEE29.08e1iiG1Applies_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(e)(1)(ii)(G)(I) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(e)(1)(ii)(G)(I) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b420" type="boolean" public-name="si_ResourceJointFid_b">
+        <text>
+          <base>the person's resource is a joint fiduciary account in a financial institution</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a joint fiduciary account in a financial institution'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b436" type="boolean" public-name="si_ResTypeHome_b">
+        <text>
+          <base>the person's resource is a home</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a home'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b442" type="boolean" public-name="st_prIsExcldUndHBEE2908a1iEff080116_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(a)(1)(i) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(a)(1)(i) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b443" type="boolean" public-name="so_HBEE29.08ResExcl20160801_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08 (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08 (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b444" type="boolean" public-name="st_HBEE29.08a1Excluded_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(a)(1) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(a)(1) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b446" type="boolean" public-name="st_HBEE29.08aExcluded_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08(a) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(a) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b447" type="boolean" public-name="si_prPrsnIsAbsntFrmRsrcDueToInstlztn_b">
+        <text>
+          <base>the person is absent from the person's resource due to institutionalization</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('absent from the person''s resource due to institutionalization'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b448" type="boolean" public-name="si_prPrsnPlcdRsrcInRvcblTrst_b">
+        <text>
+          <base>the person placed the person's resource in a revocable trust</base>
+          <parse>s(ver('10.4.6.76'),v(place,t(simple,past,normal)),sb('the person',plural),o('the person''s resource in a revocable trust'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b449" type="boolean" public-name="si_prPrsnIntndsToRtnToRsrce_b">
+        <text>
+          <base>the person intends to return to the person's resource</base>
+          <parse>s(ver('10.4.6.76'),v(intend,t(simple,present,normal)),sb('the person',singular),o('to return to the person''s resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b450" type="boolean" public-name="si_prPrsnHsSpsOrDpdntRltRsdgInRsrc_b">
+        <text>
+          <base>the person has a spouse or dependent relative residing in the person's resource</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('a spouse or dependent relative residing in the person''s resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b451" type="boolean" public-name="si_prPrsnHsMedCndtnThtPrvntFmLvgInRsrcPriorToInstzn_b">
+        <text>
+          <base>the person has a medical condition that prevented the person from living in the person's resource prior to institutionalization</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('a medical condition that prevented the person from living in the person''s resource prior to institutionalization'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b452" type="boolean" public-name="si_prIsLfEstIntstInPrsnPrcplPlcOfRes_b">
+        <text>
+          <base>the person's resource is a life estate interest in the person's principal place of residence</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a life estate interest in the person''s principal place of residence'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p7" type="number">
+        <text>
+          <base>the net annual income generated by the person's resource after deducting allowable expenses related to producing the income as a percentage of the person's resource's fair market value under HBEE 29.08(a)(7)(i) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p8" type="currency" public-name="si_prGrsAnnIncmGnrtdByRsc_c">
+        <text>
+          <base>the gross annual income generated by the person's resource</base>
+        </text>
+      </attribute>
+      <attribute name="p9" type="currency" public-name="si_prAlwblExpRltdToPrdcgIncmGnrtdByRsrc_c">
+        <text>
+          <base>the allowable expenses related to producing the income generated by the person's resource</base>
+        </text>
+      </attribute>
+      <attribute name="b453" type="boolean" public-name="si_resTypeBurialSpcSpChSibPar_b">
+        <text>
+          <base>the person's resource is a burial space held for the burial of the person's spouse, child, brother, sister, or parent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a burial space held for the burial of the person''s spouse, child, brother, sister, or parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b454" type="boolean" public-name="si_resBeneResidualPrimVT_b">
+        <text>
+          <base>the person has designated Vermont Medicaid as the primary residual beneficiary of the person's resource up to the amount of Medicaid payments made on behalf of the person</base>
+          <parse>s(ver('10.4.6.76'),v(designate,t(simple,present,perfect)),sb('the person',singular),o('Vermont Medicaid as the primary residual beneficiary of the person''s resource up to the amount of Medicaid payments made on behalf of the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b456" type="boolean" public-name="si_prPrsCnExpctRcvFMVWthnExptdLftm_b">
+        <text>
+          <base>the person can expect to receive the full fair market value of the person's resource within the person's expected lifetime as determined by using the annuity tables published by the Office of the Chief Actuary of the SSA</base>
+          <parse>s(ver('10.4.6.76'),v(expect+can,t(simple,modal,normal)),sb('the person',plural),o('to receive the full fair market value of the person''s resource within the person''s expected lifetime as determined by using the annuity tables published by the Office of the Chief Actuary of the SSA'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b457" type="boolean" public-name="si_resBeneResidual_b">
+        <text>
+          <base>the person's resource designates a residual beneficiary</base>
+          <parse>s(ver('10.4.6.76'),v(designate,t(simple,present,normal)),sb('the person''s resource',singular),o('a residual beneficiary'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b458" type="boolean" public-name="si_resBeneResidContingNotSp_b">
+        <text>
+          <base>the person has designated a contingent residual beneficiary other than the person or person's spouse to receive any surplus from the person's resource after Vermont Medicaid is paid</base>
+          <parse>s(ver('10.4.6.76'),v(designate,t(simple,present,perfect)),sb('the person',singular),o('a contingent residual beneficiary other than the person or person''s spouse to receive any surplus from the person''s resource after Vermont Medicaid is paid'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b459" type="boolean" public-name="si_TrustGrantee_b">
+        <text>
+          <base>the person is the grantee of the person's resource</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('the grantee of the person''s resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b460" type="boolean" public-name="si_prAHSHsDtmdRsrcNeedToKpPrsnAtHm_b">
+        <text>
+          <base>it is the case that AHS has determined that the person's resource is needed to keep the person at home and out of a skilled nursing facility</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that AHS has determined that the person''s resource is needed to keep the person at home and out of a skilled nursing facility'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b461" type="boolean" public-name="si_prPrsnRcvdDnlOnClmFrPrdcPymtsDrmgCrntMnth_b">
+        <text>
+          <base>the person received a denial on a claim for periodic payments from the person's resource during the current month</base>
+          <parse>s(ver('10.4.6.76'),v(receive,t(simple,past,normal)),sb('the person',plural),o('a denial on a claim for periodic payments from the person''s resource during the current month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p25" type="currency" public-name="si_prPrtnUsdToPyFeesTtnOthExpnsNcsyScrngEdctn_c">
+        <text>
+          <base>the portion of the person's resource used to pay fees, tuition, or other expenses necessary to securing an education</base>
+        </text>
+      </attribute>
+      <attribute name="p26" type="currency">
+        <text>
+          <base>the student benefits exclusion for the person's resource under HBEE 29.08(i)(7) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="b462" type="boolean" public-name="si_prPrsnPrvdGdCsToRcvExtnsnToRprOrRplcRsrc_b">
+        <text>
+          <base>the person provided a good cause to receive an extension to repair or replace the lost, stolen, or damaged excluded resource for which the person's resource was received</base>
+          <parse>s(ver('10.4.6.76'),v(provide,t(simple,past,normal)),sb('the person',plural),o('a good cause to receive an extension to repair or replace the lost, stolen, or damaged excluded resource for which the person''s resource was received'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p28" type="currency" public-name="so_HBEE29.08ResExclAmt200160801_c">
+        <text>
+          <base>the countable resource exclusion for the person's resource under HBEE 29.08 (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p30" type="currency" public-name="so_HBEE29.08ResExclAmt_c">
+        <text>
+          <base>the countable resource exclusion for the person's resource under HBEE 29.08</base>
+        </text>
+      </attribute>
+      <attribute name="b463" type="boolean" public-name="so_HBEE29.08ResExcl_b">
+        <text>
+          <base>the person's resource is excluded under HBEE 29.08</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b464" type="boolean" public-name="si_resTypeTermLife_b">
+        <text>
+          <base>the person's resource is term life insurance</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('term life insurance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b465" type="boolean" public-name="si_resCommingled_b">
+        <text>
+          <base>the person's resource is commingled with other funds</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('commingled with other funds'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b466" type="boolean" public-name="si_resJoint_b">
+        <text>
+          <base>the person's resource is a jointly-owned resource</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a jointly-owned resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b467" type="boolean" public-name="si_resPayEqual_b">
+        <text>
+          <base>the person's resource provides payments to the beneficiary in equal intervals and equal amounts</base>
+          <parse>s(ver('10.4.6.76'),v(provide,t(simple,present,normal)),sb('the person''s resource',singular),o('payments to the beneficiary in equal intervals and equal amounts'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b468" type="boolean" public-name="si_resExceedLifeExp_b">
+        <text>
+          <base>the person's resource exceeds the life expectancy of the beneficiary</base>
+          <parse>s(ver('10.4.6.76'),v(exceed,t(simple,present,normal)),sb('the person''s resource',singular),o('the life expectancy of the beneficiary'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b469" type="boolean" public-name="si_resOwnerFidInst_b">
+        <text>
+          <base>it is the case that the owner of the person's resource has made a clear statement about how the money can be used, and the fiduciary is required to follow those instructions and keep track of how the money is spent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the owner of the person''s resource has made a clear statement about how the money can be used, and the fiduciary is required to follow those instructions and keep track of how the money is spent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b470" type="boolean" public-name="so_HBEE29.08i10Apply20160801_b">
+        <text>
+          <base>HBEE 29.08(i)(10) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(i)(10)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b471" type="boolean" public-name="so_HBEE29.08i11Apply20160801_b">
+        <text>
+          <base>HBEE 29.08(i)(11) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(i)(11)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b474" type="boolean" public-name="si_InsLifeWhole_b">
+        <text>
+          <base>the person's resource is whole life insurance</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('whole life insurance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p33" type="currency">
+        <text>
+          <base>the countable value of the person's resource on June 30, 2002 under HBEE 29.08(c)(4) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="b475" type="boolean" public-name="si_annuityContractReturn_b">
+        <text>
+          <base>the contract for the person's resource has language that says it will return to the beneficiary at least the amount used to establish the annuity contract and any additional payments plus any earnings</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the contract for the person''s resource',singular),o('language that says it will return to the beneficiary at least the amount used to establish the annuity contract and any additional payments plus any earnings'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b476" type="boolean" public-name="si_trustFundsReqSaleIncome_b">
+        <text>
+          <base>getting funds for medical care from the person's resource would require selling income-producing property</base>
+          <parse>s(ver('10.4.6.76'),v(require+would,t(simple,modal,normal)),sb('getting funds for medical care from the person''s resource',plural),o('selling income-producing property'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b477" type="boolean" public-name="si_ResourceProvided10Months_b">
+        <text>
+          <base>the person's resource was first provided within the past 10 months</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s resource',singular),o('first provided within the past 10 months'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b501" type="boolean" public-name="si_resSusanWalker_b">
+        <text>
+          <base>the person's resource is payments as a result of a settlement in the case of Susan Walker v. Bayer Corporation et al</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('payments as a result of a settlement in the case of Susan Walker v. Bayer Corporation et al'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b503" type="boolean" public-name="si_ResourceProvided3Months_b">
+        <text>
+          <base>the person's resource was first received within the past 3 months</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s resource',singular),o('first received within the past 3 months'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b504" type="boolean" public-name="si_prCntrctFrRsrcHsCsd_b">
+        <text>
+          <base>the contract for the person's resource has ceased</base>
+          <parse>s(ver('10.4.6.76'),v(cease,t(simple,present,perfect)),sb('the contract for the person''s resource',singular))</parse>
+        </text>
+      </attribute>
+      <attribute name="b510" type="boolean" public-name="si_prPymtsFrMedCrOrAstTchnlgyExd500_b">
+        <text>
+          <base>payments from the person's resource for medical care or assistive technology services exceed $500 per month</base>
+          <parse>s(ver('10.4.6.76'),v(exceed,t(simple,present,normal)),sb('payments from the person''s resource for medical care or assistive technology services',plural),o('$500 per month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b511" type="boolean" public-name="si_prPymtsToNonLcsdIndExcdAmtPdUndAHCCFCPrgm_b">
+        <text>
+          <base>payments from the person's resource to non-licensed individuals or providers exceed the amount paid under AHS's Choice for Care program</base>
+          <parse>s(ver('10.4.6.76'),v(exceed,t(simple,present,normal)),sb('payments from the person''s resource to non-licensed individuals or providers',plural),o('the amount paid under AHS''s Choice for Care program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b512" type="boolean" public-name="si_prPymtsToNonLcdIndExdFMVOfSvcBngPrvdBySmlryTrndInd_b">
+        <text>
+          <base>payments from the person's resource to non-licensed individuals or providers exceed the fair market value of such services being provided by similarly situated and trained non-licensed individuals</base>
+          <parse>s(ver('10.4.6.76'),v(exceed,t(simple,present,normal)),sb('payments from the person''s resource to non-licensed individuals or providers',plural),o('the fair market value of such services being provided by similarly situated and trained non-licensed individuals'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b513" type="boolean" public-name="si_prMinRtnPrdExprsAft061504_b">
+        <text>
+          <base>the minimum retention period for the person's resource expires after 06/15/2004</base>
+          <parse>s(ver('10.4.6.76'),v(expire,t(simple,present,normal)),sb('the minimum retention period for the person''s resource',singular),o('after 06/15/2004'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b514" type="boolean" public-name="si_prIsCntrctFrSvcsNotCvdByMdcrPIOrMdcd_b">
+        <text>
+          <base>the person's resource is a contract for services not covered by Medicare, private insurance, or Medicaid</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a contract for services not covered by Medicare, private insurance, or Medicaid'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b515" type="boolean" public-name="si_prIsNonNgtblPrmsyNtExcldBf090105_b">
+        <text>
+          <base>the person's resource is a nonnegotiable or nonassignable promissory note executed before September 1, 2005</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a nonnegotiable or nonassignable promissory note executed before September 1, 2005'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b516" type="boolean" public-name="si_prIsAnAuto_b">
+        <text>
+          <base>the person's resource is an automobile</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('an automobile'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b517" type="boolean" public-name="si_prIsLTCIns_b">
+        <text>
+          <base>the person's resource is long-term care insurance</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('long-term care insurance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b518" type="boolean" public-name="si_prIsRcvdInCurrMnth_b">
+        <text>
+          <base>the person's resource is received in the current month</base>
+          <parse>s(ver('10.4.6.76'),v(receive,t(simple,present,normal)),ob('the person''s resource',singular),o('in the current month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b519" type="boolean" public-name="si_prIsRetirementFunds_b">
+        <text>
+          <base>the person's resource is retirement funds</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('retirement funds'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b520" type="boolean" public-name="si_prIsUsdToRprLstStlnDmgdExldRsrcFrWchFndsWrRcvd_b">
+        <text>
+          <base>the person's resource is used to repair or replace the lost, stolen, or damaged excluded resource for which the funds were received</base>
+          <parse>s(ver('10.4.6.76'),v(use,t(simple,present,normal)),ob('the person''s resource',singular),o('to repair or replace the lost, stolen, or damaged excluded resource for which the funds were received'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b521" type="boolean" public-name="si_prWsEstblshdPrTo070102_b">
+        <text>
+          <base>the person's resource was established prior to July 1, 2002</base>
+          <parse>s(ver('10.4.6.76'),v(establish,t(simple,past,normal)),ob('the person''s resource',singular),o('prior to July 1, 2002'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b522" type="boolean" public-name="si_prWsFstPrvdWthnPst18Mnths_b">
+        <text>
+          <base>the person's resource was first provided within the past 18 months</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s resource',singular),o('first provided within the past 18 months'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b523" type="boolean" public-name="si_prWsRcvdWthnPstMnth_b">
+        <text>
+          <base>the person's resource was received within the past month</base>
+          <parse>s(ver('10.4.6.76'),v(receive,t(simple,past,normal)),ob('the person''s resource',singular),o('within the past month'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

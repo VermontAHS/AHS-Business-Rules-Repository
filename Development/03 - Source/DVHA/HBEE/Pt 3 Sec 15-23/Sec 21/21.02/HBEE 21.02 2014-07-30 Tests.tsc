@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-script product-version="10.4.6.76" schema-version="4">
+  <test-case-set>
+    <test-case name="(1) Is Satisfied: IQ 49 or less [21.02a]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_personHBEE2102SatisfiedEff073014_b" text="the person is considered incapable of indicating intent regarding residency under HBEE 21.02 (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_personHsIQ49BsdOnTstAcptToAHS_b" text="the person has an I.Q. of 49 or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2014" />
+        <ent-inst id="2015" />
+        <ent-inst id="2013" />
+        <ent-inst id="2016" />
+      </ent-set>
+    </test-case>
+    <test-case name="(2) Is Satisfied: Mental age of 7 or less [21.02a]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_personHBEE2102SatisfiedEff073014_b" text="the person is considered incapable of indicating intent regarding residency under HBEE 21.02 (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_personHsMntlAge7BsdOnTstAcptToAHS_b" text="the person has a mental age of 7 years or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2014" />
+        <ent-inst id="2015" />
+        <ent-inst id="2013" />
+        <ent-inst id="2016" />
+      </ent-set>
+    </test-case>
+    <test-case name="(3) Is Satisfied: Judged legally incompetent [21.02b]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_personHBEE2102SatisfiedEff073014_b" text="the person is considered incapable of indicating intent regarding residency under HBEE 21.02 (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_personJgdLglyCompetent_b" text="the person is judged legally incompetent" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2014" />
+        <ent-inst id="2015" />
+        <ent-inst id="2013" />
+        <ent-inst id="2016" />
+      </ent-set>
+    </test-case>
+    <test-case name="(4) Is Satisfied: Found incapable of indicating per medical docs [21.02c]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_personHBEE2102SatisfiedEff073014_b" text="the person is considered incapable of indicating intent regarding residency under HBEE 21.02 (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_personFndIncpblIndctIntBsdOnMedDocs_b" text="the person is found incapable of indicating intent based on medical documentation obtained from a physician, psychologist, or other person licensed by the state in the field of intellectual disabilities" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2014" />
+        <ent-inst id="2015" />
+        <ent-inst id="2013" />
+        <ent-inst id="2016" />
+      </ent-set>
+    </test-case>
+    <test-case name="(5) Not Satisfied: No reqs met" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_personHBEE2102SatisfiedEff073014_b" text="the person is considered incapable of indicating intent regarding residency under HBEE 21.02 (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_personFndIncpblIndctIntBsdOnMedDocs_b" text="the person is found incapable of indicating intent based on medical documentation obtained from a physician, psychologist, or other person licensed by the state in the field of intellectual disabilities" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsIQ49BsdOnTstAcptToAHS_b" text="the person has an I.Q. of 49 or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsMntlAge7BsdOnTstAcptToAHS_b" text="the person has a mental age of 7 years or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personJgdLglyCompetent_b" text="the person is judged legally incompetent" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2014" />
+        <ent-inst id="2015" />
+        <ent-inst id="2013" />
+        <ent-inst id="2016" />
+      </ent-set>
+    </test-case>
+  </test-case-set>
+  <outcome-set>
+    <outcome name="so_personHBEE2102SatisfiedEff073014_b" display-name="the person is considered incapable of indicating intent regarding residency under HBEE 21.02 (eff. 07/30/2014)" text="the person is considered incapable of indicating intent regarding residency under HBEE 21.02 (eff. 07/30/2014)" type="boolean" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+  </outcome-set>
+</test-script>

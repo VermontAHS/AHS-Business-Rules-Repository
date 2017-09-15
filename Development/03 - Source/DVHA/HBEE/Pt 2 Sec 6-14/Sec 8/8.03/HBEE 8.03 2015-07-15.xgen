@@ -1,0 +1,267 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b60" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 8.03 applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.03',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b62" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is a MABD program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('a MABD program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b63" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is MABD-Dec73</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MABD-Dec73'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b20" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 8.03 is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.03',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered aged under HBEE 8.03(a) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('aged under HBEE 8.03(a) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered blind under HBEE 8.03(b) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('blind under HBEE 8.03(b) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered disabled under HBEE 8.03(c) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('disabled under HBEE 8.03(c) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b40" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is 65 years of age or older during the month</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('65 years of age or older during the month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b41" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 8.03(b)(1) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.03(b)(1)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b42" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 8.03(b)(2) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.03(b)(2)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b43" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has been determined blind by the AHS's disability determination unit</base>
+          <parse>s(ver('10.4.6.76'),v(determine,t(simple,present,perfect)),ob('the person',singular),o('blind by the AHS''s disability determination unit'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b44" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is in receipt of social security benefits based on the blindness</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('in receipt of social security benefits based on the blindness'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b45" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 8.03(c)(1) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.03(c)(1)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b46" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 8.03(c)(2) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.03(c)(2)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b47" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has been determined disabled by the AHS's disability determination unit</base>
+          <parse>s(ver('10.4.6.76'),v(determine,t(simple,present,perfect)),ob('the person',singular),o('disabled by the AHS''s disability determination unit'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b48" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is in receipt of social security disability benefits based on disability</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('in receipt of social security disability benefits based on disability'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="HBEE 8.03 applies to the program (eff. 07/15/2015)" ruleburst="true" concludes="b60" folder="1" source-offset="82">
+      <rule-xml>
+        <conclude attr-id="b60" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b62" />
+              <not>
+                <attribute attr-id="b63" />
+              </not>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="HBEE 8.03 is satisfied for the person (eff. 07/15/2015)" ruleburst="true" concludes="b20" folder="1" source-offset="339">
+      <rule-xml>
+        <conclude attr-id="b20" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b35" />
+              <attribute attr-id="b36" />
+              <attribute attr-id="b37" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="the person is considered aged under HBEE 8.03(a) (eff. 07/15/2015)" ruleburst="true" concludes="b35" folder="2" source-offset="676">
+      <rule-xml>
+        <conclude attr-id="b35" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b40" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="the person is considered blind under HBEE 8.03(b) (eff. 07/15/2015)" ruleburst="true" concludes="b36" folder="3" source-offset="858">
+      <rule-xml>
+        <conclude attr-id="b36" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b41" />
+              <attribute attr-id="b42" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="HBEE 8.03(b)(1) is satisfied for the person (eff. 07/15/2015)" ruleburst="true" concludes="b41" folder="3" source-offset="1075">
+      <rule-xml>
+        <conclude attr-id="b41" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b43" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="HBEE 8.03(b)(2) is satisfied for the person (eff. 07/15/2015)" ruleburst="true" concludes="b42" folder="3" source-offset="1233">
+      <rule-xml>
+        <conclude attr-id="b42" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b44" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="the person is considered disabled under HBEE 8.03(c) (eff. 07/15/2015)" ruleburst="true" concludes="b37" folder="4" source-offset="1436">
+      <rule-xml>
+        <conclude attr-id="b37" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b45" />
+              <attribute attr-id="b46" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="7" name="HBEE 8.03(c)(1) is satisfied for the person (eff. 07/15/2015)" ruleburst="true" concludes="b45" folder="4" source-offset="1656">
+      <rule-xml>
+        <conclude attr-id="b45" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b47" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="8" name="HBEE 8.03(c)(2) is satisfied for the person (eff. 07/15/2015)" ruleburst="true" concludes="b46" folder="4" source-offset="1817">
+      <rule-xml>
+        <conclude attr-id="b46" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b48" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="HBEE 8.03 Categorical Relationship to SSI (07/15/2015, 15-02)" parent="0" id="1" />
+    <folder text="Para (a): Aged" parent="1" id="2" />
+    <folder text="Para (b): Blind" parent="1" id="3" />
+    <folder text="Para (c): Disabled" parent="1" id="4" />
+  </rule-folders>
+</root>

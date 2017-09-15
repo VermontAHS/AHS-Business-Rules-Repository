@@ -1,0 +1,668 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+      <attribute name="b119" type="boolean" public-name="si_AHSHsDvlpdAltActrlTblsPrsToVTAct71_b">
+        <text>
+          <base>AHS has developed alternate actuarial tables pursuant to Vermont Act 71  303(7)(2005)</base>
+          <parse>s(ver('10.4.6.76'),v(develop,t(simple,present,perfect)),sb('AHS',singular),o('alternate actuarial tables pursuant to Vermont Act 71  303(7)(2005)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b1" type="boolean" public-name="so_HBEE25.03Applies_b">
+        <text>
+          <base>HBEE 25.03 applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 25.03',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b111" type="boolean" public-name="so_HBEE25.03appliesNoDate_b">
+        <text>
+          <base>HBEE 25.03 applies to the program</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 25.03',singular),o('to the program'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+    </entity>
+    <entity id="personstransfer" name="the person's transfer" containment-relationship-id="personstransfers" containment-parent-id="person">
+      <attribute name="b3" type="boolean" public-name="so_AllowedHBEE25.03_b">
+        <text>
+          <base>the person's transfer is allowed under HBEE 25.03 (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03 (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" public-name="st_HBEE25.03fApplies_b">
+        <text>
+          <base>HBEE 25.03(f) applies to the person's transfer (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 25.03(f)',singular),o('to the person''s transfer (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" public-name="st_HBEE25.03hApplies_b">
+        <text>
+          <base>HBEE 25.03(h) applies to the person's transfer (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 25.03(h)',singular),o('to the person''s transfer (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" public-name="st_HBEE25.03iApplies_b">
+        <text>
+          <base>HBEE 25.03(i) applies to the person's transfer (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 25.03(i)',singular),o('to the person''s transfer (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" public-name="st_HBEE25.03eApplies_b">
+        <text>
+          <base>HBEE 25.03(e) applies to the person's transfer (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 25.03(e)',singular),o('to the person''s transfer (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" public-name="st_HBEE25.03bApplies_b">
+        <text>
+          <base>HBEE 25.03(b) applies to the person's transfer (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 25.03(b)',singular),o('to the person''s transfer (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" public-name="st_HBEE25.03cApplies_b">
+        <text>
+          <base>HBEE 25.03(c) applies to the person's transfer (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 25.03(c)',singular),o('to the person''s transfer (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" public-name="st_HBEE25.03dApplies_b">
+        <text>
+          <base>HBEE 25.03(d) applies to the person's transfer (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 25.03(d)',singular),o('to the person''s transfer (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" public-name="st_FMVHBEE25.03a_b">
+        <text>
+          <base>the person's transfer was transferred for fair market value under HBEE 25.03(a) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('transferred for fair market value under HBEE 25.03(a) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p1" type="currency" public-name="si_AmountPersonRecTransfer_c">
+        <text>
+          <base>the amount the person received for the person's transfer</base>
+        </text>
+      </attribute>
+      <attribute name="p2" type="currency" public-name="st_FMVMinusAppDedHBEE25.03_c">
+        <text>
+          <base>the fair market value of the person's transfer reduced by the applicable deductions at the time of transfer under HBEE 25.03(a) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p3" type="currency" public-name="si_FMVtrasnfer_c">
+        <text>
+          <base>the fair market value of the person's transfer</base>
+        </text>
+      </attribute>
+      <attribute name="p4" type="currency" public-name="st_AppDedFMVHBEE25.03a_c">
+        <text>
+          <base>the applicable deductions to reduce the fair market value of the person's transfer under HBEE 25.03(a) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p5" type="currency" public-name="si_AmountLegEnforLienDebt_c">
+        <text>
+          <base>the amount of any legally enforceable liens or debts against the income or resource of the person's transfer that reduced the transferor's equity in the income or resource</base>
+        </text>
+      </attribute>
+      <attribute name="p6" type="currency" public-name="si_ReasonNecCosts_c">
+        <text>
+          <base>the person's transfer's reasonable and necessary costs</base>
+        </text>
+      </attribute>
+      <attribute name="p7" type="currency" public-name="si_ValRecPerTransfer_c">
+        <text>
+          <base>the value received by the person for the person's transfer</base>
+        </text>
+      </attribute>
+      <attribute name="p8" type="currency" public-name="si_ValueIncomeReturned_c">
+        <text>
+          <base>the value of income or resources returned to the transferor from the person's transfer</base>
+        </text>
+      </attribute>
+      <attribute name="p9" type="currency" public-name="si_ValueVerPaymentsBehalfComp_c">
+        <text>
+          <base>the value of verified payments or in-kind support given in behalf of compensation for receipt of income or resources from the person's transfer HBEE 25.03(a) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p10" type="currency" public-name="si_VlPersonalServices_c">
+        <text>
+          <base>the value of personal services included in the person's transfer</base>
+        </text>
+      </attribute>
+      <attribute name="p11" type="currency" public-name="si_PaymentsMedCare_c">
+        <text>
+          <base>the payments for medical care included in the person's transfer</base>
+        </text>
+      </attribute>
+      <attribute name="p12" type="currency" public-name="si_FuneralExpenese_c">
+        <text>
+          <base>the funeral expenses of the individual's deceased spouse included in the person's transfer</base>
+        </text>
+      </attribute>
+      <attribute name="p13" type="currency" public-name="si_TaxesMorPayUpkeepProp_c">
+        <text>
+          <base>the value of the taxes, mortgage payments, property insurance, or normal repairs, maintenance and upkeep on the transferred property included in the person's transfer</base>
+        </text>
+      </attribute>
+      <attribute name="p14" type="currency" public-name="si_ValueSuppMaintTranHome_c">
+        <text>
+          <base>the value of support and maintenance provided in the transferor's own home or in the home of the person who received the income or resources in the person's transfer</base>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" public-name="si_TrasnferredResource_b">
+        <text>
+          <base>the person's transfer is for a transferred resource</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s transfer',singular),o('for a transferred resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" public-name="si_ValueTransferSchedAfterDateTran_b">
+        <text>
+          <base>the value of the person's transfer is scheduled for receipt after the date of the transfer</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the value of the person''s transfer',singular),o('scheduled for receipt after the date of the transfer'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" public-name="st_ExpectRecFMVInLifetime_b">
+        <text>
+          <base>the person can expect to receive the fair market value of the person's transfer within the person's expected lifetime under HBEE 25.03(b) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(expect+can,t(simple,modal,normal)),sb('the person',plural),o('to receive the fair market value of the person''s transfer within the person''s expected lifetime under HBEE 25.03(b) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p15" type="date" public-name="si_DtExpectsRecFMV_d">
+        <text>
+          <base>the date the person expects to receive the fair market value of the person's transfer</base>
+        </text>
+      </attribute>
+      <attribute name="p16" type="date" public-name="st_ExpectedLifeTime_d">
+        <text>
+          <base>the end of the person's expected lifetime at the time of the person's transfer under HBEE 25.03(b) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" public-name="st_AllowedHBEE25.03c1_b">
+        <text>
+          <base>the person's transfer is allowed under HBEE 25.03(c)(1) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(c)(1) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" public-name="st_AllowedHBEE25.03c7_b">
+        <text>
+          <base>the person's transfer is allowed under HBEE 25.03(c)(7) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(c)(7) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" public-name="st_AllowedHBEE25.03c5_b">
+        <text>
+          <base>the person's transfer is allowed under HBEE 25.03(c)(5) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(c)(5) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" public-name="st_AllowedHBEE25.03c6_b">
+        <text>
+          <base>the person's transfer is allowed under HBEE 25.03(c)(6) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(c)(6) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" public-name="st_AllowedHBEE25.03c4_b">
+        <text>
+          <base>the person's transfer is allowed under HBEE 25.03(c)(4) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(c)(4) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean" public-name="si_TransferMore60DatsPriorFirstRequest_b">
+        <text>
+          <base>the person's transfer was more than 60 calendar months prior to the first month the person requests eligibility for Medicaid coverage of long-term care services and supports</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('more than 60 calendar months prior to the first month the person requests eligibility for Medicaid coverage of long-term care services and supports'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean" public-name="si_OtherWiseEligLTMHBEE25.04a_b">
+        <text>
+          <base>the person is considered otherwise eligible for Medicaid coverage of long-term care services and supports under HBEE 25.04(a)</base>
+          <parse>s(ver('10.4.7.86'),v(consider,t(simple,present,normal)),ob('the person',singular),o('otherwise eligible for Medicaid coverage of long-term care services and supports under HBEE 25.04(a)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean" public-name="si_TransferAnotherReason_b">
+        <text>
+          <base>the person's transfer is documented with convincing evidence, which meets the satisfaction of the AHS, that demonstrate that the resources were transferred exclusively for a reason other than for the person to become or remain eligible for Medicaid coverage of long-term care services</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s transfer',singular),o('documented with convincing evidence, which meets the satisfaction of the AHS, that demonstrate that the resources were transferred exclusively for a reason other than for the person to become or remain eligible for Medicaid coverage of long-term care services'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b34" type="boolean" public-name="si_DemonstratesDisposeFMV_b">
+        <text>
+          <base>the person has demonstrated to AHS's satisfaction that the person intended to dispose of the person's transfer at fair market value or for other valuable consideration</base>
+          <parse>s(ver('10.4.6.76'),v(demonstrate,t(simple,present,perfect)),sb('the person',singular),o('to AHS''s satisfaction that the person intended to dispose of the person''s transfer at fair market value or for other valuable consideration'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" public-name="si_ExcludesIncomeResources_b">
+        <text>
+          <base>the person's transfer was a transfer of excluded income or resources</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('a transfer of excluded income or resources'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" public-name="si_InvolvedTrust_b">
+        <text>
+          <base>the person's transfer involves a trust</base>
+          <parse>s(ver('10.4.7.86'),v(involve,t(simple,present,normal)),sb('the person''s transfer',singular),o('a trust'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b39" type="boolean" public-name="st_AllowedHBEE25.03d4_b">
+        <text>
+          <base>the person's transfer is allowed under HBEE 25.03(d)(4) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(d)(4) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b40" type="boolean" public-name="st_AllowedHBEE25.03d3_b">
+        <text>
+          <base>the person's transfer is allowed under HBEE 25.03(d)(3) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(d)(3) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b41" type="boolean" public-name="st_AllowedHBEE25.03d2_b">
+        <text>
+          <base>the person's transfer is allowed under HBEE 25.03(d)(2) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(d)(2) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b44" type="boolean" public-name="si_SolelyBenefitInd_b">
+        <text>
+          <base>the person's transfer established a trust solely for the benefit of the person</base>
+          <parse>s(ver('10.4.6.76'),v(establish,t(simple,past,normal)),sb('the person''s transfer',plural),o('a trust solely for the benefit of the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b45" type="boolean" public-name="si_SolelyInd65Young_b">
+        <text>
+          <base>the person was under 65 years of age at the time of the person's transfer</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person',singular),o('under 65 years of age at the time of the person''s transfer'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b46" type="boolean" public-name="si_EstPooledTrust_b">
+        <text>
+          <base>the person's transfer established a pooled trust that meets all of the criteria under HBEE 29.08(e)(1)(ii)(G)</base>
+          <parse>s(ver('10.4.6.76'),v(establish,t(simple,past,normal)),sb('the person''s transfer',plural),o('a pooled trust that meets all of the criteria under HBEE 29.08(e)(1)(ii)(G)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b47" type="boolean" public-name="si_EstRevocableTrust_b">
+        <text>
+          <base>the person's transfer established a revocable trust</base>
+          <parse>s(ver('10.4.6.76'),v(establish,t(simple,past,normal)),sb('the person''s transfer',plural),o('a revocable trust'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b50" type="boolean" public-name="si_TransferOfaHome_b">
+        <text>
+          <base>the person's transfer is for the transfer of a home</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s transfer',singular),o('for the transfer of a home'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b54" type="boolean" public-name="si_ChildBlingPermTotallyDisabled_b">
+        <text>
+          <base>the person's transfer was transferred to the person's child who was under age 21 on the date of the transfer</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('transferred to the person''s child who was under age 21 on the date of the transfer'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b55" type="boolean" public-name="si_BrotherSister_b">
+        <text>
+          <base>the person's transfer was transferred to the person's brother or sister who had an equity interest in the home on the date of the transfer and resided in the home continuously for at least one year immediately prior to the date the person began to receive Medicaid coverage of long-term care services and supports</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('transferred to the person''s brother or sister who had an equity interest in the home on the date of the transfer and resided in the home continuously for at least one year immediately prior to the date the person began to receive Medicaid coverage of long-term care services and supports'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b58" type="boolean" public-name="si_ResidesContAtLeastTwoYears_b">
+        <text>
+          <base>the person's transfer was transferred to the person's child who resided in the home continuously for at least two years immediately prior to the date the person began to receive Medicaid coverage of long-term care services and supports and provided care to the person during part of this period that allowed the person to postpone receipt of Medicaid coverage of long-term care services and supports</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('transferred to the person''s child who resided in the home continuously for at least two years immediately prior to the date the person began to receive Medicaid coverage of long-term care services and supports and provided care to the person during part of this period that allowed the person to postpone receipt of Medicaid coverage of long-term care services and supports'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b60" type="boolean" public-name="si_LifeEstateInterest_b">
+        <text>
+          <base>the person's transfer involves a life-estate interest in another person's home</base>
+          <parse>s(ver('10.4.7.86'),v(involve,t(simple,present,normal)),sb('the person''s transfer',singular),o('a life-estate interest in another person''s home'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b61" type="boolean" public-name="si_PurchasersRes_b">
+        <text>
+          <base>the person's transfer is for the purchase of a life-estate interest in the person's residence</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s transfer',singular),o('for the purchase of a life-estate interest in the person''s residence'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b62" type="boolean" public-name="si_PurchaserResHomeAtLeastOneYear_b">
+        <text>
+          <base>the person resided in the home for at least one year after the person's transfer</base>
+          <parse>s(ver('10.4.6.76'),v(reside,t(simple,past,normal)),sb('the person',plural),o('in the home for at least one year after the person''s transfer'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b63" type="boolean" public-name="si_AllowedHBEE25.03g1_b">
+        <text>
+          <base>the person's transfer is allowed under HBEE 25.03(g)(1) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(g)(1) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b64" type="boolean" public-name="si_AllowedHBEE25.03g2_b">
+        <text>
+          <base>the person's transfer is allowed under HBEE 25.03(g)(2) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(g)(2) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b65" type="boolean" public-name="si_AllowedHBEE25.03g3_b">
+        <text>
+          <base>the person's transfer is allowed under HBEE 25.03(g)(3) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(g)(3) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b66" type="boolean" public-name="si_AllowedHBEE25.03g4_b">
+        <text>
+          <base>the person's transfer is allowed under HBEE 25.03(g)(4) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(g)(4) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b67" type="boolean" public-name="si_SoleBenefitPerson_b">
+        <text>
+          <base>the person's transfer was for the sole benefit of the person</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('for the sole benefit of the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b68" type="boolean" public-name="si_InstSpousetoSpouseBeforeInitDetermination_b">
+        <text>
+          <base>the person's transfer is from the institutionalized spouse to a community spouse before the initial determination of the institutionalized spouse's eligibility for Medicaid coverage of long-term services and supports</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s transfer',singular),o('from the institutionalized spouse to a community spouse before the initial determination of the institutionalized spouse''s eligibility for Medicaid coverage of long-term services and supports'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b69" type="boolean" public-name="si_InstitSpouseThirdParty_b">
+        <text>
+          <base>the person's transfer is from the institutionalized spouse to a third party for the sole benefit of the community spouse before the initial determination of the institutionalized spouse's eligibility for Medicaid coverage of long-term services and supports</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s transfer',singular),o('from the institutionalized spouse to a third party for the sole benefit of the community spouse before the initial determination of the institutionalized spouse''s eligibility for Medicaid coverage of long-term services and supports'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b71" type="boolean" public-name="si_RecBlindPermTotallyDisabled_b">
+        <text>
+          <base>the person's transfer was transferred to the person's child who is blind or permanently and totally disabled</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('transferred to the person''s child who is blind or permanently and totally disabled'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b72" type="boolean" public-name="si_SoleBenefitRec_b">
+        <text>
+          <base>the person's transfer is for a trust for the sole benefit of the person's child who is blind or permanently and totally disabled</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s transfer',singular),o('for a trust for the sole benefit of the person''s child who is blind or permanently and totally disabled'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b74" type="boolean" public-name="si_TrustEstSolelyBenDis_b">
+        <text>
+          <base>the person's transfer is for a trust for the sole benefit of an individual under the age of 65 years who is disabled</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s transfer',singular),o('for a trust for the sole benefit of an individual under the age of 65 years who is disabled'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b75" type="boolean" public-name="si_TAnnuity_b">
+        <text>
+          <base>the person's transfer involves an annuity</base>
+          <parse>s(ver('10.4.7.86'),v(involve,t(simple,present,normal)),sb('the person''s transfer',singular),o('an annuity'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b76" type="boolean" public-name="si_AllowedHBEE25.03h1i_b">
+        <text>
+          <base>the person's transfer is allowed under HBEE 25.03(h)(1)(i) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(h)(1)(i) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b78" type="boolean" public-name="si_AllowedHBEE25.03h2_b">
+        <text>
+          <base>the person's transfer is allowed under HBEE 25.03(h)(2) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(h)(2) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b79" type="boolean" public-name="si_AllowedHBEE25.03h1_b">
+        <text>
+          <base>the person's transfer is allowed under HBEE 25.03(h)(1) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(h)(1) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b80" type="boolean" public-name="si_PurchasedRequLTC_b">
+        <text>
+          <base>the person's transfer was for the purchase of an annuity</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('for the purchase of an annuity'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b83" type="boolean" public-name="si_AnnuityNamingVMedicaidFirstBen_b">
+        <text>
+          <base>the annuity purchased by the person's transfer specifies Vermont Medicaid as the first remainder beneficiary up to the amount of Medicaid payments, including payments for Medicaid coverage of long-term care services and supports, made by the state on behalf of the person</base>
+          <parse>s(ver('10.4.6.76'),v(specify,t(simple,present,normal)),sb('the annuity purchased by the person''s transfer',singular),o('Vermont Medicaid as the first remainder beneficiary up to the amount of Medicaid payments, including payments for Medicaid coverage of long-term care services and supports, made by the state on behalf of the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b84" type="boolean" public-name="si_MinorDisChildSpouseBen_b">
+        <text>
+          <base>the annuity purchased by the person's transfer specifies the person's minor or disabled child or the person's community spouse as the first remainder beneficiary</base>
+          <parse>s(ver('10.4.6.76'),v(specify,t(simple,present,normal)),sb('the annuity purchased by the person''s transfer',singular),o('the person''s minor or disabled child or the person''s community spouse as the first remainder beneficiary'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b85" type="boolean" public-name="si_VermontMedicaidSecondBen_b">
+        <text>
+          <base>the annuity purchased by the person's transfer specifies Vermont Medicaid as the second remainder beneficiary</base>
+          <parse>s(ver('10.4.6.76'),v(specify,t(simple,present,normal)),sb('the annuity purchased by the person''s transfer',singular),o('Vermont Medicaid as the second remainder beneficiary'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b86" type="boolean" public-name="si_AllowedHBEE25.03h2B_b">
+        <text>
+          <base>the person's transfer is allowed under HBEE 25.03(h)(2)(B) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(h)(2)(B) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b87" type="boolean" public-name="si_AllowedHBEE25.03h2D_b">
+        <text>
+          <base>the person's transfer is allowed under HBEE 25.03(h)(2)(D) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(h)(2)(D) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b88" type="boolean" public-name="si_AllowedHBEE25.03h2C_b">
+        <text>
+          <base>the person's transfer is allowed under HBEE 25.03(h)(2)(C) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(h)(2)(C) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b89" type="boolean" public-name="si_AllowedHBEE25.03h2A_b">
+        <text>
+          <base>the person's transfer is allowed under HBEE 25.03(h)(2)(A) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(h)(2)(A) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b90" type="boolean" public-name="si_SatHBEE29.08d1_b">
+        <text>
+          <base>the person's transfer established an annuity that meets all of the criteria under HBEE 29.08(d)(1)</base>
+          <parse>s(ver('10.4.6.76'),v(establish,t(simple,past,normal)),sb('the person''s transfer',plural),o('an annuity that meets all of the criteria under HBEE 29.08(d)(1)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b92" type="boolean" public-name="si_IrrNonAssign_b">
+        <text>
+          <base>the annuity established by the person's transfer is irrevocable and nonassignable</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the annuity established by the person''s transfer',singular),o('irrevocable and nonassignable'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b93" type="boolean" public-name="si_ProvidesPaymentEqualInterv_b">
+        <text>
+          <base>the annuity established by the person's transfer provides payments to the person in equal intervals and amounts with no deferral and no balloon payments</base>
+          <parse>s(ver('10.4.6.76'),v(provide,t(simple,present,normal)),sb('the annuity established by the person''s transfer',singular),o('payments to the person in equal intervals and amounts with no deferral and no balloon payments'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b94" type="boolean" public-name="si_ActuarilySoundLifeExpect_b">
+        <text>
+          <base>the annuity established by the person's transfer exceeds the life expectancy of the person as determined using the actuarial publications of the Office of the Chief Actuary of the SSA</base>
+          <parse>s(ver('10.4.6.76'),v(exceed,t(simple,present,normal)),sb('the annuity established by the person''s transfer',singular),o('the life expectancy of the person as determined using the actuarial publications of the Office of the Chief Actuary of the SSA'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b96" type="boolean" public-name="si_AnnuityIRA_b">
+        <text>
+          <base>the annuity established by the person's transfer is considered an individual retirement annuity according to § 408(b) of the Code</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the annuity established by the person''s transfer',singular),o('an individual retirement annuity according to § 408(b) of the Code'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b97" type="boolean" public-name="si_AnnuityIRAQualified_b">
+        <text>
+          <base>the annuity established by the person's transfer is considered a deemed Individual Retirement Account (IRA) under a qualified employer plan according to § 408(q) of the Code</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the annuity established by the person''s transfer',singular),o('a deemed Individual Retirement Account (IRA) under a qualified employer plan according to § 408(q) of the Code'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b98" type="boolean" public-name="si_PurchasedProceedsTradIRA_b">
+        <text>
+          <base>the annuity established by the person's transfer was purchased with proceeds from a traditional IRA (§ 408(a) of the Code)</base>
+          <parse>s(ver('10.4.6.76'),v(purchase,t(simple,past,normal)),ob('the annuity established by the person''s transfer',singular),o('with proceeds from a traditional IRA (§ 408(a) of the Code)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b99" type="boolean" public-name="si_PurchasedAccountsTreatedTradIRA_b">
+        <text>
+          <base>the annuity established by the person's transfer was purchased with proceeds from certain accounts or trusts with are treated as traditional IRAs (§ 408(c) of the Code)</base>
+          <parse>s(ver('10.4.6.76'),v(purchase,t(simple,past,normal)),ob('the annuity established by the person''s transfer',singular),o('with proceeds from certain accounts or trusts with are treated as traditional IRAs (§ 408(c) of the Code)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b100" type="boolean" public-name="si_AnnuityPurchasedSimRet_b">
+        <text>
+          <base>the annuity established by the person's transfer was purchased with proceeds from a simplified retirement account (§ 408 (p) of the Code)</base>
+          <parse>s(ver('10.4.6.76'),v(purchase,t(simple,past,normal)),ob('the annuity established by the person''s transfer',singular),o('with proceeds from a simplified retirement account (§ 408 (p) of the Code)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b101" type="boolean" public-name="si_SimplifiedEmployeePension_b">
+        <text>
+          <base>the annuity established by the person's transfer was purchased with proceeds from a simplified employee pension (§ 408 (k) of the Code)</base>
+          <parse>s(ver('10.4.6.76'),v(purchase,t(simple,past,normal)),ob('the annuity established by the person''s transfer',singular),o('with proceeds from a simplified employee pension (§ 408 (k) of the Code)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b102" type="boolean" public-name="si_PurchaedRothIRA_b">
+        <text>
+          <base>the annuity established by the person's transfer was purchased with proceeds from Roth IRA (§ 408A of the Code)</base>
+          <parse>s(ver('10.4.6.76'),v(purchase,t(simple,past,normal)),ob('the annuity established by the person''s transfer',singular),o('with proceeds from Roth IRA (§ 408A of the Code)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b103" type="boolean" public-name="si_PrimNoteIncomeProducRes_b">
+        <text>
+          <base>the person's transfer involves a promissory note or other income-producing resource</base>
+          <parse>s(ver('10.4.6.76'),v(involve,t(simple,present,normal)),sb('the person''s transfer',singular),o('a promissory note or other income-producing resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b106" type="boolean" public-name="si_RepaymentActuariallySound_b">
+        <text>
+          <base>the person's transfer includes a repayment term that is actuarially-sound as determined in accordance with actuarial publications of the Office of the Chief of Actuary SSA and set forth in the Vermont's Medicaid Procedures Manual</base>
+          <parse>s(ver('10.4.7.86'),v(include,t(simple,present,normal)),sb('the person''s transfer',singular),o('a repayment term that is actuarially-sound as determined in accordance with actuarial publications of the Office of the Chief of Actuary SSA and set forth in the Vermont''s Medicaid Procedures Manual'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b107" type="boolean" public-name="si_PaymentsEqualAmounts_b">
+        <text>
+          <base>the contract established by the person's transfer provides payments to the person in equal amounts during the term of the loan with no deferral and no balloon payments</base>
+          <parse>s(ver('10.4.6.76'),v(provide,t(simple,present,normal)),sb('the contract established by the person''s transfer',singular),o('payments to the person in equal amounts during the term of the loan with no deferral and no balloon payments'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b108" type="boolean" public-name="si_ProhibitsCancellationBalanceDeath_b">
+        <text>
+          <base>the contract established by the person's transfer prohibits the cancellation of the balance upon the death of the lender</base>
+          <parse>s(ver('10.4.6.76'),v(prohibit,t(simple,present,normal)),sb('the contract established by the person''s transfer',singular),o('the cancellation of the balance upon the death of the lender'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b109" type="boolean" public-name="si_ResourceSatHBEE29.08e1F_b">
+        <text>
+          <base>the person's transfer established a trust that meets all of the criteria under HBEE 29.08(e)(1)(ii)(F)</base>
+          <parse>s(ver('10.4.6.76'),v(establish,t(simple,past,normal)),sb('the person''s transfer',plural),o('a trust that meets all of the criteria under HBEE 29.08(e)(1)(ii)(F)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b112" type="boolean" public-name="so_AllowedHBEE25.03NoDt_b">
+        <text>
+          <base>the person's transfer is allowed under HBEE 25.03</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b113" type="boolean" public-name="si_ptAntyEstByPTRtnsAmtUsdToEstblCtrctPlsErngs_b">
+        <text>
+          <base>the annuity established by the person's transfer returns at least the amount used to establish the contract and any additional payments plus earnings (as specified in the contract) to the person</base>
+          <parse>s(ver('10.4.6.76'),v(return,t(simple,present,normal)),sb('the annuity established by the person''s transfer',singular),o('at least the amount used to establish the contract and any additional payments plus earnings (as specified in the contract) to the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p26" type="number" public-name="st_ptExpctdRmgLftmAtTmOfTrnsfrUndHBEE2503bEff071515_n">
+        <text>
+          <base>the person's expected remaining lifetime in years at the time of the person's transfer under HBEE 25.03(b) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p27" type="number" public-name="si_ptExptcdRmgLftmAtTmOfTrsfr_b">
+        <text>
+          <base>the person's expected remaining lifetime in years at the time of the person's transfer per AHS alternate actuarial tables</base>
+        </text>
+      </attribute>
+      <attribute name="p28" type="number" public-name="si_ptExptdRmgLftmAtTmOfTrsnfPerOCAActPubs_b">
+        <text>
+          <base>the person's expected remaining lifetime in years at the time of the person's transfer per the actuarial publications of the Office of the Chief Actuary of the SSA</base>
+        </text>
+      </attribute>
+      <attribute name="b114" type="boolean" public-name="st_AllowedHBEE25.03c_b">
+        <text>
+          <base>the person's transfer is allowed under HBEE 25.03(c) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(c) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b115" type="boolean" public-name="si_AllowedHBEE25.03g_b">
+        <text>
+          <base>the person's transfer is allowed under HBEE 25.03(g) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(g) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b116" type="boolean" public-name="si_AllowedHBEE25.03h_b">
+        <text>
+          <base>the person's transfer is allowed under HBEE 25.03(h) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(h) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b117" type="boolean" public-name="si_trnJointRemoval_b">
+        <text>
+          <base>the person's transfer is the removal of the person's name from a joint account</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s transfer',singular),o('the removal of the person''s name from a joint account'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b118" type="boolean" public-name="si_trnJointRemovalSatAHS_b">
+        <text>
+          <base>the person has demonstrated to AHS's satisfaction that the funds in the joint account for the person's transfer were accumulated from the income or resource of an owner that is not the person</base>
+          <parse>s(ver('10.4.6.76'),v(demonstrate,t(simple,present,perfect)),sb('the person',singular),o('to AHS''s satisfaction that the funds in the joint account for the person''s transfer were accumulated from the income or resource of an owner that is not the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p29" type="currency" public-name="st_ptAmtPsnCnsdToHvRcvdFrTrsfrUndHBEE2503aEff071515_c">
+        <text>
+          <base>the amount the person is considered to have received for the person's transfer under HBEE 25.03(a) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p30" type="currency" public-name="st_ptAmtPrsnCnsdrdToHvRcvdFrTrsnfrUndHBEE2503h3Eff071515_c">
+        <text>
+          <base>the amount the person is considered to have received for the person's transfer under HBEE 25.03(h)(3) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p31" type="currency" public-name="st_ptAmtPrsnCsdrdToHvRcvdFrTrnsfrUndHBEE2503i2Eff071515_c">
+        <text>
+          <base>the amount the person is considered to have received for the person's transfer under HBEE 25.03(i)(2) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personstransfer" text="the person's transfers" relationship-id="personstransfers" reverse-relationship-id="personstransfersperson" reverse-text="the person's transfer's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

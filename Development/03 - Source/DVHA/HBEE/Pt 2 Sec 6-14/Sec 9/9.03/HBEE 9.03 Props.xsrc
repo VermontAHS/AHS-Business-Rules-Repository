@@ -1,0 +1,253 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+      <attribute name="p1" type="number">
+        <text>
+          <base>the adjusted net income FPL percentage limit under HBEE 9.03(g)(3)</base>
+        </text>
+      </attribute>
+      <attribute name="p2" type="number">
+        <text>
+          <base>the adjusted net income FPL percentage limit under HBEE 9.03(g)(3) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b1" type="boolean" public-name="si_personVoluntaryTermination_HBEE9.03_b">
+        <text>
+          <base>the person's representative has requested a voluntary termination of eligibility</base>
+          <parse>s(ver('10.4.6.76'),v(request,t(simple,present,perfect)),sb('the person''s representative',singular),o('a voluntary termination of eligibility'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" public-name="si_deceased_b">
+        <text>
+          <base>the person is deceased</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('deceased'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" public-name="si_person_infostercare_b">
+        <text>
+          <base>the person was in foster care under the responsibility of the state upon attaining age 18</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person',singular),o('in foster care under the responsibility of the state upon attaining age 18'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" public-name="si_person_medicaid_enrollee_b">
+        <text>
+          <base>the person was enrolled in Medicaid under the state's Medicaid State plan or 1115 demonstration upon attaining age 18</base>
+          <parse>s(ver('10.4.6.76'),v(enroll,t(simple,past,normal)),ob('the person',singular),o('in Medicaid under the state''s Medicaid State plan or 1115 demonstration upon attaining age 18'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b41" type="boolean" public-name="si_person_AdoptAssistAgreement_b">
+        <text>
+          <base>there is an adoption assistance agreement (other than an agreement under Title IV-E) in effect between a state and the person's adoptive parent or parents</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adoption assistance agreement (other than an agreement under Title IV-E) in effect between a state and the person''s adoptive parent or parents'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b43" type="boolean" public-name="si_person_WasMedicaidEligible_b">
+        <text>
+          <base>the person was eligible for Medicaid prior to entering into the adoption agreement</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person',singular),o('eligible for Medicaid prior to entering into the adoption agreement'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b46" type="boolean" public-name="si_recvMedicaidChipMotherDOB_b">
+        <text>
+          <base>the person's mother was eligible for and received covered services under Medicaid or CHIP on the date of the person's birth, including during a retroactive period and regardless of whether payment for services was limited to services necessary to treat an emergency medical condition</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s mother',singular),o('eligible for and received covered services under Medicaid or CHIP on the date of the person''s birth, including during a retroactive period and regardless of whether payment for services was limited to services necessary to treat an emergency medical condition'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b48" type="boolean" public-name="si_person_KindshipGaurdian_b">
+        <text>
+          <base>foster care or kinship guardianship assistance maintenance payments are being made for the person by a state or tribe under Title IV-E</base>
+          <parse>s(ver('10.4.6.76'),v(make,t(continuous,present,normal)),ob('foster care or kinship guardianship assistance maintenance payments',plural),o('for the person by a state or tribe under Title IV-E'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b49" type="boolean" public-name="si_person_AdoptionAssistanceAgreement_b">
+        <text>
+          <base>the person has an adoption assistance agreement that is in effect with a state or tribe under Title IV-E, regardless of whether adoption assistance is being provided or an interlocutory or other judicial decree of adoption has been issued</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('an adoption assistance agreement that is in effect with a state or tribe under Title IV-E, regardless of whether adoption assistance is being provided or an interlocutory or other judicial decree of adoption has been issued'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b50" type="boolean" public-name="si_person_Vermont_b">
+        <text>
+          <base>the person is a resident of Vermont</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('a resident of Vermont'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b54" type="boolean" public-name="si_person_SpecialNeedsMedicaid_b">
+        <text>
+          <base>there is a determination by the state agency that entered into the adoption agreement that the person could not be placed for adoption without Medicaid coverage because the person has special needs for medical or rehabilitative care</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('a determination by the state agency that entered into the adoption agreement that the person could not be placed for adoption without Medicaid coverage because the person has special needs for medical or rehabilitative care'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b55" type="boolean" public-name="si_person_Pregnant_b">
+        <text>
+          <base>the person is pregnant</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('pregnant'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b57" type="boolean" public-name="so_HBEE9.03bContMet20150715_b">
+        <text>
+          <base>the person meets the continuous eligibility requirements under HBEE 9.03(b)(2)(ii) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the continuous eligibility requirements under HBEE 9.03(b)(2)(ii) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b58" type="boolean" public-name="so_HBEE9.03bSat20150715_b">
+        <text>
+          <base>HBEE 9.03(b) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 9.03(b)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b61" type="boolean" public-name="so_HBEE9.03cSat20150715_b">
+        <text>
+          <base>HBEE 9.03(c) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 9.03(c)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b63" type="boolean" public-name="so_HBEE9.03eSat20150715_b">
+        <text>
+          <base>HBEE 9.03(e) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 9.03(e)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b66" type="boolean" public-name="so_HBEE9.03dSat20150715_b">
+        <text>
+          <base>HBEE 9.03(d) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 9.03(d)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b67" type="boolean" public-name="so_HBEE9.03fSat20150715_b">
+        <text>
+          <base>HBEE 9.03(f) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 9.03(f)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b68" type="boolean" public-name="so_HBEE9.03gCat20150715_b">
+        <text>
+          <base>the person meets the categorical requirements under HBEE 9.03(g) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the categorical requirements under HBEE 9.03(g) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b71" type="boolean" public-name="si_eligMotherMedicaidBirth_b">
+        <text>
+          <base>the person's mother was eligible for Medicaid or CHIP under a medically needy coverage group on the person's date of birth</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s mother',singular),o('eligible for Medicaid or CHIP under a medically needy coverage group on the person''s date of birth'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b73" type="boolean" public-name="si_bcctServiceMoreThanDiagnostic_b">
+        <text>
+          <base>the person's treating health professional has determined that more than routine diagnostic services or monitoring services for a precancerous breast or cervical condition are needed</base>
+          <parse>s(ver('10.4.6.76'),v(determine,t(simple,present,perfect)),sb('the person''s treating health professional',singular),o('that more than routine diagnostic services or monitoring services for a precancerous breast or cervical condition are needed'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b74" type="boolean" public-name="si_bcctNeedScreening_b">
+        <text>
+          <base>the person has been determined to need treatment for breast or cervical cancer through a screening under the Centers for Disease Control and Prevention (CDC) breast and cervical cancer early detection program (BCCEDP)</base>
+          <parse>s(ver('10.4.6.76'),v(determine,t(simple,present,perfect)),ob('the person',singular),o('to need treatment for breast or cervical cancer through a screening under the Centers for Disease Control and Prevention (CDC) breast and cervical cancer early detection program (BCCEDP)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b75" type="boolean" public-name="si_bcctNeedTreatment_b">
+        <text>
+          <base>the person's treating health professional has determined that definitive treatment for breast or cervical cancer is needed</base>
+          <parse>s(ver('10.4.6.76'),v(determine,t(simple,present,perfect)),sb('the person''s treating health professional',singular),o('that definitive treatment for breast or cervical cancer is needed'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b76" type="boolean" public-name="si_spnddwnMetMotherDob_b">
+        <text>
+          <base>the person's mother had met the spenddown requirement on the person's date of birth</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,past,perfect)),sb('the person''s mother',singular),o('the spenddown requirement on the person''s date of birth'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b81" type="boolean" public-name="si_bcctCoverageOtherAvailable_b">
+        <text>
+          <base>the person has creditable coverage for treatment of breast or cervical cancer other than coverage for medical services provided by the Indian Health Service, a tribal organization, or an Urban Indian organization or coverage through an offer for health insurance that is subject to a waiting period of uninsurance</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('creditable coverage for treatment of breast or cervical cancer other than coverage for medical services provided by the Indian Health Service, a tribal organization, or an Urban Indian organization or coverage through an offer for health insurance that is subject to a waiting period of uninsurance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b82" type="boolean" public-name="si_bcctOtherCoverage_b">
+        <text>
+          <base>the person has other creditable coverage for treatment of breast or cervical cancer as defined in 2704(c) of the PHS Act</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('other creditable coverage for treatment of breast or cervical cancer as defined in 2704(c) of the PHS Act'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b59" type="boolean" public-name="so_HBEE9.03bApply20150715_b">
+        <text>
+          <base>HBEE 9.03(b) applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 9.03(b)',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b60" type="boolean" public-name="so_HBEE9.03bContReq20150715_b">
+        <text>
+          <base>there are continuous eligibility requirements for the program under HBEE 9.03(b)(2)(ii) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',plural),o('continuous eligibility requirements for the program under HBEE 9.03(b)(2)(ii) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b62" type="boolean" public-name="so_HBEE9.03eApply20150715_b">
+        <text>
+          <base>HBEE 9.03(e) applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 9.03(e)',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b64" type="boolean" public-name="so_HBEE9.03cApply20150715_b">
+        <text>
+          <base>HBEE 9.03(c) applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 9.03(c)',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b65" type="boolean" public-name="so_HBEE9.03dApply20150715_b">
+        <text>
+          <base>HBEE 9.03(d) applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 9.03(d)',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b69" type="boolean" public-name="so_HBEE9.03fApply20150715_b">
+        <text>
+          <base>HBEE 9.03(f) applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 9.03(f)',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b70" type="boolean" public-name="so_HBEE9.03gApply20150715_b">
+        <text>
+          <base>HBEE 9.03(g) applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 9.03(g)',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

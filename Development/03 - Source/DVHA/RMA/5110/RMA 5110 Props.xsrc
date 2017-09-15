@@ -1,0 +1,45 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+    </entity>
+    <entity id="program" name="the program" containment-parent-id="person" containment-relationship-id="personsprograms">
+    </entity>
+    <entity id="person" name="the person" containment-parent-id="global" containment-relationship-id="people">
+      <attribute name="b3" type="boolean" public-name="st_perCnsdrdRfgeeUndRMA5110Eff20051201_b">
+        <text>
+          <base>the person is considered to be a refugee under RMA 5110 (eff. 12/01/2005)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be a refugee under RMA 5110 (eff. 12/01/2005)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" public-name="st_perCnsdrdAsyleeUndRMA5110Eff20051201_b">
+        <text>
+          <base>the person is considered to be an asylee under RMA 5110 (eff. 12/01/2005)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be an asylee under RMA 5110 (eff. 12/01/2005)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" public-name="si_perMtsDfntOfRfgeeUndINA101a42_b">
+        <text>
+          <base>the person meets the definitions of a refugee under INA 101(a)(42)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the definitions of a refugee under INA 101(a)(42)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" public-name="so_RMA5110Cat20051201_b">
+        <text>
+          <base>the person meets the categorical requirements under RMA 5110 (eff. 12/01/2005)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the categorical requirements under RMA 5110 (eff. 12/01/2005)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="person" target="program" is-containment="true" public-id="personsprograms" reverse-public-id="programsperson" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" />
+    <relationship source="global" target="person" is-containment="true" public-id="people" reverse-public-id="global_people_rev" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

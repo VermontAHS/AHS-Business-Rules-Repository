@@ -1,0 +1,3233 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity ref="global">
+      <attribute name="p17" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the benefit type for medical care benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p18" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the RMA policy source</base>
+        </text>
+      </attribute>
+      <attribute name="p19" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the benefit type for long term care benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p20" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the benefit type for insurance exchange access benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p21" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the benefit type for insurance premium tax credit benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p22" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the benefit type for insurance premium reduction benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p23" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the benefit type for insurance cost-sharing reduction benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p25" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the individual result type</base>
+        </text>
+      </attribute>
+      <attribute name="p26" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the group result type</base>
+        </text>
+      </attribute>
+      <attribute name="p27" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the DVHA policy type</base>
+        </text>
+      </attribute>
+      <attribute name="p29" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the HBEE policy source</base>
+        </text>
+      </attribute>
+      <attribute name="p32" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the benefit type for family planning benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p924" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the benefit type for Medicare savings benefits</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is MCA-PCR</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MCA-PCR'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b2" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is MCA-Pregnant</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MCA-Pregnant'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is MCA-Child</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MCA-Child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is MCA-Adult</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MCA-Adult'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is MCA-TMA-1925</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MCA-TMA-1925'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is MCA-EXT</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MCA-EXT'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is MN-MCA</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MN-MCA'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is MABD-SSI-enrolled</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MABD-SSI-enrolled'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is MABD-SSI-eligible</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MABD-SSI-eligible'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is MABD-1619</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MABD-1619'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is MABD-MWPD</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MABD-MWPD'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is MABD-Spouse</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MABD-Spouse'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is MABD-DAC</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MABD-DAC'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is MABD-Pickle</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MABD-Pickle'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is MABD-Dec73</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MABD-Dec73'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is MABD-Aug72</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MABD-Aug72'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is MN-MABD</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MN-MABD'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is SMG-Newborn</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('SMG-Newborn'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is SMG-IV-E</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('SMG-IV-E'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is SMG-Adoption</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('SMG-Adoption'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is SMG-Former-foster</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('SMG-Former-foster'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is SMG-BCCT</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('SMG-BCCT'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is SMG-FPS</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('SMG-FPS'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is MSP-QMB</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MSP-QMB'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is MSP-SLMB</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MSP-SLMB'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is MSP-QI</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MSP-QI'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is MSP-QDWI</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MSP-QDWI'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is LTC-MCA</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('LTC-MCA'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is LTC-SSI-ineligible</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('LTC-SSI-ineligible'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is LTC-Special-income</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('LTC-Special-income'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is LTC-Homebased</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('LTC-Homebased'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is LTC-Hospice</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('LTC-Hospice'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b34" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is LTC-DCHC</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('LTC-DCHC'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is LTC-MWPD</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('LTC-MWPD'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is QHP</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('QHP'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is APTC</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('APTC'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b38" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is VPR</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('VPR'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b39" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is CSR-Tier1</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('CSR-Tier1'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b40" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is CSR-Tier2</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('CSR-Tier2'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b41" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is CSR-Tier3</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('CSR-Tier3'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b42" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is CSR-Tier4</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('CSR-Tier4'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b43" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is CSR-AIAN-300</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('CSR-AIAN-300'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b44" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is CSR-AIAN-IHP</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('CSR-AIAN-IHP'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b45" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program is RMA</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('RMA'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p2" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the program</base>
+        </text>
+      </attribute>
+      <attribute name="p3" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the program's benefit type</base>
+        </text>
+      </attribute>
+      <attribute name="p4" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the program's result type</base>
+        </text>
+      </attribute>
+      <attribute name="p28" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the program's policy source</base>
+        </text>
+      </attribute>
+      <attribute name="p33" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the program's policy type</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global" />
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="ManyToMany" relationship-id="personsprevioussortorderpeople" reverse-relationship-id="personssubsequentsortorderpeople" text="the person's previous sort-order people" reverse-text="the person's subsequent sort-order people" source="person" target="person" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="programsprevioussortorderprograms" reverse-relationship-id="program_programsprevioussortorderprograms_rev" text="the program's previous sort-order programs" source="program" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="programswiththesamebenefittypeastheprogram" reverse-relationship-id="program_programswiththesamebenefittypeastheprogram_rev" text="the programs with the same benefit type as the program" source="program" target="program" is-implicit="false" is-containment="false" />
+  </relationships>
+  <rules>
+    <rule ruleburst="true" folder="0" name="the program" id="1" concludes="p2">
+      <rule-xml>
+        <table-conclude attr-id="p2" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <string-value>Medicaid for Children and Adults - Parent and Other Caretaker Relative</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b1" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Medicaid for Children and Adults - Pregnant Woman</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b2" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Medicaid for Children and Adults - Child</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b3" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Medicaid for Children and Adults - Adult</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b4" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Medicaid for Children and Adults - Transitional Medical Assistance Sec 1925</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b5" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Medicaid for Children and Adults - Extended for Increased Spousal Support</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b7" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Medically-Needy Medicaid for Children and Adults</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b8" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Medicaid for the Aged, Blind, and Disabled - SSI/AABD Enrollee</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b9" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Medicaid for the Aged, Blind, and Disabled - SSI Eligible</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b10" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Medicaid for the Aged, Blind, and Disabled - Section 1619(b)</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b11" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Medicaid for the Aged, Blind, and Disabled - Medicaid for Working People with Disabilities</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b12" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Medicaid for the Aged, Blind, and Disabled - Surviving Spouse</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b13" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Medicaid for the Aged, Blind, and Disabled - Disabled Adult Child</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b14" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Medicaid for the Aged, Blind, and Disabled - Pickle Amendment</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b15" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Medicaid for the Aged, Blind, and Disabled - December 1973 Medicaid Eligible</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b16" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Medicaid for the Aged, Blind, and Disabled - August 1972 AABD Eligible</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b17" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Medically-Needy Medicaid for the Aged, Blind, and Disabled</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b18" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Special Medicaid Groups - Deemed Newborn</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b19" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Special Medicaid Groups - Title IV-E</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b20" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Special Medicaid Groups - Special Needs Adoption</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b21" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Special Medicaid Groups - Former Foster Child</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b22" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Special Medicaid Groups - BCCT</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b23" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Special Medicaid Groups - Family planning services</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b24" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Medicare Savings Plans - Qualified Medicare Beneficiary</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b25" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Medicare Savings Plans - Specified Low-Income Medicare Beneficiary</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b26" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Medicare Savings Plans - Qualified Individual</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b27" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Medicare Savings Plans - Qualified Disabled and Working Individual</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b28" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Long Term Care under MCA</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b29" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Long Term Care under MABD - SSI/AABD Ineligible</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b30" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Long Term Care under MABD - Special Income Level</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b31" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Long Term Care under MABD - Home and Community-Based Services</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b32" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Long Term Care under MABD - Hospice Services</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b33" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Long Term Care under MABD - Katie Beckett</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b34" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Long Term Care under MABD - MWPD</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b35" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Qualified Health Plan</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b36" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Advance Premium Tax Credit</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b37" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Vermont Premium Reduction</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b38" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Cost-Sharing Reduction - Tier I</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b39" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Cost-Sharing Reduction - Tier II</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b40" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Cost-Sharing Reduction - Tier III</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b41" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Cost-Sharing Reduction - Tier IV</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b42" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Cost-Sharing Reduction - AI/AN</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b43" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Cost-Sharing Reduction - AI/AN IHP</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b44" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Refugee Medical Assistance</string-value>
+            </value>
+            <condition>
+              <attribute attr-id="b45" />
+            </condition>
+          </row>
+          <otherwise>
+            <string-value>uncertain</string-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the program's benefit type" id="2" concludes="p3">
+      <rule-xml>
+        <table-conclude attr-id="p3" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p17" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b1" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p17" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b2" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p17" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b3" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p17" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b4" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p17" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b5" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p17" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b7" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p17" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b8" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p17" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b9" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p17" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b10" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p17" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b11" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p17" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b12" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p17" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b13" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p17" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b14" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p17" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b15" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p17" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b16" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p17" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b17" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p17" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b18" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p17" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b19" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p17" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b20" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p17" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b21" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p17" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b22" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p17" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b23" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p32" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b24" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p924" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b25" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p924" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b26" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p924" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b27" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p924" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b28" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p19" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b29" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p19" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b30" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p19" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b31" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p19" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b32" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p19" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b33" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p19" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b34" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p19" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b35" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p20" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b36" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p21" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b37" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p22" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b38" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p23" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b39" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p23" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b40" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p23" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b41" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p23" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b42" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p23" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b43" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p23" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b44" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p17" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b45" />
+            </condition>
+          </row>
+          <otherwise>
+            <string-value>uncertain</string-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the program's result type" id="3" concludes="p4">
+      <rule-xml>
+        <table-conclude attr-id="p4" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b1" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b2" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b3" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b4" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b5" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b7" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b8" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b9" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b10" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b11" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b12" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b13" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b14" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b15" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b16" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b17" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b18" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b19" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b20" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b21" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b22" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b23" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b24" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b25" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b26" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b27" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b28" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b29" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b30" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b31" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b32" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b33" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b34" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b35" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b36" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p26" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b37" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p26" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b38" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b39" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b40" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b41" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b42" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b43" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b44" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p25" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b45" />
+            </condition>
+          </row>
+          <otherwise>
+            <string-value>uncertain</string-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the program's policy type" id="4" concludes="p33">
+      <rule-xml>
+        <table-conclude attr-id="p33" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b1" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b2" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b3" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b4" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b5" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b7" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b8" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b9" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b10" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b11" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b12" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b13" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b14" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b15" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b16" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b17" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b18" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b19" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b20" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b21" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b22" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b23" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b24" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b25" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b26" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b27" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b28" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b29" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b30" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b31" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b32" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b33" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b34" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b35" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b36" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b37" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b38" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b39" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b40" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b41" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b42" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b43" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b44" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p27" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b45" />
+            </condition>
+          </row>
+          <otherwise>
+            <string-value>uncertain</string-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the program's policy source" id="5" concludes="p28">
+      <rule-xml>
+        <table-conclude attr-id="p28" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b1" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b2" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b3" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b4" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b5" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b7" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b8" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b9" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b10" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b11" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b12" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b13" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b14" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b15" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b16" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b17" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b18" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b19" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b20" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b21" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b22" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b23" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b24" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b25" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b26" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b27" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b28" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b29" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b30" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b31" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b32" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b33" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b34" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b35" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b36" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b37" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b38" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b39" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b40" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b41" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b42" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b43" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p29" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b44" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for>
+                  <relationship relationship-id="global_people_rev" target-entity-id="global" />
+                  <attribute attr-id="p18" />
+                </for>
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b45" />
+            </condition>
+          </row>
+          <otherwise>
+            <string-value>uncertain</string-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+</root>

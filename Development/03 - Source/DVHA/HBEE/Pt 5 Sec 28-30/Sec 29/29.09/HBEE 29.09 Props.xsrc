@@ -1,0 +1,301 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+      <attribute name="p49" type="currency" public-name="si_gSubstHmEqtyLimit_c">
+        <text>
+          <base>the substantial home equity limit</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b74" type="boolean" public-name="si_pHsUndueHdshpWvrFrExcsEqtyInHm_b">
+        <text>
+          <base>the person has an undue hardship waiver for the excess equity in the person's home</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('an undue hardship waiver for the excess equity in the person''s home'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+      <attribute name="b67" type="boolean" public-name="si_piIsFrmHmEqtyCvsnPlnUsdToRdcExcsEqtyInHm_b">
+        <text>
+          <base>the person's income is from a home equity conversion plan or home equity loan that is being used to reduce the excess equity in the person's home</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('from a home equity conversion plan or home equity loan that is being used to reduce the excess equity in the person''s home'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b75" type="boolean" public-name="si_piIsFrmHmEqtyCvsnPlnOrHmEqtyLn_b">
+        <text>
+          <base>the person's income is from a home equity conversion plan or home equity loan</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('from a home equity conversion plan or home equity loan'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+      <attribute name="b8" type="boolean" public-name="si_perResAnnuities_b">
+        <text>
+          <base>the person's resource is annuities</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('annuities'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" public-name="si_perResLifeEstate_b">
+        <text>
+          <base>the person's resource is a life estate</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a life estate'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" public-name="si_perResUSSavBonds_b">
+        <text>
+          <base>the person's resource is U. S. savings bonds</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('U. S. savings bonds'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" public-name="si_perResIncPromsNotesContr_b">
+        <text>
+          <base>the person's resource is income-producing promissory notes and contracts</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('income-producing promissory notes and contracts'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p22" type="currency" public-name="si_fairMrktValPerResource_c">
+        <text>
+          <base>the fair market value of the person's resource</base>
+        </text>
+      </attribute>
+      <attribute name="p41" type="currency" public-name="st_HBEE29.09bCountablVal_c">
+        <text>
+          <base>the equity value of the person's resource under HBEE 29.09(b) (eff. 08/01/2016)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="b58" type="boolean" public-name="st_HBEE29.09d1AppliesPrgrm_b">
+        <text>
+          <base>HBEE 29.09(d)(1) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.09(d)(1)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p42" type="currency" public-name="st_HBEE29.09d1CountablVal_c">
+        <text>
+          <base>the value of the person's resource under HBEE 29.09(d)(1) (eff. 08/01/2016)</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="b59" type="boolean" public-name="st_HBEE29.09d2AppliesPrgrm_b">
+        <text>
+          <base>HBEE 29.09(d)(2) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.09(d)(2)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p43" type="currency" public-name="st_HBEE29.09d2CountablVal_c">
+        <text>
+          <base>the value of the person's resource under HBEE 29.09(d)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="b61" type="boolean" public-name="st_HBEE29.09d4AppliesPrgrm_b">
+        <text>
+          <base>HBEE 29.09(d)(4) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.09(d)(4)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p45" type="currency" public-name="st_HBEE29.09d4CountablVal_c">
+        <text>
+          <base>the value of the person's resource under HBEE 29.09(d)(4) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="b62" type="boolean" public-name="st_HBEE29.09d5AppliesPrgrm_b">
+        <text>
+          <base>HBEE 29.09(d)(5) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.09(d)(5)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p46" type="currency" public-name="st_HBEE29.09d5CountablVal_c">
+        <text>
+          <base>the value of the person's resource under HBEE 29.09(d)(5) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="b63" type="boolean" public-name="st_HBEE29.09d6AppliesPrgrm_b">
+        <text>
+          <base>HBEE 29.09(d)(6) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.09(d)(6)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p47" type="currency" public-name="st_HBEE29.09d6CountablVal_c">
+        <text>
+          <base>the value of the person's resource under HBEE 29.09(d)(6)(i) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p48" type="currency" public-name="si_resValAssessCLA_c">
+        <text>
+          <base>the value of the person's resource based on the town's assessment adjusted by the common level of appraisal (CLA)</base>
+        </text>
+      </attribute>
+      <attribute name="b64" type="boolean" public-name="si_prIsHmInWchSpsLwflyRsds_b">
+        <text>
+          <base>the person's resource is a home in which the person's spouse lawfully resides</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a home in which the person''s spouse lawfully resides'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b65" type="boolean" public-name="si_prIsHmInWchChldIsUndr21LwflyRsds_b">
+        <text>
+          <base>the person's resource is a home in which the person's child who is under age 21 lawfully resides</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a home in which the person''s child who is under age 21 lawfully resides'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b66" type="boolean" public-name="si_prIsHmInWchChldIsBlndPmtlyDsbldLwflyRsdsRgdlsOfAge_b">
+        <text>
+          <base>the person's resource is a home in which the person's child who is blind or permanently and totally disabled lawfully resides regardless of age</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a home in which the person''s child who is blind or permanently and totally disabled lawfully resides regardless of age'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b68" type="boolean" public-name="si_prLmpSmPmtFrmHmEqtyCvsnUsdToRdcExcsEqty_b">
+        <text>
+          <base>the person's resource is a lump sum payment from a home equity conversion plan or home equity loan that is being used to reduce the excess equity in the person's home</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a lump sum payment from a home equity conversion plan or home equity loan that is being used to reduce the excess equity in the person''s home'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b69" type="boolean" public-name="st_HBEE29.09dAppliesPrgrm_b">
+        <text>
+          <base>HBEE 29.09(d) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.09(d)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p50" type="currency" public-name="st_prTotValUndHBEE2909aEff080116_c">
+        <text>
+          <base>the total value of the person's resource under HBEE 29.09(a) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p51" type="currency" public-name="st_HBEE29.09dCountablVal_c">
+        <text>
+          <base>the value of the person's resource under HBEE 29.09(d) (eff. 08/01/2016)</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="p52" type="number" public-name="si_resJointGrpFinNum_n">
+        <text>
+          <base>the number of people in the person's financial responsibility group with a joint ownership interest in the person's resource</base>
+        </text>
+      </attribute>
+      <attribute name="p53" type="currency" public-name="st_prCntblValUndHBEE2909c5Eff080116_c">
+        <text>
+          <base>the countable value of the person's resource under HBEE 29.09(c)(5) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p54" type="number" public-name="si_prOwnshpShrAsPctg_n">
+        <text>
+          <base>the person's ownership share in the person's resource as a percentage</base>
+        </text>
+      </attribute>
+      <attribute name="b70" type="boolean" public-name="st_HBEE29.09cAppliesPrgrm_b">
+        <text>
+          <base>HBEE 29.09(c) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.09(c)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b71" type="boolean" public-name="st_HBEE29.09c4AppliesPrgrm_b">
+        <text>
+          <base>HBEE 29.09(c)(4) applies to the person's resource (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.09(c)(4)',singular),o('to the person''s resource (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p55" type="currency" public-name="st_HBEE29.09c4CountablVal_c">
+        <text>
+          <base>the countable value of the person's resource under HBEE 29.09(c)(4) (eff. 08/01/2016)</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="p56" type="currency" public-name="st_HBEE29.09cCountablVal_c">
+        <text>
+          <base>the countable value of the person's resource under HBEE 29.09(c) (eff. 08/01/2016)</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="p57" type="currency" public-name="st_HBEE29.09CountablVal_c">
+        <text>
+          <base>the countable value of the person's resource under HBEE 29.09 (eff. 08/01/2016)</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="p58" type="currency" public-name="so_HBEE29.09Val_c">
+        <text>
+          <base>the countable value of the person's resource under HBEE 29.09</base>
+        </text>
+      </attribute>
+      <attribute name="b72" type="boolean" public-name="si_resJointEntirety_b">
+        <text>
+          <base>the person's resource joint ownership type is a tenancy-by-the-entirety</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource joint ownership type',singular),o('a tenancy-by-the-entirety'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b73" type="boolean" public-name="si_resTypeFinancialAcct_b">
+        <text>
+          <base>the person's resource is an account in a financial institution</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('an account in a financial institution'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p60" type="number" public-name="si_homeJointPerSpousePlusNotResidingPct_n">
+        <text>
+          <base>the ownership interest of the person, the person's spouse, and any joint owner not residing in the person's resource as a percentage</base>
+        </text>
+      </attribute>
+      <attribute name="p61" type="currency" public-name="si_lifeEstateValueAtCreation_c">
+        <text>
+          <base>the fair market value of the person's resource at the time the life estate interest was created</base>
+        </text>
+      </attribute>
+      <attribute name="p62" type="number" public-name="si_lifeExpectValAtLifeEstateCreation_n">
+        <text>
+          <base>the number in the life expectancy table that corresponds with the person's age at the time the person's resource was created</base>
+        </text>
+      </attribute>
+      <attribute name="b76" type="boolean" public-name="si_prWsAcqdBcOfValOrAsIvstmnt_b">
+        <text>
+          <base>it is the case that the person's resource was acquired or held because of its value or as an investment</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the person''s resource was acquired or held because of its value or as an investment'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b77" type="boolean" public-name="si_prPymtsFrHmModsExdOTExpdtrOf7500_b">
+        <text>
+          <base>payments from the person's resource for home modifications exceed a one-time expenditure of $7500</base>
+          <parse>s(ver('10.4.6.76'),v(exceed,t(simple,present,normal)),sb('payments from the person''s resource for home modifications',plural),o('a one-time expenditure of $7500'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b78" type="boolean" public-name="si_prIsLmpSmPymtFrmHmEqtyCnvsnPlnOrHmEqtyLn_b">
+        <text>
+          <base>the person's resource is a lump sum payment from a home equity conversion plan or home equity loan</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a lump sum payment from a home equity conversion plan or home equity loan'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

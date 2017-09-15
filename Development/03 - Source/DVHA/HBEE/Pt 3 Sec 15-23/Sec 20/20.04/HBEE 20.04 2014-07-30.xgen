@@ -1,0 +1,42 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b4" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 20.04 is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 20.04',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is homeless</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('homeless'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="HBEE 20.04 is satisfied for the person (eff. 07/30/2014)" ruleburst="true" concludes="b4" folder="1" source-offset="61">
+      <rule-xml>
+        <conclude attr-id="b4" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b6" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="20.04 Homeless Individuals" parent="0" id="1" />
+  </rule-folders>
+</root>

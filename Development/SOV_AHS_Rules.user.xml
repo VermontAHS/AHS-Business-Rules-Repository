@@ -1,0 +1,25 @@
+<registry schema-version="1" product-version="10.4.6.76">
+  <section name="Debug">
+    <entry name="ShowDialog">True</entry>
+    <entry name="DebugMode">DeterminationsEngineNET</entry>
+    <entry name="OtherJrbiUrl">
+    </entry>
+    <entry name="DebuggingLanguage">en-US</entry>
+    <entry name="RetainData">True</entry>
+    <entry name="DebugViewOptions">&lt;opt&gt;&lt;ent name="global"&gt;&lt;attr name="p1@00Framework_03Interpretive_InterpretiveFrameworkProps_xsrc" /&gt;&lt;attr name="p8@00Framework_03Interpretive_InterpretiveFrameworkProps_xsrc" /&gt;&lt;attr name="si_firstDayPrevMonth_d" /&gt;&lt;attr name="p2@00Framework_03Interpretive_InterpretiveFrameworkProps_xsrc" /&gt;&lt;/ent&gt;&lt;/opt&gt;</entry>
+  </section>
+  <section name="RBIJavaDeploy">
+    <entry name="RefreshEmbeddedTemplate">False</entry>
+  </section>
+  <section name="VersionControl">
+    <entry name="Username">JDOODY</entry>
+  </section>
+  <section name="Debugger">
+    <entry name="ImportExport">C:\Users\Cy\Desktop</entry>
+  </section>
+  <section name="RegressionTester">
+    <entry name="ReportType">Sequential</entry>
+    <entry name="HeadingStyle">DisplayText</entry>
+    <entry name="OmitFromReport">None</entry>
+  </section>
+</registry>

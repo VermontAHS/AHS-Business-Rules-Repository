@@ -1,0 +1,453 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b31" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 25.05 applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 25.05',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is a long term care program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('a long term care program'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b3" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered to have an undue hardship under HBEE 25.05 (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to have an undue hardship under HBEE 25.05 (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 25.05(b) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 25.05(b)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 25.05(c) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 25.05(c)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 25.05(e)(3) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 25.05(e)(3)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has resources in excess of the community spouse resource allocation (CSRA)</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('resources in excess of the community spouse resource allocation (CSRA)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 25.05(c)(1) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 25.05(c)(1)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 25.05(c)(2) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 25.05(c)(2)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 25.05(c)(3) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 25.05(c)(3)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 25.05(c)(4) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 25.05(c)(4)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 25.05(c)(5) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 25.05(c)(5)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 25.05(c)(6) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 25.05(c)(6)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>AHS has determined that a transfer penalty would cause the person undue hardship</base>
+          <parse>s(ver('10.4.6.76'),v(determine,t(simple,present,perfect)),sb('AHS',singular),o('that a transfer penalty would cause the person undue hardship'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the transfer penalty would result in the person's immediate family qualifying for SSI; Reach Up; AABD; General Assistance; 3SquaresVTs; or another public assistance program requiring a comparable showing of financial need</base>
+          <parse>s(ver('10.4.6.76'),v(result+would,t(simple,modal,normal)),sb('the transfer penalty',plural),o('in the person''s immediate family qualifying for SSI; Reach Up; AABD; General Assistance; 3SquaresVTs; or another public assistance program requiring a comparable showing of financial need'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the transfer penalty would require that assets such as a family farm or other family business that are the primary source of income for the person's spouse, parents, children or siblings be sold in order to acquire funds for the cost of the person's long-term care services and supports</base>
+          <parse>s(ver('10.4.6.76'),v(require+would,t(simple,modal,normal)),sb('the transfer penalty',plural),o('that assets such as a family farm or other family business that are the primary source of income for the person''s spouse, parents, children or siblings be sold in order to acquire funds for the cost of the person''s long-term care services and supports'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it is the case that AHS has determined that the person has exhausted all reasonable efforts to pay or provide the care of the person, or to provide for the needs of financially-dependent family members from other available sources</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that AHS has determined that the person has exhausted all reasonable efforts to pay or provide the care of the person, or to provide for the needs of financially-dependent family members from other available sources'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has requested an undue hardship exception for the transfer penalty</base>
+          <parse>s(ver('10.4.6.76'),v(request,t(simple,present,perfect)),sb('the person',singular),o('an undue hardship exception for the transfer penalty'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has submitted documentation supporting the person's claim of undue hardship for the transfer penalty</base>
+          <parse>s(ver('10.4.6.76'),v(submit,t(simple,present,perfect)),sb('the person',singular),o('documentation supporting the person''s claim of undue hardship for the transfer penalty'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the group member" id="groupmember" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+      <attribute name="b9" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's spouse</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s spouse'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's transfer" id="personstransfer" containment-relationship-id="personstransfers" containment-parent-id="person">
+      <attribute name="b7" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03</base>
+          <parse>s(ver('10.4.6.76'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer was transferred to the person's spouse</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('transferred to the person''s spouse'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer was transferred by an agent under a power of attorney (POA) or a guardian of the person</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('transferred by an agent under a power of attorney (POA) or a guardian of the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>AHS or a court has determined that the agent under a power of attorney (POA) or guardian who transferred the person's transfer was not acting in the best interest of the person when the transfer was made</base>
+          <parse>s(ver('10.4.6.76'),v(determine,t(simple,present,perfect)),sb('AHS or a court',singular),o('that the agent under a power of attorney (POA) or guardian who transferred the person''s transfer was not acting in the best interest of the person when the transfer was made'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the transfer of the person's transfer forms the basis for a report to AHS for investigation of abuse, neglect or exploitation by the agent under a power of attorney (POA) or guardian who made the transfer</base>
+          <parse>s(ver('10.4.6.76'),v(make,t(simple,past,normal)),sb('the transfer of the person''s transfer forms the basis for a report to AHS for investigation of abuse, neglect or exploitation by the agent under a power of attorney (POA) or guardian who',plural),o('the transfer'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer was the result of exploitation, fraud or misrepresentation</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('the result of exploitation, fraud or misrepresentation'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the transfer of the person's transfer by exploitation, fraud or misrepresentation is documented by official police reports or civil or criminal action against the alleged perpetrator</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the transfer of the person''s transfer by exploitation, fraud or misrepresentation',singular),o('documented by official police reports or civil or criminal action against the alleged perpetrator'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the transfer of the person's transfer by exploitation, fraud or misrepresentation is documented by a sworn statement to AHS attesting to the fact that the claim was reported to the police or to the AHS department responsible for substantiating such claims</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the transfer of the person''s transfer by exploitation, fraud or misrepresentation',singular),o('documented by a sworn statement to AHS attesting to the fact that the claim was reported to the police or to the AHS department responsible for substantiating such claims'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the recipient of the person's transfer can make other arrangements to pay or provide the care of the person, or to provide for the needs of financially-dependent family members</base>
+          <parse>s(ver('10.4.6.76'),v(make+can,t(simple,modal,normal)),sb('the recipient of the person''s transfer',plural),o('other arrangements to pay or provide the care of the person, or to provide for the needs of financially-dependent family members'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it is the case that the person's transfer is not recoverable due to loss, destruction, theft, or other similar circumstances</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the person''s transfer is not recoverable due to loss, destruction, theft, or other similar circumstances'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+  </entities>
+  <relationships>
+    <relationship type="ManyToMany" relationship-id="groupmembersrepresentativeperson" reverse-relationship-id="personsrepresentationsasagroupmember" text="the group member's representative person" reverse-text="the person's representations as a group member" source="groupmember" target="person" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" text="the person's group members" reverse-text="the group member's containing person" source="person" target="groupmember" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personstransfers" reverse-relationship-id="personstransfersperson" text="the person's transfers" reverse-text="the person's transfer's person" source="person" target="personstransfer" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="HBEE 25.05 applies to the program (eff. 07/15/2015)" ruleburst="true" concludes="b31" folder="1" source-offset="65">
+      <rule-xml>
+        <conclude attr-id="b31" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b32" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the person is considered to have an undue hardship under HBEE 25.05 (eff. 07/15/2015)" ruleburst="true" concludes="b3" folder="1" source-offset="204">
+      <rule-xml>
+        <conclude attr-id="b3" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b4" />
+              <attribute attr-id="b5" />
+              <attribute attr-id="b6" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="HBEE 25.05(b) is not satisfied for the person (eff. 07/15/2015)" ruleburst="true" concludes="not b4" folder="2" source-offset="517">
+      <rule-xml>
+        <conclude attr-id="b4" entity-id="person" scope-id="person0">
+          <value>
+            <false-value />
+          </value>
+          <condition>
+            <and>
+              <exists scope-id="personstransfer0">
+                <relationship relationship-id="personstransfers" target-entity-id="personstransfer" />
+                <and>
+                  <not>
+                    <attribute attr-id="b7" />
+                  </not>
+                  <attribute attr-id="b8" />
+                </and>
+              </exists>
+              <exists scope-id="groupmember0">
+                <relationship relationship-id="personsgroupmembers" target-entity-id="groupmember" />
+                <and>
+                  <attribute attr-id="b9" />
+                  <for scope-id="the spouse">
+                    <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                    <attribute attr-id="b10" />
+                  </for>
+                </and>
+              </exists>
+            </and>
+          </condition>
+          <otherwise>
+            <true-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="HBEE 25.05(c) is satisfied for the person (eff. 07/15/2015)" ruleburst="true" concludes="b5" folder="3" source-offset="1198">
+      <rule-xml>
+        <conclude attr-id="b5" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b11" />
+              <attribute attr-id="b12" />
+              <attribute attr-id="b13" />
+              <attribute attr-id="b14" />
+              <attribute attr-id="b15" />
+              <attribute attr-id="b16" />
+              <attribute attr-id="b17" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="HBEE 25.05(c)(1) is satisfied for the person (eff. 07/15/2015)" ruleburst="true" concludes="b11" folder="3" source-offset="1787">
+      <rule-xml>
+        <conclude attr-id="b11" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b18" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="HBEE 25.05(c)(2) is satisfied for the person (eff. 07/15/2015)" ruleburst="true" concludes="b12" folder="3" source-offset="2089">
+      <rule-xml>
+        <conclude attr-id="b12" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b19" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="HBEE 25.05(c)(3) is satisfied for the person (eff. 07/15/2015)" ruleburst="true" concludes="b13" folder="3" source-offset="2456">
+      <rule-xml>
+        <conclude attr-id="b13" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <exists scope-id="personstransfer0">
+              <relationship relationship-id="personstransfers" target-entity-id="personstransfer" />
+              <and>
+                <not>
+                  <attribute attr-id="b7" />
+                </not>
+                <attribute attr-id="b20" />
+                <or>
+                  <attribute attr-id="b21" />
+                  <attribute attr-id="b22" />
+                </or>
+              </and>
+            </exists>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="7" name="HBEE 25.05(c)(4) is satisfied for the person (eff. 07/15/2015)" ruleburst="true" concludes="b14" folder="3" source-offset="3213">
+      <rule-xml>
+        <conclude attr-id="b14" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <exists scope-id="personstransfer0">
+              <relationship relationship-id="personstransfers" target-entity-id="personstransfer" />
+              <and>
+                <not>
+                  <attribute attr-id="b7" />
+                </not>
+                <attribute attr-id="b23" />
+                <or>
+                  <attribute attr-id="b24" />
+                  <attribute attr-id="b25" />
+                </or>
+              </and>
+            </exists>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="8" name="HBEE 25.05(c)(5) is satisfied for the person (eff. 07/15/2015)" ruleburst="true" concludes="b15" folder="3" source-offset="3971">
+      <rule-xml>
+        <conclude attr-id="b15" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <exists scope-id="personstransfer0">
+              <relationship relationship-id="personstransfers" target-entity-id="personstransfer" />
+              <and>
+                <not>
+                  <attribute attr-id="b7" />
+                </not>
+                <attribute attr-id="b33" />
+              </and>
+            </exists>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="9" name="HBEE 25.05(c)(6) is satisfied for the person (eff. 07/15/2015)" ruleburst="true" concludes="b16" folder="3" source-offset="4311">
+      <rule-xml>
+        <conclude attr-id="b16" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <exists scope-id="personstransfer0">
+                <relationship relationship-id="personstransfers" target-entity-id="personstransfer" />
+                <and>
+                  <not>
+                    <attribute attr-id="b7" />
+                  </not>
+                  <not>
+                    <attribute attr-id="b27" />
+                  </not>
+                </and>
+              </exists>
+              <attribute attr-id="b28" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="10" name="HBEE 25.05(e)(3) is satisfied for the person (eff. 07/15/2015)" ruleburst="true" concludes="b6" folder="4" source-offset="4966">
+      <rule-xml>
+        <conclude attr-id="b6" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b29" />
+              <attribute attr-id="b30" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="25.05 Undue Hardship (07/15/2015, 15-02)" parent="0" id="1" />
+    <folder text="Para (b)" parent="1" id="2" />
+    <folder text="Para (c)" parent="1" id="3" />
+    <folder text="Para (e)(3)" parent="1" id="4" />
+  </rule-folders>
+</root>

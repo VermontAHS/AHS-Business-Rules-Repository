@@ -1,0 +1,277 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 17.02 is satisfied for the person for the program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.02',singular),o('for the person for the program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 17.02 applies to the program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(apply,t(simple,present,normal)),sb('HBEE 17.02',singular),o('to the program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b43" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is an HBEE program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('an HBEE program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b44" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 17.02(a) is satisfied for the person for the program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.02(a)',singular),o('for the person for the program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b45" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is a QHP-based program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('a QHP-based program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b46" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 17.02(b) applies to the person for the program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 17.02(b)',singular),o('to the person for the program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b47" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is a Medicaid program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('a Medicaid program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b49" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 17.02(c) applies to the person for the program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 17.02(c)',singular),o('to the person for the program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b3" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 17.02(b) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.02(b)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 17.02(c) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.02(c)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is reasonably expected to be a citizen or national for the entire period for which QHP enrollment is sought</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('reasonably expected to be a citizen or national for the entire period for which QHP enrollment is sought'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is reasonably expected to be a non-citizen who is lawfully present for the entire period QHP enrollment is sought</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('reasonably expected to be a non-citizen who is lawfully present for the entire period QHP enrollment is sought'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered to be lawfully present in the United States under HBEE 17.01(g)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be lawfully present in the United States under HBEE 17.01(g)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b42" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is a U.S. Citizen or National</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('a U.S. Citizen or National'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b48" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered a non-citizen under HBEE 17.01(h)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('a non-citizen under HBEE 17.01(h)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b51" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 17.03 is satisfied for the person</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.03',singular),o('for the person'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="HBEE 17.02 applies to the program (eff. 07/30/2014)" ruleburst="true" concludes="b22" folder="1" source-offset="31">
+      <rule-xml>
+        <conclude attr-id="b22" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b43" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="HBEE 17.02 is satisfied for the person for the program (eff. 07/30/2014)" ruleburst="true" concludes="b1" folder="1" source-offset="156">
+      <rule-xml>
+        <conclude attr-id="b1" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b44" />
+              <and>
+                <attribute attr-id="b46" />
+                <or>
+                  <not>
+                    <attribute attr-id="b46" />
+                  </not>
+                  <for>
+                    <relationship relationship-id="programsperson" target-entity-id="person" />
+                    <attribute attr-id="b3" />
+                  </for>
+                </or>
+              </and>
+              <and>
+                <attribute attr-id="b49" />
+                <or>
+                  <not>
+                    <attribute attr-id="b49" />
+                  </not>
+                  <for>
+                    <relationship relationship-id="programsperson" target-entity-id="person" />
+                    <attribute attr-id="b4" />
+                  </for>
+                </or>
+              </and>
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="HBEE 17.02(a) is satisfied for the person for the program (eff. 07/30/2014)" ruleburst="true" concludes="b44" folder="1" source-offset="854">
+      <rule-xml>
+        <conclude attr-id="b44" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <attribute attr-id="b42" />
+              </for>
+              <or>
+                <not>
+                  <attribute attr-id="b45" silent-if-false="true" invisible-if-false="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b45" />
+                  <for>
+                    <relationship relationship-id="programsperson" target-entity-id="person" />
+                    <attribute attr-id="b8" />
+                  </for>
+                </and>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="HBEE 17.02(b) applies to the person for the program (eff. 07/30/2014)" ruleburst="true" concludes="b46" folder="1" source-offset="1293">
+      <rule-xml>
+        <conclude attr-id="b46" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b47" />
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <attribute attr-id="b48" />
+              </for>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="HBEE 17.02(b) is satisfied for the person (eff. 07/30/2014)" ruleburst="true" concludes="b3" folder="1" source-offset="1483">
+      <rule-xml>
+        <conclude attr-id="b3" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b51" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="HBEE 17.02(c) applies to the person for the program (eff. 07/30/2014)" ruleburst="true" concludes="b49" folder="1" source-offset="1677">
+      <rule-xml>
+        <conclude attr-id="b49" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b45" />
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <attribute attr-id="b48" />
+              </for>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="HBEE 17.02(c) is satisfied for the person (eff. 07/30/2014)" ruleburst="true" concludes="b4" folder="1" source-offset="1867">
+      <rule-xml>
+        <conclude attr-id="b4" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b36" />
+              <attribute attr-id="b16" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="17.02 General Rules" parent="0" id="1" />
+  </rule-folders>
+</root>

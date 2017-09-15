@@ -1,0 +1,900 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+      <attribute name="p48" type="number" public-name="st_person_netincome_lim_8.05d1iA_c">
+        <text>
+          <base>the adjusted net income FPL percentage limit under HBEE 8.05(d)(1)(i)(A) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p65" type="number">
+        <text>
+          <base>the adjusted net income FPL percentage limit under HBEE 8.05(d)(1)(i)(A)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="p4" type="currency" public-name="si_person_paylevel_8.05b2i_c">
+        <text>
+          <base>the SSI/AABD payment level for the person's Medicaid group as defined in HBEE 29.04</base>
+        </text>
+      </attribute>
+      <attribute name="p6" type="currency" public-name="st_person_resource_lim_8.05b2ii_c">
+        <text>
+          <base>the countable resource limit for the person under HBEE 8.05(b)(2)(ii) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p13" type="currency" public-name="st_netincome_lim_8.05k6v_c">
+        <text>
+          <base>the monthly adjusted net income limit for the person under HBEE 8.05(k)(6)(v) (eff. 07/15/2015)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p15" type="currency" public-name="st_person_resource_lim_8.05k6vi_c">
+        <text>
+          <base>the countable resource limit for the person under HBEE 8.05(k)(6)(vi) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p17" type="currency" public-name="st_person_netincome_lim_8.05j2iii_c">
+        <text>
+          <base>the monthly adjusted net income limit for the person under HBEE 8.05(i)(2)(iii) (eff. 07/15/2015)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p18" type="currency" public-name="st_person_netincome_standard_8.05k3ii_c">
+        <text>
+          <base>the monthly adjusted net income limit for the person under HBEE 8.05(k)(3)(ii) (eff. 07/15/2015)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p19" type="currency" public-name="st_person_resource_lim_8.05k3iii_c">
+        <text>
+          <base>the countable resource limit for the person under HBEE 8.05(k)(3)(iii) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p22" type="currency" public-name="si_person_parent_ssi_benamount_c">
+        <text>
+          <base>the amount of social security benefits on the person's parents' record due to retirement, death, or disability benefits to which the person is entitled</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p23" type="currency" public-name="si_person_netincome_lim_8.05g2i_c">
+        <text>
+          <base>the monthly adjusted net income limit for the person under HBEE 8.05(g)(2)(i) (eff. 07/15/2015)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p24" type="currency" public-name="st_person_resource_lim_8.05g2ii_c">
+        <text>
+          <base>the countable resource limit for the person under HBEE 8.05(g)(2)(ii) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p26" type="currency" public-name="si_person_disregard_8.05h2i_c">
+        <text>
+          <base>the person's increase in social security disability or retirement benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p27" type="currency" public-name="st_person_netincome_lim_8.05h2i_c">
+        <text>
+          <base>the monthly adjusted net income limit for the person under HBEE 8.05(h)(2)(i) (eff. 07/15/2015)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p28" type="currency" public-name="st_person_resource_lim_8.05h2ii_c">
+        <text>
+          <base>the countable resource limit for the person under HBEE 8.05(h)(2)(ii) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p29" type="currency" public-name="st_person_resource_limit_8.05i2iii_c">
+        <text>
+          <base>the countable resource limit for the person under HBEE 8.05(i)(2)(iv) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p30" type="currency" public-name="st_person_netincome_lim_8.05j2i_c">
+        <text>
+          <base>the monthly adjusted net income limit for the person under HBEE 8.05(j)(2)(i) (eff. 07/15/2015)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p31" type="currency" public-name="st_resource_lim_8.05j2i_c">
+        <text>
+          <base>the countable resource limit for the person under HBEE 8.05(j)(2)(ii) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p32" type="currency" public-name="si_person_SSI_colaincrease_c">
+        <text>
+          <base>the person's increase in social security benefits due to COLA increase effective September 1972</base>
+        </text>
+      </attribute>
+      <attribute name="p34" type="currency" public-name="st_netincome_floor_8.05k4ii_c">
+        <text>
+          <base>the monthly adjusted net income floor for the person under HBEE 8.05(k)(4)(ii) (eff. 07/15/2015)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p35" type="currency" public-name="st_person_netincome_lim_8.05k4ii_c">
+        <text>
+          <base>the monthly adjusted net income limit for the person under HBEE 8.05(k)(4)(ii) (eff. 07/15/2015)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p37" type="currency" public-name="st_person_IIS_paylvl_c">
+        <text>
+          <base>the IIS payment level for the person's Medicaid group</base>
+        </text>
+      </attribute>
+      <attribute name="p38" type="currency" public-name="si_person_increaseCOLA_8.05h2i_c">
+        <text>
+          <base>the person's increase in social security benefits due to annual COLAs since the person lost SSI/AABD benefits</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p40" type="currency" public-name="st_person_netincome_lim_8.05f3i_c">
+        <text>
+          <base>the monthly adjusted net income limit for the person under HBEE 8.05(f)(3)(i) (eff. 07/15/2015)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p41" type="currency" public-name="st_person_resource_lim_8.05f3ii_c">
+        <text>
+          <base>the countable resource limit for the person under HBEE 8.05(f)(3)(ii) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p46" type="currency" public-name="so_HBEE8.05b2iAdjAbs20150715_c">
+        <text>
+          <base>the monthly adjusted net income limit for the person under HBEE 8.05(b)(2)(i) (eff. 07/15/2015)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p47" type="currency" public-name="so_HBEE8.05b2iAdjAbs_c">
+        <text>
+          <base>the monthly adjusted net income limit for the person under HBEE 8.05(b)(2)(i)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p55" type="currency" public-name="si_incEarnSSDIVetDisab_c">
+        <text>
+          <base>the person's total monthly earnings, Social Security Disability Insurance benefits (SSDI), and veterans' disability benefits</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p64" type="currency">
+        <text>
+          <base>the countable resource limit for the person under HBEE 8.05(b)(2)(ii)</base>
+        </text>
+      </attribute>
+      <attribute name="p66" type="currency">
+        <text>
+          <base>the monthly adjusted net income limit for the person under HBEE 8.05(f)(3)(i)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p67" type="currency">
+        <text>
+          <base>the countable resource limit for the person under HBEE 8.05(f)(3)(ii)</base>
+        </text>
+      </attribute>
+      <attribute name="p68" type="currency">
+        <text>
+          <base>the monthly adjusted net income limit for the person under HBEE 8.05(g)(2)(i)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p69" type="currency">
+        <text>
+          <base>the countable resource limit for the person under HBEE 8.05(g)(2)(ii)</base>
+        </text>
+      </attribute>
+      <attribute name="p70" type="currency">
+        <text>
+          <base>the monthly adjusted net income limit for the person under HBEE 8.05(h)(2)(i)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p71" type="currency">
+        <text>
+          <base>the countable resource limit for the person under HBEE 8.05(h)(2)(ii)</base>
+        </text>
+      </attribute>
+      <attribute name="p72" type="currency">
+        <text>
+          <base>the monthly adjusted net income limit for the person under HBEE 8.05(i)(2)(iii)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p73" type="currency">
+        <text>
+          <base>the countable resource limit for the person under HBEE 8.05(i)(2)(iv)</base>
+        </text>
+      </attribute>
+      <attribute name="p74" type="currency">
+        <text>
+          <base>the monthly adjusted net income limit for the person under HBEE 8.05(j)(2)(i)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p75" type="currency">
+        <text>
+          <base>the countable resource limit for the person under HBEE 8.05(j)(2)(ii)</base>
+        </text>
+      </attribute>
+      <attribute name="p77" type="currency">
+        <text>
+          <base>the monthly adjusted net income limit for the person under HBEE 8.05(k)(3)(ii)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p80" type="currency">
+        <text>
+          <base>the countable resource limit for the person under HBEE 8.05(k)(3)(iii)</base>
+        </text>
+      </attribute>
+      <attribute name="p81" type="currency">
+        <text>
+          <base>the monthly adjusted net income floor for the person under HBEE 8.05(k)(4)(ii)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p82" type="currency">
+        <text>
+          <base>the monthly adjusted net income limit for the person under HBEE 8.05(k)(4)(ii)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p83" type="currency">
+        <text>
+          <base>the monthly adjusted net income limit for the person under HBEE 8.05(k)(6)(v)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p84" type="currency">
+        <text>
+          <base>the countable resource limit for the person under HBEE 8.05(k)(6)(vi)</base>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" public-name="so_HBEE8.05aCat20150715_b">
+        <text>
+          <base>HBEE 8.05(a)(1) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.05(a)(1)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" public-name="so_HBEE8.05bCat20150715_b">
+        <text>
+          <base>HBEE 8.05(b)(1) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.05(b)(1)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" public-name="so_HBEE8.05cCat20150715_b">
+        <text>
+          <base>HBEE 8.05(c)(1) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.05(c)(1)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean" public-name="so_HBEE8.05dCat20150715_b">
+        <text>
+          <base>the person meets the categorical requirements under HBEE 8.05(d)(1) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the categorical requirements under HBEE 8.05(d)(1) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean" public-name="so_HBEE8.05fCat20150715_b">
+        <text>
+          <base>the person meets the categorical requirements under HBEE 8.05(f) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the categorical requirements under HBEE 8.05(f) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean" public-name="so_HBEE8.05gCat20150715_b">
+        <text>
+          <base>HBEE 8.05(g)(1) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.05(g)(1)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b34" type="boolean" public-name="so_HBEE8.05hCat20150715_b">
+        <text>
+          <base>HBEE 8.05(h)(1) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.05(h)(1)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" public-name="so_HBEE8.05i1Alt20150715_b">
+        <text>
+          <base>HBEE 8.05(i)(1) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.05(i)(1)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" public-name="so_HBEE8.05i2Cat20150715_b">
+        <text>
+          <base>HBEE 8.05(i)(2) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.05(i)(2)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" public-name="so_HBEE8.05i3Alt20150715_b">
+        <text>
+          <base>HBEE 8.05(i)(3) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.05(i)(3)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b38" type="boolean" public-name="so_HBEE8.05jCat20150715_b">
+        <text>
+          <base>HBEE 8.05(j)(1) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.05(j)(1)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b39" type="boolean" public-name="so_HBEE8.05k2Alt20150715_b">
+        <text>
+          <base>HBEE 8.05(k)(2)(ii) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.05(k)(2)(ii)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b40" type="boolean" public-name="so_HBEE8.05k3Cat20150715_b">
+        <text>
+          <base>HBEE 8.05(k)(3) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.05(k)(3)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b41" type="boolean" public-name="so_HBEE8.05k4Cat20150715_b">
+        <text>
+          <base>the person meets the categorical requirements under HBEE 8.05(k)(4) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the categorical requirements under HBEE 8.05(k)(4) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b42" type="boolean" public-name="so_HBEE8.05k5Cat20150715_b">
+        <text>
+          <base>HBEE 8.05(k)(5) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.05(k)(5)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b43" type="boolean" public-name="so_HBEE8.05k6Cat20150715_b">
+        <text>
+          <base>HBEE 8.05(k)(6) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.05(k)(6)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b44" type="boolean" public-name="so_HBEE8.05k7Cat20150715_b">
+        <text>
+          <base>HBEE 8.05(k)(7) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.05(k)(7)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b45" type="boolean" public-name="si_recvSSI-AABD_b">
+        <text>
+          <base>the person is enrolled in SSI/AABD</base>
+          <parse>s(ver('10.4.6.76'),v(enroll,t(simple,present,normal)),ob('the person',singular),o('in SSI/AABD'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b46" type="boolean" public-name="si_recvSSIPendDisab_b">
+        <text>
+          <base>the person is receiving SSI pending a final determination of blindness or disability</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('receiving SSI pending a final determination of blindness or disability'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b47" type="boolean" public-name="si_recvSSIAgreeDispose_b">
+        <text>
+          <base>the person is receiving SSI under an agreement with the SSA to dispose of resources that exceed the SSI dollar limits on resources</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('receiving SSI under an agreement with the SSA to dispose of resources that exceed the SSI dollar limits on resources'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b50" type="boolean" public-name="si_elig1619PerSSA_b">
+        <text>
+          <base>it is the case that the SSA has determined that the person is eligible under the Act (§1619(b)) because the person meets all SSI/AABD eligibility requirements except for the amount of the person's earnings</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the SSA has determined that the person is eligible under the Act (§1619(b)) because the person meets all SSI/AABD eligibility requirements except for the amount of the person''s earnings'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b53" type="boolean" public-name="si_working_b">
+        <text>
+          <base>the person is working</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('working'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b54" type="boolean" public-name="si_survivingSpouse_b">
+        <text>
+          <base>the person is a surviving spouse</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('a surviving spouse'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b55" type="boolean" public-name="si_applySSIMedicaidBefore19880701_b">
+        <text>
+          <base>the person applied for SSI-related Medicaid no later than July 1, 1988</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,past,normal)),sb('the person',plural),o('for SSI-related Medicaid no later than July 1, 1988'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b56" type="boolean" public-name="si_recvSSIDec1983_b">
+        <text>
+          <base>the person was receiving SSI/AABD in December 1983</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person',singular),o('receiving SSI/AABD in December 1983'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b57" type="boolean" public-name="si_lostSSIJan1984StatElim_b">
+        <text>
+          <base>the person lost SSI/AABD in January 1984 due to a statutory elimination of an additional benefit reduction factor for surviving spouses before attainment of age 60</base>
+          <parse>s(ver('10.4.6.76'),v(lose,t(simple,past,normal)),sb('the person',plural),o('SSI/AABD in January 1984 due to a statutory elimination of an additional benefit reduction factor for surviving spouses before attainment of age 60'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b58" type="boolean" public-name="si_survivingSpouseContinuousJan84_b">
+        <text>
+          <base>the person has been continuously entitled to surviving spouse insurance based on disability since January 1984</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,perfect)),sb('the person',singular),o('continuously entitled to surviving spouse insurance based on disability since January 1984'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b59" type="boolean" public-name="si_eligSSIExceptIncrSocSec_b">
+        <text>
+          <base>it is the case that the person would continue to be eligible for SSI/AABD if the person had not received the increase in social security disability or retirement benefits</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the person would continue to be eligible for SSI/AABD if the person had not received the increase in social security disability or retirement benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b60" type="boolean" public-name="si_spouseObtainLegalDis_b">
+        <text>
+          <base>the person is a spouse who has obtained a legal dissolution</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('a spouse who has obtained a legal dissolution'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b61" type="boolean" public-name="si_spouseInsured10years_b">
+        <text>
+          <base>the person was the spouse of the insured for at least 10 years</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person',singular),o('the spouse of the insured for at least 10 years'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b62" type="boolean" public-name="si_remarriedSinceLegalDis_b">
+        <text>
+          <base>the person has remarried since the person obtained a legal dissolution</base>
+          <parse>s(ver('10.4.6.76'),v(remarry,t(simple,present,perfect)),sb('the person',singular),o('since the person obtained a legal dissolution'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b63" type="boolean" public-name="si_disabledSSA1634c_b">
+        <text>
+          <base>the person is considered to have a disability under Section 1634(c) of the Social Security Act</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to have a disability under Section 1634(c) of the Social Security Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b64" type="boolean" public-name="si_blindBefore22_b">
+        <text>
+          <base>the person has blindness that began before the age of 22</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('blindness that began before the age of 22'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b65" type="boolean" public-name="si_disabledBefore22_b">
+        <text>
+          <base>the person has a disability that began before the age of 22</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('a disability that began before the age of 22'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b66" type="boolean" public-name="si_entitledSsbParents_b">
+        <text>
+          <base>the person is entitled to social security benefits on the person's parents' record due to retirement, death, or disability benefits</base>
+          <parse>s(ver('10.4.6.76'),v(entitle,t(simple,present,normal)),ob('the person',singular),o('to social security benefits on the person''s parents'' record due to retirement, death, or disability benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b67" type="boolean" public-name="si_lostSSIIncrSsbParents_b">
+        <text>
+          <base>the person lost SSI/AABD due to receipt of or an increase in social security benefits on the person's parents' record due to retirement, death, or disability benefits</base>
+          <parse>s(ver('10.4.6.76'),v(lose,t(simple,past,normal)),sb('the person',plural),o('SSI/AABD due to receipt of or an increase in social security benefits on the person''s parents'' record due to retirement, death, or disability benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b68" type="boolean" public-name="si_ineligSSIReasonSsbParents_b">
+        <text>
+          <base>the person would remain eligible for SSI/AABD in the absence of the social security retirement, death, or disability benefit on the person's parents' record or increases in that benefit</base>
+          <parse>s(ver('10.4.6.76'),v(remain+would,t(simple,modal,normal)),sb('the person',plural),o('eligible for SSI/AABD in the absence of the social security retirement, death, or disability benefit on the person''s parents'' record or increases in that benefit'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b70" type="boolean" public-name="si_recvOASDI_b">
+        <text>
+          <base>the person is receiving social security retirement or disability benefits (OASDI)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('receiving social security retirement or disability benefits (OASDI)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b71" type="boolean" public-name="si_recvSSIAfter1977_b">
+        <text>
+          <base>the person became eligible for and received SSI or SSI/AABD for at least one month after April 1977</base>
+          <parse>s(ver('10.4.6.76'),v(become,t(simple,past,normal)),sb('the person',plural),o('eligible for and received SSI or SSI/AABD for at least one month after April 1977'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b72" type="boolean" public-name="si_lostSSIReasonSsbCOLA_b">
+        <text>
+          <base>it is the case that the person lost SSI/AABD benefits but would be eligible for them if not for increases in the social security benefits due to annual cost-of-living adjustments (COLAs)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the person lost SSI/AABD benefits but would be eligible for them if not for increases in the social security benefits due to annual cost-of-living adjustments (COLAs)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b73" type="boolean" public-name="si_eligMedicaidDec1973_b">
+        <text>
+          <base>the person was eligible for Medicaid in December 1973</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person',singular),o('eligible for Medicaid in December 1973'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b74" type="boolean" public-name="si_eligMedicaidDec1973Inpatient_b">
+        <text>
+          <base>the person was eligible for Medicaid in December 1973 as an inpatient of a medical institution or intermediate care facility that was participating in the Medicaid program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person',singular),o('eligible for Medicaid in December 1973 as an inpatient of a medical institution or intermediate care facility that was participating in the Medicaid program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b75" type="boolean" public-name="si_eligMedicaidDec1973Continuous_b">
+        <text>
+          <base>the person has met the Medicaid eligibility requirements in effect in December 1973 for institutionalized individuals continuously since December 1973</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,perfect)),sb('the person',singular),o('the Medicaid eligibility requirements in effect in December 1973 for institutionalized individuals continuously since December 1973'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b76" type="boolean" public-name="si_instContinuousDec1973_b">
+        <text>
+          <base>the person has resided in the same institution in which the person was institutionalized in December 1973 continuously since December 1973</base>
+          <parse>s(ver('10.4.6.76'),v(reside,t(simple,present,perfect)),sb('the person',singular),o('in the same institution in which the person was institutionalized in December 1973 continuously since December 1973'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b77" type="boolean" public-name="si_instCareNeedContinuousDec1973_b">
+        <text>
+          <base>the person has been classified as needing institutionalized care continuously since December 1973</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,perfect)),sb('the person',singular),o('classified as needing institutionalized care continuously since December 1973'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b78" type="boolean" public-name="si_eligMedicaidDec1973Disabled_b">
+        <text>
+          <base>the person was eligible for Medicaid in December 1973 as a blind or disabled individual</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person',singular),o('eligible for Medicaid in December 1973 as a blind or disabled individual'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b79" type="boolean" public-name="si_eligMedicaidDec1973DisabledContinuous_b">
+        <text>
+          <base>the person has met the Medicaid eligibility requirements in effect in December 1973 for blind or disabled individuals continuously since December 1973</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,perfect)),sb('the person',singular),o('the Medicaid eligibility requirements in effect in December 1973 for blind or disabled individuals continuously since December 1973'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b80" type="boolean" public-name="si_eligMedicaidDec1973Spouse_b">
+        <text>
+          <base>the person was eligible for Medicaid in December 1973 as an essential spouse of an aged, blind, or disabled individual who was receiving cash assistance</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person',singular),o('eligible for Medicaid in December 1973 as an essential spouse of an aged, blind, or disabled individual who was receiving cash assistance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b81" type="boolean" public-name="si_eligMedicaidDec1973SpouseContinuous_b">
+        <text>
+          <base>the person's spouse has met the Medicaid eligibility requirements in effect in December 1973 for aged, blind, or disabled individuals continuously since December 1973</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,perfect)),sb('the person''s spouse',singular),o('the Medicaid eligibility requirements in effect in December 1973 for aged, blind, or disabled individuals continuously since December 1973'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b82" type="boolean" public-name="si_eligMedicaidDec1973SpousePayment_b">
+        <text>
+          <base>the person has met the conditions that were in effect in December 1973 for having the person's needs included in computing the payment to the person's aged, blind, or disabled spouse continuously since December 1973</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,perfect)),sb('the person',singular),o('the conditions that were in effect in December 1973 for having the person''s needs included in computing the payment to the person''s aged, blind, or disabled spouse continuously since December 1973'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b83" type="boolean" public-name="si_Aug72EligAABD_b">
+        <text>
+          <base>it is the case that in August 1972 the person was entitled to social security retirement or disability and eligible for AABD, or would have been eligible if the person had applied or were not in a medical institution or intermediate care facility</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that in August 1972 the person was entitled to social security retirement or disability and eligible for AABD, or would have been eligible if the person had applied or were not in a medical institution or intermediate care facility'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b84" type="boolean" public-name="si_Sep72SsiExceptCola_b">
+        <text>
+          <base>it is the case that the person would be eligible for SSI or SSI/AABD if not for the 20 percent cost-of-living increase in social security benefits effective September 1972</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the person would be eligible for SSI or SSI/AABD if not for the 20 percent cost-of-living increase in social security benefits effective September 1972'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b85" type="boolean" public-name="si_instMed_b">
+        <text>
+          <base>the person is living in a medical institution</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('living in a medical institution'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b86" type="boolean" public-name="si_ineligSSIReasonInstStandard_b">
+        <text>
+          <base>the person is ineligible for SSI/AABD because of lower income standards used under SSI/AABD to determine eligibility for institutionalized individuals</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('ineligible for SSI/AABD because of lower income standards used under SSI/AABD to determine eligibility for institutionalized individuals'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b87" type="boolean" public-name="si_ineligSSIReasonInst_b">
+        <text>
+          <base>it is the case that the person would be eligible for SSI/AABD if the person were not institutionalized</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the person would be eligible for SSI/AABD if the person were not institutionalized'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b88" type="boolean" public-name="si_inst30days_b">
+        <text>
+          <base>the person has lived in an institution for at least 30 consecutive days</base>
+          <parse>s(ver('10.4.6.76'),v(live,t(simple,present,perfect)),sb('the person',singular),o('in an institution for at least 30 consecutive days'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b91" type="boolean" public-name="si_ltcCommPerAHS_b">
+        <text>
+          <base>the person is able to receive appropriate long-term medical care in the community as determined by AHS</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('able to receive appropriate long-term medical care in the community as determined by AHS'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b92" type="boolean" public-name="si_medCareCommMoreThanInst_b">
+        <text>
+          <base>the cost of the person's medical care in the community is greater than the estimated cost of medical care in an appropriate institution</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the cost of the person''s medical care in the community',singular),o('greater than the estimated cost of medical care in an appropriate institution'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b93" type="boolean" public-name="si_hospice_b">
+        <text>
+          <base>the person is receiving hospice care</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('receiving hospice care'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b94" type="boolean" public-name="si_careInstMedReq_b">
+        <text>
+          <base>the person requires the level of care provided in a medical institution</base>
+          <parse>s(ver('10.4.6.76'),v(require,t(simple,present,normal)),sb('the person',singular),o('the level of care provided in a medical institution'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p85" type="currency" public-name="st_person_resourcelimit_8.05d1">
+        <text>
+          <base>the countable resource limit for the person under HBEE 8.05(d)(1)(ii) (eff. 07/15/2015)</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="p86" type="currency">
+        <text>
+          <base>the countable resource limit for the person under HBEE 8.05(d)(1)(ii)</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="p87" type="currency">
+        <text>
+          <base>the countable resource limit for the person under HBEE 8.05(k)(4)(i) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p88" type="currency">
+        <text>
+          <base>the countable resource limit for the person under HBEE 8.05(k)(4)(i)</base>
+        </text>
+      </attribute>
+      <attribute name="b99" type="boolean" public-name="si_lostSsiRsnSsd_b">
+        <text>
+          <base>the person lost SSI/AABD benefits due to a mandatory application for and receipt of social security disability, retirement or survivor benefits</base>
+          <parse>s(ver('10.4.6.76'),v(lose,t(simple,past,normal)),sb('the person',plural),o('SSI/AABD benefits due to a mandatory application for and receipt of social security disability, retirement or survivor benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b100" type="boolean" public-name="si_eligSsiIfNoSsd_b">
+        <text>
+          <base>it is the case that the person would continue to be eligible for SSI/AABD if the person were not receiving social security disability or retirement benefits</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the person would continue to be eligible for SSI/AABD if the person were not receiving social security disability or retirement benefits'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b10" type="boolean">
+        <text>
+          <base>the person meets the other income requirements for the program under HBEE 8.05(d)(1)(i)(B) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the other income requirements for the program under HBEE 8.05(d)(1)(i)(B) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean">
+        <text>
+          <base>the person's financial responsibility group's total monthly income for the program after disregarding the person's earnings, Social Security Disability Insurance benefits (SSDI), and veterans' disability benefits is less than the income limit under HBEE 8.05(d)(1)(i)(B) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s financial responsibility group''s total monthly income for the program after disregarding the person''s earnings, Social Security Disability Insurance benefits (SSDI), and veterans'' disability benefits',singular),o('less than the income limit under HBEE 8.05(d)(1)(i)(B) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p50" type="currency" public-name="si_person_fingroup_8.05d1ib_c">
+        <text>
+          <base>the person's financial responsibility group's total monthly income for the program after disregarding the person's earnings, Social Security Disability Insurance benefits (SSDI), and veterans' disability benefits under HBEE 8.05(d)(1)(i)(B) (eff. 07/15/2015)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p51" type="currency" public-name="st_person_netincome_lim_8.052d1iB_c">
+        <text>
+          <base>the monthly adjusted net income limit for the person for the program under HBEE 8.05(d)(1)(i)(B) (eff. 07/15/2015)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean">
+        <text>
+          <base>the person meets the other income requirements for the program under HBEE 8.05(d)(1)(i)(B)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the other income requirements for the program under HBEE 8.05(d)(1)(i)(B)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p56" type="currency" public-name="st_income_disregard_8.05g2i_Pc">
+        <text>
+          <base>the monthly income disregard for the person for the program under HBEE 8.05(g)(2)(i) (eff. 07/15/2015)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p57" type="currency" public-name="st_person_disregard_8.05j2i_c">
+        <text>
+          <base>the monthly income disregard for the person for the program under HBEE 8.05(j)(2)(i) (eff. 07/15/2015)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p58" type="currency" public-name="st_person_income_disregard_8.05f3i_c">
+        <text>
+          <base>the monthly income disregard for the person for the program under HBEE 8.05(f)(3)(i) (eff. 07/15/2015)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p59" type="currency" public-name="st_person_income_disregard_8.05h2i_c">
+        <text>
+          <base>the monthly income disregard for the person for the program under HBEE 8.05(h)(2)(i) (eff. 07/15/2015)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p60" type="currency" public-name="si_PerMnthlyIncmDisgrdHBEE8.05g2i_c">
+        <text>
+          <base>the monthly income disregard for the person for the program under HBEE 8.05(g)(2)(i)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p61" type="currency" public-name="si_PerMnthlyIncmDisgrdHBEE8.05j2i_c">
+        <text>
+          <base>the monthly income disregard for the person for the program under HBEE 8.05(j)(2)(i)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p62" type="currency" public-name="si_PerMnthlyIncmDisgrdHBEE8.05f2i_c">
+        <text>
+          <base>the monthly income disregard for the person for the program under HBEE 8.05(f)(3)(i)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p63" type="currency" public-name="si_PerMnthlyIncmDisgrdHBEE8.05h2i_c">
+        <text>
+          <base>the monthly income disregard for the person for the program under HBEE 8.05(h)(2)(i)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" public-name="so_HBEE8.05aApply20150715_b">
+        <text>
+          <base>HBEE 8.05(a) applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.05(a)',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" public-name="so_HBEE8.05bApply20150715_b">
+        <text>
+          <base>HBEE 8.05(b) applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.05(b)',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" public-name="so_HBEE8.05cApply20150715_b">
+        <text>
+          <base>HBEE 8.05(c) applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.05(c)',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" public-name="so_HBEE8.05dApply20150715_b">
+        <text>
+          <base>HBEE 8.05(d) applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.05(d)',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" public-name="so_HBEE8.05fApply20150715_b">
+        <text>
+          <base>HBEE 8.05(f) applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.05(f)',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" public-name="so_HBEE8.05gApply20150715_b">
+        <text>
+          <base>HBEE 8.05(g) applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.05(g)',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" public-name="so_HBEE8.05hApply20150715_b">
+        <text>
+          <base>HBEE 8.05(h) applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.05(h)',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" public-name="so_HBEE8.05iApply20150715_b">
+        <text>
+          <base>HBEE 8.05(i) applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.05(i)',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" public-name="so_HBEE8.05jApply20150715_b">
+        <text>
+          <base>HBEE 8.05(j) applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.05(j)',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" public-name="so_HBEE8.05k2Apply20150715_b">
+        <text>
+          <base>HBEE 8.05(k)(2) applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.05(k)(2)',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" public-name="so_HBEE8.05k3Apply20150715_b">
+        <text>
+          <base>HBEE 8.05(k)(3) applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.05(k)(3)',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" public-name="so_HBEE8.05k4Apply20150715_b">
+        <text>
+          <base>HBEE 8.05(k)(4) applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.05(k)(4)',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" public-name="so_HBEE8.05k5Apply20150715_b">
+        <text>
+          <base>HBEE 8.05(k)(5) applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.05(k)(5)',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" public-name="so_HBEE8.05k6Apply20150715_b">
+        <text>
+          <base>HBEE 8.05(k)(6) applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.05(k)(6)',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" public-name="so_HBEE8.05k7Apply20150715_b">
+        <text>
+          <base>HBEE 8.05(k)(7) applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.05(k)(7)',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b97" type="boolean">
+        <text>
+          <base>the person meets the financial requirements for the program under HBEE 8.05(k)(7) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the financial requirements for the program under HBEE 8.05(k)(7) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b98" type="boolean">
+        <text>
+          <base>the person meets the financial requirements for the program under HBEE 8.05(k)(7)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the financial requirements for the program under HBEE 8.05(k)(7)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

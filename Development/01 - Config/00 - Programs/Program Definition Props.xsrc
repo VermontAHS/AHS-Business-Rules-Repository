@@ -1,0 +1,735 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+      <attribute name="p12" type="text">
+        <text>
+          <base>the benefit type for medical care benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p13" type="text">
+        <text>
+          <base>the request type for medical assistance</base>
+        </text>
+      </attribute>
+      <attribute name="p40" type="text">
+        <text>
+          <base>MCA</base>
+        </text>
+      </attribute>
+      <attribute name="p41" type="text">
+        <text>
+          <base>MABD</base>
+        </text>
+      </attribute>
+      <attribute name="p42" type="text">
+        <text>
+          <base>SMG</base>
+        </text>
+      </attribute>
+      <attribute name="p43" type="text">
+        <text>
+          <base>the individual result type</base>
+        </text>
+      </attribute>
+      <attribute name="p44" type="text">
+        <text>
+          <base>the group result type</base>
+        </text>
+      </attribute>
+      <attribute name="p46" type="text">
+        <text>
+          <base>the benefit type for Medicare savings benefits</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p47" type="text">
+        <text>
+          <base>the benefit type for long term care benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p48" type="text">
+        <text>
+          <base>the benefit type for insurance exchange access benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p49" type="text">
+        <text>
+          <base>the benefit type for insurance premium tax credit benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p50" type="text">
+        <text>
+          <base>the benefit type for insurance premium reduction benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p51" type="text">
+        <text>
+          <base>the benefit type for insurance cost-sharing reduction benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p52" type="text">
+        <text>
+          <base>the benefit type for supplemental pharmacy coverage benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p53" type="text">
+        <text>
+          <base>the request type for long term care assistance</base>
+        </text>
+      </attribute>
+      <attribute name="p54" type="text">
+        <text>
+          <base>the request type for insurance assistance</base>
+        </text>
+      </attribute>
+      <attribute name="p55" type="text">
+        <text>
+          <base>MSP</base>
+        </text>
+      </attribute>
+      <attribute name="p57" type="text">
+        <text>
+          <base>LTC-MABD</base>
+        </text>
+      </attribute>
+      <attribute name="p61" type="text">
+        <text>
+          <base>CSR</base>
+        </text>
+      </attribute>
+      <attribute name="p64" type="text">
+        <text>
+          <base>the request type for insurance affordability assistance</base>
+        </text>
+      </attribute>
+      <attribute name="p67" type="text">
+        <text>
+          <base>the HBEE policy source</base>
+        </text>
+      </attribute>
+      <attribute name="p82" type="number">
+        <text>
+          <base>the maximum number of calendar months of potential retroactive eligibility on the application date</base>
+        </text>
+      </attribute>
+      <attribute name="p115" type="text">
+        <text>
+          <base>the benefit type for family planning benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p122" type="text">
+        <text>
+          <base>the code for APTC</base>
+        </text>
+      </attribute>
+      <attribute name="p123" type="text">
+        <text>
+          <base>the code for MCA-PCR</base>
+        </text>
+      </attribute>
+      <attribute name="p124" type="text">
+        <text>
+          <base>the code for MCA-Pregnant</base>
+        </text>
+      </attribute>
+      <attribute name="p125" type="text">
+        <text>
+          <base>the code for MCA-Child</base>
+        </text>
+      </attribute>
+      <attribute name="p126" type="text">
+        <text>
+          <base>the code for MCA-Adult</base>
+        </text>
+      </attribute>
+      <attribute name="p127" type="text">
+        <text>
+          <base>the code for MCA-TMA-1925</base>
+        </text>
+      </attribute>
+      <attribute name="p129" type="text">
+        <text>
+          <base>the code for MCA-EXT</base>
+        </text>
+      </attribute>
+      <attribute name="p130" type="text">
+        <text>
+          <base>the code for MN-MCA</base>
+        </text>
+      </attribute>
+      <attribute name="p131" type="text">
+        <text>
+          <base>the code for LTC-MCA</base>
+        </text>
+      </attribute>
+      <attribute name="p132" type="text">
+        <text>
+          <base>the code for MABD-SSI-enrolled</base>
+        </text>
+      </attribute>
+      <attribute name="p133" type="text">
+        <text>
+          <base>the code for MABD-SSI-eligible</base>
+        </text>
+      </attribute>
+      <attribute name="p134" type="text">
+        <text>
+          <base>the code for MABD-1619</base>
+        </text>
+      </attribute>
+      <attribute name="p135" type="text">
+        <text>
+          <base>the code for MABD-MWPD</base>
+        </text>
+      </attribute>
+      <attribute name="p136" type="text">
+        <text>
+          <base>the code for MABD-Spouse</base>
+        </text>
+      </attribute>
+      <attribute name="p137" type="text">
+        <text>
+          <base>the code for MABD-DAC</base>
+        </text>
+      </attribute>
+      <attribute name="p138" type="text">
+        <text>
+          <base>the code for MABD-Pickle</base>
+        </text>
+      </attribute>
+      <attribute name="p139" type="text">
+        <text>
+          <base>the code for MABD-Dec73</base>
+        </text>
+      </attribute>
+      <attribute name="p140" type="text">
+        <text>
+          <base>the code for MABD-Aug72</base>
+        </text>
+      </attribute>
+      <attribute name="p141" type="text">
+        <text>
+          <base>the code for MN-MABD</base>
+        </text>
+      </attribute>
+      <attribute name="p142" type="text">
+        <text>
+          <base>the code for LTC-SSI-ineligible</base>
+        </text>
+      </attribute>
+      <attribute name="p143" type="text">
+        <text>
+          <base>the code for LTC-Special-income</base>
+        </text>
+      </attribute>
+      <attribute name="p144" type="text">
+        <text>
+          <base>the code for LTC-Homebased</base>
+        </text>
+      </attribute>
+      <attribute name="p145" type="text">
+        <text>
+          <base>the code for LTC-Hospice</base>
+        </text>
+      </attribute>
+      <attribute name="p146" type="text">
+        <text>
+          <base>the code for LTC-DCHC</base>
+        </text>
+      </attribute>
+      <attribute name="p147" type="text">
+        <text>
+          <base>the code for LTC-MWPD</base>
+        </text>
+      </attribute>
+      <attribute name="p148" type="text">
+        <text>
+          <base>the code for SMG-Newborn</base>
+        </text>
+      </attribute>
+      <attribute name="p149" type="text">
+        <text>
+          <base>the code for SMG-IV-E</base>
+        </text>
+      </attribute>
+      <attribute name="p150" type="text">
+        <text>
+          <base>the code for SMG-Adoption</base>
+        </text>
+      </attribute>
+      <attribute name="p151" type="text">
+        <text>
+          <base>the code for SMG-Former-foster</base>
+        </text>
+      </attribute>
+      <attribute name="p152" type="text">
+        <text>
+          <base>the code for SMG-BCCT</base>
+        </text>
+      </attribute>
+      <attribute name="p153" type="text">
+        <text>
+          <base>the code for SMG-FPS</base>
+        </text>
+      </attribute>
+      <attribute name="p154" type="text">
+        <text>
+          <base>the code for MSP-QMB</base>
+        </text>
+      </attribute>
+      <attribute name="p155" type="text">
+        <text>
+          <base>the code for MSP-SLMB</base>
+        </text>
+      </attribute>
+      <attribute name="p156" type="text">
+        <text>
+          <base>the code for MSP-QI</base>
+        </text>
+      </attribute>
+      <attribute name="p157" type="text">
+        <text>
+          <base>the code for MSP-QDWI</base>
+        </text>
+      </attribute>
+      <attribute name="p158" type="text">
+        <text>
+          <base>the code for QHP</base>
+        </text>
+      </attribute>
+      <attribute name="p159" type="text">
+        <text>
+          <base>the code for VPR</base>
+        </text>
+      </attribute>
+      <attribute name="p160" type="text">
+        <text>
+          <base>the code for CSR-Tier1</base>
+        </text>
+      </attribute>
+      <attribute name="p161" type="text">
+        <text>
+          <base>the code for CSR-Tier2</base>
+        </text>
+      </attribute>
+      <attribute name="p162" type="text">
+        <text>
+          <base>the code for CSR-Tier3</base>
+        </text>
+      </attribute>
+      <attribute name="p163" type="text">
+        <text>
+          <base>the code for CSR-Tier4</base>
+        </text>
+      </attribute>
+      <attribute name="p164" type="text">
+        <text>
+          <base>the code for CSR-AIAN-300</base>
+        </text>
+      </attribute>
+      <attribute name="p165" type="text">
+        <text>
+          <base>the code for CSR-AIAN-IHP</base>
+        </text>
+      </attribute>
+      <attribute name="p166" type="text">
+        <text>
+          <base>the code for RMA</base>
+        </text>
+      </attribute>
+      <attribute name="p167" type="text">
+        <text>
+          <base>the RMA policy source</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b3" type="boolean" public-name="i_per_req-med">
+        <text>
+          <base>the person is requesting a full medical determination</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('requesting a full medical determination'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" public-name="i_per_req-ltc">
+        <text>
+          <base>the person is requesting long term care assistance</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('requesting long term care assistance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" public-name="i_per_req-ins">
+        <text>
+          <base>the person is requesting insurance assistance</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('requesting insurance assistance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" public-name="i_per_req-iap">
+        <text>
+          <base>the person is requesting insurance affordability assistance</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('requesting insurance affordability assistance'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="p16" type="number">
+        <text>
+          <base>the program's rank among medical care benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p39" type="text">
+        <text>
+          <base>the program's policy type</base>
+        </text>
+      </attribute>
+      <attribute name="p45" type="text">
+        <text>
+          <base>the program's result type</base>
+        </text>
+      </attribute>
+      <attribute name="p68" type="text">
+        <text>
+          <base>the program's policy source</base>
+        </text>
+      </attribute>
+      <attribute name="p79" type="number">
+        <text>
+          <base>the program's rank among Medicare savings benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p105" type="number">
+        <text>
+          <base>the program's rank among long term care benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p112" type="number">
+        <text>
+          <base>the program's rank among cost-sharing reduction benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p116" type="number">
+        <text>
+          <base>the program's rank among family planning benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p117" type="number">
+        <text>
+          <base>the program's rank among insurance exchange access benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p118" type="number">
+        <text>
+          <base>the program's rank among insurance premium tax credit benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p119" type="number">
+        <text>
+          <base>the program's rank among insurance premium reduction benefits</base>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is MCA-PCR</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MCA-PCR'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is MCA-Pregnant</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MCA-Pregnant'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is MCA-Child</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MCA-Child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is MCA-Adult</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MCA-Adult'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is MCA-TMA-1925</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MCA-TMA-1925'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is MCA-EXT</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MCA-EXT'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is MN-MCA</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MN-MCA'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is LTC-MCA</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('LTC-MCA'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is MABD-SSI-enrolled</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MABD-SSI-enrolled'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is MABD-SSI-eligible</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MABD-SSI-eligible'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is MABD-1619</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MABD-1619'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is MABD-MWPD</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MABD-MWPD'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is MABD-Spouse</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MABD-Spouse'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is MABD-DAC</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MABD-DAC'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is MABD-Pickle</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MABD-Pickle'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is MABD-Dec73</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MABD-Dec73'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is MABD-Aug72</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MABD-Aug72'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is MN-MABD</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MN-MABD'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is LTC-SSI-ineligible</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('LTC-SSI-ineligible'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is LTC-Special-income</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('LTC-Special-income'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is LTC-Homebased</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('LTC-Homebased'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is LTC-Hospice</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('LTC-Hospice'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is LTC-DCHC</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('LTC-DCHC'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is LTC-MWPD</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('LTC-MWPD'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is SMG-Newborn</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('SMG-Newborn'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is SMG-IV-E</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('SMG-IV-E'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b34" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is SMG-Adoption</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('SMG-Adoption'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is SMG-Former-foster</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('SMG-Former-foster'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is SMG-BCCT</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('SMG-BCCT'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is SMG-FPS</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('SMG-FPS'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b38" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is MSP-QMB</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MSP-QMB'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b39" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is MSP-SLMB</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MSP-SLMB'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b40" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is MSP-QI</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MSP-QI'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b41" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is MSP-QDWI</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MSP-QDWI'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b42" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is QHP</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('QHP'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b43" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is APTC</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('APTC'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b44" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is VPR</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('VPR'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b45" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is CSR-Tier1</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('CSR-Tier1'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b46" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is CSR-Tier2</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('CSR-Tier2'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b47" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is CSR-Tier3</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('CSR-Tier3'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b48" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is CSR-Tier4</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('CSR-Tier4'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b49" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is CSR-AIAN-300</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('CSR-AIAN-300'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b50" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is CSR-AIAN-IHP</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('CSR-AIAN-IHP'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b51" type="boolean" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program is RMA</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('RMA'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsrequestforassistance" name="the person's request for assistance" identifying-attribute-name="rb_reqa_ID" identifying-attribute-text="the person's request for assistance's identifier" containment-relationship-id="personsrequestsforassistance" containment-parent-id="person">
+      <attribute name="p3" type="text" substitutable="true" default-gender="generic">
+        <text>
+          <base>the person's request for assistance</base>
+        </text>
+      </attribute>
+      <attribute name="p168" type="text" public-name="rb_reqa_ID">
+        <text>
+          <base>the person's request for assistance's identifier</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="caseresult" name="the case result" containment-relationship-id="caseresults" containment-parent-id="global">
+    </entity>
+    <entity id="baseprogram" name="the base program" identifying-attribute-name="the_base_program" identifying-attribute-text="the base program" containment-relationship-id="baseprograms" containment-parent-id="global">
+      <attribute name="p5" type="text" substitutable="true" default-gender="generic" public-name="the_base_program">
+        <text>
+          <base>the base program</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsrequestedbenefit" name="the person's requested benefit" containment-relationship-id="personsrequestedbenefits" containment-parent-id="person">
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsrequestedbenefit" text="the person's requested benefits" relationship-id="personsrequestedbenefits" reverse-relationship-id="personfortherequestedbenefit" reverse-text="the person for the requested benefit" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsrequestforassistance" text="the person's requests for assistance" relationship-id="personsrequestsforassistance" reverse-relationship-id="person_personsrequestsforassistance_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="global" target="baseprogram" text="the base programs" relationship-id="baseprograms" reverse-relationship-id="global_baseprograms_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="baseprogram" target="program" text="the programs for the base program" relationship-id="programsforthebaseprogram" reverse-relationship-id="baseprogramsfortheprogram" reverse-text="the base programs for the program" type="ManyToMany" is-computed="false" is-containment="false" public-id="" reverse-public-id="" />
+    <relationship source="global" target="caseresult" text="the case results" relationship-id="caseresults" reverse-relationship-id="global_caseresults_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="caseresult" target="baseprogram" text="the base programs that provide the case result" relationship-id="baseprogramsthatprovidethecaseresult" reverse-relationship-id="caseresultprovidedbythebaseprogram" reverse-text="the case result provided by the base program" type="ManyToMany" is-computed="false" is-containment="false" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

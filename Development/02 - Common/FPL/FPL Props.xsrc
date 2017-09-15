@@ -1,0 +1,261 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="p3" type="currency">
+        <text>
+          <base>the annual FPL for one person for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p4" type="currency">
+        <text>
+          <base>the annual FPL for each additional person for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p18" type="date" substitutable="true">
+        <text>
+          <base>the specific date for FPL calculations for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p20" type="number" substitutable="true">
+        <text>
+          <base>the specific year for FPL calculations for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p24" type="text" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the FPL locale for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p25" type="text" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the FPL date type for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p26" type="currency">
+        <text>
+          <base>the annual FPL for two people for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p27" type="currency">
+        <text>
+          <base>the annual FPL for three people for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p28" type="currency">
+        <text>
+          <base>the annual FPL for four people for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p29" type="currency">
+        <text>
+          <base>the annual FPL for five people for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p30" type="currency">
+        <text>
+          <base>the annual FPL for six people for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p31" type="currency">
+        <text>
+          <base>the annual FPL for seven people for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p32" type="currency">
+        <text>
+          <base>the annual FPL for eight people for the program</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="povertyguideline" name="the poverty guideline" identifying-attribute-name="rb_fpl_year-text" identifying-attribute-text="the poverty guideline's year as text" containment-relationship-id="povertyguidelines" containment-parent-id="global">
+      <attribute name="p5" type="text" substitutable="true">
+        <text>
+          <base>the poverty guideline</base>
+        </text>
+      </attribute>
+      <attribute name="p6" type="number" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the poverty guideline's year</base>
+        </text>
+      </attribute>
+      <attribute name="p7" type="text" public-name="rb_fpl_year-text">
+        <text>
+          <base>the poverty guideline's year as text</base>
+        </text>
+      </attribute>
+      <attribute name="p8" type="currency">
+        <text>
+          <base>the poverty guideline for one person in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p9" type="currency">
+        <text>
+          <base>the poverty guideline for each additional person in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p10" type="currency">
+        <text>
+          <base>the poverty guideline for one person in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p11" type="currency">
+        <text>
+          <base>the poverty guideline for each additional person in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p12" type="currency">
+        <text>
+          <base>the poverty guideline for one person in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="p13" type="currency">
+        <text>
+          <base>the poverty guideline for each additional person in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="p22" type="date" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true">
+        <text>
+          <base>the poverty guideline's start date</base>
+        </text>
+      </attribute>
+      <attribute name="p23" type="date" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true">
+        <text>
+          <base>the poverty guideline's end date</base>
+        </text>
+      </attribute>
+      <attribute name="p33" type="currency">
+        <text>
+          <base>the poverty guideline for two people in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p34" type="currency">
+        <text>
+          <base>the poverty guideline for two people in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p35" type="currency">
+        <text>
+          <base>the poverty guideline for two people in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="p36" type="currency">
+        <text>
+          <base>the poverty guideline for three people in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p37" type="currency">
+        <text>
+          <base>the poverty guideline for three people in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p38" type="currency">
+        <text>
+          <base>the poverty guideline for three people in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="p39" type="currency">
+        <text>
+          <base>the poverty guideline for four people in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p40" type="currency">
+        <text>
+          <base>the poverty guideline for four people in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p41" type="currency">
+        <text>
+          <base>the poverty guideline for four people in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="p42" type="currency">
+        <text>
+          <base>the poverty guideline for five people in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p43" type="currency">
+        <text>
+          <base>the poverty guideline for five people in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p44" type="currency">
+        <text>
+          <base>the poverty guideline for five people in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="p45" type="currency">
+        <text>
+          <base>the poverty guideline for six people in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p46" type="currency">
+        <text>
+          <base>the poverty guideline for six people in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p47" type="currency">
+        <text>
+          <base>the poverty guideline for six people in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="p48" type="currency">
+        <text>
+          <base>the poverty guideline for seven people in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p49" type="currency">
+        <text>
+          <base>the poverty guideline for seven people in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p50" type="currency">
+        <text>
+          <base>the poverty guideline for seven people in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="p51" type="currency">
+        <text>
+          <base>the poverty guideline for eight people in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p52" type="currency">
+        <text>
+          <base>the poverty guideline for eight people in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p53" type="currency">
+        <text>
+          <base>the poverty guideline for eight people in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="b1" type="boolean" silent-if-false="true" silent-if-uncertain="true" invisible-if-false="true" invisible-if-uncertain="true" silent-if-true="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-unknown="true">
+        <text>
+          <base>the poverty guideline is active</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the poverty guideline',singular),o('active'))</parse>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="global" target="povertyguideline" text="the poverty guidelines" relationship-id="povertyguidelines" reverse-relationship-id="global_povertyguidelines_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" silent-if-known="true" invisible-if-known="true" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

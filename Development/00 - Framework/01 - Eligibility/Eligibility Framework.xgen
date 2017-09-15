@@ -1,0 +1,1201 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b4" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all of the eligibility requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all of the eligibility requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has an error for the program</base>
+          <parse>s(ver('10.4.5.40'),v(have,t(simple,present,normal)),sb('the person',singular),o('an error for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has a referral for the program</base>
+          <parse>s(ver('10.4.5.40'),v(have,t(simple,present,normal)),sb('the person',singular),o('a referral for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are alternative eligibility requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('alternative eligibility requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets an alternative eligibility requirement for the program</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('an alternative eligibility requirement for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all of the standard eligibility requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all of the standard eligibility requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are non-financial requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('non-financial requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all the non-financial eligibility requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the non-financial eligibility requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are financial requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('financial requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all the financial eligibility requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the financial eligibility requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are categorical requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('categorical requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are residency requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('residency requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are citizenship requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('citizenship requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are identity requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('identity requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are institutional requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('institutional requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are productivity requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('productivity requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are deprivation requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('deprivation requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are service requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('service requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are administrative requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('administrative requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are other non-financial requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('other non-financial requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all the categorical requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the categorical requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all the residency requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the residency requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all the citizenship requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the citizenship requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all the identity requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the identity requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all the institutional requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the institutional requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all the productivity requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the productivity requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all the deprivation requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the deprivation requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b34" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all the service requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the service requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all the administrative requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the administrative requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all the other non-financial requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the other non-financial requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are application requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('application requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b39" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are verification requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('verification requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b41" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all the application requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the application requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b43" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all the verification requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the verification requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b45" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are income requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('income requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b46" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are resource requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('resource requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b47" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are other financial requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('other financial requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b48" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all the income requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the income requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b49" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all the resource requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the resource requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b50" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all the other financial requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the other financial requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b51" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is a countable gross income limit test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('a countable gross income limit test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b52" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is an adjusted net income limit test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adjusted net income limit test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b53" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are other income requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('other income requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b54" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person passes the countable gross income limit test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the countable gross income limit test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b55" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person passes the adjusted net income limit test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the adjusted net income limit test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b56" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all the other income requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the other income requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b57" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is a countable resource test for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',singular),o('a countable resource test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b58" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are other resource requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('other resource requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b59" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person passes the countable resource test for the program</base>
+          <parse>s(ver('10.4.5.40'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the countable resource test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b60" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all the other resource requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the other resource requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b61" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are time limit requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('time limit requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b62" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all the time limit requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the time limit requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b63" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is a countable gross income floor test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('a countable gross income floor test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b64" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person passes the countable gross income floor test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the countable gross income floor test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b65" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is an adjusted net income floor test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adjusted net income floor test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b66" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person passes the adjusted net income floor test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the adjusted net income floor test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b67" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is a spenddown for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('a spenddown for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b68" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is an income spenddown for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an income spenddown for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b69" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is a resource spenddown for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('a resource spenddown for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b70" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets the spenddown requirements for the program</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the spenddown requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b71" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets the income spenddown requirements for the program</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the income spenddown requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b72" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets the resource spenddown requirements for the program</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the resource spenddown requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b73" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has excess income for the program</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('excess income for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b74" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person passes the income spenddown test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the income spenddown test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b75" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has excess resources for the program</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('excess resources for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b76" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person passes the resource spenddown test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the resource spenddown test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b77" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has a spenddown for the program</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('a spenddown for the program'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global" />
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="the person meets all of the eligibility requirements for the program" ruleburst="true" concludes="b4" folder="1" source-offset="24">
+      <rule-xml>
+        <table-conclude attr-id="b4" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <uncertain-value />
+            </value>
+            <condition>
+              <attribute attr-id="b5" silent-if-false="true" silent-if-uncertain="true" invisible-if-false="true" invisible-if-uncertain="true" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <uncertain-value />
+            </value>
+            <condition>
+              <attribute attr-id="b6" silent-if-false="true" silent-if-uncertain="true" invisible-if-false="true" invisible-if-uncertain="true" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <true-value />
+            </value>
+            <condition>
+              <and>
+                <attribute attr-id="b10" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                <or>
+                  <not>
+                    <attribute attr-id="b10" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  </not>
+                  <attribute attr-id="b11" />
+                </or>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <true-value />
+            </value>
+            <condition>
+              <attribute attr-id="b12" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <true-value />
+            </value>
+            <condition>
+              <and>
+                <attribute attr-id="b67" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                <or>
+                  <not>
+                    <attribute attr-id="b67" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  </not>
+                  <and>
+                    <attribute attr-id="b77" />
+                    <or>
+                      <not>
+                        <attribute attr-id="b77" />
+                      </not>
+                      <attribute attr-id="b70" />
+                    </or>
+                  </and>
+                </or>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the person meets all of the standard eligibility requirements for the program" ruleburst="true" concludes="b12" folder="2" source-offset="1707">
+      <rule-xml>
+        <conclude attr-id="b12" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <or>
+                <not>
+                  <attribute attr-id="b17" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b17" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b27" />
+                </and>
+              </or>
+              <or>
+                <and>
+                  <attribute attr-id="b17" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <not>
+                    <unknown>
+                      <attribute attr-id="b27" silent-if-true="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-uncertain="true" />
+                    </unknown>
+                  </not>
+                  <certain>
+                    <attribute attr-id="b27" silent-if-true="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-uncertain="true" />
+                  </certain>
+                  <not>
+                    <attribute attr-id="b27" silent-if-true="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-uncertain="true" />
+                  </not>
+                </and>
+                <and>
+                  <or>
+                    <not>
+                      <attribute attr-id="b13" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                    </not>
+                    <and>
+                      <attribute attr-id="b13" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                      <attribute attr-id="b14" />
+                    </and>
+                  </or>
+                  <or>
+                    <not>
+                      <attribute attr-id="b15" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                    </not>
+                    <and>
+                      <attribute attr-id="b15" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                      <attribute attr-id="b16" />
+                    </and>
+                  </or>
+                </and>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="there are non-financial requirements for the program" ruleburst="true" concludes="b13" folder="3" source-offset="4044">
+      <rule-xml>
+        <conclude attr-id="b13" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b18" />
+              <attribute attr-id="b19" />
+              <attribute attr-id="b20" />
+              <attribute attr-id="b21" />
+              <attribute attr-id="b22" />
+              <attribute attr-id="b23" />
+              <attribute attr-id="b24" />
+              <attribute attr-id="b61" />
+              <attribute attr-id="b25" />
+              <attribute attr-id="b26" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="the person meets all the non-financial eligibility requirements for the program" ruleburst="true" concludes="b14" folder="3" source-offset="4708">
+      <rule-xml>
+        <conclude attr-id="b14" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <or>
+                <not>
+                  <attribute attr-id="b18" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b18" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b28" />
+                </and>
+              </or>
+              <or>
+                <not>
+                  <attribute attr-id="b19" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b19" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b29" />
+                </and>
+              </or>
+              <or>
+                <not>
+                  <attribute attr-id="b20" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b20" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b30" />
+                </and>
+              </or>
+              <or>
+                <not>
+                  <attribute attr-id="b21" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b21" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b31" />
+                </and>
+              </or>
+              <or>
+                <not>
+                  <attribute attr-id="b22" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b22" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b32" />
+                </and>
+              </or>
+              <or>
+                <not>
+                  <attribute attr-id="b23" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b23" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b33" />
+                </and>
+              </or>
+              <or>
+                <not>
+                  <attribute attr-id="b24" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b24" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b34" />
+                </and>
+              </or>
+              <or>
+                <not>
+                  <attribute attr-id="b61" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b61" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b62" />
+                </and>
+              </or>
+              <or>
+                <not>
+                  <attribute attr-id="b25" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b25" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b35" />
+                </and>
+              </or>
+              <or>
+                <not>
+                  <attribute attr-id="b26" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b26" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b36" />
+                </and>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="there are administrative requirements for the program" ruleburst="true" concludes="b25" folder="4" source-offset="9357">
+      <rule-xml>
+        <conclude attr-id="b25" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b37" />
+              <attribute attr-id="b39" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="the person meets all the administrative requirements for the program" ruleburst="true" concludes="b35" folder="4" source-offset="9743">
+      <rule-xml>
+        <conclude attr-id="b35" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <or>
+                <not>
+                  <attribute attr-id="b37" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b37" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b41" />
+                </and>
+              </or>
+              <or>
+                <not>
+                  <attribute attr-id="b39" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b39" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b43" />
+                </and>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="there are financial requirements for the program" ruleburst="true" concludes="b15" folder="5" source-offset="11089">
+      <rule-xml>
+        <conclude attr-id="b15" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b45" />
+              <attribute attr-id="b46" />
+              <attribute attr-id="b47" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="7" name="the person meets all the financial eligibility requirements for the program" ruleburst="true" concludes="b16" folder="5" source-offset="11322">
+      <rule-xml>
+        <conclude attr-id="b16" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <or>
+                <not>
+                  <attribute attr-id="b45" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b45" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b48" />
+                </and>
+              </or>
+              <or>
+                <not>
+                  <attribute attr-id="b46" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b46" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b49" />
+                </and>
+              </or>
+              <or>
+                <not>
+                  <attribute attr-id="b47" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b47" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b50" />
+                </and>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="8" name="there are income requirements for the program" ruleburst="true" concludes="b45" folder="6" source-offset="12691">
+      <rule-xml>
+        <conclude attr-id="b45" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b51" />
+              <attribute attr-id="b63" />
+              <attribute attr-id="b52" />
+              <attribute attr-id="b65" />
+              <attribute attr-id="b53" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="9" name="the person meets all the income requirements for the program" ruleburst="true" concludes="b48" folder="6" source-offset="13082">
+      <rule-xml>
+        <conclude attr-id="b48" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <or>
+                <not>
+                  <attribute attr-id="b51" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b51" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b54" />
+                </and>
+              </or>
+              <or>
+                <not>
+                  <attribute attr-id="b63" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b63" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b64" />
+                </and>
+              </or>
+              <or>
+                <not>
+                  <attribute attr-id="b52" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b52" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b55" />
+                </and>
+              </or>
+              <or>
+                <not>
+                  <attribute attr-id="b65" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b65" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b66" />
+                </and>
+              </or>
+              <or>
+                <not>
+                  <attribute attr-id="b53" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b53" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b56" />
+                </and>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="10" name="there are resource requirements for the program" ruleburst="true" concludes="b46" folder="7" source-offset="15527">
+      <rule-xml>
+        <conclude attr-id="b46" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b57" />
+              <attribute attr-id="b58" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="11" name="the person meets all the resource requirements for the program" ruleburst="true" concludes="b49" folder="7" source-offset="15706">
+      <rule-xml>
+        <conclude attr-id="b49" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <or>
+                <not>
+                  <attribute attr-id="b57" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b57" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b59" />
+                </and>
+              </or>
+              <or>
+                <not>
+                  <attribute attr-id="b58" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b58" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b60" />
+                </and>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="12" name="there is a spenddown for the program" ruleburst="true" concludes="b67" folder="8" source-offset="16669">
+      <rule-xml>
+        <conclude attr-id="b67" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b68" />
+              <attribute attr-id="b69" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="13" name="the person has a spenddown for the program" ruleburst="true" concludes="b77" folder="8" source-offset="16823">
+      <rule-xml>
+        <conclude attr-id="b77" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <or>
+                <not>
+                  <attribute attr-id="b10" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <or>
+                  <attribute attr-id="b10" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <not>
+                    <attribute attr-id="b11" />
+                  </not>
+                </or>
+              </or>
+              <not>
+                <attribute attr-id="b12" silent-if-false="true" invisible-if-false="true" />
+              </not>
+              <attribute attr-id="b27" />
+              <attribute attr-id="b14" />
+              <not>
+                <attribute attr-id="b16" silent-if-false="true" invisible-if-false="true" />
+              </not>
+              <or>
+                <not>
+                  <attribute attr-id="b47" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b47" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b50" />
+                </and>
+              </or>
+              <or>
+                <and>
+                  <attribute attr-id="b73" />
+                  <or>
+                    <not>
+                      <attribute attr-id="b73" />
+                    </not>
+                    <attribute attr-id="b68" />
+                  </or>
+                </and>
+                <and>
+                  <attribute attr-id="b75" />
+                  <or>
+                    <not>
+                      <attribute attr-id="b75" />
+                    </not>
+                    <attribute attr-id="b69" />
+                  </or>
+                </and>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="14" name="the person meets the spenddown requirements for the program" ruleburst="true" concludes="b70" folder="8" source-offset="18855">
+      <rule-xml>
+        <conclude attr-id="b70" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b71" />
+              <attribute attr-id="b72" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="15" name="the person meets the income spenddown requirements for the program" ruleburst="true" concludes="b71" folder="9" source-offset="19097">
+      <rule-xml>
+        <conclude attr-id="b71" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <not>
+                <attribute attr-id="b73" />
+              </not>
+              <and>
+                <attribute attr-id="b73" />
+                <attribute attr-id="b68" silent="true" invisible-if-true="true" />
+                <or>
+                  <not>
+                    <attribute attr-id="b68" silent="true" invisible-if-true="true" />
+                  </not>
+                  <attribute attr-id="b74" />
+                </or>
+              </and>
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="16" name="the person has excess income for the program" ruleburst="true" concludes="b73" folder="9" source-offset="19549">
+      <rule-xml>
+        <conclude attr-id="b73" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <or>
+                <and>
+                  <attribute attr-id="b51" silent="true" invisible-if-true="true" />
+                  <or>
+                    <not>
+                      <attribute attr-id="b51" silent="true" invisible-if-true="true" />
+                    </not>
+                    <not>
+                      <attribute attr-id="b54" />
+                    </not>
+                  </or>
+                </and>
+                <and>
+                  <attribute attr-id="b52" silent="true" invisible-if-true="true" />
+                  <or>
+                    <not>
+                      <attribute attr-id="b52" silent="true" invisible-if-true="true" />
+                    </not>
+                    <not>
+                      <attribute attr-id="b55" />
+                    </not>
+                  </or>
+                </and>
+              </or>
+              <or>
+                <not>
+                  <attribute attr-id="b63" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b63" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b64" />
+                </and>
+              </or>
+              <or>
+                <not>
+                  <attribute attr-id="b65" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b65" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b66" />
+                </and>
+              </or>
+              <or>
+                <not>
+                  <attribute attr-id="b53" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b53" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b56" />
+                </and>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="17" name="the person meets the resource spenddown requirements for the program" ruleburst="true" concludes="b72" folder="10" source-offset="21636">
+      <rule-xml>
+        <conclude attr-id="b72" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <not>
+                <attribute attr-id="b75" />
+              </not>
+              <and>
+                <attribute attr-id="b75" />
+                <attribute attr-id="b69" silent="true" invisible-if-true="true" />
+                <or>
+                  <not>
+                    <attribute attr-id="b69" silent="true" invisible-if-true="true" />
+                  </not>
+                  <attribute attr-id="b76" />
+                </or>
+              </and>
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="18" name="the person has excess resources for the program" ruleburst="true" concludes="b75" folder="10" source-offset="22100">
+      <rule-xml>
+        <conclude attr-id="b75" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b57" silent="true" invisible-if-true="true" />
+              <or>
+                <not>
+                  <attribute attr-id="b57" silent="true" invisible-if-true="true" />
+                </not>
+                <not>
+                  <attribute attr-id="b59" />
+                </not>
+              </or>
+              <or>
+                <not>
+                  <attribute attr-id="b58" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b58" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" />
+                  <attribute attr-id="b60" />
+                </and>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="Program Eligibility" parent="0" id="1" />
+    <folder text="Standard Eligibility" parent="1" id="2" />
+    <folder text="Non-Financial Eligibility" parent="1" id="3" />
+    <folder text="Administrative Requirements" parent="3" id="4" />
+    <folder text="Financial Eligibility" parent="1" id="5" />
+    <folder text="Income Requirements" parent="5" id="6" />
+    <folder text="Resource Requirements" parent="5" id="7" />
+    <folder text="Spenddown Eligibility" parent="1" id="8" />
+    <folder text="Income Spenddown" parent="8" id="9" />
+    <folder text="Resource Spenddown" parent="8" id="10" />
+  </rule-folders>
+</root>

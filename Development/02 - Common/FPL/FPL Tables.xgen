@@ -1,0 +1,2007 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity ref="global" />
+    <entity name="the poverty guideline" id="povertyguideline" containment-relationship-id="povertyguidelines" containment-parent-id="global">
+      <attribute name="p1" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline's year</base>
+        </text>
+      </attribute>
+      <attribute name="p2" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline's start date</base>
+        </text>
+      </attribute>
+      <attribute name="p3" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline's end date</base>
+        </text>
+      </attribute>
+      <attribute name="p4" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for one person in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p5" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for two people in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p6" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for three people in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p7" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for four people in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p8" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for five people in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p9" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for six people in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p10" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for seven people in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p11" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for eight people in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p12" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for each additional person in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p13" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for one person in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p14" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for two people in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p15" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for three people in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p16" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for four people in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p17" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for five people in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p18" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for six people in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p19" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for seven people in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p20" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for eight people in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p21" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for each additional person in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p22" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for one person in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="p23" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for two people in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="p24" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for three people in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="p25" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for four people in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="p26" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for five people in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="p27" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for six people in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="p28" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for seven people in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="p29" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for eight people in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="p30" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the poverty guideline for each additional person in Hawaii</base>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="povertyguidelines" reverse-relationship-id="global_povertyguidelines_rev" text="the poverty guidelines" source="global" target="povertyguideline" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule ruleburst="true" folder="0" name="the poverty guideline's start date" id="1" concludes="p2">
+      <rule-xml>
+        <table-conclude attr-id="p2" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <date-value>2017-01-26</date-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <date-value>2016-01-25</date-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <date-value>2015-01-22</date-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <date-value>2014-01-22</date-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <date-value>2013-01-24</date-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline's end date" id="2" concludes="p3">
+      <rule-xml>
+        <table-conclude attr-id="p3" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <date-value>2017-01-25</date-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <date-value>2016-01-24</date-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <date-value>2015-01-21</date-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <date-value>2014-01-21</date-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for one person in the 48 contiguous states and the District of Columbia" id="3" concludes="p4">
+      <rule-xml>
+        <table-conclude attr-id="p4" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>12060</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>11880</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>11770</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>11670</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>11490</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for two people in the 48 contiguous states and the District of Columbia" id="4" concludes="p5">
+      <rule-xml>
+        <table-conclude attr-id="p5" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>16240</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>16020</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>15930</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>15730</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>15510</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for three people in the 48 contiguous states and the District of Columbia" id="5" concludes="p6">
+      <rule-xml>
+        <table-conclude attr-id="p6" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>20420</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>20160</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>20090</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>19790</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>19530</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for four people in the 48 contiguous states and the District of Columbia" id="6" concludes="p7">
+      <rule-xml>
+        <table-conclude attr-id="p7" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>24600</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>24300</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>24250</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>23850</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>23550</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for five people in the 48 contiguous states and the District of Columbia" id="7" concludes="p8">
+      <rule-xml>
+        <table-conclude attr-id="p8" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>28780</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>28440</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>28410</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>27910</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>27570</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for six people in the 48 contiguous states and the District of Columbia" id="8" concludes="p9">
+      <rule-xml>
+        <table-conclude attr-id="p9" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>32960</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>32580</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>32570</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>31970</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>31590</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for seven people in the 48 contiguous states and the District of Columbia" id="9" concludes="p10">
+      <rule-xml>
+        <table-conclude attr-id="p10" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>37140</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>36730</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>36730</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>36030</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>35610</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for eight people in the 48 contiguous states and the District of Columbia" id="10" concludes="p11">
+      <rule-xml>
+        <table-conclude attr-id="p11" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>41320</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>40890</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>40890</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>40090</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>39630</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for each additional person in the 48 contiguous states and the District of Columbia" id="11" concludes="p12">
+      <rule-xml>
+        <table-conclude attr-id="p12" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>4180</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>4160</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>4160</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>4060</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>4020</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for one person in Alaska" id="12" concludes="p13">
+      <rule-xml>
+        <table-conclude attr-id="p13" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>15060</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>14840</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>14720</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>14580</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>14350</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for two people in Alaska" id="13" concludes="p14">
+      <rule-xml>
+        <table-conclude attr-id="p14" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>20290</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>20020</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>19920</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>19660</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>19380</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for three people in Alaska" id="14" concludes="p15">
+      <rule-xml>
+        <table-conclude attr-id="p15" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>25520</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>25200</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>25120</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>24740</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>24410</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for four people in Alaska" id="15" concludes="p16">
+      <rule-xml>
+        <table-conclude attr-id="p16" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>30750</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>30380</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>30320</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>29820</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>29440</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for five people in Alaska" id="16" concludes="p17">
+      <rule-xml>
+        <table-conclude attr-id="p17" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>35980</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>35560</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>35520</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>34900</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>34470</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for six people in Alaska" id="17" concludes="p18">
+      <rule-xml>
+        <table-conclude attr-id="p18" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>41210</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>40740</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>40720</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>39980</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>39500</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for seven people in Alaska" id="18" concludes="p19">
+      <rule-xml>
+        <table-conclude attr-id="p19" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>46440</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>45920</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>45920</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>45060</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>44530</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for eight people in Alaska" id="19" concludes="p20">
+      <rule-xml>
+        <table-conclude attr-id="p20" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>51670</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>51120</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>51120</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>50140</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>49560</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for each additional person in Alaska" id="20" concludes="p21">
+      <rule-xml>
+        <table-conclude attr-id="p21" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>5230</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>5200</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>5200</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>5080</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>5030</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for one person in Hawaii" id="21" concludes="p22">
+      <rule-xml>
+        <table-conclude attr-id="p22" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>13860</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>13670</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>13550</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>13420</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>13230</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for two people in Hawaii" id="22" concludes="p23">
+      <rule-xml>
+        <table-conclude attr-id="p23" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>18670</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>18430</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>18330</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>18090</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>17850</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for three people in Hawaii" id="23" concludes="p24">
+      <rule-xml>
+        <table-conclude attr-id="p24" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>23480</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>23190</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>23110</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>22760</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>22470</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for four people in Hawaii" id="24" concludes="p25">
+      <rule-xml>
+        <table-conclude attr-id="p25" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>28290</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>27950</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>27890</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>27430</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>27090</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for five people in Hawaii" id="25" concludes="p26">
+      <rule-xml>
+        <table-conclude attr-id="p26" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>33100</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>32710</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>32670</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>32100</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>31710</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for six people in Hawaii" id="26" concludes="p27">
+      <rule-xml>
+        <table-conclude attr-id="p27" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>37910</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>37470</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>37450</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>36770</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>36330</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for seven people in Hawaii" id="27" concludes="p28">
+      <rule-xml>
+        <table-conclude attr-id="p28" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>42720</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>42230</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>42230</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>41440</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>40950</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for eight people in Hawaii" id="28" concludes="p29">
+      <rule-xml>
+        <table-conclude attr-id="p29" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>47530</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>47010</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>47010</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>46110</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>45570</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the poverty guideline for each additional person in Hawaii" id="29" concludes="p30">
+      <rule-xml>
+        <table-conclude attr-id="p30" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <row>
+            <value>
+              <number-value>4810</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2017</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>4780</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2016</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>4780</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2015</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>4670</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2014</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>4620</number-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <number-value>2013</number-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+</root>

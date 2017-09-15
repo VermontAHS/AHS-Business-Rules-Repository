@@ -1,0 +1,159 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.04 is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.04',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b2" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.04(a) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.04(a)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.04(b) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.04(b)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is an employee or related individual enrolled in an eligible employer-sponsored plan under HBEE 23.04 (eff.  07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('an employee or related individual enrolled in an eligible employer-sponsored plan under HBEE 23.04 (eff.  07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is enrolled in an eligible employer-sponsored program</base>
+          <parse>s(ver('10.4.6.76'),v(enroll,t(simple,present,normal)),ob('the person',singular),o('in an eligible employer-sponsored program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person should be treated as enrolled in an eligible employer-sponsored plan during the benefit period under evaluation as the plan qualifies as a terminated automatic enrollment under HBEE 23.04(b) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(treat+should,t(simple,modal,normal)),ob('the person',singular),o('as enrolled in an eligible employer-sponsored plan during the benefit period under evaluation as the plan qualifies as a terminated automatic enrollment under HBEE 23.04(b) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person was automatically enrolled in an eligible employer-sponsored plan covering the benefit period under evaluation</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,past,normal)),sb('the person',singular),o('automatically enrolled in an eligible employer-sponsored plan covering the benefit period under evaluation'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's eligible employer-sponsored coverage has been terminated before the first day of the second full calendar month of that plan year or other period</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,perfect)),sb('the person''s eligible employer-sponsored coverage',singular),o('terminated before the first day of the second full calendar month of that plan year or other period'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's eligible employer-sponsored coverage has been terminated before the last day of any permissible opt-out period provided by the employer-sponsored plan or in regulations to be issued by the Department of labor for that plan year or other period</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,perfect)),sb('the person''s eligible employer-sponsored coverage',singular),o('terminated before the last day of any permissible opt-out period provided by the employer-sponsored plan or in regulations to be issued by the Department of labor for that plan year or other period'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="HBEE 23.04 is satisfied for the person (eff. 07/30/2014)" ruleburst="true" concludes="b1" folder="1" source-offset="69">
+      <rule-xml>
+        <conclude attr-id="b1" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b12" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the person is an employee or related individual enrolled in an eligible employer-sponsored plan under HBEE 23.04 (eff.  07/30/2014)" ruleburst="true" concludes="b12" folder="1" source-offset="273">
+      <rule-xml>
+        <conclude attr-id="b12" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b2" />
+              <not>
+                <attribute attr-id="b3" />
+              </not>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="HBEE 23.04(a) is satisfied for the person (eff. 07/30/2014)" ruleburst="true" concludes="b2" folder="2" source-offset="585">
+      <rule-xml>
+        <conclude attr-id="b2" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b13" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="HBEE 23.04(b) is satisfied for the person (eff. 07/30/2014)" ruleburst="true" concludes="b3" folder="3" source-offset="765">
+      <rule-xml>
+        <conclude attr-id="b3" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <not>
+              <attribute attr-id="b14" />
+            </not>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="the person should not be treated as enrolled in an eligible employer-sponsored plan during the benefit period under evaluation as the plan qualifies as a terminated automatic enrollment under HBEE 23.04(b) (eff. 07/30/2014)" ruleburst="true" concludes="not b14" folder="3" source-offset="1068">
+      <rule-xml>
+        <conclude attr-id="b14" entity-id="person" scope-id="person0">
+          <value>
+            <false-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b15" />
+              <or>
+                <attribute attr-id="b18" />
+                <attribute attr-id="b19" />
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <true-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="23.04 Enrollment in eligible employer-sponsored plan (07/30/2014)" parent="0" id="1" />
+    <folder text="HBEE 23.04(a) - General" parent="1" id="2" />
+    <folder text="HBEE 23.04(b) - Automatic Enrollment" parent="1" id="3" />
+  </rule-folders>
+</root>

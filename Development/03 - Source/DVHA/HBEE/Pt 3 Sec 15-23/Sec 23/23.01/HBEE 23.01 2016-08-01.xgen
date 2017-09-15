@@ -1,0 +1,1296 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01 applies to the program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 23.01',singular),o('to the program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b108" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is an APTC-based program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('an APTC-based program'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b3" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered to have qualified minimum essential coverage (MEC) under HBEE 23.01 (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to have qualified minimum essential coverage (MEC) under HBEE 23.01 (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(b) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(b)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(c) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(c)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(d) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(d)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is eligible for government-sponsored MEC under HBEE 23.01(b) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('eligible for government-sponsored MEC under HBEE 23.01(b) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(b)(1) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(b)(1)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(b)(2) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(b)(2)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(b)(1)(i) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(b)(1)(i)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(b)(1)(ii) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(b)(1)(ii)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(b)(1)(iii) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(b)(1)(iii)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(b)(1)(iv) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(b)(1)(iv)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(b)(1)(v) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(b)(1)(v)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(b)(1)(vi) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(b)(1)(vi)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(b)(1)(vii) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(b)(1)(vii)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is eligible for the Medicare program under part A of Title XVIII of the Act</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('eligible for the Medicare program under part A of Title XVIII of the Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets the criteria for coverage for the Medicaid program under Title XIX of the Act</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the criteria for coverage for the Medicaid program under Title XIX of the Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(b)(1)(ii)(A) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(b)(1)(ii)(A)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(b)(1)(ii)(B) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(b)(1)(ii)(B)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(b)(1)(ii)(c) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(b)(1)(ii)(c)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(b)(1)(ii)(D) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(b)(1)(ii)(D)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is eligible for MEC based on enrollment under 23.01(e)(5) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('eligible for MEC based on enrollment under 23.01(e)(5) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets the criteria for coverage for the CHIP program under Title XXI of the Act</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the criteria for coverage for the CHIP program under Title XXI of the Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets the criteria for coverage under chapter 55 of USC Title 10 which includes the TRICARE program</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the criteria for coverage under chapter 55 of USC Title 10 which includes the TRICARE program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is eligible for MEC based on enrollment under 23.01(e)(4) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('eligible for MEC based on enrollment under 23.01(e)(4) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b38" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets the criteria for coverage under chapter 17 or 18 of USC Title 38</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the criteria for coverage under chapter 17 or 18 of USC Title 38'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b39" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(b)(3) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(b)(3)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b41" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets the criteria for coverage under the Nonappropriated Fund Health Benefits Program of the Department of Defense established under code 349 of the National Defense Authorization Act for Fiscal Year 1995</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the criteria for coverage under the Nonappropriated Fund Health Benefits Program of the Department of Defense established under code 349 of the National Defense Authorization Act for Fiscal Year 1995'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b42" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has completed the administrative requirements to obtain government-sponsored MEC coverage established under HBEE 23.01(b)(1)</base>
+          <parse>s(ver('10.4.6.76'),v(complete,t(simple,present,perfect)),sb('the person',singular),o('the administrative requirements to obtain government-sponsored MEC coverage established under HBEE 23.01(b)(1)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b43" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is treated as eligible for government-sponsored MEC due to failure to complete the administrative requirements to obtain benefits within the third full calendar month following the event that established eligibility under HBEE 23.01(b)(1)</base>
+          <parse>s(ver('10.4.6.76'),v(treat,t(simple,present,normal)),ob('the person',singular),o('as eligible for government-sponsored MEC due to failure to complete the administrative requirements to obtain benefits within the third full calendar month following the event that established eligibility under HBEE 23.01(b)(1)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b49" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is eligible for employer-sponsored MEC under HBEE 23.01(c) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('eligible for employer-sponsored MEC under HBEE 23.01(c) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b50" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(c)(1) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(c)(1)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b51" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(c)(2) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(c)(2)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b52" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(c)(3) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(c)(3)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b53" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(c)(5) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(c)(5)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b54" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is an employee of an employer offering an eligible employer-sponsored plan</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('an employee of an employer offering an eligible employer-sponsored plan'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b55" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered a related individual for an eligible employer-sponsored plan under HBEE 23.01(c) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('a related individual for an eligible employer-sponsored plan under HBEE 23.01(c) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b57" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person can enroll in an offered eligible employer-sponsored plan as a qualified related individual to the employee</base>
+          <parse>s(ver('10.4.6.76'),v(enroll+can,t(simple,modal,normal)),sb('the person',plural),o('in an offered eligible employer-sponsored plan as a qualified related individual to the employee'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b67" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is enrolled in coverage that qualifies as MEC as a former employee or related individual in an eligible employer-sponsored plan or continuation coverage during the benefit period being evaluated</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('enrolled in coverage that qualifies as MEC as a former employee or related individual in an eligible employer-sponsored plan or continuation coverage during the benefit period being evaluated'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b68" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is eligible for other coverage that qualifies as MEC under HBEE 23.01(d) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('eligible for other coverage that qualifies as MEC under HBEE 23.01(d) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b69" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(d)(1) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(d)(1)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b70" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(d)(2) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(d)(2)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b71" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(d)(3) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(d)(3)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b72" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(d)(4) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(d)(4)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b74" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is eligible for MEC based on enrollment under 23.01(e)(3) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('eligible for MEC based on enrollment under 23.01(e)(3) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b77" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's self-funded student health coverage plan has been recognized as MEC</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,perfect)),sb('the person''s self-funded student health coverage plan',singular),o('recognized as MEC'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b78" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is eligible for refugee medical assistance supported by the Administration for Children and Families</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('eligible for refugee medical assistance supported by the Administration for Children and Families'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b79" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is eligible for a Medicare advantage plan pursuant to part C of Title XVIII of the Act</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('eligible for a Medicare advantage plan pursuant to part C of Title XVIII of the Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b80" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is eligible for coverage under a State high risk pool coverage plan</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('eligible for coverage under a State high risk pool coverage plan'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b81" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is eligible for MEC based on enrollment under 23.01(e)(2) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('eligible for MEC based on enrollment under 23.01(e)(2) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b84" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's State high risk pool coverage plan has been recognized as MEC</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,perfect)),sb('the person''s State high risk pool coverage plan',singular),o('recognized as MEC'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b90" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is enrolled in TRICARE coverage as listed under HBEE 23.01(e)(4) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('enrolled in TRICARE coverage as listed under HBEE 23.01(e)(4) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b91" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(e)(4)(i) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(e)(4)(i)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b92" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(e)(4)(ii) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(e)(4)(ii)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b93" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(e)(4)(iii) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(e)(4)(iii)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b94" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(e)(4)(iv) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01(e)(4)(iv)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b95" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is enrolled in The Continued Health Care Benefit Program TRICARE program under 10 USC 1078</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('enrolled in The Continued Health Care Benefit Program TRICARE program under 10 USC 1078'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b96" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is enrolled in the Retired Reserve TRICARE program under 10 USC 1076(e)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('enrolled in the Retired Reserve TRICARE program under 10 USC 1076(e)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b97" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is enrolled in the Young Adult TRICARE program under 10 USC 1110(b)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('enrolled in the Young Adult TRICARE program under 10 USC 1110(b)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b98" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is enrolled in the Reserve Select TRICARE program under 10 USC 1076(d)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('enrolled in the Reserve Select TRICARE program under 10 USC 1076(d)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b99" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is eligible for Medicaid coverage only under the pregnant woman criteria described in 7.03(a)(2)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('eligible for Medicaid coverage only under the pregnant woman criteria described in 7.03(a)(2)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b100" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person was enrolled in a QHP when she became pregnant</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person',singular),o('enrolled in a QHP when she became pregnant'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b101" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01 is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.01',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b102" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.02 is satisfied for the person</base>
+          <parse>s(ver('10.4.5.40'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.02',singular),o('for the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b103" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.03 is satisfied for the person</base>
+          <parse>s(ver('10.4.5.40'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.03',singular),o('for the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b105" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.04 is satisfied for the person</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.04',singular),o('for the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b110" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has become eligible for medical coverage as medically needy only after spend down</base>
+          <parse>s(ver('10.4.5.40'),v(become,t(simple,present,perfect)),sb('the person',singular),o('eligible for medical coverage as medically needy only after spend down'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b111" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is receiving coverage limited to family planning services as described in Section 9.03(g)</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('receiving coverage limited to family planning services as described in Section 9.03(g)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b112" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is receiving coverage limited to the treatment of emergency services as described in Section 17.02(d)</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('receiving coverage limited to the treatment of emergency services as described in Section 17.02(d)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b113" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is enrolled in a health-care program under chapter 17 or 18 of Title 38, USC section identified as MEC in regulations under Section 5000A of the Code</base>
+          <parse>s(ver('10.4.5.40'),v(enroll,t(simple,present,normal)),ob('the person',singular),o('in a health-care program under chapter 17 or 18 of Title 38, USC section identified as MEC in regulations under Section 5000A of the Code'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b114" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets the criteria for coverage under 2504(e) USC Title 22 relating to Peace Corps volunteers</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the criteria for coverage under 2504(e) USC Title 22 relating to Peace Corps volunteers'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b115" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is eligible for an employer-sponsored plan</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('eligible for an employer-sponsored plan'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b116" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.01(e)(1) applies to the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 23.01(e)(1)',singular),o('to the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b118" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is required to pay a premium for Medicare part A coverage under 1818 of the Act</base>
+          <parse>s(ver('10.4.6.76'),v(require,t(simple,present,normal)),ob('the person',singular),o('to pay a premium for Medicare part A coverage under 1818 of the Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b119" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is enrolled for the Medicare program under part A of Title XVIII of the Act</base>
+          <parse>s(ver('10.4.6.76'),v(enroll,t(simple,present,normal)),ob('the person',singular),o('for the Medicare program under part A of Title XVIII of the Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b120" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is eligible for MEC based on enrollment under 23.01(e)(1) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('eligible for MEC based on enrollment under 23.01(e)(1) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b121" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's State high risk pool coverage plan is for a policy year beginning after December 31, 2014</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s State high risk pool coverage plan',singular),o('for a policy year beginning after December 31, 2014'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b123" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is enrolled in coverage under a State high risk pool coverage plan</base>
+          <parse>s(ver('10.4.6.76'),v(enroll,t(simple,present,normal)),ob('the person',singular),o('in coverage under a State high risk pool coverage plan'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b124" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's self-funded student health coverage plan is for a policy year beginning after December 31, 2014</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s self-funded student health coverage plan',singular),o('for a policy year beginning after December 31, 2014'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b125" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is enrolled in self-funded student health coverage offered to students by an institution of higher education</base>
+          <parse>s(ver('10.4.6.76'),v(enroll,t(simple,present,normal)),ob('the person',singular),o('in self-funded student health coverage offered to students by an institution of higher education'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b126" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is eligible for self-funded student health coverage offered to students by an institution of higher education</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('eligible for self-funded student health coverage offered to students by an institution of higher education'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b127" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the institution of higher education offering the person self-funded student health coverage assumes the risk for payment of claims</base>
+          <parse>s(ver('10.4.6.76'),v(assume,t(simple,present,normal)),sb('the institution of higher education offering the person self-funded student health coverage',singular),o('the risk for payment of claims'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b128" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is enrolled in Medicaid coverage under Title XIX of the Act</base>
+          <parse>s(ver('10.4.6.76'),v(enroll,t(simple,present,normal)),ob('the person',singular),o('in Medicaid coverage under Title XIX of the Act'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="HBEE 23.01 applies to the program (eff. 08/01/2016)" ruleburst="true" concludes="b1" folder="1" source-offset="82">
+      <rule-xml>
+        <conclude attr-id="b1" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b108" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="HBEE 23.01 is not satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="not b101" folder="1" source-offset="209">
+      <rule-xml>
+        <conclude attr-id="b101" entity-id="person" scope-id="person0">
+          <value>
+            <false-value />
+          </value>
+          <condition>
+            <attribute attr-id="b3" />
+          </condition>
+          <otherwise>
+            <true-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="the person is considered to have qualified minimum essential coverage (MEC) under HBEE 23.01 (eff. 08/01/2016)" ruleburst="true" concludes="b3" folder="1" source-offset="402">
+      <rule-xml>
+        <conclude attr-id="b3" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b4" />
+              <attribute attr-id="b5" />
+              <attribute attr-id="b6" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="HBEE 23.01(b) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b4" folder="2" source-offset="768">
+      <rule-xml>
+        <conclude attr-id="b4" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b8" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="the person is eligible for government-sponsored MEC under HBEE 23.01(b) (eff. 08/01/2016)" ruleburst="true" concludes="b8" folder="2" source-offset="932">
+      <rule-xml>
+        <conclude attr-id="b8" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b9" />
+              <attribute attr-id="b10" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="HBEE 23.01(b)(1) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b9" folder="3" source-offset="2752">
+      <rule-xml>
+        <conclude attr-id="b9" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b17" />
+              <attribute attr-id="b18" />
+              <attribute attr-id="b19" />
+              <attribute attr-id="b20" />
+              <attribute attr-id="b21" />
+              <attribute attr-id="b22" />
+              <attribute attr-id="b23" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="HBEE 23.01(b)(1)(i) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b17" folder="4" source-offset="3624">
+      <rule-xml>
+        <conclude attr-id="b17" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b24" />
+              <or>
+                <not>
+                  <attribute attr-id="b116" />
+                </not>
+                <and>
+                  <attribute attr-id="b116" />
+                  <attribute attr-id="b120" />
+                </and>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="7" name="HBEE 23.01(b)(1)(ii) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b18" folder="5" source-offset="4069">
+      <rule-xml>
+        <conclude attr-id="b18" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b26" />
+              <and>
+                <not>
+                  <attribute attr-id="b27" />
+                </not>
+                <not>
+                  <attribute attr-id="b28" />
+                </not>
+                <not>
+                  <attribute attr-id="b29" />
+                </not>
+                <not>
+                  <attribute attr-id="b30" />
+                </not>
+              </and>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="8" name="HBEE 23.01(b)(1)(ii)(A) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b27" folder="5" source-offset="4603">
+      <rule-xml>
+        <conclude attr-id="b27" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <not>
+              <attribute attr-id="b31" />
+            </not>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="9" name="HBEE 23.01(b)(1)(ii)(B) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b28" folder="5" source-offset="4784">
+      <rule-xml>
+        <conclude attr-id="b28" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b110" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="10" name="HBEE 23.01(b)(1)(ii)(C) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b29" folder="5" source-offset="4964">
+      <rule-xml>
+        <conclude attr-id="b29" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b111" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="11" name="HBEE 23.01(b)(1)(ii)(D) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b30" folder="5" source-offset="5152">
+      <rule-xml>
+        <conclude attr-id="b30" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b112" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="12" name="HBEE 23.01(b)(1)(iii) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b19" folder="6" source-offset="5376">
+      <rule-xml>
+        <conclude attr-id="b19" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b35" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="13" name="HBEE 23.01(b)(1)(iv) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b20" folder="7" source-offset="5575">
+      <rule-xml>
+        <conclude attr-id="b20" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b36" />
+              <attribute attr-id="b37" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="14" name="HBEE 23.01(b)(1)(v) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b21" folder="8" source-offset="5889">
+      <rule-xml>
+        <conclude attr-id="b21" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b38" />
+              <attribute attr-id="b39" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="15" name="HBEE 23.01(b)(1)(vi) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b22" folder="9" source-offset="6150">
+      <rule-xml>
+        <conclude attr-id="b22" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b114" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="16" name="HBEE 23.01(b)(1)(vii) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b23" folder="10" source-offset="6363">
+      <rule-xml>
+        <conclude attr-id="b23" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b41" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="17" name="HBEE 23.01(b)(2) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b10" folder="11" source-offset="6755">
+      <rule-xml>
+        <conclude attr-id="b10" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b42" />
+              <attribute attr-id="b43" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="18" name="HBEE 23.01(b)(3) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b39" folder="12" source-offset="7305">
+      <rule-xml>
+        <conclude attr-id="b39" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b113" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="19" name="HBEE 23.01(c) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b5" folder="13" source-offset="8407">
+      <rule-xml>
+        <conclude attr-id="b5" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b49" />
+              <attribute attr-id="b105" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="20" name="the person is eligible for employer-sponsored MEC under HBEE 23.01(c) (eff. 08/01/2016)" ruleburst="true" concludes="b49" folder="13" source-offset="9065">
+      <rule-xml>
+        <conclude attr-id="b49" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b50" />
+              <or>
+                <and>
+                  <attribute attr-id="b51" />
+                  <attribute attr-id="b52" />
+                </and>
+                <attribute attr-id="b53" />
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="21" name="HBEE 23.01(c)(1) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b50" folder="14" source-offset="9516">
+      <rule-xml>
+        <conclude attr-id="b50" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b54" />
+              <attribute attr-id="b55" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="22" name="the person is considered a related individual for an eligible employer-sponsored plan under HBEE 23.01(c) (eff. 08/01/2016)" ruleburst="true" concludes="b55" folder="14" source-offset="9847">
+      <rule-xml>
+        <conclude attr-id="b55" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <not>
+                <attribute attr-id="b54" />
+              </not>
+              <attribute attr-id="b57" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="23" name="HBEE 23.01(c)(2) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b51" folder="15" source-offset="10280">
+      <rule-xml>
+        <conclude attr-id="b51" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b115" />
+              <attribute attr-id="b102" />
+              <attribute attr-id="b103" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="24" name="HBEE 23.01(c)(5) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b53" folder="16" source-offset="12186">
+      <rule-xml>
+        <conclude attr-id="b53" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b67" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="25" name="HBEE 23.01(d) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b6" folder="17" source-offset="12529">
+      <rule-xml>
+        <conclude attr-id="b6" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b68" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="26" name="the person is eligible for other coverage that qualifies as MEC under HBEE 23.01(d) (eff. 08/01/2016)" ruleburst="true" concludes="b68" folder="17" source-offset="12706">
+      <rule-xml>
+        <conclude attr-id="b68" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b69" />
+              <attribute attr-id="b70" />
+              <attribute attr-id="b71" />
+              <attribute attr-id="b72" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="27" name="HBEE 23.01(d)(1) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b69" folder="18" source-offset="13160">
+      <rule-xml>
+        <conclude attr-id="b69" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b126" />
+              <attribute attr-id="b127" />
+              <or>
+                <not>
+                  <attribute attr-id="b124" />
+                </not>
+                <and>
+                  <attribute attr-id="b124" />
+                  <attribute attr-id="b77" />
+                </and>
+              </or>
+              <attribute attr-id="b74" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="28" name="HBEE 23.01(d)(2) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b70" folder="19" source-offset="14056">
+      <rule-xml>
+        <conclude attr-id="b70" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b78" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="29" name="HBEE 23.01(d)(3) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b71" folder="20" source-offset="14293">
+      <rule-xml>
+        <conclude attr-id="b71" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b79" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="30" name="HBEE 23.01(d)(4) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b72" folder="21" source-offset="14521">
+      <rule-xml>
+        <conclude attr-id="b72" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b80" />
+              <or>
+                <not>
+                  <attribute attr-id="b121" />
+                </not>
+                <and>
+                  <attribute attr-id="b121" />
+                  <attribute attr-id="b84" />
+                </and>
+              </or>
+              <attribute attr-id="b81" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="31" name="HBEE 23.01(e)(1) applies to the person (eff. 08/01/2016)" ruleburst="true" concludes="b116" folder="23" source-offset="15695">
+      <rule-xml>
+        <conclude attr-id="b116" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b118" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="32" name="the person is eligible for MEC based on enrollment under 23.01(e)(1) (eff. 08/01/2016)" ruleburst="true" concludes="b120" folder="23" source-offset="15861">
+      <rule-xml>
+        <conclude attr-id="b120" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b119" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="33" name="the person is eligible for MEC based on enrollment under 23.01(e)(2) (eff. 08/01/2016)" ruleburst="true" concludes="b81" folder="24" source-offset="16405">
+      <rule-xml>
+        <conclude attr-id="b81" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b123" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="34" name="the person is eligible for MEC based on enrollment under 23.01(e)(3) (eff. 08/01/2016)" ruleburst="true" concludes="b74" folder="25" source-offset="16941">
+      <rule-xml>
+        <conclude attr-id="b74" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b125" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="35" name="the person is eligible for MEC based on enrollment under 23.01(e)(4) (eff. 08/01/2016)" ruleburst="true" concludes="b37" folder="26" source-offset="17262">
+      <rule-xml>
+        <conclude attr-id="b37" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b90" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="36" name="the person is enrolled in TRICARE coverage as listed under HBEE 23.01(e)(4) (eff. 08/01/2016)" ruleburst="true" concludes="b90" folder="26" source-offset="17460">
+      <rule-xml>
+        <conclude attr-id="b90" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b91" />
+              <attribute attr-id="b92" />
+              <attribute attr-id="b93" />
+              <attribute attr-id="b94" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="37" name="HBEE 23.01(e)(4)(i) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b91" folder="26" source-offset="17865">
+      <rule-xml>
+        <conclude attr-id="b91" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b95" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="38" name="HBEE 23.01(e)(4)(ii) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b92" folder="26" source-offset="18049">
+      <rule-xml>
+        <conclude attr-id="b92" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b96" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="39" name="HBEE 23.01(e)(4)(iii) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b93" folder="26" source-offset="18215">
+      <rule-xml>
+        <conclude attr-id="b93" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b97" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="40" name="HBEE 23.01(e)(4)(iv) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b94" folder="26" source-offset="18378">
+      <rule-xml>
+        <conclude attr-id="b94" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b98" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="41" name="the person is not eligible for MEC based on enrollment under 23.01(e)(5) (eff. 08/01/2016)" ruleburst="true" concludes="not b31" folder="27" source-offset="18643">
+      <rule-xml>
+        <conclude attr-id="b31" entity-id="person" scope-id="person0">
+          <value>
+            <false-value />
+          </value>
+          <condition>
+            <and>
+              <not>
+                <attribute attr-id="b128" />
+              </not>
+              <attribute attr-id="b99" />
+              <attribute attr-id="b100" />
+            </and>
+          </condition>
+          <otherwise>
+            <true-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="23.01 Minimum essential coverage (08/01/2016, 16-02FP)" parent="0" id="1" />
+    <folder text="HBEE 23.01(b): Government-sponsored MEC" parent="1" id="2" />
+    <folder text="HBEE 23.01(b)(1)" parent="2" id="3" />
+    <folder text="HBEE 23.01(b)(1)(i)" parent="2" id="4" />
+    <folder text="HBEE 23.01(b)(1)(ii)" parent="2" id="5" />
+    <folder text="HBEE 23.01(b)(1)(iii)" parent="2" id="6" />
+    <folder text="HBEE 23.01(b)(1)(iv)" parent="2" id="7" />
+    <folder text="HBEE 23.01(b)(1)(v)" parent="2" id="8" />
+    <folder text="HBEE 23.01(b)(1)(vi)" parent="2" id="9" />
+    <folder text="HBEE 23.01(b)(1)(vii)" parent="2" id="10" />
+    <folder text="HBEE 23.01(b)(2): Obligation to complete administrative requirements to obtain coverage" parent="2" id="11" />
+    <folder text="HBEE 23.01(b)(3): Special coverage for chapter 17 or 18 of Title 38, USC" parent="2" id="12" />
+    <folder text="HBEE 23.01(c):  Employer-sponsored MEC" parent="1" id="13" />
+    <folder text="HBEE 23.01(c)(1): Definition of Related Individual" parent="13" id="14" />
+    <folder text="HBEE 23.01(c)(2): Coverage under Employer-Sponsored MEC in general" parent="13" id="15" />
+    <folder text="HBEE 23.01(c)(5): Post Employment Coverage" parent="13" id="16" />
+    <folder text="HBEE 23.01(d):  Other coverage that qualifies as MEC" parent="1" id="17" />
+    <folder text="HBEE 23.01(d)(1): Self-funded student health coverage" parent="17" id="18" />
+    <folder text="HBEE 23.01(d)(2): Refugee Medical Assistance supported by the Administration for Children and Families" parent="17" id="19" />
+    <folder text="HBEE 23.01(d)(3): Medicare advantage plans" parent="17" id="20" />
+    <folder text="HBEE 23.01(d)(4): State high risk pool coverage" parent="17" id="21" />
+    <folder text="HBEE 23.01(e):  Eligibility based on enrollment" parent="1" id="22" />
+    <folder text="HBEE 23.01(e)(1)" parent="22" id="23" />
+    <folder text="HBEE 23.01(e)(2)" parent="22" id="24" />
+    <folder text="HBEE 23.01(e)(3)" parent="22" id="25" />
+    <folder text="HBEE 23.01(e)(4)" parent="22" id="26" />
+    <folder text="HBEE 23.01(e)(5)" parent="22" id="27" />
+  </rule-folders>
+</root>

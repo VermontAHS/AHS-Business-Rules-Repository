@@ -1,0 +1,191 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="p1" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the total deductible child support expenses for the person's financial group for the budgeting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p2" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's total deductible child support expenses for the budgeting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p4" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the total deductible dependent care expenses for the person's financial group for the budgeting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p5" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's total deductible dependent care expenses for the budgeting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p6" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the total deductible medical expenses for the person's financial group for the budgeting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p8" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's total deductible medical expenses for the budgeting period for the program</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the group member program" id="groupmemberprogram" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is in the person's financial group for the group member program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('in the person''s financial group for the group member program'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's expense" id="personsexpense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+      <attribute name="b2" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is a child support expense</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a child support expense'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is a dependent care expense</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a dependent care expense'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is a medical expense</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a medical expense'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the expense program" id="expenseprogram" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+      <attribute name="p3" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's expense's total deductible amount for the budgeting period for the expense program</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global" />
+    <entity name="the group member" id="groupmember" containment-relationship-id="personsgroupmembers" containment-parent-id="person" />
+  </entities>
+  <relationships>
+    <relationship type="ManyToMany" relationship-id="groupmemberscontainingpersonsprogramforthegroupmemberprogram" reverse-relationship-id="personscontainedgroupmemberprogramsfortheprogram" text="the group member's containing person's program for the group member program" reverse-text="the person's contained group member programs for the program" source="groupmemberprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="groupmembersprogramforthegroupmemberprogram" reverse-relationship-id="personsrepresentativegroupmemberprogramsfortheprogram" text="the group member's program for the group member program" reverse-text="the person's representative group member programs for the program" source="groupmemberprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="personsprogramfortheexpenseprogram" reverse-relationship-id="personsexpensesfortheprogram" text="the person's program for the expense program" reverse-text="the person's expenses for the program" source="expenseprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" text="the group member's group member programs" reverse-text="the group member program's group member" source="groupmember" target="groupmemberprogram" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" text="the person's expense's expense programs" reverse-text="the person's expense for the expense program" source="personsexpense" target="expenseprogram" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" text="the person's group members" reverse-text="the group member's containing person" source="person" target="groupmember" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" text="the person's expenses" reverse-text="the person's expense's person" source="person" target="personsexpense" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="the total deductible child support expenses for the person's financial group for the budgeting period for the program " ruleburst="true" concludes="p1 = InstanceSumIf(personscontainedgroupmemberprogramsfortheprogram,InstanceValueIf(groupmembersprogramforthegroupmemberprogram,p2,true),b1)" folder="1" source-offset="27">
+      <rule-xml>
+        <conclude attr-id="p1" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum-if>
+              <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+              <instance-value-if>
+                <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                <attribute attr-id="p2" />
+                <true-value />
+              </instance-value-if>
+              <attribute attr-id="b1" />
+            </instance-sum-if>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the person's total deductible child support expenses for the budgeting period for the program " ruleburst="true" concludes="p2 = InstanceSumIf(personsexpensesfortheprogram,p3,b2)" folder="1" source-offset="633">
+      <rule-xml>
+        <conclude attr-id="p2" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum-if>
+              <relationship relationship-id="personsexpensesfortheprogram" target-entity-id="expenseprogram" />
+              <attribute attr-id="p3" />
+              <for>
+                <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                <attribute attr-id="b2" />
+              </for>
+            </instance-sum-if>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="the total deductible dependent care expenses for the person's financial group for the budgeting period for the program " ruleburst="true" concludes="p4 = InstanceSumIf(personscontainedgroupmemberprogramsfortheprogram,InstanceValueIf(groupmembersprogramforthegroupmemberprogram,p5,true),b1)" folder="2" source-offset="1018">
+      <rule-xml>
+        <conclude attr-id="p4" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum-if>
+              <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+              <instance-value-if>
+                <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                <attribute attr-id="p5" />
+                <true-value />
+              </instance-value-if>
+              <attribute attr-id="b1" />
+            </instance-sum-if>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="the person's total deductible dependent care expenses for the budgeting period for the program " ruleburst="true" concludes="p5 = InstanceSumIf(personsexpensesfortheprogram,p3,b3)" folder="2" source-offset="1626">
+      <rule-xml>
+        <conclude attr-id="p5" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum-if>
+              <relationship relationship-id="personsexpensesfortheprogram" target-entity-id="expenseprogram" />
+              <attribute attr-id="p3" />
+              <for>
+                <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                <attribute attr-id="b3" />
+              </for>
+            </instance-sum-if>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="the total deductible medical expenses for the person's financial group for the budgeting period for the program " ruleburst="true" concludes="p6 = InstanceSumIf(personscontainedgroupmemberprogramsfortheprogram,InstanceValueIf(groupmembersprogramforthegroupmemberprogram,p8,true),b1)" folder="3" source-offset="2006">
+      <rule-xml>
+        <conclude attr-id="p6" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum-if>
+              <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+              <instance-value-if>
+                <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                <attribute attr-id="p8" />
+                <true-value />
+              </instance-value-if>
+              <attribute attr-id="b1" />
+            </instance-sum-if>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="the person's total deductible medical expenses for the budgeting period for the program " ruleburst="true" concludes="p8 = InstanceSumIf(personsexpensesfortheprogram,p3,b4)" folder="3" source-offset="2600">
+      <rule-xml>
+        <conclude attr-id="p8" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum-if>
+              <relationship relationship-id="personsexpensesfortheprogram" target-entity-id="expenseprogram" />
+              <attribute attr-id="p3" />
+              <for>
+                <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                <attribute attr-id="b4" />
+              </for>
+            </instance-sum-if>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="Child Support Expenses" parent="0" id="1" />
+    <folder text="Dependent Care Expenses" parent="0" id="2" />
+    <folder text="Medical Expenses" parent="0" id="3" />
+  </rule-folders>
+</root>

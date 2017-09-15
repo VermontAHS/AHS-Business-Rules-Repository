@@ -1,0 +1,583 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session-data xmlns="http://oracle.com/determinations/engine/sessiondata/10.2">
+	<entity id="global" complete="false">
+		<instance id="global 1">
+			<attribute id="p5@00Framework_03Interpretive_InterpretiveFrameworkProps_xsrc" type="date" inferred="false">
+				<date-val>2014-01-01</date-val>
+			</attribute>
+			<attribute id="i_g_primary-ID" type="text" inferred="false">
+				<text-val>Rick</text-val>
+			</attribute>
+			<entity id="person" complete="true">
+				<instance id="person 1">
+					<attribute id="i_per_cit-US" type="boolean" inferred="false">
+						<boolean-val>true</boolean-val>
+					</attribute>
+					<attribute id="i_per_med-disabled" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="i_per_ssn-none" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="i_per_dob" type="date" inferred="false">
+						<date-val>1954-12-07</date-val>
+					</attribute>
+					<attribute id="p163@00Framework_01Eligibility_EligibilityFrameworkProps_xsrc" type="text" inferred="false">
+						<text-val>Rick</text-val>
+					</attribute>
+					<attribute id="i_per_mil-vet-honor" type="boolean" inferred="false">
+						<boolean-val>true</boolean-val>
+					</attribute>
+					<attribute id="i_per_med-blind" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="i_per_mil-active" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<entity id="program" complete="true">
+						<instance id="0x1c5a0d61e86fd233" />
+						<instance id="0xdf048e931b52648c" />
+					</entity>
+					<entity id="groupmember" complete="true" />
+					<entity id="income" complete="true">
+						<instance id="personsincome 1">
+							<attribute id="i_inc_type" type="text" inferred="false">
+								<text-val>Worker's Comp</text-val>
+							</attribute>
+							<attribute id="i_inc_freq" type="text" inferred="false">
+								<text-val>Weekly</text-val>
+							</attribute>
+							<attribute id="i_inc_amt" type="currency" inferred="false">
+								<currency-val>200</currency-val>
+							</attribute>
+							<entity id="incomeprogram" complete="true">
+								<instance id="0xefcf21d804b52185" />
+								<instance id="0xaf7a08cef379c848" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="expense" complete="true">
+						<instance id="personsexpense 3">
+							<attribute id="i_exp_type" type="text" inferred="false">
+								<text-val>Medical</text-val>
+							</attribute>
+							<attribute id="i_exp_freq" type="text" inferred="false">
+								<text-val>Quarterly</text-val>
+							</attribute>
+							<attribute id="i_exp_amt" type="currency" inferred="false">
+								<currency-val>500</currency-val>
+							</attribute>
+							<attribute id="i_exp_date-pay" type="date" inferred="false">
+								<date-val>2014-10-10</date-val>
+							</attribute>
+							<entity id="expenseprogram" complete="true">
+								<instance id="0x23730ac16c1916f9" />
+								<instance id="0x63c129d5d8afab23" />
+							</entity>
+						</instance>
+						<instance id="personsexpense 1">
+							<attribute id="i_exp_type" type="text" inferred="false">
+								<text-val>Utility</text-val>
+							</attribute>
+							<attribute id="i_exp_freq" type="text" inferred="false">
+								<text-val>Bi-Monthly</text-val>
+							</attribute>
+							<attribute id="i_exp_amt" type="currency" inferred="false">
+								<currency-val>200</currency-val>
+							</attribute>
+							<entity id="expenseprogram" complete="true">
+								<instance id="0x1127489651416683" />
+								<instance id="0x397a0b9acaeceef9" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="resource" complete="true">
+						<instance id="personsresource 1">
+							<attribute id="i_res_value-cash" type="currency" inferred="false">
+								<currency-val>1500</currency-val>
+							</attribute>
+							<attribute id="i_res_type" type="text" inferred="false">
+								<text-val>Precious Metals</text-val>
+							</attribute>
+							<entity id="resourceprogram" complete="true">
+								<instance id="0x307336a908ae2ad9" />
+								<instance id="0xae739f83badeba61" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="personsrequestedbenefit" complete="true" />
+					<entity id="personsrequestforassistance" complete="true" />
+					<entity id="related-party" complete="true">
+						<instance id="relatedparty 5">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Purchase and Prepare</text-val>
+							</attribute>
+							<attribute id="i_rp_date-end" type="date" inferred="false">
+								<date-val>2009-09-09</date-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Lori</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 3">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Spouse</text-val>
+							</attribute>
+							<attribute id="i_rp_date-start" type="date" inferred="false">
+								<date-val>2012-12-12</date-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Lori</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 2">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Purchase and Prepare</text-val>
+							</attribute>
+							<attribute id="i_rp_date-end" type="date" inferred="false">
+								<date-val>2009-09-09</date-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Carl</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 1">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Child</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Carl</text-val>
+							</attribute>
+						</instance>
+					</entity>
+					<entity id="person-address" complete="true">
+						<instance id="person-address 1">
+							<attribute id="i_per-addr_target-ID" type="text" inferred="false">
+								<text-val>123 Main</text-val>
+							</attribute>
+							<attribute id="i_per-addr_type" type="text" inferred="false">
+								<text-val>Residential</text-val>
+							</attribute>
+						</instance>
+					</entity>
+				</instance>
+				<instance id="person 3">
+					<attribute id="i_per_cit-US" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="i_per_med-disabled" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="i_per_cit-imm-entry" type="date" inferred="false">
+						<date-val>2011-11-11</date-val>
+					</attribute>
+					<attribute id="i_per_ssn-none" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="i_per_dob" type="date" inferred="false">
+						<date-val>1963-09-09</date-val>
+					</attribute>
+					<attribute id="i_per_cit-imm-status" type="text" inferred="false">
+						<text-val>Lawful Permanent Resident</text-val>
+					</attribute>
+					<attribute id="p163@00Framework_01Eligibility_EligibilityFrameworkProps_xsrc" type="text" inferred="false">
+						<text-val>Lori</text-val>
+					</attribute>
+					<attribute id="i_per_mil-vet-honor" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="i_per_med-blind" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="i_per_mil-active" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="i_per_req-med" type="boolean" inferred="false">
+						<boolean-val>true</boolean-val>
+					</attribute>
+					<entity id="program" complete="true">
+						<instance id="0x989641fc815fb45c" />
+						<instance id="0x9fc6208e8d8414a4" />
+					</entity>
+					<entity id="groupmember" complete="true">
+						<instance id="0x27fe79a4b9cead01">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0xe2415538fe572cff" />
+							</entity>
+						</instance>
+						<instance id="0x3b644e1cde9c1500">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x599a2f806d57443c" />
+							</entity>
+						</instance>
+						<instance id="0xeeae09175c0cbe0f">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0xcd0a05164e0dd11a" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="income" complete="true" />
+					<entity id="expense" complete="true">
+						<instance id="personsexpense 2">
+							<attribute id="i_exp_type" type="text" inferred="false">
+								<text-val>Housing</text-val>
+							</attribute>
+							<attribute id="i_exp_freq" type="text" inferred="false">
+								<text-val>Monthly</text-val>
+							</attribute>
+							<attribute id="i_exp_amt" type="currency" inferred="false">
+								<currency-val>500</currency-val>
+							</attribute>
+							<entity id="expenseprogram" complete="true">
+								<instance id="0xd7088a44bd29957e" />
+								<instance id="0x49c7c60901e7257b" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="resource" complete="true" />
+					<entity id="personsrequestedbenefit" complete="true">
+						<instance id="0x80d664eb173e5090">
+							<entity id="result" complete="true">
+								<instance id="0x1f15757295ef9a1b" />
+								<instance id="0xbc4df5aca6444f12" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="personsrequestforassistance" complete="true">
+						<instance id="0xe1985d9236d51512" />
+					</entity>
+					<entity id="related-party" complete="true" />
+					<entity id="person-address" complete="true">
+						<instance id="person-address 2">
+							<attribute id="i_per-addr_target-ID" type="text" inferred="false">
+								<text-val>123 Main</text-val>
+							</attribute>
+							<attribute id="i_per-addr_type" type="text" inferred="false">
+								<text-val>Residential</text-val>
+							</attribute>
+						</instance>
+					</entity>
+				</instance>
+				<instance id="person 2">
+					<attribute id="i_per_cit-US" type="boolean" inferred="false">
+						<boolean-val>true</boolean-val>
+					</attribute>
+					<attribute id="i_per_med-disabled" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="i_per_ssn-none" type="boolean" inferred="false">
+						<boolean-val>true</boolean-val>
+					</attribute>
+					<attribute id="i_per_dob" type="date" inferred="false">
+						<date-val>2002-02-02</date-val>
+					</attribute>
+					<attribute id="p163@00Framework_01Eligibility_EligibilityFrameworkProps_xsrc" type="text" inferred="false">
+						<text-val>Carl</text-val>
+					</attribute>
+					<attribute id="i_per_ssn-apply" type="boolean" inferred="false">
+						<boolean-val>true</boolean-val>
+					</attribute>
+					<attribute id="i_per_med-blind" type="boolean" inferred="false">
+						<boolean-val>false</boolean-val>
+					</attribute>
+					<attribute id="i_per_req-med" type="boolean" inferred="false">
+						<boolean-val>true</boolean-val>
+					</attribute>
+					<entity id="program" complete="true">
+						<instance id="0x3dc105e8be95cf29" />
+						<instance id="0x95442dbcac29ec3f" />
+					</entity>
+					<entity id="groupmember" complete="true">
+						<instance id="0x216a07b1c0078147">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0xcc744a5c15cea1ed" />
+								<instance id="0x6229289397fe0a90" />
+							</entity>
+						</instance>
+						<instance id="0xd2320e1cca9818f0">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0xadb9709ed330fae2" />
+								<instance id="0x98f19f6ad2cdc857" />
+							</entity>
+						</instance>
+						<instance id="0x2bb9c57e338e6408">
+							<entity id="groupmemberprogram" complete="true">
+								<instance id="0x131b30e820a8ec86" />
+								<instance id="0xc765b233b713e4e5" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="income" complete="true" />
+					<entity id="expense" complete="true" />
+					<entity id="resource" complete="true" />
+					<entity id="personsrequestedbenefit" complete="true">
+						<instance id="0xd41cd62e9ee5f3c0">
+							<entity id="result" complete="true">
+								<instance id="0xa6babeba726c379c" />
+								<instance id="0x222b23e2a53e053b" />
+							</entity>
+						</instance>
+						<instance id="0xbdb0429be788f610">
+							<entity id="result" complete="true">
+								<instance id="0x1adb43043a2e7467" />
+								<instance id="0xac8a1f0f4cfbd8a9" />
+							</entity>
+						</instance>
+					</entity>
+					<entity id="personsrequestforassistance" complete="true">
+						<instance id="0x4428b564fdd14bf7" />
+						<instance id="0xafff2ecf6396cb23" />
+					</entity>
+					<entity id="related-party" complete="true">
+						<instance id="relatedparty 4">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Parent</text-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Lori</text-val>
+							</attribute>
+						</instance>
+						<instance id="relatedparty 6">
+							<attribute id="i_rp_type" type="text" inferred="false">
+								<text-val>Purchase and Prepare</text-val>
+							</attribute>
+							<attribute id="i_rp_date-end" type="date" inferred="false">
+								<date-val>2009-09-09</date-val>
+							</attribute>
+							<attribute id="i_rp_target-ID" type="text" inferred="false">
+								<text-val>Lori</text-val>
+							</attribute>
+						</instance>
+					</entity>
+					<entity id="person-address" complete="true">
+						<instance id="person-address 3">
+							<attribute id="i_per-addr_target-ID" type="text" inferred="false">
+								<text-val>123 Main</text-val>
+							</attribute>
+							<attribute id="i_per-addr_type" type="text" inferred="false">
+								<text-val>Residential</text-val>
+							</attribute>
+						</instance>
+					</entity>
+				</instance>
+			</entity>
+			<entity id="case-result" complete="true">
+				<instance id="0x77db893fc1e871a0" />
+				<instance id="0xc4b0dee2df5db759" />
+			</entity>
+			<entity id="plan" complete="true">
+				<instance id="plan 1">
+					<attribute id="i_bp_type" type="text" inferred="false">
+						<text-val>Food Benefits</text-val>
+					</attribute>
+					<attribute id="i_bp_date-start" type="date" inferred="false">
+						<date-val>2014-01-01</date-val>
+					</attribute>
+					<attribute id="i_bp_timestamp" type="datetime" inferred="false">
+						<datetime-val>2014-06-17T12:12:12</datetime-val>
+					</attribute>
+					<attribute id="i_bp_date-end" type="date" inferred="false">
+						<date-val>2014-12-31</date-val>
+					</attribute>
+					<entity id="benefit" complete="true">
+						<instance id="benefit 1">
+							<attribute id="i_b_primary-ID" type="text" inferred="false">
+								<text-val>Rick</text-val>
+							</attribute>
+							<attribute id="i_b_person-ID" type="text" inferred="false">
+								<text-val>Carl</text-val>
+							</attribute>
+							<attribute id="i_b_program" type="text" inferred="false">
+								<text-val>SNAP</text-val>
+							</attribute>
+							<attribute id="i_b_status-eligibility" type="text" inferred="false">
+								<text-val>Eligible</text-val>
+							</attribute>
+							<attribute id="i_b_bene-amt" type="currency" inferred="false">
+								<currency-val>123</currency-val>
+							</attribute>
+							<attribute id="i_b_status-enrollment" type="text" inferred="false">
+								<text-val>Enrolled</text-val>
+							</attribute>
+							<attribute id="i_b_date-end" type="date" inferred="false">
+								<date-val>2014-06-30</date-val>
+							</attribute>
+							<attribute id="i_b_date-start" type="date" inferred="false">
+								<date-val>2014-01-01</date-val>
+							</attribute>
+						</instance>
+						<instance id="benefit 2">
+							<attribute id="i_b_primary-ID" type="text" inferred="false">
+								<text-val>Rick</text-val>
+							</attribute>
+							<attribute id="i_b_person-ID" type="text" inferred="false">
+								<text-val>Carl</text-val>
+							</attribute>
+							<attribute id="i_b_program" type="text" inferred="false">
+								<text-val>SNAP</text-val>
+							</attribute>
+							<attribute id="i_b_status-eligibility" type="text" inferred="false">
+								<text-val>Eligible</text-val>
+							</attribute>
+							<attribute id="i_b_bene-amt" type="currency" inferred="false">
+								<currency-val>234</currency-val>
+							</attribute>
+							<attribute id="i_b_status-enrollment" type="text" inferred="false">
+								<text-val>Enrolled</text-val>
+							</attribute>
+							<attribute id="i_b_date-end" type="date" inferred="false">
+								<date-val>2014-11-30</date-val>
+							</attribute>
+							<attribute id="i_b_date-start" type="date" inferred="false">
+								<date-val>2014-07-01</date-val>
+							</attribute>
+						</instance>
+						<instance id="benefit 3">
+							<attribute id="i_b_primary-ID" type="text" inferred="false">
+								<text-val>Rick</text-val>
+							</attribute>
+							<attribute id="i_b_person-ID" type="text" inferred="false">
+								<text-val>Carl</text-val>
+							</attribute>
+							<attribute id="i_b_program" type="text" inferred="false">
+								<text-val>SNAP</text-val>
+							</attribute>
+							<attribute id="i_b_status-eligibility" type="text" inferred="false">
+								<text-val>Eligible</text-val>
+							</attribute>
+							<attribute id="i_b_bene-amt" type="currency" inferred="false">
+								<currency-val>123</currency-val>
+							</attribute>
+							<attribute id="i_b_status-enrollment" type="text" inferred="false">
+								<text-val>Enrolled</text-val>
+							</attribute>
+							<attribute id="i_b_date-end" type="date" inferred="false">
+								<date-val>2014-12-31</date-val>
+							</attribute>
+							<attribute id="i_b_date-start" type="date" inferred="false">
+								<date-val>2014-12-01</date-val>
+							</attribute>
+						</instance>
+					</entity>
+				</instance>
+				<instance id="plan 2">
+					<attribute id="i_bp_type" type="text" inferred="false">
+						<text-val>Food Benefits</text-val>
+					</attribute>
+					<attribute id="i_bp_date-start" type="date" inferred="false">
+						<date-val>2014-01-01</date-val>
+					</attribute>
+					<attribute id="i_bp_timestamp" type="datetime" inferred="false">
+						<datetime-val>2013-12-25T09:09:09</datetime-val>
+					</attribute>
+					<attribute id="i_bp_date-end" type="date" inferred="false">
+						<date-val>2014-12-31</date-val>
+					</attribute>
+					<entity id="benefit" complete="true">
+						<instance id="benefit 4">
+							<attribute id="i_b_person-ID" type="text" inferred="false">
+								<text-val>Rick</text-val>
+							</attribute>
+							<attribute id="i_b_date-end" type="date" inferred="false">
+								<date-val>2014-12-31</date-val>
+							</attribute>
+							<attribute id="i_b_program" type="text" inferred="false">
+								<text-val>SNAP</text-val>
+							</attribute>
+							<attribute id="i_b_status-eligibility" type="text" inferred="false">
+								<text-val>Eligible</text-val>
+							</attribute>
+							<attribute id="i_b_date-start" type="date" inferred="false">
+								<date-val>2014-01-01</date-val>
+							</attribute>
+						</instance>
+					</entity>
+				</instance>
+				<instance id="plan 3">
+					<attribute id="i_bp_type" type="text" inferred="false">
+						<text-val>Financial Benefits</text-val>
+					</attribute>
+					<attribute id="i_bp_date-start" type="date" inferred="false">
+						<date-val>2014-01-01</date-val>
+					</attribute>
+					<attribute id="i_bp_timestamp" type="datetime" inferred="false">
+						<datetime-val>2013-12-25T09:09:09</datetime-val>
+					</attribute>
+					<attribute id="i_bp_date-end" type="date" inferred="false">
+						<date-val>2014-12-31</date-val>
+					</attribute>
+					<entity id="benefit" complete="true">
+						<instance id="benefit 5">
+							<attribute id="i_b_person-ID" type="text" inferred="false">
+								<text-val>Rick</text-val>
+							</attribute>
+							<attribute id="i_b_date-end" type="date" inferred="false">
+								<date-val>2014-12-31</date-val>
+							</attribute>
+							<attribute id="i_b_program" type="text" inferred="false">
+								<text-val>TANF</text-val>
+							</attribute>
+							<attribute id="i_b_status-eligibility" type="text" inferred="false">
+								<text-val>Eligible</text-val>
+							</attribute>
+							<attribute id="i_b_date-start" type="date" inferred="false">
+								<date-val>2014-01-01</date-val>
+							</attribute>
+						</instance>
+					</entity>
+				</instance>
+				<instance id="plan 4">
+					<attribute id="i_bp_type" type="text" inferred="false">
+						<text-val>Financial Benefits</text-val>
+					</attribute>
+					<attribute id="i_bp_date-start" type="date" inferred="false">
+						<date-val>2014-01-01</date-val>
+					</attribute>
+					<attribute id="i_bp_timestamp" type="datetime" inferred="false">
+						<datetime-val>2014-06-17T12:12:12</datetime-val>
+					</attribute>
+					<attribute id="i_bp_date-end" type="date" inferred="false">
+						<date-val>2014-12-31</date-val>
+					</attribute>
+					<entity id="benefit" complete="true">
+						<instance id="benefit 6">
+							<attribute id="i_b_person-ID" type="text" inferred="false">
+								<text-val>Rick</text-val>
+							</attribute>
+							<attribute id="i_b_date-end" type="date" inferred="false">
+								<date-val>2014-12-31</date-val>
+							</attribute>
+							<attribute id="i_b_program" type="text" inferred="false">
+								<text-val>TANF</text-val>
+							</attribute>
+							<attribute id="i_b_status-eligibility" type="text" inferred="false">
+								<text-val>Eligible</text-val>
+							</attribute>
+							<attribute id="i_b_date-start" type="date" inferred="false">
+								<date-val>2014-01-01</date-val>
+							</attribute>
+						</instance>
+					</entity>
+				</instance>
+			</entity>
+			<entity id="baseprogram" complete="true">
+				<instance id="0x6e862b69a8256195" />
+				<instance id="0x8b45483c1e585934" />
+			</entity>
+			<entity id="address" complete="true">
+				<instance id="address 1">
+					<attribute id="i_addr_state-abbr" type="text" inferred="false">
+						<text-val>HI</text-val>
+					</attribute>
+					<attribute id="i_addr_street" type="text" inferred="false">
+						<text-val>123 Main</text-val>
+					</attribute>
+				</instance>
+			</entity>
+			<entity id="povertyguideline" complete="true">
+				<instance id="0xc8ddb05401b7f14" />
+				<instance id="0x912a092676535883" />
+			</entity>
+		</instance>
+	</entity>
+</session-data>

@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-script product-version="10.4.6.76" schema-version="4">
+  <test-case-set>
+    <test-case name="(1) Is satisfied--Doesn't Apply: No SSN, not eligible to receive one [16.01(a)(1),(b)(i)]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Betty</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Eatsit</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_pHBEE1601SatisfiedEff080116_b" text="HBEE 16.01 is satisfied for the person (eff. 08/01/2016)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_personHasSSN_b" text="the person has a social security number" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_pIsElgblToRcvSSN_b" text="the person is eligible to receive a social security number" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Betty Eatsit|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Betty Eatsit|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+    <test-case name="(2) Is satisfied--Doesn't Apply: No SSN, can only issue for non-work reason [16.01(a)(1),(b)(ii)]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Betty</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Eatsit</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_pHBEE1601SatisfiedEff080116_b" text="HBEE 16.01 is satisfied for the person (eff. 08/01/2016)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_personHasSSN_b" text="the person has a social security number" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_pCnOnlyBeIsdSSNFrVldNonWrkRsnPer20CFR422104_b" text="the person is only eligible for a social security number valid for non-work reasons in accordance with 20 CFR 422.104" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Betty Eatsit|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Betty Eatsit|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+    <test-case name="(3) Is satisfied--Doesn't Apply: No SSN, religious objection [16.01(a)(1),(b)(iii)]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Betty</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Eatsit</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_pHBEE1601SatisfiedEff080116_b" text="HBEE 16.01 is satisfied for the person (eff. 08/01/2016)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_personHasSSN_b" text="the person has a social security number" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="b_pRfsToObtnSSNBcOfReligObject_b" text="the person refuses to obtain a social security number because of well-established religious objections" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Betty Eatsit|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Betty Eatsit|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+    <test-case name="(4) Is satisfied--Applies, Has Provided [16.01(a)(1)]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Betty</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Eatsit</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_pHBEE1601SatisfiedEff080116_b" text="HBEE 16.01 is satisfied for the person (eff. 08/01/2016)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_pIsElgblToRcvSSN_b" text="the person is eligible to receive a social security number" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_pCnOnlyBeIsdSSNFrVldNonWrkRsnPer20CFR422104_b" text="the person is only eligible for a social security number valid for non-work reasons in accordance with 20 CFR 422.104" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="b_pRfsToObtnSSNBcOfReligObject_b" text="the person refuses to obtain a social security number because of well-established religious objections" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personSSNVrfdbyAHS_b" text="the person has provided the person's social security number" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_ssn-none" text="it is the case that the person does not have a social security number" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Betty Eatsit|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Betty Eatsit|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+    <test-case name="(5) Not satisfied--Applies, Has Not Provided [16.01(a)(1)]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Betty</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Eatsit</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_pHBEE1601SatisfiedEff080116_b" text="HBEE 16.01 is satisfied for the person (eff. 08/01/2016)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_pIsElgblToRcvSSN_b" text="the person is eligible to receive a social security number" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_pCnOnlyBeIsdSSNFrVldNonWrkRsnPer20CFR422104_b" text="the person is only eligible for a social security number valid for non-work reasons in accordance with 20 CFR 422.104" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="b_pRfsToObtnSSNBcOfReligObject_b" text="the person refuses to obtain a social security number because of well-established religious objections" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_ssn-none" text="it is the case that the person does not have a social security number" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ssnPending_b" text="the person's social security number is pending issuance" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Betty Eatsit|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Betty Eatsit|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+  </test-case-set>
+  <outcome-set>
+    <outcome name="so_pHBEE1601SatisfiedEff080116_b" display-name="HBEE 16.01 is Satisfied" text="HBEE 16.01 is satisfied for the person (eff. 08/01/2016)" type="boolean" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+  </outcome-set>
+</test-script>

@@ -1,0 +1,99 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b5" type="boolean" public-name="st_HBEE8.03bBlind20150715_b">
+        <text>
+          <base>the person is considered blind under HBEE 8.03(b) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('blind under HBEE 8.03(b) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" public-name="si_PrsnDeterminedBlindAHS_b">
+        <text>
+          <base>the person has been determined blind by the AHS's disability determination unit</base>
+          <parse>s(ver('10.4.6.76'),v(determine,t(simple,present,perfect)),ob('the person',singular),o('blind by the AHS''s disability determination unit'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" public-name="si_PrsnRecpeintSSBlindness_b">
+        <text>
+          <base>the person is in receipt of social security benefits based on the blindness</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('in receipt of social security benefits based on the blindness'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" public-name="si_PrsnDisabledAHSDetermination_b">
+        <text>
+          <base>the person has been determined disabled by the AHS's disability determination unit</base>
+          <parse>s(ver('10.4.6.76'),v(determine,t(simple,present,perfect)),ob('the person',singular),o('disabled by the AHS''s disability determination unit'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" public-name="si_PrsnRecSSBenefits_b">
+        <text>
+          <base>the person is in receipt of social security disability benefits based on disability</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('in receipt of social security disability benefits based on disability'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" public-name="st_HBEE8.03cDisable20150715_b">
+        <text>
+          <base>the person is considered disabled under HBEE 8.03(c) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('disabled under HBEE 8.03(c) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" public-name="st_HBEE8.03aAged20150715_b">
+        <text>
+          <base>the person is considered aged under HBEE 8.03(a) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('aged under HBEE 8.03(a) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" public-name="st_HBEE8.03cDisable_b">
+        <text>
+          <base>the person is considered disabled under HBEE 8.03(c)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('disabled under HBEE 8.03(c)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" public-name="st_HBEE8.03bBlind_b">
+        <text>
+          <base>the person is considered blind under HBEE 8.03(b)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('blind under HBEE 8.03(b)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

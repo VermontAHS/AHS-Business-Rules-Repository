@@ -1,0 +1,244 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b1" type="boolean" public-name="st_pgPrsnPassAbsRsrcTstFrPrgmDrgMnth_b">
+        <text>
+          <base>the person passes the absolute resource test for the program during the month</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the absolute resource test for the program during the month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b2" type="boolean" public-name="st_pgPrsnPassRsrcTstPrgmUndHBEE3004aEff071515_b">
+        <text>
+          <base>the person passes the resource test for the program under HBEE 30.04(a) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the resource test for the program under HBEE 30.04(a) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" public-name="so_pgPrsnPassRsrcTstPrgmUndHBEE3004Eff071515_b">
+        <text>
+          <base>the person passes the resource test for the program under HBEE 30.04 (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the resource test for the program under HBEE 30.04 (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" public-name="st_pgPrsnPassRsrcTstPrgmUndHBEE3004bEff071515_b">
+        <text>
+          <base>the person passes the resource test for the program under HBEE 30.04(b) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the resource test for the program under HBEE 30.04(b) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" public-name="st_pgPrsnHsExcsRsrcFrAppMnthFrPrgm_b">
+        <text>
+          <base>the person has excess resources for the application month for the program</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('excess resources for the application month for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p1" type="currency" public-name="st_pgPrsnExcsRsrcAmtFrAplMnthFrPrgm_c">
+        <text>
+          <base>the person's excess resource amount for the application month for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p2" type="currency" public-name="st_pgPrsnFRGTotExpDrgActgPrdToRdcExcsRsrcFrRetroCvgUndHBEE3004bEff071515_c">
+        <text>
+          <base>the person's financial responsibility group's total expenditures during the accounting period for the program to reduce excess resources for retroactive coverage under HBEE 30.04(b) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p3" type="currency" public-name="st_pgPrsnFRGTotExpDrgActgPrdToRdcExcsRsrcFrRetroCvgUndHBEE3004b1Eff071515_c">
+        <text>
+          <base>the person's financial responsibility group's total expenditures during the accounting period for the program to reduce excess resources for retroactive coverage under HBEE 30.04(b)(1) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p4" type="currency" public-name="st_pgPrsnFRGTotExpDrgActgPrdToRdcExcsRsrcFrRetroCvgUndHBEE3004b2Eff071515_c">
+        <text>
+          <base>the person's financial responsibility group's total expenditures during the accounting period for the program to reduce excess resources for retroactive coverage under HBEE 30.04(b)(2) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p5" type="currency" public-name="st_pgPrsnFRGTotExpDrgActgPrdToRdcExcsRsrcFrRetroCvgUndHBEE3004b3Eff071515_c">
+        <text>
+          <base>the person's financial responsibility group's total expenditures during the accounting period for the program to reduce excess resources for retroactive coverage under HBEE 30.04(b)(3) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p6" type="currency" public-name="st_pgPrsnTotExpdDrgActgPrdFrPrgmToRdcExcsRsrcFrRetroCvgUndHBEE3004b1Eff071515_c">
+        <text>
+          <base>the person's total expenditures during the accounting period for the program to reduce excess resources for retroactive coverage under HBEE 30.04(b)(1) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" public-name="st_pgPrsnHsTknActnDrgActgPrdSfcntToRdcExcsRsrcFrRetroCvgMnthUndHBEE3004bEff071515_b">
+        <text>
+          <base>the person has taken actions during the accounting period for the program that are sufficient to reduce the person's excess resources for the retroactive coverage month under HBEE 30.04(b) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(take,t(simple,present,perfect)),sb('the person',singular),o('actions during the accounting period for the program that are sufficient to reduce the person''s excess resources for the retroactive coverage month under HBEE 30.04(b) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p8" type="currency" public-name="st_pgAmtWchTotANIFrPrsFinGrpIsLTANILimtFrBdgtgPrdFrPrgm_c">
+        <text>
+          <base>the amount by which the total adjusted net income for the person's financial group is less than the adjusted net income limit for the budgeting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p9" type="currency" public-name="st_pgPrsnFRGAlwdExpdtDrgActgPrdFrPrgmToRdcExcsRsrcFrRetroCvgUndHBEE3004b2Eff071515_c">
+        <text>
+          <base>the person's financial responsibility group's allowed expenditures during the accounting period for the program to reduce excess resources for retroactive coverage under HBEE 30.04(b)(2) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p10" type="currency" public-name="st_pgTotMnthlyDiffBtwnPrsnFGANIFrPrgmAndAplcbPILDrgRetroCvgPrdUndHBEE3004b2Eff071515_c">
+        <text>
+          <base>the total monthly difference between the person's financial group's adjusted net income for the program and the applicable PIL during the retroactive coverage period for the program under HBEE 30.04(b)(2) (eff. 07/15/2015)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p11" type="currency" public-name="st_pgPrsnTotExpdDrgActgPrdFrPrgmToRdcExcsRsrcFrRetroCvgUndHBEE3004b2Eff071515_c">
+        <text>
+          <base>the person's total expenditures during the accounting period for the program to reduce excess resources for retroactive coverage under HBEE 30.04(b)(2) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p13" type="currency" public-name="st_pgPrsnTotExpdDrgActgPrdFrPrgmToRdcExcsRsrcFrRetroCvgUndHBEE3004b3Eff071515_c">
+        <text>
+          <base>the person's total expenditures during the accounting period for the program to reduce excess resources for retroactive coverage under HBEE 30.04(b)(3) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" public-name="so_pgPrsnPassRsrcTstPrgmUndHBEE3004_b">
+        <text>
+          <base>the person passes the resource test for the program under HBEE 30.04</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the resource test for the program under HBEE 30.04'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+      <attribute name="p12" type="currency" public-name="si_peAvlblSpdnDwnAmt_c">
+        <text>
+          <base>the person's expense's available spenddown amount</base>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" public-name="si_expSpndDwnResUse_b">
+        <text>
+          <base>the person's expense should be used to spenddown excess resources for medically-needy Medicaid coverage</base>
+          <parse>s(ver('10.4.6.76'),v(use+should,t(simple,modal,normal)),ob('the person''s expense',singular),o('to spenddown excess resources for medically-needy Medicaid coverage'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" public-name="si_peIsMntcExpns_b">
+        <text>
+          <base>the person's expense is a maintenance expense</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a maintenance expense'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+      <attribute name="b12" type="boolean" public-name="st_epPersExpIsFrActgPrdFrExpPrgm_b">
+        <text>
+          <base>the person's expense is for the accounting period for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for the accounting period for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" public-name="st_epPersExpCnBUsdRdcExcsRsrcRetroCvgUndHBEE3004b2Eff071515_b">
+        <text>
+          <base>the person's expense can be used to reduce excess resources for retroactive coverage for the expense program under HBEE 30.04(b)(2) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(use+can,t(simple,modal,normal)),ob('the person''s expense',singular),o('to reduce excess resources for retroactive coverage for the expense program under HBEE 30.04(b)(2) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" public-name="st_epPersExpCnBUsdRdcExcsRsrcRetroCvgUndHBEE3004b3Eff071515_b">
+        <text>
+          <base>the person's expense can be used to reduce excess resources for retroactive coverage for the expense program under HBEE 30.04(b)(3) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(use+can,t(simple,modal,normal)),ob('the person''s expense',singular),o('to reduce excess resources for retroactive coverage for the expense program under HBEE 30.04(b)(3) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p15" type="currency">
+        <text>
+          <base>the person's expense's expenditure during the accounting period for the expense program to reduce excess resources for retroactive coverage under HBEE 30.04(b)(3) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p19" type="currency">
+        <text>
+          <base>the person's expense's expenditure during the accounting period for the expense program to reduce excess resources for retroactive coverage under HBEE 30.04(b)(2) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+      <attribute name="p7" type="currency" public-name="si_prAvlSpdwnAmtMedNdyMdcdCvg_c">
+        <text>
+          <base>the person's resource's available spenddown amount for medically-needy Medicaid coverage</base>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" public-name="si_prShldBeUsdToSpdwnExcs_b">
+        <text>
+          <base>the person's resource should be used to spenddown excess resources for medically-needy Medicaid coverage</base>
+          <parse>s(ver('10.4.6.76'),v(use+should,t(simple,modal,normal)),ob('the person''s resource',singular),o('to spenddown excess resources for medically-needy Medicaid coverage'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+      <attribute name="b6" type="boolean" public-name="st_rpPrsRscIsBrlFndExcldUndHBEE2908cDrgActgPrd4RsrcPrgm_b">
+        <text>
+          <base>the person's resource is a burial fund that is excludable under HBEE 29.08(c) during the accounting period for the resource program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a burial fund that is excludable under HBEE 29.08(c) during the accounting period for the resource program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" public-name="st_rpPrsRscIsExclb4RsrcPrgrm_b">
+        <text>
+          <base>the person's resource is excludable for the resource program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('excludable for the resource program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" public-name="st_rpPrsRscBcmExclb4RscPrgmAftrAplDt_b">
+        <text>
+          <base>the person's resource became excludable for the resource program after the application date</base>
+          <parse>s(ver('10.4.6.76'),v(become,t(simple,past,normal)),sb('the person''s resource',plural),o('excludable for the resource program after the application date'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" public-name="st_rpPrsRscCnBUsdToRdcExcsRsrFrRetroCvgUndHBEE3014b1Eff071515_b">
+        <text>
+          <base>the person's resource can be used to reduce excess resources for retroactive coverage for the resource program under HBEE 30.04(b)(1) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(use+can,t(simple,modal,normal)),ob('the person''s resource',singular),o('to reduce excess resources for retroactive coverage for the resource program under HBEE 30.04(b)(1) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p17" type="currency">
+        <text>
+          <base>the person's resource's expenditure during the accounting period for the resource program to reduce excess resources for retroactive coverage under HBEE 30.04(b)(1) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+      <attribute name="p14" type="currency">
+        <text>
+          <base>the group member's total expenditures for the person during the accounting period for the group member program to reduce excess resources for retroactive coverage under HBEE 30.04(b)(3) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p16" type="currency">
+        <text>
+          <base>the group member's total expenditures for the person during the accounting period for the group member program to reduce excess resources for retroactive coverage under HBEE 30.04(b)(1) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p18" type="currency">
+        <text>
+          <base>the group member's total expenditures for the person during the accounting period for the group member program to reduce excess resources for retroactive coverage under HBEE 30.04(b)(2) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

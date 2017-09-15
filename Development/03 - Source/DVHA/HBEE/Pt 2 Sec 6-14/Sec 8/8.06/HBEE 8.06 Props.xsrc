@@ -1,0 +1,103 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b2" type="boolean" public-name="st_HBEE8.06aSat20140730_b">
+        <text>
+          <base>HBEE 8.06(a) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.06(a)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" public-name="si_perConMembCatNdyHBEE8.05_b">
+        <text>
+          <base>the person is considered a member of a categorically-needy coverage group under HBEE 8.05</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('a member of a categorically-needy coverage group under HBEE 8.05'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p5" type="currency" public-name="si_incomeLimitPIL_c">
+        <text>
+          <base>the PIL for the person's Medicaid group as defined in HBEE 29.04</base>
+        </text>
+      </attribute>
+      <attribute name="p6" type="currency" public-name="si_resourceLimitSSI_c">
+        <text>
+          <base>the SSI/AABD resource maximum for the person's Medicaid group as defined in HBEE 29.04</base>
+        </text>
+      </attribute>
+      <attribute name="p7" type="currency" public-name="so_HBEE8.06LimAdjAbs20140730_c">
+        <text>
+          <base>the monthly adjusted net income limit for the person under HBEE 8.06(b) (eff. 07/30/2014)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p8" type="currency" public-name="so_HBEE8.06LimRes20140730_c">
+        <text>
+          <base>the countable resource limit for the person under HBEE 8.06(c) (eff. 07/30/2014)</base>
+        </text>
+      </attribute>
+      <attribute name="p9" type="currency" public-name="st_HBEE8.06LimAdjAbs_c">
+        <text>
+          <base>the monthly adjusted net income limit for the person under HBEE 8.06(b)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p10" type="currency" public-name="st_HBEE8.06LimRes_c">
+        <text>
+          <base>the countable resource limit for the person under HBEE 8.06(c)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b6" type="boolean" public-name="st_adjNetIncTestPerHBEE8.06b_b">
+        <text>
+          <base>there is an adjusted net income test for the program under HBEE 8.06(b) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adjusted net income test for the program under HBEE 8.06(b) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" public-name="st_countResTestPerHBEE8.06c_b">
+        <text>
+          <base>there is a countable resource test for the program under HBEE 8.06(c) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('a countable resource test for the program under HBEE 8.06(c) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

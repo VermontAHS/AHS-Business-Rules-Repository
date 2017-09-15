@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-script product-version="10.4.6.76" schema-version="4">
+  <test-case-set>
+    <test-case name="Ineligible - Incarcerated" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="si_instMedCorrections_b" text="the person's medical institution is under the control of the corrections system" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesInstMedInpatien_b" text="the person is in an inpatient medical institution" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesFacCorrections_b" text="the person is living in a correctional facility" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE_20.02_Correctional_Facility_Satisfied_b" text="HBEE 20.02 is satisfied for the person (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so-HBEE_20.02c_Satisfied_for_person.b" text="HBEE 20.02(c) is satisfied for the person (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE20.02Apply20140730_b" text="HBEE 20.02 applies to the person (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_person_receiving_mediciad_b" text="the person is currently receiving Medicaid benefits" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE20.02dSuspend20140730_b" text="the person's enrollment is suspended under HBEE 20.02(d) (eff. 07/30/2014)" type="boolean" />
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2017" />
+      </ent-set>
+    </test-case>
+    <test-case name="Suspended - Incarcerated" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="si_instMedCorrections_b" text="the person's medical institution is under the control of the corrections system" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesInstMedInpatien_b" text="the person is in an inpatient medical institution" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesFacCorrections_b" text="the person is living in a correctional facility" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE_20.02_Correctional_Facility_Satisfied_b" text="HBEE 20.02 is satisfied for the person (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE20.02Apply20140730_b" text="HBEE 20.02 applies to the person (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE20.02dSuspend20140730_b" text="the person's enrollment is suspended under HBEE 20.02(d) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_person_receiving_mediciad_b" text="the person is currently receiving Medicaid benefits" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so-HBEE_20.02c_Satisfied_for_person.b" text="HBEE 20.02(c) is satisfied for the person (eff. 07/30/2014)" type="boolean" />
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2017" />
+      </ent-set>
+    </test-case>
+    <test-case name="Eligible - Not Incarcerated" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_HBEE_20.02_Correctional_Facility_Satisfied_b" text="HBEE 20.02 is satisfied for the person (eff. 07/30/2014)" type="boolean" />
+          <attr-inst name="so_HBEE20.02Apply20140730_b" text="HBEE 20.02 applies to the person (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_livesFacCorrections_b" text="the person is living in a correctional facility" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_receiving_mediciad_b" text="the person is currently receiving Medicaid benefits" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE20.02dSuspend20140730_b" text="the person's enrollment is suspended under HBEE 20.02(d) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so-HBEE_20.02c_Satisfied_for_person.b" text="HBEE 20.02(c) is satisfied for the person (eff. 07/30/2014)" type="boolean" />
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2017" />
+      </ent-set>
+    </test-case>
+  </test-case-set>
+  <outcome-set>
+    <outcome name="so_HBEE_20.02_Correctional_Facility_Satisfied_b" display-name="so_HBEE_20.02_Correctional_Facility_Satisfied_b" text="HBEE 20.02 is satisfied for the person (eff. 07/30/2014)" type="boolean" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <boolean-val>true</boolean-val>
+      </default-change-points>
+    </outcome>
+    <outcome name="so-HBEE_20.02c_Satisfied_for_person.b" display-name="so-HBEE_20.02c_Satisfied_for_person.b" text="HBEE 20.02(c) is satisfied for the person (eff. 07/30/2014)" type="boolean" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <boolean-val>false</boolean-val>
+      </default-change-points>
+    </outcome>
+    <outcome name="so_HBEE20.02Apply20140730_b" display-name="so_HBEE20.02Apply20140730_b" text="HBEE 20.02 applies to the person (eff. 07/30/2014)" type="boolean" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+    <outcome name="so_HBEE20.02dSuspend20140730_b" display-name="so_HBEE20.02dSuspend20140730_b" text="the person's enrollment is suspended under HBEE 20.02(d) (eff. 07/30/2014)" type="boolean" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+  </outcome-set>
+</test-script>

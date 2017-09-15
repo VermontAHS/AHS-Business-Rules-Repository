@@ -1,0 +1,490 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity ref="global">
+      <attribute name="p8" type="number" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the post 2014 adjusted employee required contribution percentage</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.02 is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.02',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b2" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the employer-sponsored plan the person as an employee or related individual may enroll in is considered affordable under HBEE 23.02 (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(relate,t(simple,past,normal)),sb('the employer-sponsored plan the person as an employee or',plural),o('individual may enroll in is considered affordable under HBEE 23.02 (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.02(a) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.02(a)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.02(a)(1) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.02(a)(1)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.02(a)(2) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.02(a)(2)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.02(a)(3) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.02(a)(3)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's eligible employer-sponsored coverage is considered affordable under HBEE 23.02(a)(1) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person''s eligible employer-sponsored coverage',singular),o('affordable under HBEE 23.02(a)(1) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the portion of the annualized premium that the person would pay for self-only coverage through the person's employer-sponsored plan exceeds the required contribution amount for the person's household under HBEE 23.02(a)(1) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exceed,t(simple,present,normal)),sb('the portion of the annualized premium that the person would pay for self-only coverage through the person''s employer-sponsored plan',singular),o('the required contribution amount for the person''s household under HBEE 23.02(a)(1) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the portion of the annualized premium that the employee would pay for self-only coverage through the person's employer-sponsored plan exceeds the required contribution amount for the person's household under HBEE 23.02(a)(2) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(exceed,t(simple,present,normal)),sb('the portion of the annualized premium that the employee would pay for self-only coverage through the person''s employer-sponsored plan',singular),o('the required contribution amount for the person''s household under HBEE 23.02(a)(2) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is an employee or a related individual who is eligible for safe harbor under HBEE 23.02(a)(3)(i) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('an employee or a related individual who is eligible for safe harbor under HBEE 23.02(a)(3)(i) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's employer-sponsored plan was determined to be unaffordable at the time of the person's QHP enrollment</base>
+          <parse>s(ver('10.4.6.76'),v(determine,t(simple,past,normal)),ob('the person''s employer-sponsored plan',singular),o('to be unaffordable at the time of the person''s QHP enrollment'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the MEC benefit plan month being evaluated for the person is after 2014</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the MEC benefit plan month being evaluated for the person',singular),o('after 2014'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the MEC benefit plan month being evaluated for the person is 2014</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the MEC benefit plan month being evaluated for the person',singular),o('2014'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is an employee of an employer offering an eligible employer-sponsored plan</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('an employee of an employer offering an eligible employer-sponsored plan'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered a related individual for an eligible employer-sponsored plan under HBEE 23.01(c)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('a related individual for an eligible employer-sponsored plan under HBEE 23.01(c)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's eligible employer-sponsored coverage is considered affordable under HBEE 23.02(a)(2) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person''s eligible employer-sponsored coverage',singular),o('affordable under HBEE 23.02(a)(2) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is currently enrolled in a QHP</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('currently enrolled in a QHP'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.02(a)(3)(iii) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 23.02(a)(3)(iii)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person provided incorrect information with reckless disregard for the facts concerning the annualized premium that the employee would pay for self-only coverage through the person's employer-sponsored plan</base>
+          <parse>s(ver('10.4.6.76'),v(provide,t(simple,past,normal)),sb('the person',plural),o('incorrect information with reckless disregard for the facts concerning the annualized premium that the employee would pay for self-only coverage through the person''s employer-sponsored plan'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.02(a)(1) applies to the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 23.02(a)(1)',singular),o('to the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.02(a)(2) applies to the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 23.02(a)(2)',singular),o('to the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p2" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the required contribution amount for the person's household under HBEE 23.02(c) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p3" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the annualized premium that the employee would pay for self-only coverage through the person's employer-sponsored plan </base>
+        </text>
+      </attribute>
+      <attribute name="p6" type="number" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 23.02(c) the person's required contribution percentage for the benefit year (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p7" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's applicable tax filer's household income for the benefit year</base>
+        </text>
+      </attribute>
+      <attribute name="p9" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the annualized premium that the person would pay for self-only coverage through the person's employer-sponsored plan </base>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="HBEE 23.02 is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b1" folder="1" source-offset="79">
+      <rule-xml>
+        <conclude attr-id="b1" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b2" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the employer-sponsored plan the person as an employee or related individual may enroll in is considered affordable under HBEE 23.02 (eff. 08/01/2016)" ruleburst="true" concludes="b2" folder="1" source-offset="300">
+      <rule-xml>
+        <conclude attr-id="b2" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b3" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="HBEE 23.02(a) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b3" folder="2" source-offset="552">
+      <rule-xml>
+        <conclude attr-id="b3" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <and>
+                <attribute attr-id="b25" />
+                <or>
+                  <not>
+                    <attribute attr-id="b25" />
+                  </not>
+                  <attribute attr-id="b5" />
+                </or>
+              </and>
+              <and>
+                <attribute attr-id="b26" />
+                <or>
+                  <not>
+                    <attribute attr-id="b26" />
+                  </not>
+                  <attribute attr-id="b7" />
+                </or>
+              </and>
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="HBEE 23.02(a)(1) applies to the person (eff. 08/01/2016)" ruleburst="true" concludes="b25" folder="3" source-offset="1113">
+      <rule-xml>
+        <conclude attr-id="b25" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b18" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="HBEE 23.02(a)(1) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b5" folder="3" source-offset="1273">
+      <rule-xml>
+        <conclude attr-id="b5" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b9" />
+              <and>
+                <not>
+                  <attribute attr-id="b9" />
+                </not>
+                <attribute attr-id="b8" />
+              </and>
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="the person's eligible employer-sponsored coverage is considered affordable under HBEE 23.02(a)(1) (eff. 08/01/2016)" ruleburst="true" concludes="b9" folder="3" source-offset="1674">
+      <rule-xml>
+        <conclude attr-id="b9" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <not>
+              <attribute attr-id="b10" />
+            </not>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="the portion of the annualized premium that the person would pay for self-only coverage through the person's employer-sponsored plan exceeds the required contribution amount for the person's household under HBEE 23.02(a)(1) (eff. 08/01/2016)" ruleburst="true" concludes="b10" folder="3" source-offset="2059">
+      <rule-xml>
+        <conclude attr-id="b10" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <greater-than>
+              <attribute attr-id="p9" />
+              <attribute attr-id="p2" />
+            </greater-than>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="7" name="HBEE 23.02(a)(2) applies to the person (eff. 08/01/2016)" ruleburst="true" concludes="b26" folder="4" source-offset="2905">
+      <rule-xml>
+        <conclude attr-id="b26" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b20" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="8" name="HBEE 23.02(a)(2) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b7" folder="4" source-offset="3085">
+      <rule-xml>
+        <conclude attr-id="b7" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b21" />
+              <and>
+                <not>
+                  <attribute attr-id="b21" />
+                </not>
+                <attribute attr-id="b8" />
+              </and>
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="9" name="the person's eligible employer-sponsored coverage is considered affordable under HBEE 23.02(a)(2) (eff. 08/01/2016)" ruleburst="true" concludes="b21" folder="4" source-offset="3488">
+      <rule-xml>
+        <conclude attr-id="b21" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <not>
+              <attribute attr-id="b11" />
+            </not>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="10" name="the portion of the annualized premium that the employee would pay for self-only coverage through the person's employer-sponsored plan exceeds the required contribution amount for the person's household under HBEE 23.02(a)(2) (eff. 08/01/2016)" ruleburst="true" concludes="b11" folder="4" source-offset="3876">
+      <rule-xml>
+        <conclude attr-id="b11" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <greater-than>
+              <attribute attr-id="p3" />
+              <attribute attr-id="p2" />
+            </greater-than>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="11" name="HBEE 23.02(a)(3) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b8" folder="5" source-offset="4401">
+      <rule-xml>
+        <conclude attr-id="b8" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b12" />
+              <or>
+                <not>
+                  <attribute attr-id="b12" />
+                </not>
+                <attribute attr-id="b23" />
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="12" name="the person is an employee or a related individual who is eligible for safe harbor under HBEE 23.02(a)(3)(i) (eff. 08/01/2016)" ruleburst="true" concludes="b12" folder="5" source-offset="4830">
+      <rule-xml>
+        <conclude attr-id="b12" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b22" />
+              <or>
+                <not>
+                  <attribute attr-id="b22" />
+                </not>
+                <attribute attr-id="b13" />
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="13" name="HBEE 23.02(a)(3)(iii) is not satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="not b23" folder="5" source-offset="5201">
+      <rule-xml>
+        <conclude attr-id="b23" entity-id="person" scope-id="person0">
+          <value>
+            <false-value />
+          </value>
+          <condition>
+            <attribute attr-id="b24" />
+          </condition>
+          <otherwise>
+            <true-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="14" name="the required contribution amount for the person's household under HBEE 23.02(c) (eff. 08/01/2016) " ruleburst="true" concludes="p2 = (p6 * p7) / 100" folder="6" source-offset="5678">
+      <rule-xml>
+        <conclude attr-id="p2" entity-id="person" scope-id="person0">
+          <value>
+            <divide>
+              <multiply>
+                <attribute attr-id="p6" />
+                <attribute attr-id="p7" />
+              </multiply>
+              <number-value>100</number-value>
+            </divide>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="15" name="HBEE 23.02(c) the person's required contribution percentage for the benefit year (eff. 08/01/2016)" ruleburst="true" concludes="p6" folder="6" source-offset="5990">
+      <rule-xml>
+        <table-conclude attr-id="p6" entity-id="person" scope-id="person0">
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p8" />
+              </scope-for>
+            </value>
+            <condition>
+              <attribute attr-id="b14" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>9.5</number-value>
+            </value>
+            <condition>
+              <attribute attr-id="b15" />
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="23.02 Affordable coverage for employer-sponsored MEC (08/01/2016, 16-02FP)" parent="0" id="1" />
+    <folder text="HBEE 23.02(a):  General" parent="1" id="2" />
+    <folder text="HBEE 23.02(a)(1):  Affordability for employee" parent="2" id="3" />
+    <folder text="HBEE 23.02(a)(2):  Affordability for related individual" parent="2" id="4" />
+    <folder text="HBEE 23.02(a)(3):  Employee safe harbor" parent="2" id="5" />
+    <folder text="HBEE 23.02(c): Required contribution percentage" parent="1" id="6" />
+  </rule-folders>
+</root>

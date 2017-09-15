@@ -1,0 +1,1340 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity ref="global">
+      <attribute name="p1" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>this state's abbreviation</base>
+        </text>
+      </attribute>
+      <attribute name="p2" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>this state</base>
+        </text>
+      </attribute>
+      <attribute name="p3" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>this state's government</base>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships />
+  <rules>
+    <rule ruleburst="true" folder="0" name="this state" id="1" concludes="p2">
+      <rule-xml>
+        <table-conclude attr-id="p2" entity-id="global" scope-id="global0">
+          <row>
+            <value>
+              <string-value>Alabama</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>AL</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Alaska</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>AK</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Arizona</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>AZ</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Arkansas</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>AR</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>California</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>CA</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Colorado</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>CO</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Connecticut</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>CT</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Delaware</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>DE</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Washington, D.C.</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>DC</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Florida</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>FL</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Georgia</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>GA</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Hawaii</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>HI</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Idaho</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>ID</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Illinois</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>IL</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Indiana</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>IN</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Iowa</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>IA</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Kansas</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>KS</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Kentucky</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>KY</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Louisiana</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>LA</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Maine</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>ME</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Maryland</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>MD</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Massachusetts</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>MA</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Michigan</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>MI</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Minnesota</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>MN</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Mississippi</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>MS</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Missouri</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>MO</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Montana</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>MT</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Nebraska</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>NE</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Nevada</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>NV</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>New Hampshire</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>NH</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>New Jersey</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>NJ</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>New Mexico</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>NM</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>New York</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>NY</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>North Carolina</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>NC</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>North Dakota</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>ND</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Ohio</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>OH</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Oklahoma</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>OK</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Oregon</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>OR</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Pennsylvania</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>PA</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Rhode Island</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>RI</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>South Carolina</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>SC</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>South Dakota</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>SD</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Tennessee</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>TN</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Texas</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>TX</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Utah</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>UT</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Vermont</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>VT</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Virginia</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>VA</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Washington</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>WA</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>West Virginia</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>WV</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Wisconsin</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>WI</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Wyoming</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>WY</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>American Samoa</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>AS</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Guam</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>GU</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the Northern Mariana Islands</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>MP</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Puerto Rico</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>PR</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the U.S. Virgin Islands</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>VI</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the Federated States of Micronesia</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>FM</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the Marshall Islands</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>MH</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Palau</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>PW</string-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <string-value>uncertain</string-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="this state's government" id="2" concludes="p3">
+      <rule-xml>
+        <table-conclude attr-id="p3" entity-id="global" scope-id="global0">
+          <row>
+            <value>
+              <string-value>the State of Alabama</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>AL</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Alaska</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>AK</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Arizona</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>AZ</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Arkansas</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>AR</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of California</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>CA</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Colorado</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>CO</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Connecticut</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>CT</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Delaware</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>DE</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the District of Columbia</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>DC</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Florida</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>FL</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Georgia</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>GA</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Hawaii</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>HI</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Idaho</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>ID</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Illinois</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>IL</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Indiana</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>IN</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Iowa</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>IA</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Kansas</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>KS</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the Commonwealth of Kentucky</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>KY</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Louisiana</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>LA</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Maine</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>ME</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Maryland</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>MD</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the Commonwealth of Massachusetts</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>MA</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Michigan</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>MI</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Minnesota</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>MN</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Mississippi</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>MS</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Missouri</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>MO</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Montana</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>MT</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Nebraska</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>NE</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Nevada</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>NV</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of New Hampshire</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>NH</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of New Jersey</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>NJ</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of New Mexico</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>NM</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of New York</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>NY</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of North Carolina</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>NC</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of North Dakota</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>ND</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Ohio</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>OH</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Oklahoma</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>OK</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Oregon</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>OR</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the Commonwealth of Pennsylvania</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>PA</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Rhode Island and Providence Plantations</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>RI</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of South Carolina</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>SC</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of South Dakota</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>SD</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Tennessee</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>TN</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Texas</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>TX</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Utah</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>UT</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Vermont</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>VT</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the Commonwealth of Virginia</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>VA</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Washington</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>WA</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of West Virginia</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>WV</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Wisconsin</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>WI</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the State of Wyoming</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>WY</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>American Samoa</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>AS</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Guam</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>GU</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the Commonwealth of the Northern Mariana Islands</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>MP</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the Commonwealth of Puerto Rico</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>PR</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the Virgin Islands of the United States</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>VI</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the Federated States of Micronesia</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>FM</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the Republic of the Marshall Islands</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>MH</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>the Republic of Palau</string-value>
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p1" />
+                <string-value>PW</string-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <string-value>uncertain</string-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+</root>

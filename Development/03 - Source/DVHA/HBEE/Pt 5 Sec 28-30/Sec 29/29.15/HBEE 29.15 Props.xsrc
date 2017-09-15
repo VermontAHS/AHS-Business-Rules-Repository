@@ -1,0 +1,393 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b11" type="boolean" public-name="st_pHBEE2915a2AppliesEff080116_b">
+        <text>
+          <base>HBEE 29.15(a)(2) applies to the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.15(a)(2)',singular),o('to the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" public-name="st_pHBEE2915a3AppliesEff080116_b">
+        <text>
+          <base>HBEE 29.15(a)(3) applies to the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.15(a)(3)',singular),o('to the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="p9" type="currency" public-name="so_HBEE29.15a2IncDedEarn20160801_c">
+        <text>
+          <base>the person's earned income deduction for the program under HBEE 29.15(a)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p10" type="currency" public-name="so_HBEE29.15a3IncDedEarn20160801_c">
+        <text>
+          <base>the person's earned income deduction for the program under HBEE 29.15(a)(3) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p11" type="currency" public-name="so_HBEE29.15bIncDedUnearn20160801_c">
+        <text>
+          <base>the person's unearned income deduction for the program under HBEE 29.15(b) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p12" type="currency" public-name="so_HBEE29.15a1IncDedEarn20160801_c">
+        <text>
+          <base>the person's earned income deduction for the program under HBEE 29.15(a)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="b52" type="boolean" public-name="st_pgHBEEAplsToPrgm_b">
+        <text>
+          <base>HBEE 29.15 applies to the program</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.15',singular),o('to the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b53" type="boolean" public-name="st_pgHBEE2915AplsToPrgmEff080116_b">
+        <text>
+          <base>HBEE 29.15 applies to the program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.15',singular),o('to the program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p14" type="currency">
+        <text>
+          <base>the earned income deduction for the person's financial responsibility group for the program under HBEE 29.15(a)(1)</base>
+        </text>
+      </attribute>
+      <attribute name="p15" type="currency">
+        <text>
+          <base>the earned income deduction for the person's financial responsibility group for the program under HBEE 29.15(a)(2)</base>
+        </text>
+      </attribute>
+      <attribute name="p16" type="currency">
+        <text>
+          <base>the earned income deduction for the person's financial responsibility group for the program under HBEE 29.15(a)(3)</base>
+        </text>
+      </attribute>
+      <attribute name="p17" type="currency">
+        <text>
+          <base>the unearned income deduction for the person's financial responsibility group for the program under HBEE 29.15(b)</base>
+        </text>
+      </attribute>
+      <attribute name="p18" type="currency">
+        <text>
+          <base>the earned income deduction for the person's financial responsibility group for the program under HBEE 29.15(a)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p19" type="currency">
+        <text>
+          <base>the earned income deduction for the person's financial responsibility group for the program under HBEE 29.15(a)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p20" type="currency">
+        <text>
+          <base>the earned income deduction for the person's financial responsibility group for the program under HBEE 29.15(a)(3) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p21" type="currency">
+        <text>
+          <base>the unearned income deduction for the person's financial responsibility group for the program under HBEE 29.15(b) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+      <attribute name="b2" type="boolean" public-name="st_peDctblFrmSlfEmplIncUndHBEE2915a1Eff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(a)(1) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(a)(1) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" public-name="st_peDctblFrmSlfEmplIncUndHBEE2915a2Eff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(a)(2) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(a)(2) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" public-name="st_peDctblFrmSlfEmplIncUndHBEE2915a3Eff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(a)(3) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(a)(3) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" public-name="st_peDctblFrmSlfEmplIncUndHBEE2915a1iEff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(a)(1)(i) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(a)(1)(i) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" public-name="st_peDctblFrmSlfEmplIncUndHBEE2915a1iiEff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(a)(1)(ii) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(a)(1)(ii) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" public-name="st_peDctblFrmSlfEmplIncUndHBEE2915a1iiiEff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(a)(1)(iii) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(a)(1)(iii) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" public-name="st_peDctblFrmSlfEmplIncUndHBEE2915a1ivEff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(a)(1)(iv) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(a)(1)(iv) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" public-name="st_peDctblFrmSlfEmplIncUndHBEE2915a1vEff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(a)(1)(v) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(a)(1)(v) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" public-name="st_peDctblFrmSlfEmplIncUndHBEE2915a1viEff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(a)(1)(vi) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(a)(1)(vi) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" public-name="st_peDctblFrmSlfEmplIncUndHBEE2915a2iEff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(a)(2)(i) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(a)(2)(i) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" public-name="st_peDctblFrmSlfEmplIncUndHBEE2915a2iiEff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(a)(2)(ii) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(a)(2)(ii) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" public-name="st_peDctblFrmSlfEmplIncUndHBEE2915a2iiiEff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(a)(2)(iii) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(a)(2)(iii) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" public-name="st_peDctblFrmSlfEmplIncUndHBEE2915a2ivEff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(a)(2)(iv) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(a)(2)(iv) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" public-name="st_peDctblFrmSlfEmplIncUndHBEE2915a2vEff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(a)(2)(v) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(a)(2)(v) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" public-name="st_peDctblFrmSlfEmplIncUndHBEE2915a2viEff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(a)(2)(vi) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(a)(2)(vi) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" public-name="st_peDctblFrmSlfEmplIncUndHBEE2915a2viiEff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(a)(2)(vii) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(a)(2)(vii) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" public-name="st_peDctblFrmSlfEmplIncUndHBEE2915a2viiiEff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(a)(2)(viii) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(a)(2)(viii) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" public-name="st_peDctblFrmSlfEmplIncUndHBEE2915a2ixEff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(a)(2)(ix) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(a)(2)(ix) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" public-name="st_peDctblFrmSlfEmplIncUndHBEE2915a2xEff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(a)(2)(x) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(a)(2)(x) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" public-name="si_peIsBsnOptgCsts_b">
+        <text>
+          <base>the person's expense is business operating costs</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('business operating costs'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" public-name="si_peIsCstMlsPrvdChldPrvdDyCrInHm_b">
+        <text>
+          <base>the person's expense is the cost of any meals provided to children for whom an individual provides day care in their own home</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('the cost of any meals provided to children for whom an individual provides day care in their own home'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" public-name="si_peIsActlOpExpnsNcsryPrdcCshRcptsFrCmrclBrdgHs_b">
+        <text>
+          <base>the person's expense is the actual operating expenses necessary to produce cash receipts for commercial boarding houses</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('the actual operating expenses necessary to produce cash receipts for commercial boarding houses'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" public-name="si_peIsAlwblRmBrd_b">
+        <text>
+          <base>the person's expense is allowable room and board</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('allowable room and board'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" public-name="si_peIsFstrCrPmtsMdToLcnsdFCHms_b">
+        <text>
+          <base>the person's expense is foster care payments made by AHS to licensed foster homes</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('foster care payments made by AHS to licensed foster homes'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" public-name="si_peIsOrdyNcsryExpFrActMgmtCptlInvst_b">
+        <text>
+          <base>the person's expense is ordinary and necessary expenses for active management of capital investments</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('ordinary and necessary expenses for active management of capital investments'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" public-name="si_peIsCstPrchCrgFrGdDog_b">
+        <text>
+          <base>the person's expense is the cost of purchasing and caring for a guide dog</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('the cost of purchasing and caring for a guide dog'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" public-name="si_peIsWrkRltdFees_b">
+        <text>
+          <base>the person's expense is work-related fees</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('work-related fees'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean" public-name="si_peIsTrptnToFrmWrk_b">
+        <text>
+          <base>the person's expense is transportation to and from work including vehicle modifications</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('transportation to and from work including vehicle modifications'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean" public-name="si_peIsImptRltdTrng_b">
+        <text>
+          <base>the person's expense is impairment related training</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('impairment related training'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean" public-name="si_peIsFdrlStLclIncTxs_b">
+        <text>
+          <base>the person's expense is federal state and local income taxes</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('federal state and local income taxes'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b34" type="boolean" public-name="si_peIsSSTxsMdtryPnsnCtrbns_b">
+        <text>
+          <base>the person's expense is social security taxes and mandatory pension contributions</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('social security taxes and mandatory pension contributions'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" public-name="si_peIsMlsCnsmdDrgWrkHrs_b">
+        <text>
+          <base>the person's expense is meals consumed during work hours</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('meals consumed during work hours'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" public-name="si_peIsAtndtCrSrvcs_b">
+        <text>
+          <base>the person's expense is attendant care services</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('attendant care services'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" public-name="si_peIsStrctlModsToHome_b">
+        <text>
+          <base>the person's expense is structural modifications to the home</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('structural modifications to the home'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b38" type="boolean" public-name="si_peIsMdclDvc_b">
+        <text>
+          <base>the person's expense is a medical device</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a medical device'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b39" type="boolean" public-name="st_peDctblFrmSlfEmplIncUndHBEE2915a3iEff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(a)(3)(i) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(a)(3)(i) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b40" type="boolean" public-name="st_peDctblFrmSlfEmplIncUndHBEE2915a3iiEff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(a)(3)(ii) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(a)(3)(ii) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b41" type="boolean" public-name="st_peDctblFrmSlfEmplIncUndHBEE2915a3iiiEff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(a)(3)(iii) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(a)(3)(iii) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b42" type="boolean" public-name="st_peDctblFrmSlfEmplIncUndHBEE2915a3ivEff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(a)(3)(iv) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(a)(3)(iv) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b43" type="boolean" public-name="st_peDctblFrmSlfEmplIncUndHBEE2915a3vEff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(a)(3)(v) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(a)(3)(v) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b44" type="boolean" public-name="st_peDctblFrmUnrndIncUndHBEE2915bEff080116_b">
+        <text>
+          <base>the person's expense is deductible under HBEE 29.15(b) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible under HBEE 29.15(b) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b45" type="boolean" public-name="si_peIsAmtUsdCmplyWTrmsCrtOrdrdSprt_b">
+        <text>
+          <base>the person's expense is an amount used to comply with the terms of court-ordered support</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an amount used to comply with the terms of court-ordered support'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b46" type="boolean" public-name="si_peIsTtlIVDSprtPymt_b">
+        <text>
+          <base>the person's expense is a Title IV-D support payment</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a Title IV-D support payment'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b47" type="boolean" public-name="si_expBusinessSelf_b">
+        <text>
+          <base>the person's expense is a business expense from self-employment income</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a business expense from self-employment income'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

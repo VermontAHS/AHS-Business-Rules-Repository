@@ -1,0 +1,74 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+      <attribute name="p13" type="number" public-name="st_rmaPeriodMonths_n">
+        <text>
+          <base>the number of months in the RMA eligibility period under RMA 5120 (eff. 12/01/2005)</base>
+        </text>
+      </attribute>
+      <attribute name="p14" type="number" public-name="st_RMA5120TimelyNoticeDays20051201_n">
+        <text>
+          <base>the number of days for a timely notice of adverse action under RMA 5120 (eff. 12/01/2005)</base>
+        </text>
+      </attribute>
+      <attribute name="p15" type="number">
+        <text>
+          <base>the number of days for a timely notice of adverse action under RMA 5120</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-parent-id="person" containment-relationship-id="personsprograms">
+    </entity>
+    <entity id="person" name="the person" containment-parent-id="global" containment-relationship-id="people">
+      <attribute name="p5" type="date" public-name="si_perRMAEligPerStartDte_d">
+        <text>
+          <base>the start of the person's RMA eligibility period under RMA 5120 (eff. 12/01/2005)</base>
+        </text>
+      </attribute>
+      <attribute name="p7" type="date" public-name="si_perFirstDayMnRefugeeDteOfEntry_d">
+        <text>
+          <base>the first day of the month of the person's initial date of entry</base>
+        </text>
+      </attribute>
+      <attribute name="p8" type="date" public-name="si_perFirstDayMnAsyleeGrantAsylum_d">
+        <text>
+          <base>the first day of the month in which the person was granted asylum</base>
+        </text>
+      </attribute>
+      <attribute name="p12" type="number" public-name="st_rmaPeriodMonthSinceStart_n">
+        <text>
+          <base>the number of months since the start of the person's RMA eligibility period under RMA 5120 (eff. 12/01/2005)</base>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" public-name="so_RMAFinOther_b">
+        <text>
+          <base>the person meets the financial eligibility requirements under RMA 5120 (eff. 12/01/2005)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the financial eligibility requirements under RMA 5120 (eff. 12/01/2005)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" public-name="so_RMATimeLimit_b">
+        <text>
+          <base>there is time remaining in the person's RMA eligibility period under RMA 5120 (eff. 12/01/2005)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('time remaining in the person''s RMA eligibility period under RMA 5120 (eff. 12/01/2005)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" public-name="si_ineligMedicaidEarnIncr_b">
+        <text>
+          <base>the person became ineligible for Medicaid coverage due to increased earnings</base>
+          <parse>s(ver('10.4.6.76'),v(become,t(simple,past,normal)),sb('the person',plural),o('ineligible for Medicaid coverage due to increased earnings'))</parse>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="person" target="program" is-containment="true" public-id="personsprograms" reverse-public-id="programsperson" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" />
+    <relationship source="global" target="person" is-containment="true" public-id="people" reverse-public-id="global_people_rev" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

@@ -1,0 +1,153 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity ref="global">
+      <attribute name="p1" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the number of months of potential retroactive eligibility under HBEE 70.01(b) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 70.01 applies to the program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 70.01',singular),o('to the program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b2" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is a Medicaid program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('a Medicaid program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the benefit effective date is the first day of the month in which the person is determined eligible for the program under HBEE 70.01(a) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the benefit effective date',singular),o('the first day of the month in which the person is determined eligible for the program under HBEE 70.01(a) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is a potential retroactive eligibility period for the program under HBEE 70.01(b) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('a potential retroactive eligibility period for the program under HBEE 70.01(b) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is a medically-needy program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('a medically-needy program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has a spenddown for the program</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('a spenddown for the program'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b6" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 70.01(b)(1)(ii) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 70.01(b)(1)(ii)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person incurred medical expenses during the month</base>
+          <parse>s(ver('10.4.6.76'),v(incur,t(simple,past,normal)),sb('the person',plural),o('medical expenses during the month'))</parse>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="HBEE 70.01 applies to the program (eff. 08/01/2016)" ruleburst="true" concludes="b1" folder="1" source-offset="91">
+      <rule-xml>
+        <conclude attr-id="b1" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b2" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the benefit effective date is the first day of the month in which the person is determined eligible for the program under HBEE 70.01(a) (eff. 08/01/2016)" ruleburst="true" concludes="b4" folder="2" source-offset="593">
+      <rule-xml>
+        <conclude attr-id="b4" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <not>
+                <attribute attr-id="b9" />
+              </not>
+              <and>
+                <attribute attr-id="b9" />
+                <not>
+                  <attribute attr-id="b11" />
+                </not>
+              </and>
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="there is a potential retroactive eligibility period for the program under HBEE 70.01(b) (eff. 08/01/2016)" ruleburst="true" concludes="b5" folder="3" source-offset="981">
+      <rule-xml>
+        <conclude attr-id="b5" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b1" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="the number of months of potential retroactive eligibility under HBEE 70.01(b) (eff. 08/01/2016) " ruleburst="true" concludes="p1 = 3" folder="3" source-offset="1153">
+      <rule-xml>
+        <conclude attr-id="p1" entity-id="global" scope-id="global0">
+          <value>
+            <number-value>3</number-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="HBEE 70.01(b)(1)(ii) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b6" folder="3" source-offset="1507">
+      <rule-xml>
+        <conclude attr-id="b6" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b8" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="70.01 Enrollment when no premium obligation (08/01/2016, 16-02FP)" parent="0" id="1" />
+    <folder text="Para (a): Prospective enrollment" parent="1" id="2" />
+    <folder text="Para (b): Retroactive eligibility" parent="1" id="3" />
+  </rule-folders>
+</root>

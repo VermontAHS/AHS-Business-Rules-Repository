@@ -1,0 +1,824 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-script product-version="10.4.6.76" schema-version="4">
+  <test-case-set>
+    <test-case name="Excluded under 29.08(a)" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="true">
+              <ent-inst-ref ref-id="resource 1" />
+            </relationship-inst>
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="resource" entity-text="the person's resource">
+        <ent-inst id="resource 1">
+          <attr-inst name="si_HBEE29.08a1iPrinciplePlaceRes_b" text="the person's resource serves as the person's principal place of residence" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.08aExcluded_b" text="the person's resource is excluded under HBEE 29.08(a) (eff. 08/01/2016)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_ResTypeHome_b" text="the person's resource is a home" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresourcesresourceprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2016" />
+        <ent-inst id="2017" />
+      </ent-set>
+    </test-case>
+    <test-case name="Excluded under 29.08(b)" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="true">
+              <ent-inst-ref ref-id="resource 1" />
+            </relationship-inst>
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="resource" entity-text="the person's resource">
+        <ent-inst id="resource 1">
+          <attr-inst name="si_ResourceLifeInsurance_b" text="the person's resource is life insurance" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.08bApplies_b" text="HBEE 29.08(b) applies to the person's resource (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.08bExcluded_b" text="the person's resource is excluded under HBEE 29.08(b) (eff. 08/01/2016)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_resTypeTermLife_b" text="the person's resource is term life insurance" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresourcesresourceprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+      </ent-set>
+    </test-case>
+    <test-case name="Excluded up to $10k under29.08(c)" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="st_HBEE29.08cExclusion20160801_c" text="the burial funds exclusion for the person under HBEE 29.08(c) (eff. 08/01/2016)" type="currency">
+            <expected-val>
+              <currency-val>10000.0</currency-val>
+            </expected-val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="true">
+              <ent-inst-ref ref-id="resource 1" />
+            </relationship-inst>
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="resource" entity-text="the person's resource">
+        <ent-inst id="resource 1">
+          <attr-inst name="si_DesBurialExpenseTitleFunds_b" text="the person is able to demonstrate that the person's resource is designated for burial expenses through the title to the funds" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.08bApplies_b" text="HBEE 29.08(b) applies to the person's resource (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.08bExcluded_b" text="the person's resource is excluded under HBEE 29.08(b) (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ResourceLifeInsurance_b" text="the person's resource is life insurance" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_BurialFunds_b" text="the person's resource is burial funds" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_IrrTrust_b" text="the person's resource is an irrevocable trust" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resTypeBurialSpcSpChSibPar_b" text="the person's resource is a burial space held for the burial of the person's spouse, child, brother, sister, or parent" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resCommingled_b" text="the person's resource is commingled with other funds" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resJoint_b" text="the person's resource is a jointly-owned resource" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perResAnnuities_b" text="the person's resource is annuities" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perResLifeEstate_b" text="the person's resource is a life estate" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perResUSSavBonds_b" text="the person's resource is U. S. savings bonds" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perResIncPromsNotesContr_b" text="the person's resource is income-producing promissory notes and contracts" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ResTypeHome_b" text="the person's resource is a home" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_fairMrktValPerResource_c" text="the fair market value of the person's resource" type="currency">
+            <val>
+              <currency-val>12000.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_res_value-encumbrance" text="the total amount owed in mortgages, liens or other encumbrances on the person's resource" type="currency">
+            <val>
+              <currency-val>0.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE29.09Val_c" text="the countable value of the person's resource under HBEE 29.09" type="currency">
+            <val>
+              <currency-val>12000.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresourcesresourceprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2016" />
+        <ent-inst id="2013" />
+      </ent-set>
+    </test-case>
+    <test-case name="Not excluded under 29.08(d), but applies" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="true">
+              <ent-inst-ref ref-id="resource 1" />
+            </relationship-inst>
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="resource" entity-text="the person's resource">
+        <ent-inst id="resource 1">
+          <attr-inst name="si_NoBenePersonSpouse_b" text="the person's resource has a beneficiary other than the person or the person's spouse" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.08dExcluded_b" text="the person's resource is excluded under HBEE 29.08(d) (eff. 08/01/2016)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.08dApplies_b" text="HBEE 29.08(d) applies to the person's resource (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_Annuity_b" text="the person's resource is an annuity" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_PayOutPhase_b" text="the person's resource is in its pay-out phase" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_PromNote_b" text="the person's resource is a promissory note or similar resource" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resPayEqual_b" text="the person's resource provides payments to the beneficiary in equal intervals and equal amounts" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resExceedLifeExp_b" text="the person's resource exceeds the life expectancy of the beneficiary" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resBeneResidual_b" text="the person's resource designates a residual beneficiary" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resBeneResidualPrimVT_b" text="the person has designated Vermont Medicaid as the primary residual beneficiary of the person's resource up to the amount of Medicaid payments made on behalf of the person" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resBeneResidContingNotSp_b" text="the person has designated a contingent residual beneficiary other than the person or person's spouse to receive any surplus from the person's resource after Vermont Medicaid is paid" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresourcesresourceprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2014" />
+        <ent-inst id="2015" />
+        <ent-inst id="2016" />
+        <ent-inst id="2013" />
+      </ent-set>
+    </test-case>
+    <test-case name="Excluded under 29.08(e)" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="true">
+              <ent-inst-ref ref-id="resource 1" />
+            </relationship-inst>
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="resource" entity-text="the person's resource">
+        <ent-inst id="resource 1">
+          <attr-inst name="st_HBEE29.08eExcluded_b" text="the person's resource is excluded under HBEE 29.08(e) (eff. 08/01/2016)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_Trusts_b" text="the person's resource is a trust" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_RevokeTrustProp_b" text="the person cannot revoke the trust or receive trust property" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_TrustGrantor_b" text="the person is the grantor of the person's resource" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresourcesresourceprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2013" />
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+    <test-case name="Excluded under 29.08(h), applies to 29.08(h), excluded under 29.08" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="true">
+              <ent-inst-ref ref-id="resource 1" />
+            </relationship-inst>
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="resource" entity-text="the person's resource">
+        <ent-inst id="resource 1">
+          <attr-inst name="st_HBEE29.08hApplies_b" text="HBEE 29.08(h) applies to the person's resource (eff. 08/01/2016)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.08hExcluded_b" text="the person's resource is excluded under HBEE 29.08(h) (eff. 08/01/2016)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_DesignatedJointFid_b" text="the person is designated as a fiduciary of the person's resource" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ResourceJointFid_b" text="the person's resource is a joint fiduciary account in a financial institution" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE29.08ResExcl20160801_b" text="the person's resource is excluded under HBEE 29.08 (eff. 08/01/2016)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_resOwnerFidInst_b" text="it is the case that the owner of the person's resource has made a clear statement about how the money can be used, and the fiduciary is required to follow those instructions and keep track of how the money is spent" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresourcesresourceprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2013" />
+        <ent-inst id="2014" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+    <test-case name="Applies to 29.08(i) but is not excluded from 29.08(i), not excluded under 29.08" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="true">
+              <ent-inst-ref ref-id="resource 1" />
+            </relationship-inst>
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="resource" entity-text="the person's resource">
+        <ent-inst id="resource 1">
+          <attr-inst name="si_Vehicle_b" text="the person's resource is a vehicle" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.08iApplies_b" text="HBEE 29.08(i) applies to the person's resource (eff. 08/01/2016)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.08iExcluded_b" text="the person's resource is excluded under HBEE 29.08(i) (eff. 08/01/2016)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_HouseHoldGoods_b" text="the person's resource is household goods, personal effects and other personal property" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE29.08ResExcl20160801_b" text="the person's resource is excluded under HBEE 29.08 (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="st_ExcludedHBEE29.08i1_b" text="the person's resource is excluded under HBEE 29.08(i)(1) (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.08i2App_b" text="HBEE 29.08(i)(2) applies to the person's resource (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.08i3App_b" text="HBEE 29.08(i)(3) applies to the person's resource (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.08i4App_b" text="HBEE 29.08(i)(4) applies to the person's resource (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_ExcludedHBEE29.08i3_b" text="the person's resource is excluded under HBEE 29.08(i)(3) (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_ExcludedHBEE29.08i4_b" text="the person's resource is excluded under HBEE 29.08(i)(4) (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.08i5App_b" text="HBEE 29.08(i)(5) applies to the person's resource (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_ExcludedHBEE29.08i5_b" text="the person's resource is excluded under HBEE 29.08(i)(5) (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.08i6App_b" text="HBEE 29.08(i)(6) applies to the person's resource (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_ExcludedHBEE29.08i6_b" text="the person's resource is excluded under HBEE 29.08(i)(6) (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.08i7App_b" text="HBEE 29.08(i)(7) applies to the person's resource (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_ExcludedHBEE29.08i7_b" text="the person's resource is excluded under HBEE 29.08(i)(7) (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.08i8App_b" text="HBEE 29.08(i)(8) applies to the person's resource (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_ExcludedHBEE29.08i8_b" text="the person's resource is excluded under HBEE 29.08(i)(8) (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.08i9App_b" text="HBEE 29.08(i)(9) applies to the person's resource (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_ExcludedHBEE29.08i9_b" text="the person's resource is excluded under HBEE 29.08(i)(9) (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE29.08i10Apply20160801_b" text="HBEE 29.08(i)(10) applies to the person's resource (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ExcludedHBEE29.08i10_b" text="the person's resource is excluded under HBEE 29.08(i)(10) (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE29.08i11Apply20160801_b" text="HBEE 29.08(i)(11) applies to the person's resource (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_ExludedProgramHBEE29.08i11_b" text="the person's resource is excluded under HBEE 29.08(i)(11) (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.08aApplies_b" text="HBEE 29.08(a) applies to the person's resource (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.08aExcluded_b" text="the person's resource is excluded under HBEE 29.08(a) (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.08bApplies_b" text="HBEE 29.08(b) applies to the person's resource (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.08bExcluded_b" text="the person's resource is excluded under HBEE 29.08(b) (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.08cExcluded_b" text="the person's resource is excluded under HBEE 29.08(c) (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresourcesresourceprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+      </ent-set>
+    </test-case>
+  </test-case-set>
+  <outcome-set>
+    <outcome name="st_HBEE29.08aExcluded_b" display-name="the person's resource is excluded under HBEE 29.08(a)" text="the person's resource is excluded under HBEE 29.08(a) (eff. 08/01/2016)" type="boolean" entity-type="resource" entity-text="the person's resource">
+      <default-change-points>
+        <boolean-val>true</boolean-val>
+      </default-change-points>
+    </outcome>
+    <outcome name="st_HBEE29.08bExcluded_b" display-name="the person's resource is excluded under HBEE 29.08(b)" text="the person's resource is excluded under HBEE 29.08(b) (eff. 08/01/2016)" type="boolean" entity-type="resource" entity-text="the person's resource">
+      <default-change-points>
+        <boolean-val>true</boolean-val>
+      </default-change-points>
+    </outcome>
+    <outcome name="st_HBEE29.08bApplies_b" display-name="HBEE 29.08(b) applies to the person's resource " text="HBEE 29.08(b) applies to the person's resource (eff. 08/01/2016)" type="boolean" entity-type="resource" entity-text="the person's resource">
+      <default-change-points>
+        <boolean-val>true</boolean-val>
+      </default-change-points>
+    </outcome>
+    <outcome name="st_HBEE29.08cExcluded_b" display-name="the person's resource is excluded under 29.08(c)" text="the person's resource is excluded under HBEE 29.08(c) (eff. 08/01/2016)" type="boolean" entity-type="resource" entity-text="the person's resource">
+      <default-change-points>
+        <boolean-val>true</boolean-val>
+      </default-change-points>
+    </outcome>
+    <outcome name="st_HBEE29.08dExcluded_b" display-name="the person's resource is excluded under HBEE 29.08(d)" text="the person's resource is excluded under HBEE 29.08(d) (eff. 08/01/2016)" type="boolean" entity-type="resource" entity-text="the person's resource">
+      <default-change-points>
+        <boolean-val>false</boolean-val>
+      </default-change-points>
+    </outcome>
+    <outcome name="st_HBEE29.08dApplies_b" display-name="HBEE 29.08(d) applies to the person's resource" text="HBEE 29.08(d) applies to the person's resource (eff. 08/01/2016)" type="boolean" entity-type="resource" entity-text="the person's resource">
+      <default-change-points>
+        <boolean-val>true</boolean-val>
+      </default-change-points>
+    </outcome>
+    <outcome name="st_HBEE29.08eExcluded_b" display-name="the person's resource is excluded under 29.08(e)" text="the person's resource is excluded under HBEE 29.08(e) (eff. 08/01/2016)" type="boolean" entity-type="resource" entity-text="the person's resource">
+      <default-change-points>
+        <boolean-val>true</boolean-val>
+      </default-change-points>
+    </outcome>
+    <outcome name="st_HBEE29.08hApplies_b" display-name="HBEE 29.08(h) applies to the person's resource" text="HBEE 29.08(h) applies to the person's resource (eff. 08/01/2016)" type="boolean" entity-type="resource" entity-text="the person's resource">
+      <default-change-points>
+        <boolean-val>true</boolean-val>
+      </default-change-points>
+    </outcome>
+    <outcome name="st_HBEE29.08hExcluded_b" display-name="the person's resource is excluded under HBEE 29.08(h)" text="the person's resource is excluded under HBEE 29.08(h) (eff. 08/01/2016)" type="boolean" entity-type="resource" entity-text="the person's resource">
+      <default-change-points>
+        <boolean-val>true</boolean-val>
+      </default-change-points>
+    </outcome>
+    <outcome name="so_HBEE29.08ResExcl20160801_b" display-name="the person's resource is excluded under HBEE 29.08" text="the person's resource is excluded under HBEE 29.08 (eff. 08/01/2016)" type="boolean" entity-type="resource" entity-text="the person's resource">
+      <default-change-points>
+        <boolean-val>true</boolean-val>
+      </default-change-points>
+    </outcome>
+    <outcome name="st_HBEE29.08iApplies_b" display-name="HBEE 29.08(i) applies to the person's resource " text="HBEE 29.08(i) applies to the person's resource (eff. 08/01/2016)" type="boolean" entity-type="resource" entity-text="the person's resource">
+      <default-change-points>
+        <boolean-val>true</boolean-val>
+      </default-change-points>
+    </outcome>
+    <outcome name="st_HBEE29.08iExcluded_b" display-name="the person's resource is excluded under HBEE 29.08(i)" text="the person's resource is excluded under HBEE 29.08(i) (eff. 08/01/2016)" type="boolean" entity-type="resource" entity-text="the person's resource">
+      <default-change-points>
+        <boolean-val>false</boolean-val>
+      </default-change-points>
+    </outcome>
+    <outcome name="st_HBEE29.08cExclusion20160801_c" display-name="st_HBEE29.08cExclusion20160801_c" text="the burial funds exclusion for the person under HBEE 29.08(c) (eff. 08/01/2016)" type="currency" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+  </outcome-set>
+</test-script>

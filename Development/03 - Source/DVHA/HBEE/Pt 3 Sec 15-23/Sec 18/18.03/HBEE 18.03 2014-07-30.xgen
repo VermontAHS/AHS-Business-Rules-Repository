@@ -1,0 +1,257 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 18.03 applies to the program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(apply,t(simple,present,normal)),sb('HBEE 18.03',singular),o('to the program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is a Medicaid program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('a Medicaid program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 18.03 is satisfied for the person for the program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 18.03',singular),o('for the person for the program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 18.03(a)(1)(i) applies to the person for the program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 18.03(a)(1)(i)',singular),o('to the person for the program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 18.03(b) applies to the program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 18.03(b)',singular),o('to the program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is MCA-Pregnant</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MCA-Pregnant'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b6" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 18.03(a)(1)(i) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 18.03(a)(1)(i)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 18.03(a)(1)(ii) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 18.03(a)(1)(ii)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is cooperating in establishing paternity and obtaining medical support and payments</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('cooperating in establishing paternity and obtaining medical support and payments'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has established good cause for not cooperating in obtaining benefits under HBEE 18.04</base>
+          <parse>s(ver('10.4.5.40'),v(establish,t(simple,present,perfect)),sb('the person',singular),o('good cause for not cooperating in obtaining benefits under HBEE 18.04'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is cooperating in identifying and providing information to assist in pursuing third parties who may be liable to pay for care and services under the plan</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('cooperating in identifying and providing information to assist in pursuing third parties who may be liable to pay for care and services under the plan'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 18.03(b) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 18.03(b)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is married</base>
+          <parse>s(ver('10.4.6.76'),v(marry,t(simple,present,normal)),ob('the person',singular))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="HBEE 18.03 applies to the program (eff. 07/30/2014)" ruleburst="true" concludes="b1" folder="1" source-offset="85">
+      <rule-xml>
+        <conclude attr-id="b1" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b12" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="HBEE 18.03 is satisfied for the person for the program (eff. 07/30/2014)" ruleburst="true" concludes="b14" folder="1" source-offset="211">
+      <rule-xml>
+        <conclude attr-id="b14" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <or>
+                <not>
+                  <attribute attr-id="b15" />
+                </not>
+                <and>
+                  <attribute attr-id="b15" />
+                  <for>
+                    <relationship relationship-id="programsperson" target-entity-id="person" />
+                    <attribute attr-id="b6" />
+                  </for>
+                </and>
+              </or>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <attribute attr-id="b7" />
+              </for>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="HBEE 18.03(a)(1)(i) does not apply to the person for the program (eff. 07/30/2014)" ruleburst="true" concludes="not b15" folder="2" source-offset="656">
+      <rule-xml>
+        <conclude attr-id="b15" entity-id="program" scope-id="program0">
+          <value>
+            <false-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b16" />
+              <or>
+                <not>
+                  <attribute attr-id="b16" />
+                </not>
+                <for>
+                  <relationship relationship-id="programsperson" target-entity-id="person" />
+                  <attribute attr-id="b17" />
+                </for>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <true-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="HBEE 18.03(a)(1)(i) is not satisfied for the person (eff. 07/30/2014)" ruleburst="true" concludes="not b6" folder="2" source-offset="964">
+      <rule-xml>
+        <conclude attr-id="b6" entity-id="person" scope-id="person0">
+          <value>
+            <false-value />
+          </value>
+          <condition>
+            <and>
+              <not>
+                <unknown>
+                  <attribute attr-id="b8" />
+                </unknown>
+              </not>
+              <not>
+                <attribute attr-id="b8" />
+              </not>
+              <not>
+                <attribute attr-id="b9" />
+              </not>
+            </and>
+          </condition>
+          <otherwise>
+            <true-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="HBEE 18.03(a)(1)(ii) is not satisfied for the person (eff. 07/30/2014)" ruleburst="true" concludes="not b7" folder="2" source-offset="1416">
+      <rule-xml>
+        <conclude attr-id="b7" entity-id="person" scope-id="person0">
+          <value>
+            <false-value />
+          </value>
+          <condition>
+            <and>
+              <not>
+                <unknown>
+                  <attribute attr-id="b10" />
+                </unknown>
+              </not>
+              <not>
+                <attribute attr-id="b10" />
+              </not>
+              <not>
+                <attribute attr-id="b9" />
+              </not>
+            </and>
+          </condition>
+          <otherwise>
+            <true-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="HBEE 18.03(b) applies to the program (eff. 07/30/2014)" ruleburst="true" concludes="b16" folder="3" source-offset="2033">
+      <rule-xml>
+        <conclude attr-id="b16" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b18" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="HBEE 18.03(b) is satisfied for the person (eff. 07/30/2014)" ruleburst="true" concludes="b17" folder="3" source-offset="2132">
+      <rule-xml>
+        <conclude attr-id="b17" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <not>
+              <attribute attr-id="b20" />
+            </not>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="18.03 Cooperation in Obtaining Payments (07/30/2014, 14-04)" parent="0" id="1" />
+    <folder text="Para (a): In General" parent="1" id="2" />
+    <folder text="Para (b): Exception" parent="1" id="3" />
+  </rule-folders>
+</root>

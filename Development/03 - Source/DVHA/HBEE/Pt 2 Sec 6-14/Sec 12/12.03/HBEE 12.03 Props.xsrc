@@ -1,0 +1,245 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+      <attribute name="p1" type="number">
+        <text>
+          <base>the adjusted net income FPL percentage limit under HBEE 12.03(a) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p2" type="number">
+        <text>
+          <base>the adjusted net income FPL percentage limit under HBEE 12.03(a)</base>
+        </text>
+      </attribute>
+      <attribute name="b74" type="boolean">
+        <text>
+          <base>the adjusted net income floor test is an FPL% test under HBEE 12.03(a) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the adjusted net income floor test',singular),o('an FPL% test under HBEE 12.03(a) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b75" type="boolean">
+        <text>
+          <base>the adjusted net income floor test is an FPL% test under HBEE 12.03(a)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the adjusted net income floor test',singular),o('an FPL% test under HBEE 12.03(a)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p3" type="number">
+        <text>
+          <base>the adjusted net income FPL percentage floor under HBEE 12.03(a) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p4" type="number">
+        <text>
+          <base>the adjusted net income FPL percentage floor under HBEE 12.03(a)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b3" type="boolean" public-name="st_HBEE12.03bSatisfied_b">
+        <text>
+          <base>HBEE 12.03(b) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 12.03(b)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" public-name="st_HBEE12.03cSatisfied_b">
+        <text>
+          <base>HBEE 12.03(c) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 12.03(c)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" public-name="st_HBEE12.03b1Satisfied_b">
+        <text>
+          <base>HBEE 12.03(b)(1) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 12.03(b)(1)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" public-name="st_HBEE12.03b2Satisfied_b">
+        <text>
+          <base>HBEE 12.03(b)(2) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 12.03(b)(2)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" public-name="st_HBEE12.03b3Satisfied_b">
+        <text>
+          <base>HBEE 12.03(b)(3) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 12.03(b)(3)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" public-name="st_HBEE12.03b4Satisfied_b">
+        <text>
+          <base>HBEE 12.03(b)(4) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 12.03(b)(4)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" public-name="st_HBEE12.03b5Satisfied_b">
+        <text>
+          <base>HBEE 12.03(b)(5) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 12.03(b)(5)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" public-name="st_HBEE12.03b2iSatisfied_b">
+        <text>
+          <base>HBEE 12.03(b)(2)(i) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 12.03(b)(2)(i)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" public-name="st_HBEE12.03b2iiSatisfied_b">
+        <text>
+          <base>HBEE 12.03(b)(2)(ii) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 12.03(b)(2)(ii)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" public-name="st_HBEE12.03b2iiiSatisfied_b">
+        <text>
+          <base>HBEE 12.03(b)(2)(iii) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 12.03(b)(2)(iii)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" public-name="si_bPerWillFileJointRet_b">
+        <text>
+          <base>the person will file a joint return for the benefit year</base>
+          <parse>s(ver('10.4.6.76'),v(file,t(simple,future,normal)),sb('the person',plural),o('a joint return for the benefit year'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" public-name="si_bPerVictmDomAbuse_b">
+        <text>
+          <base>the person is considered a victim of domestic abuse</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('a victim of domestic abuse'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean" public-name="si_bPerWillFileMarrSep_b">
+        <text>
+          <base>the person will file a tax return using a filing status of married filing separately</base>
+          <parse>s(ver('10.4.6.76'),v(file,t(simple,future,normal)),sb('the person',plural),o('a tax return using a filing status of married filing separately'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean" public-name="si_bPerLivAprtFrmSpouFile_b">
+        <text>
+          <base>the person is living apart from the person's spouse at the time the person files the person's tax return</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('living apart from the person''s spouse at the time the person files the person''s tax return'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" public-name="si_bPerWillCertTaxRet_b">
+        <text>
+          <base>the person will certify on the person's tax return that the person is a victim of domestic abuse or spousal abandonment</base>
+          <parse>s(ver('10.4.6.76'),v(certify,t(simple,future,normal)),sb('the person',plural),o('on the person''s tax return that the person is a victim of domestic abuse or spousal abandonment'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b40" type="boolean" public-name="si_bPerSatisfied3YrTaxReqs_b">
+        <text>
+          <base>the person has satisfied the requirements under HBEE 12.03(b)(2) for each of the three preceding taxable years</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,perfect)),sb('the person',singular),o('the requirements under HBEE 12.03(b)(2) for each of the three preceding taxable years'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b42" type="boolean" public-name="si_cPerOtherTaxFilerClaimDed_b">
+        <text>
+          <base>another tax filer can claim the person as a dependent for a benefit year beginning in the calendar year in which the person's benefit year begins</base>
+          <parse>s(ver('10.4.6.76'),v(claim+can,t(simple,modal,normal)),sb('another tax filer',plural),o('the person as a dependent for a benefit year beginning in the calendar year in which the person''s benefit year begins'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b61" type="boolean" public-name="st_HBEE12.03b2AppliesPer_b">
+        <text>
+          <base>HBEE 12.03(b)(2) applies to the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 12.03(b)(2)',singular),o('to the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b62" type="boolean" public-name="si_bPerConsMarr1.7703-1_b">
+        <text>
+          <base>the person is considered married at the close of the benefit year under 26 CFR 1.7703-1</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('married at the close of the benefit year under 26 CFR 1.7703-1'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b66" type="boolean" public-name="so_HBEE12.03ConsApplTaxFil_b">
+        <text>
+          <base>the person is considered to be an applicable tax filer under HBEE 12.03 (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be an applicable tax filer under HBEE 12.03 (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b67" type="boolean" public-name="st_HBEE12.03bAppliesPer_b">
+        <text>
+          <base>HBEE 12.03(b) applies to the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 12.03(b)',singular),o('to the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b68" type="boolean" public-name="st_HBEE12.03aSatisfied_b">
+        <text>
+          <base>HBEE 12.03(a) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 12.03(a)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b69" type="boolean" public-name="si_aPerTaxFiler_b">
+        <text>
+          <base>the person is expected to file a federal income tax return for the benefit year</base>
+          <parse>s(ver('10.4.6.76'),v(expect,t(simple,present,normal)),ob('the person',singular),o('to file a federal income tax return for the benefit year'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b71" type="boolean" public-name="si_bPerVictmSpouAbandn_b">
+        <text>
+          <base>the person is considered a victim of spousal abandonment</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('a victim of spousal abandonment'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b64" type="boolean" public-name="so_HBEE12.03AppliesPrgm_b">
+        <text>
+          <base>HBEE 12.03 applies to the program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 12.03',singular),o('to the program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b65" type="boolean" public-name="st_HBEE12.03aAdjNetIncTst_b">
+        <text>
+          <base>there is an adjusted net income test for the program under HBEE 12.03(a) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adjusted net income test for the program under HBEE 12.03(a) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b72" type="boolean">
+        <text>
+          <base>there is an adjusted net income floor for the person for the program under HBEE 12.03(a) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adjusted net income floor for the person for the program under HBEE 12.03(a) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b73" type="boolean">
+        <text>
+          <base>there is an adjusted net income floor for the person for the program under HBEE 12.03(a)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adjusted net income floor for the person for the program under HBEE 12.03(a)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

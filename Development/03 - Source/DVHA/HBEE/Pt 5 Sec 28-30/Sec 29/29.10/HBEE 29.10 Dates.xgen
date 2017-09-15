@@ -1,0 +1,46 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity ref="global" />
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="p1" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the resource exclusion for the person's financial responsibility group for the program under HBEE 29.10</base>
+        </text>
+      </attribute>
+      <attribute name="p2" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the resource exclusion for the person's financial responsibility group for the program under HBEE 29.10 (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global" />
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="ManyToMany" relationship-id="personsprevioussortorderpeople" reverse-relationship-id="personssubsequentsortorderpeople" text="the person's previous sort-order people" reverse-text="the person's subsequent sort-order people" source="person" target="person" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="programsprevioussortorderprograms" reverse-relationship-id="program_programsprevioussortorderprograms_rev" text="the program's previous sort-order programs" source="program" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="programswiththesamebenefittypeastheprogram" reverse-relationship-id="program_programswiththesamebenefittypeastheprogram_rev" text="the programs with the same benefit type as the program" source="program" target="program" is-implicit="false" is-containment="false" />
+  </relationships>
+  <rules>
+    <rule ruleburst="true" folder="0" name="the resource exclusion for the person's financial responsibility group for the program under HBEE 29.10" id="1" concludes="p1">
+      <rule-xml>
+        <table-conclude attr-id="p1" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <attribute attr-id="p2" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2014-07-30</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+</root>

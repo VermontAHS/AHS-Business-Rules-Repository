@@ -1,0 +1,2457 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity ref="global">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the date is within the calculation range</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the date',singular),o('within the calculation range'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p5" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the ineligible status</base>
+        </text>
+      </attribute>
+      <attribute name="p6" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the pending status</base>
+        </text>
+      </attribute>
+      <attribute name="p18" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the calculation date</base>
+        </text>
+      </attribute>
+      <attribute name="p19" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the calculation start date</base>
+        </text>
+      </attribute>
+      <attribute name="p23" type="number" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the maximum number of results</base>
+        </text>
+      </attribute>
+      <attribute name="p24" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the calculation end date</base>
+        </text>
+      </attribute>
+      <attribute name="p38" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the eligible status</base>
+        </text>
+      </attribute>
+      <attribute name="p40" type="datetime" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the transaction date time</base>
+        </text>
+      </attribute>
+      <attribute name="p45" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the primary person's ID</base>
+        </text>
+      </attribute>
+      <attribute name="p57" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the delimiter for instance IDs</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b2" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is the person's highest priority program for the program's benefit type</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the program',singular),o('the person''s highest priority program for the program''s benefit type'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program has individual results</base>
+          <parse>s(ver('10.4.5.40'),v(have,t(simple,present,normal)),sb('the program',singular),o('individual results'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program's result should be included in a consolidated benefit plan</base>
+          <parse>s(ver('10.4.5.40'),v(include+should,t(simple,modal,normal)),ob('the program''s result',singular),o('in a consolidated benefit plan'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the date is within the person's benefit plan period for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the date',singular),o('within the person''s benefit plan period for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has a request for the program</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('a request for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p7" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the program's benefit description</base>
+        </text>
+      </attribute>
+      <attribute name="p8" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the program's name</base>
+        </text>
+      </attribute>
+      <attribute name="p9" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the program's benefit sub-description</base>
+        </text>
+      </attribute>
+      <attribute name="p10" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the program's full status description</base>
+        </text>
+      </attribute>
+      <attribute name="p11" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the program's benefit level description</base>
+        </text>
+      </attribute>
+      <attribute name="p12" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the program's status description</base>
+        </text>
+      </attribute>
+      <attribute name="p13" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the program's sub-status description</base>
+        </text>
+      </attribute>
+      <attribute name="p14" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the program's benefit type</base>
+        </text>
+      </attribute>
+      <attribute name="p41" type="number" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program's order among all eligible programs for the program's benefit type</base>
+        </text>
+      </attribute>
+      <attribute name="p43" type="number" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the number of people in the person's filing group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p51" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the start of the person's benefit plan period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p52" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the end of the person's benefit plan period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p60" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the program's code</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b9" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is the primary person for the case</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('the primary person for the case'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p33" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's unique ID</base>
+        </text>
+      </attribute>
+      <attribute name="p44" type="number" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's sort order</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the group member program" id="groupmemberprogram" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+      <attribute name="b10" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is in the person's filing group for the group member program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('in the person''s filing group for the group member program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's primary person for the group member program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s primary person for the group member program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's current primary person for the group member program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s current primary person for the group member program'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's requested benefit" id="personsrequestedbenefit" containment-relationship-id="personsrequestedbenefits" containment-parent-id="person">
+      <attribute name="b3" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the benefit description for the person's requested benefit has changed since the previous day</base>
+          <parse>s(ver('10.4.5.40'),v(change,t(simple,present,perfect)),sb('the benefit description for the person''s requested benefit',singular),o('since the previous day'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the benefit description for the person's requested benefit should be uncertain</base>
+          <parse>s(ver('10.4.6.76'),v(be+should,t(simple,modal,normal)),sb('the benefit description for the person''s requested benefit',singular),o('uncertain'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the benefit description for the person's requested benefit should be ineligible</base>
+          <parse>s(ver('10.4.6.76'),v(be+should,t(simple,modal,normal)),sb('the benefit description for the person''s requested benefit',singular),o('ineligible'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the benefit description for the person's requested benefit should be pending</base>
+          <parse>s(ver('10.4.6.76'),v(be+should,t(simple,modal,normal)),sb('the benefit description for the person''s requested benefit',singular),o('pending'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p1" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the plan description for the person's requested benefit</base>
+        </text>
+      </attribute>
+      <attribute name="p2" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the benefit description for the person's requested benefit</base>
+        </text>
+      </attribute>
+      <attribute name="p3" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the calculated benefit start date for the person's requested benefit as text</base>
+        </text>
+      </attribute>
+      <attribute name="p4" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the calculated benefit end date for the person's requested benefit as text</base>
+        </text>
+      </attribute>
+      <attribute name="p15" type="text" ruleburst="true" is-used="True" default-gender="generic">
+        <text lang="en-US">
+          <base>the person's requested benefit</base>
+        </text>
+      </attribute>
+      <attribute name="p16" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the calculated benefit start date for the person's requested benefit</base>
+        </text>
+      </attribute>
+      <attribute name="p17" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the calculated benefit end date for the person's requested benefit</base>
+        </text>
+      </attribute>
+      <attribute name="p20" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the benefit description for the previous day for the person's requested benefit</base>
+        </text>
+      </attribute>
+      <attribute name="p22" type="number" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the number of results to create for the person's requested benefit</base>
+        </text>
+      </attribute>
+      <attribute name="p29" type="number" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the running total result count for the person's requested benefit</base>
+        </text>
+      </attribute>
+      <attribute name="p56" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's requested benefit's identifier</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the result" id="result" containment-relationship-id="personsrequestedbenefitsresults" containment-parent-id="personsrequestedbenefit">
+      <attribute name="b17" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the result should be included in a consolidated benefit plan</base>
+          <parse>s(ver('10.4.5.40'),v(include+should,t(simple,modal,normal)),ob('the result',singular),o('in a consolidated benefit plan'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is a person who is the primary person for all of the result's programs</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',singular),o('a person who is the primary person for all of the result''s programs'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p21" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the result's number as text</base>
+        </text>
+      </attribute>
+      <attribute name="p25" type="text" ruleburst="true" is-used="True" default-gender="generic">
+        <text lang="en-US">
+          <base>the result</base>
+        </text>
+      </attribute>
+      <attribute name="p26" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the result's benefit type</base>
+        </text>
+      </attribute>
+      <attribute name="p27" type="number" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the result's number</base>
+        </text>
+      </attribute>
+      <attribute name="p28" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the result's benefit description</base>
+        </text>
+      </attribute>
+      <attribute name="p30" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the result's start date</base>
+        </text>
+      </attribute>
+      <attribute name="p31" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the result's end date</base>
+        </text>
+      </attribute>
+      <attribute name="p36" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the result's program name</base>
+        </text>
+      </attribute>
+      <attribute name="p37" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the result's eligibility status</base>
+        </text>
+      </attribute>
+      <attribute name="p47" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the result's benefit plan start date</base>
+        </text>
+      </attribute>
+      <attribute name="p49" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the result's benefit plan end date</base>
+        </text>
+      </attribute>
+      <attribute name="p53" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the result's recipient's ID</base>
+        </text>
+      </attribute>
+      <attribute name="p54" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the result's primary person's ID</base>
+        </text>
+      </attribute>
+      <attribute name="p55" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the result's calculated end date</base>
+        </text>
+      </attribute>
+      <attribute name="p58" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the result's identifier</base>
+        </text>
+      </attribute>
+      <attribute name="p59" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the result's program code</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the case result" id="caseresult" containment-relationship-id="caseresults" containment-parent-id="global">
+      <attribute name="p42" type="text" ruleburst="true" is-used="True" default-gender="generic">
+        <text lang="en-US">
+          <base>the case result</base>
+        </text>
+      </attribute>
+      <attribute name="p46" type="datetime" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the case result's transaction date time</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the existing benefit" id="existingbenefit" containment-relationship-id="existingbenefitplansexistingbenefits" containment-parent-id="existingbenefitplan">
+      <attribute name="b22" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the existing benefit is active</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the existing benefit',singular),o('active'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the group member" id="groupmember" containment-relationship-id="personsgroupmembers" containment-parent-id="person" />
+    <entity name="the existing benefit plan" id="existingbenefitplan" containment-relationship-id="existingbenefitplans" containment-parent-id="global" />
+  </entities>
+  <relationships>
+    <relationship type="ManyToMany" relationship-id="groupmemberscontainingpersonsprogramforthegroupmemberprogram" reverse-relationship-id="personscontainedgroupmemberprogramsfortheprogram" text="the group member's containing person's program for the group member program" reverse-text="the person's contained group member programs for the program" source="groupmemberprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="groupmembersrepresentativepersonforthegroupmemberprogram" reverse-relationship-id="personsrepresentativegroupmemberprograms" text="the group member's representative person for the group member program" reverse-text="the person's representative group member programs" source="groupmemberprogram" target="person" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="groupmembersprogramforthegroupmemberprogram" reverse-relationship-id="personsrepresentativegroupmemberprogramsfortheprogram" text="the group member's program for the group member program" reverse-text="the person's representative group member programs for the program" source="groupmemberprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="programswiththesamebenefittypeastheprogram" reverse-relationship-id="program_programswiththesamebenefittypeastheprogram_rev" text="the programs with the same benefit type as the program" source="program" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="currentbenefitsfortheprogramsbenefittype" reverse-relationship-id="program_currentbenefitsfortheprogramsbenefittype_rev" text="the current benefits for the program's benefit type" source="program" target="existingbenefit" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="caseresultsforthepersonsrequestedbenefit" reverse-relationship-id="personsrequestedbenefitsforthecaseresult" text="the case results for the person's requested benefit" reverse-text="the person's requested benefits for the case result" source="personsrequestedbenefit" target="caseresult" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="programsforthepersonsrequestedbenefit" reverse-relationship-id="personsrequestedbenefitsfortheprogram" text="the programs for the person's requested benefit" reverse-text="the person's requested benefits for the program" source="personsrequestedbenefit" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="existingbenefitplansexistingbenefits" reverse-relationship-id="existingbenefitsplan" text="the existing benefit plan's existing benefits" reverse-text="the existing benefit's plan" source="existingbenefitplan" target="existingbenefit" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" text="the group member's group member programs" reverse-text="the group member program's group member" source="groupmember" target="groupmemberprogram" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsrequestedbenefitsresults" reverse-relationship-id="resultsrequestedbenefit" text="the person's requested benefit's results" reverse-text="the result's requested benefit" source="personsrequestedbenefit" target="result" is-implicit="false" is-containment="true" />
+    <relationship type="ManyToMany" relationship-id="caseresultsconsolidatedresults" reverse-relationship-id="caseresult_caseresultsconsolidatedresults_rev" text="the case result's consolidated results" source="caseresult" target="result" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="existingbenefitsprimaryperson" reverse-relationship-id="existingbenefitsforwhichthepersonistheprimaryperson" text="the existing benefit's primary person" reverse-text="the existing benefits for which the person is the primary person" source="existingbenefit" target="person" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="eligibleprogramfortheresult" reverse-relationship-id="result_eligibleprogramfortheresult_rev" text="the eligible program for the result" source="result" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="personsrequestedbenefits" reverse-relationship-id="personfortherequestedbenefit" text="the person's requested benefits" reverse-text="the person for the requested benefit" source="person" target="personsrequestedbenefit" is-implicit="false" is-containment="true" />
+    <relationship type="ManyToMany" relationship-id="resultsprimaryperson" reverse-relationship-id="resultsforwhichthepersonistheprimaryperson" text="the result's primary person" reverse-text="the results for which the person is the primary person" source="result" target="person" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="programsfortheresult" reverse-relationship-id="resultsfortheprogram" text="the programs for the result" reverse-text="the results for the program" source="result" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="existingbenefitplans" reverse-relationship-id="global_existingbenefitplans_rev" text="the existing benefit plans" source="global" target="existingbenefitplan" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" text="the person's group members" reverse-text="the group member's containing person" source="person" target="groupmember" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="ManyToMany" relationship-id="resultsperson" reverse-relationship-id="personsresults" text="the result's person" reverse-text="the person's results" source="result" target="person" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="caseresults" reverse-relationship-id="global_caseresults_rev" text="the case results" source="global" target="caseresult" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="the plan description for the person's requested benefit" ruleburst="true" concludes="p1" folder="2" source-offset="64">
+      <rule-xml>
+        <table-conclude attr-id="p1" entity-id="personsrequestedbenefit" scope-id="personsrequestedbenefit0">
+          <row>
+            <value>
+              <uncertain-value />
+            </value>
+            <condition>
+              <not>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="b1" />
+                </scope-for>
+              </not>
+            </condition>
+          </row>
+          <otherwise>
+            <concatenate>
+              <attribute attr-id="p2" />
+              <string-value><![CDATA[: ]]></string-value>
+              <attribute attr-id="p3" />
+              <string-value><![CDATA[ - ]]></string-value>
+              <attribute attr-id="p4" />
+            </concatenate>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the benefit description for the person's requested benefit" ruleburst="true" concludes="p2" folder="2" source-offset="481">
+      <rule-xml>
+        <table-conclude attr-id="p2" entity-id="personsrequestedbenefit" scope-id="personsrequestedbenefit0">
+          <row>
+            <value>
+              <uncertain-value />
+            </value>
+            <condition>
+              <attribute attr-id="b26" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p5" />
+              </scope-for>
+            </value>
+            <condition>
+              <attribute attr-id="b27" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p6" />
+              </scope-for>
+            </value>
+            <condition>
+              <attribute attr-id="b28" />
+            </condition>
+          </row>
+          <otherwise>
+            <instance-value-if>
+              <relationship relationship-id="programsforthepersonsrequestedbenefit" target-entity-id="program" />
+              <attribute attr-id="p7" />
+              <attribute attr-id="b2" />
+            </instance-value-if>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="the benefit description for the person's requested benefit should be uncertain" ruleburst="true" concludes="b26" folder="2" source-offset="1788">
+      <rule-xml>
+        <conclude attr-id="b26" entity-id="personsrequestedbenefit" scope-id="personsrequestedbenefit0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <not>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="b1" />
+                </scope-for>
+              </not>
+              <and>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="b1" />
+                </scope-for>
+                <for-all scope-id="program0">
+                  <relationship relationship-id="programsforthepersonsrequestedbenefit" target-entity-id="program" />
+                  <or>
+                    <not>
+                      <exists-in scope-ref="personsrequestedbenefit0" scope-is-source="true" scope-entity-id="personsrequestedbenefit">
+                        <relationship relationship-id="programsforthepersonsrequestedbenefit" target-entity-id="program" />
+                      </exists-in>
+                    </not>
+                    <and>
+                      <exists-in scope-ref="personsrequestedbenefit0" scope-is-source="true" scope-entity-id="personsrequestedbenefit">
+                        <relationship relationship-id="programsforthepersonsrequestedbenefit" target-entity-id="program" />
+                      </exists-in>
+                      <not>
+                        <unknown>
+                          <attribute attr-id="b24" />
+                        </unknown>
+                      </not>
+                      <certain>
+                        <attribute attr-id="b24" />
+                      </certain>
+                      <not>
+                        <attribute attr-id="b24" />
+                      </not>
+                    </and>
+                  </or>
+                </for-all>
+              </and>
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="the benefit description for the person's requested benefit should be ineligible" ruleburst="true" concludes="b27" folder="2" source-offset="2775">
+      <rule-xml>
+        <conclude attr-id="b27" entity-id="personsrequestedbenefit" scope-id="personsrequestedbenefit0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for-all scope-id="program0">
+              <relationship relationship-id="programsforthepersonsrequestedbenefit" target-entity-id="program" />
+              <or>
+                <not>
+                  <exists-in scope-ref="personsrequestedbenefit0" scope-is-source="true" scope-entity-id="personsrequestedbenefit">
+                    <relationship relationship-id="programsforthepersonsrequestedbenefit" target-entity-id="program" />
+                  </exists-in>
+                </not>
+                <and>
+                  <exists-in scope-ref="personsrequestedbenefit0" scope-is-source="true" scope-entity-id="personsrequestedbenefit">
+                    <relationship relationship-id="programsforthepersonsrequestedbenefit" target-entity-id="program" />
+                  </exists-in>
+                  <not>
+                    <unknown>
+                      <attribute attr-id="b2" />
+                    </unknown>
+                  </not>
+                  <certain>
+                    <attribute attr-id="b2" />
+                  </certain>
+                  <not>
+                    <attribute attr-id="b2" />
+                  </not>
+                </and>
+              </or>
+            </for-all>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="the benefit description for the person's requested benefit should be pending" ruleburst="true" concludes="b28" folder="2" source-offset="3697">
+      <rule-xml>
+        <conclude attr-id="b28" entity-id="personsrequestedbenefit" scope-id="personsrequestedbenefit0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <exists scope-id="program0">
+              <relationship relationship-id="programsforthepersonsrequestedbenefit" target-entity-id="program" />
+              <or>
+                <not>
+                  <exists-in scope-ref="personsrequestedbenefit0" scope-is-source="true" scope-entity-id="personsrequestedbenefit">
+                    <relationship relationship-id="programsforthepersonsrequestedbenefit" target-entity-id="program" />
+                  </exists-in>
+                </not>
+                <and>
+                  <exists-in scope-ref="personsrequestedbenefit0" scope-is-source="true" scope-entity-id="personsrequestedbenefit">
+                    <relationship relationship-id="programsforthepersonsrequestedbenefit" target-entity-id="program" />
+                  </exists-in>
+                  <or>
+                    <and>
+                      <not>
+                        <unknown>
+                          <attribute attr-id="b24" />
+                        </unknown>
+                      </not>
+                      <certain>
+                        <attribute attr-id="b24" />
+                      </certain>
+                      <attribute attr-id="b24" />
+                      <or>
+                        <unknown>
+                          <attribute attr-id="b2" />
+                        </unknown>
+                        <uncertain>
+                          <attribute attr-id="b2" />
+                        </uncertain>
+                      </or>
+                    </and>
+                    <and>
+                      <not>
+                        <unknown>
+                          <attribute attr-id="b2" />
+                        </unknown>
+                      </not>
+                      <certain>
+                        <attribute attr-id="b2" />
+                      </certain>
+                      <attribute attr-id="b2" />
+                      <or>
+                        <unknown>
+                          <attribute attr-id="b24" />
+                        </unknown>
+                        <uncertain>
+                          <attribute attr-id="b24" />
+                        </uncertain>
+                      </or>
+                    </and>
+                    <and>
+                      <or>
+                        <unknown>
+                          <attribute attr-id="b2" />
+                        </unknown>
+                        <uncertain>
+                          <attribute attr-id="b2" />
+                        </uncertain>
+                      </or>
+                      <or>
+                        <unknown>
+                          <attribute attr-id="b24" />
+                        </unknown>
+                        <uncertain>
+                          <attribute attr-id="b24" />
+                        </uncertain>
+                      </or>
+                    </and>
+                  </or>
+                </and>
+              </or>
+            </exists>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="the program's benefit description " ruleburst="true" concludes="p7 = p8 &amp; p9" folder="2" source-offset="5883">
+      <rule-xml>
+        <conclude attr-id="p7" entity-id="program" scope-id="program0">
+          <value>
+            <concatenate>
+              <attribute attr-id="p8" />
+              <attribute attr-id="p9" />
+            </concatenate>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="the program's benefit sub-description" ruleburst="true" concludes="p9" folder="2" source-offset="5994">
+      <rule-xml>
+        <table-conclude attr-id="p9" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <concatenate>
+                <string-value><![CDATA[ (]]></string-value>
+                <attribute attr-id="p10" />
+                <string-value><![CDATA[; ]]></string-value>
+                <attribute attr-id="p11" />
+                <string-value>)</string-value>
+              </concatenate>
+            </value>
+            <condition>
+              <and>
+                <certain>
+                  <attribute attr-id="p10" />
+                </certain>
+                <not-equals>
+                  <attribute attr-id="p10" />
+                  <string-value></string-value>
+                </not-equals>
+                <certain>
+                  <attribute attr-id="p11" />
+                </certain>
+                <not-equals>
+                  <attribute attr-id="p11" />
+                  <string-value></string-value>
+                </not-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <concatenate>
+                <string-value><![CDATA[ (]]></string-value>
+                <attribute attr-id="p10" />
+                <string-value>)</string-value>
+              </concatenate>
+            </value>
+            <condition>
+              <and>
+                <certain>
+                  <attribute attr-id="p10" />
+                </certain>
+                <not-equals>
+                  <attribute attr-id="p10" />
+                  <string-value></string-value>
+                </not-equals>
+                <or>
+                  <uncertain>
+                    <attribute attr-id="p11" />
+                  </uncertain>
+                  <equals>
+                    <attribute attr-id="p11" />
+                    <string-value></string-value>
+                  </equals>
+                </or>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <concatenate>
+                <string-value><![CDATA[ (]]></string-value>
+                <attribute attr-id="p11" />
+                <string-value>)</string-value>
+              </concatenate>
+            </value>
+            <condition>
+              <and>
+                <or>
+                  <uncertain>
+                    <attribute attr-id="p10" />
+                  </uncertain>
+                  <equals>
+                    <attribute attr-id="p10" />
+                    <string-value></string-value>
+                  </equals>
+                </or>
+                <certain>
+                  <attribute attr-id="p11" />
+                </certain>
+                <not-equals>
+                  <attribute attr-id="p11" />
+                  <string-value></string-value>
+                </not-equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <string-value></string-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="7" name="the program's full status description" ruleburst="true" concludes="p10" folder="2" source-offset="7107">
+      <rule-xml>
+        <table-conclude attr-id="p10" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <concatenate>
+                <attribute attr-id="p12" />
+                <string-value><![CDATA[ - ]]></string-value>
+                <attribute attr-id="p13" />
+              </concatenate>
+            </value>
+            <condition>
+              <and>
+                <certain>
+                  <attribute attr-id="p12" />
+                </certain>
+                <not-equals>
+                  <attribute attr-id="p12" />
+                  <string-value></string-value>
+                </not-equals>
+                <certain>
+                  <attribute attr-id="p13" />
+                </certain>
+                <not-equals>
+                  <attribute attr-id="p13" />
+                  <string-value></string-value>
+                </not-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <attribute attr-id="p12" />
+            </value>
+            <condition>
+              <and>
+                <certain>
+                  <attribute attr-id="p12" />
+                </certain>
+                <not-equals>
+                  <attribute attr-id="p12" />
+                  <string-value></string-value>
+                </not-equals>
+                <or>
+                  <uncertain>
+                    <attribute attr-id="p13" />
+                  </uncertain>
+                  <equals>
+                    <attribute attr-id="p13" />
+                    <string-value></string-value>
+                  </equals>
+                </or>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <string-value></string-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="8" name="the program is a member of the programs for the person's requested benefit" ruleburst="true" concludes="IsMemberOf(&quot;program&quot;, programsforthepersonsrequestedbenefit)" folder="2" source-offset="7796">
+      <rule-xml>
+        <conclude-rel relationship-id="programsforthepersonsrequestedbenefit" source="personsrequestedbenefit" source-scope-id="personsrequestedbenefit0" target-scope-id="program0">
+          <condition>
+            <scope-for scope-ref="personsrequestedbenefit0" target-entity-id="personsrequestedbenefit">
+              <for scope-id="person0">
+                <relationship relationship-id="personfortherequestedbenefit" target-entity-id="person" />
+                <and>
+                  <exists-in scope-ref="program0" scope-is-source="false" scope-entity-id="program">
+                    <relationship relationship-id="personsprograms" target-entity-id="program" />
+                  </exists-in>
+                  <equals>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <scope-for scope-ref="personsrequestedbenefit0" target-entity-id="personsrequestedbenefit">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </and>
+              </for>
+            </scope-for>
+          </condition>
+        </conclude-rel>
+      </rule-xml>
+    </rule>
+    <rule id="9" name="the program (the other program) is a member of the programs with the same benefit type as the program" ruleburst="true" concludes="IsMemberOf(&quot;program&quot;, &quot;the other program&quot;, programswiththesamebenefittypeastheprogram)" folder="2" source-offset="8247">
+      <rule-xml>
+        <conclude-rel relationship-id="programswiththesamebenefittypeastheprogram" source="program" source-scope-id="program0" target-scope-id="the other program">
+          <condition>
+            <scope-for scope-ref="program0" target-entity-id="program">
+              <exists scope-id="personsrequestedbenefit0">
+                <relationship relationship-id="personsrequestedbenefitsfortheprogram" target-entity-id="personsrequestedbenefit" />
+                <exists-in scope-ref="the other program" scope-is-source="false" scope-entity-id="program">
+                  <relationship relationship-id="programsforthepersonsrequestedbenefit" target-entity-id="program" />
+                </exists-in>
+              </exists>
+            </scope-for>
+          </condition>
+        </conclude-rel>
+      </rule-xml>
+    </rule>
+    <rule id="10" name="the calculated benefit start date for the person's requested benefit as text" ruleburst="true" concludes="p3" folder="3" source-offset="8789">
+      <rule-xml>
+        <table-conclude attr-id="p3" entity-id="personsrequestedbenefit" scope-id="personsrequestedbenefit0">
+          <row>
+            <value>
+              <text>
+                <attribute attr-id="p16" />
+              </text>
+            </value>
+            <condition>
+              <certain>
+                <attribute attr-id="p16" />
+              </certain>
+            </condition>
+          </row>
+          <otherwise>
+            <string-value>?</string-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="11" name="the calculated benefit end date for the person's requested benefit as text" ruleburst="true" concludes="p4" folder="3" source-offset="9076">
+      <rule-xml>
+        <table-conclude attr-id="p4" entity-id="personsrequestedbenefit" scope-id="personsrequestedbenefit0">
+          <row>
+            <value>
+              <text>
+                <attribute attr-id="p17" />
+              </text>
+            </value>
+            <condition>
+              <certain>
+                <attribute attr-id="p17" />
+              </certain>
+            </condition>
+          </row>
+          <otherwise>
+            <string-value>?</string-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="12" name="the calculated benefit start date for the person's requested benefit" ruleburst="true" concludes="p16" folder="3" source-offset="9358">
+      <rule-xml>
+        <table-conclude attr-id="p16" entity-id="personsrequestedbenefit" scope-id="personsrequestedbenefit0">
+          <row>
+            <value>
+              <uncertain-value />
+            </value>
+            <condition>
+              <not>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="b1" />
+                </scope-for>
+              </not>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p18" />
+              </scope-for>
+            </value>
+            <condition>
+              <equals>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p18" />
+                </scope-for>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p19" />
+                </scope-for>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <when-last>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p18" />
+              </scope-for>
+              <attribute attr-id="b3" />
+            </when-last>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="13" name="the calculated benefit end date for the person's requested benefit" ruleburst="true" concludes="p17" folder="3" source-offset="9761">
+      <rule-xml>
+        <table-conclude attr-id="p17" entity-id="personsrequestedbenefit" scope-id="personsrequestedbenefit0">
+          <row>
+            <value>
+              <uncertain-value />
+            </value>
+            <condition>
+              <not>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="b1" />
+                </scope-for>
+              </not>
+            </condition>
+          </row>
+          <otherwise>
+            <add-days>
+              <when-next>
+                <add-days>
+                  <scope-for scope-ref="global0" target-entity-id="global">
+                    <attribute attr-id="p18" />
+                  </scope-for>
+                  <number-value>1</number-value>
+                </add-days>
+                <attribute attr-id="b3" />
+              </when-next>
+              <negate>
+                <number-value>1</number-value>
+              </negate>
+            </add-days>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="14" name="the benefit description for the person's requested benefit has changed since the previous day" ruleburst="true" concludes="b3" folder="3" source-offset="10127">
+      <rule-xml>
+        <table-conclude attr-id="b3" entity-id="personsrequestedbenefit" scope-id="personsrequestedbenefit0">
+          <row>
+            <value>
+              <uncertain-value />
+            </value>
+            <condition>
+              <not>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="b1" />
+                </scope-for>
+              </not>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <true-value />
+            </value>
+            <condition>
+              <and>
+                <uncertain>
+                  <attribute attr-id="p20" />
+                </uncertain>
+                <certain>
+                  <attribute attr-id="p2" />
+                </certain>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <true-value />
+            </value>
+            <condition>
+              <not-equals>
+                <attribute attr-id="p20" />
+                <attribute attr-id="p2" />
+              </not-equals>
+            </condition>
+          </row>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="15" name="the benefit description for the previous day for the person's requested benefit " ruleburst="true" concludes="p20 = ValueAt(AddDays(p18,-1),p2)" folder="3" source-offset="10706">
+      <rule-xml>
+        <conclude attr-id="p20" entity-id="personsrequestedbenefit" scope-id="personsrequestedbenefit0">
+          <value>
+            <value-at>
+              <add-days>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p18" />
+                </scope-for>
+                <negate>
+                  <number-value>1</number-value>
+                </negate>
+              </add-days>
+              <attribute attr-id="p2" />
+            </value-at>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="16" name="the maximum number of results " ruleburst="true" concludes="p23 = 24" folder="4" source-offset="10948">
+      <rule-xml>
+        <conclude attr-id="p23" entity-id="global" scope-id="global0">
+          <value>
+            <number-value>24</number-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="17" name="error(&quot;The number of results to create exceeds the maximum number of results.&quot;)" ruleburst="true" concludes="raiseevent &quot;error(\&quot;The number of results to create exceeds the maximum number of results.\&quot;)&quot;" folder="4" source-offset="10995">
+      <rule-xml>
+        <event action="error(&quot;The number of results to create exceeds the maximum number of results.&quot;)" entity-id="personsrequestedbenefit" scope-id="personsrequestedbenefit0">
+          <condition>
+            <greater-than>
+              <attribute attr-id="p22" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p23" />
+              </scope-for>
+            </greater-than>
+          </condition>
+        </event>
+      </rule-xml>
+    </rule>
+    <rule id="18" name="the number of results to create for the person's requested benefit " ruleburst="true" concludes="p22 = Maximum(IntervalCountDistinctIf(p19,p24,p1,certain p1),1)" folder="4" source-offset="11288">
+      <rule-xml>
+        <conclude attr-id="p22" entity-id="personsrequestedbenefit" scope-id="personsrequestedbenefit0">
+          <value>
+            <maximum>
+              <interval-count-distinct-if>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p19" />
+                </scope-for>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p24" />
+                </scope-for>
+                <attribute attr-id="p1" />
+                <certain>
+                  <attribute attr-id="p1" />
+                </certain>
+              </interval-count-distinct-if>
+              <number-value>1</number-value>
+            </maximum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="19" name="the person's requested benefit's results" ruleburst="true" concludes="InferInstance(personsrequestedbenefitsresults)" folder="4" source-offset="11649">
+      <rule-xml>
+        <table-conclude-instance relationship-id="personsrequestedbenefitsresults" source="personsrequestedbenefit" source-scope-id="personsrequestedbenefit0">
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p56" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p57" />
+                </scope-for>
+                <string-value>1</string-value>
+              </concatenate>
+            </identity>
+            <condition>
+              <greater-than-equals>
+                <attribute attr-id="p22" />
+                <number-value>1</number-value>
+              </greater-than-equals>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p56" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p57" />
+                </scope-for>
+                <string-value>2</string-value>
+              </concatenate>
+            </identity>
+            <condition>
+              <greater-than-equals>
+                <attribute attr-id="p22" />
+                <number-value>2</number-value>
+              </greater-than-equals>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p56" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p57" />
+                </scope-for>
+                <string-value>3</string-value>
+              </concatenate>
+            </identity>
+            <condition>
+              <greater-than-equals>
+                <attribute attr-id="p22" />
+                <number-value>3</number-value>
+              </greater-than-equals>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p56" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p57" />
+                </scope-for>
+                <string-value>4</string-value>
+              </concatenate>
+            </identity>
+            <condition>
+              <greater-than-equals>
+                <attribute attr-id="p22" />
+                <number-value>4</number-value>
+              </greater-than-equals>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p56" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p57" />
+                </scope-for>
+                <string-value>5</string-value>
+              </concatenate>
+            </identity>
+            <condition>
+              <greater-than-equals>
+                <attribute attr-id="p22" />
+                <number-value>5</number-value>
+              </greater-than-equals>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p56" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p57" />
+                </scope-for>
+                <string-value>6</string-value>
+              </concatenate>
+            </identity>
+            <condition>
+              <greater-than-equals>
+                <attribute attr-id="p22" />
+                <number-value>6</number-value>
+              </greater-than-equals>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p56" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p57" />
+                </scope-for>
+                <string-value>7</string-value>
+              </concatenate>
+            </identity>
+            <condition>
+              <greater-than-equals>
+                <attribute attr-id="p22" />
+                <number-value>7</number-value>
+              </greater-than-equals>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p56" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p57" />
+                </scope-for>
+                <string-value>8</string-value>
+              </concatenate>
+            </identity>
+            <condition>
+              <greater-than-equals>
+                <attribute attr-id="p22" />
+                <number-value>8</number-value>
+              </greater-than-equals>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p56" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p57" />
+                </scope-for>
+                <string-value>9</string-value>
+              </concatenate>
+            </identity>
+            <condition>
+              <greater-than-equals>
+                <attribute attr-id="p22" />
+                <number-value>9</number-value>
+              </greater-than-equals>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p56" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p57" />
+                </scope-for>
+                <string-value>10</string-value>
+              </concatenate>
+            </identity>
+            <condition>
+              <greater-than-equals>
+                <attribute attr-id="p22" />
+                <number-value>10</number-value>
+              </greater-than-equals>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p56" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p57" />
+                </scope-for>
+                <string-value>11</string-value>
+              </concatenate>
+            </identity>
+            <condition>
+              <greater-than-equals>
+                <attribute attr-id="p22" />
+                <number-value>11</number-value>
+              </greater-than-equals>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p56" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p57" />
+                </scope-for>
+                <string-value>12</string-value>
+              </concatenate>
+            </identity>
+            <condition>
+              <greater-than-equals>
+                <attribute attr-id="p22" />
+                <number-value>12</number-value>
+              </greater-than-equals>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p56" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p57" />
+                </scope-for>
+                <string-value>13</string-value>
+              </concatenate>
+            </identity>
+            <condition>
+              <greater-than-equals>
+                <attribute attr-id="p22" />
+                <number-value>13</number-value>
+              </greater-than-equals>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p56" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p57" />
+                </scope-for>
+                <string-value>14</string-value>
+              </concatenate>
+            </identity>
+            <condition>
+              <greater-than-equals>
+                <attribute attr-id="p22" />
+                <number-value>14</number-value>
+              </greater-than-equals>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p56" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p57" />
+                </scope-for>
+                <string-value>15</string-value>
+              </concatenate>
+            </identity>
+            <condition>
+              <greater-than-equals>
+                <attribute attr-id="p22" />
+                <number-value>15</number-value>
+              </greater-than-equals>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p56" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p57" />
+                </scope-for>
+                <string-value>16</string-value>
+              </concatenate>
+            </identity>
+            <condition>
+              <greater-than-equals>
+                <attribute attr-id="p22" />
+                <number-value>16</number-value>
+              </greater-than-equals>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p56" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p57" />
+                </scope-for>
+                <string-value>17</string-value>
+              </concatenate>
+            </identity>
+            <condition>
+              <greater-than-equals>
+                <attribute attr-id="p22" />
+                <number-value>17</number-value>
+              </greater-than-equals>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p56" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p57" />
+                </scope-for>
+                <string-value>18</string-value>
+              </concatenate>
+            </identity>
+            <condition>
+              <greater-than-equals>
+                <attribute attr-id="p22" />
+                <number-value>18</number-value>
+              </greater-than-equals>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p56" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p57" />
+                </scope-for>
+                <string-value>19</string-value>
+              </concatenate>
+            </identity>
+            <condition>
+              <greater-than-equals>
+                <attribute attr-id="p22" />
+                <number-value>19</number-value>
+              </greater-than-equals>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p56" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p57" />
+                </scope-for>
+                <string-value>20</string-value>
+              </concatenate>
+            </identity>
+            <condition>
+              <greater-than-equals>
+                <attribute attr-id="p22" />
+                <number-value>20</number-value>
+              </greater-than-equals>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p56" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p57" />
+                </scope-for>
+                <string-value>21</string-value>
+              </concatenate>
+            </identity>
+            <condition>
+              <greater-than-equals>
+                <attribute attr-id="p22" />
+                <number-value>21</number-value>
+              </greater-than-equals>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p56" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p57" />
+                </scope-for>
+                <string-value>22</string-value>
+              </concatenate>
+            </identity>
+            <condition>
+              <greater-than-equals>
+                <attribute attr-id="p22" />
+                <number-value>22</number-value>
+              </greater-than-equals>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p56" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p57" />
+                </scope-for>
+                <string-value>23</string-value>
+              </concatenate>
+            </identity>
+            <condition>
+              <greater-than-equals>
+                <attribute attr-id="p22" />
+                <number-value>23</number-value>
+              </greater-than-equals>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p56" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p57" />
+                </scope-for>
+                <string-value>24</string-value>
+              </concatenate>
+            </identity>
+            <condition>
+              <greater-than-equals>
+                <attribute attr-id="p22" />
+                <number-value>24</number-value>
+              </greater-than-equals>
+            </condition>
+          </row>
+        </table-conclude-instance>
+      </rule-xml>
+    </rule>
+    <rule id="20" name="the result's number as text " ruleburst="true" concludes="p21 = Substring(p58,Length(p56) + Length(p57),Length(p58))" folder="4" source-offset="16241">
+      <rule-xml>
+        <conclude attr-id="p21" entity-id="result" scope-id="result0">
+          <value>
+            <substring>
+              <attribute attr-id="p58" />
+              <plus>
+                <length>
+                  <for>
+                    <relationship relationship-id="resultsrequestedbenefit" target-entity-id="personsrequestedbenefit" />
+                    <attribute attr-id="p56" />
+                  </for>
+                </length>
+                <length>
+                  <scope-for scope-ref="global0" target-entity-id="global">
+                    <attribute attr-id="p57" />
+                  </scope-for>
+                </length>
+              </plus>
+              <length>
+                <attribute attr-id="p58" />
+              </length>
+            </substring>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="21" name="the result " ruleburst="true" concludes="p25 = p26 &amp; &quot; #&quot; &amp; p21" folder="4" source-offset="16499">
+      <rule-xml>
+        <conclude attr-id="p25" entity-id="result" scope-id="result0">
+          <value>
+            <concatenate>
+              <attribute attr-id="p26" />
+              <string-value><![CDATA[ #]]></string-value>
+              <attribute attr-id="p21" />
+            </concatenate>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="22" name="the result's benefit type " ruleburst="true" concludes="p26 = InstanceValueIf(resultsrequestedbenefit,p15,true)" folder="4" source-offset="16603">
+      <rule-xml>
+        <conclude attr-id="p26" entity-id="result" scope-id="result0">
+          <value>
+            <instance-value-if>
+              <relationship relationship-id="resultsrequestedbenefit" target-entity-id="personsrequestedbenefit" />
+              <attribute attr-id="p15" />
+              <true-value />
+            </instance-value-if>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="23" name="the result's number " ruleburst="true" concludes="p27 = Number(p21)" folder="4" source-offset="16782">
+      <rule-xml>
+        <conclude attr-id="p27" entity-id="result" scope-id="result0">
+          <value>
+            <number>
+              <attribute attr-id="p21" />
+            </number>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="24" name="the result's benefit description " ruleburst="true" concludes="p28 = ValueAt(WhenNext(WhenNext(p19,certain p29),p29 = p27),p2)" folder="4" source-offset="16862">
+      <rule-xml>
+        <conclude attr-id="p28" entity-id="result" scope-id="result0">
+          <value>
+            <value-at>
+              <when-next>
+                <when-next>
+                  <scope-for scope-ref="global0" target-entity-id="global">
+                    <attribute attr-id="p19" />
+                  </scope-for>
+                  <certain>
+                    <for>
+                      <relationship relationship-id="resultsrequestedbenefit" target-entity-id="personsrequestedbenefit" />
+                      <attribute attr-id="p29" />
+                    </for>
+                  </certain>
+                </when-next>
+                <equals>
+                  <for>
+                    <relationship relationship-id="resultsrequestedbenefit" target-entity-id="personsrequestedbenefit" />
+                    <attribute attr-id="p29" />
+                  </for>
+                  <attribute attr-id="p27" />
+                </equals>
+              </when-next>
+              <for>
+                <relationship relationship-id="resultsrequestedbenefit" target-entity-id="personsrequestedbenefit" />
+                <attribute attr-id="p2" />
+              </for>
+            </value-at>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="25" name="the result's start date " ruleburst="true" concludes="p30 = ValueAt(WhenNext(WhenNext(p19,certain p29),p29 = p27),p16)" folder="4" source-offset="17253">
+      <rule-xml>
+        <conclude attr-id="p30" entity-id="result" scope-id="result0">
+          <value>
+            <value-at>
+              <when-next>
+                <when-next>
+                  <scope-for scope-ref="global0" target-entity-id="global">
+                    <attribute attr-id="p19" />
+                  </scope-for>
+                  <certain>
+                    <for>
+                      <relationship relationship-id="resultsrequestedbenefit" target-entity-id="personsrequestedbenefit" />
+                      <attribute attr-id="p29" />
+                    </for>
+                  </certain>
+                </when-next>
+                <equals>
+                  <for>
+                    <relationship relationship-id="resultsrequestedbenefit" target-entity-id="personsrequestedbenefit" />
+                    <attribute attr-id="p29" />
+                  </for>
+                  <attribute attr-id="p27" />
+                </equals>
+              </when-next>
+              <for>
+                <relationship relationship-id="resultsrequestedbenefit" target-entity-id="personsrequestedbenefit" />
+                <attribute attr-id="p16" />
+              </for>
+            </value-at>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="26" name="the result's end date" ruleburst="true" concludes="p31" folder="4" source-offset="17646">
+      <rule-xml>
+        <table-conclude attr-id="p31" entity-id="result" scope-id="result0">
+          <row>
+            <value>
+              <attribute attr-id="p49" />
+            </value>
+            <condition>
+              <uncertain>
+                <attribute attr-id="p55" />
+              </uncertain>
+            </condition>
+          </row>
+          <otherwise>
+            <attribute attr-id="p55" />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="27" name="the result's calculated end date " ruleburst="true" concludes="p55 = ValueAt(WhenNext(WhenNext(p19,certain p29),p29 = p27),p17)" folder="4" source-offset="17830">
+      <rule-xml>
+        <conclude attr-id="p55" entity-id="result" scope-id="result0">
+          <value>
+            <value-at>
+              <when-next>
+                <when-next>
+                  <scope-for scope-ref="global0" target-entity-id="global">
+                    <attribute attr-id="p19" />
+                  </scope-for>
+                  <certain>
+                    <for>
+                      <relationship relationship-id="resultsrequestedbenefit" target-entity-id="personsrequestedbenefit" />
+                      <attribute attr-id="p29" />
+                    </for>
+                  </certain>
+                </when-next>
+                <equals>
+                  <for>
+                    <relationship relationship-id="resultsrequestedbenefit" target-entity-id="personsrequestedbenefit" />
+                    <attribute attr-id="p29" />
+                  </for>
+                  <attribute attr-id="p27" />
+                </equals>
+              </when-next>
+              <for>
+                <relationship relationship-id="resultsrequestedbenefit" target-entity-id="personsrequestedbenefit" />
+                <attribute attr-id="p17" />
+              </for>
+            </value-at>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="28" name="the running total result count for the person's requested benefit" ruleburst="true" concludes="p29" folder="4" source-offset="18232">
+      <rule-xml>
+        <table-conclude attr-id="p29" entity-id="personsrequestedbenefit" scope-id="personsrequestedbenefit0">
+          <row>
+            <value>
+              <uncertain-value />
+            </value>
+            <condition>
+              <uncertain>
+                <attribute attr-id="p1" />
+              </uncertain>
+            </condition>
+          </row>
+          <otherwise>
+            <interval-count-distinct-if>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p19" />
+              </scope-for>
+              <add-days>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p18" />
+                </scope-for>
+                <number-value>1</number-value>
+              </add-days>
+              <attribute attr-id="p1" />
+              <certain>
+                <attribute attr-id="p1" />
+              </certain>
+            </interval-count-distinct-if>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="29" name="the result's recipient's ID " ruleburst="true" concludes="p53 = p33" folder="4" source-offset="18701">
+      <rule-xml>
+        <conclude attr-id="p53" entity-id="result" scope-id="result0">
+          <value>
+            <for>
+              <relationship relationship-id="resultsrequestedbenefit" target-entity-id="personsrequestedbenefit" />
+              <for>
+                <relationship relationship-id="personfortherequestedbenefit" target-entity-id="person" />
+                <attribute attr-id="p33" />
+              </for>
+            </for>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="30" name="the result's primary person's ID " ruleburst="true" concludes="p54 = InstanceValueIf(resultsprimaryperson,p33,true)" folder="4" source-offset="18768">
+      <rule-xml>
+        <conclude attr-id="p54" entity-id="result" scope-id="result0">
+          <value>
+            <instance-value-if>
+              <relationship relationship-id="resultsprimaryperson" target-entity-id="person" />
+              <attribute attr-id="p33" />
+              <true-value />
+            </instance-value-if>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="31" name="the result's program name " ruleburst="true" concludes="p36 = InstanceValueIf(eligibleprogramfortheresult,p8,true)" folder="4" source-offset="18940">
+      <rule-xml>
+        <conclude attr-id="p36" entity-id="result" scope-id="result0">
+          <value>
+            <instance-value-if>
+              <relationship relationship-id="eligibleprogramfortheresult" target-entity-id="program" />
+              <attribute attr-id="p8" />
+              <true-value />
+            </instance-value-if>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="32" name="the result's program code " ruleburst="true" concludes="p59 = InstanceValueIf(eligibleprogramfortheresult,p60,true)" folder="4" source-offset="19114">
+      <rule-xml>
+        <conclude attr-id="p59" entity-id="result" scope-id="result0">
+          <value>
+            <instance-value-if>
+              <relationship relationship-id="eligibleprogramfortheresult" target-entity-id="program" />
+              <attribute attr-id="p60" />
+              <true-value />
+            </instance-value-if>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="33" name="the result's eligibility status" ruleburst="true" concludes="p37" folder="4" source-offset="19290">
+      <rule-xml>
+        <table-conclude attr-id="p37" entity-id="result" scope-id="result0">
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p5" />
+              </scope-for>
+            </value>
+            <condition>
+              <for scope-id="personsrequestedbenefit0">
+                <relationship relationship-id="resultsrequestedbenefit" target-entity-id="personsrequestedbenefit" />
+                <equals>
+                  <value-at>
+                    <scope-for scope-ref="result0" target-entity-id="result">
+                      <attribute attr-id="p30" />
+                    </scope-for>
+                    <attribute attr-id="p2" />
+                  </value-at>
+                  <scope-for scope-ref="global0" target-entity-id="global">
+                    <attribute attr-id="p5" />
+                  </scope-for>
+                </equals>
+              </for>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p6" />
+              </scope-for>
+            </value>
+            <condition>
+              <for scope-id="personsrequestedbenefit0">
+                <relationship relationship-id="resultsrequestedbenefit" target-entity-id="personsrequestedbenefit" />
+                <equals>
+                  <value-at>
+                    <scope-for scope-ref="result0" target-entity-id="result">
+                      <attribute attr-id="p30" />
+                    </scope-for>
+                    <attribute attr-id="p2" />
+                  </value-at>
+                  <scope-for scope-ref="global0" target-entity-id="global">
+                    <attribute attr-id="p6" />
+                  </scope-for>
+                </equals>
+              </for>
+            </condition>
+          </row>
+          <otherwise>
+            <scope-for scope-ref="global0" target-entity-id="global">
+              <attribute attr-id="p38" />
+            </scope-for>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="34" name="the result's benefit plan start date " ruleburst="true" concludes="p47 = ValueAt(p30,InstanceValueIf(eligibleprogramfortheresult,p51,true))" folder="4" source-offset="19852">
+      <rule-xml>
+        <conclude attr-id="p47" entity-id="result" scope-id="result0">
+          <value>
+            <value-at>
+              <attribute attr-id="p30" />
+              <instance-value-if>
+                <relationship relationship-id="eligibleprogramfortheresult" target-entity-id="program" />
+                <attribute attr-id="p51" />
+                <true-value />
+              </instance-value-if>
+            </value-at>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="35" name="the result's benefit plan end date " ruleburst="true" concludes="p49 = ValueAt(p30,InstanceValueIf(eligibleprogramfortheresult,p52,true))" folder="4" source-offset="20130">
+      <rule-xml>
+        <conclude attr-id="p49" entity-id="result" scope-id="result0">
+          <value>
+            <value-at>
+              <attribute attr-id="p30" />
+              <instance-value-if>
+                <relationship relationship-id="eligibleprogramfortheresult" target-entity-id="program" />
+                <attribute attr-id="p52" />
+                <true-value />
+              </instance-value-if>
+            </value-at>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="36" name="the program is a member of the eligible program for the result" ruleburst="true" concludes="IsMemberOf(&quot;program&quot;, eligibleprogramfortheresult)" folder="4" source-offset="20935">
+      <rule-xml>
+        <conclude-rel relationship-id="eligibleprogramfortheresult" source="result" source-scope-id="result0" target-scope-id="program0">
+          <condition>
+            <and>
+              <exists-in scope-ref="result0" scope-is-source="true" scope-entity-id="result">
+                <relationship relationship-id="programsfortheresult" target-entity-id="program" />
+              </exists-in>
+              <interval-sometimes>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p19" />
+                </scope-for>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p24" />
+                </scope-for>
+                <equals>
+                  <attribute attr-id="p41" />
+                  <scope-for scope-ref="result0" target-entity-id="result">
+                    <attribute attr-id="p27" />
+                  </scope-for>
+                </equals>
+              </interval-sometimes>
+            </and>
+          </condition>
+        </conclude-rel>
+      </rule-xml>
+    </rule>
+    <rule id="37" name="the program is a member of the programs for the result" ruleburst="true" concludes="IsMemberOf(&quot;program&quot;, programsfortheresult)" folder="4" source-offset="21392">
+      <rule-xml>
+        <conclude-rel relationship-id="programsfortheresult" source="result" source-scope-id="result0" target-scope-id="program0">
+          <condition>
+            <scope-for scope-ref="result0" target-entity-id="result">
+              <for scope-id="person0">
+                <relationship relationship-id="resultsperson" target-entity-id="person" />
+                <and>
+                  <exists-in scope-ref="program0" scope-is-source="false" scope-entity-id="program">
+                    <relationship relationship-id="personsprograms" target-entity-id="program" />
+                  </exists-in>
+                  <equals>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <scope-for scope-ref="result0" target-entity-id="result">
+                      <attribute attr-id="p26" />
+                    </scope-for>
+                  </equals>
+                </and>
+              </for>
+            </scope-for>
+          </condition>
+        </conclude-rel>
+      </rule-xml>
+    </rule>
+    <rule id="38" name="the person is a member of the result's person" ruleburst="true" concludes="IsMemberOf(&quot;person&quot;, resultsperson)" folder="4" source-offset="21753">
+      <rule-xml>
+        <conclude-rel relationship-id="resultsperson" source="result" source-scope-id="result0" target-scope-id="person0">
+          <condition>
+            <scope-for scope-ref="result0" target-entity-id="result">
+              <for scope-id="personsrequestedbenefit0">
+                <relationship relationship-id="resultsrequestedbenefit" target-entity-id="personsrequestedbenefit" />
+                <exists-in scope-ref="person0" scope-is-source="false" scope-entity-id="person">
+                  <relationship relationship-id="personfortherequestedbenefit" target-entity-id="person" />
+                </exists-in>
+              </for>
+            </scope-for>
+          </condition>
+        </conclude-rel>
+      </rule-xml>
+    </rule>
+    <rule id="39" name="the program's order among all eligible programs for the program's benefit type" ruleburst="true" concludes="p41" folder="4" source-offset="22090">
+      <rule-xml>
+        <table-conclude attr-id="p41" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <instance-value-if>
+                <relationship relationship-id="personsrequestedbenefitsfortheprogram" target-entity-id="personsrequestedbenefit" />
+                <attribute attr-id="p29" />
+                <true-value />
+              </instance-value-if>
+            </value>
+            <condition>
+              <and>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="b1" />
+                </scope-for>
+                <not>
+                  <unknown>
+                    <attribute attr-id="b2" />
+                  </unknown>
+                </not>
+                <certain>
+                  <attribute attr-id="b2" />
+                </certain>
+                <attribute attr-id="b2" />
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <negate>
+              <number-value>1</number-value>
+            </negate>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="40" name="the case results for the person's requested benefit" ruleburst="true" concludes="InferInstance(caseresultsforthepersonsrequestedbenefit)" folder="5" source-offset="23076">
+      <rule-xml>
+        <table-conclude-instance relationship-id="caseresultsforthepersonsrequestedbenefit" source="personsrequestedbenefit" source-scope-id="personsrequestedbenefit0">
+          <row>
+            <identity>
+              <attribute attr-id="p15" />
+            </identity>
+            <condition>
+              <known>
+                <attribute attr-id="p15" />
+              </known>
+            </condition>
+          </row>
+        </table-conclude-instance>
+      </rule-xml>
+    </rule>
+    <rule id="41" name="the case result's transaction date time " ruleburst="true" concludes="p46 = p40" folder="5" source-offset="23279">
+      <rule-xml>
+        <conclude attr-id="p46" entity-id="caseresult" scope-id="caseresult0">
+          <value>
+            <scope-for scope-ref="global0" target-entity-id="global">
+              <attribute attr-id="p40" />
+            </scope-for>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="42" name="the result is a member of the case result's consolidated results" ruleburst="true" concludes="IsMemberOf(&quot;result&quot;, caseresultsconsolidatedresults)" folder="6" source-offset="23385">
+      <rule-xml>
+        <conclude-rel relationship-id="caseresultsconsolidatedresults" source="caseresult" source-scope-id="caseresult0" target-scope-id="result0">
+          <condition>
+            <scope-for scope-ref="caseresult0" target-entity-id="caseresult">
+              <exists scope-id="personsrequestedbenefit0">
+                <relationship relationship-id="personsrequestedbenefitsforthecaseresult" target-entity-id="personsrequestedbenefit" />
+                <and>
+                  <exists-in scope-ref="result0" scope-is-source="false" scope-entity-id="result">
+                    <relationship relationship-id="personsrequestedbenefitsresults" target-entity-id="result" />
+                  </exists-in>
+                  <scope-for scope-ref="result0" target-entity-id="result">
+                    <attribute attr-id="b17" />
+                  </scope-for>
+                </and>
+              </exists>
+            </scope-for>
+          </condition>
+        </conclude-rel>
+      </rule-xml>
+    </rule>
+    <rule id="43" name="the result should be included in a consolidated benefit plan" ruleburst="true" concludes="b17" folder="6" source-offset="23883">
+      <rule-xml>
+        <conclude attr-id="b17" entity-id="result" scope-id="result0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <exists scope-id="program0">
+                <relationship relationship-id="programsfortheresult" target-entity-id="program" />
+                <and>
+                  <value-at>
+                    <scope-for scope-ref="result0" target-entity-id="result">
+                      <attribute attr-id="p30" />
+                    </scope-for>
+                    <not>
+                      <unknown>
+                        <attribute attr-id="b16" />
+                      </unknown>
+                    </not>
+                  </value-at>
+                  <value-at>
+                    <scope-for scope-ref="result0" target-entity-id="result">
+                      <attribute attr-id="p30" />
+                    </scope-for>
+                    <certain>
+                      <attribute attr-id="b16" />
+                    </certain>
+                  </value-at>
+                  <value-at>
+                    <scope-for scope-ref="result0" target-entity-id="result">
+                      <attribute attr-id="p30" />
+                    </scope-for>
+                    <attribute attr-id="b16" />
+                  </value-at>
+                </and>
+              </exists>
+              <exists scope-id="program0">
+                <relationship relationship-id="programsfortheresult" target-entity-id="program" />
+                <and>
+                  <or>
+                    <value-at>
+                      <scope-for scope-ref="result0" target-entity-id="result">
+                        <attribute attr-id="p30" />
+                      </scope-for>
+                      <unknown>
+                        <attribute attr-id="b2" />
+                      </unknown>
+                    </value-at>
+                    <value-at>
+                      <scope-for scope-ref="result0" target-entity-id="result">
+                        <attribute attr-id="p30" />
+                      </scope-for>
+                      <uncertain>
+                        <attribute attr-id="b2" />
+                      </uncertain>
+                    </value-at>
+                  </or>
+                  <or>
+                    <value-at>
+                      <scope-for scope-ref="result0" target-entity-id="result">
+                        <attribute attr-id="p30" />
+                      </scope-for>
+                      <unknown>
+                        <attribute attr-id="b16" />
+                      </unknown>
+                    </value-at>
+                    <value-at>
+                      <scope-for scope-ref="result0" target-entity-id="result">
+                        <attribute attr-id="p30" />
+                      </scope-for>
+                      <uncertain>
+                        <attribute attr-id="b16" />
+                      </uncertain>
+                    </value-at>
+                    <value-at>
+                      <scope-for scope-ref="result0" target-entity-id="result">
+                        <attribute attr-id="p30" />
+                      </scope-for>
+                      <attribute attr-id="b16" />
+                    </value-at>
+                  </or>
+                </and>
+              </exists>
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="44" name="the program's result should be included in a consolidated benefit plan" ruleburst="true" concludes="b16" folder="6" source-offset="25407">
+      <rule-xml>
+        <conclude attr-id="b16" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b7" />
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <attribute attr-id="b9" />
+              </for>
+              <and>
+                <not>
+                  <unknown>
+                    <attribute attr-id="p43" />
+                  </unknown>
+                </not>
+                <certain>
+                  <attribute attr-id="p43" />
+                </certain>
+                <equals>
+                  <attribute attr-id="p43" />
+                  <number-value>1</number-value>
+                </equals>
+              </and>
+              <for scope-id="person0">
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <and>
+                  <not>
+                    <attribute attr-id="b9" />
+                  </not>
+                  <scope-for scope-ref="program0" target-entity-id="program">
+                    <for-all scope-id="groupmemberprogram0">
+                      <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+                      <or>
+                        <not>
+                          <attribute attr-id="b10" silent-if-true="true" silent-if-false="true" invisible-if-false="true" />
+                        </not>
+                        <for scope-id="the member">
+                          <relationship relationship-id="groupmembersrepresentativepersonforthegroupmemberprogram" target-entity-id="person" />
+                          <and>
+                            <scope-for scope-ref="groupmemberprogram0" target-entity-id="groupmemberprogram">
+                              <attribute attr-id="b10" silent-if-true="true" silent-if-false="true" invisible-if-false="true" />
+                            </scope-for>
+                            <not>
+                              <attribute attr-id="b9" silent-if-false="true" invisible-if-false="true" />
+                            </not>
+                            <less-than-equals>
+                              <scope-for scope-ref="person0" target-entity-id="person">
+                                <attribute attr-id="p44" />
+                              </scope-for>
+                              <attribute attr-id="p44" />
+                            </less-than-equals>
+                          </and>
+                        </for>
+                        <for scope-id="the member">
+                          <relationship relationship-id="groupmembersrepresentativepersonforthegroupmemberprogram" target-entity-id="person" />
+                          <and>
+                            <scope-for scope-ref="groupmemberprogram0" target-entity-id="groupmemberprogram">
+                              <attribute attr-id="b10" silent-if-true="true" silent-if-false="true" invisible-if-false="true" />
+                            </scope-for>
+                            <attribute attr-id="b9" silent-if-false="true" invisible-if-false="true" />
+                            <scope-for scope-ref="groupmemberprogram0" target-entity-id="groupmemberprogram">
+                              <for scope-id="the member program">
+                                <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                                <not>
+                                  <attribute attr-id="b25" />
+                                </not>
+                              </for>
+                            </scope-for>
+                          </and>
+                        </for>
+                      </or>
+                    </for-all>
+                  </scope-for>
+                </and>
+              </for>
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="45" name="the person is a member of the result's primary person" ruleburst="true" concludes="IsMemberOf(&quot;person&quot;, resultsprimaryperson)" folder="7" source-offset="27649">
+      <rule-xml>
+        <conclude-rel relationship-id="resultsprimaryperson" source="result" source-scope-id="result0" target-scope-id="person0">
+          <condition>
+            <or>
+              <scope-for scope-ref="result0" target-entity-id="result">
+                <for scope-id="program0">
+                  <relationship relationship-id="eligibleprogramfortheresult" target-entity-id="program" />
+                  <exists scope-id="groupmemberprogram0">
+                    <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+                    <and>
+                      <exists-in scope-ref="person0" scope-is-source="false" scope-entity-id="person">
+                        <relationship relationship-id="groupmembersrepresentativepersonforthegroupmemberprogram" target-entity-id="person" />
+                      </exists-in>
+                      <value-at>
+                        <scope-for scope-ref="result0" target-entity-id="result">
+                          <attribute attr-id="p30" />
+                        </scope-for>
+                        <not>
+                          <unknown>
+                            <attribute attr-id="b18" />
+                          </unknown>
+                        </not>
+                      </value-at>
+                      <value-at>
+                        <scope-for scope-ref="result0" target-entity-id="result">
+                          <attribute attr-id="p30" />
+                        </scope-for>
+                        <certain>
+                          <attribute attr-id="b18" />
+                        </certain>
+                      </value-at>
+                      <value-at>
+                        <scope-for scope-ref="result0" target-entity-id="result">
+                          <attribute attr-id="p30" />
+                        </scope-for>
+                        <attribute attr-id="b18" />
+                      </value-at>
+                    </and>
+                  </exists>
+                </for>
+              </scope-for>
+              <scope-for scope-ref="result0" target-entity-id="result">
+                <for-all scope-id="program0">
+                  <relationship relationship-id="programsfortheresult" target-entity-id="program" />
+                  <and>
+                    <not>
+                      <exists-in scope-ref="result0" scope-is-source="true" scope-entity-id="result">
+                        <relationship relationship-id="eligibleprogramfortheresult" target-entity-id="program" />
+                      </exists-in>
+                    </not>
+                    <exists scope-id="groupmemberprogram0">
+                      <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+                      <and>
+                        <exists-in scope-ref="person0" scope-is-source="false" scope-entity-id="person">
+                          <relationship relationship-id="groupmembersrepresentativepersonforthegroupmemberprogram" target-entity-id="person" />
+                        </exists-in>
+                        <value-at>
+                          <scope-for scope-ref="result0" target-entity-id="result">
+                            <attribute attr-id="p30" />
+                          </scope-for>
+                          <not>
+                            <unknown>
+                              <attribute attr-id="b18" />
+                            </unknown>
+                          </not>
+                        </value-at>
+                        <value-at>
+                          <scope-for scope-ref="result0" target-entity-id="result">
+                            <attribute attr-id="p30" />
+                          </scope-for>
+                          <certain>
+                            <attribute attr-id="b18" />
+                          </certain>
+                        </value-at>
+                        <value-at>
+                          <scope-for scope-ref="result0" target-entity-id="result">
+                            <attribute attr-id="p30" />
+                          </scope-for>
+                          <attribute attr-id="b18" />
+                        </value-at>
+                      </and>
+                    </exists>
+                  </and>
+                </for-all>
+              </scope-for>
+              <and>
+                <scope-for scope-ref="result0" target-entity-id="result">
+                  <for-all scope-id="program0">
+                    <relationship relationship-id="programsfortheresult" target-entity-id="program" />
+                    <not>
+                      <exists-in scope-ref="result0" scope-is-source="true" scope-entity-id="result">
+                        <relationship relationship-id="eligibleprogramfortheresult" target-entity-id="program" />
+                      </exists-in>
+                    </not>
+                  </for-all>
+                </scope-for>
+                <not>
+                  <scope-for scope-ref="result0" target-entity-id="result">
+                    <attribute attr-id="b23" />
+                  </scope-for>
+                </not>
+                <attribute attr-id="b9" />
+              </and>
+            </or>
+          </condition>
+        </conclude-rel>
+      </rule-xml>
+    </rule>
+    <rule id="46" name="there is a person who is the primary person for all of the result's programs" ruleburst="true" concludes="b23" folder="7" source-offset="31068">
+      <rule-xml>
+        <conclude attr-id="b23" entity-id="result" scope-id="result0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <scope-for scope-ref="global0" target-entity-id="global">
+              <exists scope-id="person0">
+                <relationship relationship-id="people" target-entity-id="person" />
+                <scope-for scope-ref="result0" target-entity-id="result">
+                  <for-all scope-id="program0">
+                    <relationship relationship-id="programsfortheresult" target-entity-id="program" />
+                    <exists scope-id="groupmemberprogram0">
+                      <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+                      <and>
+                        <exists-in scope-ref="person0" scope-is-source="false" scope-entity-id="person">
+                          <relationship relationship-id="groupmembersrepresentativepersonforthegroupmemberprogram" target-entity-id="person" />
+                        </exists-in>
+                        <value-at>
+                          <scope-for scope-ref="result0" target-entity-id="result">
+                            <attribute attr-id="p30" />
+                          </scope-for>
+                          <not>
+                            <unknown>
+                              <attribute attr-id="b18" />
+                            </unknown>
+                          </not>
+                        </value-at>
+                        <value-at>
+                          <scope-for scope-ref="result0" target-entity-id="result">
+                            <attribute attr-id="p30" />
+                          </scope-for>
+                          <certain>
+                            <attribute attr-id="b18" />
+                          </certain>
+                        </value-at>
+                        <value-at>
+                          <scope-for scope-ref="result0" target-entity-id="result">
+                            <attribute attr-id="p30" />
+                          </scope-for>
+                          <attribute attr-id="b18" />
+                        </value-at>
+                      </and>
+                    </exists>
+                  </for-all>
+                </scope-for>
+              </exists>
+            </scope-for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="47" name="the group member is the person's current primary person for the group member program" ruleburst="true" concludes="b21" folder="7" source-offset="32139">
+      <rule-xml>
+        <conclude attr-id="b21" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="program0">
+              <relationship relationship-id="groupmemberscontainingpersonsprogramforthegroupmemberprogram" target-entity-id="program" />
+              <exists scope-id="existingbenefit0">
+                <relationship relationship-id="currentbenefitsfortheprogramsbenefittype" target-entity-id="existingbenefit" />
+                <scope-for scope-ref="groupmemberprogram0" target-entity-id="groupmemberprogram">
+                  <for scope-id="the member">
+                    <relationship relationship-id="groupmembersrepresentativepersonforthegroupmemberprogram" target-entity-id="person" />
+                    <and>
+                      <exists-in scope-ref="existingbenefit0" scope-is-source="true" scope-entity-id="existingbenefit">
+                        <relationship relationship-id="existingbenefitsprimaryperson" target-entity-id="person" />
+                      </exists-in>
+                      <scope-for scope-ref="existingbenefit0" target-entity-id="existingbenefit">
+                        <attribute attr-id="b22" />
+                      </scope-for>
+                    </and>
+                  </for>
+                </scope-for>
+              </exists>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="48" name="the person is the primary person for the case" ruleburst="true" concludes="b9" folder="7" source-offset="32931">
+      <rule-xml>
+        <conclude attr-id="b9" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <not>
+                <unknown>
+                  <scope-for scope-ref="global0" target-entity-id="global">
+                    <attribute attr-id="p45" />
+                  </scope-for>
+                </unknown>
+              </not>
+              <certain>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p45" />
+                </scope-for>
+              </certain>
+              <equals>
+                <attribute attr-id="p33" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p45" />
+                </scope-for>
+              </equals>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="The Requested Benefit's Results" parent="0" id="1" />
+    <folder text="Benefit Plan Description" parent="1" id="2" />
+    <folder text="Benefit Plan Changes" parent="1" id="3" />
+    <folder text="Result Instances" parent="1" id="4" />
+    <folder text="Case Benefit Results" parent="0" id="5" />
+    <folder text="Consolidated Results" parent="5" id="6" />
+    <folder text="Primary Person" parent="5" id="7" />
+  </rule-folders>
+</root>

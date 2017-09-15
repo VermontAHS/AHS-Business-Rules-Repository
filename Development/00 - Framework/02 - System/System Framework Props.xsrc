@@ -1,0 +1,434 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+      <attribute name="p16" type="text" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the ineligible status</base>
+        </text>
+      </attribute>
+      <attribute name="p17" type="text" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the pending status</base>
+        </text>
+      </attribute>
+      <attribute name="p39" type="number">
+        <text>
+          <base>the maximum number of results</base>
+        </text>
+      </attribute>
+      <attribute name="p40" type="text" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the eligible status</base>
+        </text>
+      </attribute>
+      <attribute name="p41" type="text" public-name="i_g_primary-ID">
+        <text>
+          <base>the primary person's ID</base>
+        </text>
+      </attribute>
+      <attribute name="p83" type="text">
+        <text>
+          <base>the approved status</base>
+        </text>
+      </attribute>
+      <attribute name="p84" type="text">
+        <text>
+          <base>the suspended status</base>
+        </text>
+      </attribute>
+      <attribute name="p85" type="text">
+        <text>
+          <base>the enrolled status</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="p18" type="text">
+        <text>
+          <base>the program's benefit description</base>
+        </text>
+      </attribute>
+      <attribute name="p19" type="number">
+        <text>
+          <base>the program's order among all eligible programs for the program's benefit type</base>
+        </text>
+      </attribute>
+      <attribute name="p30" type="text">
+        <text>
+          <base>the program's status description</base>
+        </text>
+      </attribute>
+      <attribute name="p31" type="text">
+        <text>
+          <base>the program's sub-status description</base>
+        </text>
+      </attribute>
+      <attribute name="p32" type="text">
+        <text>
+          <base>the program's benefit level description</base>
+        </text>
+      </attribute>
+      <attribute name="p33" type="text">
+        <text>
+          <base>the program's name</base>
+        </text>
+      </attribute>
+      <attribute name="p34" type="text">
+        <text>
+          <base>the program's benefit sub-description</base>
+        </text>
+      </attribute>
+      <attribute name="p35" type="text">
+        <text>
+          <base>the program's full status description</base>
+        </text>
+      </attribute>
+      <attribute name="p86" type="currency">
+        <text>
+          <base>the person's benefit amount for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p87" type="currency">
+        <text>
+          <base>the person's existing benefit amount for the program</base>
+        </text>
+      </attribute>
+      <attribute name="b2" type="boolean">
+        <text>
+          <base>the person's benefit amount for the program is less than the person's existing benefit amount</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s benefit amount for the program',singular),o('less than the person''s existing benefit amount'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" public-name="rb_p_recv-out-of-state">
+        <text>
+          <base>the person is receiving the program's benefits from another state</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('receiving the program''s benefits from another state'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsrequestedbenefit" name="the person's requested benefit" containment-relationship-id="personsrequestedbenefits" containment-parent-id="person" identifying-attribute-name="rb_reqb_ID" identifying-attribute-text="the person's requested benefit's identifier">
+      <attribute name="p7" type="text" substitutable="true" default-gender="generic">
+        <text>
+          <base>the person's requested benefit</base>
+        </text>
+      </attribute>
+      <attribute name="p20" type="number">
+        <text>
+          <base>the running total result count for the person's requested benefit</base>
+        </text>
+      </attribute>
+      <attribute name="p21" type="text">
+        <text>
+          <base>the calculated benefit end date for the person's requested benefit as text</base>
+        </text>
+      </attribute>
+      <attribute name="p22" type="text">
+        <text>
+          <base>the calculated benefit start date for the person's requested benefit as text</base>
+        </text>
+      </attribute>
+      <attribute name="p23" type="date">
+        <text>
+          <base>the calculated benefit end date for the person's requested benefit</base>
+        </text>
+      </attribute>
+      <attribute name="p24" type="date">
+        <text>
+          <base>the calculated benefit start date for the person's requested benefit</base>
+        </text>
+      </attribute>
+      <attribute name="p25" type="text">
+        <text>
+          <base>the benefit description for the person's requested benefit</base>
+        </text>
+      </attribute>
+      <attribute name="p26" type="text">
+        <text>
+          <base>the plan description for the person's requested benefit</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p27" type="number">
+        <text>
+          <base>the number of results to create for the person's requested benefit</base>
+        </text>
+      </attribute>
+      <attribute name="p52" type="text">
+        <text>
+          <base>the benefit description for the previous day for the person's requested benefit</base>
+        </text>
+      </attribute>
+      <attribute name="p93" type="text" substitutable="true" default-gender="generic" public-name="rb_reqb_ID">
+        <text>
+          <base>the person's requested benefit's identifier</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="result" name="the result" identifying-attribute-name="rb_rslt_ID" identifying-attribute-text="the result's identifier" containment-relationship-id="personsrequestedbenefitsresults" containment-parent-id="personsrequestedbenefit" public-id="result">
+      <attribute name="p9" type="text" substitutable="true" default-gender="generic">
+        <text>
+          <base>the result</base>
+        </text>
+      </attribute>
+      <attribute name="p10" type="date" public-name="o_rslt_date-start">
+        <text>
+          <base>the result's start date</base>
+        </text>
+      </attribute>
+      <attribute name="p11" type="date" public-name="o_rslt_date-end">
+        <text>
+          <base>the result's end date</base>
+        </text>
+      </attribute>
+      <attribute name="p12" type="text">
+        <text>
+          <base>the result's benefit type</base>
+        </text>
+      </attribute>
+      <attribute name="p15" type="text">
+        <text>
+          <base>the result's number as text</base>
+        </text>
+      </attribute>
+      <attribute name="p28" type="text">
+        <text>
+          <base>the result's benefit description</base>
+        </text>
+      </attribute>
+      <attribute name="p29" type="number">
+        <text>
+          <base>the result's number</base>
+        </text>
+      </attribute>
+      <attribute name="p49" type="text" public-name="o_rslt_person-ID">
+        <text>
+          <base>the result's recipient's ID</base>
+        </text>
+      </attribute>
+      <attribute name="p50" type="text" public-name="o_rslt_program-name">
+        <text>
+          <base>the result's program name</base>
+        </text>
+      </attribute>
+      <attribute name="p51" type="text" public-name="o_rslt_status">
+        <text>
+          <base>the result's eligibility status</base>
+        </text>
+      </attribute>
+      <attribute name="p75" type="date" public-name="o_rslt_cert-date-end">
+        <text>
+          <base>the result's benefit plan end date</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p76" type="date" public-name="o_rslt_cert-date-start">
+        <text>
+          <base>the result's benefit plan start date</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p90" type="text" public-name="o_rslt_primary-ID">
+        <text>
+          <base>the result's primary person's ID</base>
+        </text>
+      </attribute>
+      <attribute name="p91" type="date">
+        <text>
+          <base>the result's calculated end date</base>
+        </text>
+      </attribute>
+      <attribute name="p94" type="text" substitutable="true" default-gender="generic" public-name="rb_rslt_ID">
+        <text>
+          <base>the result's identifier</base>
+        </text>
+      </attribute>
+      <attribute name="p95" type="text" public-name="o_rslt_program-code">
+        <text>
+          <base>the result's program code</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="caseresult" name="the case result" containment-relationship-id="caseresults" containment-parent-id="global" identifying-attribute-name="o_crslt_type" identifying-attribute-text="the case result" public-id="case-result">
+      <attribute name="p44" type="text" substitutable="true" default-gender="generic" public-name="o_crslt_type">
+        <text>
+          <base>the case result</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p53" type="datetime" public-name="o_crslt_timestamp">
+        <text>
+          <base>the case result's transaction date time</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="existingbenefit" name="the existing benefit" identifying-attribute-name="p55@00Framework_02System_SystemFrameworkProps_xsrc" identifying-attribute-text="the existing benefit" containment-relationship-id="existingbenefitplansexistingbenefits" containment-parent-id="existingbenefitplan" public-id="benefit">
+      <attribute name="p55" type="text" substitutable="true" default-gender="generic">
+        <text>
+          <base>the existing benefit</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p56" type="date" public-name="i_b_date-end">
+        <text>
+          <base>the existing benefit's end date</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p58" type="date" public-name="i_b_date-start">
+        <text>
+          <base>the existing benefit's start date</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p60" type="text" public-name="i_b_program-name">
+        <text>
+          <base>the existing benefit's program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p62" type="text" public-name="i_b_primary-ID">
+        <text>
+          <base>the existing benefit's primary person's ID</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p63" type="text" public-name="i_b_status-eligibility">
+        <text>
+          <base>the existing benefit's eligibility status</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p77" type="text" public-name="i_b_ID">
+        <text>
+          <base>the existing benefit's unique ID</base>
+        </text>
+      </attribute>
+      <attribute name="p82" type="text" public-name="i_b_status-enrollment">
+        <text>
+          <base>the existing benefit's enrollment status</base>
+        </text>
+      </attribute>
+      <attribute name="p88" type="currency" public-name="i_b_bene-amt">
+        <text>
+          <base>the existing benefit's benefit amount</base>
+        </text>
+      </attribute>
+      <attribute name="p89" type="text" public-name="i_b_person-ID">
+        <text>
+          <base>the existing benefit's recipient's ID</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="p92" type="text" public-name="i_b_state-abbr">
+        <text>
+          <base>the existing benefit's state's abbreviation</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p96" type="text" public-name="i_b_program-code">
+        <text>
+          <base>the existing benefit's program code</base>
+          <parse />
+        </text>
+      </attribute>
+    </entity>
+    <entity id="existingbenefitplan" name="the existing benefit plan" identifying-attribute-name="p66@00Framework_02System_SystemFrameworkProps_xsrc" identifying-attribute-text="the existing benefit plan" containment-relationship-id="existingbenefitplans" containment-parent-id="global" public-id="plan">
+      <attribute name="p66" type="text" substitutable="true" default-gender="generic">
+        <text>
+          <base>the existing benefit plan</base>
+        </text>
+      </attribute>
+      <attribute name="p67" type="datetime" public-name="i_bp_timestamp">
+        <text>
+          <base>the existing benefit plan's transaction date time</base>
+        </text>
+      </attribute>
+      <attribute name="p68" type="text" public-name="i_bp_type">
+        <text>
+          <base>the existing benefit plan's type</base>
+        </text>
+      </attribute>
+      <attribute name="p79" type="date">
+        <text>
+          <base>the existing benefit plan's transaction date</base>
+        </text>
+      </attribute>
+      <attribute name="p80" type="date" public-name="i_bp_date-end">
+        <text>
+          <base>the existing benefit plan's end date</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="p81" type="date" public-name="i_bp_date-start">
+        <text>
+          <base>the existing benefit plan's start date</base>
+          <parse />
+        </text>
+      </attribute>
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-parent-id="groupmember" containment-relationship-id="groupmembersgroupmemberprograms">
+      <attribute name="b3" type="boolean">
+        <text>
+          <base>the group member is the person's primary person for the group member program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s primary person for the group member program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean">
+        <text>
+          <base>the group member is the person's current primary person for the group member program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s current primary person for the group member program'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="groupmember" name="the group member" containment-parent-id="person" containment-relationship-id="personsgroupmembers" />
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsrequestedbenefit" text="the person's requested benefits" relationship-id="personsrequestedbenefits" reverse-relationship-id="personfortherequestedbenefit" reverse-text="the person for the requested benefit" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsrequestedbenefit" target="program" is-containment="false" public-id="" reverse-public-id="" text="the programs for the person's requested benefit" relationship-id="programsforthepersonsrequestedbenefit" reverse-relationship-id="personsrequestedbenefitsfortheprogram" reverse-text="the person's requested benefits for the program" type="ManyToMany" is-computed="false" silent-if-known="true" invisible-if-known="true" />
+    <relationship source="result" target="program" is-containment="false" public-id="" reverse-public-id="" text="the programs for the result" relationship-id="programsfortheresult" reverse-relationship-id="resultsfortheprogram" reverse-text="the results for the program" type="ManyToMany" is-computed="false" />
+    <relationship source="result" target="program" is-containment="false" public-id="" reverse-public-id="" text="the eligible program for the result" relationship-id="eligibleprogramfortheresult" reverse-relationship-id="result_eligibleprogramfortheresult_rev" reverse-text="" type="ManyToMany" is-computed="false" />
+    <relationship source="personsrequestedbenefit" target="result" is-containment="true" public-id="" reverse-public-id="" text="the person's requested benefit's results" relationship-id="personsrequestedbenefitsresults" reverse-relationship-id="resultsrequestedbenefit" reverse-text="the result's requested benefit" type="OneToMany" is-computed="false" />
+    <relationship source="result" target="person" is-containment="false" public-id="" reverse-public-id="" text="the result's person" relationship-id="resultsperson" reverse-relationship-id="personsresults" reverse-text="the person's results" type="ManyToMany" is-computed="false" />
+    <relationship source="program" target="program" is-containment="false" public-id="" reverse-public-id="" text="the programs with the same benefit type as the program" relationship-id="programswiththesamebenefittypeastheprogram" reverse-relationship-id="program_programswiththesamebenefittypeastheprogram_rev" reverse-text="" type="ManyToMany" is-computed="false" />
+    <relationship source="global" target="caseresult" text="the case results" relationship-id="caseresults" reverse-relationship-id="global_caseresults_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="caseresult" target="result" text="the case result's consolidated results" relationship-id="caseresultsconsolidatedresults" reverse-relationship-id="caseresult_caseresultsconsolidatedresults_rev" reverse-text="" type="ManyToMany" is-computed="false" is-containment="false" public-id="o_crslt-rslt_results" reverse-public-id="o_rslt-crslt_results-rev" />
+    <relationship source="personsrequestedbenefit" target="caseresult" text="the case results for the person's requested benefit" relationship-id="caseresultsforthepersonsrequestedbenefit" reverse-relationship-id="personsrequestedbenefitsforthecaseresult" reverse-text="the person's requested benefits for the case result" type="ManyToMany" is-computed="false" is-containment="false" public-id="" reverse-public-id="" />
+    <relationship source="global" target="existingbenefitplan" text="the existing benefit plans" relationship-id="existingbenefitplans" reverse-relationship-id="global_existingbenefitplans_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="existingbenefitplan" target="existingbenefit" text="the existing benefit plan's existing benefits" relationship-id="existingbenefitplansexistingbenefits" reverse-relationship-id="existingbenefitsplan" reverse-text="the existing benefit's plan" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="existingbenefit" target="person" text="the existing benefit's primary person" relationship-id="existingbenefitsprimaryperson" reverse-relationship-id="existingbenefitsforwhichthepersonistheprimaryperson" reverse-text="the existing benefits for which the person is the primary person" type="ManyToMany" is-computed="false" is-containment="false" public-id="" reverse-public-id="" invisible-if-known="true" />
+    <relationship source="person" target="existingbenefit" is-containment="false" public-id="" reverse-public-id="" text="the person's existing benefits" relationship-id="personsexistingbenefits" reverse-relationship-id="existingbenefitsrecipients" reverse-text="the existing benefit's recipients" type="ManyToMany" is-computed="false" invisible-if-known="true" />
+    <relationship source="program" target="existingbenefitplan" is-containment="false" public-id="" reverse-public-id="" text="the current benefit plans for the program's benefit type" relationship-id="currentbenefitplansfortheprogramsbenefittype" reverse-relationship-id="currentprogramsfortheexistingbenefitplan" reverse-text="the current programs for the existing benefit plan" type="ManyToMany" is-computed="false" silent-if-known="true" />
+    <relationship source="existingbenefitplan" target="existingbenefitplan" is-containment="false" public-id="" reverse-public-id="" text="the existing benefit plan's contemporary benefit plans" relationship-id="existingbenefitplanscontemporarybenefitplans" reverse-relationship-id="existingbenefitplan_existingbenefitplanscontemporarybenefitplans_rev" reverse-text="" type="ManyToMany" is-computed="false" />
+    <relationship source="existingbenefitplan" target="existingbenefitplan" is-containment="false" public-id="" reverse-public-id="" text="the existing benefit plans with the same benefit type as the existing benefit plan" relationship-id="existingbenefitplanswiththesamebenefittypeastheexistingbenefitplan" reverse-relationship-id="existingbenefitplan_existingbenefitplanswiththesamebenefittypeastheexistingbenefitplan_rev" reverse-text="" type="ManyToMany" is-computed="false" />
+    <relationship source="person" target="existingbenefitplan" is-containment="false" public-id="" reverse-public-id="" text="the person's existing benefit plans" relationship-id="personsexistingbenefitplans" reverse-relationship-id="existingbenefitplansrecipients" reverse-text="the existing benefit plan's recipients" type="ManyToMany" is-computed="false" />
+    <relationship source="person" target="existingbenefitplan" is-containment="false" public-id="" reverse-public-id="" text="the person's current benefit plans" relationship-id="personscurrentbenefitplans" reverse-relationship-id="person_personscurrentbenefitplans_rev" reverse-text="" type="ManyToMany" is-computed="false" />
+    <relationship source="program" target="existingbenefit" is-containment="false" public-id="" reverse-public-id="" text="the current benefits for the program's benefit type" relationship-id="currentbenefitsfortheprogramsbenefittype" reverse-relationship-id="program_currentbenefitsfortheprogramsbenefittype_rev" reverse-text="" type="ManyToMany" is-computed="false" silent-if-known="true" />
+    <relationship source="groupmember" target="groupmemberprogram" is-containment="true" public-id="groupmembersgroupmemberprograms" reverse-public-id="groupmemberprogramsgroupmember" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" />
+    <relationship source="person" target="groupmember" is-containment="true" public-id="personsgroupmembers" reverse-public-id="groupmemberscontainingperson" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" />
+    <relationship source="result" target="person" is-containment="false" public-id="" reverse-public-id="" text="the result's primary person" relationship-id="resultsprimaryperson" reverse-relationship-id="resultsforwhichthepersonistheprimaryperson" reverse-text="the results for which the person is the primary person" type="ManyToMany" is-computed="false" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

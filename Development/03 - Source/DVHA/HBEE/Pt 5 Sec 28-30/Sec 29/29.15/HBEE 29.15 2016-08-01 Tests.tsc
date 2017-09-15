@@ -1,0 +1,822 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-script product-version="10.4.6.76" schema-version="4">
+  <test-case-set>
+    <test-case name="(2) Is Deductible: Business Optg Costs [29.15(a)(1)(i)]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Joe</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Zamofo</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="true">
+              <ent-inst-ref ref-id="expense 1" />
+            </relationship-inst>
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Joe Zamofo|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Joe Zamofo|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2016" />
+      </ent-set>
+      <ent-set entity-type="expense" entity-text="the person's expense">
+        <ent-inst id="expense 1">
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>250.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="the_persons_expense" text="the person's expense" type="text">
+            <val>
+              <text-val>Business Operations expense</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsBsnOptgCsts_b" text="the person's expense is business operating costs" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_peDctblFrmSlfEmplIncUndHBEE2915a1Eff080116_b" text="the person's expense is deductible under HBEE 29.15(a)(1) (eff. 08/01/2016)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_expBusinessSelf_b" text="the person's expense is a business expense from self-employment income" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+    <test-case name="(3) Is Deductible: Allowable Room and Board [29.15(a)(1)(iv)]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Joe</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Zamofo</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="true">
+              <ent-inst-ref ref-id="expense 1" />
+            </relationship-inst>
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Joe Zamofo|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Joe Zamofo|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2016" />
+      </ent-set>
+      <ent-set entity-type="expense" entity-text="the person's expense">
+        <ent-inst id="expense 1">
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>875.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="the_persons_expense" text="the person's expense" type="text">
+            <val>
+              <text-val>Rent (1 month)</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsAlwblRmBrd_b" text="the person's expense is allowable room and board" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_peDctblFrmSlfEmplIncUndHBEE2915a1Eff080116_b" text="the person's expense is deductible under HBEE 29.15(a)(1) (eff. 08/01/2016)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_expBusinessSelf_b" text="the person's expense is a business expense from self-employment income" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_peDctblFrmSlfEmplIncUndHBEE2915a2Eff080116_b" text="the person's expense is deductible under HBEE 29.15(a)(2) (eff. 08/01/2016)" type="boolean" />
+          <attr-inst name="st_peDctblFrmSlfEmplIncUndHBEE2915a3Eff080116_b" text="the person's expense is deductible under HBEE 29.15(a)(3) (eff. 08/01/2016)" type="boolean" />
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+    <test-case name="(4) Is Deductible: Blind, Guide Dog care [29.15(a)(2)(i)]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Joe</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Zamofo</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-blind" text="the person is blind" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="true">
+              <ent-inst-ref ref-id="expense 1" />
+            </relationship-inst>
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Joe Zamofo|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Joe Zamofo|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2016" />
+      </ent-set>
+      <ent-set entity-type="expense" entity-text="the person's expense">
+        <ent-inst id="expense 1">
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>875.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="the_persons_expense" text="the person's expense" type="text">
+            <val>
+              <text-val>Pet supplies</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsCstPrchCrgFrGdDog_b" text="the person's expense is the cost of purchasing and caring for a guide dog" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_peDctblFrmSlfEmplIncUndHBEE2915a2Eff080116_b" text="the person's expense is deductible under HBEE 29.15(a)(2) (eff. 08/01/2016)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="st_peDctblFrmSlfEmplIncUndHBEE2915a1Eff080116_b" text="the person's expense is deductible under HBEE 29.15(a)(1) (eff. 08/01/2016)" type="boolean" />
+          <attr-inst name="st_peDctblFrmSlfEmplIncUndHBEE2915a3Eff080116_b" text="the person's expense is deductible under HBEE 29.15(a)(3) (eff. 08/01/2016)" type="boolean" />
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+    <test-case name="(5) Is Deductible: Blind, Local taxes [29.15(a)(2)(v)]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Joe</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Zamofo</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-blind" text="the person is blind" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="true">
+              <ent-inst-ref ref-id="expense 1" />
+            </relationship-inst>
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Joe Zamofo|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Joe Zamofo|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2016" />
+      </ent-set>
+      <ent-set entity-type="expense" entity-text="the person's expense">
+        <ent-inst id="expense 1">
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>875.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="the_persons_expense" text="the person's expense" type="text">
+            <val>
+              <text-val>GA Taxes</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_peDctblFrmSlfEmplIncUndHBEE2915a2Eff080116_b" text="the person's expense is deductible under HBEE 29.15(a)(2) (eff. 08/01/2016)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_peIsFdrlStLclIncTxs_b" text="the person's expense is federal state and local income taxes" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_peDctblFrmSlfEmplIncUndHBEE2915a1Eff080116_b" text="the person's expense is deductible under HBEE 29.15(a)(1) (eff. 08/01/2016)" type="boolean" />
+          <attr-inst name="st_peDctblFrmSlfEmplIncUndHBEE2915a3Eff080116_b" text="the person's expense is deductible under HBEE 29.15(a)(3) (eff. 08/01/2016)" type="boolean" />
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+    <test-case name="(6) Not Deductible: Not Blind, Local taxes [29.15(a)(2)(v)]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Joe</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Zamofo</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-blind" text="the person is blind" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_pHBEE2915a3AppliesEff080116_b" text="HBEE 29.15(a)(3) applies to the person (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="true">
+              <ent-inst-ref ref-id="expense 1" />
+            </relationship-inst>
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Joe Zamofo|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Joe Zamofo|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2016" />
+      </ent-set>
+      <ent-set entity-type="expense" entity-text="the person's expense">
+        <ent-inst id="expense 1">
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>875.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="the_persons_expense" text="the person's expense" type="text">
+            <val>
+              <text-val>GA Taxes</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_peDctblFrmSlfEmplIncUndHBEE2915a2Eff080116_b" text="the person's expense is deductible under HBEE 29.15(a)(2) (eff. 08/01/2016)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_peIsFdrlStLclIncTxs_b" text="the person's expense is federal state and local income taxes" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_peDctblFrmSlfEmplIncUndHBEE2915a1Eff080116_b" text="the person's expense is deductible under HBEE 29.15(a)(1) (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_peDctblFrmSlfEmplIncUndHBEE2915a3Eff080116_b" text="the person's expense is deductible under HBEE 29.15(a)(3) (eff. 08/01/2016)" type="boolean" />
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+    <test-case name="(7) Is Deductible: Disabled, Impairment-related training [29.15(a)(3)(ii)]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Joe</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Zamofo</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-disabled" text="the person is disabled" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="true">
+              <ent-inst-ref ref-id="expense 1" />
+            </relationship-inst>
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Joe Zamofo|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Joe Zamofo|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2016" />
+      </ent-set>
+      <ent-set entity-type="expense" entity-text="the person's expense">
+        <ent-inst id="expense 1">
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>125.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="the_persons_expense" text="the person's expense" type="text">
+            <val>
+              <text-val>Physical Therapy</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsImptRltdTrng_b" text="the person's expense is impairment related training" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_peDctblFrmSlfEmplIncUndHBEE2915a3Eff080116_b" text="the person's expense is deductible under HBEE 29.15(a)(3) (eff. 08/01/2016)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="st_peDctblFrmSlfEmplIncUndHBEE2915a1Eff080116_b" text="the person's expense is deductible under HBEE 29.15(a)(1) (eff. 08/01/2016)" type="boolean" />
+          <attr-inst name="st_peDctblFrmSlfEmplIncUndHBEE2915a2Eff080116_b" text="the person's expense is deductible under HBEE 29.15(a)(2) (eff. 08/01/2016)" type="boolean" />
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+    <test-case name="(8) Is Deductible: Disabled, Structural modifications to home [29.15(a)(3)(iv)]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Joe</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Zamofo</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-disabled" text="the person is disabled" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="true">
+              <ent-inst-ref ref-id="expense 1" />
+            </relationship-inst>
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Joe Zamofo|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Joe Zamofo|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2016" />
+      </ent-set>
+      <ent-set entity-type="expense" entity-text="the person's expense">
+        <ent-inst id="expense 1">
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>3800.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="the_persons_expense" text="the person's expense" type="text">
+            <val>
+              <text-val>Wheelchair ramp</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_peDctblFrmSlfEmplIncUndHBEE2915a3Eff080116_b" text="the person's expense is deductible under HBEE 29.15(a)(3) (eff. 08/01/2016)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_peIsStrctlModsToHome_b" text="the person's expense is structural modifications to the home" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_peDctblFrmSlfEmplIncUndHBEE2915a1Eff080116_b" text="the person's expense is deductible under HBEE 29.15(a)(1) (eff. 08/01/2016)" type="boolean" />
+          <attr-inst name="st_peDctblFrmSlfEmplIncUndHBEE2915a2Eff080116_b" text="the person's expense is deductible under HBEE 29.15(a)(2) (eff. 08/01/2016)" type="boolean" />
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+    <test-case name="(9) Not Deductible: Not Disabled, Impairment-related training [29.15(a)(3)(ii)]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Joe</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Zamofo</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-disabled" text="the person is disabled" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_pHBEE2915a2AppliesEff080116_b" text="HBEE 29.15(a)(2) applies to the person (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="true">
+              <ent-inst-ref ref-id="expense 1" />
+            </relationship-inst>
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Joe Zamofo|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Joe Zamofo|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2016" />
+      </ent-set>
+      <ent-set entity-type="expense" entity-text="the person's expense">
+        <ent-inst id="expense 1">
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>125.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="the_persons_expense" text="the person's expense" type="text">
+            <val>
+              <text-val>Physical Therapy</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsImptRltdTrng_b" text="the person's expense is impairment related training" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_peDctblFrmSlfEmplIncUndHBEE2915a3Eff080116_b" text="the person's expense is deductible under HBEE 29.15(a)(3) (eff. 08/01/2016)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="st_peDctblFrmSlfEmplIncUndHBEE2915a1Eff080116_b" text="the person's expense is deductible under HBEE 29.15(a)(1) (eff. 08/01/2016)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_peDctblFrmSlfEmplIncUndHBEE2915a2Eff080116_b" text="the person's expense is deductible under HBEE 29.15(a)(2) (eff. 08/01/2016)" type="boolean" />
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+  </test-case-set>
+  <outcome-set>
+    <outcome name="st_peDctblFrmSlfEmplIncUndHBEE2915a1Eff080116_b" display-name="Expense is deductible under 29.15(a)(1)" text="the person's expense is deductible under HBEE 29.15(a)(1) (eff. 08/01/2016)" type="boolean" entity-type="expense" entity-text="the person's expense">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+    <outcome name="st_peDctblFrmSlfEmplIncUndHBEE2915a2Eff080116_b" display-name="Expense is deductible under 29.15(a)(2)" text="the person's expense is deductible under HBEE 29.15(a)(2) (eff. 08/01/2016)" type="boolean" entity-type="expense" entity-text="the person's expense">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+    <outcome name="st_peDctblFrmSlfEmplIncUndHBEE2915a3Eff080116_b" display-name="Expense is deductible under 29.15(a)(3)" text="the person's expense is deductible under HBEE 29.15(a)(3) (eff. 08/01/2016)" type="boolean" entity-type="expense" entity-text="the person's expense">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+  </outcome-set>
+</test-script>

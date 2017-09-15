@@ -1,0 +1,489 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b26" type="boolean" public-name="st_HBEE30.05d3Applies20160801_b">
+        <text>
+          <base>HBEE 30.05(d)(3) applies to the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 30.05(d)(3)',singular),o('to the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean" public-name="si_personSpecalEligiblityDatDueMtgPersonSpnddownUsgACCSUndrHBEE36.064_b">
+        <text>
+          <base>the person has special eligibility dates due to meeting the person's spenddown using noncovered assistive community care services under HBEE 30.06(c)(4)</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('special eligibility dates due to meeting the person''s spenddown using noncovered assistive community care services under HBEE 30.06(c)(4)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="p2" type="currency" public-name="si_programApplcblIncmMaxForPerFinaclGrpForAccntgPriod_c">
+        <text>
+          <base>the applicable income maximum for the person's financial group for the accounting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p3" type="currency" public-name="st_programTtlAdjstdNetIncmForPerFinaclGrpForAccntgPriod_c">
+        <text>
+          <base>the total adjusted net income for the person's financial group for the accounting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p4" type="currency" public-name="so_programExcssIncmAmtAccntgPrdUndrHBEE30.05a20160801_c">
+        <text>
+          <base>the person's excess income amount for the accounting period for the program under HBEE 30.05(a) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p5" type="currency" public-name="st_programFinanclRespsblityGrpTtlHlthInsrncExpndturDurAcctngPerdUnder30.05f120160801_c">
+        <text>
+          <base>the person's financial responsibility group's total health insurance expenditures during the accounting period for the program under HBEE 30.05(f)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p7" type="currency" public-name="st_programFinanclRespsblityGrpTtlNoncovdMedExpdturDurAcctgPriodUndrHBEE30.05f220160801_c">
+        <text>
+          <base>the person's financial responsibility group's total noncovered medical expenditures during the accounting period for the program under HBEE 30.05(f)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p9" type="currency" public-name="st_programFinanclRespsblityGrpTtlCovrdMedExpdtursThatExceedLmitsOnAmtDurScpeOfSrvcCovrdDurAcctgPeriod_c">
+        <text>
+          <base>the person's financial responsibility group's total covered medical expenditures that exceed limitations on amount, duration, or scope of services covered during the accounting period for the program under HBEE 30.05(f)(3) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p11" type="currency" public-name="st_programFinanclRespsblityGrpTtlCovrdMedExpenditurDoNotExceedLimtOnAmtDurtnScpSrvcCovrdDurngAcctgPriod_c">
+        <text>
+          <base>the person's financial responsibility group's total covered medical expenditures that do not exceed limitations on amount, duration, or scope of services covered during the accounting period for the program under HBEE 30.05(f)(4) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="b1" type="boolean" public-name="so_programSatisfiedHBEE30.0520160801_b">
+        <text>
+          <base>the person passes the income test for the program under HBEE 30.05 (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the income test for the program under HBEE 30.05 (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b2" type="boolean" public-name="st_programSatisfiedHBEE30.05f120160801_b">
+        <text>
+          <base>the person passes the income test for the program under HBEE 30.05(f)(1) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the income test for the program under HBEE 30.05(f)(1) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" public-name="st_programSatisfiedHBEE30.05f220160801_b">
+        <text>
+          <base>the person passes the income test for the program under HBEE 30.05(f)(2) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the income test for the program under HBEE 30.05(f)(2) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" public-name="st_programSatisfiedHBEE30.05f320160801_b">
+        <text>
+          <base>the person passes the income test for the program under HBEE 30.05(f)(3) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the income test for the program under HBEE 30.05(f)(3) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" public-name="st_programSatisfiedHBEE30.05f420160801_b">
+        <text>
+          <base>the person passes the income test for the program under HBEE 30.05(f)(4) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the income test for the program under HBEE 30.05(f)(4) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p13" type="currency" public-name="st_programTtlHelthInsExpndtrDurgAcctgPriodUndrHBEE30.05f120160801_c">
+        <text>
+          <base>the person's total health insurance expenditures during the accounting period for the program under HBEE 30.05(f)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p14" type="currency" public-name="st_programTtlNonCvrdMedclExpndtrDurAcctgPriodUndrHBEE30.05f220160801_c">
+        <text>
+          <base>the person's total noncovered medical expenditures during the accounting period for the program under HBEE 30.05(f)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p15" type="currency" public-name="st_programTotalCovrdMedExpdtrExcdLimtatnAmtDurScpOfSrvcDurAcctPrdUndrHBEE30.05f320160801_c">
+        <text>
+          <base>the person's total covered medical expenditures that exceed limitations on amount, duration, or scope of services covered during the accounting period for the program under HBEE 30.05(f)(3) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p16" type="currency" public-name="st_programTotalCovrdMedExpdtrNotExcdLimtatnAmtDurScpOfSrvcDurAcctPrdUndrHBEE30.05f420160801_c">
+        <text>
+          <base>the person's total covered medical expenditures that do not exceed limitations on amount, duration, or scope of services covered during the accounting period for the program under HBEE 30.05(f)(4) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p19" type="date" public-name="si_programDtApplOrFrstDyOfAccntgPrd_d">
+        <text>
+          <base>the latter of either the date of application or the first day of the accounting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" public-name="so_HBEE30.05Applies20160801_b">
+        <text>
+          <base>HBEE 30.05 applies to the program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 30.05',singular),o('to the program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b47" type="boolean">
+        <text>
+          <base>the benefit effective date is the first day of the month in which the person is determined eligible for the program under HBEE 30.05(d) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the benefit effective date',singular),o('the first day of the month in which the person is determined eligible for the program under HBEE 30.05(d) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b48" type="boolean">
+        <text>
+          <base>the person used covered medical expenses to meet the income spenddown test for the program under HBEE 30.05(f) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(use,t(simple,past,normal)),sb('the person',plural),o('covered medical expenses to meet the income spenddown test for the program under HBEE 30.05(f) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b51" type="boolean">
+        <text>
+          <base>HBEE 30.05 applies to the program</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 30.05',singular),o('to the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b52" type="boolean">
+        <text>
+          <base>the benefit effective date is the first day of the month in which the person is determined eligible for the program under HBEE 30.05(d)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the benefit effective date',singular),o('the first day of the month in which the person is determined eligible for the program under HBEE 30.05(d)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b53" type="boolean">
+        <text>
+          <base>the person passes the income test for the program under HBEE 30.05</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the income test for the program under HBEE 30.05'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b57" type="boolean">
+        <text>
+          <base>the person has an income spenddown for the accounting period for the program under HBEE 30.05(a) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('an income spenddown for the accounting period for the program under HBEE 30.05(a) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+      <attribute name="p18" type="date" public-name="si_perexpDatePaid_d">
+        <text>
+          <base>the date the person's expense was paid</base>
+        </text>
+      </attribute>
+      <attribute name="p21" type="date" public-name="si_perexpLtstBillDt_d">
+        <text>
+          <base>the latest bill date for the person's expense</base>
+        </text>
+      </attribute>
+      <attribute name="p23" type="date" public-name="si_perexpDateSrvcPrvdrForgivsUnpdLiablty_d">
+        <text>
+          <base>the date the service provider for the person's expense forgives the unpaid liability</base>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean" public-name="st_personexpConsdrBonaFideLoanHBEE30.05g420160801_b">
+        <text>
+          <base>the person's expense is considered a bona fide loan under HBEE 30.05(g)(4) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person''s expense',singular),o('a bona fide loan under HBEE 30.05(g)(4) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean" public-name="si_personexpAllowblMediclExpUndrHBEE30.06b_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(b)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(b)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b34" type="boolean" public-name="si_personexpAllowblMediclExpUndrHBEE30.06c_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(c)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(c)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" public-name="si_personexpAllowblMediclExpUndrHBEE30.06d_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(d)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(d)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" public-name="si_personexpDeductblMedExpUndrHBEE30.05h20160801_b">
+        <text>
+          <base>the person's expense is a deductible medical expense under HBEE 30.05(h) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a deductible medical expense under HBEE 30.05(h) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" public-name="st_personexpConsdrPredctblMedExpUndrHBEE30.05h20160801_b">
+        <text>
+          <base>the person's expense is considered a predictable medical expense under HBEE 30.05(h) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person''s expense',singular),o('a predictable medical expense under HBEE 30.05(h) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b38" type="boolean" public-name="st_personexpConsdrPredctblMedExpHBEE30.05h1_b">
+        <text>
+          <base>the person's expense is considered a predictable medical expense under HBEE 30.05(h)(1) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person''s expense',singular),o('a predictable medical expense under HBEE 30.05(h)(1) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b39" type="boolean" public-name="st_personexpConsdrPredctblMedExpHBEE30.05h220160801_b">
+        <text>
+          <base>the person's expense is considered a predictable medical expense under HBEE 30.05(h)(2) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person''s expense',singular),o('a predictable medical expense under HBEE 30.05(h)(2) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b40" type="boolean" public-name="si_personexpBeenIncurrd_b">
+        <text>
+          <base>the person's expense has been incurred</base>
+          <parse>s(ver('10.4.6.76'),v(incur,t(simple,present,perfect)),ob('the person''s expense',singular))</parse>
+        </text>
+      </attribute>
+      <attribute name="b41" type="boolean" public-name="si_personexpRsnblyAssmExpWllContnu_b">
+        <text>
+          <base>it can be reasonably assumed that the person's expense will continue</base>
+          <parse>s(ver('10.4.6.76'),v(be+can,t(simple,modal,normal)),sb('it',singular),o('reasonably assumed that the person''s expense will continue'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b42" type="boolean" public-name="st_personexpConsdrPredctblMedExpHBEE30.05h320160801_b">
+        <text>
+          <base>the person's expense is considered a predictable medical expense under HBEE 30.05(h)(3) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person''s expense',singular),o('a predictable medical expense under HBEE 30.05(h)(3) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b43" type="boolean" public-name="st_personexpConsdrPredctblMedExpHBEE30.05h420160801_b">
+        <text>
+          <base>the person's expense is considered a predictable medical expense under HBEE 30.05(h)(4) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person''s expense',singular),o('a predictable medical expense under HBEE 30.05(h)(4) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b44" type="boolean" public-name="si_personexpAllowblMediclExpUndrHBEE30.06c1_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(c)(1)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(c)(1)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b45" type="boolean" public-name="si_personexpAllowblMediclExpHBEE30.06c3_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(c)(3)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(c)(3)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b46" type="boolean" public-name="si_personexpAllowblMeciclExpHBEE30.06c4_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(c)(4)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(c)(4)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b54" type="boolean" public-name="si_expContractSchedule_b">
+        <text>
+          <base>the person's expense is an obligation documented from its outset by a written contract and a specified repayment schedule</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an obligation documented from its outset by a written contract and a specified repayment schedule'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b55" type="boolean" public-name="si_expExceedLimitsDvha7201-7606_b">
+        <text>
+          <base>the person's expense exceeds limitations on amount, duration, or scope of services covered under DVHA Rules 7201-7606</base>
+          <parse>s(ver('10.4.6.76'),v(exceed,t(simple,present,normal)),sb('the person''s expense',singular),o('limitations on amount, duration, or scope of services covered under DVHA Rules 7201-7606'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b56" type="boolean" public-name="si_expProvNotForgiven_b">
+        <text>
+          <base>it is the case that the service provider for the person's expense has confirmed that the unpaid liability has not been forgiven</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the service provider for the person''s expense has confirmed that the unpaid liability has not been forgiven'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+      <attribute name="b6" type="boolean" public-name="st_expprogramAllwblHlthInsrncExpHBEE30.05f120160801_b">
+        <text>
+          <base>the person's expense is an allowable health insurance expense for the expense program under HBEE 30.05(f)(1) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable health insurance expense for the expense program under HBEE 30.05(f)(1) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" public-name="st_expprogramAllwblnoncvrdMedExpHBEE30.05f220160801_b">
+        <text>
+          <base>the person's expense is an allowable noncovered medical expense for the expense program under HBEE 30.05(f)(2) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable noncovered medical expense for the expense program under HBEE 30.05(f)(2) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" public-name="st_expprogramAllwblCvrdMedExpExcdsLimtnAmtDrtnOrScpOfSrvcHBEE30.05f320160801_b">
+        <text>
+          <base>the person's expense is an allowable covered medical expense for the expense program that exceeds limitations on amount, duration, or scope of services covered expense under HBEE 30.05(f)(3) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable covered medical expense for the expense program that exceeds limitations on amount, duration, or scope of services covered expense under HBEE 30.05(f)(3) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" public-name="st_expprogramAllwblCvrdMedExpNotExcdLmttnAmtDrtnScpOfSrvcHBEE30.05f420160801_b">
+        <text>
+          <base>the person's expense is an allowable covered medical expense for the expense program that does not exceed limitations on amount, duration, or scope of services covered expense under HBEE 30.05(f)(4) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable covered medical expense for the expense program that does not exceed limitations on amount, duration, or scope of services covered expense under HBEE 30.05(f)(4) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" public-name="st_expprogramExpIncurrdDurgAcctngPerid_b">
+        <text>
+          <base>the person's expense was incurred during the accounting period for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(incur,t(simple,past,normal)),ob('the person''s expense',singular),o('during the accounting period for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" public-name="st_expprogramExpPaidDurgAcctngPerid_b">
+        <text>
+          <base>the person's expense was paid during the accounting period for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(pay,t(simple,past,normal)),ob('the person''s expense',singular),o('during the accounting period for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" public-name="st_expprogramLoanUsdToPayAllwblMedExpHBEE30.06IncurrdBefrDurgAcctngPerid_b">
+        <text>
+          <base>the person's expense is a loan that was used to pay for an allowable medical expenses under HBEE 30.06 that was incurred before or during the accounting period for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a loan that was used to pay for an allowable medical expenses under HBEE 30.06 that was incurred before or during the accounting period for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" public-name="st_expprogramDedctblMEdExpHBEE30.05g20160801_b">
+        <text>
+          <base>the person's expense is a deductible medical expense for the expense program under HBEE 30.05(g) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a deductible medical expense for the expense program under HBEE 30.05(g) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" public-name="st_expprogramDedctblMEdExpHBEE30.05g120160801_b">
+        <text>
+          <base>the person's expense is a deductible medical expense for the expense program under HBEE 30.05(g)(1) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a deductible medical expense for the expense program under HBEE 30.05(g)(1) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean">
+        <text>
+          <base>the person's expense is a deductible medical expense under HBEE 30.05(g)(2) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a deductible medical expense under HBEE 30.05(g)(2) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean">
+        <text>
+          <base>the person's expense is a deductible medical expense under HBEE 30.05(g)(3) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a deductible medical expense under HBEE 30.05(g)(3) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean">
+        <text>
+          <base>the person has established continuing liability for the person's expense for the expense program under HBEE 30.05(i) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(establish,t(simple,present,perfect)),sb('the person',singular),o('continuing liability for the person''s expense for the expense program under HBEE 30.05(i) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" public-name="st_expprogramExpIncurrdBfrAcctngPerid_b">
+        <text>
+          <base>the person's expense was incurred before the accounting period for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(incur,t(simple,past,normal)),ob('the person''s expense',singular),o('before the accounting period for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean">
+        <text>
+          <base>the person has established continuing liability for the person's expense for the expense program under HBEE 30.05(i)(1) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(establish,t(simple,present,perfect)),sb('the person',singular),o('continuing liability for the person''s expense for the expense program under HBEE 30.05(i)(1) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean">
+        <text>
+          <base>the person has established continuing liability for the person's expense for the expense program under HBEE 30.05(i)(2) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(establish,t(simple,present,perfect)),sb('the person',singular),o('continuing liability for the person''s expense for the expense program under HBEE 30.05(i)(2) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean">
+        <text>
+          <base>the person has established continuing liability for the person's expense for the expense program under HBEE 30.05(i)(3) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(establish,t(simple,present,perfect)),sb('the person',singular),o('continuing liability for the person''s expense for the expense program under HBEE 30.05(i)(3) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" public-name="st_expprogramExpIncurrdWthnSixMnthsOfDatOfAppOrFirstDayOfAccntngPerid_b">
+        <text>
+          <base>the person's expense was incurred within six months of the latter of either the date of application or the first day of the accounting period for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(incur,t(simple,past,normal)),ob('the person''s expense',singular),o('within six months of the latter of either the date of application or the first day of the accounting period for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" public-name="si_expprogramBllExpDatdWthn90DaysDatOfAppOrFrstDayAcctngPerid_b">
+        <text>
+          <base>there is a bill for the person's expense that is dated within 90 days of the latter of either the date of application or the first day of the accounting period for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('a bill for the person''s expense that is dated within 90 days of the latter of either the date of application or the first day of the accounting period for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" public-name="si_SrvcPrvdrPrsnExpCnfrmdUnpadLiabtyNotExpctdFrgvnWithnAcctngPerid_b">
+        <text>
+          <base>it is the case that the service provider for the person's expense has confirmed that the unpaid liability is not expected to be forgiven at any time within the accounting period for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the service provider for the person''s expense has confirmed that the unpaid liability is not expected to be forgiven at any time within the accounting period for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p20" type="number" public-name="si_expprogramNmbrMnthsBtwnDatofExpIncerrdAndDatOfApplctnFrstDayAcctngPrd_n">
+        <text>
+          <base>the number of months between the date the person's expense was incurred and the latter of either the date of application or the first day of the accounting period for the expense program</base>
+        </text>
+      </attribute>
+      <attribute name="p22" type="number" public-name="si_expprogramNumbrDayBtwnBillExpDatOfAppFrstDayAcctngPerid_n">
+        <text>
+          <base>the number of days between the bill for the person's expense and the latter of either the date of application or the first day of the accounting period for the expense program</base>
+        </text>
+      </attribute>
+      <attribute name="b49" type="boolean">
+        <text>
+          <base>the person's expense is a deductible medical expense for the expense program under HBEE 30.05</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a deductible medical expense for the expense program under HBEE 30.05'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b50" type="boolean">
+        <text>
+          <base>the person's expense is a deductible medical expense for the expense program under HBEE 30.05 (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a deductible medical expense for the expense program under HBEE 30.05 (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p24" type="currency">
+        <text>
+          <base>the person's health insurance expenditure for the person's expense during the accounting period for the expense program under HBEE 30.05(f)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p27" type="currency">
+        <text>
+          <base>the person's noncovered medical expenditure for the person's expense during the accounting period for the expense program under HBEE 30.05(f)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p29" type="currency">
+        <text>
+          <base>the person's covered medical expenditure that exceed limitations on amount, duration, or scope of services covered for the person's expense during the accounting period for the expense program under HBEE 30.05(f)(3) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p31" type="currency">
+        <text>
+          <base>the person's covered medical expenditure that do not exceed limitations on amount, duration, or scope of services covered for the person's expense during the accounting period for the expense program under HBEE 30.05(f)(3) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+      <attribute name="p25" type="currency">
+        <text>
+          <base>the group member's total health insurance expenditures during the accounting period for the person for the group member program under HBEE 30.05(f)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p26" type="currency">
+        <text>
+          <base>the group member's noncovered medical expenditures during the accounting period for the person for the group member program under HBEE 30.05(f)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p28" type="currency">
+        <text>
+          <base>the group member's covered medical expenditures that exceed limitations on amount, duration, or scope of services covered during the accounting period for the person for the group member program under HBEE 30.05(f)(3) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p30" type="currency">
+        <text>
+          <base>the group member's covered medical expenditures that do not exceed limitations on amount, duration, or scope of services covered during the accounting period for the person for the group member program under HBEE 30.05(f)(4) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="personsexpense" is-containment="false" public-id="" reverse-public-id="" text="the expenses that were paid by the person's expense" relationship-id="expensesthatwerepaidbythepersonsexpense" reverse-relationship-id="expensethatpaidthepersonsexpense" reverse-text="the expense that paid the person's expense" type="ManyToMany" is-computed="false" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

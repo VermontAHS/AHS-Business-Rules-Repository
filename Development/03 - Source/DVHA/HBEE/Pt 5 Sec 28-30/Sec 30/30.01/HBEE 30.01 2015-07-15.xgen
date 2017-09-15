@@ -1,0 +1,76 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered to be in a community living arrangement under HBEE 30.01 (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be in a community living arrangement under HBEE 30.01 (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b2" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered to be in a long-term care living arrangement under HBEE 30.01 (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be in a long-term care living arrangement under HBEE 30.01 (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is requesting long term care assistance</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('requesting long term care assistance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is receiving hospice care</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('receiving hospice care'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="the person is considered to be in a community living arrangement under HBEE 30.01 (eff. 07/15/2015)" ruleburst="true" concludes="b1" folder="2" source-offset="80">
+      <rule-xml>
+        <conclude attr-id="b1" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <not>
+              <attribute attr-id="b2" />
+            </not>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the person is considered to be in a long-term care living arrangement under HBEE 30.01 (eff. 07/15/2015)" ruleburst="true" concludes="b2" folder="3" source-offset="354">
+      <rule-xml>
+        <conclude attr-id="b2" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b3" />
+              <attribute attr-id="b4" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="30.01 Definitions (07/15/2015, 15-02)" parent="0" id="1" />
+    <folder text="Para (b): Community living arrangement" parent="1" id="2" />
+    <folder text="Para (d): Long-term care living arrangement" parent="1" id="3" />
+  </rule-folders>
+</root>

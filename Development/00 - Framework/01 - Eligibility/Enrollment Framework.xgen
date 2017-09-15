@@ -1,0 +1,1621 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity ref="global">
+      <attribute name="b16" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the date is a business day (temporal)</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the date',singular),o('a business day (temporal)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p3" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the calculation date</base>
+        </text>
+      </attribute>
+      <attribute name="p7" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the calculation start date</base>
+        </text>
+      </attribute>
+      <attribute name="p8" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the calculation end date</base>
+        </text>
+      </attribute>
+      <attribute name="p12" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the last day of the current month</base>
+        </text>
+      </attribute>
+      <attribute name="p14" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the first day of the current month</base>
+        </text>
+      </attribute>
+      <attribute name="p16" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the first mailing date on or after the transaction</base>
+        </text>
+      </attribute>
+      <attribute name="p18" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the transaction date</base>
+        </text>
+      </attribute>
+      <attribute name="p19" type="timeofday" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the transaction time</base>
+        </text>
+      </attribute>
+      <attribute name="p20" type="timeofday" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the cutoff time to send mail</base>
+        </text>
+      </attribute>
+      <attribute name="p24" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the application date</base>
+        </text>
+      </attribute>
+      <attribute name="p31" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the first day of the application year</base>
+        </text>
+      </attribute>
+      <attribute name="p33" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the last day of the application year</base>
+        </text>
+      </attribute>
+      <attribute name="p34" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the first day of the application month</base>
+        </text>
+      </attribute>
+      <attribute name="p36" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the last day of the next month</base>
+        </text>
+      </attribute>
+      <attribute name="p37" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the first day of the previous month</base>
+        </text>
+      </attribute>
+      <attribute name="p38" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the last day of the previous month</base>
+        </text>
+      </attribute>
+      <attribute name="p41" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the first day of the month following the application month</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is the person's highest priority program for the program's benefit type</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the program',singular),o('the person''s highest priority program for the program''s benefit type'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b2" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all of the enrollment requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all of the enrollment requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the date is within the person's benefit plan period for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the date',singular),o('within the person''s benefit plan period for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is in a protected enrollment period for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('in a protected enrollment period for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is requesting the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('requesting the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all of the eligibility requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all of the eligibility requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is authorized to receive the program under an existing benefit plan</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('authorized to receive the program under an existing benefit plan'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the benefit plan period is aligned to the end of the month for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the benefit plan period',singular),o('aligned to the end of the month for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the number of months in the benefit plan period for the program includes partial initial months</base>
+          <parse>s(ver('10.4.5.40'),v(include,t(simple,present,normal)),sb('the number of months in the benefit plan period for the program',singular),o('partial initial months'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person became ineligible for the program during the month</base>
+          <parse>s(ver('10.4.5.40'),v(become,t(simple,past,normal)),sb('the person',plural),o('ineligible for the program during the month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has an adverse action for the program</base>
+          <parse>s(ver('10.4.5.40'),v(have,t(simple,present,normal)),sb('the person',singular),o('an adverse action for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are timely notice of adverse action requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('timely notice of adverse action requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are continuous eligibility requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('continuous eligibility requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all of the continuous eligibility requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all of the continuous eligibility requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's benefit level for the program is less than the person's existing benefit level</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s benefit level for the program',singular),o('less than the person''s existing benefit level'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the effective date for a timely notice of adverse action for the program must be a business day</base>
+          <parse>s(ver('10.4.5.40'),v(be+must,t(simple,modal,normal)),sb('the effective date for a timely notice of adverse action for the program',singular),o('a business day'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is within the potential retroactive eligibility period for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('within the potential retroactive eligibility period for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the benefit effective date is the first day of the month following the month in which the person is determined eligible for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the benefit effective date',singular),o('the first day of the month following the month in which the person is determined eligible for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the benefit plan period is aligned to the calendar year for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the benefit plan period',singular),o('aligned to the calendar year for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is a potential retroactive eligibility period for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('a potential retroactive eligibility period for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the benefit effective date is the first day of the month in which the person is determined eligible for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the benefit effective date',singular),o('the first day of the month in which the person is determined eligible for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has a request for the program</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('a request for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the benefit plan period is aligned to the end of the following month for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the benefit plan period',singular),o('aligned to the end of the following month for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person became ineligible for the program during the previous month</base>
+          <parse>s(ver('10.4.6.76'),v(become,t(simple,past,normal)),sb('the person',plural),o('ineligible for the program during the previous month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has a retroactive request for the program</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('a retroactive request for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all the retroactive requirements for the program</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the retroactive requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has a prospective request for the program</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('a prospective request for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has an error for the program</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('an error for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has a referral for the program</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('a referral for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets sufficient eligibility requirements to be enrolled in the program</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('sufficient eligibility requirements to be enrolled in the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets the eligibility start date requirements for the program</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the eligibility start date requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b34" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets the eligibility end date requirements for the program</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the eligibility end date requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p1" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the program's benefit type</base>
+        </text>
+      </attribute>
+      <attribute name="p2" type="number" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program's rank for the program's benefit type</base>
+        </text>
+      </attribute>
+      <attribute name="p6" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the start of the person's existing benefit plan period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p9" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the end of the person's existing benefit plan period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p10" type="number" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the number of months in the person's benefit plan period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p11" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the first day of the month following the start of the person's benefit plan period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p13" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the last day of the month for the effective date for a timely notice of adverse action for the person's eligibility for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p15" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the effective date for a timely notice of adverse action for the person's eligibility for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p17" type="number" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the number of days for a timely notice of adverse action for the person's eligibility for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p21" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the start of the person's benefit plan period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p22" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the end of the person's benefit plan period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p27" type="number" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the number of months of potential retroactive eligibility for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p28" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's calculated first eligibility date for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p29" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the first day of the month following the person's calculated first eligibility date for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p30" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the calculated start of the person's benefit plan period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p32" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the calculated end of the person's benefit plan period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p35" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the first day of the month in which the person is determined eligible for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p40" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the start of the person's prospective request period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p42" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the first day of the month following the start of the person's prospective request period for the program</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's requested benefit" id="personsrequestedbenefit" containment-relationship-id="personsrequestedbenefits" containment-parent-id="person">
+      <attribute name="p23" type="text" ruleburst="true" is-used="True" default-gender="generic">
+        <text lang="en-US">
+          <base>the person's requested benefit</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global" />
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="personsrequestedbenefits" reverse-relationship-id="personfortherequestedbenefit" text="the person's requested benefits" reverse-text="the person for the requested benefit" source="person" target="personsrequestedbenefit" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="the program is the person's highest priority program for the program's benefit type" ruleburst="true" concludes="b1" folder="2" source-offset="41">
+      <rule-xml>
+        <conclude attr-id="b1" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b2" />
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for-all scope-id="the other program">
+                  <relationship relationship-id="personsprograms" target-entity-id="program" />
+                  <or>
+                    <instance-equals>
+                      <scope-ref id="the other program" />
+                      <scope-ref id="program0" />
+                    </instance-equals>
+                    <and>
+                      <instance-not-equals>
+                        <scope-ref id="the other program" />
+                        <scope-ref id="program0" />
+                      </instance-not-equals>
+                      <not-equals>
+                        <attribute attr-id="p1" silent-if-certain="true" invisible-if-certain="true" />
+                        <scope-for scope-ref="program0" target-entity-id="program">
+                          <attribute attr-id="p1" silent-if-certain="true" invisible-if-certain="true" />
+                        </scope-for>
+                      </not-equals>
+                    </and>
+                    <and>
+                      <instance-not-equals>
+                        <scope-ref id="the other program" />
+                        <scope-ref id="program0" />
+                      </instance-not-equals>
+                      <equals>
+                        <attribute attr-id="p1" silent-if-certain="true" invisible-if-certain="true" />
+                        <scope-for scope-ref="program0" target-entity-id="program">
+                          <attribute attr-id="p1" silent-if-certain="true" invisible-if-certain="true" />
+                        </scope-for>
+                      </equals>
+                      <greater-than>
+                        <attribute attr-id="p2" silent-if-certain="true" invisible-if-certain="true" />
+                        <scope-for scope-ref="program0" target-entity-id="program">
+                          <attribute attr-id="p2" silent-if-certain="true" invisible-if-certain="true" />
+                        </scope-for>
+                      </greater-than>
+                    </and>
+                    <and>
+                      <instance-not-equals>
+                        <scope-ref id="the other program" />
+                        <scope-ref id="program0" />
+                      </instance-not-equals>
+                      <equals>
+                        <attribute attr-id="p1" silent-if-certain="true" invisible-if-certain="true" />
+                        <scope-for scope-ref="program0" target-entity-id="program">
+                          <attribute attr-id="p1" silent-if-certain="true" invisible-if-certain="true" />
+                        </scope-for>
+                      </equals>
+                      <less-than>
+                        <attribute attr-id="p2" silent-if-certain="true" invisible-if-certain="true" />
+                        <scope-for scope-ref="program0" target-entity-id="program">
+                          <attribute attr-id="p2" silent-if-certain="true" invisible-if-certain="true" />
+                        </scope-for>
+                      </less-than>
+                      <or>
+                        <unknown>
+                          <attribute attr-id="b2" />
+                        </unknown>
+                        <uncertain>
+                          <attribute attr-id="b2" />
+                        </uncertain>
+                        <not>
+                          <attribute attr-id="b2" />
+                        </not>
+                      </or>
+                    </and>
+                  </or>
+                </for-all>
+              </for>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the person meets all of the enrollment requirements for the program" ruleburst="true" concludes="b2" folder="3" source-offset="1977">
+      <rule-xml>
+        <table-conclude attr-id="b2" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <uncertain-value />
+            </value>
+            <condition>
+              <attribute attr-id="b29" silent-if-false="true" silent-if-uncertain="true" invisible-if-false="true" invisible-if-uncertain="true" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <uncertain-value />
+            </value>
+            <condition>
+              <attribute attr-id="b30" silent-if-false="true" silent-if-uncertain="true" invisible-if-false="true" invisible-if-uncertain="true" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <uncertain-value />
+            </value>
+            <condition>
+              <and>
+                <not>
+                  <unknown>
+                    <attribute attr-id="b3" />
+                  </unknown>
+                </not>
+                <or>
+                  <uncertain>
+                    <attribute attr-id="b3" silent-if-uncertain="true" invisible-if-uncertain="true" />
+                  </uncertain>
+                  <not>
+                    <attribute attr-id="b3" silent-if-true="true" invisible-if-true="true" />
+                  </not>
+                </or>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <true-value />
+            </value>
+            <condition>
+              <attribute attr-id="b4" silent-if-false="true" invisible-if-false="true" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <false-value />
+            </value>
+            <condition>
+              <not>
+                <attribute attr-id="b5" silent-if-true="true" invisible-if-true="true" />
+              </not>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <true-value />
+            </value>
+            <condition>
+              <and>
+                <attribute attr-id="b33" />
+                <or>
+                  <not>
+                    <attribute attr-id="b33" />
+                  </not>
+                  <attribute attr-id="b34" />
+                </or>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="the date is not within the person's benefit plan period for the program" ruleburst="true" concludes="not b3" folder="4" source-offset="3357">
+      <rule-xml>
+        <conclude attr-id="b3" entity-id="program" scope-id="program0">
+          <value>
+            <false-value />
+          </value>
+          <condition>
+            <or>
+              <less-than>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p3" />
+                </scope-for>
+                <attribute attr-id="p21" />
+              </less-than>
+              <greater-than>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p3" />
+                </scope-for>
+                <attribute attr-id="p22" />
+              </greater-than>
+            </or>
+          </condition>
+          <otherwise>
+            <true-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="the start of the person's benefit plan period for the program" ruleburst="true" concludes="p21" folder="5" source-offset="3662">
+      <rule-xml>
+        <table-conclude attr-id="p21" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <attribute attr-id="p6" />
+            </value>
+            <condition>
+              <interval-sometimes>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p7" />
+                </scope-for>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p8" />
+                </scope-for>
+                <attribute attr-id="b7" />
+              </interval-sometimes>
+            </condition>
+          </row>
+          <otherwise>
+            <attribute attr-id="p30" />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="the calculated start of the person's benefit plan period for the program" ruleburst="true" concludes="p30" folder="5" source-offset="4081">
+      <rule-xml>
+        <table-conclude attr-id="p30" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <when-next>
+                <when-next>
+                  <when-next>
+                    <scope-for scope-ref="global0" target-entity-id="global">
+                      <attribute attr-id="p7" />
+                    </scope-for>
+                    <attribute attr-id="b23" />
+                  </when-next>
+                  <attribute attr-id="b21" />
+                </when-next>
+                <attribute attr-id="b18" />
+              </when-next>
+            </value>
+            <condition>
+              <interval-sometimes>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p7" />
+                </scope-for>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p8" />
+                </scope-for>
+                <attribute attr-id="b26" />
+              </interval-sometimes>
+            </condition>
+          </row>
+          <otherwise>
+            <attribute attr-id="p40" />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="the end of the person's benefit plan period for the program" ruleburst="true" concludes="p22" folder="6" source-offset="4739">
+      <rule-xml>
+        <table-conclude attr-id="p22" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <attribute attr-id="p9" />
+            </value>
+            <condition>
+              <interval-sometimes>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p7" />
+                </scope-for>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p8" />
+                </scope-for>
+                <attribute attr-id="b7" />
+              </interval-sometimes>
+            </condition>
+          </row>
+          <otherwise>
+            <attribute attr-id="p32" />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="the calculated end of the person's benefit plan period for the program" ruleburst="true" concludes="p32" folder="6" source-offset="5153">
+      <rule-xml>
+        <table-conclude attr-id="p32" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <add-days>
+                <add-months>
+                  <attribute attr-id="p40" />
+                  <maximum>
+                    <attribute attr-id="p10" />
+                    <number-value>0</number-value>
+                  </maximum>
+                </add-months>
+                <negate>
+                  <number-value>1</number-value>
+                </negate>
+              </add-days>
+            </value>
+            <condition>
+              <equals>
+                <extract-day>
+                  <attribute attr-id="p40" />
+                </extract-day>
+                <number-value>1</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <add-days>
+                <add-months>
+                  <attribute attr-id="p40" />
+                  <maximum>
+                    <attribute attr-id="p10" />
+                    <number-value>0</number-value>
+                  </maximum>
+                </add-months>
+                <negate>
+                  <number-value>1</number-value>
+                </negate>
+              </add-days>
+            </value>
+            <condition>
+              <not>
+                <attribute attr-id="b8" />
+              </not>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <add-days>
+                <add-months>
+                  <attribute attr-id="p42" />
+                  <attribute attr-id="p10" />
+                </add-months>
+                <negate>
+                  <number-value>1</number-value>
+                </negate>
+              </add-days>
+            </value>
+            <condition>
+              <not>
+                <attribute attr-id="b9" />
+              </not>
+            </condition>
+          </row>
+          <otherwise>
+            <add-days>
+              <add-months>
+                <attribute attr-id="p42" />
+                <minus>
+                  <attribute attr-id="p10" />
+                  <number-value>1</number-value>
+                </minus>
+              </add-months>
+              <negate>
+                <number-value>1</number-value>
+              </negate>
+            </add-days>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="7" name="the first day of the month following the start of the person's benefit plan period for the program " ruleburst="true" concludes="p11 = AddMonths(MakeDate(ExtractYear(p21),ExtractMonth(p21),1),1)" folder="6" source-offset="6863">
+      <rule-xml>
+        <conclude attr-id="p11" entity-id="program" scope-id="program0">
+          <value>
+            <add-months>
+              <make-date>
+                <extract-year>
+                  <attribute attr-id="p21" />
+                </extract-year>
+                <extract-month>
+                  <attribute attr-id="p21" />
+                </extract-month>
+                <number-value>1</number-value>
+              </make-date>
+              <number-value>1</number-value>
+            </add-months>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="8" name="the person is in a protected enrollment period for the program" ruleburst="true" concludes="b4" folder="7" source-offset="7249">
+      <rule-xml>
+        <conclude attr-id="b4" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <and>
+                <attribute attr-id="b10" />
+                <or>
+                  <not>
+                    <attribute attr-id="b10" />
+                  </not>
+                  <and>
+                    <attribute attr-id="b8" />
+                    <less-than-equals>
+                      <scope-for scope-ref="global0" target-entity-id="global">
+                        <attribute attr-id="p3" />
+                      </scope-for>
+                      <scope-for scope-ref="global0" target-entity-id="global">
+                        <attribute attr-id="p12" />
+                      </scope-for>
+                    </less-than-equals>
+                  </and>
+                </or>
+              </and>
+              <and>
+                <attribute attr-id="b10" />
+                <or>
+                  <not>
+                    <attribute attr-id="b10" />
+                  </not>
+                  <and>
+                    <attribute attr-id="b24" />
+                    <less-than-equals>
+                      <scope-for scope-ref="global0" target-entity-id="global">
+                        <attribute attr-id="p3" />
+                      </scope-for>
+                      <scope-for scope-ref="global0" target-entity-id="global">
+                        <attribute attr-id="p36" />
+                      </scope-for>
+                    </less-than-equals>
+                  </and>
+                </or>
+              </and>
+              <and>
+                <attribute attr-id="b25" />
+                <or>
+                  <not>
+                    <attribute attr-id="b25" />
+                  </not>
+                  <and>
+                    <attribute attr-id="b24" />
+                    <less-than-equals>
+                      <scope-for scope-ref="global0" target-entity-id="global">
+                        <attribute attr-id="p3" />
+                      </scope-for>
+                      <scope-for scope-ref="global0" target-entity-id="global">
+                        <attribute attr-id="p12" />
+                      </scope-for>
+                    </less-than-equals>
+                  </and>
+                </or>
+              </and>
+              <and>
+                <attribute attr-id="b11" />
+                <attribute attr-id="b12" />
+                <or>
+                  <not>
+                    <attribute attr-id="b11" />
+                  </not>
+                  <not>
+                    <attribute attr-id="b12" />
+                  </not>
+                  <or>
+                    <and>
+                      <attribute attr-id="b8" />
+                      <less-than-equals>
+                        <scope-for scope-ref="global0" target-entity-id="global">
+                          <attribute attr-id="p3" />
+                        </scope-for>
+                        <attribute attr-id="p13" />
+                      </less-than-equals>
+                    </and>
+                    <and>
+                      <not>
+                        <attribute attr-id="b8" />
+                      </not>
+                      <less-than-equals>
+                        <scope-for scope-ref="global0" target-entity-id="global">
+                          <attribute attr-id="p3" />
+                        </scope-for>
+                        <attribute attr-id="p15" />
+                      </less-than-equals>
+                    </and>
+                  </or>
+                </or>
+              </and>
+              <and>
+                <attribute attr-id="b13" silent-if-true="true" silent-if-false="true" invisible-if-true="true" invisible-if-false="true" />
+                <or>
+                  <not>
+                    <attribute attr-id="b13" silent-if-true="true" silent-if-false="true" invisible-if-true="true" invisible-if-false="true" />
+                  </not>
+                  <and>
+                    <attribute attr-id="b7" silent-if-true="true" silent-if-false="true" invisible-if-true="true" invisible-if-false="true" />
+                    <or>
+                      <not>
+                        <attribute attr-id="b7" silent-if-true="true" silent-if-false="true" invisible-if-true="true" invisible-if-false="true" />
+                      </not>
+                      <attribute attr-id="b14" />
+                    </or>
+                  </and>
+                </or>
+              </and>
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="9" name="the person became ineligible for the program during the month" ruleburst="true" concludes="b10" folder="7" source-offset="9867">
+      <rule-xml>
+        <conclude attr-id="b10" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <value-at>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p14" />
+                </scope-for>
+                <attribute attr-id="b32" />
+              </value-at>
+              <value-at>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p12" />
+                </scope-for>
+                <not>
+                  <attribute attr-id="b32" />
+                </not>
+              </value-at>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="10" name="the person became ineligible for the program during the previous month" ruleburst="true" concludes="b25" folder="7" source-offset="10248">
+      <rule-xml>
+        <conclude attr-id="b25" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <value-at>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p37" />
+                </scope-for>
+                <attribute attr-id="b32" />
+              </value-at>
+              <value-at>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p38" />
+                </scope-for>
+                <not>
+                  <attribute attr-id="b32" />
+                </not>
+              </value-at>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="11" name="the person has an adverse action for the program" ruleburst="true" concludes="b11" folder="8" source-offset="10657">
+      <rule-xml>
+        <conclude attr-id="b11" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b7" />
+              <or>
+                <attribute attr-id="b10" />
+                <and>
+                  <not>
+                    <attribute attr-id="b10" />
+                  </not>
+                  <attribute attr-id="b15" />
+                </and>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="12" name="the last day of the month for the effective date for a timely notice of adverse action for the person's eligibility for the program " ruleburst="true" concludes="p13 = AddDays(AddMonths(MakeDate(ExtractYear(p15),ExtractMonth(p15),1),1),-1)" folder="8" source-offset="11066">
+      <rule-xml>
+        <conclude attr-id="p13" entity-id="program" scope-id="program0">
+          <value>
+            <add-days>
+              <add-months>
+                <make-date>
+                  <extract-year>
+                    <attribute attr-id="p15" />
+                  </extract-year>
+                  <extract-month>
+                    <attribute attr-id="p15" />
+                  </extract-month>
+                  <number-value>1</number-value>
+                </make-date>
+                <number-value>1</number-value>
+              </add-months>
+              <negate>
+                <number-value>1</number-value>
+              </negate>
+            </add-days>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="13" name="the effective date for a timely notice of adverse action for the person's eligibility for the program" ruleburst="true" concludes="p15" folder="8" source-offset="11565">
+      <rule-xml>
+        <table-conclude attr-id="p15" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <when-next>
+                <add-days>
+                  <scope-for scope-ref="global0" target-entity-id="global">
+                    <attribute attr-id="p16" />
+                  </scope-for>
+                  <attribute attr-id="p17" />
+                </add-days>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="b16" />
+                </scope-for>
+              </when-next>
+            </value>
+            <condition>
+              <attribute attr-id="b17" />
+            </condition>
+          </row>
+          <otherwise>
+            <add-days>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p16" />
+              </scope-for>
+              <attribute attr-id="p17" />
+            </add-days>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="14" name="the first mailing date on or after the transaction" ruleburst="true" concludes="p16" folder="8" source-offset="12226">
+      <rule-xml>
+        <table-conclude attr-id="p16" entity-id="global" scope-id="global0">
+          <row>
+            <value>
+              <attribute attr-id="p18" />
+            </value>
+            <condition>
+              <and>
+                <value-at>
+                  <attribute attr-id="p18" />
+                  <attribute attr-id="b16" />
+                </value-at>
+                <less-than-equals>
+                  <attribute attr-id="p19" />
+                  <attribute attr-id="p20" />
+                </less-than-equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <when-next>
+              <add-days>
+                <attribute attr-id="p18" />
+                <number-value>1</number-value>
+              </add-days>
+              <attribute attr-id="b16" />
+            </when-next>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="15" name="the person is requesting the program" ruleburst="true" concludes="b5" folder="9" source-offset="12621">
+      <rule-xml>
+        <conclude attr-id="b5" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b28" />
+              <attribute attr-id="b26" />
+              <attribute attr-id="b7" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="16" name="the person has a request for the program" ruleburst="true" concludes="b23" folder="9" source-offset="12876">
+      <rule-xml>
+        <conclude attr-id="b23" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <exists scope-id="personsrequestedbenefit0">
+                  <relationship relationship-id="personsrequestedbenefits" target-entity-id="personsrequestedbenefit" />
+                  <equals>
+                    <attribute attr-id="p23" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p1" />
+                    </scope-for>
+                  </equals>
+                </exists>
+              </for>
+              <attribute attr-id="b7" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="17" name="the person has a prospective request for the program" ruleburst="true" concludes="b28" folder="10" source-offset="13194">
+      <rule-xml>
+        <conclude attr-id="b28" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b23" />
+              <or>
+                <not>
+                  <attribute attr-id="b23" />
+                </not>
+                <temporal-on-or-after>
+                  <attribute attr-id="p40" />
+                </temporal-on-or-after>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="18" name="the start of the person's prospective request period for the program" ruleburst="true" concludes="p40" folder="10" source-offset="13489">
+      <rule-xml>
+        <table-conclude attr-id="p40" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p41" />
+              </scope-for>
+            </value>
+            <condition>
+              <attribute attr-id="b19" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p34" />
+              </scope-for>
+            </value>
+            <condition>
+              <attribute attr-id="b22" />
+            </condition>
+          </row>
+          <otherwise>
+            <scope-for scope-ref="global0" target-entity-id="global">
+              <attribute attr-id="p24" />
+            </scope-for>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="19" name="the first day of the month following the start of the person's prospective request period for the program " ruleburst="true" concludes="p42 = AddMonths(MakeDate(ExtractYear(p40),ExtractMonth(p40),1),1)" folder="10" source-offset="13981">
+      <rule-xml>
+        <conclude attr-id="p42" entity-id="program" scope-id="program0">
+          <value>
+            <add-months>
+              <make-date>
+                <extract-year>
+                  <attribute attr-id="p40" />
+                </extract-year>
+                <extract-month>
+                  <attribute attr-id="p40" />
+                </extract-month>
+                <number-value>1</number-value>
+              </make-date>
+              <number-value>1</number-value>
+            </add-months>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="20" name="the person has a retroactive request for the program" ruleburst="true" concludes="b26" folder="11" source-offset="14380">
+      <rule-xml>
+        <conclude attr-id="b26" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b23" />
+              <or>
+                <not>
+                  <attribute attr-id="b23" />
+                </not>
+                <and>
+                  <attribute attr-id="b21" />
+                  <or>
+                    <not>
+                      <attribute attr-id="b21" />
+                    </not>
+                    <and>
+                      <attribute attr-id="b18" />
+                      <or>
+                        <not>
+                          <attribute attr-id="b18" />
+                        </not>
+                        <attribute attr-id="b27" />
+                      </or>
+                    </and>
+                  </or>
+                </and>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="21" name="the person is within the potential retroactive eligibility period for the program" ruleburst="true" concludes="b18" folder="11" source-offset="15005">
+      <rule-xml>
+        <conclude attr-id="b18" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <not>
+                <attribute attr-id="b7" />
+              </not>
+              <temporal-on-or-after>
+                <add-months>
+                  <attribute attr-id="p40" />
+                  <multiply>
+                    <negate>
+                      <number-value>1</number-value>
+                    </negate>
+                    <attribute attr-id="p27" />
+                  </multiply>
+                </add-months>
+              </temporal-on-or-after>
+              <temporal-before>
+                <attribute attr-id="p40" />
+              </temporal-before>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="22" name="the person meets the eligibility start date requirements for the program" ruleburst="true" concludes="b33" folder="13" source-offset="15582">
+      <rule-xml>
+        <table-conclude attr-id="b33" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <true-value />
+            </value>
+            <condition>
+              <and>
+                <attribute attr-id="b20" />
+                <or>
+                  <not>
+                    <attribute attr-id="b20" />
+                  </not>
+                  <and>
+                    <temporal-on-or-after>
+                      <scope-for scope-ref="global0" target-entity-id="global">
+                        <attribute attr-id="p31" />
+                      </scope-for>
+                    </temporal-on-or-after>
+                    <attribute attr-id="b6" />
+                  </and>
+                </or>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <false-value />
+            </value>
+            <condition>
+              <and>
+                <attribute attr-id="b20" />
+                <or>
+                  <not>
+                    <attribute attr-id="b20" />
+                  </not>
+                  <temporal-before>
+                    <scope-for scope-ref="global0" target-entity-id="global">
+                      <attribute attr-id="p31" />
+                    </scope-for>
+                  </temporal-before>
+                  <not>
+                    <attribute attr-id="b6" />
+                  </not>
+                </or>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <true-value />
+            </value>
+            <condition>
+              <and>
+                <attribute attr-id="b22" />
+                <or>
+                  <not>
+                    <attribute attr-id="b22" />
+                  </not>
+                  <and>
+                    <temporal-on-or-after>
+                      <attribute attr-id="p35" />
+                    </temporal-on-or-after>
+                    <interval-sometimes>
+                      <scope-for scope-ref="global0" target-entity-id="global">
+                        <attribute attr-id="p14" />
+                      </scope-for>
+                      <scope-for scope-ref="global0" target-entity-id="global">
+                        <attribute attr-id="p12" />
+                      </scope-for>
+                      <attribute attr-id="b6" />
+                    </interval-sometimes>
+                  </and>
+                </or>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <false-value />
+            </value>
+            <condition>
+              <and>
+                <attribute attr-id="b22" />
+                <or>
+                  <not>
+                    <attribute attr-id="b22" />
+                  </not>
+                  <temporal-before>
+                    <attribute attr-id="p35" />
+                  </temporal-before>
+                  <interval-always>
+                    <scope-for scope-ref="global0" target-entity-id="global">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <scope-for scope-ref="global0" target-entity-id="global">
+                      <attribute attr-id="p12" />
+                    </scope-for>
+                    <not>
+                      <attribute attr-id="b6" />
+                    </not>
+                  </interval-always>
+                </or>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <true-value />
+            </value>
+            <condition>
+              <attribute attr-id="b6" />
+            </condition>
+          </row>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="23" name="the first day of the month following the person's calculated first eligibility date for the program " ruleburst="true" concludes="p29 = AddMonths(p35,1)" folder="13" source-offset="17690">
+      <rule-xml>
+        <conclude attr-id="p29" entity-id="program" scope-id="program0">
+          <value>
+            <add-months>
+              <attribute attr-id="p35" />
+              <number-value>1</number-value>
+            </add-months>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="24" name="the first day of the month in which the person is determined eligible for the program " ruleburst="true" concludes="p35 = MakeDate(ExtractYear(p28),ExtractMonth(p28),1)" folder="13" source-offset="17922">
+      <rule-xml>
+        <conclude attr-id="p35" entity-id="program" scope-id="program0">
+          <value>
+            <make-date>
+              <extract-year>
+                <attribute attr-id="p28" />
+              </extract-year>
+              <extract-month>
+                <attribute attr-id="p28" />
+              </extract-month>
+              <number-value>1</number-value>
+            </make-date>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="25" name="the person's calculated first eligibility date for the program " ruleburst="true" concludes="p28 = WhenNext(p7,b32)" folder="13" source-offset="18235">
+      <rule-xml>
+        <conclude attr-id="p28" entity-id="program" scope-id="program0">
+          <value>
+            <when-next>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p7" />
+              </scope-for>
+              <attribute attr-id="b32" />
+            </when-next>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="26" name="the person does not meet sufficient eligibility requirements to be enrolled in the program" ruleburst="true" concludes="not b32" folder="13" source-offset="18451">
+      <rule-xml>
+        <conclude attr-id="b32" entity-id="program" scope-id="program0">
+          <value>
+            <false-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b29" silent-if-false="true" invisible-if-false="true" />
+              <and>
+                <not>
+                  <attribute attr-id="b29" silent-if-false="true" invisible-if-false="true" />
+                </not>
+                <attribute attr-id="b30" silent-if-false="true" invisible-if-false="true" />
+              </and>
+              <and>
+                <not>
+                  <attribute attr-id="b29" silent-if-false="true" invisible-if-false="true" />
+                </not>
+                <not>
+                  <attribute attr-id="b30" silent-if-false="true" invisible-if-false="true" />
+                </not>
+                <not>
+                  <attribute attr-id="b5" silent-if-true="true" invisible-if-true="true" />
+                </not>
+              </and>
+              <and>
+                <not>
+                  <attribute attr-id="b29" silent-if-false="true" invisible-if-false="true" />
+                </not>
+                <not>
+                  <attribute attr-id="b30" silent-if-false="true" invisible-if-false="true" />
+                </not>
+                <attribute attr-id="b5" silent-if-true="true" invisible-if-true="true" />
+                <not>
+                  <attribute attr-id="b6" />
+                </not>
+              </and>
+            </or>
+          </condition>
+          <otherwise>
+            <true-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="27" name="the person meets the eligibility end date requirements for the program" ruleburst="true" concludes="b34" folder="14" source-offset="19539">
+      <rule-xml>
+        <table-conclude attr-id="b34" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <true-value />
+            </value>
+            <condition>
+              <and>
+                <attribute attr-id="b20" />
+                <or>
+                  <not>
+                    <attribute attr-id="b20" />
+                  </not>
+                  <and>
+                    <temporal-on-or-before>
+                      <scope-for scope-ref="global0" target-entity-id="global">
+                        <attribute attr-id="p33" />
+                      </scope-for>
+                    </temporal-on-or-before>
+                    <attribute attr-id="b6" />
+                  </and>
+                </or>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <false-value />
+            </value>
+            <condition>
+              <and>
+                <attribute attr-id="b20" />
+                <or>
+                  <not>
+                    <attribute attr-id="b20" />
+                  </not>
+                  <temporal-after>
+                    <scope-for scope-ref="global0" target-entity-id="global">
+                      <attribute attr-id="p33" />
+                    </scope-for>
+                  </temporal-after>
+                  <not>
+                    <attribute attr-id="b6" />
+                  </not>
+                </or>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <true-value />
+            </value>
+            <condition>
+              <and>
+                <attribute attr-id="b8" />
+                <or>
+                  <not>
+                    <attribute attr-id="b8" />
+                  </not>
+                  <interval-sometimes>
+                    <scope-for scope-ref="global0" target-entity-id="global">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <scope-for scope-ref="global0" target-entity-id="global">
+                      <attribute attr-id="p12" />
+                    </scope-for>
+                    <attribute attr-id="b6" />
+                  </interval-sometimes>
+                </or>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <false-value />
+            </value>
+            <condition>
+              <and>
+                <attribute attr-id="b8" />
+                <or>
+                  <not>
+                    <attribute attr-id="b8" />
+                  </not>
+                  <interval-always>
+                    <scope-for scope-ref="global0" target-entity-id="global">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <scope-for scope-ref="global0" target-entity-id="global">
+                      <attribute attr-id="p12" />
+                    </scope-for>
+                    <not>
+                      <attribute attr-id="b6" />
+                    </not>
+                  </interval-always>
+                </or>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <true-value />
+            </value>
+            <condition>
+              <attribute attr-id="b6" />
+            </condition>
+          </row>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="Benefit Enrollment" parent="0" id="1" />
+    <folder text="Program Priority" parent="1" id="2" />
+    <folder text="Enrollment Requirements" parent="1" id="3" />
+    <folder text="Benefit Plan Period" parent="1" id="4" />
+    <folder text="Benefit Plan Start Date" parent="4" id="5" />
+    <folder text="Benefit Plan End Date" parent="4" id="6" />
+    <folder text="Protected Enrollment Period" parent="1" id="7" />
+    <folder text="Timely Notice" parent="7" id="8" />
+    <folder text="Benefit Request" parent="1" id="9" />
+    <folder text="Prospective Request" parent="9" id="10" />
+    <folder text="Retroactive Request" parent="9" id="11" />
+    <folder text="Eligibility Start/End" parent="1" id="12" />
+    <folder text="Eligibility Start Date" parent="12" id="13" />
+    <folder text="Eligibility End Date" parent="12" id="14" />
+  </rule-folders>
+</root>

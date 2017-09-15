@@ -1,0 +1,3107 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="p4" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person</base>
+        </text>
+      </attribute>
+      <attribute name="p8" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's unique ID</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the group member" id="groupmember" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+      <attribute name="b8" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's spouse</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s spouse'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's parent</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's child</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's other relative</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s other relative'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is related to the person</base>
+          <parse>s(ver('10.4.5.40'),v(relate,t(simple,present,normal)),ob('the group member',singular),o('to the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it is the case that the group member customarily purchases food and prepares meals with the person</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the group member customarily purchases food and prepares meals with the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is under parental control of the person</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('under parental control of the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member has parental control over the person</base>
+          <parse>s(ver('10.4.5.40'),v(have,t(simple,present,normal)),sb('the group member',singular),o('parental control over the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's foster parent</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s foster parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's foster child</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s foster child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's biological parent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s biological parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's biological child</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s biological child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's adopted parent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s adopted parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's adopted child</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s adopted child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's step-child</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s step-child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b34" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's step-parent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s step-parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's sibling</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s sibling'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's biological sibling</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s biological sibling'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b39" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's adopted sibling</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s adopted sibling'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b41" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's step-sibling</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s step-sibling'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b43" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's tax filer</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s tax filer'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b46" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's tax dependent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s tax dependent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b47" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's noncitizen sponsor</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s noncitizen sponsor'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b50" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's sponsored noncitizen</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s sponsored noncitizen'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b51" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member has primary responsibility for the person's care</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the group member',singular),o('primary responsibility for the person''s care'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b54" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member's care is the primary responsibility of the person</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member''s care',singular),o('the primary responsibility of the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b55" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has a court order or binding separation, divorce, or custody agreement establishing sole physical custody of the group member</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('a court order or binding separation, divorce, or custody agreement establishing sole physical custody of the group member'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b58" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member has a court order or binding separation, divorce, or custody agreement establishing sole physical custody of the person</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the group member',singular),o('a court order or binding separation, divorce, or custody agreement establishing sole physical custody of the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b59" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the parent with whom the person spends the most nights</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the parent with whom the person spends the most nights'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the related party" id="relatedparty" containment-relationship-id="personsrelatedparties" containment-parent-id="person">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is active</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('active'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is spouse</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('spouse'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is other relative</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('other relative'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is unrelated</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('unrelated'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is customarily purchases food and prepares meals together</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('customarily purchases food and prepares meals together'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is under parental control</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('under parental control'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is has parental control</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('has parental control'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is foster parent</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('foster parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is foster child</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('foster child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is biological parent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('biological parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is biological child</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('biological child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is adopted parent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('adopted parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is adopted child</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('adopted child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is step-parent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('step-parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is step-child</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('step-child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b38" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is biological sibling</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('biological sibling'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b40" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is adopted sibling</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('adopted sibling'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b42" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is step-sibling</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('step-sibling'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b44" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is tax filer</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('tax filer'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b45" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is tax dependent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('tax dependent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b48" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is noncitizen sponsor</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('noncitizen sponsor'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b49" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is sponsored noncitizen</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('sponsored noncitizen'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b52" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is has primary responsibility for care</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('has primary responsibility for care'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b53" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is primarily responsible for care</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('primarily responsible for care'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b56" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is under sole custody</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('under sole custody'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b57" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is has sole custody</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('has sole custody'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b60" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is spends most nights</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('spends most nights'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p1" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the related party's identifier</base>
+        </text>
+      </attribute>
+      <attribute name="p2" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the related party</base>
+        </text>
+      </attribute>
+      <attribute name="p3" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the related party's relationship to the person</base>
+        </text>
+      </attribute>
+      <attribute name="p5" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the start date for the related party's relationship to the person</base>
+        </text>
+      </attribute>
+      <attribute name="p6" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the end date for the related party's relationship to the person</base>
+        </text>
+      </attribute>
+      <attribute name="p7" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the related party's target person's unique ID</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+  </entities>
+  <relationships>
+    <relationship type="ManyToMany" relationship-id="groupmembersrepresentativeperson" reverse-relationship-id="personsrepresentationsasagroupmember" text="the group member's representative person" reverse-text="the person's representations as a group member" source="groupmember" target="person" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="relatedpartystargetperson" reverse-relationship-id="personsrepresentationsasrelatedparties" text="the related party's target person" reverse-text="the person's representations as related parties" source="relatedparty" target="person" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="personsrelatedparties" reverse-relationship-id="relatedpartyssourceperson" text="the person's related parties" reverse-text="the related party's source person" source="person" target="relatedparty" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" text="the person's group members" reverse-text="the group member's containing person" source="person" target="groupmember" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="the related party's identifier " ruleburst="true" concludes="p1 = p2 &amp; &quot; (&quot; &amp; p3 &amp; &quot;)&quot;" folder="1" source-offset="20">
+      <rule-xml>
+        <conclude attr-id="p1" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <concatenate>
+              <attribute attr-id="p2" />
+              <string-value><![CDATA[ (]]></string-value>
+              <attribute attr-id="p3" />
+              <string-value>)</string-value>
+            </concatenate>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the related party " ruleburst="true" concludes="p2 = InstanceValueIf(relatedpartystargetperson,p4,true)" folder="1" source-offset="163">
+      <rule-xml>
+        <conclude attr-id="p2" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <instance-value-if>
+              <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+              <attribute attr-id="p4" />
+              <true-value />
+            </instance-value-if>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="the related party's relationship to the person is active" ruleburst="true" concludes="b1" folder="1" source-offset="317">
+      <rule-xml>
+        <conclude attr-id="b1" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <or>
+                <unknown>
+                  <attribute attr-id="p5" />
+                </unknown>
+                <uncertain>
+                  <attribute attr-id="p5" />
+                </uncertain>
+                <temporal-on-or-after>
+                  <attribute attr-id="p5" />
+                </temporal-on-or-after>
+              </or>
+              <or>
+                <unknown>
+                  <attribute attr-id="p6" />
+                </unknown>
+                <uncertain>
+                  <attribute attr-id="p6" />
+                </uncertain>
+                <temporal-on-or-before>
+                  <attribute attr-id="p6" />
+                </temporal-on-or-before>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="the person is a member of the related party's target person" ruleburst="true" concludes="IsMemberOf(&quot;person&quot;, relatedpartystargetperson)" folder="1" source-offset="1168">
+      <rule-xml>
+        <conclude-rel relationship-id="relatedpartystargetperson" source="relatedparty" source-scope-id="relatedparty0" target-scope-id="person0">
+          <condition>
+            <equals>
+              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                <attribute attr-id="p7" />
+              </scope-for>
+              <attribute attr-id="p8" />
+            </equals>
+          </condition>
+        </conclude-rel>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="the group member is the person's spouse" ruleburst="true" concludes="b8" folder="3" source-offset="1928">
+      <rule-xml>
+        <conclude attr-id="b8" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b3" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b3" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b3" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b3" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="the group member is the person's parent" ruleburst="true" concludes="b9" folder="4" source-offset="4184">
+      <rule-xml>
+        <conclude attr-id="b9" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b23" silent-if-false="true" invisible-if-false="true" />
+              <attribute attr-id="b27" silent-if-false="true" invisible-if-false="true" />
+              <attribute attr-id="b34" silent-if-false="true" invisible-if-false="true" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="the group member is the person's child" ruleburst="true" concludes="b10" folder="4" source-offset="5645">
+      <rule-xml>
+        <conclude attr-id="b10" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b26" silent-if-false="true" invisible-if-false="true" />
+              <attribute attr-id="b30" silent-if-false="true" invisible-if-false="true" />
+              <attribute attr-id="b33" silent-if-false="true" invisible-if-false="true" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="7" name="the group member is the person's biological parent" ruleburst="true" concludes="b23" folder="5" source-offset="7143">
+      <rule-xml>
+        <conclude attr-id="b23" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b24" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b24" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b25" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b25" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="8" name="the group member is the person's biological child" ruleburst="true" concludes="b26" folder="5" source-offset="9437">
+      <rule-xml>
+        <conclude attr-id="b26" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b25" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b25" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b24" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b24" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="9" name="the group member is the person's adopted parent" ruleburst="true" concludes="b27" folder="6" source-offset="11764">
+      <rule-xml>
+        <conclude attr-id="b27" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b28" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b28" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b29" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b29" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="10" name="the group member is the person's adopted child" ruleburst="true" concludes="b30" folder="6" source-offset="14043">
+      <rule-xml>
+        <conclude attr-id="b30" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b29" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b29" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b28" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b28" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="11" name="the group member is the person's step-parent" ruleburst="true" concludes="b34" folder="7" source-offset="16349">
+      <rule-xml>
+        <conclude attr-id="b34" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b31" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b31" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b32" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b32" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="12" name="the group member is the person's step-child" ruleburst="true" concludes="b33" folder="7" source-offset="18613">
+      <rule-xml>
+        <conclude attr-id="b33" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b32" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b32" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b31" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b31" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="13" name="the group member is the person's sibling" ruleburst="true" concludes="b35" folder="8" source-offset="20897">
+      <rule-xml>
+        <conclude attr-id="b35" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b37" silent-if-false="true" invisible-if-false="true" />
+              <attribute attr-id="b39" silent-if-false="true" invisible-if-false="true" />
+              <attribute attr-id="b41" silent-if-false="true" invisible-if-false="true" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="14" name="the group member is the person's biological sibling" ruleburst="true" concludes="b37" folder="9" source-offset="22412">
+      <rule-xml>
+        <conclude attr-id="b37" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b38" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b38" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b38" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b38" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="15" name="the group member is the person's adopted sibling" ruleburst="true" concludes="b39" folder="10" source-offset="24750">
+      <rule-xml>
+        <conclude attr-id="b39" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b40" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b40" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b40" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b40" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="16" name="the group member is the person's step-sibling" ruleburst="true" concludes="b41" folder="11" source-offset="27067">
+      <rule-xml>
+        <conclude attr-id="b41" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b42" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b42" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b42" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b42" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="17" name="the group member is the person's other relative" ruleburst="true" concludes="b11" folder="12" source-offset="29373">
+      <rule-xml>
+        <conclude attr-id="b11" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b6" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b6" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b6" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b6" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="18" name="the group member is not related to the person" ruleburst="true" concludes="not b12" folder="13" source-offset="31676">
+      <rule-xml>
+        <conclude attr-id="b12" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <false-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b7" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b7" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b7" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b7" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <true-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="19" name="it is the case that the group member customarily purchases food and prepares meals with the person" ruleburst="true" concludes="b13" folder="15" source-offset="33989">
+      <rule-xml>
+        <conclude attr-id="b13" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b14" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b14" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b14" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b14" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="20" name="the group member is under parental control of the person" ruleburst="true" concludes="b15" folder="16" source-offset="36501">
+      <rule-xml>
+        <conclude attr-id="b15" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b16" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b16" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b17" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b17" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="21" name="the group member has parental control over the person" ruleburst="true" concludes="b18" folder="16" source-offset="38821">
+      <rule-xml>
+        <conclude attr-id="b18" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b17" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b17" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b16" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b16" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="22" name="the group member has primary responsibility for the person's care" ruleburst="true" concludes="b51" folder="17" source-offset="41164">
+      <rule-xml>
+        <conclude attr-id="b51" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b52" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b52" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b53" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b53" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="23" name="the group member's care is the primary responsibility of the person" ruleburst="true" concludes="b54" folder="17" source-offset="43537">
+      <rule-xml>
+        <conclude attr-id="b54" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b53" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b53" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b52" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b52" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="24" name="the group member is the person's foster parent" ruleburst="true" concludes="b19" folder="18" source-offset="45942">
+      <rule-xml>
+        <conclude attr-id="b19" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b20" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b20" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b21" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b21" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="25" name="the group member is the person's foster child" ruleburst="true" concludes="b22" folder="18" source-offset="48216">
+      <rule-xml>
+        <conclude attr-id="b22" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b21" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b21" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b20" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b20" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="26" name="the group member is the person's tax filer" ruleburst="true" concludes="b43" folder="19" source-offset="50518">
+      <rule-xml>
+        <conclude attr-id="b43" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b44" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b44" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b45" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b45" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="27" name="the group member is the person's tax dependent" ruleburst="true" concludes="b46" folder="19" source-offset="52782">
+      <rule-xml>
+        <conclude attr-id="b46" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b45" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b45" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b44" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b44" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="28" name="the group member is the person's noncitizen sponsor" ruleburst="true" concludes="b47" folder="20" source-offset="55095">
+      <rule-xml>
+        <conclude attr-id="b47" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b48" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b48" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b49" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b49" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="29" name="the group member is the person's sponsored noncitizen" ruleburst="true" concludes="b50" folder="20" source-offset="57400">
+      <rule-xml>
+        <conclude attr-id="b50" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b49" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b49" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b48" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b48" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="30" name="the person has a court order or binding separation, divorce, or custody agreement establishing sole physical custody of the group member" ruleburst="true" concludes="b55" folder="21" source-offset="59732">
+      <rule-xml>
+        <conclude attr-id="b55" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b56" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b56" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b57" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b57" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="31" name="the group member has a court order or binding separation, divorce, or custody agreement establishing sole physical custody of the person" ruleburst="true" concludes="b58" folder="21" source-offset="62114">
+      <rule-xml>
+        <conclude attr-id="b58" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <or>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="relatedparty0">
+                        <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b57" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b57" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the person's reverse related party">
+                        <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                        <for scope-id="the related party's person">
+                          <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the related party's person" />
+                              <scope-ref id="the member" />
+                            </instance-equals>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b56" />
+                              </scope-for>
+                            </or>
+                            <or>
+                              <instance-not-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-not-equals>
+                              <not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b56" />
+                                </scope-for>
+                              </not>
+                              <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                <attribute attr-id="b1" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="32" name="the group member is the parent with whom the person spends the most nights" ruleburst="true" concludes="b59" folder="22" source-offset="64524">
+      <rule-xml>
+        <conclude attr-id="b59" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b9" />
+              <for scope-id="person0">
+                <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+                <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                  <for scope-id="the member">
+                    <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                    <or>
+                      <scope-for scope-ref="person0" target-entity-id="person">
+                        <exists scope-id="relatedparty0">
+                          <relationship relationship-id="personsrelatedparties" target-entity-id="relatedparty" />
+                          <for scope-id="the related party's person">
+                            <relationship relationship-id="relatedpartystargetperson" target-entity-id="person" />
+                            <and>
+                              <instance-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-equals>
+                              <or>
+                                <instance-not-equals>
+                                  <scope-ref id="the related party's person" />
+                                  <scope-ref id="the member" />
+                                </instance-not-equals>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b60" />
+                                </scope-for>
+                              </or>
+                              <or>
+                                <instance-not-equals>
+                                  <scope-ref id="the related party's person" />
+                                  <scope-ref id="the member" />
+                                </instance-not-equals>
+                                <not>
+                                  <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                    <attribute attr-id="b60" />
+                                  </scope-for>
+                                </not>
+                                <scope-for scope-ref="relatedparty0" target-entity-id="relatedparty">
+                                  <attribute attr-id="b1" />
+                                </scope-for>
+                              </or>
+                            </and>
+                          </for>
+                        </exists>
+                      </scope-for>
+                      <scope-for scope-ref="person0" target-entity-id="person">
+                        <exists scope-id="the person's reverse related party">
+                          <relationship relationship-id="personsrepresentationsasrelatedparties" target-entity-id="relatedparty" />
+                          <for scope-id="the related party's person">
+                            <relationship relationship-id="relatedpartyssourceperson" target-entity-id="person" />
+                            <and>
+                              <instance-equals>
+                                <scope-ref id="the related party's person" />
+                                <scope-ref id="the member" />
+                              </instance-equals>
+                              <or>
+                                <instance-not-equals>
+                                  <scope-ref id="the related party's person" />
+                                  <scope-ref id="the member" />
+                                </instance-not-equals>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b60" />
+                                </scope-for>
+                              </or>
+                              <or>
+                                <instance-not-equals>
+                                  <scope-ref id="the related party's person" />
+                                  <scope-ref id="the member" />
+                                </instance-not-equals>
+                                <not>
+                                  <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                    <attribute attr-id="b60" />
+                                  </scope-for>
+                                </not>
+                                <scope-for scope-ref="the person's reverse related party" target-entity-id="relatedparty">
+                                  <attribute attr-id="b1" />
+                                </scope-for>
+                              </or>
+                            </and>
+                          </for>
+                        </exists>
+                      </scope-for>
+                    </or>
+                  </for>
+                </scope-for>
+              </for>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="Related Parties" parent="0" id="1" />
+    <folder text="Familial Relationships" parent="1" id="2" />
+    <folder text="Spouse / Spouse" parent="2" id="3" />
+    <folder text="Parent / Child" parent="2" id="4" />
+    <folder text="Biological Parent / Biological Child" parent="2" id="5" />
+    <folder text="Adopted Parent / Adopted Child" parent="2" id="6" />
+    <folder text="Step-Parent / Step-Child" parent="2" id="7" />
+    <folder text="Sibling / Sibling" parent="2" id="8" />
+    <folder text="Biological Sibling / Biological Sibling" parent="2" id="9" />
+    <folder text="Adopted Sibling / Adopted Sibling" parent="2" id="10" />
+    <folder text="Step-Sibling / Step-Sibling" parent="2" id="11" />
+    <folder text="Other Relative / Other Relative" parent="2" id="12" />
+    <folder text="Unrelated / Unrelated" parent="2" id="13" />
+    <folder text="Non-Familial Relationships" parent="1" id="14" />
+    <folder text="Purchase and Prepare" parent="14" id="15" />
+    <folder text="Parental Control" parent="14" id="16" />
+    <folder text="Primary Responsibility" parent="14" id="17" />
+    <folder text="Foster Parent/Foster Child" parent="14" id="18" />
+    <folder text="Tax Filer / Tax Dependent" parent="14" id="19" />
+    <folder text="Noncitizen Sponsor / Sponsored Noncitizen" parent="14" id="20" />
+    <folder text="Sole Physical Custody" parent="14" id="21" />
+    <folder text="Parent With Most Nights" parent="14" id="22" />
+  </rule-folders>
+</root>

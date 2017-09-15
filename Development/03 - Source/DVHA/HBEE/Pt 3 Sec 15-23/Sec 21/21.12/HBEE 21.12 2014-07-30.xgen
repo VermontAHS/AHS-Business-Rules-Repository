@@ -1,0 +1,161 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b30" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 21.12 applies to the person for the program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 21.12',singular),o('to the person for the program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is a QHP-based program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('a QHP-based program'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 21.12 is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 21.12',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 21.12(b) applies to the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 21.12(b)',singular),o('to the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 21.12(a) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 21.12(a)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 21.03 is satisfied for the person</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 21.03',singular),o('for the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it is the case that the person is a tax dependent in a household where both spouses are enrolled in a QHP through the same Exchange that is not VHC</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the person is a tax dependent in a household where both spouses are enrolled in a QHP through the same Exchange that is not VHC'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the group member" id="groupmember" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+      <attribute name="b33" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person expects to claim a personal exemption deduction for the group member for the benefit year</base>
+          <parse>s(ver('10.4.6.76'),v(expect,t(simple,present,normal)),sb('the person',singular),o('to claim a personal exemption deduction for the group member for the benefit year'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+  </entities>
+  <relationships>
+    <relationship type="ManyToMany" relationship-id="groupmembersrepresentativeperson" reverse-relationship-id="personsrepresentationsasagroupmember" text="the group member's representative person" reverse-text="the person's representations as a group member" source="groupmember" target="person" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" text="the person's group members" reverse-text="the group member's containing person" source="person" target="groupmember" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="HBEE 21.12 applies to the person for the program (eff. 07/30/2014)" ruleburst="true" concludes="b30" folder="1" source-offset="134">
+      <rule-xml>
+        <conclude attr-id="b30" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b37" />
+              <not>
+                <for>
+                  <relationship relationship-id="programsperson" target-entity-id="person" />
+                  <attribute attr-id="b31" />
+                </for>
+              </not>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="HBEE 21.12 is satisfied for the person (eff. 07/30/2014)" ruleburst="true" concludes="b1" folder="1" source-offset="310">
+      <rule-xml>
+        <conclude attr-id="b1" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <not>
+                <attribute attr-id="b3" />
+              </not>
+              <or>
+                <attribute attr-id="b3" />
+                <attribute attr-id="b4" />
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="HBEE 21.12(a) is satisfied for the person (eff. 07/30/2014)" ruleburst="true" concludes="b4" folder="1" source-offset="593">
+      <rule-xml>
+        <conclude attr-id="b4" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <exists scope-id="groupmember0">
+              <relationship relationship-id="personsrepresentationsasagroupmember" target-entity-id="groupmember" />
+              <for scope-id="the filer">
+                <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+                <and>
+                  <instance-not-equals>
+                    <scope-ref id="the filer" />
+                    <scope-ref id="person0" />
+                  </instance-not-equals>
+                  <attribute attr-id="b31" />
+                  <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                    <attribute attr-id="b33" />
+                  </scope-for>
+                </and>
+              </for>
+            </exists>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="HBEE 21.12(b) applies to the person (eff. 07/30/2014)" ruleburst="true" concludes="b3" folder="1" source-offset="1176">
+      <rule-xml>
+        <conclude attr-id="b3" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b36" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="21.12 Special rule for tax households with members in multiple Exchange service areas (07/30/2014, 14-04)" parent="0" id="1" />
+  </rule-folders>
+</root>

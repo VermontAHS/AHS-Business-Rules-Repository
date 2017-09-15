@@ -1,0 +1,1833 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity ref="global">
+      <attribute name="p14" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the maximum income exclusion under HBEE 29.13(b)(2)(iii) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p22" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the maximum unearned income exclusion under HBEE 29.13(b)(4) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b227" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 29.13 applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.13',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b228" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it is the case that all of the person's financial responsibility group's unearned income for the program is from sources that give assistance based on financial need</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that all of the person''s financial responsibility group''s unearned income for the program is from sources that give assistance based on financial need'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b232" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program uses MABD-based Medicaid methodologies</base>
+          <parse>s(ver('10.4.6.76'),v(use,t(simple,present,normal)),sb('the program',singular),o('MABD-based Medicaid methodologies'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p20" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the unearned income exclusion for the person's financial responsibility group for the program under HBEE 29.13(b)(4) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b15" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is a student who is regularly attending school</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('a student who is regularly attending school'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b130" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is under 22 years of age</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('under 22 years of age'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b135" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is under 18 years of age</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('under 18 years of age'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b236" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is receiving public assistance</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('receiving public assistance'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's income" id="personsincome" containment-relationship-id="personsincomes" containment-parent-id="person">
+      <attribute name="b12" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is support service payments made directly to the providers of services in the Limited Work Experience Program under the Workforce Investment Act of 1998</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('support service payments made directly to the providers of services in the Limited Work Experience Program under the Workforce Investment Act of 1998'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is a needs-based payment of 10 dollars per day made to participants of the Limited Work Experience Program under the Workforce Investment Act of 1998</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a needs-based payment of 10 dollars per day made to participants of the Limited Work Experience Program under the Workforce Investment Act of 1998'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is an infrequent or irregular earned income source received which does not exceed 30 dollars per calendar quarter</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('an infrequent or irregular earned income source received which does not exceed 30 dollars per calendar quarter'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is in-kind assistance</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('in-kind assistance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is an Earned Income Tax Credit payment</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('an Earned Income Tax Credit payment'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is wages paid by the Census Bureau for temporary employment</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('wages paid by the Census Bureau for temporary employment'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b85" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is public agency's refund of taxes received on food or real property</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('public agency''s refund of taxes received on food or real property'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b86" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is an infrequent or irregular source of unearned income received which does not exceed 60 dollars per calendar quarter</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('an infrequent or irregular source of unearned income received which does not exceed 60 dollars per calendar quarter'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b87" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is bills that are paid directly to vendors by a third party</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('bills that are paid directly to vendors by a third party'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b88" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is unearned income received from replacement of lost, stolen or destroyed income</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('unearned income received from replacement of lost, stolen or destroyed income'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b89" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is weatherization assistance</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('weatherization assistance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b90" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is receipts from the sale, exchange or replacement of a resource</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('receipts from the sale, exchange or replacement of a resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b91" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is any assistance received based on need which is funded wholly by the state, such as General Assistance</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('any assistance received based on need which is funded wholly by the state, such as General Assistance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b94" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is home produce used for personal consumption</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('home produce used for personal consumption'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b95" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is assistance and interest earned on assistance for a catastrophe from the Disaster Relief and Emergency Assistance Act or other comparable assistance provided by the federal, state or local government</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('assistance and interest earned on assistance for a catastrophe from the Disaster Relief and Emergency Assistance Act or other comparable assistance provided by the federal, state or local government'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b96" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is irregular and unpredictable voluntary cash contributions or gifts received from friends or relatives</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('irregular and unpredictable voluntary cash contributions or gifts received from friends or relatives'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b97" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is payments received for providing foster care for children or adults placed in the person's home by a public or private non-profit placement agency</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('payments received for providing foster care for children or adults placed in the person''s home by a public or private non-profit placement agency'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b99" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is from payment received for chore, attendant or homemaker services under a government program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('from payment received for chore, attendant or homemaker services under a government program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b101" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is assistance received in cash or in kind (including food, clothing, or shelter) under a government program that provides medical care or services (including vocational rehabilitation)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('assistance received in cash or in kind (including food, clothing, or shelter) under a government program that provides medical care or services (including vocational rehabilitation)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b102" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is benefits that was intended to cover the financial need of other individuals, such as AABD-EP grants</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('benefits that was intended to cover the financial need of other individuals, such as AABD-EP grants'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b103" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is retroactive payments of SSI, AABD or OASDI benefits in cases where the payments were included in determining financial eligibility for Medicaid in the month it was actually owed to the person</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('retroactive payments of SSI, AABD or OASDI benefits in cases where the payments were included in determining financial eligibility for Medicaid in the month it was actually owed to the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b104" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is home energy assistance provided by a private nonprofit organization or a regulated supplier of home energy</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('home energy assistance provided by a private nonprofit organization or a regulated supplier of home energy'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b105" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is state-administered victims' compensation payments</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('state-administered victims'' compensation payments'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b106" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is state or local government relocation payments</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('state or local government relocation payments'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b108" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is Earned Income Tax Credit payments</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('Earned Income Tax Credit payments'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b110" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is income from a home equity conversion plan</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('income from a home equity conversion plan'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b111" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is dividends received on life insurance policies</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('dividends received on life insurance policies'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b112" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is payments made by someone other than the person to a third-party trust for the person</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('payments made by someone other than the person to a third-party trust for the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b113" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is interest and dividend income from a countable resource or from a resource excluded under a federal statute other than § 1613 of the SSA</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('interest and dividend income from a countable resource or from a resource excluded under a federal statute other than § 1613 of the SSA'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b114" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is interest on an excluded burial space purchase agreement if left to accumulate as part of the value of the agreement</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('interest on an excluded burial space purchase agreement if left to accumulate as part of the value of the agreement'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b115" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is the amount refunded on income taxes that the person has already paid</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('the amount refunded on income taxes that the person has already paid'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b116" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is proceeds of a loan</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('proceeds of a loan'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b119" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded under HBEE 29.13 (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 29.13 (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b120" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded under HBEE 29.13(a) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 29.13(a) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b122" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded under HBEE 29.13(a)(1) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 29.13(a)(1) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b123" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded under HBEE 29.13(a)(2) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 29.13(a)(2) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b124" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded under HBEE 29.13(a)(3) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 29.13(a)(3) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b125" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded under HBEE 29.13(a)(4) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 29.13(a)(4) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b126" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded under HBEE 29.13(a)(5) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 29.13(a)(5) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b128" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded under HBEE 29.13(a)(7) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 29.13(a)(7) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b129" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded under HBEE 29.13(a)(8) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 29.13(a)(8) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b133" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 29.13(a) applies to the person's income (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.13(a)',singular),o('to the person''s income (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b134" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 29.13(b) applies to the person's income (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.13(b)',singular),o('to the person''s income (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b180" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income type is considered earned income under HBEE 29.12(b)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person''s income type',singular),o('earned income under HBEE 29.12(b)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b181" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income type is considered self-employment income under HBEE 29.12(c)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person''s income type',singular),o('self-employment income under HBEE 29.12(c)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b182" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b187" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(5) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(5) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b188" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(6) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(6) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b189" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(7) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(7) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b190" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(8) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(8) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b191" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(9) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(9) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b192" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(10) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(10) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b193" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(11) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(11) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b194" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded under HBEE 29.13(b)(12) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 29.13(b)(12) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b196" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(14) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(14) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b197" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(15) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(15) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b198" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(16) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(16) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b199" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(17) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(17) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b201" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(19) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(19) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b202" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(20) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(20) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b203" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(21) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(21) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b204" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(22) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(22) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b205" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(23) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(23) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b206" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(24) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(24) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b207" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(25) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(25) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b208" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(26) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(26) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b210" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(28) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(28) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b212" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(30) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(30) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b213" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(31) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(31) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b214" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(32) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(32) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b215" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(33) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(33) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b216" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(34) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(34) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b217" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(35) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(35) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b218" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(36) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(36) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b226" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is a VA payment</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a VA payment'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b229" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is a grant, scholarship or fellowship</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a grant, scholarship or fellowship'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b230" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is a child support payment</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a child support payment'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b231" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is payments occasioned by the death of another person</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('payments occasioned by the death of another person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b233" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(37) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(37) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b234" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 29.08(i)(9) applies to the person's income</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.08(i)(9)',singular),o('to the person''s income'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b235" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is excluded under HBEE 29.08(i)(9)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 29.08(i)(9)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p1" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the income exclusion for expenses incurred as a condition of receiving the person's income under HBEE 29.13(b)(1) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p2" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the amount of expenses incurred as a condition of receiving the person's income</base>
+        </text>
+      </attribute>
+      <attribute name="p3" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the monthly income exclusion for the person's income under HBEE 29.13 (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p4" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the income exclusion for VA payments for the person's income under HBEE 29.13(b)(2) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p5" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the income exclusion for VA payments for the person's income under HBEE 29.13(b)(2)(i) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p6" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the income exclusion for VA payments for the person's income under HBEE 29.13(b)(2)(ii) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p7" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the income exclusion for VA payments for the person's income under HBEE 29.13(b)(2)(iii) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p8" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the income exclusion for VA payments for the person's income under HBEE 29.13(b)(2)(iv) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p9" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the income exclusion for VA payments for the person's income under HBEE 29.13(b)(2)(v) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p10" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the income exclusion for VA payments for the person's income under HBEE 29.13(b)(2)(vi) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p11" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the portion of the person's income that is a pension or compensation payment for aid and attendance or housebound allowances</base>
+        </text>
+      </attribute>
+      <attribute name="p12" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the augmented portion of the person's income that is pensions, compensation or other benefits for a dependent of a veteran or a veteran's spouse</base>
+        </text>
+      </attribute>
+      <attribute name="p13" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the portion of the person's income that is educational benefits to a veteran funded by the government</base>
+        </text>
+      </attribute>
+      <attribute name="p15" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the portion of the person's income that is educational benefits received as either part of a plan of vocational rehabilitation or by withdrawals of personal educational fund</base>
+        </text>
+      </attribute>
+      <attribute name="p16" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the portion of the person's income that is a clothing allowance</base>
+        </text>
+      </attribute>
+      <attribute name="p17" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the portion of the person's income that is payment adjustments for unusual medical expenses</base>
+        </text>
+      </attribute>
+      <attribute name="p23" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the income exclusion for educational expenses for the person's income under HBEE 29.13(b)(13) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p24" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the income exclusion for child support payments for the person's income under HBEE 29.13(b)(18) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p25" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the income exclusion for death payments for the person's income under HBEE 29.13(b)(27) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p26" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the portion of the person's income used to pay tuition, fees or other necessary educational expenses</base>
+        </text>
+      </attribute>
+      <attribute name="p27" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income's amount</base>
+        </text>
+      </attribute>
+      <attribute name="p28" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the portion of the person's income used to pay for the deceased person's last illness and burial, including gifts and inheritances</base>
+        </text>
+      </attribute>
+      <attribute name="p30" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the income exclusion per payment for the person's income under HBEE 29.13 (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the income program" id="incomeprogram" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 29.13 applies to the income program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.5.40'),v(apply,t(simple,present,normal)),sb('HBEE 29.13',singular),o('to the income program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p18" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the monthly income exclusion for the person's income for the income program under HBEE 29.13 (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p29" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the income exclusion per payment for the person's income for the income program under HBEE 29.13 (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship type="ManyToMany" relationship-id="personsprogramfortheincomeprogram" reverse-relationship-id="personsincomesfortheprogram" text="the person's program for the income program" reverse-text="the person's incomes for the program" source="incomeprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" text="the person's income's income programs" reverse-text="the person's income for the income program" source="personsincome" target="incomeprogram" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" text="the person's incomes" reverse-text="the person's income's person" source="person" target="personsincome" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="HBEE 29.13 applies to the program (eff. 07/15/2015)" ruleburst="true" concludes="b227" folder="1" source-offset="63">
+      <rule-xml>
+        <conclude attr-id="b227" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b232" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="HBEE 29.13 applies to the income program (eff. 07/15/2015)" ruleburst="true" concludes="b1" folder="1" source-offset="184">
+      <rule-xml>
+        <conclude attr-id="b1" entity-id="incomeprogram" scope-id="incomeprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="program0">
+              <relationship relationship-id="personsprogramfortheincomeprogram" target-entity-id="program" />
+              <attribute attr-id="b227" />
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="the person's income is excluded under HBEE 29.13 (eff. 07/15/2015)" ruleburst="true" concludes="b119" folder="1" source-offset="429">
+      <rule-xml>
+        <conclude attr-id="b119" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <and>
+                <attribute attr-id="b133" />
+                <attribute attr-id="b120" />
+              </and>
+              <and>
+                <attribute attr-id="b134" />
+                <attribute attr-id="b182" />
+              </and>
+              <attribute attr-id="b194" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="the income exclusion per payment for the person's income for the income program under HBEE 29.13 (eff. 07/15/2015)" ruleburst="true" concludes="p29" folder="1" source-offset="952">
+      <rule-xml>
+        <table-conclude attr-id="p29" entity-id="incomeprogram" scope-id="incomeprogram0">
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="personsincomefortheincomeprogram" target-entity-id="personsincome" />
+                <attribute attr-id="p30" />
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b1" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="the income exclusion per payment for the person's income under HBEE 29.13 (eff. 07/15/2015) " ruleburst="true" concludes="p30 = p1 + p4 + p23 + p24 + p25" folder="1" source-offset="1255">
+      <rule-xml>
+        <conclude attr-id="p30" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <plus>
+              <attribute attr-id="p1" />
+              <attribute attr-id="p4" />
+              <attribute attr-id="p23" />
+              <attribute attr-id="p24" />
+              <attribute attr-id="p25" />
+            </plus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="the monthly income exclusion for the person's income for the income program under HBEE 29.13 (eff. 07/15/2015)" ruleburst="true" concludes="p18" folder="1" source-offset="1983">
+      <rule-xml>
+        <table-conclude attr-id="p18" entity-id="incomeprogram" scope-id="incomeprogram0">
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="personsincomefortheincomeprogram" target-entity-id="personsincome" />
+                <attribute attr-id="p3" />
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b1" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="the monthly income exclusion for the person's income under HBEE 29.13 (eff. 07/15/2015) " ruleburst="true" concludes="p3 = 0" folder="1" source-offset="2277">
+      <rule-xml>
+        <conclude attr-id="p3" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <number-value>0</number-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="7" name="HBEE 29.13(a) applies to the person's income (eff. 07/15/2015)" ruleburst="true" concludes="b133" folder="2" source-offset="2419">
+      <rule-xml>
+        <conclude attr-id="b133" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b180" />
+              <attribute attr-id="b181" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="8" name="the person's income is excluded under HBEE 29.13(a) (eff. 07/15/2015)" ruleburst="true" concludes="b120" folder="2" source-offset="2666">
+      <rule-xml>
+        <conclude attr-id="b120" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b122" />
+              <attribute attr-id="b123" />
+              <attribute attr-id="b124" />
+              <attribute attr-id="b125" />
+              <attribute attr-id="b126" />
+              <attribute attr-id="b128" />
+              <attribute attr-id="b129" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="9" name="the person's income is excluded under HBEE 29.13(a)(1) (eff. 07/15/2015)" ruleburst="true" concludes="b122" folder="3" source-offset="3340">
+      <rule-xml>
+        <conclude attr-id="b122" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b12" />
+              <attribute attr-id="b13" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="10" name="the person's income is excluded under HBEE 29.13(a)(2) (eff. 07/15/2015)" ruleburst="true" concludes="b123" folder="4" source-offset="3797">
+      <rule-xml>
+        <conclude attr-id="b123" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <for>
+                <relationship relationship-id="personsincomesperson" target-entity-id="person" />
+                <attribute attr-id="b130" />
+              </for>
+              <for>
+                <relationship relationship-id="personsincomesperson" target-entity-id="person" />
+                <attribute attr-id="b15" />
+              </for>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="11" name="the person's income is excluded under HBEE 29.13(a)(3) (eff. 07/15/2015)" ruleburst="true" concludes="b124" folder="5" source-offset="4008">
+      <rule-xml>
+        <conclude attr-id="b124" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b22" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="12" name="the person's income is excluded under HBEE 29.13(a)(4) (eff. 07/15/2015)" ruleburst="true" concludes="b125" folder="6" source-offset="4364">
+      <rule-xml>
+        <conclude attr-id="b125" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b23" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="13" name="the person's income is excluded under HBEE 29.13(a)(5) (eff. 07/15/2015)" ruleburst="true" concludes="b126" folder="7" source-offset="4511">
+      <rule-xml>
+        <conclude attr-id="b126" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b24" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="14" name="the person's income is excluded under HBEE 29.13(a)(7) (eff. 07/15/2015)" ruleburst="true" concludes="b128" folder="8" source-offset="4743">
+      <rule-xml>
+        <conclude attr-id="b128" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for>
+              <relationship relationship-id="personsincomesperson" target-entity-id="person" />
+              <attribute attr-id="b135" />
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="15" name="the person's income is excluded under HBEE 29.13(a)(8) (eff. 07/15/2015)" ruleburst="true" concludes="b129" folder="9" source-offset="4886">
+      <rule-xml>
+        <conclude attr-id="b129" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b28" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="16" name="HBEE 29.13(b) applies to the person's income (eff. 07/15/2015)" ruleburst="true" concludes="b134" folder="10" source-offset="5098">
+      <rule-xml>
+        <conclude attr-id="b134" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <not>
+              <attribute attr-id="b133" />
+            </not>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="17" name="the person's income is excluded from unearned income under HBEE 29.13(b) (eff. 07/15/2015)" ruleburst="true" concludes="b182" folder="10" source-offset="5254">
+      <rule-xml>
+        <conclude attr-id="b182" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b187" />
+              <attribute attr-id="b188" />
+              <attribute attr-id="b189" />
+              <attribute attr-id="b190" />
+              <attribute attr-id="b191" />
+              <attribute attr-id="b192" />
+              <attribute attr-id="b193" />
+              <attribute attr-id="b196" />
+              <attribute attr-id="b197" />
+              <attribute attr-id="b198" />
+              <attribute attr-id="b199" />
+              <attribute attr-id="b201" />
+              <attribute attr-id="b202" />
+              <attribute attr-id="b203" />
+              <attribute attr-id="b204" />
+              <attribute attr-id="b205" />
+              <attribute attr-id="b206" />
+              <attribute attr-id="b207" />
+              <attribute attr-id="b208" />
+              <attribute attr-id="b210" />
+              <attribute attr-id="b212" />
+              <attribute attr-id="b213" />
+              <attribute attr-id="b214" />
+              <attribute attr-id="b215" />
+              <attribute attr-id="b216" />
+              <attribute attr-id="b217" />
+              <attribute attr-id="b218" />
+              <attribute attr-id="b233" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="18" name="the income exclusion for expenses incurred as a condition of receiving the person's income under HBEE 29.13(b)(1) (eff. 07/15/2015)" ruleburst="true" concludes="p1" folder="11" source-offset="8415">
+      <rule-xml>
+        <table-conclude attr-id="p1" entity-id="personsincome" scope-id="personsincome0">
+          <row>
+            <value>
+              <attribute attr-id="p2" />
+            </value>
+            <condition>
+              <and>
+                <not>
+                  <unknown>
+                    <attribute attr-id="p2" />
+                  </unknown>
+                </not>
+                <certain>
+                  <attribute attr-id="p2" />
+                </certain>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="19" name="the income exclusion for VA payments for the person's income under HBEE 29.13(b)(2) (eff. 07/15/2015)" ruleburst="true" concludes="p4" folder="12" source-offset="8910">
+      <rule-xml>
+        <table-conclude attr-id="p4" entity-id="personsincome" scope-id="personsincome0">
+          <row>
+            <value>
+              <plus>
+                <attribute attr-id="p5" />
+                <attribute attr-id="p6" />
+                <attribute attr-id="p7" />
+                <attribute attr-id="p8" />
+                <attribute attr-id="p9" />
+                <attribute attr-id="p10" />
+              </plus>
+            </value>
+            <condition>
+              <attribute attr-id="b226" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="20" name="the income exclusion for VA payments for the person's income under HBEE 29.13(b)(2)(i) (eff. 07/15/2015)" ruleburst="true" concludes="p5" folder="12" source-offset="9757">
+      <rule-xml>
+        <table-conclude attr-id="p5" entity-id="personsincome" scope-id="personsincome0">
+          <row>
+            <value>
+              <attribute attr-id="p11" />
+            </value>
+            <condition>
+              <and>
+                <not>
+                  <unknown>
+                    <attribute attr-id="p11" />
+                  </unknown>
+                </not>
+                <certain>
+                  <attribute attr-id="p11" />
+                </certain>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="21" name="the income exclusion for VA payments for the person's income under HBEE 29.13(b)(2)(ii) (eff. 07/15/2015)" ruleburst="true" concludes="p6" folder="12" source-offset="10335">
+      <rule-xml>
+        <table-conclude attr-id="p6" entity-id="personsincome" scope-id="personsincome0">
+          <row>
+            <value>
+              <attribute attr-id="p12" />
+            </value>
+            <condition>
+              <and>
+                <not>
+                  <unknown>
+                    <attribute attr-id="p12" />
+                  </unknown>
+                </not>
+                <certain>
+                  <attribute attr-id="p12" />
+                </certain>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="22" name="the income exclusion for VA payments for the person's income under HBEE 29.13(b)(2)(iii) (eff. 07/15/2015)" ruleburst="true" concludes="p7" folder="12" source-offset="10974">
+      <rule-xml>
+        <table-conclude attr-id="p7" entity-id="personsincome" scope-id="personsincome0">
+          <row>
+            <value>
+              <minimum>
+                <attribute attr-id="p13" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p14" />
+                </scope-for>
+              </minimum>
+            </value>
+            <condition>
+              <and>
+                <not>
+                  <unknown>
+                    <attribute attr-id="p13" />
+                  </unknown>
+                </not>
+                <certain>
+                  <attribute attr-id="p13" />
+                </certain>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="23" name="the maximum income exclusion under HBEE 29.13(b)(2)(iii) (eff. 07/15/2015) " ruleburst="true" concludes="p14 = 20" folder="12" source-offset="11584">
+      <rule-xml>
+        <conclude attr-id="p14" entity-id="global" scope-id="global0">
+          <value>
+            <number-value>20</number-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="24" name="the income exclusion for VA payments for the person's income under HBEE 29.13(b)(2)(iv) (eff. 07/15/2015)" ruleburst="true" concludes="p8" folder="12" source-offset="11677">
+      <rule-xml>
+        <table-conclude attr-id="p8" entity-id="personsincome" scope-id="personsincome0">
+          <row>
+            <value>
+              <attribute attr-id="p15" />
+            </value>
+            <condition>
+              <and>
+                <not>
+                  <unknown>
+                    <attribute attr-id="p15" />
+                  </unknown>
+                </not>
+                <certain>
+                  <attribute attr-id="p15" />
+                </certain>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="25" name="the income exclusion for VA payments for the person's income under HBEE 29.13(b)(2)(v) (eff. 07/15/2015)" ruleburst="true" concludes="p9" folder="12" source-offset="12403">
+      <rule-xml>
+        <table-conclude attr-id="p9" entity-id="personsincome" scope-id="personsincome0">
+          <row>
+            <value>
+              <attribute attr-id="p16" />
+            </value>
+            <condition>
+              <and>
+                <not>
+                  <unknown>
+                    <attribute attr-id="p16" />
+                  </unknown>
+                </not>
+                <certain>
+                  <attribute attr-id="p16" />
+                </certain>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="26" name="the income exclusion for VA payments for the person's income under HBEE 29.13(b)(2)(vi) (eff. 07/15/2015)" ruleburst="true" concludes="p10" folder="12" source-offset="12798">
+      <rule-xml>
+        <table-conclude attr-id="p10" entity-id="personsincome" scope-id="personsincome0">
+          <row>
+            <value>
+              <attribute attr-id="p17" />
+            </value>
+            <condition>
+              <and>
+                <not>
+                  <unknown>
+                    <attribute attr-id="p17" />
+                  </unknown>
+                </not>
+                <certain>
+                  <attribute attr-id="p17" />
+                </certain>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="27" name="the unearned income exclusion for the person's financial responsibility group for the program under HBEE 29.13(b)(4) (eff. 07/15/2015)" ruleburst="true" concludes="p20" folder="13" source-offset="13425">
+      <rule-xml>
+        <table-conclude attr-id="p20" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p22" />
+              </scope-for>
+            </value>
+            <condition>
+              <not>
+                <attribute attr-id="b228" />
+              </not>
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="28" name="the maximum unearned income exclusion under HBEE 29.13(b)(4) (eff. 07/15/2015) " ruleburst="true" concludes="p22 = 20" folder="13" source-offset="13852">
+      <rule-xml>
+        <conclude attr-id="p22" entity-id="global" scope-id="global0">
+          <value>
+            <number-value>20</number-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="29" name="the person's income is excluded from unearned income under HBEE 29.13(b)(5) (eff. 07/15/2015)" ruleburst="true" concludes="b187" folder="14" source-offset="13963">
+      <rule-xml>
+        <conclude attr-id="b187" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b85" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="30" name="the person's income is excluded from unearned income under HBEE 29.13(b)(6) (eff. 07/15/2015)" ruleburst="true" concludes="b188" folder="15" source-offset="14294">
+      <rule-xml>
+        <conclude attr-id="b188" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b86" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="31" name="the person's income is excluded from unearned income under HBEE 29.13(b)(7) (eff. 07/15/2015)" ruleburst="true" concludes="b189" folder="16" source-offset="14559">
+      <rule-xml>
+        <conclude attr-id="b189" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b87" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="32" name="the person's income is excluded from unearned income under HBEE 29.13(b)(8) (eff. 07/15/2015)" ruleburst="true" concludes="b190" folder="17" source-offset="14765">
+      <rule-xml>
+        <conclude attr-id="b190" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b88" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="33" name="the person's income is excluded from unearned income under HBEE 29.13(b)(9) (eff. 07/15/2015)" ruleburst="true" concludes="b191" folder="18" source-offset="14992">
+      <rule-xml>
+        <conclude attr-id="b191" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b89" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="34" name="the person's income is excluded from unearned income under HBEE 29.13(b)(10) (eff. 07/15/2015)" ruleburst="true" concludes="b192" folder="19" source-offset="15168">
+      <rule-xml>
+        <conclude attr-id="b192" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b90" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="35" name="the person's income is excluded from unearned income under HBEE 29.13(b)(11) (eff. 07/15/2015)" ruleburst="true" concludes="b193" folder="20" source-offset="15381">
+      <rule-xml>
+        <conclude attr-id="b193" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b91" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="36" name="the person's income is excluded under HBEE 29.13(b)(12) (eff. 07/15/2015)" ruleburst="true" concludes="b194" folder="21" source-offset="15920">
+      <rule-xml>
+        <conclude attr-id="b194" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for>
+              <relationship relationship-id="personsincomesperson" target-entity-id="person" />
+              <attribute attr-id="b236" />
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="37" name="the income exclusion for educational expenses for the person's income under HBEE 29.13(b)(13) (eff. 07/15/2015)" ruleburst="true" concludes="p23" folder="22" source-offset="16220">
+      <rule-xml>
+        <table-conclude attr-id="p23" entity-id="personsincome" scope-id="personsincome0">
+          <row>
+            <value>
+              <attribute attr-id="p26" />
+            </value>
+            <condition>
+              <attribute attr-id="b229" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="38" name="the person's income is excluded from unearned income under HBEE 29.13(b)(14) (eff. 07/15/2015)" ruleburst="true" concludes="b196" folder="23" source-offset="16546">
+      <rule-xml>
+        <conclude attr-id="b196" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b94" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="39" name="the person's income is excluded from unearned income under HBEE 29.13(b)(15) (eff. 07/15/2015)" ruleburst="true" concludes="b197" folder="24" source-offset="16740">
+      <rule-xml>
+        <conclude attr-id="b197" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b95" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="40" name="the person's income is excluded from unearned income under HBEE 29.13(b)(16) (eff. 07/15/2015)" ruleburst="true" concludes="b198" folder="25" source-offset="17090">
+      <rule-xml>
+        <conclude attr-id="b198" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b96" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="41" name="the person's income is excluded from unearned income under HBEE 29.13(b)(17) (eff. 07/15/2015)" ruleburst="true" concludes="b199" folder="26" source-offset="17342">
+      <rule-xml>
+        <conclude attr-id="b199" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b97" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="42" name="the income exclusion for child support payments for the person's income under HBEE 29.13(b)(18) (eff. 07/15/2015)" ruleburst="true" concludes="p24" folder="27" source-offset="17653">
+      <rule-xml>
+        <table-conclude attr-id="p24" entity-id="personsincome" scope-id="personsincome0">
+          <row>
+            <value>
+              <divide>
+                <attribute attr-id="p27" />
+                <number-value>3</number-value>
+              </divide>
+            </value>
+            <condition>
+              <attribute attr-id="b230" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="43" name="the person's income is excluded from unearned income under HBEE 29.13(b)(19) (eff. 07/15/2015)" ruleburst="true" concludes="b201" folder="28" source-offset="17906">
+      <rule-xml>
+        <conclude attr-id="b201" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b99" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="44" name="the person's income is excluded from unearned income under HBEE 29.13(b)(20) (eff. 07/15/2015)" ruleburst="true" concludes="b202" folder="29" source-offset="18149">
+      <rule-xml>
+        <conclude attr-id="b202" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b23" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="45" name="the person's income is excluded from unearned income under HBEE 29.13(b)(21) (eff. 07/15/2015)" ruleburst="true" concludes="b203" folder="30" source-offset="18319">
+      <rule-xml>
+        <conclude attr-id="b203" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b101" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="46" name="the person's income is excluded from unearned income under HBEE 29.13(b)(22) (eff. 07/15/2015)" ruleburst="true" concludes="b204" folder="31" source-offset="18653">
+      <rule-xml>
+        <conclude attr-id="b204" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b102" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="47" name="the person's income is excluded from unearned income under HBEE 29.13(b)(23) (eff. 07/15/2015)" ruleburst="true" concludes="b205" folder="32" source-offset="18905">
+      <rule-xml>
+        <conclude attr-id="b205" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b103" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="48" name="the person's income is excluded from unearned income under HBEE 29.13(b)(24) (eff. 07/15/2015)" ruleburst="true" concludes="b206" folder="33" source-offset="19249">
+      <rule-xml>
+        <conclude attr-id="b206" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b104" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="49" name="the person's income is excluded from unearned income under HBEE 29.13(b)(25) (eff. 07/15/2015)" ruleburst="true" concludes="b207" folder="34" source-offset="19508">
+      <rule-xml>
+        <conclude attr-id="b207" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b105" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="50" name="the person's income is excluded from unearned income under HBEE 29.13(b)(26) (eff. 07/15/2015)" ruleburst="true" concludes="b208" folder="35" source-offset="19710">
+      <rule-xml>
+        <conclude attr-id="b208" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b106" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="51" name="the income exclusion for death payments for the person's income under HBEE 29.13(b)(27) (eff. 07/15/2015)" ruleburst="true" concludes="p25" folder="36" source-offset="19922">
+      <rule-xml>
+        <table-conclude attr-id="p25" entity-id="personsincome" scope-id="personsincome0">
+          <row>
+            <value>
+              <attribute attr-id="p28" />
+            </value>
+            <condition>
+              <attribute attr-id="b231" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="52" name="the person's income is excluded from unearned income under HBEE 29.13(b)(28) (eff. 07/15/2015)" ruleburst="true" concludes="b210" folder="37" source-offset="20288">
+      <rule-xml>
+        <conclude attr-id="b210" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b108" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="53" name="the person's income is excluded from unearned income under HBEE 29.13(b)(30) (eff. 07/15/2015)" ruleburst="true" concludes="b212" folder="38" source-offset="20543">
+      <rule-xml>
+        <conclude attr-id="b212" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b110" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="54" name="the person's income is excluded from unearned income under HBEE 29.13(b)(31) (eff. 07/15/2015)" ruleburst="true" concludes="b213" folder="39" source-offset="20737">
+      <rule-xml>
+        <conclude attr-id="b213" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b111" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="55" name="the person's income is excluded from unearned income under HBEE 29.13(b)(32) (eff. 07/15/2015)" ruleburst="true" concludes="b214" folder="40" source-offset="20935">
+      <rule-xml>
+        <conclude attr-id="b214" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b112" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="56" name="the person's income is excluded from unearned income under HBEE 29.13(b)(33) (eff. 07/15/2015)" ruleburst="true" concludes="b215" folder="41" source-offset="21172">
+      <rule-xml>
+        <conclude attr-id="b215" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b113" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="57" name="the person's income is excluded from unearned income under HBEE 29.13(b)(34) (eff. 07/15/2015)" ruleburst="true" concludes="b216" folder="42" source-offset="21460">
+      <rule-xml>
+        <conclude attr-id="b216" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b114" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="58" name="the person's income is excluded from unearned income under HBEE 29.13(b)(35) (eff. 07/15/2015)" ruleburst="true" concludes="b217" folder="43" source-offset="21728">
+      <rule-xml>
+        <conclude attr-id="b217" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b115" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="59" name="the person's income is excluded from unearned income under HBEE 29.13(b)(36) (eff. 07/15/2015)" ruleburst="true" concludes="b218" folder="44" source-offset="21949">
+      <rule-xml>
+        <conclude attr-id="b218" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b116" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="60" name="the person's income is excluded from unearned income under HBEE 29.13(b)(37) (eff. 07/15/2015)" ruleburst="true" concludes="b233" folder="45" source-offset="22178">
+      <rule-xml>
+        <conclude attr-id="b233" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b234" />
+              <attribute attr-id="b235" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="Income exclusions (07/15/2015, 15-02)" parent="0" id="1" />
+    <folder text="29.13(a):  Earned income exclusions" parent="1" id="2" />
+    <folder text="29.13(a)(1)" parent="2" id="3" />
+    <folder text="29.13(a)(2)" parent="2" id="4" />
+    <folder text="29.13(a)(3)" parent="2" id="5" />
+    <folder text="29.13(a)(4)" parent="2" id="6" />
+    <folder text="29.13(a)(5)" parent="2" id="7" />
+    <folder text="29.13(a)(7)" parent="2" id="8" />
+    <folder text="29.13(a)(8)" parent="2" id="9" />
+    <folder text="29.13(b):  Unearned income exclusions" parent="1" id="10" />
+    <folder text="29.13(b)(1)" parent="10" id="11" />
+    <folder text="29.13(b)(2)" parent="10" id="12" />
+    <folder text="29.13(b)(4)" parent="10" id="13" />
+    <folder text="29.13(b)(5)" parent="10" id="14" />
+    <folder text="29.13(b)(6)" parent="10" id="15" />
+    <folder text="29.13(b)(7)" parent="10" id="16" />
+    <folder text="29.13(b)(8)" parent="10" id="17" />
+    <folder text="29.13(b)(9)" parent="10" id="18" />
+    <folder text="29.13(b)(10)" parent="10" id="19" />
+    <folder text="29.13(b)(11)" parent="10" id="20" />
+    <folder text="29.13(b)(12)" parent="10" id="21" />
+    <folder text="29.13(b)(13)" parent="10" id="22" />
+    <folder text="29.13(b)(14)" parent="10" id="23" />
+    <folder text="29.13(b)(15)" parent="10" id="24" />
+    <folder text="29.13(b)(16)" parent="10" id="25" />
+    <folder text="29.13(b)(17)" parent="10" id="26" />
+    <folder text="29.13(b)(18)" parent="10" id="27" />
+    <folder text="29.13(b)(19)" parent="10" id="28" />
+    <folder text="29.13(b)(20)" parent="10" id="29" />
+    <folder text="29.13(b)(21)" parent="10" id="30" />
+    <folder text="29.13(b)(22)" parent="10" id="31" />
+    <folder text="29.13(b)(23)" parent="10" id="32" />
+    <folder text="29.13(b)(24)" parent="10" id="33" />
+    <folder text="29.13(b)(25)" parent="10" id="34" />
+    <folder text="29.13(b)(26)" parent="10" id="35" />
+    <folder text="29.13(b)(27)" parent="10" id="36" />
+    <folder text="29.13(b)(28)" parent="10" id="37" />
+    <folder text="29.13(b)(30)" parent="10" id="38" />
+    <folder text="29.13(b)(31)" parent="10" id="39" />
+    <folder text="29.13(b)(32)" parent="10" id="40" />
+    <folder text="29.13(b)(33)" parent="10" id="41" />
+    <folder text="29.13(b)(34)" parent="10" id="42" />
+    <folder text="29.13(b)(35)" parent="10" id="43" />
+    <folder text="29.13(b)(36)" parent="10" id="44" />
+    <folder text="29.13(b)(37)" parent="10" id="45" />
+  </rule-folders>
+</root>

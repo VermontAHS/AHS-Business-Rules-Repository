@@ -1,0 +1,649 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity ref="global">
+      <attribute name="p15" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the eligible status</base>
+        </text>
+      </attribute>
+      <attribute name="p17" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the enrolled status</base>
+        </text>
+      </attribute>
+      <attribute name="p18" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the approved status</base>
+        </text>
+      </attribute>
+      <attribute name="p19" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the suspended status</base>
+        </text>
+      </attribute>
+      <attribute name="p21" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>this state's abbreviation</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b6" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is authorized to receive the program under an existing benefit plan</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('authorized to receive the program under an existing benefit plan'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is receiving the program's benefits from another state</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('receiving the program''s benefits from another state'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p6" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the start of the person's existing benefit plan period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p8" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the end of the person's existing benefit plan period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p11" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the program's name</base>
+        </text>
+      </attribute>
+      <attribute name="p13" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the program's code</base>
+        </text>
+      </attribute>
+      <attribute name="p23" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the program's benefit type</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="p2" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's unique ID</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the existing benefit" id="existingbenefit" containment-relationship-id="existingbenefitplansexistingbenefits" containment-parent-id="existingbenefitplan">
+      <attribute name="b2" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the existing benefit is active</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the existing benefit',singular),o('active'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the existing benefit is eligible</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the existing benefit',singular),o('eligible'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the existing benefit is enrolled</base>
+          <parse>s(ver('10.4.6.76'),v(enroll,t(simple,present,normal)),ob('the existing benefit',singular))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the existing benefit is from this state</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the existing benefit',singular),o('from this state'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the existing benefit is authorized</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the existing benefit',singular),o('authorized'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the existing benefit is approved</base>
+          <parse>s(ver('10.4.6.76'),v(approve,t(simple,present,normal)),ob('the existing benefit',singular))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the existing benefit is suspended</base>
+          <parse>s(ver('10.4.6.76'),v(suspend,t(simple,present,normal)),ob('the existing benefit',singular))</parse>
+        </text>
+      </attribute>
+      <attribute name="p1" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the existing benefit's recipient's ID</base>
+        </text>
+      </attribute>
+      <attribute name="p3" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the existing benefit's primary person's ID</base>
+        </text>
+      </attribute>
+      <attribute name="p10" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the existing benefit's program</base>
+        </text>
+      </attribute>
+      <attribute name="p12" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the existing benefit's program code</base>
+        </text>
+      </attribute>
+      <attribute name="p14" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the existing benefit's eligibility status</base>
+        </text>
+      </attribute>
+      <attribute name="p16" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the existing benefit's enrollment status</base>
+        </text>
+      </attribute>
+      <attribute name="p20" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the existing benefit's state's abbreviation</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the existing benefit plan" id="existingbenefitplan" containment-relationship-id="existingbenefitplans" containment-parent-id="global">
+      <attribute name="p4" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the existing benefit plan's transaction date</base>
+        </text>
+      </attribute>
+      <attribute name="p5" type="datetime" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the existing benefit plan's transaction date time</base>
+        </text>
+      </attribute>
+      <attribute name="p7" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the existing benefit plan's start date</base>
+        </text>
+      </attribute>
+      <attribute name="p9" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the existing benefit plan's end date</base>
+        </text>
+      </attribute>
+      <attribute name="p22" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the existing benefit plan's type</base>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship type="ManyToMany" relationship-id="existingbenefitplanswiththesamebenefittypeastheexistingbenefitplan" reverse-relationship-id="existingbenefitplan_existingbenefitplanswiththesamebenefittypeastheexistingbenefitplan_rev" text="the existing benefit plans with the same benefit type as the existing benefit plan" source="existingbenefitplan" target="existingbenefitplan" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="currentbenefitplansfortheprogramsbenefittype" reverse-relationship-id="currentprogramsfortheexistingbenefitplan" text="the current benefit plans for the program's benefit type" reverse-text="the current programs for the existing benefit plan" source="program" target="existingbenefitplan" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="existingbenefitplanscontemporarybenefitplans" reverse-relationship-id="existingbenefitplan_existingbenefitplanscontemporarybenefitplans_rev" text="the existing benefit plan's contemporary benefit plans" source="existingbenefitplan" target="existingbenefitplan" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="currentbenefitsfortheprogramsbenefittype" reverse-relationship-id="program_currentbenefitsfortheprogramsbenefittype_rev" text="the current benefits for the program's benefit type" source="program" target="existingbenefit" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="existingbenefitplansexistingbenefits" reverse-relationship-id="existingbenefitsplan" text="the existing benefit plan's existing benefits" reverse-text="the existing benefit's plan" source="existingbenefitplan" target="existingbenefit" is-implicit="false" is-containment="true" />
+    <relationship type="ManyToMany" relationship-id="existingbenefitsprimaryperson" reverse-relationship-id="existingbenefitsforwhichthepersonistheprimaryperson" text="the existing benefit's primary person" reverse-text="the existing benefits for which the person is the primary person" source="existingbenefit" target="person" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="personsexistingbenefitplans" reverse-relationship-id="existingbenefitplansrecipients" text="the person's existing benefit plans" reverse-text="the existing benefit plan's recipients" source="person" target="existingbenefitplan" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="personscurrentbenefitplans" reverse-relationship-id="person_personscurrentbenefitplans_rev" text="the person's current benefit plans" source="person" target="existingbenefitplan" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="personsexistingbenefits" reverse-relationship-id="existingbenefitsrecipients" text="the person's existing benefits" reverse-text="the existing benefit's recipients" source="person" target="existingbenefit" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="existingbenefitplans" reverse-relationship-id="global_existingbenefitplans_rev" text="the existing benefit plans" source="global" target="existingbenefitplan" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="the existing benefit is a member of the person's existing benefits" ruleburst="true" concludes="IsMemberOf(&quot;existingbenefit&quot;, personsexistingbenefits)" folder="1" source-offset="32">
+      <rule-xml>
+        <conclude-rel relationship-id="personsexistingbenefits" source="person" source-scope-id="person0" target-scope-id="existingbenefit0">
+          <condition>
+            <equals>
+              <attribute attr-id="p1" silent="true" invisible="true" />
+              <scope-for scope-ref="person0" target-entity-id="person">
+                <attribute attr-id="p2" silent="true" invisible="true" />
+              </scope-for>
+            </equals>
+          </condition>
+        </conclude-rel>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the person is a member of the existing benefit's primary person" ruleburst="true" concludes="IsMemberOf(&quot;person&quot;, existingbenefitsprimaryperson)" folder="1" source-offset="443">
+      <rule-xml>
+        <conclude-rel relationship-id="existingbenefitsprimaryperson" source="existingbenefit" source-scope-id="existingbenefit0" target-scope-id="person0">
+          <condition>
+            <equals>
+              <attribute attr-id="p2" silent="true" invisible="true" />
+              <scope-for scope-ref="existingbenefit0" target-entity-id="existingbenefit">
+                <attribute attr-id="p3" silent="true" invisible="true" />
+              </scope-for>
+            </equals>
+          </condition>
+        </conclude-rel>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="the existing benefit plan is a member of the person's existing benefit plans" ruleburst="true" concludes="IsMemberOf(&quot;existingbenefitplan&quot;, personsexistingbenefitplans)" folder="1" source-offset="664">
+      <rule-xml>
+        <conclude-rel relationship-id="personsexistingbenefitplans" source="person" source-scope-id="person0" target-scope-id="existingbenefitplan0">
+          <condition>
+            <exists scope-id="existingbenefit0">
+              <relationship relationship-id="existingbenefitplansexistingbenefits" target-entity-id="existingbenefit" />
+              <exists-in scope-ref="person0" scope-is-source="true" scope-entity-id="person">
+                <relationship relationship-id="personsexistingbenefits" target-entity-id="existingbenefit" />
+              </exists-in>
+            </exists>
+          </condition>
+        </conclude-rel>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="the existing benefit plan's transaction date " ruleburst="true" concludes="p4 = ExtractDate(p5)" folder="2" source-offset="1106">
+      <rule-xml>
+        <conclude attr-id="p4" entity-id="existingbenefitplan" scope-id="existingbenefitplan0">
+          <value>
+            <extract-date>
+              <attribute attr-id="p5" />
+            </extract-date>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="the start of the person's existing benefit plan period for the program " ruleburst="true" concludes="p6 = InstanceValueIf(currentbenefitplansfortheprogramsbenefittype,p7,true)" folder="2" source-offset="1242">
+      <rule-xml>
+        <conclude attr-id="p6" entity-id="program" scope-id="program0">
+          <value>
+            <instance-value-if>
+              <relationship relationship-id="currentbenefitplansfortheprogramsbenefittype" target-entity-id="existingbenefitplan" />
+              <attribute attr-id="p7" />
+              <true-value />
+            </instance-value-if>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="the end of the person's existing benefit plan period for the program " ruleburst="true" concludes="p8 = InstanceValueIf(currentbenefitplansfortheprogramsbenefittype,p9,true)" folder="2" source-offset="1518">
+      <rule-xml>
+        <conclude attr-id="p8" entity-id="program" scope-id="program0">
+          <value>
+            <instance-value-if>
+              <relationship relationship-id="currentbenefitplansfortheprogramsbenefittype" target-entity-id="existingbenefitplan" />
+              <attribute attr-id="p9" />
+              <true-value />
+            </instance-value-if>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="the person is receiving the program's benefits from another state" ruleburst="true" concludes="b10" folder="3" source-offset="2249">
+      <rule-xml>
+        <conclude attr-id="b10" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <exists scope-id="existingbenefit0">
+              <relationship relationship-id="currentbenefitsfortheprogramsbenefittype" target-entity-id="existingbenefit" />
+              <and>
+                <attribute attr-id="b2" />
+                <attribute attr-id="b3" />
+                <attribute attr-id="b4" />
+                <not>
+                  <attribute attr-id="b5" />
+                </not>
+              </and>
+            </exists>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="7" name="the person is authorized to receive the program under an existing benefit plan" ruleburst="true" concludes="b6" folder="3" source-offset="2624">
+      <rule-xml>
+        <conclude attr-id="b6" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for>
+              <relationship relationship-id="programsperson" target-entity-id="person" />
+              <exists scope-id="existingbenefit0">
+                <relationship relationship-id="personsexistingbenefits" target-entity-id="existingbenefit" />
+                <and>
+                  <attribute attr-id="b2" />
+                  <attribute attr-id="b7" />
+                  <or>
+                    <equals>
+                      <attribute attr-id="p10" />
+                      <scope-for scope-ref="program0" target-entity-id="program">
+                        <attribute attr-id="p11" />
+                      </scope-for>
+                    </equals>
+                    <equals>
+                      <attribute attr-id="p12" />
+                      <scope-for scope-ref="program0" target-entity-id="program">
+                        <attribute attr-id="p13" />
+                      </scope-for>
+                    </equals>
+                  </or>
+                </and>
+              </exists>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="8" name="the existing benefit is authorized" ruleburst="true" concludes="b7" folder="3" source-offset="3020">
+      <rule-xml>
+        <conclude attr-id="b7" entity-id="existingbenefit" scope-id="existingbenefit0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b3" />
+              <or>
+                <attribute attr-id="b4" />
+                <attribute attr-id="b8" />
+                <attribute attr-id="b9" />
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="9" name="the existing benefit is eligible" ruleburst="true" concludes="b3" folder="3" source-offset="3234">
+      <rule-xml>
+        <conclude attr-id="b3" entity-id="existingbenefit" scope-id="existingbenefit0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p14" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p15" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="10" name="the existing benefit is enrolled" ruleburst="true" concludes="b4" folder="3" source-offset="3352">
+      <rule-xml>
+        <conclude attr-id="b4" entity-id="existingbenefit" scope-id="existingbenefit0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p16" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p17" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="11" name="the existing benefit is approved" ruleburst="true" concludes="b8" folder="3" source-offset="3469">
+      <rule-xml>
+        <conclude attr-id="b8" entity-id="existingbenefit" scope-id="existingbenefit0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p16" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p18" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="12" name="the existing benefit is suspended" ruleburst="true" concludes="b9" folder="3" source-offset="3586">
+      <rule-xml>
+        <conclude attr-id="b9" entity-id="existingbenefit" scope-id="existingbenefit0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p16" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p19" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="13" name="the existing benefit is from this state" ruleburst="true" concludes="b5" folder="3" source-offset="3705">
+      <rule-xml>
+        <conclude attr-id="b5" entity-id="existingbenefit" scope-id="existingbenefit0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p20" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p21" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="14" name="the existing benefit is a member of the current benefits for the program's benefit type" ruleburst="true" concludes="IsMemberOf(&quot;existingbenefit&quot;, currentbenefitsfortheprogramsbenefittype)" folder="4" source-offset="4472">
+      <rule-xml>
+        <conclude-rel relationship-id="currentbenefitsfortheprogramsbenefittype" source="program" source-scope-id="program0" target-scope-id="existingbenefit0">
+          <condition>
+            <for scope-id="existingbenefitplan0">
+              <relationship relationship-id="existingbenefitsplan" target-entity-id="existingbenefitplan" />
+              <and>
+                <exists-in scope-ref="program0" scope-is-source="true" scope-entity-id="program">
+                  <relationship relationship-id="currentbenefitplansfortheprogramsbenefittype" target-entity-id="existingbenefitplan" />
+                </exists-in>
+                <scope-for scope-ref="program0" target-entity-id="program">
+                  <for scope-id="person0">
+                    <relationship relationship-id="programsperson" target-entity-id="person" />
+                    <exists-in scope-ref="existingbenefit0" scope-is-source="false" scope-entity-id="existingbenefit">
+                      <relationship relationship-id="personsexistingbenefits" target-entity-id="existingbenefit" />
+                    </exists-in>
+                  </for>
+                </scope-for>
+              </and>
+            </for>
+          </condition>
+        </conclude-rel>
+      </rule-xml>
+    </rule>
+    <rule id="15" name="the existing benefit plan is a member of the current benefit plans for the program's benefit type" ruleburst="true" concludes="IsMemberOf(&quot;existingbenefitplan&quot;, currentbenefitplansfortheprogramsbenefittype)" folder="4" source-offset="5783">
+      <rule-xml>
+        <conclude-rel relationship-id="currentbenefitplansfortheprogramsbenefittype" source="program" source-scope-id="program0" target-scope-id="existingbenefitplan0">
+          <condition>
+            <scope-for scope-ref="program0" target-entity-id="program">
+              <for scope-id="person0">
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <and>
+                  <exists-in scope-ref="existingbenefitplan0" scope-is-source="false" scope-entity-id="existingbenefitplan">
+                    <relationship relationship-id="personscurrentbenefitplans" target-entity-id="existingbenefitplan" />
+                  </exists-in>
+                  <equals>
+                    <scope-for scope-ref="existingbenefitplan0" target-entity-id="existingbenefitplan">
+                      <attribute attr-id="p22" />
+                    </scope-for>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p23" />
+                    </scope-for>
+                  </equals>
+                  <scope-for scope-ref="existingbenefitplan0" target-entity-id="existingbenefitplan">
+                    <exists scope-id="existingbenefit0">
+                      <relationship relationship-id="existingbenefitplansexistingbenefits" target-entity-id="existingbenefit" />
+                      <exists-in scope-ref="person0" scope-is-source="false" scope-entity-id="person">
+                        <relationship relationship-id="existingbenefitsrecipients" target-entity-id="person" />
+                      </exists-in>
+                    </exists>
+                  </scope-for>
+                </and>
+              </for>
+            </scope-for>
+          </condition>
+        </conclude-rel>
+      </rule-xml>
+    </rule>
+    <rule id="16" name="the existing benefit plan is a member of the person's current benefit plans" ruleburst="true" concludes="IsMemberOf(&quot;existingbenefitplan&quot;, personscurrentbenefitplans)" folder="4" source-offset="6570">
+      <rule-xml>
+        <conclude-rel relationship-id="personscurrentbenefitplans" source="person" source-scope-id="person0" target-scope-id="existingbenefitplan0">
+          <condition>
+            <and>
+              <exists-in scope-ref="person0" scope-is-source="true" scope-entity-id="person">
+                <relationship relationship-id="personsexistingbenefitplans" target-entity-id="existingbenefitplan" />
+              </exists-in>
+              <scope-for scope-ref="person0" target-entity-id="person">
+                <for-all scope-id="the other existing benefit plan">
+                  <relationship relationship-id="personsexistingbenefitplans" target-entity-id="existingbenefitplan" />
+                  <or>
+                    <instance-equals>
+                      <scope-ref id="the other existing benefit plan" />
+                      <scope-ref id="existingbenefitplan0" />
+                    </instance-equals>
+                    <not>
+                      <exists-in scope-ref="existingbenefitplan0" scope-is-source="true" scope-entity-id="existingbenefitplan">
+                        <relationship relationship-id="existingbenefitplanswiththesamebenefittypeastheexistingbenefitplan" target-entity-id="existingbenefitplan" />
+                      </exists-in>
+                    </not>
+                    <not>
+                      <exists-in scope-ref="existingbenefitplan0" scope-is-source="true" scope-entity-id="existingbenefitplan">
+                        <relationship relationship-id="existingbenefitplanscontemporarybenefitplans" target-entity-id="existingbenefitplan" />
+                      </exists-in>
+                    </not>
+                    <less-than-equals>
+                      <attribute attr-id="p5" />
+                      <scope-for scope-ref="existingbenefitplan0" target-entity-id="existingbenefitplan">
+                        <attribute attr-id="p5" />
+                      </scope-for>
+                    </less-than-equals>
+                  </or>
+                </for-all>
+              </scope-for>
+            </and>
+          </condition>
+        </conclude-rel>
+      </rule-xml>
+    </rule>
+    <rule id="17" name="the existing benefit plan (the other existing benefit plan) is a member of the existing benefit plan's contemporary benefit plans" ruleburst="true" concludes="IsMemberOf(&quot;existingbenefitplan&quot;, &quot;the other existing benefit plan&quot;, existingbenefitplanscontemporarybenefitplans)" folder="4" source-offset="7884">
+      <rule-xml>
+        <conclude-rel relationship-id="existingbenefitplanscontemporarybenefitplans" source="existingbenefitplan" source-scope-id="existingbenefitplan0" target-scope-id="the other existing benefit plan">
+          <condition>
+            <and>
+              <instance-not-equals>
+                <scope-ref id="the other existing benefit plan" />
+                <scope-ref id="existingbenefitplan0" />
+              </instance-not-equals>
+              <or>
+                <unknown>
+                  <attribute attr-id="p7" />
+                </unknown>
+                <uncertain>
+                  <attribute attr-id="p7" />
+                </uncertain>
+                <unknown>
+                  <scope-for scope-ref="existingbenefitplan0" target-entity-id="existingbenefitplan">
+                    <attribute attr-id="p9" />
+                  </scope-for>
+                </unknown>
+                <uncertain>
+                  <scope-for scope-ref="existingbenefitplan0" target-entity-id="existingbenefitplan">
+                    <attribute attr-id="p9" />
+                  </scope-for>
+                </uncertain>
+                <less-than-equals>
+                  <attribute attr-id="p7" />
+                  <scope-for scope-ref="existingbenefitplan0" target-entity-id="existingbenefitplan">
+                    <attribute attr-id="p9" />
+                  </scope-for>
+                </less-than-equals>
+              </or>
+              <or>
+                <unknown>
+                  <attribute attr-id="p9" />
+                </unknown>
+                <uncertain>
+                  <attribute attr-id="p9" />
+                </uncertain>
+                <unknown>
+                  <scope-for scope-ref="existingbenefitplan0" target-entity-id="existingbenefitplan">
+                    <attribute attr-id="p7" />
+                  </scope-for>
+                </unknown>
+                <uncertain>
+                  <scope-for scope-ref="existingbenefitplan0" target-entity-id="existingbenefitplan">
+                    <attribute attr-id="p7" />
+                  </scope-for>
+                </uncertain>
+                <greater-than-equals>
+                  <attribute attr-id="p9" />
+                  <scope-for scope-ref="existingbenefitplan0" target-entity-id="existingbenefitplan">
+                    <attribute attr-id="p7" />
+                  </scope-for>
+                </greater-than-equals>
+              </or>
+            </and>
+          </condition>
+        </conclude-rel>
+      </rule-xml>
+    </rule>
+    <rule id="18" name="the existing benefit plan (the other existing benefit plan) is a member of the existing benefit plans with the same benefit type as the existing benefit plan" ruleburst="true" concludes="IsMemberOf(&quot;existingbenefitplan&quot;, &quot;the other existing benefit plan&quot;, existingbenefitplanswiththesamebenefittypeastheexistingbenefitplan)" folder="4" source-offset="9373">
+      <rule-xml>
+        <conclude-rel relationship-id="existingbenefitplanswiththesamebenefittypeastheexistingbenefitplan" source="existingbenefitplan" source-scope-id="existingbenefitplan0" target-scope-id="the other existing benefit plan">
+          <condition>
+            <and>
+              <instance-not-equals>
+                <scope-ref id="the other existing benefit plan" />
+                <scope-ref id="existingbenefitplan0" />
+              </instance-not-equals>
+              <equals>
+                <attribute attr-id="p22" />
+                <scope-for scope-ref="existingbenefitplan0" target-entity-id="existingbenefitplan">
+                  <attribute attr-id="p22" />
+                </scope-for>
+              </equals>
+            </and>
+          </condition>
+        </conclude-rel>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="Beneficiaries &amp; Recipients" parent="0" id="1" />
+    <folder text="Dates" parent="0" id="2" />
+    <folder text="Authorized to Receive" parent="0" id="3" />
+    <folder text="Current Benefit" parent="0" id="4" />
+  </rule-folders>
+</root>

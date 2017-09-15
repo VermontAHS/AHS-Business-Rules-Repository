@@ -1,0 +1,587 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-script product-version="10.4.6.76" schema-version="4">
+  <test-case-set>
+    <test-case name="no spouse - only transfer group member" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <attr-inst name="i_g_application-date" text="the application date" type="date">
+            <val>
+              <date-val>2016-12-07</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+              <ent-inst-ref ref-id="person 2" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Don</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Don|Don" />
+              <ent-inst-ref ref-id="Don|George" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 2">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>George</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="related-party 1" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="George|George" />
+              <ent-inst-ref ref-id="George|Don" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Don|Don">
+          <attr-inst name="so_HBEE25.01GrpTransfer20150715_b" text="the group member is a member of the transfer group for the person under HBEE 25.01(b) (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Don|George">
+          <attr-inst name="so_HBEE25.01GrpTransfer20150715_b" text="the group member is a member of the transfer group for the person under HBEE 25.01(b) (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="George|Don">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="George|George">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="related-party" entity-text="the related party">
+        <ent-inst id="related-party 1">
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Don</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Biological Parent</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+      </ent-set>
+    </test-case>
+    <test-case name="spouse no LTC - member through initial month" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <attr-inst name="i_g_application-date" text="the application date" type="date">
+            <val>
+              <date-val>2016-12-07</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+              <ent-inst-ref ref-id="person 2" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Donna</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Donna|Eric" />
+              <ent-inst-ref ref-id="Donna|Donna" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 2">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Eric</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_recvLtcEver_b" text="the person has received Medicaid coverage of long-term care service and supports" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="related-party 1" />
+            </relationship-inst>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Eric|Eric" />
+              <ent-inst-ref ref-id="Eric|Donna" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Donna|Donna">
+          <attr-inst name="so_HBEE25.01GrpTransfer20150715_b" text="the group member is a member of the transfer group for the person under HBEE 25.01(b) (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Donna|Eric">
+          <attr-inst name="so_HBEE25.01GrpTransfer20150715_b" text="the group member is a member of the transfer group for the person under HBEE 25.01(b) (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+              <change-point date="2017-01-01">
+                <boolean-val>false</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Eric|Eric">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Eric|Donna">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="related-party" entity-text="the related party">
+        <ent-inst id="related-party 1">
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Donna</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Spouse</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+      </ent-set>
+    </test-case>
+    <test-case name="spouse has LTC - member through spouse's initial month" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <attr-inst name="i_g_application-date" text="the application date" type="date">
+            <val>
+              <date-val>2016-12-07</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+              <ent-inst-ref ref-id="person 2" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Donna</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_recvLtcEver_b" text="the person has received Medicaid coverage of long-term care service and supports" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Donna|Eric" />
+              <ent-inst-ref ref-id="Donna|Donna" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 2">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Eric</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_recvLtcEver_b" text="the person has received Medicaid coverage of long-term care service and supports" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+              <change-point date="2014-04-01">
+                <boolean-val>true</boolean-val>
+              </change-point>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_recvLtcInitial_b" text="it is the month of the person's initial eligibility for Medicaid coverage of long-term care service and supports" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+              <change-point date="2014-04-01">
+                <boolean-val>true</boolean-val>
+              </change-point>
+              <change-point date="2014-05-01">
+                <boolean-val>false</boolean-val>
+              </change-point>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="related-party 1" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Eric|Eric" />
+              <ent-inst-ref ref-id="Eric|Donna" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Donna|Donna">
+          <attr-inst name="so_HBEE25.01GrpTransfer20150715_b" text="the group member is a member of the transfer group for the person under HBEE 25.01(b) (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Donna|Eric">
+          <attr-inst name="so_HBEE25.01GrpTransfer20150715_b" text="the group member is a member of the transfer group for the person under HBEE 25.01(b) (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+              <change-point date="2014-05-01">
+                <boolean-val>false</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Eric|Eric">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Eric|Donna">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="related-party" entity-text="the related party">
+        <ent-inst id="related-party 1">
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Donna</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Spouse</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+      </ent-set>
+    </test-case>
+    <test-case name="penalty period" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <attr-inst name="i_g_application-date" text="the application date" type="date">
+            <val>
+              <date-val>2016-12-07</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Jerry</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE25.01LtcPenalty20150715_b" text="the person has a penalty period for Medicaid coverage of long-term care services and supports under HBEE 25.01(a) (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE25.04bLtcPenalty_b" text="the person has a penalty period for Medicaid coverage of long-term care services and supports under HBEE 25.04(b)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE25.05TrnPnltyHrdshp_b" text="the person is considered to have an undue hardship under HBEE 25.05" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Jerry|Jerry" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Jerry|Jerry">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2016" />
+        <ent-inst id="2013" />
+      </ent-set>
+    </test-case>
+    <test-case name="penalty period but hardship" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <attr-inst name="i_g_application-date" text="the application date" type="date">
+            <val>
+              <date-val>2016-12-07</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Jerry</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE25.01LtcPenalty20150715_b" text="the person has a penalty period for Medicaid coverage of long-term care services and supports under HBEE 25.01(a) (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE25.04bLtcPenalty_b" text="the person has a penalty period for Medicaid coverage of long-term care services and supports under HBEE 25.04(b)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE25.05TrnPnltyHrdshp_b" text="the person is considered to have an undue hardship under HBEE 25.05" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Jerry|Jerry" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Jerry|Jerry">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2016" />
+        <ent-inst id="2013" />
+      </ent-set>
+    </test-case>
+  </test-case-set>
+  <outcome-set>
+    <outcome name="so_HBEE25.01GrpTransfer20150715_b" display-name="so_HBEE25.01GrpTransfer20150715_b" text="the group member is a member of the transfer group for the person under HBEE 25.01(b) (eff. 07/15/2015)" type="boolean" entity-type="groupmember" entity-text="the group member">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+    <outcome name="so_HBEE25.01LtcPenalty20150715_b" display-name="so_HBEE25.01LtcPenalty20150715_b" text="the person has a penalty period for Medicaid coverage of long-term care services and supports under HBEE 25.01(a) (eff. 07/15/2015)" type="boolean" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+  </outcome-set>
+</test-script>

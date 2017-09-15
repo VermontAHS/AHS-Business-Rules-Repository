@@ -1,0 +1,2833 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity ref="global">
+      <attribute name="p78" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the SSI federal payment rate for a couple</base>
+        </text>
+      </attribute>
+      <attribute name="p79" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the SSI federal payment rate for one person</base>
+        </text>
+      </attribute>
+      <attribute name="p97" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the earned income disregard under HBEE 29.14(b)(7) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p103" type="number" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the remaining earned income disregard percentage under HBEE 29.14(b)(9) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p120" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the PIL for one person</base>
+        </text>
+      </attribute>
+      <attribute name="p121" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the SSI/AABD payment standard for two</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b34" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 29.14 applies to the program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14',singular),o('to the program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b42" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered to be an eligible child for the program under HBEE 29.02(c)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be an eligible child for the program under HBEE 29.02(c)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b55" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 29.14(d)(1) applies to the person for the program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14(d)(1)',singular),o('to the person for the program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b56" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is a long term care program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('a long term care program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b57" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered to be a child for the program under HBEE 29.02(a)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be a child for the program under HBEE 29.02(a)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b58" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program uses MABD-based Medicaid methodologies</base>
+          <parse>s(ver('10.4.6.76'),v(use,t(simple,present,normal)),sb('the program',singular),o('MABD-based Medicaid methodologies'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b61" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 29.14(e)(3)(iii) applies to the person for the program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14(e)(3)(iii)',singular),o('to the person for the program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b62" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has multiple eligible children for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('multiple eligible children for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b67" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the ineligible parent income too low error should be displayed for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(display+should,t(simple,modal,normal)),ob('the ineligible parent income too low error',singular),o('for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b68" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the ineligible parent income too high error should be displayed for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(display+should,t(simple,modal,normal)),ob('the ineligible parent income too high error',singular),o('for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b69" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the eligible parent income too low error should be displayed for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(display+should,t(simple,modal,normal)),ob('the eligible parent income too low error',singular),o('for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b70" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the eligible parent income too high error should be displayed for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(display+should,t(simple,modal,normal)),ob('the eligible parent income too high error',singular),o('for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b78" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has an eligible child for the program under HBEE 29.14(d)(2) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('an eligible child for the program under HBEE 29.14(d)(2) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b79" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 29.14(d)(2) applies to the person for the program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14(d)(2)',singular),o('to the person for the program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b80" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 29.14(e)(3)(i) applies to the person for the program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14(e)(3)(i)',singular),o('to the person for the program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p59" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p60" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(c)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p61" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the remaining unearned income for the person's financial responsibility group for the program after HBEE 29.14(b)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p62" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the total monthly countable gross unearned income for the person's financial group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p63" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p65" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the unearned income exclusion for the person's financial responsibility group for the program under HBEE 29.13(b)(4)</base>
+        </text>
+      </attribute>
+      <attribute name="p66" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the remainder of the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p67" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the remaining unearned income for the person's financial responsibility group for the program after HBEE 29.14(b)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p71" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(c)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p73" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(3) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p74" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(c)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p77" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the unearned income disregard for the person for the program under HBEE 29.14(c)(2)(i) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p81" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the remainder of the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(3) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p82" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the remaining unearned income for the person's financial responsibility group for the program after HBEE 29.14(b)(3) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p83" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(4) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p85" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the remainder of the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(4) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p86" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the monthly income disregard for the person's financial responsibility group for the program under HBEE 29.14(a) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p87" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p88" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p89" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(5) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p91" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the total monthly countable gross earned income for the person's financial group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p92" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the remaining earned income for the person's financial responsibility group for the program after HBEE 29.14(b)(5) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p93" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(6) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p95" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the remaining earned income for the person's financial responsibility group for the program after HBEE 29.14(b)(6) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p96" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(7) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p98" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the remaining earned income for the person's financial responsibility group for the program after HBEE 29.14(b)(7) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p99" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(8) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p101" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the remaining earned income for the person's financial responsibility group for the program after HBEE 29.14(b)(8) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p102" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(9) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p104" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the remaining earned income for the person's financial responsibility group for the program after HBEE 29.14(b)(9) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p105" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(10) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p107" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the remaining earned income for the person's financial responsibility group for the program after HBEE 29.14(b)(10) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p108" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the unearned income deduction for the person's financial responsibility group for the program under HBEE 29.15(b)</base>
+        </text>
+      </attribute>
+      <attribute name="p109" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the earned income deduction for the person's financial responsibility group for the program under HBEE 29.15(a)(3)</base>
+        </text>
+      </attribute>
+      <attribute name="p110" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the earned income deduction for the person's financial responsibility group for the program under HBEE 29.15(a)(2)</base>
+        </text>
+      </attribute>
+      <attribute name="p111" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the earned income deduction for the person's financial responsibility group for the program under HBEE 29.15(a)(1)</base>
+        </text>
+      </attribute>
+      <attribute name="p112" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the income disregard for the person's financial responsibility group for the program under HBEE 29.14(b) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p113" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the remaining unearned income for the person's financial responsibility group for the program after HBEE 29.14(b)(4) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p114" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(12) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p116" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the remaining income for the person's financial responsibility group for the program under HBEE 29.14(b)(11) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p117" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(d)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p123" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(d)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p126" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the deemed unearned income for the person's financial responsibility group for the program under HBEE 29.14(d)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p129" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's total monthly countable gross income for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p130" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's total monthly countable gross earned income for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p131" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's total monthly countable gross unearned income for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p136" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p137" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the deemed unearned income for the person's financial responsibility group for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p138" type="number" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the number of eligible children associated with the person's financial responsibility group for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p143" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the total monthly countable gross income for the ineligible parents in the person's financial group for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p145" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the total amount of ineligible parent income deemed to eligible children for the person for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p146" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the total unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(c)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p147" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the total amount of eligible parent income to deem for the person's financial responsibility group for the program under HBEE 29.14(d)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p148" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the total amount of eligible parent income deemed to eligible children for the person for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p150" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the total amount of eligible parent income allocated to eligible children for the person's financial responsibility group for the program under HBEE 29.14(d)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p152" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the total amount of ineligible parent earned income allocated the person's financial responsibility group for the program under HBEE 29.14(e)(3)(i) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p155" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(e)(3)(i) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b41" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is receiving public assistance</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('receiving public assistance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b43" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is a student</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('a student'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b49" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has a Plan to Achieve Self-Support (PASS)</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('a Plan to Achieve Self-Support (PASS)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b54" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is married</base>
+          <parse>s(ver('10.4.6.76'),v(marry,t(simple,present,normal)),ob('the person',singular))</parse>
+        </text>
+      </attribute>
+      <attribute name="b59" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered blind under HBEE 8.03(b)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('blind under HBEE 8.03(b)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b60" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered disabled under HBEE 8.03(c)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('disabled under HBEE 8.03(c)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b82" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is requesting a full medical determination</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('requesting a full medical determination'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p115" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the amount necessary for the person to carry out a Plan to Achieve Self-Support (PASS)</base>
+        </text>
+      </attribute>
+      <attribute name="p128" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's countable MABD income</base>
+        </text>
+      </attribute>
+      <attribute name="p140" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the amount of ineligible parent income to deem to the person</base>
+        </text>
+      </attribute>
+      <attribute name="p141" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the amount of eligible parent income to deem to the person</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the group member" id="groupmember" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+      <attribute name="b39" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's child</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b44" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's parent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b53" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 29.14(d)(1) applies to the group member for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14(d)(1)',singular),o('to the group member for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b74" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's sibling</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s sibling'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b81" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 29.14(e)(3)(i) applies to the group member for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14(e)(3)(i)',singular),o('to the group member for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the group member program" id="groupmemberprogram" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+      <attribute name="b36" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is in the person's financial group for the group member program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('in the person''s financial group for the group member program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is considered to be the person's ineligible child for the group member program under HBEE 29.02(d)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the group member',singular),o('to be the person''s ineligible child for the group member program under HBEE 29.02(d)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b38" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 29.14(c)(2)(i) applies to the group member for the person for the group member program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14(c)(2)(i)',singular),o('to the group member for the person for the group member program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b48" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 29.14(b)(12) applies to the group member for the person for the group member program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14(b)(12)',singular),o('to the group member for the person for the group member program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b63" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is considered to be the person's eligible child for the group member program under HBEE 29.02(c)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the group member',singular),o('to be the person''s eligible child for the group member program under HBEE 29.02(c)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b64" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 29.14(e)(3)(iii) applies to the group member for the person for the group member program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14(e)(3)(iii)',singular),o('to the group member for the person for the group member program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b65" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is an eligible child associated with the person's financial responsibility group for the group member program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('an eligible child associated with the person''s financial responsibility group for the group member program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b66" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is considered to be the person's ineligible parent for the group member program under HBEE 29.02(e)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the group member',singular),o('to be the person''s ineligible parent for the group member program under HBEE 29.02(e)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b71" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 29.14(c)(2)(ii) applies to the group member for the person for the group member program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14(c)(2)(ii)',singular),o('to the group member for the person for the group member program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b72" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 29.14(c)(2)(iii) applies to the group member for the person for the group member program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14(c)(2)(iii)',singular),o('to the group member for the person for the group member program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b77" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 29.14(d)(2) applies to the group member for the person for the group member program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14(d)(2)',singular),o('to the group member for the person for the group member program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p69" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's unearned income disregard for the group member for the group member program under HBEE 29.14(c)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p72" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's unearned income disregard for the group member for the group member program under HBEE 29.14(c)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p75" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's earned income disregard for the group member for the group member program under HBEE 29.14(c)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p132" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income disregard for the group member for the group member program under HBEE 29.14(b)(12) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p133" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's unearned income disregard for the group member for the group member program under HBEE 29.14(d)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p134" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's earned income disregard for the group member for the group member program under HBEE 29.14(d)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p135" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's deemed unearned income for the group member for the group member program under HBEE 29.14(d)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p139" type="number" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member's count value as an eligible child associated with the person's financial responsibility group for the group member program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p142" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member's total monthly countable gross ineligible parent income for the the person's financial group for the group member program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p144" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member's amount of deemed ineligible parent income for the person for the group member program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p149" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member's amount of deemed eligible parent income for the person for the group member program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p151" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member's eligible parent income allocated to eligible children for the person for the group member program under HBEE 29.14(d)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p153" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the group member's ineligible parent earned income allocated to the person for the group member program under HBEE 29.14(e)(3)(i) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p156" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's earned income disregard for the group member for the group member program under HBEE 29.14(e)(3)(i) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship type="ManyToMany" relationship-id="groupmemberscontainingpersonsprogramforthegroupmemberprogram" reverse-relationship-id="personscontainedgroupmemberprogramsfortheprogram" text="the group member's containing person's program for the group member program" reverse-text="the person's contained group member programs for the program" source="groupmemberprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="groupmembersrepresentativepersonforthegroupmemberprogram" reverse-relationship-id="personsrepresentativegroupmemberprograms" text="the group member's representative person for the group member program" reverse-text="the person's representative group member programs" source="groupmemberprogram" target="person" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="groupmemberscontainingpersonforthegroupmemberprogram" reverse-relationship-id="personscontainedgroupmemberprograms" text="the group member's containing person for the group member program" reverse-text="the person's contained group member programs" source="groupmemberprogram" target="person" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="groupmembersprogramforthegroupmemberprogram" reverse-relationship-id="personsrepresentativegroupmemberprogramsfortheprogram" text="the group member's program for the group member program" reverse-text="the person's representative group member programs for the program" source="groupmemberprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="groupmembersrepresentativeperson" reverse-relationship-id="personsrepresentationsasagroupmember" text="the group member's representative person" reverse-text="the person's representations as a group member" source="groupmember" target="person" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" text="the group member's group member programs" reverse-text="the group member program's group member" source="groupmember" target="groupmemberprogram" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" text="the person's group members" reverse-text="the group member's containing person" source="person" target="groupmember" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="HBEE 29.14 applies to the program (eff. 08/01/2016)" ruleburst="true" concludes="b34" folder="1" source-offset="87">
+      <rule-xml>
+        <conclude attr-id="b34" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b58" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the monthly income disregard for the person's financial responsibility group for the program under HBEE 29.14(a) (eff. 08/01/2016)" ruleburst="true" concludes="p86" folder="2" source-offset="263">
+      <rule-xml>
+        <table-conclude attr-id="p86" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <attribute attr-id="p112" />
+            </value>
+            <condition>
+              <attribute attr-id="b34" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="the income disregard for the person's financial responsibility group for the program under HBEE 29.14(b) (eff. 08/01/2016) " ruleburst="true" concludes="p112 = p87 + p88 + p114" folder="3" source-offset="797">
+      <rule-xml>
+        <conclude attr-id="p112" entity-id="program" scope-id="program0">
+          <value>
+            <plus>
+              <attribute attr-id="p87" />
+              <attribute attr-id="p88" />
+              <attribute attr-id="p114" />
+            </plus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b) (eff. 08/01/2016) " ruleburst="true" concludes="p87 = p59 + p63 + p73 + p83" folder="3" source-offset="1345">
+      <rule-xml>
+        <conclude attr-id="p87" entity-id="program" scope-id="program0">
+          <value>
+            <plus>
+              <attribute attr-id="p59" />
+              <attribute attr-id="p63" />
+              <attribute attr-id="p73" />
+              <attribute attr-id="p83" />
+            </plus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b) (eff. 08/01/2016) " ruleburst="true" concludes="p88 = p89 + p93 + p96 + p99 + p102 + p105" folder="3" source-offset="2056">
+      <rule-xml>
+        <conclude attr-id="p88" entity-id="program" scope-id="program0">
+          <value>
+            <plus>
+              <attribute attr-id="p89" />
+              <attribute attr-id="p93" />
+              <attribute attr-id="p96" />
+              <attribute attr-id="p99" />
+              <attribute attr-id="p102" />
+              <attribute attr-id="p105" />
+            </plus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(1) (eff. 08/01/2016) " ruleburst="true" concludes="p59 = p60 + p117 - p126 - p152" folder="4" source-offset="3060">
+      <rule-xml>
+        <conclude attr-id="p59" entity-id="program" scope-id="program0">
+          <value>
+            <minus>
+              <plus>
+                <attribute attr-id="p60" />
+                <attribute attr-id="p117" />
+              </plus>
+              <attribute attr-id="p126" />
+              <attribute attr-id="p152" />
+            </minus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="the remaining unearned income for the person's financial responsibility group for the program after HBEE 29.14(b)(1) (eff. 08/01/2016) " ruleburst="true" concludes="p61 = p62 - p59" folder="4" source-offset="3866">
+      <rule-xml>
+        <conclude attr-id="p61" entity-id="program" scope-id="program0">
+          <value>
+            <minus>
+              <attribute attr-id="p62" />
+              <attribute attr-id="p59" />
+            </minus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="7" name="the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(2) (eff. 08/01/2016) " ruleburst="true" concludes="p63 = Minimum(p61,p65)" folder="5" source-offset="4276">
+      <rule-xml>
+        <conclude attr-id="p63" entity-id="program" scope-id="program0">
+          <value>
+            <minimum>
+              <attribute attr-id="p61" />
+              <attribute attr-id="p65" />
+            </minimum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="8" name="the remainder of the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(2) (eff. 08/01/2016)" ruleburst="true" concludes="p66" folder="5" source-offset="4705">
+      <rule-xml>
+        <table-conclude attr-id="p66" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <minus>
+                <attribute attr-id="p65" />
+                <attribute attr-id="p61" />
+              </minus>
+            </value>
+            <condition>
+              <greater-than>
+                <attribute attr-id="p65" />
+                <attribute attr-id="p61" />
+              </greater-than>
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="9" name="the remaining unearned income for the person's financial responsibility group for the program after HBEE 29.14(b)(2) (eff. 08/01/2016) " ruleburst="true" concludes="p67 = p61 - p63" folder="5" source-offset="5417">
+      <rule-xml>
+        <conclude attr-id="p67" entity-id="program" scope-id="program0">
+          <value>
+            <minus>
+              <attribute attr-id="p61" />
+              <attribute attr-id="p63" />
+            </minus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="10" name="the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(3) (eff. 08/01/2016) " ruleburst="true" concludes="p73 = Minimum(p67,p71)" folder="6" source-offset="5861">
+      <rule-xml>
+        <conclude attr-id="p73" entity-id="program" scope-id="program0">
+          <value>
+            <minimum>
+              <attribute attr-id="p67" />
+              <attribute attr-id="p71" />
+            </minimum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="11" name="the remainder of the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(3) (eff. 08/01/2016)" ruleburst="true" concludes="p81" folder="6" source-offset="6307">
+      <rule-xml>
+        <table-conclude attr-id="p81" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <minus>
+                <attribute attr-id="p71" />
+                <attribute attr-id="p67" />
+              </minus>
+            </value>
+            <condition>
+              <greater-than>
+                <attribute attr-id="p71" />
+                <attribute attr-id="p67" />
+              </greater-than>
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="12" name="the remaining unearned income for the person's financial responsibility group for the program after HBEE 29.14(b)(3) (eff. 08/01/2016) " ruleburst="true" concludes="p82 = p67 - p73" folder="6" source-offset="7055">
+      <rule-xml>
+        <conclude attr-id="p82" entity-id="program" scope-id="program0">
+          <value>
+            <minus>
+              <attribute attr-id="p67" />
+              <attribute attr-id="p73" />
+            </minus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="13" name="the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(4) (eff. 08/01/2016) " ruleburst="true" concludes="p83 = Minimum(p82,p108)" folder="7" source-offset="7499">
+      <rule-xml>
+        <conclude attr-id="p83" entity-id="program" scope-id="program0">
+          <value>
+            <minimum>
+              <attribute attr-id="p82" />
+              <attribute attr-id="p108" />
+            </minimum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="14" name="the remainder of the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(4) (eff. 08/01/2016)" ruleburst="true" concludes="p85" folder="7" source-offset="7925">
+      <rule-xml>
+        <table-conclude attr-id="p85" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <minus>
+                <attribute attr-id="p108" />
+                <attribute attr-id="p82" />
+              </minus>
+            </value>
+            <condition>
+              <greater-than>
+                <attribute attr-id="p108" />
+                <attribute attr-id="p82" />
+              </greater-than>
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="15" name="the remaining unearned income for the person's financial responsibility group for the program after HBEE 29.14(b)(4) (eff. 08/01/2016) " ruleburst="true" concludes="p113 = p82 - p83" folder="7" source-offset="8633">
+      <rule-xml>
+        <conclude attr-id="p113" entity-id="program" scope-id="program0">
+          <value>
+            <minus>
+              <attribute attr-id="p82" />
+              <attribute attr-id="p83" />
+            </minus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="16" name="the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(5) (eff. 08/01/2016) " ruleburst="true" concludes="p89 = p74 + p123 + p155 + p111" folder="8" source-offset="9078">
+      <rule-xml>
+        <conclude attr-id="p89" entity-id="program" scope-id="program0">
+          <value>
+            <plus>
+              <attribute attr-id="p74" />
+              <attribute attr-id="p123" />
+              <attribute attr-id="p155" />
+              <attribute attr-id="p111" />
+            </plus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="17" name="the remaining earned income for the person's financial responsibility group for the program after HBEE 29.14(b)(5) (eff. 08/01/2016) " ruleburst="true" concludes="p92 = p91 - p89" folder="8" source-offset="9771">
+      <rule-xml>
+        <conclude attr-id="p92" entity-id="program" scope-id="program0">
+          <value>
+            <minus>
+              <attribute attr-id="p91" />
+              <attribute attr-id="p89" />
+            </minus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="18" name="the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(6) (eff. 08/01/2016) " ruleburst="true" concludes="p93 = Minimum(p66 + p81 + p85,p92)" folder="9" source-offset="10174">
+      <rule-xml>
+        <conclude attr-id="p93" entity-id="program" scope-id="program0">
+          <value>
+            <minimum>
+              <plus>
+                <attribute attr-id="p66" />
+                <attribute attr-id="p81" />
+                <attribute attr-id="p85" />
+              </plus>
+              <attribute attr-id="p92" />
+            </minimum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="19" name="the remaining earned income for the person's financial responsibility group for the program after HBEE 29.14(b)(6) (eff. 08/01/2016) " ruleburst="true" concludes="p95 = p92 - p93" folder="9" source-offset="10954">
+      <rule-xml>
+        <conclude attr-id="p95" entity-id="program" scope-id="program0">
+          <value>
+            <minus>
+              <attribute attr-id="p92" />
+              <attribute attr-id="p93" />
+            </minus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="20" name="the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(7) (eff. 08/01/2016) " ruleburst="true" concludes="p96 = Minimum(p97,p95)" folder="10" source-offset="11392">
+      <rule-xml>
+        <conclude attr-id="p96" entity-id="program" scope-id="program0">
+          <value>
+            <minimum>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p97" />
+              </scope-for>
+              <attribute attr-id="p95" />
+            </minimum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="21" name="the earned income disregard under HBEE 29.14(b)(7) (eff. 08/01/2016) " ruleburst="true" concludes="p97 = 65" folder="10" source-offset="11768">
+      <rule-xml>
+        <conclude attr-id="p97" entity-id="global" scope-id="global0">
+          <value>
+            <number-value>65</number-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="22" name="the remaining earned income for the person's financial responsibility group for the program after HBEE 29.14(b)(7) (eff. 08/01/2016) " ruleburst="true" concludes="p98 = p95 - p96" folder="10" source-offset="11855">
+      <rule-xml>
+        <conclude attr-id="p98" entity-id="program" scope-id="program0">
+          <value>
+            <minus>
+              <attribute attr-id="p95" />
+              <attribute attr-id="p96" />
+            </minus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="23" name="the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(8) (eff. 08/01/2016) " ruleburst="true" concludes="p99 = Minimum(p109,p98)" folder="11" source-offset="12293">
+      <rule-xml>
+        <conclude attr-id="p99" entity-id="program" scope-id="program0">
+          <value>
+            <minimum>
+              <attribute attr-id="p109" />
+              <attribute attr-id="p98" />
+            </minimum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="24" name="the remaining earned income for the person's financial responsibility group for the program after HBEE 29.14(b)(8) (eff. 08/01/2016) " ruleburst="true" concludes="p101 = p98 - p99" folder="11" source-offset="12717">
+      <rule-xml>
+        <conclude attr-id="p101" entity-id="program" scope-id="program0">
+          <value>
+            <minus>
+              <attribute attr-id="p98" />
+              <attribute attr-id="p99" />
+            </minus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="25" name="the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(9) (eff. 08/01/2016) " ruleburst="true" concludes="p102 = p101 * p103 / 100" folder="12" source-offset="13156">
+      <rule-xml>
+        <conclude attr-id="p102" entity-id="program" scope-id="program0">
+          <value>
+            <divide>
+              <multiply>
+                <attribute attr-id="p101" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p103" />
+                </scope-for>
+              </multiply>
+              <number-value>100</number-value>
+            </divide>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="26" name="the remaining earned income disregard percentage under HBEE 29.14(b)(9) (eff. 08/01/2016) " ruleburst="true" concludes="p103 = 50" folder="12" source-offset="13552">
+      <rule-xml>
+        <conclude attr-id="p103" entity-id="global" scope-id="global0">
+          <value>
+            <number-value>50</number-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="27" name="the remaining earned income for the person's financial responsibility group for the program after HBEE 29.14(b)(9) (eff. 08/01/2016) " ruleburst="true" concludes="p104 = p101 - p102" folder="12" source-offset="13661">
+      <rule-xml>
+        <conclude attr-id="p104" entity-id="program" scope-id="program0">
+          <value>
+            <minus>
+              <attribute attr-id="p101" />
+              <attribute attr-id="p102" />
+            </minus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="28" name="the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(10) (eff. 08/01/2016) " ruleburst="true" concludes="p105 = Minimum(p110,p104)" folder="13" source-offset="14103">
+      <rule-xml>
+        <conclude attr-id="p105" entity-id="program" scope-id="program0">
+          <value>
+            <minimum>
+              <attribute attr-id="p110" />
+              <attribute attr-id="p104" />
+            </minimum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="29" name="the remaining earned income for the person's financial responsibility group for the program after HBEE 29.14(b)(10) (eff. 08/01/2016) " ruleburst="true" concludes="p107 = p104 - p105" folder="13" source-offset="14530">
+      <rule-xml>
+        <conclude attr-id="p107" entity-id="program" scope-id="program0">
+          <value>
+            <minus>
+              <attribute attr-id="p104" />
+              <attribute attr-id="p105" />
+            </minus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="30" name="the remaining income for the person's financial responsibility group for the program under HBEE 29.14(b)(11) (eff. 08/01/2016) " ruleburst="true" concludes="p116 = p113 + p107" folder="14" source-offset="14974">
+      <rule-xml>
+        <conclude attr-id="p116" entity-id="program" scope-id="program0">
+          <value>
+            <plus>
+              <attribute attr-id="p113" />
+              <attribute attr-id="p107" />
+            </plus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="31" name="the income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(12) (eff. 08/01/2016) " ruleburst="true" concludes="p114 = Minimum(InstanceSum(personscontainedgroupmemberprogramsfortheprogram,p132),p116)" folder="15" source-offset="15414">
+      <rule-xml>
+        <conclude attr-id="p114" entity-id="program" scope-id="program0">
+          <value>
+            <minimum>
+              <instance-sum>
+                <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+                <attribute attr-id="p132" />
+              </instance-sum>
+              <attribute attr-id="p116" />
+            </minimum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="32" name="the person's income disregard for the group member for the group member program under HBEE 29.14(b)(12) (eff. 08/01/2016)" ruleburst="true" concludes="p132" folder="15" source-offset="15973">
+      <rule-xml>
+        <table-conclude attr-id="p132" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <row>
+            <value>
+              <instance-value-if>
+                <relationship relationship-id="groupmembersrepresentativepersonforthegroupmemberprogram" target-entity-id="person" />
+                <attribute attr-id="p115" />
+                <true-value />
+              </instance-value-if>
+            </value>
+            <condition>
+              <attribute attr-id="b48" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="33" name="HBEE 29.14(b)(12) applies to the group member for the person for the group member program (eff. 08/01/2016)" ruleburst="true" concludes="b48" folder="15" source-offset="16507">
+      <rule-xml>
+        <conclude attr-id="b48" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b36" />
+              <for scope-id="the member">
+                <relationship relationship-id="groupmembersrepresentativepersonforthegroupmemberprogram" target-entity-id="person" />
+                <and>
+                  <or>
+                    <attribute attr-id="b59" />
+                    <attribute attr-id="b60" />
+                  </or>
+                  <attribute attr-id="b49" />
+                </and>
+              </for>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="34" name="the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(c)(1) (eff. 08/01/2016) " ruleburst="true" concludes="p60 = InstanceSum(personscontainedgroupmemberprogramsfortheprogram,p69)" folder="17" source-offset="17347">
+      <rule-xml>
+        <conclude attr-id="p60" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum>
+              <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+              <attribute attr-id="p69" />
+            </instance-sum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="35" name="the person's unearned income disregard for the group member for the group member program under HBEE 29.14(c)(1) (eff. 08/01/2016)" ruleburst="true" concludes="p69" folder="17" source-offset="17768">
+      <rule-xml>
+        <table-conclude attr-id="p69" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <row>
+            <value>
+              <number-value>0</number-value>
+            </value>
+            <condition>
+              <not>
+                <attribute attr-id="b36" />
+              </not>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <instance-value-if>
+                <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                <attribute attr-id="p131" />
+                <true-value />
+              </instance-value-if>
+            </value>
+            <condition>
+              <attribute attr-id="b37" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="36" name="the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(c)(1) (eff. 08/01/2016) " ruleburst="true" concludes="p74 = InstanceSum(personscontainedgroupmemberprogramsfortheprogram,p75)" folder="17" source-offset="18426">
+      <rule-xml>
+        <conclude attr-id="p74" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum>
+              <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+              <attribute attr-id="p75" />
+            </instance-sum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="37" name="the person's earned income disregard for the group member for the group member program under HBEE 29.14(c)(1) (eff. 08/01/2016)" ruleburst="true" concludes="p75" folder="17" source-offset="18843">
+      <rule-xml>
+        <table-conclude attr-id="p75" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <row>
+            <value>
+              <number-value>0</number-value>
+            </value>
+            <condition>
+              <not>
+                <attribute attr-id="b36" />
+              </not>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <instance-value-if>
+                <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                <attribute attr-id="p130" />
+                <true-value />
+              </instance-value-if>
+            </value>
+            <condition>
+              <attribute attr-id="b37" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="38" name="the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(c)(2) (eff. 08/01/2016)" ruleburst="true" concludes="p71" folder="18" source-offset="19563">
+      <rule-xml>
+        <table-conclude attr-id="p71" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <attribute attr-id="p136" />
+            </value>
+            <condition>
+              <attribute attr-id="b61" />
+            </condition>
+          </row>
+          <otherwise>
+            <plus>
+              <attribute attr-id="p146" />
+              <attribute attr-id="p150" />
+            </plus>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="39" name="the total unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(c)(2) (eff. 08/01/2016) " ruleburst="true" concludes="p146 = InstanceSum(personscontainedgroupmemberprogramsfortheprogram,p72)" folder="18" source-offset="20375">
+      <rule-xml>
+        <conclude attr-id="p146" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum>
+              <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+              <attribute attr-id="p72" />
+            </instance-sum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="40" name="the person's unearned income disregard for the group member for the group member program under HBEE 29.14(c)(2) (eff. 08/01/2016)" ruleburst="true" concludes="p72" folder="18" source-offset="20803">
+      <rule-xml>
+        <table-conclude attr-id="p72" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <row>
+            <value>
+              <number-value>0</number-value>
+            </value>
+            <condition>
+              <not>
+                <attribute attr-id="b36" />
+              </not>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <instance-value-if>
+                <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                <attribute attr-id="p77" />
+                <true-value />
+              </instance-value-if>
+            </value>
+            <condition>
+              <attribute attr-id="b38" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p79" />
+              </scope-for>
+            </value>
+            <condition>
+              <attribute attr-id="b71" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <divide>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p78" />
+                </scope-for>
+                <number-value>2</number-value>
+              </divide>
+            </value>
+            <condition>
+              <attribute attr-id="b72" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="41" name="HBEE 29.14(c)(2)(i) applies to the group member for the person for the group member program (eff. 08/01/2016)" ruleburst="true" concludes="b38" folder="18" source-offset="21780">
+      <rule-xml>
+        <conclude attr-id="b38" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <for>
+                <relationship relationship-id="groupmemberprogramsgroupmember" target-entity-id="groupmember" />
+                <attribute attr-id="b39" />
+              </for>
+              <for scope-id="program0">
+                <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                <for scope-id="the child">
+                  <relationship relationship-id="programsperson" target-entity-id="person" />
+                  <and>
+                    <not>
+                      <attribute attr-id="b82" />
+                    </not>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="b57" />
+                    </scope-for>
+                    <not>
+                      <attribute attr-id="b41" />
+                    </not>
+                  </and>
+                </for>
+              </for>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="42" name="the unearned income disregard for the person for the program under HBEE 29.14(c)(2)(i) (eff. 08/01/2016)" ruleburst="true" concludes="p77" folder="18" source-offset="22430">
+      <rule-xml>
+        <table-conclude attr-id="p77" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <maximum>
+                <minus>
+                  <scope-for scope-ref="global0" target-entity-id="global">
+                    <attribute attr-id="p78" />
+                  </scope-for>
+                  <scope-for scope-ref="global0" target-entity-id="global">
+                    <attribute attr-id="p79" />
+                  </scope-for>
+                  <attribute attr-id="p129" />
+                </minus>
+                <number-value>0</number-value>
+              </maximum>
+            </value>
+            <condition>
+              <and>
+                <not>
+                  <attribute attr-id="b42" />
+                </not>
+                <or>
+                  <attribute attr-id="b42" />
+                  <and>
+                    <greater-than>
+                      <attribute attr-id="p129" />
+                      <number-value>0</number-value>
+                    </greater-than>
+                    <or>
+                      <not>
+                        <for>
+                          <relationship relationship-id="programsperson" target-entity-id="person" />
+                          <attribute attr-id="b43" />
+                        </for>
+                      </not>
+                      <less-than-equals>
+                        <attribute attr-id="p130" />
+                        <number-value>0</number-value>
+                      </less-than-equals>
+                    </or>
+                  </and>
+                </or>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <minus>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p78" />
+              </scope-for>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p79" />
+              </scope-for>
+            </minus>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="43" name="HBEE 29.14(c)(2)(ii) applies to the group member for the person for the group member program (eff. 08/01/2016)" ruleburst="true" concludes="b71" folder="18" source-offset="23284">
+      <rule-xml>
+        <conclude attr-id="b71" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <for>
+                <relationship relationship-id="groupmemberprogramsgroupmember" target-entity-id="groupmember" />
+                <for>
+                  <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+                  <for-all scope-id="the other group member">
+                    <relationship relationship-id="personsgroupmembers" target-entity-id="groupmember" />
+                    <or>
+                      <not>
+                        <attribute attr-id="b44" />
+                      </not>
+                      <and>
+                        <attribute attr-id="b44" />
+                        <for scope-id="the parent">
+                          <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                          <not>
+                            <attribute attr-id="b82" />
+                          </not>
+                        </for>
+                      </and>
+                    </or>
+                  </for-all>
+                </for>
+              </for>
+              <for>
+                <relationship relationship-id="groupmemberprogramsgroupmember" target-entity-id="groupmember" />
+                <attribute attr-id="b44" />
+              </for>
+              <for>
+                <relationship relationship-id="groupmemberprogramsgroupmember" target-entity-id="groupmember" />
+                <for>
+                  <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+                  <for-all scope-id="the other group member program">
+                    <relationship relationship-id="personscontainedgroupmemberprograms" target-entity-id="groupmemberprogram" />
+                    <or>
+                      <instance-equals>
+                        <scope-ref id="the other group member program" />
+                        <scope-ref id="groupmemberprogram0" />
+                      </instance-equals>
+                      <and>
+                        <instance-not-equals>
+                          <scope-ref id="the other group member program" />
+                          <scope-ref id="groupmemberprogram0" />
+                        </instance-not-equals>
+                        <not>
+                          <attribute attr-id="b36" />
+                        </not>
+                      </and>
+                      <and>
+                        <instance-not-equals>
+                          <scope-ref id="the other group member program" />
+                          <scope-ref id="groupmemberprogram0" />
+                        </instance-not-equals>
+                        <attribute attr-id="b36" />
+                        <for scope-id="the other group member">
+                          <relationship relationship-id="groupmemberprogramsgroupmember" target-entity-id="groupmember" />
+                          <not>
+                            <attribute attr-id="b44" />
+                          </not>
+                        </for>
+                      </and>
+                    </or>
+                  </for-all>
+                </for>
+              </for>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="44" name="HBEE 29.14(c)(2)(iii) applies to the group member for the person for the group member program (eff. 08/01/2016)" ruleburst="true" concludes="b72" folder="18" source-offset="25217">
+      <rule-xml>
+        <conclude attr-id="b72" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <for>
+                <relationship relationship-id="groupmemberprogramsgroupmember" target-entity-id="groupmember" />
+                <for>
+                  <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+                  <for-all scope-id="the other group member">
+                    <relationship relationship-id="personsgroupmembers" target-entity-id="groupmember" />
+                    <or>
+                      <not>
+                        <attribute attr-id="b44" />
+                      </not>
+                      <and>
+                        <attribute attr-id="b44" />
+                        <for scope-id="the parent">
+                          <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                          <not>
+                            <attribute attr-id="b82" />
+                          </not>
+                        </for>
+                      </and>
+                    </or>
+                  </for-all>
+                </for>
+              </for>
+              <for>
+                <relationship relationship-id="groupmemberprogramsgroupmember" target-entity-id="groupmember" />
+                <attribute attr-id="b44" />
+              </for>
+              <for>
+                <relationship relationship-id="groupmemberprogramsgroupmember" target-entity-id="groupmember" />
+                <for>
+                  <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+                  <exists scope-id="the other group member program">
+                    <relationship relationship-id="personscontainedgroupmemberprograms" target-entity-id="groupmemberprogram" />
+                    <and>
+                      <instance-not-equals>
+                        <scope-ref id="the other group member program" />
+                        <scope-ref id="groupmemberprogram0" />
+                      </instance-not-equals>
+                      <or>
+                        <instance-equals>
+                          <scope-ref id="the other group member program" />
+                          <scope-ref id="groupmemberprogram0" />
+                        </instance-equals>
+                        <and>
+                          <attribute attr-id="b36" />
+                          <or>
+                            <not>
+                              <attribute attr-id="b36" />
+                            </not>
+                            <for scope-id="the other group member">
+                              <relationship relationship-id="groupmemberprogramsgroupmember" target-entity-id="groupmember" />
+                              <attribute attr-id="b44" />
+                            </for>
+                          </or>
+                        </and>
+                      </or>
+                    </and>
+                  </exists>
+                </for>
+              </for>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="45" name="HBEE 29.14(d)(1) applies to the person for the program (eff. 08/01/2016)" ruleburst="true" concludes="b55" folder="20" source-offset="27149">
+      <rule-xml>
+        <conclude attr-id="b55" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b34" />
+              <not>
+                <attribute attr-id="b56" />
+              </not>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="46" name="HBEE 29.14(d)(1) applies to the group member for the person (eff. 08/01/2016)" ruleburst="true" concludes="b53" folder="20" source-offset="27349">
+      <rule-xml>
+        <conclude attr-id="b53" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b44" />
+              <for scope-id="the parent">
+                <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                <attribute attr-id="b82" />
+              </for>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="47" name="the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(d)(1) (eff. 08/01/2016) " ruleburst="true" concludes="p117 = InstanceSum(personscontainedgroupmemberprogramsfortheprogram,p133)" folder="20" source-offset="27743">
+      <rule-xml>
+        <conclude attr-id="p117" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum>
+              <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+              <attribute attr-id="p133" />
+            </instance-sum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="48" name="the person's unearned income disregard for the group member for the group member program under HBEE 29.14(d)(1) (eff. 08/01/2016)" ruleburst="true" concludes="p133" folder="20" source-offset="28165">
+      <rule-xml>
+        <table-conclude attr-id="p133" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <row>
+            <value>
+              <number-value>0</number-value>
+            </value>
+            <condition>
+              <not>
+                <attribute attr-id="b36" />
+              </not>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <instance-value-if>
+                <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                <attribute attr-id="p131" />
+                <true-value />
+              </instance-value-if>
+            </value>
+            <condition>
+              <for>
+                <relationship relationship-id="groupmemberprogramsgroupmember" target-entity-id="groupmember" />
+                <attribute attr-id="b53" />
+              </for>
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="49" name="the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(d)(1) (eff. 08/01/2016) " ruleburst="true" concludes="p123 = InstanceSum(personscontainedgroupmemberprogramsfortheprogram,p134)" folder="20" source-offset="29063">
+      <rule-xml>
+        <conclude attr-id="p123" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum>
+              <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+              <attribute attr-id="p134" />
+            </instance-sum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="50" name="the person's earned income disregard for the group member for the group member program under HBEE 29.14(d)(1) (eff. 08/01/2016)" ruleburst="true" concludes="p134" folder="20" source-offset="29481">
+      <rule-xml>
+        <table-conclude attr-id="p134" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <row>
+            <value>
+              <number-value>0</number-value>
+            </value>
+            <condition>
+              <not>
+                <attribute attr-id="b36" />
+              </not>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <instance-value-if>
+                <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                <attribute attr-id="p130" />
+                <true-value />
+              </instance-value-if>
+            </value>
+            <condition>
+              <for>
+                <relationship relationship-id="groupmemberprogramsgroupmember" target-entity-id="groupmember" />
+                <attribute attr-id="b53" />
+              </for>
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="51" name="the deemed unearned income for the person's financial responsibility group for the program under HBEE 29.14(d)(1) (eff. 08/01/2016)" ruleburst="true" concludes="p126" folder="20" source-offset="30385">
+      <rule-xml>
+        <table-conclude attr-id="p126" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <attribute attr-id="p137" />
+            </value>
+            <condition>
+              <attribute attr-id="b61" />
+            </condition>
+          </row>
+          <otherwise>
+            <attribute attr-id="p147" />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="52" name="the total amount of eligible parent income to deem for the person's financial responsibility group for the program under HBEE 29.14(d)(1) (eff. 08/01/2016) " ruleburst="true" concludes="p147 = InstanceSum(personscontainedgroupmemberprogramsfortheprogram,p135)" folder="20" source-offset="30929">
+      <rule-xml>
+        <conclude attr-id="p147" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum>
+              <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+              <attribute attr-id="p135" />
+            </instance-sum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="53" name="the person's deemed unearned income for the group member for the group member program under HBEE 29.14(d)(1) (eff. 08/01/2016)" ruleburst="true" concludes="p135" folder="20" source-offset="31368">
+      <rule-xml>
+        <table-conclude attr-id="p135" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <row>
+            <value>
+              <number-value>0</number-value>
+            </value>
+            <condition>
+              <not>
+                <attribute attr-id="b36" />
+              </not>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>0</number-value>
+            </value>
+            <condition>
+              <not>
+                <for>
+                  <relationship relationship-id="groupmemberprogramsgroupmember" target-entity-id="groupmember" />
+                  <attribute attr-id="b53" />
+                </for>
+              </not>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <maximum>
+                <minus>
+                  <for>
+                    <relationship relationship-id="groupmemberprogramsgroupmember" target-entity-id="groupmember" />
+                    <instance-value-if>
+                      <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                      <attribute attr-id="p128" />
+                      <true-value />
+                    </instance-value-if>
+                  </for>
+                  <scope-for scope-ref="global0" target-entity-id="global">
+                    <attribute attr-id="p120" />
+                  </scope-for>
+                </minus>
+                <number-value>0</number-value>
+              </maximum>
+            </value>
+            <condition>
+              <for>
+                <relationship relationship-id="groupmemberprogramsgroupmember" target-entity-id="groupmember" />
+                <for scope-id="the parent">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <not>
+                    <attribute attr-id="b54" />
+                  </not>
+                </for>
+              </for>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <maximum>
+                <minus>
+                  <for>
+                    <relationship relationship-id="groupmemberprogramsgroupmember" target-entity-id="groupmember" />
+                    <instance-value-if>
+                      <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                      <attribute attr-id="p128" />
+                      <true-value />
+                    </instance-value-if>
+                  </for>
+                  <scope-for scope-ref="global0" target-entity-id="global">
+                    <attribute attr-id="p121" />
+                  </scope-for>
+                </minus>
+                <number-value>0</number-value>
+              </maximum>
+            </value>
+            <condition>
+              <for>
+                <relationship relationship-id="groupmemberprogramsgroupmember" target-entity-id="groupmember" />
+                <for scope-id="the parent">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <attribute attr-id="b54" />
+                </for>
+              </for>
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="54" name="HBEE 29.14(d)(2) applies to the person for the program (eff. 08/01/2016)" ruleburst="true" concludes="b79" folder="21" source-offset="32983">
+      <rule-xml>
+        <conclude attr-id="b79" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <attribute attr-id="b82" />
+              </for>
+              <or>
+                <not>
+                  <for>
+                    <relationship relationship-id="programsperson" target-entity-id="person" />
+                    <attribute attr-id="b82" />
+                  </for>
+                </not>
+                <attribute attr-id="b78" />
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="55" name="HBEE 29.14(d)(2) applies to the group member for the person for the group member program (eff. 08/01/2016)" ruleburst="true" concludes="b77" folder="21" source-offset="33302">
+      <rule-xml>
+        <conclude attr-id="b77" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for>
+              <relationship relationship-id="groupmemberprogramsgroupmember" target-entity-id="groupmember" />
+              <for scope-id="the member">
+                <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                <and>
+                  <attribute attr-id="b82" />
+                  <or>
+                    <not>
+                      <attribute attr-id="b82" />
+                    </not>
+                    <exists scope-id="the member program">
+                      <relationship relationship-id="personsprograms" target-entity-id="program" />
+                      <and>
+                        <exists-in scope-ref="groupmemberprogram0" scope-is-source="true" scope-entity-id="groupmemberprogram">
+                          <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                        </exists-in>
+                        <or>
+                          <not>
+                            <exists-in scope-ref="groupmemberprogram0" scope-is-source="true" scope-entity-id="groupmemberprogram">
+                              <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                            </exists-in>
+                          </not>
+                          <attribute attr-id="b78" />
+                        </or>
+                      </and>
+                    </exists>
+                  </or>
+                </and>
+              </for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="56" name="the person has an eligible child for the program under HBEE 29.14(d)(2) (eff. 08/01/2016)" ruleburst="true" concludes="b78" folder="21" source-offset="34447">
+      <rule-xml>
+        <conclude attr-id="b78" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="programsperson" target-entity-id="person" />
+              <exists scope-id="groupmemberprogram0">
+                <relationship relationship-id="personscontainedgroupmemberprograms" target-entity-id="groupmemberprogram" />
+                <and>
+                  <exists-in scope-ref="program0" scope-is-source="true" scope-entity-id="program">
+                    <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+                  </exists-in>
+                  <or>
+                    <not>
+                      <exists-in scope-ref="program0" scope-is-source="true" scope-entity-id="program">
+                        <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+                      </exists-in>
+                    </not>
+                    <attribute attr-id="b63" />
+                  </or>
+                </and>
+              </exists>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="57" name="the total amount of eligible parent income allocated to eligible children for the person's financial responsibility group for the program under HBEE 29.14(d)(2) (eff. 08/01/2016)" ruleburst="true" concludes="p150" folder="21" source-offset="35323">
+      <rule-xml>
+        <table-conclude attr-id="p150" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <instance-sum>
+                <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+                <attribute attr-id="p151" />
+              </instance-sum>
+            </value>
+            <condition>
+              <attribute attr-id="b79" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="58" name="the group member's eligible parent income allocated to eligible children for the person for the group member program under HBEE 29.14(d)(2) (eff. 08/01/2016)" ruleburst="true" concludes="p151" folder="21" source-offset="35914">
+      <rule-xml>
+        <table-conclude attr-id="p151" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <row>
+            <value>
+              <number-value>0</number-value>
+            </value>
+            <condition>
+              <not>
+                <attribute attr-id="b36" />
+              </not>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>0</number-value>
+            </value>
+            <condition>
+              <not>
+                <attribute attr-id="b77" />
+              </not>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <maximum>
+                <minus>
+                  <for>
+                    <relationship relationship-id="groupmemberprogramsgroupmember" target-entity-id="groupmember" />
+                    <instance-value-if>
+                      <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                      <attribute attr-id="p128" />
+                      <true-value />
+                    </instance-value-if>
+                  </for>
+                  <scope-for scope-ref="global0" target-entity-id="global">
+                    <attribute attr-id="p120" />
+                  </scope-for>
+                </minus>
+                <number-value>0</number-value>
+              </maximum>
+            </value>
+            <condition>
+              <for>
+                <relationship relationship-id="groupmemberprogramsgroupmember" target-entity-id="groupmember" />
+                <for scope-id="the parent">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <and>
+                    <not>
+                      <attribute attr-id="b54" />
+                    </not>
+                    <or>
+                      <attribute attr-id="b54" />
+                      <not>
+                        <unknown>
+                          <attribute attr-id="p128" />
+                        </unknown>
+                      </not>
+                    </or>
+                  </and>
+                </for>
+              </for>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <maximum>
+                <minus>
+                  <for>
+                    <relationship relationship-id="groupmemberprogramsgroupmember" target-entity-id="groupmember" />
+                    <instance-value-if>
+                      <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                      <attribute attr-id="p128" />
+                      <true-value />
+                    </instance-value-if>
+                  </for>
+                  <scope-for scope-ref="global0" target-entity-id="global">
+                    <attribute attr-id="p121" />
+                  </scope-for>
+                </minus>
+                <number-value>0</number-value>
+              </maximum>
+            </value>
+            <condition>
+              <for>
+                <relationship relationship-id="groupmemberprogramsgroupmember" target-entity-id="groupmember" />
+                <for scope-id="the parent">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <and>
+                    <attribute attr-id="b54" />
+                    <or>
+                      <not>
+                        <attribute attr-id="b54" />
+                      </not>
+                      <not>
+                        <unknown>
+                          <attribute attr-id="p128" />
+                        </unknown>
+                      </not>
+                    </or>
+                  </and>
+                </for>
+              </for>
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="59" name="HBEE 29.14(e)(3)(i) applies to the person for the program (eff. 08/01/2016)" ruleburst="true" concludes="b80" folder="23" source-offset="37919">
+      <rule-xml>
+        <conclude attr-id="b80" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b42" />
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for-all scope-id="groupmember0">
+                  <relationship relationship-id="personsgroupmembers" target-entity-id="groupmember" />
+                  <or>
+                    <not>
+                      <attribute attr-id="b44" />
+                    </not>
+                    <and>
+                      <attribute attr-id="b44" />
+                      <for scope-id="the parent">
+                        <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                        <not>
+                          <attribute attr-id="b82" />
+                        </not>
+                      </for>
+                    </and>
+                  </or>
+                </for-all>
+              </for>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="60" name="HBEE 29.14(e)(3)(i) applies to the group member for the person (eff. 08/01/2016)" ruleburst="true" concludes="b81" folder="23" source-offset="38573">
+      <rule-xml>
+        <conclude attr-id="b81" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b44" />
+              <for scope-id="the parent">
+                <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                <not>
+                  <attribute attr-id="b82" />
+                </not>
+              </for>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="61" name="the total amount of ineligible parent earned income allocated the person's financial responsibility group for the program under HBEE 29.14(e)(3)(i) (eff. 08/01/2016)" ruleburst="true" concludes="p152" folder="23" source-offset="38929">
+      <rule-xml>
+        <table-conclude attr-id="p152" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <instance-sum>
+                <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+                <attribute attr-id="p153" />
+              </instance-sum>
+            </value>
+            <condition>
+              <attribute attr-id="b80" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="62" name="the group member's ineligible parent earned income allocated to the person for the group member program under HBEE 29.14(e)(3)(i) (eff. 08/01/2016)" ruleburst="true" concludes="p153" folder="23" source-offset="39499">
+      <rule-xml>
+        <table-conclude attr-id="p153" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <row>
+            <value>
+              <number-value>0</number-value>
+            </value>
+            <condition>
+              <not>
+                <attribute attr-id="b36" />
+              </not>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <instance-value-if>
+                <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                <attribute attr-id="p130" />
+                <true-value />
+              </instance-value-if>
+            </value>
+            <condition>
+              <for>
+                <relationship relationship-id="groupmemberprogramsgroupmember" target-entity-id="groupmember" />
+                <attribute attr-id="b81" />
+              </for>
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="63" name="the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(e)(3)(i) (eff. 08/01/2016) " ruleburst="true" concludes="p155 = InstanceSum(personscontainedgroupmemberprogramsfortheprogram,p156)" folder="23" source-offset="40144">
+      <rule-xml>
+        <conclude attr-id="p155" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum>
+              <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+              <attribute attr-id="p156" />
+            </instance-sum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="64" name="the person's earned income disregard for the group member for the group member program under HBEE 29.14(e)(3)(i) (eff. 08/01/2016)" ruleburst="true" concludes="p156" folder="23" source-offset="40569">
+      <rule-xml>
+        <table-conclude attr-id="p156" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <row>
+            <value>
+              <number-value>0</number-value>
+            </value>
+            <condition>
+              <not>
+                <attribute attr-id="b36" />
+              </not>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <instance-value-if>
+                <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                <attribute attr-id="p130" />
+                <true-value />
+              </instance-value-if>
+            </value>
+            <condition>
+              <for>
+                <relationship relationship-id="groupmemberprogramsgroupmember" target-entity-id="groupmember" />
+                <attribute attr-id="b81" />
+              </for>
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="65" name="HBEE 29.14(e)(3)(iii) applies to the person for the program (eff. 08/01/2016)" ruleburst="true" concludes="b61" folder="24" source-offset="41204">
+      <rule-xml>
+        <conclude attr-id="b61" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b42" />
+              <or>
+                <not>
+                  <attribute attr-id="b42" />
+                </not>
+                <for>
+                  <relationship relationship-id="programsperson" target-entity-id="person" />
+                  <exists scope-id="groupmemberprogram0">
+                    <relationship relationship-id="personscontainedgroupmemberprograms" target-entity-id="groupmemberprogram" />
+                    <and>
+                      <exists-in scope-ref="program0" scope-is-source="true" scope-entity-id="program">
+                        <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+                      </exists-in>
+                      <or>
+                        <not>
+                          <exists-in scope-ref="program0" scope-is-source="true" scope-entity-id="program">
+                            <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+                          </exists-in>
+                        </not>
+                        <for scope-id="the parent's program">
+                          <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                          <and>
+                            <instance-not-equals>
+                              <scope-ref id="the parent's program" />
+                              <scope-ref id="program0" />
+                            </instance-not-equals>
+                            <or>
+                              <instance-equals>
+                                <scope-ref id="the parent's program" />
+                                <scope-ref id="program0" />
+                              </instance-equals>
+                              <scope-for scope-ref="groupmemberprogram0" target-entity-id="groupmemberprogram">
+                                <attribute attr-id="b64" />
+                              </scope-for>
+                            </or>
+                          </and>
+                        </for>
+                      </or>
+                    </and>
+                  </exists>
+                </for>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="66" name="HBEE 29.14(e)(3)(iii) applies to the group member for the person for the group member program (eff. 08/01/2016)" ruleburst="true" concludes="b64" folder="24" source-offset="42582">
+      <rule-xml>
+        <conclude attr-id="b64" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b36" />
+              <or>
+                <not>
+                  <attribute attr-id="b36" />
+                </not>
+                <for scope-id="the parent's program">
+                  <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                  <attribute attr-id="b62" />
+                </for>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="67" name="the person has multiple eligible children for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)" ruleburst="true" concludes="b62" folder="24" source-offset="43217">
+      <rule-xml>
+        <conclude attr-id="b62" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="programsperson" target-entity-id="person" />
+              <exists scope-id="the first group member program">
+                <relationship relationship-id="personscontainedgroupmemberprograms" target-entity-id="groupmemberprogram" />
+                <and>
+                  <exists-in scope-ref="program0" scope-is-source="true" scope-entity-id="program">
+                    <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+                  </exists-in>
+                  <or>
+                    <not>
+                      <exists-in scope-ref="program0" scope-is-source="true" scope-entity-id="program">
+                        <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+                      </exists-in>
+                    </not>
+                    <scope-for scope-ref="person0" target-entity-id="person">
+                      <exists scope-id="the second group member program">
+                        <relationship relationship-id="personscontainedgroupmemberprograms" target-entity-id="groupmemberprogram" />
+                        <and>
+                          <scope-for scope-ref="the first group member program" target-entity-id="groupmemberprogram">
+                            <attribute attr-id="b63" />
+                          </scope-for>
+                          <instance-not-equals>
+                            <scope-ref id="the first group member program" />
+                            <scope-ref id="the second group member program" />
+                          </instance-not-equals>
+                          <exists-in scope-ref="program0" scope-is-source="true" scope-entity-id="program">
+                            <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+                          </exists-in>
+                          <or>
+                            <not>
+                              <exists-in scope-ref="program0" scope-is-source="true" scope-entity-id="program">
+                                <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+                              </exists-in>
+                            </not>
+                            <attribute attr-id="b63" />
+                          </or>
+                        </and>
+                      </exists>
+                    </scope-for>
+                  </or>
+                </and>
+              </exists>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="68" name="the number of eligible children associated with the person's financial responsibility group for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)" ruleburst="true" concludes="p138" folder="24" source-offset="45326">
+      <rule-xml>
+        <table-conclude attr-id="p138" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <instance-sum>
+                <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+                <attribute attr-id="p139" />
+              </instance-sum>
+            </value>
+            <condition>
+              <greater-than>
+                <instance-sum>
+                  <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+                  <attribute attr-id="p139" />
+                </instance-sum>
+                <number-value>0</number-value>
+              </greater-than>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="69" name="the group member's count value as an eligible child associated with the person's financial responsibility group for the group member program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)" ruleburst="true" concludes="p139" folder="24" source-offset="46236">
+      <rule-xml>
+        <table-conclude attr-id="p139" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <row>
+            <value>
+              <number-value>1</number-value>
+            </value>
+            <condition>
+              <attribute attr-id="b65" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="70" name="the group member is an eligible child associated with the person's financial responsibility group for the group member program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)" ruleburst="true" concludes="b65" folder="24" source-offset="46635">
+      <rule-xml>
+        <conclude attr-id="b65" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="program0">
+              <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+              <and>
+                <attribute attr-id="b42" />
+                <or>
+                  <not>
+                    <attribute attr-id="b42" />
+                  </not>
+                  <scope-for scope-ref="groupmemberprogram0" target-entity-id="groupmemberprogram">
+                    <for scope-id="the member">
+                      <relationship relationship-id="groupmembersrepresentativepersonforthegroupmemberprogram" target-entity-id="person" />
+                      <scope-for scope-ref="groupmemberprogram0" target-entity-id="groupmemberprogram">
+                        <for scope-id="person1">
+                          <relationship relationship-id="groupmemberscontainingpersonforthegroupmemberprogram" target-entity-id="person" />
+                          <instance-equals>
+                            <scope-ref id="the member" />
+                            <scope-ref id="person1" />
+                          </instance-equals>
+                        </for>
+                      </scope-for>
+                    </for>
+                  </scope-for>
+                  <scope-for scope-ref="groupmemberprogram0" target-entity-id="groupmemberprogram">
+                    <for>
+                      <relationship relationship-id="groupmemberprogramsgroupmember" target-entity-id="groupmember" />
+                      <attribute attr-id="b74" />
+                    </for>
+                  </scope-for>
+                </or>
+              </and>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="71" name="the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)" ruleburst="true" concludes="p136" folder="24" source-offset="49650">
+      <rule-xml>
+        <table-conclude attr-id="p136" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <minus>
+                <attribute attr-id="p143" />
+                <for>
+                  <relationship relationship-id="programsperson" target-entity-id="person" />
+                  <attribute attr-id="p140" />
+                </for>
+              </minus>
+            </value>
+            <condition>
+              <and>
+                <not>
+                  <unknown>
+                    <for>
+                      <relationship relationship-id="programsperson" target-entity-id="person" />
+                      <attribute attr-id="p140" />
+                    </for>
+                  </unknown>
+                </not>
+                <certain>
+                  <for>
+                    <relationship relationship-id="programsperson" target-entity-id="person" />
+                    <attribute attr-id="p140" />
+                  </for>
+                </certain>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <multiply>
+              <minus>
+                <number-value>1</number-value>
+                <divide>
+                  <number-value>1</number-value>
+                  <attribute attr-id="p138" />
+                </divide>
+              </minus>
+              <attribute attr-id="p143" />
+            </multiply>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="72" name="the total monthly countable gross income for the ineligible parents in the person's financial group for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016) " ruleburst="true" concludes="p143 = InstanceSum(personscontainedgroupmemberprogramsfortheprogram,p142) - p146" folder="24" source-offset="51527">
+      <rule-xml>
+        <conclude attr-id="p143" entity-id="program" scope-id="program0">
+          <value>
+            <minus>
+              <instance-sum>
+                <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+                <attribute attr-id="p142" />
+              </instance-sum>
+              <attribute attr-id="p146" />
+            </minus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="73" name="the group member's total monthly countable gross ineligible parent income for the the person's financial group for the group member program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)" ruleburst="true" concludes="p142" folder="24" source-offset="52182">
+      <rule-xml>
+        <table-conclude attr-id="p142" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <row>
+            <value>
+              <number-value>0</number-value>
+            </value>
+            <condition>
+              <not>
+                <attribute attr-id="b36" />
+              </not>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <instance-value-if>
+                <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                <attribute attr-id="p129" />
+                <true-value />
+              </instance-value-if>
+            </value>
+            <condition>
+              <attribute attr-id="b66" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="74" name="error(&quot;The total amount of ineligible parent income to deem is too low.&quot;)" ruleburst="true" concludes="raiseevent &quot;error(\&quot;The total amount of ineligible parent income to deem is too low.\&quot;)&quot;" folder="24" source-offset="52842">
+      <rule-xml>
+        <event action="error(&quot;The total amount of ineligible parent income to deem is too low.&quot;)" entity-id="program" scope-id="program0">
+          <condition>
+            <attribute attr-id="b67" />
+          </condition>
+        </event>
+      </rule-xml>
+    </rule>
+    <rule id="75" name="the ineligible parent income too low error should be displayed for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)" ruleburst="true" concludes="b67" folder="24" source-offset="53142">
+      <rule-xml>
+        <conclude attr-id="b67" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <less-than>
+              <attribute attr-id="p145" />
+              <attribute attr-id="p143" />
+            </less-than>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="76" name="error(&quot;The total amount of ineligible parent income to deem is too high.&quot;)" ruleburst="true" concludes="raiseevent &quot;error(\&quot;The total amount of ineligible parent income to deem is too high.\&quot;)&quot;" folder="24" source-offset="53606">
+      <rule-xml>
+        <event action="error(&quot;The total amount of ineligible parent income to deem is too high.&quot;)" entity-id="program" scope-id="program0">
+          <condition>
+            <attribute attr-id="b68" />
+          </condition>
+        </event>
+      </rule-xml>
+    </rule>
+    <rule id="77" name="the ineligible parent income too high error should be displayed for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)" ruleburst="true" concludes="b68" folder="24" source-offset="53909">
+      <rule-xml>
+        <conclude attr-id="b68" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <greater-than>
+              <attribute attr-id="p145" />
+              <attribute attr-id="p143" />
+            </greater-than>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="78" name="the total amount of ineligible parent income deemed to eligible children for the person for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016) " ruleburst="true" concludes="p145 = InstanceSum(personscontainedgroupmemberprogramsfortheprogram,p144)" folder="24" source-offset="54374">
+      <rule-xml>
+        <conclude attr-id="p145" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum>
+              <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+              <attribute attr-id="p144" />
+            </instance-sum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="79" name="the group member's amount of deemed ineligible parent income for the person for the group member program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)" ruleburst="true" concludes="p144" folder="24" source-offset="54831">
+      <rule-xml>
+        <table-conclude attr-id="p144" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <row>
+            <value>
+              <instance-value-if>
+                <relationship relationship-id="groupmembersrepresentativepersonforthegroupmemberprogram" target-entity-id="person" />
+                <attribute attr-id="p140" />
+                <true-value />
+              </instance-value-if>
+            </value>
+            <condition>
+              <and>
+                <attribute attr-id="b65" />
+                <or>
+                  <not>
+                    <attribute attr-id="b65" />
+                  </not>
+                  <for scope-id="the member">
+                    <relationship relationship-id="groupmembersrepresentativepersonforthegroupmemberprogram" target-entity-id="person" />
+                    <and>
+                      <not>
+                        <unknown>
+                          <attribute attr-id="p140" />
+                        </unknown>
+                      </not>
+                      <certain>
+                        <attribute attr-id="p140" />
+                      </certain>
+                    </and>
+                  </for>
+                </or>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="80" name="the deemed unearned income for the person's financial responsibility group for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)" ruleburst="true" concludes="p137" folder="24" source-offset="56079">
+      <rule-xml>
+        <table-conclude attr-id="p137" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <attribute attr-id="p141" />
+              </for>
+            </value>
+            <condition>
+              <and>
+                <not>
+                  <unknown>
+                    <for>
+                      <relationship relationship-id="programsperson" target-entity-id="person" />
+                      <attribute attr-id="p141" />
+                    </for>
+                  </unknown>
+                </not>
+                <certain>
+                  <for>
+                    <relationship relationship-id="programsperson" target-entity-id="person" />
+                    <attribute attr-id="p141" />
+                  </for>
+                </certain>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <multiply>
+              <divide>
+                <number-value>1</number-value>
+                <attribute attr-id="p138" />
+              </divide>
+              <attribute attr-id="p147" />
+            </multiply>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="81" name="error(&quot;The total amount of eligible parent income to deem is too low.&quot;)" ruleburst="true" concludes="raiseevent &quot;error(\&quot;The total amount of eligible parent income to deem is too low.\&quot;)&quot;" folder="24" source-offset="57189">
+      <rule-xml>
+        <event action="error(&quot;The total amount of eligible parent income to deem is too low.&quot;)" entity-id="program" scope-id="program0">
+          <condition>
+            <attribute attr-id="b69" />
+          </condition>
+        </event>
+      </rule-xml>
+    </rule>
+    <rule id="82" name="the eligible parent income too low error should be displayed for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)" ruleburst="true" concludes="b69" folder="24" source-offset="57483">
+      <rule-xml>
+        <conclude attr-id="b69" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <less-than>
+              <attribute attr-id="p148" />
+              <attribute attr-id="p147" />
+            </less-than>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="83" name="error(&quot;The total amount of eligible parent income to deem is too high.&quot;)" ruleburst="true" concludes="raiseevent &quot;error(\&quot;The total amount of eligible parent income to deem is too high.\&quot;)&quot;" folder="24" source-offset="57937">
+      <rule-xml>
+        <event action="error(&quot;The total amount of eligible parent income to deem is too high.&quot;)" entity-id="program" scope-id="program0">
+          <condition>
+            <attribute attr-id="b70" />
+          </condition>
+        </event>
+      </rule-xml>
+    </rule>
+    <rule id="84" name="the eligible parent income too high error should be displayed for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)" ruleburst="true" concludes="b70" folder="24" source-offset="58234">
+      <rule-xml>
+        <conclude attr-id="b70" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <greater-than>
+              <attribute attr-id="p148" />
+              <attribute attr-id="p147" />
+            </greater-than>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="85" name="the total amount of eligible parent income deemed to eligible children for the person for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016) " ruleburst="true" concludes="p148 = InstanceSum(personscontainedgroupmemberprogramsfortheprogram,p149)" folder="24" source-offset="58689">
+      <rule-xml>
+        <conclude attr-id="p148" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum>
+              <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+              <attribute attr-id="p149" />
+            </instance-sum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="86" name="the group member's amount of deemed eligible parent income for the person for the group member program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)" ruleburst="true" concludes="p149" folder="24" source-offset="59142">
+      <rule-xml>
+        <table-conclude attr-id="p149" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <row>
+            <value>
+              <instance-value-if>
+                <relationship relationship-id="groupmembersrepresentativepersonforthegroupmemberprogram" target-entity-id="person" />
+                <attribute attr-id="p141" />
+                <true-value />
+              </instance-value-if>
+            </value>
+            <condition>
+              <and>
+                <attribute attr-id="b65" />
+                <or>
+                  <not>
+                    <attribute attr-id="b65" />
+                  </not>
+                  <for scope-id="the member">
+                    <relationship relationship-id="groupmembersrepresentativepersonforthegroupmemberprogram" target-entity-id="person" />
+                    <and>
+                      <not>
+                        <unknown>
+                          <attribute attr-id="p141" />
+                        </unknown>
+                      </not>
+                      <certain>
+                        <attribute attr-id="p141" />
+                      </certain>
+                    </and>
+                  </for>
+                </or>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="29.14 Determination of countable income (08/01/2016, 16-02FP)" parent="0" id="1" />
+    <folder text="(a) In general" parent="1" id="2" />
+    <folder text="(b) Financial responsibility group of one individual seeking MABD other than Medicaid coverage of long-term care services and supports under MABD" parent="1" id="3" />
+    <folder text="Para (b)(1)" parent="3" id="4" />
+    <folder text="Para (b)(2)" parent="3" id="5" />
+    <folder text="Para (b)(3)" parent="3" id="6" />
+    <folder text="Para (b)(4)" parent="3" id="7" />
+    <folder text="Para (b)(5)" parent="3" id="8" />
+    <folder text="Para (b)(6)" parent="3" id="9" />
+    <folder text="Para (b)(7)" parent="3" id="10" />
+    <folder text="Para (b)(8)" parent="3" id="11" />
+    <folder text="Para (b)(9)" parent="3" id="12" />
+    <folder text="Para (b)(10)" parent="3" id="13" />
+    <folder text="Para (b)(11)" parent="3" id="14" />
+    <folder text="Para (b)(12)" parent="3" id="15" />
+    <folder text="(c) Financial responsibility group of two seeking MABD other than Medicaid coverage of long-term care services and supports under MABD" parent="1" id="16" />
+    <folder text="Para (c)(1)" parent="16" id="17" />
+    <folder text="Para (c)(2)" parent="16" id="18" />
+    <folder text="(d) Parent and child living together seeking MABD, other than Medicaid coverage of long-term care services and supports under MABD" parent="1" id="19" />
+    <folder text="Para (d)(1)" parent="19" id="20" />
+    <folder text="Para (d)(2)" parent="19" id="21" />
+    <folder text="(e) Children seeking MABD, other than Medicaid coverage of long-term care services and supports under MABD (excluding Katie Beckett)" parent="1" id="22" />
+    <folder text="Para(e)(3)(i)" parent="22" id="23" />
+    <folder text="Para(e)(3)(iii)" parent="22" id="24" />
+  </rule-folders>
+</root>

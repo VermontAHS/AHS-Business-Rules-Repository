@@ -1,0 +1,423 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+      <attribute name="p1" type="number" public-name="so_HBEE8.07b1iAIncAdjFPL20140730_n">
+        <text>
+          <base>the adjusted net income FPL percentage limit under HBEE 8.07(b)(1)(i)(A) (eff. 07/30/2014)</base>
+        </text>
+      </attribute>
+      <attribute name="p2" type="number" public-name="so_HBEE8.07b2iBIncAdjFPL20140730_n">
+        <text>
+          <base>the adjusted net income FPL percentage limit under HBEE 8.07(b)(2)(i)(B) (eff. 07/30/2014)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p5" type="number" public-name="so_HBEE8.07b3iBIncAdjFPL20140730_n">
+        <text>
+          <base>the adjusted net income FPL percentage limit under HBEE 8.07(b)(3)(i)(B) (eff. 07/30/2014)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p6" type="number" public-name="so_HBEE8.07b4iCIncAdjFPL20140730_n">
+        <text>
+          <base>the adjusted net income FPL percentage limit under HBEE 8.07(b)(4)(i)(C) (eff. 07/30/2014)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p8" type="number" public-name="so_HBEE8.07b2iiiRetroMo20140730_n">
+        <text>
+          <base>the number of calendar months of potential retroactive eligibility under HBEE 8.07(b)(2)(iii) (eff. 07/30/2014)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p9" type="number" public-name="so_HBEE8.07b3ivRetroMo20140730_n">
+        <text>
+          <base>the number of calendar months of potential retroactive eligibility under HBEE 8.07(b)(3)(iv) (eff. 07/30/2014)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p10" type="number" public-name="so_HBEE8.07b4iiiRetroMo20140730_n">
+        <text>
+          <base>the number of calendar months of potential retroactive eligibility under HBEE 8.07(b)(4)(iii) (eff. 07/30/2014)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" public-name="so_HBEE8.07b1iiiEffNxtMo20140730_b">
+        <text>
+          <base>the benefit effective date is the beginning of the next month under HBEE 8.07(b)(1)(iii) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the benefit effective date',singular),o('the beginning of the next month under HBEE 8.07(b)(1)(iii) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean" public-name="so_HBEE8.07b3iiiEffAlgnYr20140730_b">
+        <text>
+          <base>the benefit period is aligned to the calendar year under HBEE 8.07(b)(3)(v) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the benefit period',singular),o('aligned to the calendar year under HBEE 8.07(b)(3)(v) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p16" type="number">
+        <text>
+          <base>the number of calendar months of potential retroactive eligibility under HBEE 8.07(b)(2)(iii)</base>
+        </text>
+      </attribute>
+      <attribute name="p17" type="number">
+        <text>
+          <base>the adjusted net income FPL percentage limit under HBEE 8.07(b)(1)(i)(A)</base>
+        </text>
+      </attribute>
+      <attribute name="p18" type="number">
+        <text>
+          <base>the adjusted net income FPL percentage limit under HBEE 8.07(b)(2)(i)(B)</base>
+        </text>
+      </attribute>
+      <attribute name="p19" type="number">
+        <text>
+          <base>the adjusted net income FPL percentage limit under HBEE 8.07(b)(3)(i)(B)</base>
+        </text>
+      </attribute>
+      <attribute name="p20" type="number">
+        <text>
+          <base>the number of calendar months of potential retroactive eligibility under HBEE 8.07(b)(3)(iv)</base>
+        </text>
+      </attribute>
+      <attribute name="p21" type="number">
+        <text>
+          <base>the adjusted net income FPL percentage limit under HBEE 8.07(b)(4)(i)(C)</base>
+        </text>
+      </attribute>
+      <attribute name="p23" type="number">
+        <text>
+          <base>the number of calendar months of potential retroactive eligibility under HBEE 8.07(b)(4)(iii)</base>
+        </text>
+      </attribute>
+      <attribute name="b40" type="boolean" public-name="so_HBEE8.07b1iAIncAdjFPL20140730_b">
+        <text>
+          <base>the adjusted net income test is an FPL% test under HBEE 8.07(b)(1)(i)(A) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the adjusted net income test',singular),o('an FPL% test under HBEE 8.07(b)(1)(i)(A) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b41" type="boolean" public-name="so_HBEE8.07b2iBIncAdjFPL20140730_b">
+        <text>
+          <base>the adjusted net income test is an FPL% test under HBEE 8.07(b)(2)(i)(B) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the adjusted net income test',singular),o('an FPL% test under HBEE 8.07(b)(2)(i)(B) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b43" type="boolean" public-name="so_HBEE8.07b3iBIncAdjFPL20140730_b">
+        <text>
+          <base>the adjusted net income test is an FPL% test under HBEE 8.07(b)(3)(i)(B) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the adjusted net income test',singular),o('an FPL% test under HBEE 8.07(b)(3)(i)(B) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b44" type="boolean" public-name="so_HBEE8.07b3iiiEffNxtMo20140730_b">
+        <text>
+          <base>the benefit effective date is the beginning of the next month under HBEE 8.07(b)(3)(iii) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the benefit effective date',singular),o('the beginning of the next month under HBEE 8.07(b)(3)(iii) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b46" type="boolean" public-name="so_HBEE8.07b4iCIncAdjFPL20140730_b">
+        <text>
+          <base>the adjusted net income test is an FPL% test under HBEE 8.07(b)(4)(i)(C) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the adjusted net income test',singular),o('an FPL% test under HBEE 8.07(b)(4)(i)(C) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b48" type="boolean">
+        <text>
+          <base>there is an adjusted net income test under HBEE 7.03(a)(5)(i)(E)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adjusted net income test under HBEE 7.03(a)(5)(i)(E)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b52" type="boolean" public-name="si_before2ndMoAfterFplRev_b">
+        <text>
+          <base>it is before the first day of the second month following the month of publication of the revised annual FPL</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('before the first day of the second month following the month of publication of the revised annual FPL'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p37" type="number">
+        <text>
+          <base>the adjusted net income FPL percentage floor under HBEE 8.07(b)(2)(i)(B) (eff. 07/30/2014)</base>
+        </text>
+      </attribute>
+      <attribute name="p38" type="number">
+        <text>
+          <base>the adjusted net income FPL percentage floor under HBEE 8.07(b)(2)(i)(B)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b3" type="boolean" public-name="so_HBEE8.07b1iBSat20140730_b">
+        <text>
+          <base>HBEE 8.07(b)(1)(i)(B) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.07(b)(1)(i)(B)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" public-name="si_personEntldMedcrPtA_b">
+        <text>
+          <base>the person is entitled to Medicare part A</base>
+          <parse>s(ver('10.4.6.76'),v(entitle,t(simple,present,normal)),ob('the person',singular),o('to Medicare part A'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" public-name="si_personEntldMedcrPtASolelyDTSSA1818_b">
+        <text>
+          <base>the person is entitled to Medicare part A solely because the person is eligible to enroll under section 1818 of the Social Security Act</base>
+          <parse>s(ver('10.4.6.76'),v(entitle,t(simple,present,normal)),ob('the person',singular),o('to Medicare part A solely because the person is eligible to enroll under section 1818 of the Social Security Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" public-name="so_HBEE8.07b2iASat20140730_b">
+        <text>
+          <base>HBEE 8.07(b)(2)(i)(A) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.07(b)(2)(i)(A)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" public-name="so_HBEE8.07b3iASat20140730_b">
+        <text>
+          <base>HBEE 8.07(b)(3)(i)(A) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.07(b)(3)(i)(A)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" public-name="so_HBEE8.07b3iCSat20140730_b">
+        <text>
+          <base>HBEE 8.07(b)(3)(i)(C) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.07(b)(3)(i)(C)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" public-name="st_personHBEE8074iASatisfiedEff073014_b">
+        <text>
+          <base>HBEE 8.07(b)(4)(i)(A) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.07(b)(4)(i)(A)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" public-name="st_personHBEE8074iBSatisfiedEff073014_b">
+        <text>
+          <base>HBEE 8.07(b)(4)(i)(B) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.07(b)(4)(i)(B)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" public-name="so_HBEE8.07b4iESat20140730_b">
+        <text>
+          <base>HBEE 8.07(b)(4)(i)(E) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.07(b)(4)(i)(E)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" public-name="so_HBEE8.07b4iCSat20140730_b">
+        <text>
+          <base>the person meets the categorical requirement under HBEE 8.07(b)(4)(i) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the categorical requirement under HBEE 8.07(b)(4)(i) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" public-name="si_personRcvsOthFedFundMdclAsst_b">
+        <text>
+          <base>the person receives other federally-funded medical assistance</base>
+          <parse>s(ver('10.4.6.76'),v(receive,t(simple,present,normal)),sb('the person',singular),o('other federally-funded medical assistance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" public-name="si_personRcvsCvgExcldDrgClsUndMdcdPtD_b">
+        <text>
+          <base>it is the case that the only other federally-funded medical assistance that the person receives is coverage for excluded drug classes under Medicare part D</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the only other federally-funded medical assistance that the person receives is coverage for excluded drug classes under Medicare part D'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" public-name="si_personIsEnrldMdcdPtD_b">
+        <text>
+          <base>the person is enrolled in Medicare part D</base>
+          <parse>s(ver('10.4.6.76'),v(enroll,t(simple,present,normal)),ob('the person',singular),o('in Medicare part D'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" public-name="si_personLstMdcrBenBsdOnDsbltyBcRtrnToWrk_b">
+        <text>
+          <base>the person lost Medicare benefits based on disability because the person returned to work</base>
+          <parse>s(ver('10.4.6.76'),v(lose,t(simple,past,normal)),sb('the person',plural),o('Medicare benefits based on disability because the person returned to work'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" public-name="si_eligibleMedicaid_b">
+        <text>
+          <base>the person is eligible for Medicaid</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('eligible for Medicaid'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p12" type="currency" public-name="si_pRsrcLmtUndMdcdPrcdP2420C1_c">
+        <text>
+          <base>the MABD resource limit under Medicaid Procedures P-2420C(1) for the person's Medicaid group as defined in HBEE 29.04</base>
+        </text>
+      </attribute>
+      <attribute name="p13" type="currency" public-name="so_HBEE8.07b4iDResLim20140730_c">
+        <text>
+          <base>the countable resource limit for the person under HBEE 8.07(b)(4)(i)(D) (eff. 07/30/2014)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p22" type="currency" public-name="si_PerCntblRsrcLmitHBEE8.07b4iD_c">
+        <text>
+          <base>the countable resource limit for the person under HBEE 8.07(b)(4)(i)(D)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b28" type="boolean" public-name="so_HBEE8.07b1iAIncAdjTst20140730_b">
+        <text>
+          <base>there is an adjusted net income test for the program under HBEE 8.07(b)(1)(i)(A) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adjusted net income test for the program under HBEE 8.07(b)(1)(i)(A) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" public-name="so_HBEE8.07b2iBIncAdjTst20140730_b">
+        <text>
+          <base>there is an adjusted net income test for the program under HBEE 8.07(b)(2)(i)(B) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adjusted net income test for the program under HBEE 8.07(b)(2)(i)(B) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean" public-name="so_HBEE8.07b3iBIncAdjTst20140730_b">
+        <text>
+          <base>there is an adjusted net income test for the program under HBEE 8.07(b)(3)(i)(B) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adjusted net income test for the program under HBEE 8.07(b)(3)(i)(B) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean" public-name="so_HBEE8.07b4iCIncAdjTst20140730_b">
+        <text>
+          <base>there is an adjusted net income test for the program under HBEE 8.07(b)(4)(i)(C) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adjusted net income test for the program under HBEE 8.07(b)(4)(i)(C) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b34" type="boolean" public-name="so_HBEE8.07b4iDResTst20140730_b">
+        <text>
+          <base>there is a countable resource test for the program under HBEE 8.07(b)(4)(i)(D) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('a countable resource test for the program under HBEE 8.07(b)(4)(i)(D) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" public-name="so_HBEE8.07b1Apply20140730_b">
+        <text>
+          <base>HBEE 8.07(b)(1) applies to the program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.07(b)(1)',singular),o('to the program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" public-name="so_HBEE8.07b2Apply20140730_b">
+        <text>
+          <base>HBEE 8.07(b)(2) applies to the program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.07(b)(2)',singular),o('to the program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" public-name="so_HBEE8.07b3Apply20140730_b">
+        <text>
+          <base>HBEE 8.07(b)(3) applies to the program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.07(b)(3)',singular),o('to the program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b38" type="boolean" public-name="so_HBEE8.07b4Apply20140730_b">
+        <text>
+          <base>HBEE 8.07(b)(4) applies to the program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.07(b)(4)',singular),o('to the program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b42" type="boolean" public-name="so_HBEE8.07b2iiiRetro20140730_b">
+        <text>
+          <base>there is a potential retroactive eligibility period for the program under HBEE 8.07(b)(2)(iii) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('a potential retroactive eligibility period for the program under HBEE 8.07(b)(2)(iii) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b45" type="boolean" public-name="so_HBEE8.07b3ivRetro20140730_b">
+        <text>
+          <base>there is a potential retroactive eligibility period for the program under HBEE 8.07(b)(3)(iv) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('a potential retroactive eligibility period for the program under HBEE 8.07(b)(3)(iv) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b47" type="boolean" public-name="so_HBEE8.07b4iiiRetro20140730_b">
+        <text>
+          <base>there is a potential retroactive eligibility period for the program under HBEE 8.07(b)(4)(iii) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('a potential retroactive eligibility period for the program under HBEE 8.07(b)(4)(iii) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+      <attribute name="p32" type="currency" public-name="si_PerCOLADsrgrdHBEE8.07b120140730_c">
+        <text>
+          <base>the COLA disregard for the person's income under HBEE 8.07(b)(1)(v) (eff. 07/30/2014)</base>
+        </text>
+      </attribute>
+      <attribute name="p33" type="currency" public-name="si_incCOLA_c">
+        <text>
+          <base>the amount of the person's income attributable to the most recent cost-of-living adjustment (COLA)</base>
+        </text>
+      </attribute>
+      <attribute name="p35" type="currency" public-name="si_PerCOLADsrgrdHBEE8.07b220140730_c">
+        <text>
+          <base>the COLA disregard for the person's income under HBEE 8.07(b)(2)(iv) (eff. 07/30/2014)</base>
+        </text>
+      </attribute>
+      <attribute name="b53" type="boolean" public-name="si_incTypeInsTitleII_b">
+        <text>
+          <base>the person's income is a monthly insurance benefit under Title II of the Social Security Act</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a monthly insurance benefit under Title II of the Social Security Act'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+      <attribute name="p30" type="currency">
+        <text>
+          <base>the income exclusion per payment for the person's income for the income program under HBEE 8.07(b)(1)(v) (eff. 07/30/2014)</base>
+        </text>
+      </attribute>
+      <attribute name="p31" type="currency">
+        <text>
+          <base>the income exclusion per payment for the person's income for the income program under HBEE 8.07 (eff. 07/30/2014)</base>
+        </text>
+      </attribute>
+      <attribute name="b50" type="boolean">
+        <text>
+          <base>HBEE 8.07(b)(1)(v) applies to the person's income for the income program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.07(b)(1)(v)',singular),o('to the person''s income for the income program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p34" type="currency">
+        <text>
+          <base>the income exclusion per payment for the person's income for the income program under HBEE 8.07(b)(2)(iv) (eff. 07/30/2014)</base>
+        </text>
+      </attribute>
+      <attribute name="b51" type="boolean">
+        <text>
+          <base>HBEE 8.07(b)(2)(iv) applies to the person's income for the income program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.07(b)(2)(iv)',singular),o('to the person''s income for the income program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p36" type="currency">
+        <text>
+          <base>the income exclusion per payment for the person's income for the income program under HBEE 8.07</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

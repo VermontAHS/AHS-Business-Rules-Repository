@@ -1,0 +1,167 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity ref="global" />
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>HBEE 30.02 applies to the program</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 30.02',singular),o('to the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b2" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>HBEE 30.02 applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 30.02',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p1" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the start of the person's spenddown accounting period for the program under HBEE 30.02</base>
+        </text>
+      </attribute>
+      <attribute name="p2" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the start of the person's spenddown accounting period for the program under HBEE 30.02 (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b7" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>there is a potential retroactive eligibility period for the person under HBEE 30.02</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('a potential retroactive eligibility period for the person under HBEE 30.02'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>there is a potential retroactive eligibility period for the person under HBEE 30.02 (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('a potential retroactive eligibility period for the person under HBEE 30.02 (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p3" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the number of months in the spenddown accounting period for the person under HBEE 30.02</base>
+        </text>
+      </attribute>
+      <attribute name="p4" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the number of months in the spenddown accounting period for the person under HBEE 30.02 (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p5" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the number of calendar months of potential retroactive eligibility for the person under HBEE 30.02</base>
+        </text>
+      </attribute>
+      <attribute name="p6" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the number of calendar months of potential retroactive eligibility for the person under HBEE 30.02 (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="ManyToMany" relationship-id="personsprevioussortorderpeople" reverse-relationship-id="personssubsequentsortorderpeople" text="the person's previous sort-order people" reverse-text="the person's subsequent sort-order people" source="person" target="person" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="programsprevioussortorderprograms" reverse-relationship-id="program_programsprevioussortorderprograms_rev" text="the program's previous sort-order programs" source="program" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="programswiththesamebenefittypeastheprogram" reverse-relationship-id="program_programswiththesamebenefittypeastheprogram_rev" text="the programs with the same benefit type as the program" source="program" target="program" is-implicit="false" is-containment="false" />
+  </relationships>
+  <rules>
+    <rule ruleburst="true" folder="0" name="HBEE 30.02 applies to the program" id="1" concludes="b1">
+      <rule-xml>
+        <table-conclude attr-id="b1" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <attribute attr-id="b2" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2015-07-15</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the start of the person's spenddown accounting period for the program under HBEE 30.02" id="2" concludes="p1">
+      <rule-xml>
+        <table-conclude attr-id="p1" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <attribute attr-id="p2" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2015-07-15</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the number of months in the spenddown accounting period for the person under HBEE 30.02" id="3" concludes="p3">
+      <rule-xml>
+        <table-conclude attr-id="p3" entity-id="person" scope-id="person0">
+          <row>
+            <value>
+              <attribute attr-id="p4" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2015-07-15</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="there is a potential retroactive eligibility period for the person under HBEE 30.02" id="4" concludes="b7">
+      <rule-xml>
+        <table-conclude attr-id="b7" entity-id="person" scope-id="person0">
+          <row>
+            <value>
+              <attribute attr-id="b8" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2015-07-15</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the number of calendar months of potential retroactive eligibility for the person under HBEE 30.02" id="5" concludes="p5">
+      <rule-xml>
+        <table-conclude attr-id="p5" entity-id="person" scope-id="person0">
+          <row>
+            <value>
+              <attribute attr-id="p6" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2015-07-15</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+</root>

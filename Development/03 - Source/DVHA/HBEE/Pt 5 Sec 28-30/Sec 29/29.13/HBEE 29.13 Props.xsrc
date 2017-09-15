@@ -1,0 +1,665 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+      <attribute name="p11" type="currency">
+        <text>
+          <base>the maximum income exclusion under HBEE 29.13(b)(2)(iii) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p19" type="currency">
+        <text>
+          <base>the maximum unearned income exclusion under HBEE 29.13(b)(4) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b14" type="boolean" public-name="si_studentAttendingSchool_b">
+        <text>
+          <base>the person is a student who is regularly attending school</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('a student who is regularly attending school'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="p18" type="currency">
+        <text>
+          <base>the unearned income exclusion for the person's financial responsibility group for the program under HBEE 29.13(b)(4) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="b114" type="boolean" public-name="st_pgHBEE2913Apls_b">
+        <text>
+          <base>HBEE 29.13 applies to the program</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.13',singular),o('to the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p29" type="currency">
+        <text>
+          <base>the unearned income exclusion for the person's financial responsibility group for the program under HBEE 29.13(b)(4)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+      <attribute name="b2" type="boolean" public-name="st_incomeExcludedEarnedEff07152015_b">
+        <text>
+          <base>the person's income is excluded under HBEE 29.13(a) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 29.13(a) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" public-name="st_incomeExcludedHBEE29.13a1Eff07152015_b">
+        <text>
+          <base>the person's income is excluded under HBEE 29.13(a)(1) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 29.13(a)(1) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" public-name="st_incomeExcludedHBEE29.13a2Eff07152015_b">
+        <text>
+          <base>the person's income is excluded under HBEE 29.13(a)(2) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 29.13(a)(2) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" public-name="st_incomeExcludedHBEE29.13a3Eff07152015_b">
+        <text>
+          <base>the person's income is excluded under HBEE 29.13(a)(3) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 29.13(a)(3) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" public-name="st_incomeExcludedHBEE29.13a4Eff07152015_b">
+        <text>
+          <base>the person's income is excluded under HBEE 29.13(a)(4) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 29.13(a)(4) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" public-name="st_incomeExcludedHBEE29.13a5Eff07152015_b">
+        <text>
+          <base>the person's income is excluded under HBEE 29.13(a)(5) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 29.13(a)(5) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" public-name="st_incomeExcludedHBEE29.13a7Eff07152015_b">
+        <text>
+          <base>the person's income is excluded under HBEE 29.13(a)(7) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 29.13(a)(7) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" public-name="st_incomeExcludedHBEE29.13a8Eff07152015_b">
+        <text>
+          <base>the person's income is excluded under HBEE 29.13(a)(8) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 29.13(a)(8) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" public-name="si_incomeSupportServicePayments_b">
+        <text>
+          <base>the person's income is support service payments made directly to the providers of services in the Limited Work Experience Program under the Workforce Investment Act of 1998</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('support service payments made directly to the providers of services in the Limited Work Experience Program under the Workforce Investment Act of 1998'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" public-name="si_incomeLimitedWorkExperience_b">
+        <text>
+          <base>the person's income is a needs-based payment of 10 dollars per day made to participants of the Limited Work Experience Program under the Workforce Investment Act of 1998</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a needs-based payment of 10 dollars per day made to participants of the Limited Work Experience Program under the Workforce Investment Act of 1998'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" public-name="si_incomeInfrequentEarned_b">
+        <text>
+          <base>the person's income is an infrequent or irregular earned income source received which does not exceed 30 dollars per calendar quarter</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('an infrequent or irregular earned income source received which does not exceed 30 dollars per calendar quarter'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" public-name="si_IncomeEarnedIncomeTaxCredit_b">
+        <text>
+          <base>the person's income is an Earned Income Tax Credit payment</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('an Earned Income Tax Credit payment'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" public-name="si_incomeTempEmployment_b">
+        <text>
+          <base>the person's income is wages paid by the Census Bureau for temporary employment</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('wages paid by the Census Bureau for temporary employment'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" public-name="st_incomeExcludedHBEE29.13b_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean" public-name="st_unearnedIncomeHBEE29.13b5eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(5) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(5) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" public-name="st_unearnedIncomeHBEE29.13b6Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(6) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(6) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" public-name="st_unearnedIncomeHBEE29.13b7Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(7) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(7) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" public-name="st_unearnedIncomeHBEE29.13b8Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(8) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(8) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b38" type="boolean" public-name="st_unearnedIncomeHBEE29.13b9Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(9) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(9) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b39" type="boolean" public-name="st_unearnedIncomeHBEE29.13b10Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(10) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(10) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b40" type="boolean" public-name="st_unearnedIncomeHBEE29.13b11Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(11) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(11) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b41" type="boolean" public-name="st_unearnedIncomeHBEE29.13b12Eff07152015_b">
+        <text>
+          <base>the person's income is excluded under HBEE 29.13(b)(12) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 29.13(b)(12) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b43" type="boolean" public-name="st_unearnedIncomeHBEE29.13b14Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(14) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(14) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b44" type="boolean" public-name="st_unearnedIncomeHBEE29.13b15Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(15) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(15) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b45" type="boolean" public-name="st_unearnedIncomeHBEE29.13b16Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(16) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(16) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b46" type="boolean" public-name="st_unearnedIncomeHBEE29.13b17Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(17) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(17) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b48" type="boolean" public-name="st_unearnedIncomeHBEE29.13b19Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(19) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(19) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b49" type="boolean" public-name="st_unearnedIncomeHBEE29.13b20Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(20) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(20) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b50" type="boolean" public-name="st_unearnedIncomeHBEE29.13b21Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(21) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(21) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b51" type="boolean" public-name="st_unearnedIncomeHBEE29.13b22Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(22) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(22) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b52" type="boolean" public-name="st_unearnedIncomeHBEE29.13b23Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(23) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(23) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b53" type="boolean" public-name="st_unearnedIncomeHBEE29.13b24Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(24) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(24) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b54" type="boolean" public-name="st_unearnedIncomeHBEE29.13b25Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(25) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(25) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b55" type="boolean" public-name="st_unearnedIncomeHBEE29.13b26Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(26) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(26) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b57" type="boolean" public-name="st_unearnedIncomeHBEE29.13b28Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(28) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(28) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b59" type="boolean" public-name="st_unearnedIncomeHBEE29.13b30Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(30) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(30) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b60" type="boolean" public-name="st_unearnedIncomeHBEE29.13b31Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(31) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(31) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b61" type="boolean" public-name="st_unearnedIncomeHBEE29.13b32Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(32) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(32) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b62" type="boolean" public-name="st_unearnedIncomeHBEE29.13b33Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(33) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(33) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b63" type="boolean" public-name="st_unearnedIncomeHBEE29.13b34Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(34) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(34) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b64" type="boolean" public-name="st_unearnedIncomeHBEE29.13b35Eff07152015_b">
+        <text>
+          <base>the person's income is excluded from unearned income under HBEE 29.13(b)(35) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('from unearned income under HBEE 29.13(b)(35) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b81" type="boolean" public-name="si_incomeRefundFood_b">
+        <text>
+          <base>the person's income is public agency's refund of taxes received on food or real property</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('public agency''s refund of taxes received on food or real property'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b82" type="boolean" public-name="si_incomeInfrequentUnearned_b">
+        <text>
+          <base>the person's income is an infrequent or irregular source of unearned income received which does not exceed 60 dollars per calendar quarter</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('an infrequent or irregular source of unearned income received which does not exceed 60 dollars per calendar quarter'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b83" type="boolean" public-name="si_incomeBillsPaid_b">
+        <text>
+          <base>the person's income is bills that are paid directly to vendors by a third party</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('bills that are paid directly to vendors by a third party'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b84" type="boolean" public-name="si_incomeReplacementLost_b">
+        <text>
+          <base>the person's income is unearned income received from replacement of lost, stolen or destroyed income</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('unearned income received from replacement of lost, stolen or destroyed income'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b85" type="boolean" public-name="si_WeatherizationAssistance_b">
+        <text>
+          <base>the person's income is weatherization assistance</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('weatherization assistance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b86" type="boolean" public-name="si_incomeReceipts_b">
+        <text>
+          <base>the person's income is receipts from the sale, exchange or replacement of a resource</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('receipts from the sale, exchange or replacement of a resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b87" type="boolean" public-name="si_incomeNeedBased_b">
+        <text>
+          <base>the person's income is any assistance received based on need which is funded wholly by the state, such as General Assistance</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('any assistance received based on need which is funded wholly by the state, such as General Assistance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b89" type="boolean" public-name="si_incomeGrantReceived_b">
+        <text>
+          <base>the person's income is a grant, scholarship or fellowship</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a grant, scholarship or fellowship'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b90" type="boolean" public-name="si_incomeHomeProduce_b">
+        <text>
+          <base>the person's income is home produce used for personal consumption</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('home produce used for personal consumption'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b91" type="boolean" public-name="si_incomeCatastrophe_b">
+        <text>
+          <base>the person's income is assistance and interest earned on assistance for a catastrophe from the Disaster Relief and Emergency Assistance Act or other comparable assistance provided by the federal, state or local government</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('assistance and interest earned on assistance for a catastrophe from the Disaster Relief and Emergency Assistance Act or other comparable assistance provided by the federal, state or local government'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b92" type="boolean" public-name="si_incomeGiftsOrCashFromOthers_b">
+        <text>
+          <base>the person's income is irregular and unpredictable voluntary cash contributions or gifts received from friends or relatives</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('irregular and unpredictable voluntary cash contributions or gifts received from friends or relatives'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b93" type="boolean" public-name="si_incomeFosterCare_b">
+        <text>
+          <base>the person's income is payments received for providing foster care for children or adults placed in the person's home by a public or private non-profit placement agency</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('payments received for providing foster care for children or adults placed in the person''s home by a public or private non-profit placement agency'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b94" type="boolean" public-name="si_incomeChildSupport_b">
+        <text>
+          <base>the person's income is a child support payment</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a child support payment'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b95" type="boolean" public-name="si_incomeChoreHomemaker_b">
+        <text>
+          <base>the person's income is from payment received for chore, attendant or homemaker services under a government program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('from payment received for chore, attendant or homemaker services under a government program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b96" type="boolean" public-name="si_incomeInKindOthers_b">
+        <text>
+          <base>the person's income is in-kind assistance</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('in-kind assistance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b97" type="boolean" public-name="si_incomeMedicalCareOrServices_b">
+        <text>
+          <base>the person's income is assistance received in cash or in kind (including food, clothing, or shelter) under a government program that provides medical care or services (including vocational rehabilitation)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('assistance received in cash or in kind (including food, clothing, or shelter) under a government program that provides medical care or services (including vocational rehabilitation)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b98" type="boolean" public-name="si_incomeBenefitsForOthers_b">
+        <text>
+          <base>the person's income is benefits that was intended to cover the financial need of other individuals, such as AABD-EP grants</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('benefits that was intended to cover the financial need of other individuals, such as AABD-EP grants'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b99" type="boolean" public-name="si_incomeRetroactivePayments_b">
+        <text>
+          <base>the person's income is retroactive payments of SSI, AABD or OASDI benefits in cases where the payments were included in determining financial eligibility for Medicaid in the month it was actually owed to the person</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('retroactive payments of SSI, AABD or OASDI benefits in cases where the payments were included in determining financial eligibility for Medicaid in the month it was actually owed to the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b100" type="boolean" public-name="si_incomeHomeEnergyAssistance_b">
+        <text>
+          <base>the person's income is home energy assistance provided by a private nonprofit organization or a regulated supplier of home energy</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('home energy assistance provided by a private nonprofit organization or a regulated supplier of home energy'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b101" type="boolean" public-name="si_incomeVictimsCompensation_b">
+        <text>
+          <base>the person's income is state-administered victims' compensation payments</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('state-administered victims'' compensation payments'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b102" type="boolean" public-name="si_incomeStateOrLocalRelocation_b">
+        <text>
+          <base>the person's income is state or local government relocation payments</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('state or local government relocation payments'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b103" type="boolean" public-name="si_incomeDeathOfAPerson_b">
+        <text>
+          <base>the person's income is payments occasioned by the death of another person</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('payments occasioned by the death of another person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b104" type="boolean" public-name="si_incomeTaxCredit_b">
+        <text>
+          <base>the person's income is Earned Income Tax Credit payments</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('Earned Income Tax Credit payments'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b106" type="boolean" public-name="si_incomeHomeEquity_b">
+        <text>
+          <base>the person's income is income from a home equity conversion plan</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('income from a home equity conversion plan'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b107" type="boolean" public-name="si_incomeLifeInsurance_b">
+        <text>
+          <base>the person's income is dividends received on life insurance policies</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('dividends received on life insurance policies'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b108" type="boolean" public-name="si_incomeTrustFind_b">
+        <text>
+          <base>the person's income is payments made by someone other than the person to a third-party trust for the person</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('payments made by someone other than the person to a third-party trust for the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b109" type="boolean" public-name="si_incomeCountableResource_b">
+        <text>
+          <base>the person's income is interest and dividend income from a countable resource or from a resource excluded under a federal statute other than § 1613 of the SSA</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('interest and dividend income from a countable resource or from a resource excluded under a federal statute other than § 1613 of the SSA'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b110" type="boolean" public-name="si_incomeBurialSpace_b">
+        <text>
+          <base>the person's income is interest on an excluded burial space purchase agreement if left to accumulate as part of the value of the agreement</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('interest on an excluded burial space purchase agreement if left to accumulate as part of the value of the agreement'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b111" type="boolean" public-name="si_incomeRefundedTaxes_b">
+        <text>
+          <base>the person's income is the amount refunded on income taxes that the person has already paid</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('the amount refunded on income taxes that the person has already paid'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b112" type="boolean" public-name="si_incomeLoanProceeds">
+        <text>
+          <base>the person's income is proceeds of a loan</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('proceeds of a loan'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p1" type="currency">
+        <text>
+          <base>the income exclusion for expenses incurred as a condition of receiving the person's income under HBEE 29.13(b)(1) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p2" type="currency" public-name="si_incExpReceive_c">
+        <text>
+          <base>the amount of expenses incurred as a condition of receiving the person's income</base>
+        </text>
+      </attribute>
+      <attribute name="p3" type="currency" public-name="so_HBEE29.13IncExclAmt20150715_c">
+        <text>
+          <base>the monthly income exclusion for the person's income under HBEE 29.13 (eff. 07/15/2015)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p4" type="currency">
+        <text>
+          <base>the income exclusion for VA payments for the person's income under HBEE 29.13(b)(2) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p5" type="currency">
+        <text>
+          <base>the income exclusion for VA payments for the person's income under HBEE 29.13(b)(2)(i) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p6" type="currency" public-name="si_incVaPartHousebound_c">
+        <text>
+          <base>the portion of the person's income that is a pension or compensation payment for aid and attendance or housebound allowances</base>
+        </text>
+      </attribute>
+      <attribute name="p7" type="currency">
+        <text>
+          <base>the income exclusion for VA payments for the person's income under HBEE 29.13(b)(2)(ii) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p8" type="currency" public-name="si_incVaPartVetDepSpouse_c">
+        <text>
+          <base>the augmented portion of the person's income that is pensions, compensation or other benefits for a dependent of a veteran or a veteran's spouse</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p9" type="currency">
+        <text>
+          <base>the income exclusion for VA payments for the person's income under HBEE 29.13(b)(2)(iii) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p10" type="currency" public-name="si_incVaPartEduGovt_c">
+        <text>
+          <base>the portion of the person's income that is educational benefits to a veteran funded by the government</base>
+        </text>
+      </attribute>
+      <attribute name="p12" type="currency">
+        <text>
+          <base>the income exclusion for VA payments for the person's income under HBEE 29.13(b)(2)(iv) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p13" type="currency" public-name="si_incVaPartEduSelf_c">
+        <text>
+          <base>the portion of the person's income that is educational benefits received as either part of a plan of vocational rehabilitation or by withdrawals of personal educational fund</base>
+        </text>
+      </attribute>
+      <attribute name="p14" type="currency">
+        <text>
+          <base>the income exclusion for VA payments for the person's income under HBEE 29.13(b)(2)(v) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p15" type="currency" public-name="si_incVaPartClothing_c">
+        <text>
+          <base>the portion of the person's income that is a clothing allowance</base>
+        </text>
+      </attribute>
+      <attribute name="p16" type="currency">
+        <text>
+          <base>the income exclusion for VA payments for the person's income under HBEE 29.13(b)(2)(vi) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p17" type="currency" public-name="si_incVaPartMedAdjUnusual_c">
+        <text>
+          <base>the portion of the person's income that is payment adjustments for unusual medical expenses</base>
+        </text>
+      </attribute>
+      <attribute name="p22" type="currency">
+        <text>
+          <base>the income exclusion for educational expenses for the person's income under HBEE 29.13(b)(13) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p23" type="currency" public-name="si_incEduPartNecessary_c">
+        <text>
+          <base>the portion of the person's income used to pay tuition, fees or other necessary educational expenses</base>
+        </text>
+      </attribute>
+      <attribute name="p24" type="currency">
+        <text>
+          <base>the income exclusion for child support payments for the person's income under HBEE 29.13(b)(18) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p25" type="currency">
+        <text>
+          <base>the income exclusion for death payments for the person's income under HBEE 29.13(b)(27) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p26" type="currency" public-name="si_incDeathExpFinal_c">
+        <text>
+          <base>the portion of the person's income used to pay for the deceased person's last illness and burial, including gifts and inheritances</base>
+        </text>
+      </attribute>
+      <attribute name="b116" type="boolean" public-name="so_HBEE29.13IncExcl_b">
+        <text>
+          <base>the person's income is excluded under HBEE 29.13</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 29.13'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b117" type="boolean" public-name="si_incVA_b">
+        <text>
+          <base>the person's income is a VA payment</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a VA payment'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b118" type="boolean" public-name="st_HBEE29.03IncExcl20150715_b">
+        <text>
+          <base>the person's income is excluded under HBEE 29.13 (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 29.13 (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p31" type="currency">
+        <text>
+          <base>the income exclusion per payment for the person's income under HBEE 29.13 (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+      <attribute name="p21" type="currency">
+        <text>
+          <base>the monthly income exclusion for the person's income for the income program under HBEE 29.13 (eff. 07/15/2015)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="b115" type="boolean" public-name="st_ipHBEE2913Apls_b">
+        <text>
+          <base>HBEE 29.13 applies to the income program</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.13',singular),o('to the income program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p27" type="currency">
+        <text>
+          <base>the monthly income exclusion for the person's income for the income program under HBEE 29.13</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p30" type="currency">
+        <text>
+          <base>the income exclusion per payment for the person's income for the income program under HBEE 29.13 (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p32" type="currency">
+        <text>
+          <base>the income exclusion per payment for the person's income for the income program under HBEE 29.13</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

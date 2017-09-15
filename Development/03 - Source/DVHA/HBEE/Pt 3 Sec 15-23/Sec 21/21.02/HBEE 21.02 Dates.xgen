@@ -1,0 +1,44 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity ref="global" />
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the person is considered incapable of indicating intent regarding residency under HBEE 21.02 (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('incapable of indicating intent regarding residency under HBEE 21.02 (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b2" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the person is considered incapable of indicating intent regarding residency under HBEE 21.02</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('incapable of indicating intent regarding residency under HBEE 21.02'))</parse>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+    <relationship type="ManyToMany" relationship-id="personsprevioussortorderpeople" reverse-relationship-id="personssubsequentsortorderpeople" text="the person's previous sort-order people" reverse-text="the person's subsequent sort-order people" source="person" target="person" is-implicit="false" is-containment="false" />
+  </relationships>
+  <rules>
+    <rule ruleburst="true" folder="0" name="the person is considered incapable of indicating intent regarding residency under HBEE 21.02" id="1" concludes="b2">
+      <rule-xml>
+        <table-conclude attr-id="b2" entity-id="person" scope-id="person0">
+          <row>
+            <value>
+              <attribute attr-id="b1" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2014-07-30</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+</root>

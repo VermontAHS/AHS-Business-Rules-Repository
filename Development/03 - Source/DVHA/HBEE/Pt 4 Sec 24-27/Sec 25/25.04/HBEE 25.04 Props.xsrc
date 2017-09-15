@@ -1,0 +1,288 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+      <attribute name="p10" type="currency" public-name="si_avgDayCostPrivatNurseSrvcsApplDte_c">
+        <text>
+          <base>the average daily cost to a privately-paying patient of nursing facility services in the state as of the date of application</base>
+        </text>
+      </attribute>
+      <attribute name="p15" type="currency" public-name="si_avgDayCostPrivatNurseSrvcsForCurrMn_c">
+        <text>
+          <base>the average daily cost to a privately-paying patient of nursing facility services in the state for the current month</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="p7" type="currency" public-name="si_totValDisallowTransfrApplMnHBEE25.04d1_c">
+        <text>
+          <base>the total value of all the disallowed transfers for the transfer group for the person for the month of application under HBEE 25.04(d)(1) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p12" type="number" public-name="si_penaltyPerdNumDaysForApplMnHBEE25.04d1_n">
+        <text>
+          <base>the number of days in the person's penalty period for the month of application under HBEE 25.04(d)(1) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p13" type="number" public-name="si_penaltyPerdNumDaysForCurrMnHBEE25.04d2_n">
+        <text>
+          <base>the number of days in the person's penalty period for the current month under HBEE 25.04(d)(2) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p14" type="currency" public-name="si_totValDisallowTransfrApplMnHBEE25.04d2_c">
+        <text>
+          <base>the total value of all the disallowed transfers for the transfer group for the person for the current month under HBEE 25.04(d)(2) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p16" type="currency" public-name="si_totValDisallowTransfrApplMnHBEE25.04e2_c">
+        <text>
+          <base>the total value of all the disallowed transfers for the transfer group for the person for the month of application under HBEE 25.04(e)(2) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p17" type="number" public-name="si_penaltyPerdNumDaysApplMnHBEE25.04e3_n">
+        <text>
+          <base>the number of days in the person's penalty period for the month of application under HBEE 25.04(e)(3) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p18" type="number" public-name="si_penaltyPerdNumDaysCurrMnHBEE25.04e3_n">
+        <text>
+          <base>the number of days in the person's penalty period for the current month under HBEE 25.04(e)(3) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p19" type="number" public-name="si_penaltyPerdNumDaysRemainWhenFirstElig_n">
+        <text>
+          <base>the number of days remaining in the person's spouse's penalty period when the person first became otherwise eligible for Medicaid coverage of long-term care services and supports</base>
+        </text>
+      </attribute>
+      <attribute name="p20" type="number" public-name="si_penaltyPerfNumDaysRemainWhenSpouseFirstElig_n">
+        <text>
+          <base>the number of days remaining in the person's penalty period when the person spouse's first became otherwise eligible for Medicaid coverage of long-term care services and supports</base>
+        </text>
+      </attribute>
+      <attribute name="p21" type="number" public-name="si_penaltyPerdNumDaysElapsedWhenSpouseFirstElig_n">
+        <text>
+          <base>the number of days elapsed in the person's penalty period when the person spouse's first became otherwise eligible for Medicaid coverage of long-term care services and supports</base>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" public-name="st_perEligLongCareTermHBEE25.04a_b">
+        <text>
+          <base>the person is considered otherwise eligible for Medicaid coverage of long-term care services and supports under HBEE 25.04(a) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('otherwise eligible for Medicaid coverage of long-term care services and supports under HBEE 25.04(a) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" public-name="so_perPenaltyPerLongTermCareHBEE25.04b_b">
+        <text>
+          <base>the person has a penalty period for Medicaid coverage of long-term care services and supports under HBEE 25.04(b) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('a penalty period for Medicaid coverage of long-term care services and supports under HBEE 25.04(b) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" public-name="st_HBEE25.04e2AppliesToPerson_b">
+        <text>
+          <base>HBEE 25.04(e)(2) applies to the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 25.04(e)(2)',singular),o('to the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" public-name="st_HBEE25.04e3AppliesToPerson_b">
+        <text>
+          <base>HBEE 25.04(e)(3) applies to the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 25.04(e)(3)',singular),o('to the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" public-name="st_HBEE25.04eAppliesToPerson_b">
+        <text>
+          <base>HBEE 25.04(e) applies to the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 25.04(e)',singular),o('to the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" public-name="st_HBEE25.04e3AppliesPerSpouse_b">
+        <text>
+          <base>HBEE 25.04(e)(3) applies to the person's spouse (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 25.04(e)(3)',singular),o('to the person''s spouse (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" public-name="so_HBEE25.04bLtcPenalty_b">
+        <text>
+          <base>the person has a penalty period for Medicaid coverage of long-term care services and supports under HBEE 25.04(b)</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('a penalty period for Medicaid coverage of long-term care services and supports under HBEE 25.04(b)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p24" type="currency" public-name="st_pTotValDslwdTrnsfrsFrMnthOfAppUndHBEE2504d1Eff071515_c">
+        <text>
+          <base>the total value of all the person's disallowed transfers for the month of application under HBEE 25.04(d)(1) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p28" type="currency" public-name="st_pTotValDslwdTrnsfrsFrCrntMnthUndHBEE2504d2Eff071515_c">
+        <text>
+          <base>the total value of all the person's disallowed transfers for the current month under HBEE 25.04(d)(2) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p30" type="number" public-name="st_penaltyPerdNonRndNumDaysForApplMnHBEE25.04d1_n" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the non-rounded number of days in the person's penalty period for the month of application under HBEE 25.04(d)(1) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p31" type="number" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true" public-name="st_pNonRndNumDaysPnltyPrdCrtMnthUndHBEE2504d2Eff071515_n">
+        <text>
+          <base>the non-rounded number of days in the person's penalty period for the current month under HBEE 25.04(d)(2) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b2" type="boolean" public-name="so_HBEE25.04AppliesToProgram_b">
+        <text>
+          <base>HBEE 25.04 applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 25.04',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+      <attribute name="p26" type="currency">
+        <text>
+          <base>the total value of the group member's disallowed transfers for the person for the month of application under HBEE 25.04(d)(1) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p27" type="currency">
+        <text>
+          <base>the total value of the group member's disallowed transfers for the person for the current month under HBEE 25.04(d)(2) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+    </entity>
+    <entity id="personstransfer" name="the person's transfer" containment-relationship-id="personstransfers" containment-parent-id="person">
+      <attribute name="b1" type="boolean" public-name="si_perPenaltyPerdTransfrHBEE25.04b_b">
+        <text>
+          <base>there is a penalty period for the person's transfer under HBEE 25.04(b) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('a penalty period for the person''s transfer under HBEE 25.04(b) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p2" type="date" public-name="si_penaltyPerdStartDteTransfrHBEE25.04c_d">
+        <text>
+          <base>the penalty period start date for the person's transfer under HBEE 25.04(c) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p3" type="date" public-name="si_penaltyPerdEndDteTransfrHBEE25.04d_b">
+        <text>
+          <base>the penalty period end date for the person's transfer under HBEE 25.04(d) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p4" type="number" public-name="si_penaltyPerdNumDaysForPerTransfrHBEE25.04d_n">
+        <text>
+          <base>the number of days in the penalty period for the person's transfer under HBEE 25.04(d) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" public-name="si_perPenaltyPerdTransfrHasBegunHBEE25.04c_b">
+        <text>
+          <base>the penalty period for the person's transfer has begun under HBEE 25.04(c) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(begin,t(simple,present,perfect)),sb('the penalty period for the person''s transfer',singular),o('under HBEE 25.04(c) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" public-name="si_perPenaltyPerdTransfrHasExpiredHBEE25.04d_b">
+        <text>
+          <base>the penalty period for the person's transfer has expired under HBEE 25.04(d) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(expire,t(simple,present,perfect)),sb('the penalty period for the person''s transfer',singular),o('under HBEE 25.04(d) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" public-name="st_HBEE25.04c1AppliesPerTransfr_b">
+        <text>
+          <base>HBEE 25.04(c)(1) applies to the person's transfer (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 25.04(c)(1)',singular),o('to the person''s transfer (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" public-name="st_HBEE25.04c2AppliesPerTransfr_b">
+        <text>
+          <base>HBEE 25.04(c)(2) applies to the person's transfer (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 25.04(c)(2)',singular),o('to the person''s transfer (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" public-name="si_perPenaltyPerdTransfrHasBegunHBEE25.04c1_b">
+        <text>
+          <base>the penalty period for the person's transfer has begun under HBEE 25.04(c)(1) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(begin,t(simple,present,perfect)),sb('the penalty period for the person''s transfer',singular),o('under HBEE 25.04(c)(1) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" public-name="si_perPenaltyPerdTransfrHasBegunHBEE25.04c2_b">
+        <text>
+          <base>the penalty period for the person's transfer has begun under HBEE 25.04(c)(2) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(begin,t(simple,present,perfect)),sb('the penalty period for the person''s transfer',singular),o('under HBEE 25.04(c)(2) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" public-name="si_perTransfrOccurdAftrApplMn_b">
+        <text>
+          <base>the person's transfer occurred after the application month</base>
+          <parse>s(ver('10.4.6.76'),v(occur,t(simple,past,normal)),sb('the person''s transfer',plural),o('after the application month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" public-name="si_perTransfrOccurdDuringCurrMn_b">
+        <text>
+          <base>the person's transfer occurred during the current month</base>
+          <parse>s(ver('10.4.6.76'),v(occur,t(simple,past,normal)),sb('the person''s transfer',plural),o('during the current month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" public-name="si_perTransfrOccurdPriorCurrMn_b">
+        <text>
+          <base>the person's transfer occurred prior to the current month</base>
+          <parse>s(ver('10.4.6.76'),v(occur,t(simple,past,normal)),sb('the person''s transfer',plural),o('prior to the current month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p23" type="date" public-name="si_firstDayTransfrMnForPerTransfr_d">
+        <text>
+          <base>the first day of the transfer month for the person's transfer</base>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" public-name="st_HBEE25.04d1AppliesPerTransfr_b">
+        <text>
+          <base>HBEE 25.04(d)(1) applies to the person's transfer (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 25.04(d)(1)',singular),o('to the person''s transfer (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" public-name="st_HBEE25.04d2AppliesPerTransfr_b">
+        <text>
+          <base>HBEE 25.04(d)(2) applies to the person's transfer (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 25.04(d)(2)',singular),o('to the person''s transfer (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p25" type="currency">
+        <text>
+          <base>the disallowed value for the person's transfer for the month of application under HBEE 25.04(d)(1) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p29" type="currency">
+        <text>
+          <base>the disallowed value for the person's transfer for the current month under HBEE 25.04(d)(2) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personstransfer" text="the person's transfers" relationship-id="personstransfers" reverse-relationship-id="personstransfersperson" reverse-text="the person's transfer's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

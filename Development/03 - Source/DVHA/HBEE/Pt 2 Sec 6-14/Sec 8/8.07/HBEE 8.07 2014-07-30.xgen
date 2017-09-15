@@ -1,0 +1,1073 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity ref="global">
+      <attribute name="b6" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the benefit effective date is the beginning of the next month under HBEE 8.07(b)(1)(iii) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the benefit effective date',singular),o('the beginning of the next month under HBEE 8.07(b)(1)(iii) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the benefit period is aligned to the calendar year under HBEE 8.07(b)(3)(v) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the benefit period',singular),o('aligned to the calendar year under HBEE 8.07(b)(3)(v) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the adjusted net income test is an FPL% test under HBEE 8.07(b)(1)(i)(A) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the adjusted net income test',singular),o('an FPL% test under HBEE 8.07(b)(1)(i)(A) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the adjusted net income test is an FPL% test under HBEE 8.07(b)(2)(i)(B) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the adjusted net income test',singular),o('an FPL% test under HBEE 8.07(b)(2)(i)(B) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the adjusted net income test is an FPL% test under HBEE 8.07(b)(3)(i)(B) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the adjusted net income test',singular),o('an FPL% test under HBEE 8.07(b)(3)(i)(B) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b38" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the adjusted net income test is an FPL% test under HBEE 8.07(b)(4)(i)(C) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the adjusted net income test',singular),o('an FPL% test under HBEE 8.07(b)(4)(i)(C) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b45" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the benefit effective date is the beginning of the next month under HBEE 8.07(b)(3)(iii) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the benefit effective date',singular),o('the beginning of the next month under HBEE 8.07(b)(3)(iii) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b56" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it is before the first day of the second month following the month of publication of the revised annual FPL</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('before the first day of the second month following the month of publication of the revised annual FPL'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b63" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the adjusted net income floor is an FPL% test under HBEE 8.07(b)(2)(i)(B) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the adjusted net income floor',singular),o('an FPL% test under HBEE 8.07(b)(2)(i)(B) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p3" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the adjusted net income FPL percentage limit under HBEE 8.07(b)(1)(i)(A) (eff. 07/30/2014)</base>
+        </text>
+      </attribute>
+      <attribute name="p5" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the adjusted net income FPL percentage limit under HBEE 8.07(b)(2)(i)(B) (eff. 07/30/2014)</base>
+        </text>
+      </attribute>
+      <attribute name="p6" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the number of calendar months of potential retroactive eligibility under HBEE 8.07(b)(2)(iii) (eff. 07/30/2014)</base>
+        </text>
+      </attribute>
+      <attribute name="p8" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the adjusted net income FPL percentage limit under HBEE 8.07(b)(3)(i)(B) (eff. 07/30/2014)</base>
+        </text>
+      </attribute>
+      <attribute name="p9" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the number of calendar months of potential retroactive eligibility under HBEE 8.07(b)(3)(iv) (eff. 07/30/2014)</base>
+        </text>
+      </attribute>
+      <attribute name="p10" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the adjusted net income FPL percentage limit under HBEE 8.07(b)(4)(i)(C) (eff. 07/30/2014)</base>
+        </text>
+      </attribute>
+      <attribute name="p13" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the number of calendar months of potential retroactive eligibility under HBEE 8.07(b)(4)(iii) (eff. 07/30/2014)</base>
+        </text>
+      </attribute>
+      <attribute name="p27" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the adjusted net income FPL percentage floor under HBEE 8.07(b)(2)(i)(B) (eff. 07/30/2014)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b2" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is an adjusted net income test for the program under HBEE 8.07(b)(1)(i)(A) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adjusted net income test for the program under HBEE 8.07(b)(1)(i)(A) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is an adjusted net income test for the program under HBEE 8.07(b)(2)(i)(B) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adjusted net income test for the program under HBEE 8.07(b)(2)(i)(B) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is an adjusted net income test for the program under HBEE 8.07(b)(3)(i)(B) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adjusted net income test for the program under HBEE 8.07(b)(3)(i)(B) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is an adjusted net income test for the program under HBEE 8.07(b)(4)(i)(C) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adjusted net income test for the program under HBEE 8.07(b)(4)(i)(C) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is a countable resource test for the program under HBEE 8.07(b)(4)(i)(D) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('a countable resource test for the program under HBEE 8.07(b)(4)(i)(D) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 8.07(b)(1) applies to the program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.07(b)(1)',singular),o('to the program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 8.07(b)(2) applies to the program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.07(b)(2)',singular),o('to the program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b34" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 8.07(b)(3) applies to the program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.07(b)(3)',singular),o('to the program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 8.07(b)(4) applies to the program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.07(b)(4)',singular),o('to the program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b44" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is a potential retroactive eligibility period for the program under HBEE 8.07(b)(2)(iii) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('a potential retroactive eligibility period for the program under HBEE 8.07(b)(2)(iii) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b46" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is a potential retroactive eligibility period for the program under HBEE 8.07(b)(3)(iv) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('a potential retroactive eligibility period for the program under HBEE 8.07(b)(3)(iv) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b47" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is a potential retroactive eligibility period for the program under HBEE 8.07(b)(4)(iii) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('a potential retroactive eligibility period for the program under HBEE 8.07(b)(4)(iii) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b48" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is MSP-QMB</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MSP-QMB'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b49" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is MSP-SLMB</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MSP-SLMB'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b50" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is MSP-QI</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MSP-QI'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b51" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is MSP-QDWI</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MSP-QDWI'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b58" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is a MSP program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('a MSP program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b60" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 8.07 applies to the program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.07',singular),o('to the program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b62" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is an adjusted net income floor for the program under HBEE 8.07(b)(2)(i)(B) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adjusted net income floor for the program under HBEE 8.07(b)(2)(i)(B) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b3" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 8.07(b)(1)(i)(B) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.07(b)(1)(i)(B)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is entitled to Medicare part A solely because the person is eligible to enroll under section 1818 of the Social Security Act</base>
+          <parse>s(ver('10.4.6.76'),v(entitle,t(simple,present,normal)),ob('the person',singular),o('to Medicare part A solely because the person is eligible to enroll under section 1818 of the Social Security Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 8.07(b)(2)(i)(A) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.07(b)(2)(i)(A)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 8.07(b)(3)(i)(A) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.07(b)(3)(i)(A)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 8.07(b)(3)(i)(C) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.07(b)(3)(i)(C)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person receives other federally-funded medical assistance</base>
+          <parse>s(ver('10.4.6.76'),v(receive,t(simple,present,normal)),sb('the person',singular),o('other federally-funded medical assistance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it is the case that the only other federally-funded medical assistance that the person receives is coverage for excluded drug classes under Medicare part D</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the only other federally-funded medical assistance that the person receives is coverage for excluded drug classes under Medicare part D'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is enrolled in Medicare part D</base>
+          <parse>s(ver('10.4.6.76'),v(enroll,t(simple,present,normal)),ob('the person',singular),o('in Medicare part D'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets the categorical requirement under HBEE 8.07(b)(4)(i) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the categorical requirement under HBEE 8.07(b)(4)(i) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 8.07(b)(4)(i)(A) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.07(b)(4)(i)(A)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 8.07(b)(4)(i)(B) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.07(b)(4)(i)(B)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person lost Medicare benefits based on disability because the person returned to work</base>
+          <parse>s(ver('10.4.6.76'),v(lose,t(simple,past,normal)),sb('the person',plural),o('Medicare benefits based on disability because the person returned to work'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 8.07(b)(4)(i)(E) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.07(b)(4)(i)(E)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is eligible for Medicaid</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('eligible for Medicaid'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is entitled to Medicare part A</base>
+          <parse>s(ver('10.4.6.76'),v(entitle,t(simple,present,normal)),ob('the person',singular),o('to Medicare part A'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b52" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered disabled under HBEE 8.03(c)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('disabled under HBEE 8.03(c)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p15" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the MABD resource limit under Medicaid Procedures P-2420C(1) for the person's Medicaid group as defined in HBEE 29.04</base>
+        </text>
+      </attribute>
+      <attribute name="p16" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the countable resource limit for the person under HBEE 8.07(b)(4)(i)(D) (eff. 07/30/2014)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's income" id="personsincome" containment-relationship-id="personsincomes" containment-parent-id="person">
+      <attribute name="b55" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is a monthly insurance benefit under Title II of the Social Security Act</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a monthly insurance benefit under Title II of the Social Security Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p23" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the COLA disregard for the person's income under HBEE 8.07(b)(1)(v) (eff. 07/30/2014)</base>
+        </text>
+      </attribute>
+      <attribute name="p24" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the amount of the person's income attributable to the most recent cost-of-living adjustment (COLA)</base>
+        </text>
+      </attribute>
+      <attribute name="p26" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the COLA disregard for the person's income under HBEE 8.07(b)(2)(iv) (eff. 07/30/2014)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the income program" id="incomeprogram" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+      <attribute name="b54" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 8.07(b)(1)(v) applies to the person's income for the income program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.07(b)(1)(v)',singular),o('to the person''s income for the income program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b57" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 8.07(b)(2)(iv) applies to the person's income for the income program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.07(b)(2)(iv)',singular),o('to the person''s income for the income program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b61" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 8.07 applies to the income program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 8.07',singular),o('to the income program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p21" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the income exclusion per payment for the person's income for the income program under HBEE 8.07 (eff. 07/30/2014)</base>
+        </text>
+      </attribute>
+      <attribute name="p22" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the income exclusion per payment for the person's income for the income program under HBEE 8.07(b)(1)(v) (eff. 07/30/2014)</base>
+        </text>
+      </attribute>
+      <attribute name="p25" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the income exclusion per payment for the person's income for the income program under HBEE 8.07(b)(2)(iv) (eff. 07/30/2014)</base>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship type="ManyToMany" relationship-id="personsprogramfortheincomeprogram" reverse-relationship-id="personsincomesfortheprogram" text="the person's program for the income program" reverse-text="the person's incomes for the program" source="incomeprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" text="the person's income's income programs" reverse-text="the person's income for the income program" source="personsincome" target="incomeprogram" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" text="the person's incomes" reverse-text="the person's income's person" source="person" target="personsincome" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="HBEE 8.07 applies to the program (eff. 07/30/2014)" ruleburst="true" concludes="b60" folder="1" source-offset="72">
+      <rule-xml>
+        <conclude attr-id="b60" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b58" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="HBEE 8.07 applies to the income program (eff. 07/30/2014)" ruleburst="true" concludes="b61" folder="1" source-offset="168">
+      <rule-xml>
+        <conclude attr-id="b61" entity-id="incomeprogram" scope-id="incomeprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="program0">
+              <relationship relationship-id="personsprogramfortheincomeprogram" target-entity-id="program" />
+              <attribute attr-id="b60" />
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="the income exclusion per payment for the person's income for the income program under HBEE 8.07 (eff. 07/30/2014) " ruleburst="true" concludes="p21 = p22 + p25" folder="1" source-offset="419">
+      <rule-xml>
+        <conclude attr-id="p21" entity-id="incomeprogram" scope-id="incomeprogram0">
+          <value>
+            <plus>
+              <attribute attr-id="p22" />
+              <attribute attr-id="p25" />
+            </plus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="HBEE 8.07(b)(1) applies to the program (eff. 07/30/2014)" ruleburst="true" concludes="b29" folder="2" source-offset="852">
+      <rule-xml>
+        <conclude attr-id="b29" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b48" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="HBEE 8.07(b)(1)(i)(B) is satisfied for the person (eff. 07/30/2014)" ruleburst="true" concludes="b3" folder="2" source-offset="975">
+      <rule-xml>
+        <conclude attr-id="b3" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b28" />
+              <not>
+                <attribute attr-id="b5" />
+              </not>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="there is an adjusted net income test for the program under HBEE 8.07(b)(1)(i)(A) (eff. 07/30/2014)" ruleburst="true" concludes="b2" folder="2" source-offset="1275">
+      <rule-xml>
+        <conclude attr-id="b2" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b29" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="the adjusted net income test is an FPL% test under HBEE 8.07(b)(1)(i)(A) (eff. 07/30/2014)" ruleburst="true" concludes="b31" folder="2" source-offset="1446">
+      <rule-xml>
+        <conclude attr-id="b31" entity-id="global" scope-id="global0">
+          <value>
+            <true-value />
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="7" name="the adjusted net income FPL percentage limit under HBEE 8.07(b)(1)(i)(A) (eff. 07/30/2014) " ruleburst="true" concludes="p3 = 100" folder="2" source-offset="1544">
+      <rule-xml>
+        <conclude attr-id="p3" entity-id="global" scope-id="global0">
+          <value>
+            <number-value>100</number-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="8" name="the benefit effective date is the beginning of the next month under HBEE 8.07(b)(1)(iii) (eff. 07/30/2014)" ruleburst="true" concludes="b6" folder="2" source-offset="1671">
+      <rule-xml>
+        <conclude attr-id="b6" entity-id="global" scope-id="global0">
+          <value>
+            <true-value />
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="9" name="the income exclusion per payment for the person's income for the income program under HBEE 8.07(b)(1)(v) (eff. 07/30/2014)" ruleburst="true" concludes="p22" folder="2" source-offset="1803">
+      <rule-xml>
+        <table-conclude attr-id="p22" entity-id="incomeprogram" scope-id="incomeprogram0">
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="personsincomefortheincomeprogram" target-entity-id="personsincome" />
+                <attribute attr-id="p23" />
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b54" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="10" name="HBEE 8.07(b)(1)(v) applies to the person's income for the income program (eff. 07/30/2014)" ruleburst="true" concludes="b54" folder="2" source-offset="2141">
+      <rule-xml>
+        <conclude attr-id="b54" entity-id="incomeprogram" scope-id="incomeprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="program0">
+              <relationship relationship-id="personsprogramfortheincomeprogram" target-entity-id="program" />
+              <and>
+                <attribute attr-id="b29" />
+                <or>
+                  <not>
+                    <attribute attr-id="b29" />
+                  </not>
+                  <scope-for scope-ref="incomeprogram0" target-entity-id="incomeprogram">
+                    <for>
+                      <relationship relationship-id="personsincomefortheincomeprogram" target-entity-id="personsincome" />
+                      <attribute attr-id="b55" />
+                    </for>
+                  </scope-for>
+                </or>
+              </and>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="11" name="the COLA disregard for the person's income under HBEE 8.07(b)(1)(v) (eff. 07/30/2014)" ruleburst="true" concludes="p23" folder="2" source-offset="2589">
+      <rule-xml>
+        <table-conclude attr-id="p23" entity-id="personsincome" scope-id="personsincome0">
+          <row>
+            <value>
+              <attribute attr-id="p24" />
+            </value>
+            <condition>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="b56" />
+              </scope-for>
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="12" name="HBEE 8.07(b)(2) applies to the program (eff. 07/30/2014)" ruleburst="true" concludes="b30" folder="3" source-offset="2970">
+      <rule-xml>
+        <conclude attr-id="b30" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b49" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="13" name="HBEE 8.07(b)(2)(i)(A) is satisfied for the person (eff. 07/30/2014)" ruleburst="true" concludes="b8" folder="3" source-offset="3094">
+      <rule-xml>
+        <conclude attr-id="b8" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b3" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="14" name="there is an adjusted net income test for the program under HBEE 8.07(b)(2)(i)(B) (eff. 07/30/2014)" ruleburst="true" concludes="b7" folder="3" source-offset="3334">
+      <rule-xml>
+        <conclude attr-id="b7" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b30" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="15" name="the adjusted net income test is an FPL% test under HBEE 8.07(b)(2)(i)(B) (eff. 07/30/2014)" ruleburst="true" concludes="b33" folder="3" source-offset="3505">
+      <rule-xml>
+        <conclude attr-id="b33" entity-id="global" scope-id="global0">
+          <value>
+            <true-value />
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="16" name="the adjusted net income FPL percentage limit under HBEE 8.07(b)(2)(i)(B) (eff. 07/30/2014) " ruleburst="true" concludes="p5 = 120" folder="3" source-offset="3603">
+      <rule-xml>
+        <conclude attr-id="p5" entity-id="global" scope-id="global0">
+          <value>
+            <number-value>120</number-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="17" name="there is an adjusted net income floor for the program under HBEE 8.07(b)(2)(i)(B) (eff. 07/30/2014)" ruleburst="true" concludes="b62" folder="3" source-offset="3735">
+      <rule-xml>
+        <conclude attr-id="b62" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b30" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="18" name="the adjusted net income floor is an FPL% test under HBEE 8.07(b)(2)(i)(B) (eff. 07/30/2014)" ruleburst="true" concludes="b63" folder="3" source-offset="3908">
+      <rule-xml>
+        <conclude attr-id="b63" entity-id="global" scope-id="global0">
+          <value>
+            <true-value />
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="19" name="the adjusted net income FPL percentage floor under HBEE 8.07(b)(2)(i)(B) (eff. 07/30/2014) " ruleburst="true" concludes="p27 = 100" folder="3" source-offset="4007">
+      <rule-xml>
+        <conclude attr-id="p27" entity-id="global" scope-id="global0">
+          <value>
+            <number-value>100</number-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="20" name="there is a potential retroactive eligibility period for the program under HBEE 8.07(b)(2)(iii) (eff. 07/30/2014)" ruleburst="true" concludes="b44" folder="3" source-offset="4143">
+      <rule-xml>
+        <conclude attr-id="b44" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b30" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="21" name="the number of calendar months of potential retroactive eligibility under HBEE 8.07(b)(2)(iii) (eff. 07/30/2014) " ruleburst="true" concludes="p6 = 3" folder="3" source-offset="4329">
+      <rule-xml>
+        <conclude attr-id="p6" entity-id="global" scope-id="global0">
+          <value>
+            <number-value>3</number-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="22" name="the income exclusion per payment for the person's income for the income program under HBEE 8.07(b)(2)(iv) (eff. 07/30/2014)" ruleburst="true" concludes="p25" folder="3" source-offset="4474">
+      <rule-xml>
+        <table-conclude attr-id="p25" entity-id="incomeprogram" scope-id="incomeprogram0">
+          <row>
+            <value>
+              <for>
+                <relationship relationship-id="personsincomefortheincomeprogram" target-entity-id="personsincome" />
+                <attribute attr-id="p26" />
+              </for>
+            </value>
+            <condition>
+              <attribute attr-id="b57" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="23" name="HBEE 8.07(b)(2)(iv) applies to the person's income for the income program (eff. 07/30/2014)" ruleburst="true" concludes="b57" folder="3" source-offset="4815">
+      <rule-xml>
+        <conclude attr-id="b57" entity-id="incomeprogram" scope-id="incomeprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="program0">
+              <relationship relationship-id="personsprogramfortheincomeprogram" target-entity-id="program" />
+              <and>
+                <attribute attr-id="b30" />
+                <or>
+                  <not>
+                    <attribute attr-id="b30" />
+                  </not>
+                  <scope-for scope-ref="incomeprogram0" target-entity-id="incomeprogram">
+                    <for>
+                      <relationship relationship-id="personsincomefortheincomeprogram" target-entity-id="personsincome" />
+                      <attribute attr-id="b55" />
+                    </for>
+                  </scope-for>
+                </or>
+              </and>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="24" name="the COLA disregard for the person's income under HBEE 8.07(b)(2)(iv) (eff. 07/30/2014)" ruleburst="true" concludes="p26" folder="3" source-offset="5264">
+      <rule-xml>
+        <table-conclude attr-id="p26" entity-id="personsincome" scope-id="personsincome0">
+          <row>
+            <value>
+              <attribute attr-id="p24" />
+            </value>
+            <condition>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="b56" />
+              </scope-for>
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="25" name="HBEE 8.07(b)(3) applies to the program (eff. 07/30/2014)" ruleburst="true" concludes="b34" folder="4" source-offset="5646">
+      <rule-xml>
+        <conclude attr-id="b34" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b50" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="26" name="HBEE 8.07(b)(3)(i)(A) is satisfied for the person (eff. 07/30/2014)" ruleburst="true" concludes="b11" folder="4" source-offset="5768">
+      <rule-xml>
+        <conclude attr-id="b11" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b3" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="27" name="there is an adjusted net income test for the program under HBEE 8.07(b)(3)(i)(B) (eff. 07/30/2014)" ruleburst="true" concludes="b10" folder="4" source-offset="6009">
+      <rule-xml>
+        <conclude attr-id="b10" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b34" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="28" name="the adjusted net income test is an FPL% test under HBEE 8.07(b)(3)(i)(B) (eff. 07/30/2014)" ruleburst="true" concludes="b36" folder="4" source-offset="6432">
+      <rule-xml>
+        <conclude attr-id="b36" entity-id="global" scope-id="global0">
+          <value>
+            <true-value />
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="29" name="the adjusted net income FPL percentage limit under HBEE 8.07(b)(3)(i)(B) (eff. 07/30/2014) " ruleburst="true" concludes="p8 = 135" folder="4" source-offset="6530">
+      <rule-xml>
+        <conclude attr-id="p8" entity-id="global" scope-id="global0">
+          <value>
+            <number-value>135</number-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="30" name="HBEE 8.07(b)(3)(i)(C) is satisfied for the person (eff. 07/30/2014)" ruleburst="true" concludes="b12" folder="4" source-offset="6662">
+      <rule-xml>
+        <conclude attr-id="b12" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <not>
+                <attribute attr-id="b13" />
+              </not>
+              <and>
+                <attribute attr-id="b13" />
+                <attribute attr-id="b14" />
+                <attribute attr-id="b15" />
+              </and>
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="31" name="the benefit effective date is the beginning of the next month under HBEE 8.07(b)(3)(iii) (eff. 07/30/2014)" ruleburst="true" concludes="b45" folder="4" source-offset="7132">
+      <rule-xml>
+        <conclude attr-id="b45" entity-id="global" scope-id="global0">
+          <value>
+            <true-value />
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="32" name="the benefit period is aligned to the calendar year under HBEE 8.07(b)(3)(v) (eff. 07/30/2014)" ruleburst="true" concludes="b17" folder="4" source-offset="7246">
+      <rule-xml>
+        <conclude attr-id="b17" entity-id="global" scope-id="global0">
+          <value>
+            <true-value />
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="33" name="there is a potential retroactive eligibility period for the program under HBEE 8.07(b)(3)(iv) (eff. 07/30/2014)" ruleburst="true" concludes="b46" folder="4" source-offset="7373">
+      <rule-xml>
+        <conclude attr-id="b46" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b34" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="34" name="the number of calendar months of potential retroactive eligibility under HBEE 8.07(b)(3)(iv) (eff. 07/30/2014)" ruleburst="true" concludes="p9 = 3" folder="4" source-offset="7558">
+      <rule-xml>
+        <conclude attr-id="p9" entity-id="global" scope-id="global0">
+          <value>
+            <number-value>3</number-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="35" name="HBEE 8.07(b)(4) applies to the program (eff. 07/30/2014)" ruleburst="true" concludes="b35" folder="5" source-offset="7732">
+      <rule-xml>
+        <conclude attr-id="b35" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b51" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="36" name="the person meets the categorical requirement under HBEE 8.07(b)(4)(i) (eff. 07/30/2014)" ruleburst="true" concludes="b18" folder="5" source-offset="7856">
+      <rule-xml>
+        <conclude attr-id="b18" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b19" />
+              <attribute attr-id="b20" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="37" name="HBEE 8.07(b)(4)(i)(A) is satisfied for the person (eff. 07/30/2014)" ruleburst="true" concludes="b19" folder="5" source-offset="8107">
+      <rule-xml>
+        <conclude attr-id="b19" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b21" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="38" name="HBEE 8.07(b)(4)(i)(B) is satisfied for the person (eff. 07/30/2014)" ruleburst="true" concludes="b20" folder="5" source-offset="8281">
+      <rule-xml>
+        <conclude attr-id="b20" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b52" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="39" name="there is an adjusted net income test for the program under HBEE 8.07(b)(4)(i)(C) (eff. 07/30/2014)" ruleburst="true" concludes="b23" folder="5" source-offset="8439">
+      <rule-xml>
+        <conclude attr-id="b23" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b35" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="40" name="the adjusted net income test is an FPL% test under HBEE 8.07(b)(4)(i)(C) (eff. 07/30/2014)" ruleburst="true" concludes="b38" folder="5" source-offset="8611">
+      <rule-xml>
+        <conclude attr-id="b38" entity-id="global" scope-id="global0">
+          <value>
+            <true-value />
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="41" name="the adjusted net income FPL percentage limit under HBEE 8.07(b)(4)(i)(C) (eff. 07/30/2014) " ruleburst="true" concludes="p10 = 200" folder="5" source-offset="8709">
+      <rule-xml>
+        <conclude attr-id="p10" entity-id="global" scope-id="global0">
+          <value>
+            <number-value>200</number-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="42" name="there is a countable resource test for the program under HBEE 8.07(b)(4)(i)(D) (eff. 07/30/2014)" ruleburst="true" concludes="b24" folder="5" source-offset="8835">
+      <rule-xml>
+        <conclude attr-id="b24" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b35" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="43" name="the countable resource limit for the person under HBEE 8.07(b)(4)(i)(D) (eff. 07/30/2014) " ruleburst="true" concludes="p16 = 2 * p15" folder="5" source-offset="9005">
+      <rule-xml>
+        <conclude attr-id="p16" entity-id="person" scope-id="person0">
+          <value>
+            <multiply>
+              <number-value>2</number-value>
+              <attribute attr-id="p15" />
+            </multiply>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="44" name="HBEE 8.07(b)(4)(i)(E) is satisfied for the person (eff. 07/30/2014)" ruleburst="true" concludes="b25" folder="5" source-offset="9259">
+      <rule-xml>
+        <conclude attr-id="b25" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <not>
+              <attribute attr-id="b26" />
+            </not>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="45" name="there is a potential retroactive eligibility period for the program under HBEE 8.07(b)(4)(iii) (eff. 07/30/2014)" ruleburst="true" concludes="b47" folder="5" source-offset="9413">
+      <rule-xml>
+        <conclude attr-id="b47" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b35" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="46" name="the number of calendar months of potential retroactive eligibility under HBEE 8.07(b)(4)(iii) (eff. 07/30/2014) " ruleburst="true" concludes="p13 = 3" folder="5" source-offset="9599">
+      <rule-xml>
+        <conclude attr-id="p13" entity-id="global" scope-id="global0">
+          <value>
+            <number-value>3</number-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="8.07 Medicare Cost-Sharing (07/30/2014, 14-04)" parent="0" id="1" />
+    <folder text="HBEE 8.07(b)(1):  QMB" parent="1" id="2" />
+    <folder text="HBEE 8.07(b)(2):  SLMB" parent="1" id="3" />
+    <folder text="HBEE 8.07(b)(3):  QI-1" parent="1" id="4" />
+    <folder text="HBEE 8.07(b)(4):  QDWI" parent="1" id="5" />
+  </rule-folders>
+</root>

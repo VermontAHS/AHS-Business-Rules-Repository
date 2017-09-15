@@ -1,0 +1,42 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity ref="global" />
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b3" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>HBEE 20.01 is satisfied for the person</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 20.01',singular),o('for the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>HBEE 20.01 is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 20.01',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+    <relationship type="ManyToMany" relationship-id="personsprevioussortorderpeople" reverse-relationship-id="personssubsequentsortorderpeople" text="the person's previous sort-order people" reverse-text="the person's subsequent sort-order people" source="person" target="person" is-implicit="false" is-containment="false" />
+  </relationships>
+  <rules>
+    <rule ruleburst="true" folder="0" name="HBEE 20.01 is satisfied for the person" id="1" concludes="b3">
+      <rule-xml>
+        <table-conclude attr-id="b3" entity-id="person" scope-id="person0">
+          <row>
+            <value>
+              <attribute attr-id="b4" />
+            </value>
+            <condition>
+              <true-value />
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+</root>

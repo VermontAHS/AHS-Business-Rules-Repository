@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-script product-version="10.4.6.76" schema-version="4">
+  <test-case-set />
+  <outcome-set>
+    <outcome name="so_HBEE1301a1Satisfiedeff073014_b" display-name="so_HBEE1301a1Satisfied_b" text="HBEE 13.01(a)(1) is satisfied for the person (eff. 07/30/2014)" type="boolean" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <boolean-val>true</boolean-val>
+      </default-change-points>
+    </outcome>
+    <outcome name="so_HBEE1301a2Satisfiedeff073014_b" display-name="so_HBEE1301a2Satisfied_b" text="HBEE 13.01(a)(2) is satisfied for the person (eff. 07/30/2014)" type="boolean" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <boolean-val>true</boolean-val>
+      </default-change-points>
+    </outcome>
+    <outcome name="so_HBEE1301aSatisfiedeff073014_b" display-name="so_HBEE1301aSatisfied_b" text="the person meets the categorical requirements under HBEE 13.01(a) (eff. 07/30/2014)" type="boolean" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <boolean-val>true</boolean-val>
+      </default-change-points>
+    </outcome>
+  </outcome-set>
+</test-script>

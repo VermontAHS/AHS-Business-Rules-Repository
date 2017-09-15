@@ -1,0 +1,321 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b8" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is under 18 years of age</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('under 18 years of age'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is under 19 years of age</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('under 19 years of age'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is a full-time student in secondary school (or equivalent vocational or technical training)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('a full-time student in secondary school (or equivalent vocational or technical training)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is expected to complete secondary school (or equivalent vocational or technical training) before attaining 19 years of age</base>
+          <parse>s(ver('10.4.6.76'),v(expect,t(simple,present,normal)),ob('the person',singular),o('to complete secondary school (or equivalent vocational or technical training) before attaining 19 years of age'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is pregnant</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('pregnant'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered to be a parent or caretaker relative under HBEE 3.00 (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be a parent or caretaker relative under HBEE 3.00 (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered to be a dependent child under HBEE 3.00 (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be a dependent child under HBEE 3.00 (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered to be a pregnant woman under HBEE 3.00 (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be a pregnant woman under HBEE 3.00 (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered to be in a post partum period under HBEE 3.00 (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be in a post partum period under HBEE 3.00 (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered an Indian under HBEE 3.00 (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('an Indian under HBEE 3.00 (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is a member of a Federally-recognized Indian tribe</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('a member of a Federally-recognized Indian tribe'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p4" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the date the person's pregnancy ends</base>
+        </text>
+      </attribute>
+      <attribute name="p5" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the end date of the person's post partum period under HBEE 3.00 (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the group member" id="groupmember" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+      <attribute name="b5" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member lives with the person</base>
+          <parse>s(ver('10.4.6.76'),v(live,t(simple,present,normal)),sb('the group member',singular),o('with the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is considered to be the person's dependent child under HBEE 3.00 (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the group member',singular),o('to be the person''s dependent child under HBEE 3.00 (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is considered to be the person's parent or caretaker relative under HBEE 3.00 (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the group member',singular),o('to be the person''s parent or caretaker relative under HBEE 3.00 (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member's care is the primary responsibility of the person</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member''s care',singular),o('the primary responsibility of the person'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+  </entities>
+  <relationships>
+    <relationship type="ManyToMany" relationship-id="groupmembersrepresentativeperson" reverse-relationship-id="personsrepresentationsasagroupmember" text="the group member's representative person" reverse-text="the person's representations as a group member" source="groupmember" target="person" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" text="the person's group members" reverse-text="the group member's containing person" source="person" target="groupmember" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="the person is considered to be a parent or caretaker relative under HBEE 3.00 (eff. 08/01/2016)" ruleburst="true" concludes="b15" folder="2" source-offset="62">
+      <rule-xml>
+        <conclude attr-id="b15" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <exists scope-id="groupmember0">
+              <relationship relationship-id="personsgroupmembers" target-entity-id="groupmember" />
+              <attribute attr-id="b16" />
+            </exists>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the group member is considered to be the person's dependent child under HBEE 3.00 (eff. 08/01/2016)" ruleburst="true" concludes="b16" folder="2" source-offset="350">
+      <rule-xml>
+        <conclude attr-id="b16" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="the child">
+              <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+              <and>
+                <attribute attr-id="b18" />
+                <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                  <attribute attr-id="b5" />
+                </scope-for>
+                <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                  <attribute attr-id="b23" />
+                </scope-for>
+              </and>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="the group member is considered to be the person's parent or caretaker relative under HBEE 3.00 (eff. 08/01/2016)" ruleburst="true" concludes="b17" folder="2" source-offset="817">
+      <rule-xml>
+        <conclude attr-id="b17" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="person0">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                <for scope-id="the caretaker">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <exists scope-id="the child member">
+                    <relationship relationship-id="personsgroupmembers" target-entity-id="groupmember" />
+                    <and>
+                      <attribute attr-id="b16" />
+                      <for scope-id="the child">
+                        <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                        <instance-equals>
+                          <scope-ref id="the child" />
+                          <scope-ref id="person0" />
+                        </instance-equals>
+                      </for>
+                    </and>
+                  </exists>
+                </for>
+              </scope-for>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="the person is considered to be a dependent child under HBEE 3.00 (eff. 08/01/2016)" ruleburst="true" concludes="b18" folder="3" source-offset="1693">
+      <rule-xml>
+        <conclude attr-id="b18" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b8" />
+              <and>
+                <not>
+                  <attribute attr-id="b8" />
+                </not>
+                <attribute attr-id="b9" />
+                <attribute attr-id="b10" />
+                <attribute attr-id="b11" />
+              </and>
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="the person is considered an Indian under HBEE 3.00 (eff. 08/01/2016)" ruleburst="true" concludes="b21" folder="4" source-offset="2195">
+      <rule-xml>
+        <conclude attr-id="b21" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b22" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="the person is considered to be a pregnant woman under HBEE 3.00 (eff. 08/01/2016)" ruleburst="true" concludes="b19" folder="5" source-offset="2360">
+      <rule-xml>
+        <conclude attr-id="b19" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b13" />
+              <attribute attr-id="b20" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="the person is considered to be in a post partum period under HBEE 3.00 (eff. 08/01/2016)" ruleburst="true" concludes="b20" folder="5" source-offset="2579">
+      <rule-xml>
+        <conclude attr-id="b20" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <not>
+                <unknown>
+                  <attribute attr-id="p4" />
+                </unknown>
+              </not>
+              <certain>
+                <attribute attr-id="p4" />
+              </certain>
+              <temporal-on-or-after>
+                <attribute attr-id="p4" />
+              </temporal-on-or-after>
+              <temporal-on-or-before>
+                <attribute attr-id="p5" />
+              </temporal-on-or-before>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="7" name="the end date of the person's post partum period under HBEE 3.00 (eff. 08/01/2016) " ruleburst="true" concludes="p5 = AddDays(AddMonths(MakeDate(ExtractYear(AddDays(p4,60)),ExtractMonth(AddDays(p4,60)),1),1),-1)" folder="5" source-offset="3031">
+      <rule-xml>
+        <conclude attr-id="p5" entity-id="person" scope-id="person0">
+          <value>
+            <add-days>
+              <add-months>
+                <make-date>
+                  <extract-year>
+                    <add-days>
+                      <attribute attr-id="p4" />
+                      <number-value>60</number-value>
+                    </add-days>
+                  </extract-year>
+                  <extract-month>
+                    <add-days>
+                      <attribute attr-id="p4" />
+                      <number-value>60</number-value>
+                    </add-days>
+                  </extract-month>
+                  <number-value>1</number-value>
+                </make-date>
+                <number-value>1</number-value>
+              </add-months>
+              <negate>
+                <number-value>1</number-value>
+              </negate>
+            </add-days>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="3.00 Definitions (08/01/2016, 16-02FP)" parent="0" id="1" />
+    <folder text="Caretaker relative" parent="1" id="2" />
+    <folder text="Dependent child" parent="1" id="3" />
+    <folder text="Indian" parent="1" id="4" />
+    <folder text="Pregnant woman" parent="1" id="5" />
+  </rule-folders>
+</root>

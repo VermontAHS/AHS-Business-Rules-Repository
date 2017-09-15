@@ -1,0 +1,122 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="p1" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's unique ID</base>
+        </text>
+      </attribute>
+      <attribute name="p2" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's income" id="personsincome" containment-relationship-id="personsincomes" containment-parent-id="person">
+      <attribute name="p5" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's income's unique ID</base>
+        </text>
+      </attribute>
+      <attribute name="p6" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's income</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's expense" id="personsexpense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+      <attribute name="p7" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's expense's unique ID</base>
+        </text>
+      </attribute>
+      <attribute name="p8" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's expense</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's resource" id="personsresource" containment-relationship-id="personsresources" containment-parent-id="person">
+      <attribute name="p9" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's resource's unique ID</base>
+        </text>
+      </attribute>
+      <attribute name="p10" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's resource</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the address" id="address" containment-relationship-id="addresses" containment-parent-id="global">
+      <attribute name="p3" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the address's unique ID</base>
+        </text>
+      </attribute>
+      <attribute name="p4" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the address</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" text="the person's resources" reverse-text="the person's resource's person" source="person" target="personsresource" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" text="the person's expenses" reverse-text="the person's expense's person" source="person" target="personsexpense" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" text="the person's incomes" reverse-text="the person's income's person" source="person" target="personsincome" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="addresses" reverse-relationship-id="global_addresses_rev" text="the addresses" source="global" target="address" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="the person's unique ID " ruleburst="true" concludes="p1 = p2" folder="1" source-offset="72" question-search="false">
+      <rule-xml>
+        <conclude attr-id="p1" entity-id="person" scope-id="person0">
+          <value>
+            <attribute attr-id="p2" />
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the address's unique ID " ruleburst="true" concludes="p3 = p4" folder="1" source-offset="135" question-search="false">
+      <rule-xml>
+        <conclude attr-id="p3" entity-id="address" scope-id="address0">
+          <value>
+            <attribute attr-id="p4" />
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="the person's income's unique ID " ruleburst="true" concludes="p5 = p6" folder="1" source-offset="200" question-search="false">
+      <rule-xml>
+        <conclude attr-id="p5" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <attribute attr-id="p6" />
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="the person's expense's unique ID " ruleburst="true" concludes="p7 = p8" folder="1" source-offset="280" question-search="false">
+      <rule-xml>
+        <conclude attr-id="p7" entity-id="personsexpense" scope-id="personsexpense0">
+          <value>
+            <attribute attr-id="p8" />
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="the person's resource's unique ID " ruleburst="true" concludes="p9 = p10" folder="1" source-offset="362" question-search="false">
+      <rule-xml>
+        <conclude attr-id="p9" entity-id="personsresource" scope-id="personsresource0">
+          <value>
+            <attribute attr-id="p10" />
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="Unique IDs" parent="0" id="1" />
+  </rule-folders>
+</root>

@@ -1,0 +1,230 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity ref="global" />
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b5" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the person is considered to be a qualified non-citizen under HBEE 17.01(d) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be a qualified non-citizen under HBEE 17.01(d) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the person is considered to be a qualified non-citizen under HBEE 17.01(d)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be a qualified non-citizen under HBEE 17.01(d)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the person is considered to be a refugee under HBEE 17.01(d)(2)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be a refugee under HBEE 17.01(d)(2)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the person is considered to be a refugee under HBEE 17.01(d)(2) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be a refugee under HBEE 17.01(d)(2) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the person is considered a qualified battered non-citizen under HBEE 17.01(e) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('a qualified battered non-citizen under HBEE 17.01(e) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the person is considered a qualified battered non-citizen under HBEE 17.01(e)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('a qualified battered non-citizen under HBEE 17.01(e)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the person is considered to be lawfully present in the United States under HBEE 17.01(g) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be lawfully present in the United States under HBEE 17.01(g) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the person is considered to be lawfully present in the United States under HBEE 17.01(g)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be lawfully present in the United States under HBEE 17.01(g)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>HBEE 17.01(d)(10) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(d)(10)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>HBEE 17.01(d)(10) is satisfied for the person</base>
+          <parse>s(ver('10.4.5.40'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(d)(10)',singular),o('for the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the person is considered a non-citizen under HBEE 17.01(h)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('a non-citizen under HBEE 17.01(h)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the person is considered a non-citizen under HBEE 17.01(h) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('a non-citizen under HBEE 17.01(h) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the person is a Cuban or Haitian entrant as defined in 501(e)(2) of the Refugee Assistance Act as clarified under HBEE 17.01(d)(2)(ii)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('a Cuban or Haitian entrant as defined in 501(e)(2) of the Refugee Assistance Act as clarified under HBEE 17.01(d)(2)(ii)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the person is a Cuban or Haitian entrant as defined in 501(e)(2) of the Refugee Assistance Act as clarified under HBEE 17.01(d)(2)(ii) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('a Cuban or Haitian entrant as defined in 501(e)(2) of the Refugee Assistance Act as clarified under HBEE 17.01(d)(2)(ii) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+    <relationship type="ManyToMany" relationship-id="personsprevioussortorderpeople" reverse-relationship-id="personssubsequentsortorderpeople" text="the person's previous sort-order people" reverse-text="the person's subsequent sort-order people" source="person" target="person" is-implicit="false" is-containment="false" />
+  </relationships>
+  <rules>
+    <rule ruleburst="true" folder="0" name="the person is considered to be a qualified non-citizen under HBEE 17.01(d)" id="1" concludes="b6">
+      <rule-xml>
+        <table-conclude attr-id="b6" entity-id="person" scope-id="person0">
+          <row>
+            <value>
+              <attribute attr-id="b5" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2014-07-30</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the person is considered to be a refugee under HBEE 17.01(d)(2)" id="2" concludes="b7">
+      <rule-xml>
+        <table-conclude attr-id="b7" entity-id="person" scope-id="person0">
+          <row>
+            <value>
+              <attribute attr-id="b8" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2014-07-30</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the person is considered a qualified battered non-citizen under HBEE 17.01(e)" id="3" concludes="b10">
+      <rule-xml>
+        <table-conclude attr-id="b10" entity-id="person" scope-id="person0">
+          <row>
+            <value>
+              <attribute attr-id="b9" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2014-07-30</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the person is considered to be lawfully present in the United States under HBEE 17.01(g)" id="4" concludes="b12">
+      <rule-xml>
+        <table-conclude attr-id="b12" entity-id="person" scope-id="person0">
+          <row>
+            <value>
+              <attribute attr-id="b11" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2014-07-30</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="HBEE 17.01(d)(10) is satisfied for the person" id="5" concludes="b14">
+      <rule-xml>
+        <table-conclude attr-id="b14" entity-id="person" scope-id="person0">
+          <row>
+            <value>
+              <attribute attr-id="b13" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2014-07-30</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the person is considered a non-citizen under HBEE 17.01(h)" id="6" concludes="b15">
+      <rule-xml>
+        <table-conclude attr-id="b15" entity-id="person" scope-id="person0">
+          <row>
+            <value>
+              <attribute attr-id="b16" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2014-07-30</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the person is a Cuban or Haitian entrant as defined in 501(e)(2) of the Refugee Assistance Act as clarified under HBEE 17.01(d)(2)(ii)" id="7" concludes="b17">
+      <rule-xml>
+        <table-conclude attr-id="b17" entity-id="person" scope-id="person0">
+          <row>
+            <value>
+              <attribute attr-id="b18" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2014-07-30</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+</root>

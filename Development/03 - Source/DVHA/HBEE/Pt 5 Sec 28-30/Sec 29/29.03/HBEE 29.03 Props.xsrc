@@ -1,0 +1,189 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b10" type="boolean" public-name="st_pHBEE2903dAppliesEff071515_b">
+        <text>
+          <base>HBEE 29.03(d) applies to the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.03(d)',singular),o('to the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" public-name="si_pWsAdmtdToUSAftr82296_b">
+        <text>
+          <base>the person was admitted to the United States on or after August 22, 1996</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person',singular),o('admitted to the United States on or after August 22, 1996'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" public-name="si_pWsAdmtdToUSBsdOnSpnshpUndINA204_b">
+        <text>
+          <base>the person was admitted to the United States based on a sponsorship under §204 of the INA</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person',singular),o('admitted to the United States based on a sponsorship under §204 of the INA'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" public-name="st_pHBEE2903d1iSatisfiedEff071515_b">
+        <text>
+          <base>HBEE 29.03(d)(1)(i) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.03(d)(1)(i)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" public-name="st_pHBEE2903d1iiSatisfiedEff071515_b">
+        <text>
+          <base>HBEE 29.03(d)(1)(ii) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.03(d)(1)(ii)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" public-name="st_pHBEE2903d1iiiSatisfiedEff071515_b">
+        <text>
+          <base>HBEE 29.03(d)(1)(iii) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.03(d)(1)(iii)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" public-name="si_pHBEE2903d1ivSatisfiedEff071515_b">
+        <text>
+          <base>HBEE 29.03(d)(1)(iv) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.03(d)(1)(iv)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" public-name="si_pSpnsrHsSgndAfdvtOfSptUndINA213Ab_b">
+        <text>
+          <base>the person's sponsor has signed an affidavit of support on a form developed by the United States Attorney General as required by the Personal Responsibility and Work Opportunity Reconciliation Act of 1996 (PRWORA) to conform to the requirements of §213A(b) of the INA</base>
+          <parse>s(ver('10.4.6.76'),v(sign,t(simple,present,perfect)),sb('the person''s sponsor',singular),o('an affidavit of support on a form developed by the United States Attorney General as required by the Personal Responsibility and Work Opportunity Reconciliation Act of 1996 (PRWORA) to conform to the requirements of §213A(b) of the INA'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean" public-name="si_pUnblObtnFdShltrWoAstBcInadSpt_b">
+        <text>
+          <base>the person is unable to obtain food and shelter without assistance because their sponsor is not providing adequate support</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('unable to obtain food and shelter without assistance because their sponsor is not providing adequate support'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean" public-name="st_pHBEE2903d2SatisfiedEff071515_b">
+        <text>
+          <base>HBEE 29.03(d)(2) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.03(d)(2)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" public-name="si_pCrdtdW40QtrsCvgBySSA_b">
+        <text>
+          <base>the person has been credited with 40 qualifying quarters of coverage by the SSA</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,perfect)),sb('the person',singular),o('credited with 40 qualifying quarters of coverage by the SSA'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" public-name="si_pIsChldPrgtWmExmpt5YrBnUndHBEE1703c6_b">
+        <text>
+          <base>the person is a child or pregnant woman who is exempt from the five-year bar under HBEE 17.03(c)(6)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('a child or pregnant woman who is exempt from the five-year bar under HBEE 17.03(c)(6)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b38" type="boolean" public-name="so_HBEE29.03Apply20150715_b">
+        <text>
+          <base>HBEE 29.03 applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.03',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b42" type="boolean" public-name="si_pCnsdAdultUndHBEE2902b_b">
+        <text>
+          <base>the person is considered to be an adult for the program under HBEE 29.02(b)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be an adult for the program under HBEE 29.02(b)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b43" type="boolean" public-name="si_pCnsdChldUndHBEE2902a_b">
+        <text>
+          <base>the person is considered to be a child for the program under HBEE 29.02(a)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be a child for the program under HBEE 29.02(a)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b44" type="boolean" public-name="st_pHBEE2903bAppliesEff071515_b">
+        <text>
+          <base>HBEE 29.03(b) applies to the person for the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.03(b)',singular),o('to the person for the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b45" type="boolean" public-name="st_pHBEE2903cAppliesEff071515_b">
+        <text>
+          <base>HBEE 29.03(c) applies to the person for the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.03(c)',singular),o('to the person for the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+      <attribute name="b46" type="boolean" public-name="si_piIsDstrbLctdOnRsrvtn_b">
+        <text>
+          <base>the person's income is a distribution located on or near a reservation or within the most recent boundaries of a prior federal reservation</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a distribution located on or near a reservation or within the most recent boundaries of a prior federal reservation'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+      <attribute name="b7" type="boolean" public-name="st_gmIsMbrPrsnsFnclRspbltyGrpHBEE2903cEff071515_b">
+        <text>
+          <base>the group member is a member of the person's financial responsibility group under HBEE 29.03(c) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('a member of the person''s financial responsibility group under HBEE 29.03(c) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" public-name="st_gmIsMbrPrsnsFnclRspbltyGrpHBEE2903dEff071515_b">
+        <text>
+          <base>the group member is a member of the person's financial responsibility group under HBEE 29.03(d) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('a member of the person''s financial responsibility group under HBEE 29.03(d) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" public-name="st_gmIsMbrPrsnFnclRspbltyGrpHBEE2903d1Eff071515_b">
+        <text>
+          <base>the group member is a member of the person's financial responsibility group under HBEE 29.03(d)(1) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('a member of the person''s financial responsibility group under HBEE 29.03(d)(1) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+      <attribute name="b39" type="boolean" public-name="so_gmpIsMbrPrsnsFnclRspbltyGrpHBEE2903Eff071515_b">
+        <text>
+          <base>the group member is a member of the person's financial responsibility group for the group member program under HBEE 29.03 (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('a member of the person''s financial responsibility group for the group member program under HBEE 29.03 (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b40" type="boolean" public-name="st_gmpIsMbrPrsnsFnclRspbltyGrpHBEE2903bEff071515_b">
+        <text>
+          <base>the group member is a member of the person's financial responsibility group for the group member program under HBEE 29.03(b) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('a member of the person''s financial responsibility group for the group member program under HBEE 29.03(b) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b41" type="boolean" public-name="st_gmpGmIsMbrOfFnclRspbltyGrpUndHBEE2903_b">
+        <text>
+          <base>the group member is a member of the person's financial responsibility group for the group member program under HBEE 29.03</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('a member of the person''s financial responsibility group for the group member program under HBEE 29.03'))</parse>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

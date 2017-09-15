@@ -1,0 +1,684 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b23" type="boolean" public-name="st_pHsSpclEligDtsDTMtgSpndwnUsgNoncvdAssCmtyCrSvcsUndHBEE30064Eff080116_b">
+        <text>
+          <base>the person has special eligibility dates due to meeting the person's spenddown using noncovered assistive community care services under HBEE 30.06(c)(4) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('special eligibility dates due to meeting the person''s spenddown using noncovered assistive community care services under HBEE 30.06(c)(4) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b44" type="boolean" public-name="si_pePrsnWsChgdAgrdUpnFee_b">
+        <text>
+          <base>the person was charged an agreed-upon fee for the expense</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person',singular),o('charged an agreed-upon fee for the expense'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b119" type="boolean" public-name="si_pepPrsnExcsIncAftOthExpDeductLessTDeductforACCSFrEntActPrd_b">
+        <text>
+          <base>the person's excess income and resources after deduction of all expenses for which Medicaid coverage is not available are less than the deduction for ACCS for the entire accounting period for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s excess income and resources after deduction of all expenses for which Medicaid coverage is not available',plural),o('less than the deduction for ACCS for the entire accounting period for the expense program'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b7" type="boolean" public-name="so_pgHBEE3006AplsEff080116_b">
+        <text>
+          <base>HBEE 30.06 applies to the program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 30.06',singular),o('to the program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" public-name="si_pgIsMdclyNdy_b">
+        <text>
+          <base>the program is a medically-needy program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('a medically-needy program'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+      <attribute name="b2" type="boolean" public-name="st_peIsAlwblUndHBEE3006aEff080116_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(a) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(a) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" public-name="si_peIsPrmFrHlthInsThtCvrsMedCareSrvcs_b">
+        <text>
+          <base>the person's expense is a health insurance expense</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a health insurance expense'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" public-name="si_peHsBnVrfd_b">
+        <text>
+          <base>the person's expense has been verified</base>
+          <parse>s(ver('10.4.6.76'),v(verify,t(simple,present,perfect)),ob('the person''s expense',singular))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" public-name="so_peIsAlwblMedExpUndHBEE3006Eff080116_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06 (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06 (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" public-name="st_peIsAlwblMedExpUndHBEE3006bEff080116_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(b) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(b) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" public-name="st_peIsAlwblMedExpUndHBEE3006cEff080116_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(c) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(c) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" public-name="st_peIsAlwblMedExpUndHBEE3006c1Eff080116_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(c)(1) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(c)(1) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" public-name="st_peIsAlwblMedExpUndHBEE3006c2Eff080116_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(c)(2) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(c)(2) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" public-name="st_peIsAlwblMedExpUndHBEE3006c3Eff080116_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(c)(3) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(c)(3) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" public-name="st_peIsAlwblMedExpUndHBEE3006c4Eff080116_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(c)(4) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(c)(4) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" public-name="st_peIsAlwblMedExpUndHBEE3006c5Eff080116_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(c)(5) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(c)(5) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" public-name="st_peIsAlwblMedExpUndHBEE3006c6Eff080116_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(c)(6) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(c)(6) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" public-name="st_peIsAnthrMedNcsryNonCovExpUndHBEE3006cEff080116_b">
+        <text>
+          <base>the person's expense is another medically necessary noncovered expense under HBEE 30.06(c) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('another medically necessary noncovered expense under HBEE 30.06(c) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p1" type="currency" public-name="st_peDdctblAmtUndHBEE3006c1iEff080116_b">
+        <text>
+          <base>the person's expense's deductible amount under HBEE 30.06(c)(1)(i) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p2" type="currency" public-name="st_peDdctblAmtUndHBEE3006c1iiiEff080116_b">
+        <text>
+          <base>the person's expense's deductible amount under HBEE 30.06(c)(1)(iii) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p3" type="currency" public-name="st_peDdctblAmtUndHBEE3006c2Eff080116_b">
+        <text>
+          <base>the person's expense's deductible amount under HBEE 30.06(c)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p4" type="currency" public-name="st_peDdctblAmtUndHBEE3006c3vEff080116_b">
+        <text>
+          <base>the person's expense's deductible amount under HBEE 30.06(c)(3)(v) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" public-name="st_peIsAlwblMedExpUndHBEE3006dEff080116_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(d) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(d) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" public-name="st_peIsAlwblMedExpUndHBEE3006eEff080116_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(e) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(e) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" public-name="si_peIsFrDentalSrvcs">
+        <text>
+          <base>the person's expense is for dental services</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for dental services'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" public-name="si_peIsMedExpRcgzdByStLaw_b">
+        <text>
+          <base>the person's expense is a necessary medical or remedial expense recognized by state law</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a necessary medical or remedial expense recognized by state law'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" public-name="si_peIsForSvcItmNotCvdByMdcd_b">
+        <text>
+          <base>the person's expense is for a service or item covered by Medicaid</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for a service or item covered by Medicaid'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" public-name="si_peIsFrMedNscrySvcOrItm_b">
+        <text>
+          <base>the patient's physician has verified that the person's expense is for a service or item that is medically necessary</base>
+          <parse>s(ver('10.4.6.76'),v(verify,t(simple,present,perfect)),sb('the patient''s physician',singular),o('that the person''s expense is for a service or item that is medically necessary'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" public-name="si_peIsForOTCDrug_b">
+        <text>
+          <base>the person's expense is for an over-the-counter drug</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for an over-the-counter drug'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p7" type="currency" public-name="si_peStdOTCDrgDedctnUndHBEE3006c1iiiEff080116_c">
+        <text>
+          <base>the standard over-the-counter drug deduction for the person's expense</base>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" public-name="si_peAHSDtrmdDocOfMedNcstyIsRqd_b">
+        <text>
+          <base>AHS has determined that the person's expense is a common remedy for the person's the medical condition and the usage is within the maximum amount</base>
+          <parse>s(ver('10.4.6.76'),v(determine,t(simple,present,perfect)),sb('AHS',singular),o('that the person''s expense is a common remedy for the person''s the medical condition and the usage is within the maximum amount'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" public-name="so_peHBEE3006c1iiSatisfiedEff080116_b">
+        <text>
+          <base>HBEE 30.06(c)(1)(ii) is satisfied for the expense (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 30.06(c)(1)(ii)',singular),o('for the expense (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p9" type="currency" public-name="si_peRsnblEstValPerVMPManual_c">
+        <text>
+          <base>the reasonable estimated value of the person's expense as found in Vermont's Medicaid Procedures Manual</base>
+        </text>
+      </attribute>
+      <attribute name="b40" type="boolean" public-name="si_peIsFrCmrclTransport_b">
+        <text>
+          <base>the person's expense is for commercial transportation</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for commercial transportation'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b41" type="boolean" public-name="si_peIsFrPrivtTransport_b">
+        <text>
+          <base>the person's expense is for private transportation</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for private transportation'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p10" type="currency" public-name="si_peStdPrvtTrsptnDdctnPerVMPM_c">
+        <text>
+          <base>the standard private transportation deduction for the person's expense as set forth in Vermont's Medicaid Procedures Manual</base>
+        </text>
+      </attribute>
+      <attribute name="b45" type="boolean" public-name="si_peWsFrPrchsdFuelFrNonCmrclVhcl_b">
+        <text>
+          <base>the person's expense was for purchased fuel for a family-owned vehicle or other non-commercial vehicle</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s expense',singular),o('for purchased fuel for a family-owned vehicle or other non-commercial vehicle'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b46" type="boolean" public-name="st_peIsAlwblMedExpUndHBEE3006c3iEff080116_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(c)(3)(i) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(c)(3)(i) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b47" type="boolean" public-name="st_peIsAlwblMedExpUndHBEE3006c3iiEff080116_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(c)(3)(ii) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(c)(3)(ii) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b48" type="boolean" public-name="st_peIsAlwblMedExpUndHBEE3006c3iiiEff080116_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(c)(3)(iii) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(c)(3)(iii) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b49" type="boolean" public-name="si_peIsFrSrvMedNcsryInRltnToMedCndtn_b">
+        <text>
+          <base>the service provider for the person's expense has submitted a statement that the services are necessary in relation to the service recipient's particular medical condition</base>
+          <parse>s(ver('10.4.6.76'),v(submit,t(simple,present,perfect)),sb('the service provider for the person''s expense',singular),o('a statement that the services are necessary in relation to the service recipient''s particular medical condition'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b50" type="boolean" public-name="si_peIsFrSrvcPrvdInHome_b">
+        <text>
+          <base>the person's expense is for a service provided in the person's home</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for a service provided in the person''s home'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b51" type="boolean" public-name="si_peIsFrSrvcPrvdInLvlIVRsdtlCrFctly_b">
+        <text>
+          <base>the person's expense is for a service provided in a level IV residential care home</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for a service provided in a level IV residential care home'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b52" type="boolean" public-name="si_peFrDctblPCSvcUndDVHA7406.2_b">
+        <text>
+          <base>the person's expense is for a personal care service as described in DVHA Rule 7406.2</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for a personal care service as described in DVHA Rule 7406.2'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b53" type="boolean" public-name="st_peIsAlwblMedExpnsUndHBEE3006c3iiiAEff080116_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(c)(3)(iii)(A) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(c)(3)(iii)(A) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b54" type="boolean" public-name="st_peIsExcldbllMedExpnsUndHBEE3006c3iiiBEff080116_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(c)(3)(iii)(B) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(c)(3)(iii)(B) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b56" type="boolean" public-name="si_peIsFrSvcPrvdBySmnLvgWPrsn_b">
+        <text>
+          <base>the person's expense is for a service provided by someone living in the person's home</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for a service provided by someone living in the person''s home'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b57" type="boolean" public-name="st_peIsExclbUndHBEE3006c3iiiBIEff080116_b">
+        <text>
+          <base>the person's expense is excludable under HBEE 30.06(c)(3)(iii)(B)(I) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('excludable under HBEE 30.06(c)(3)(iii)(B)(I) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b58" type="boolean" public-name="st_peIsExclbUndHBEE3006c3iiiBIIEff080116_b">
+        <text>
+          <base>the person's expense is excludable under HBEE 30.06(c)(3)(iii)(B)(II) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('excludable under HBEE 30.06(c)(3)(iii)(B)(II) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b59" type="boolean" public-name="st_peIsExclbUndHBEE3006c3iiiBIIIEff080116_b">
+        <text>
+          <base>the person's expense is excludable under HBEE 30.06(c)(3)(iii)(B)(III) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('excludable under HBEE 30.06(c)(3)(iii)(B)(III) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b60" type="boolean" public-name="st_peIsExclbUndHBEE3006c3iiiBIVEff080116_b">
+        <text>
+          <base>the person's expense is excludable under HBEE 30.06(c)(3)(iii)(B)(IV) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('excludable under HBEE 30.06(c)(3)(iii)(B)(IV) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b61" type="boolean" public-name="si_peFrSvcPrvdToPrsnUndAge21_b">
+        <text>
+          <base>the person's expense is for a service provided to a person under the age of 21</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for a service provided to a person under the age of 21'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b62" type="boolean" public-name="si_peFrSvcPrvdByParent_b">
+        <text>
+          <base>the person's expense is for a service provided by the service recipient's parent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for a service provided by the service recipient''s parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b63" type="boolean" public-name="si_peFrSvcPrvdByStepParent_b">
+        <text>
+          <base>the person's expense is for a service provided by the service recipient's step-parent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for a service provided by the service recipient''s step-parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b64" type="boolean" public-name="si_peFrSvcPrvdByLglGrdn_b">
+        <text>
+          <base>the person's expense is for a service provided by the service recipient's legal guardian</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for a service provided by the service recipient''s legal guardian'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b65" type="boolean" public-name="st_peFrSvcPrmtdUndHBEE3006c3iiiBI_b">
+        <text>
+          <base>the person's expense is for a service permitted under HBEE 30.06(c)(3)(iii)(B)(I) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for a service permitted under HBEE 30.06(c)(3)(iii)(B)(I) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b66" type="boolean" public-name="si_peIsFrSvcPrvdTo181920yo_b">
+        <text>
+          <base>the person's expense is for a service provided to an individual that is 18, 19 or 20 years old</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for a service provided to an individual that is 18, 19 or 20 years old'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b67" type="boolean" public-name="si_peWsPdFrmPrsnIncmOrAssts_b">
+        <text>
+          <base>the person's expense was paid from the service recipient's own income or assets</base>
+          <parse>s(ver('10.4.6.76'),v(pay,t(simple,past,normal)),ob('the person''s expense',singular),o('from the service recipient''s own income or assets'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b68" type="boolean" public-name="si_pePymtExcdPrsnIncAssets_b">
+        <text>
+          <base>the person's expense exceeds the service recipient's own income or assets</base>
+          <parse>s(ver('10.4.6.76'),v(exceed,t(simple,present,normal)),sb('the person''s expense',singular),o('the service recipient''s own income or assets'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b69" type="boolean" public-name="si_peIsFrSvcPrvdByPrsnSpouse_b">
+        <text>
+          <base>the person's expense is for a service provided by the service recipient's spouse</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for a service provided by the service recipient''s spouse'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b70" type="boolean" public-name="si_peIsFrSvcPrvdByPrsnUndAge18_b">
+        <text>
+          <base>the person's expense is for a service provided by a person under age 18</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for a service provided by a person under age 18'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b71" type="boolean" public-name="si_peIsFrSvcPrvdByPrsnSibling_b">
+        <text>
+          <base>the person's expense is for a service provided by the service recipient's sibling</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for a service provided by the service recipient''s sibling'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b72" type="boolean" public-name="si_peIsFrSvcPrvdByPrsnChild_b">
+        <text>
+          <base>the person's expense is for a service provided by the service recipient's child</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for a service provided by the service recipient''s child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b73" type="boolean" public-name="si_peIsFrSvcPrvdByPrsnGrndchild_b">
+        <text>
+          <base>the person's expense is for a service provided by the service recipient's grandchild</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for a service provided by the service recipient''s grandchild'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b74" type="boolean" public-name="si_psIsFrSvcPrvdByParentIndMinorChld_b">
+        <text>
+          <base>the person's expense is for a service provided by the parent of the service recipient's minor child</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for a service provided by the parent of the service recipient''s minor child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b75" type="boolean" public-name="st_peHBEE3006c3ivSatisfiedEff080116_b">
+        <text>
+          <base>HBEE 30.06(c)(3)(iv) is satisfied for the person's expense (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 30.06(c)(3)(iv)',singular),o('for the person''s expense (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b76" type="boolean" public-name="st_peHBEE3006c3ivAISatisfiedEff080116_b">
+        <text>
+          <base>HBEE 30.06(c)(3)(iv)(A)(I) is satisfied for the person's expense (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 30.06(c)(3)(iv)(A)(I)',singular),o('for the person''s expense (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b77" type="boolean" public-name="st_peHBEE3006c3ivAIISatisfiedEff080116_b">
+        <text>
+          <base>HBEE 30.06(c)(3)(iv)(A)(II) is satisfied for the person's expense (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 30.06(c)(3)(iv)(A)(II)',singular),o('for the person''s expense (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b78" type="boolean" public-name="st_peHBEE3006c3ivAIIISatisfiedEff080116_b">
+        <text>
+          <base>HBEE 30.06(c)(3)(iv)(A)(III) is satisfied for the person's expense (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 30.06(c)(3)(iv)(A)(III)',singular),o('for the person''s expense (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b79" type="boolean" public-name="st_peHBEE3006c3ivAIVSatisfiedEff080116_b">
+        <text>
+          <base>HBEE 30.06(c)(3)(iv)(A)(IV) is satisfied for the person's expense (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 30.06(c)(3)(iv)(A)(IV)',singular),o('for the person''s expense (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b80" type="boolean" public-name="si_peIsFrDdctblPCSrvcFrAstMngMoney_b">
+        <text>
+          <base>the person's expense is for assistance with managing money</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for assistance with managing money'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b84" type="boolean" public-name="si_peSvcPrvdrSbmtdPlnofCare_b">
+        <text>
+          <base>the service provider for the person's expense has submitted a plan of care for the service recipient</base>
+          <parse>s(ver('10.4.6.76'),v(submit,t(simple,present,perfect)),sb('the service provider for the person''s expense',singular),o('a plan of care for the service recipient'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b85" type="boolean" public-name="si_peSvcPrvdrSbmtdLstOfReqdPCSvcs_b">
+        <text>
+          <base>the service provider for the person's expense has submitted a list of the personal care services required by the service recipient</base>
+          <parse>s(ver('10.4.6.76'),v(submit,t(simple,present,perfect)),sb('the service provider for the person''s expense',singular),o('a list of the personal care services required by the service recipient'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b86" type="boolean" public-name="st_peHBEE3006c3ivASatisfiedEff080116_b">
+        <text>
+          <base>HBEE 30.06(c)(3)(iv)(A) is satisfied for the person's expense (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 30.06(c)(3)(iv)(A)',singular),o('for the person''s expense (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b87" type="boolean" public-name="st_peHBEE3006c3ivCSatisfiedEff080116_b">
+        <text>
+          <base>HBEE 30.06(c)(3)(iv)(C) is satisfied for the person's expense (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 30.06(c)(3)(iv)(C)',singular),o('for the person''s expense (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p11" type="currency" public-name="si_peStdPCSvcDdctnUndHBEE3006c3vEff08012016_b">
+        <text>
+          <base>the standard personal care service deduction for the person's expense</base>
+        </text>
+      </attribute>
+      <attribute name="b91" type="boolean" public-name="si_peIsFrPersCareSvc_b">
+        <text>
+          <base>the person's expense is for a personal care service</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for a personal care service'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b92" type="boolean" public-name="st_peIsFrACCS_b">
+        <text>
+          <base>the person's expense is for Assistive Community Care Services (ACCS)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for Assistive Community Care Services (ACCS)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b94" type="boolean" public-name="st_peIsAlwblMedExpnsUndHBEE3006c4iiEff080116_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(c)(4)(ii) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(c)(4)(ii) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b95" type="boolean" public-name="si_peIsFrSvcPrvdByLvlIIIRdtnlCrHomeLcnsdByAHS_b">
+        <text>
+          <base>the person's expense is for a service provided by a level III residential care home licensed by AHS</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for a service provided by a level III residential care home licensed by AHS'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b96" type="boolean" public-name="st_peHBEE3006c4iiiSatsifedEff080116_b">
+        <text>
+          <base>HBEE 30.06(c)(4)(iii) is satisfied for the person's expense (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 30.06(c)(4)(iii)',singular),o('for the person''s expense (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b97" type="boolean" public-name="st_peHBEE3006c4iiiASatsifedEff080116_b">
+        <text>
+          <base>HBEE 30.06(c)(4)(iii)(A) is satisfied for the person's expense (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 30.06(c)(4)(iii)(A)',singular),o('for the person''s expense (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b98" type="boolean" public-name="st_peHBEE3006c4iiiCSatsifedEff080116_b">
+        <text>
+          <base>HBEE 30.06(c)(4)(iii)(C) is satisfied for the person's expense (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 30.06(c)(4)(iii)(C)',singular),o('for the person''s expense (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b100" type="boolean" public-name="st_peHBEE3006c4iiiAISatsifedEff080116_b">
+        <text>
+          <base>HBEE 30.06(c)(4)(iii)(A)(I) is satisfied for the person's expense (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 30.06(c)(4)(iii)(A)(I)',singular),o('for the person''s expense (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b101" type="boolean" public-name="st_peHBEE3006c4iiiAIISatsifedEff080116_b">
+        <text>
+          <base>HBEE 30.06(c)(4)(iii)(A)(II) is satisfied for the person's expense (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 30.06(c)(4)(iii)(A)(II)',singular),o('for the person''s expense (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b102" type="boolean" public-name="st_peHBEE3006c4iiiAIIISatsifedEff080116_b">
+        <text>
+          <base>HBEE 30.06(c)(4)(iii)(A)(III) is satisfied for the person's expense (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 30.06(c)(4)(iii)(A)(III)',singular),o('for the person''s expense (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b103" type="boolean" public-name="st_peHBEE3006c4iiiAIVSatsifedEff080116_b">
+        <text>
+          <base>HBEE 30.06(c)(4)(iii)(A)(IV) is satisfied for the person's expense (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 30.06(c)(4)(iii)(A)(IV)',singular),o('for the person''s expense (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b107" type="boolean" public-name="si_peIsFrPrvtDutyNrsgSrvcs_b">
+        <text>
+          <base>the person's expense is for private-duty nursing services</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for private-duty nursing services'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b113" type="boolean" public-name="si_peWsPdByStOrLclPrgmOthThnMedicaid_b">
+        <text>
+          <base>the person's expense is payable by a state or local program other than a program that receives Medicaid funding</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('payable by a state or local program other than a program that receives Medicaid funding'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p13" type="currency" public-name="st_pePrtnOfAmtOwdByPrsn_b">
+        <text>
+          <base>the portion of the person's expense owed by the person</base>
+        </text>
+      </attribute>
+      <attribute name="b121" type="boolean" public-name="st_peHBEE3006c4ivBAppliesEff080116_b">
+        <text>
+          <base>HBEE 30.06(c)(4)(iv)(B) applies to the person's expense (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 30.06(c)(4)(iv)(B)',singular),o('to the person''s expense (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b125" type="boolean" public-name="si_pPrvdrSbmtdStmtThtLOCPrvdByLvlVResCrHmIsPAppr_b">
+        <text>
+          <base>the service's provider for the person's expense has submitted a statement that the level of care provided by the particular residential care home is appropriate</base>
+          <parse>s(ver('10.4.6.76'),v(submit,t(simple,present,perfect)),sb('the service''s provider for the person''s expense',singular),o('a statement that the level of care provided by the particular residential care home is appropriate'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b126" type="boolean" public-name="si_pePrsnHsSpcfdOngNeedFrPCSvcInCrntPln_b">
+        <text>
+          <base>the service's provider for the person's expense has specified an ongoing need for personal care services in the current plan</base>
+          <parse>s(ver('10.4.6.76'),v(specify,t(simple,present,perfect)),sb('the service''s provider for the person''s expense',singular),o('an ongoing need for personal care services in the current plan'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b128" type="boolean" public-name="si_pPlnOfCrWasSbmtdWthn2Years_b">
+        <text>
+          <base>the plan of care for the service recipient for the person's expense was submitted within 2 years</base>
+          <parse>s(ver('10.4.6.76'),v(submit,t(simple,past,normal)),ob('the plan of care for the service recipient for the person''s expense',singular),o('within 2 years'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p27" type="currency">
+        <text>
+          <base>the person's expense's deductible amount under HBEE 30.06 (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p28" type="currency" public-name="st_peExpDdctblAmtUndHBEE3006c4ivEff080116_b">
+        <text>
+          <base>the person's expense's deductible amount under HBEE 30.06(c)(4)(iv) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p29" type="currency" public-name="si_peStdMnthlyACCSDdctn_c">
+        <text>
+          <base>the standard monthly ACCS deduction for the person's expense</base>
+        </text>
+      </attribute>
+      <attribute name="p30" type="currency" public-name="si_peStdDlyACCSDdctn_c">
+        <text>
+          <base>the standard daily ACCS deduction for the person's expense</base>
+        </text>
+      </attribute>
+      <attribute name="b129" type="boolean" public-name="so_HBEE30.06ExpAllowMed_b">
+        <text>
+          <base>the person's expense is an allowable medical expense under HBEE 30.06</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b130" type="boolean" public-name="si_expTransMedSrvNoncovered_b">
+        <text>
+          <base>the person's expense is for transportation that was essential to secure a noncovered medical service</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for transportation that was essential to secure a noncovered medical service'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b131" type="boolean" public-name="si_expPerCareHomeHealthAgency_b">
+        <text>
+          <base>the person's expense is for a personal care service performed by a home-health agency</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for a personal care service performed by a home-health agency'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b132" type="boolean" public-name="si_expPerCareProvPhysQual_b">
+        <text>
+          <base>the person's expense is for a personal care service performed by a provider identified by the patient's physician as qualified to provide the service</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for a personal care service performed by a provider identified by the patient''s physician as qualified to provide the service'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b133" type="boolean" public-name="si_expPlanSubmit6mo_b">
+        <text>
+          <base>the plan of care for the service recipient for the person's expense was submitted within 6 months</base>
+          <parse>s(ver('10.4.6.76'),v(submit,t(simple,past,normal)),ob('the plan of care for the service recipient for the person''s expense',singular),o('within 6 months'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b134" type="boolean" public-name="si_expTPL_b">
+        <text>
+          <base>the person's expense is subject to payment by a third party</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('subject to payment by a third party'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p33" type="currency" public-name="st_peDdctblAmtUndHBEE3006c5Eff080116_b">
+        <text>
+          <base>the person's expense's deductible amount under HBEE 30.06(c)(5) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p36" type="currency" public-name="si_AlwblAnnMaxExpAmtDntlSrvcs_c">
+        <text>
+          <base>the amount of the person's expense that exceeds the allowable annual maximum expense amount for dental services</base>
+        </text>
+      </attribute>
+      <attribute name="b135" type="boolean" public-name="si_peIsFrPrslCrSvcPerDVHA7411.4_b">
+        <text>
+          <base>the person's expense is for a personal care service as described in DVHA Rule 7411.4</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for a personal care service as described in DVHA Rule 7411.4'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b136" type="boolean" public-name="si_peIsFrGnrlSprvsnOfPhysMntlWlBng_b">
+        <text>
+          <base>the person's expense is for general supervision of physical and mental well-being where a physician states such care is required due to a specific diagnosis</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for general supervision of physical and mental well-being where a physician states such care is required due to a specific diagnosis'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b137" type="boolean" public-name="si_peSvcPrvdrHsSmbtdPrvdQlfdToPrvdSvc_b">
+        <text>
+          <base>the service's provider for the person's expense has submitted a statement that the provider is qualified to provide the service</base>
+          <parse>s(ver('10.4.6.76'),v(submit,t(simple,present,perfect)),sb('the service''s provider for the person''s expense',singular),o('a statement that the provider is qualified to provide the service'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

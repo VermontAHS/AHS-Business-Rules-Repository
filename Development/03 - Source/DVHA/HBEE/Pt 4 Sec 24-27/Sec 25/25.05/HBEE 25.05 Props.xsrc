@@ -1,0 +1,174 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b2" type="boolean" public-name="si_resOverCsra_b">
+        <text>
+          <base>the person has resources in excess of the community spouse resource allocation (CSRA)</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('resources in excess of the community spouse resource allocation (CSRA)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" public-name="si_trnPenaltyQualBene_b">
+        <text>
+          <base>the transfer penalty would result in the person's immediate family qualifying for SSI; Reach Up; AABD; General Assistance; 3SquaresVTs; or another public assistance program requiring a comparable showing of financial need</base>
+          <parse>s(ver('10.4.6.76'),v(result+would,t(simple,modal,normal)),sb('the transfer penalty',plural),o('in the person''s immediate family qualifying for SSI; Reach Up; AABD; General Assistance; 3SquaresVTs; or another public assistance program requiring a comparable showing of financial need'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" public-name="si_trnPenaltySellPrimaryInc_b">
+        <text>
+          <base>the transfer penalty would require that assets such as a family farm or other family business that are the primary source of income for the person's spouse, parents, children or siblings be sold in order to acquire funds for the cost of the person's long-term care services and supports</base>
+          <parse>s(ver('10.4.6.76'),v(require+would,t(simple,modal,normal)),sb('the transfer penalty',plural),o('that assets such as a family farm or other family business that are the primary source of income for the person''s spouse, parents, children or siblings be sold in order to acquire funds for the cost of the person''s long-term care services and supports'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" public-name="si_trnProvideOtherNo_b">
+        <text>
+          <base>it is the case that AHS has determined that the person has exhausted all reasonable efforts to pay or provide the care of the person, or to provide for the needs of financially-dependent family members from other available sources</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that AHS has determined that the person has exhausted all reasonable efforts to pay or provide the care of the person, or to provide for the needs of financially-dependent family members from other available sources'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" public-name="si_trnPenaltyHardshipReq_b">
+        <text>
+          <base>the person has requested an undue hardship exception for the transfer penalty</base>
+          <parse>s(ver('10.4.6.76'),v(request,t(simple,present,perfect)),sb('the person',singular),o('an undue hardship exception for the transfer penalty'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" public-name="si_trnPenaltyHardshipDoc_b">
+        <text>
+          <base>the person has submitted documentation supporting the person's claim of undue hardship for the transfer penalty</base>
+          <parse>s(ver('10.4.6.76'),v(submit,t(simple,present,perfect)),sb('the person',singular),o('documentation supporting the person''s claim of undue hardship for the transfer penalty'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" public-name="so_HBEE25.05TrnPnltyHrdshp20150715_b">
+        <text>
+          <base>the person is considered to have an undue hardship under HBEE 25.05 (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to have an undue hardship under HBEE 25.05 (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" public-name="st_HBEE25.05bSat20150715_b">
+        <text>
+          <base>HBEE 25.05(b) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 25.05(b)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" public-name="st_HBEE25.05cSat20150715_b">
+        <text>
+          <base>HBEE 25.05(c) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 25.05(c)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" public-name="st_HBEE25.05e3Sat20150715_b">
+        <text>
+          <base>HBEE 25.05(e)(3) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 25.05(e)(3)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" public-name="so_HBEE25.05TrnPnltyHrdshp_b">
+        <text>
+          <base>the person is considered to have an undue hardship under HBEE 25.05</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to have an undue hardship under HBEE 25.05'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" public-name="si_transferHardshipPerAHS_b">
+        <text>
+          <base>AHS has determined that a transfer penalty would cause the person undue hardship</base>
+          <parse>s(ver('10.4.6.76'),v(determine,t(simple,present,perfect)),sb('AHS',singular),o('that a transfer penalty would cause the person undue hardship'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+    </entity>
+    <entity id="personstransfer" name="the person's transfer" containment-relationship-id="personstransfers" containment-parent-id="person">
+      <attribute name="b1" type="boolean" public-name="si_trnToSpouse_b">
+        <text>
+          <base>the person's transfer was transferred to the person's spouse</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('transferred to the person''s spouse'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" public-name="si_trnByPoa_b">
+        <text>
+          <base>the person's transfer was transferred by an agent under a power of attorney (POA) or a guardian of the person</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('transferred by an agent under a power of attorney (POA) or a guardian of the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" public-name="si_trnByPoaNotInterestReprot_b">
+        <text>
+          <base>the transfer of the person's transfer forms the basis for a report to AHS for investigation of abuse, neglect or exploitation by the agent under a power of attorney (POA) or guardian who made the transfer</base>
+          <parse>s(ver('10.4.6.76'),v(make,t(simple,past,normal)),sb('the transfer of the person''s transfer forms the basis for a report to AHS for investigation of abuse, neglect or exploitation by the agent under a power of attorney (POA) or guardian who',plural),o('the transfer'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" public-name="si_trnByPoaNotInterestDecision_b">
+        <text>
+          <base>AHS or a court has determined that the agent under a power of attorney (POA) or guardian who transferred the person's transfer was not acting in the best interest of the person when the transfer was made</base>
+          <parse>s(ver('10.4.6.76'),v(determine,t(simple,present,perfect)),sb('AHS or a court',singular),o('that the agent under a power of attorney (POA) or guardian who transferred the person''s transfer was not acting in the best interest of the person when the transfer was made'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" public-name="si_trnByFraud_b">
+        <text>
+          <base>the person's transfer was the result of exploitation, fraud or misrepresentation</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('the result of exploitation, fraud or misrepresentation'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" public-name="si_trnByFraudOfficial_b">
+        <text>
+          <base>the transfer of the person's transfer by exploitation, fraud or misrepresentation is documented by official police reports or civil or criminal action against the alleged perpetrator</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the transfer of the person''s transfer by exploitation, fraud or misrepresentation',singular),o('documented by official police reports or civil or criminal action against the alleged perpetrator'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" public-name="si_trnByFraudStatement_b">
+        <text>
+          <base>the transfer of the person's transfer by exploitation, fraud or misrepresentation is documented by a sworn statement to AHS attesting to the fact that the claim was reported to the police or to the AHS department responsible for substantiating such claims</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the transfer of the person''s transfer by exploitation, fraud or misrepresentation',singular),o('documented by a sworn statement to AHS attesting to the fact that the claim was reported to the police or to the AHS department responsible for substantiating such claims'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" public-name="si_trnProvideRecipNo_b">
+        <text>
+          <base>the recipient of the person's transfer can make other arrangements to pay or provide the care of the person, or to provide for the needs of financially-dependent family members</base>
+          <parse>s(ver('10.4.6.76'),v(make+can,t(simple,modal,normal)),sb('the recipient of the person''s transfer',plural),o('other arrangements to pay or provide the care of the person, or to provide for the needs of financially-dependent family members'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" public-name="si_trnRecoverLost_b">
+        <text>
+          <base>it is the case that the person's transfer is not recoverable due to loss, destruction, theft, or other similar circumstances</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the person''s transfer is not recoverable due to loss, destruction, theft, or other similar circumstances'))</parse>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personstransfer" text="the person's transfers" relationship-id="personstransfers" reverse-relationship-id="personstransfersperson" reverse-text="the person's transfer's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

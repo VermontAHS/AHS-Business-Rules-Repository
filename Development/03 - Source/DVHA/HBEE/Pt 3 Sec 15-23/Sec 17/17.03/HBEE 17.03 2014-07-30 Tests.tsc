@@ -1,0 +1,785 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-script product-version="10.4.6.76" schema-version="4">
+  <test-case-set>
+    <test-case name="Not subject to bar under 17.03(b) - SIV" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="si_PrsnRefugee_b" text="the person is a refugee" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE17.01d2Refugee_b" text="the person is considered to be a refugee under HBEE 17.01(d)(2)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citUsNat_b" text="the person is a U.S. Citizen or National" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_personQlfdNonCtznUndHBEE1701dEff073014_b" text="the person is considered to be a qualified non-citizen under HBEE 17.01(d) (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE17.03b1Sat20140730_b" text="HBEE 17.03(b)(1) is satisfied for the person (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personAsyleeUndINA208UndHBEE1701d4Eff073014_b" text="the person is considered an asylee under INA 208" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citCubanHatianHBEE17.01d2ii_b" text="the person is a Cuban or Haitian entrant as defined in 501(e)(2) of the Refugee Assistance Act as clarified under HBEE 17.01(d)(2)(ii)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personVctmSvrTrfkgPerTVPA107b1UndHBEE1701d9Eff073014_b" text="the person is a victim of a severe form of trafficking, in accordance with section 107(b)(1) of the Trafficking Victims Protection Act of 2000" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personNonCtznWhsDprtnWthldUndINA243hUndHBEE1701d5iEff073014_b" text="the person is considered a non-citizen whose deportation has been withheld under section 243(h) of the INA, as in effect prior to April 1, 1997" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personNonCtznWhsDptnWthldUndINA241b3UndHBEE1701d5iiEff073014_b" text="the person is considered a non-citizen whose deportation has been withheld under section 241(b)(3) of the INA, as amended by section 305(a) of division C of Public Law 104-208" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_mil-vet-honor" text="the person is an honorably discharged veteran" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_PrsnActiveDutyUSMil_b" text="the person is on active duty in the U.S. military" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE17.03b6iiiSat20140730_b" text="HBEE 17.03(b)(6)(iii) is satisfied for the person (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personAmrsnAdmtdUSUndFOEF584UndHBEE1701d3Eff073014_b" text="the person is an Amerasian, admitted to the United States under Foreign Operations Export Financing, and Related Programs Appropriation Act, 1988 section 584" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citLprEnterOtherExemptStatus_b" text="the person is a legal permanent resident who first entered the United States under another exempt category and who later converted to LPR status" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citSIV_b" text="the person is a citizen or national of Iraq or Afghanistan with Special Immigrant Status" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Bob</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Loblaw</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_qualNonCitPrior19960822_b" text="the person became a qualified non-citizen prior to August 22, 1996" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perNonCitEntrUSPriorAug96_b" text="the person is a non-citizen who entered the United States prior to August 22, 1996 and remained continuously present without absence of more than 30 consecutive days or a combined total absence of 90 days before obtaining qualified non-citizen on or after that date" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personAmIndnMbrFedRcgdTrbPerISDEA4eUndHBEE1701d10iiEff073014_b" text="the person is an American Indian who is a member of a Federally-recognized Indian tribe, as defined in section 4(e) of the Indian Self-Determination and Education Assistance Act, 25 USC section 450b(e)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1988-08-08</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personDfrdActnUndDHSActnUndHBEE1701g10Eff073014_b" text="the person is an individual with deferred action under DHS's deferred action for childhood arrivals process, as described in the Secretary of Homeland Security's June 15, 2012 memorandum" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citAIANCanada_b" text="the person is an American Indian who was born in Canada" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_Pregnant_b" text="the person is pregnant" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_fiveYrsSincePerQualNonCitizen_b" text="it has been five years since the person became a qualified non-citizen" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE17.035yrSat20140730_b" text="HBEE 17.03 is satisfied for the person (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2016-08-01">
+                <boolean-val>true</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2017" />
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Bob Loblaw|Bob Loblaw">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+    <test-case name="Not subject to bar under 17.03(c) - pregnant" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="si_PrsnRefugee_b" text="the person is a refugee" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE17.01d2Refugee_b" text="the person is considered to be a refugee under HBEE 17.01(d)(2)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citUsNat_b" text="the person is a U.S. Citizen or National" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_personQlfdNonCtznUndHBEE1701dEff073014_b" text="the person is considered to be a qualified non-citizen under HBEE 17.01(d) (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE17.03b1Sat20140730_b" text="HBEE 17.03(b)(1) is satisfied for the person (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personAsyleeUndINA208UndHBEE1701d4Eff073014_b" text="the person is considered an asylee under INA 208" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citCubanHatianHBEE17.01d2ii_b" text="the person is a Cuban or Haitian entrant as defined in 501(e)(2) of the Refugee Assistance Act as clarified under HBEE 17.01(d)(2)(ii)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personVctmSvrTrfkgPerTVPA107b1UndHBEE1701d9Eff073014_b" text="the person is a victim of a severe form of trafficking, in accordance with section 107(b)(1) of the Trafficking Victims Protection Act of 2000" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personNonCtznWhsDprtnWthldUndINA243hUndHBEE1701d5iEff073014_b" text="the person is considered a non-citizen whose deportation has been withheld under section 243(h) of the INA, as in effect prior to April 1, 1997" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personNonCtznWhsDptnWthldUndINA241b3UndHBEE1701d5iiEff073014_b" text="the person is considered a non-citizen whose deportation has been withheld under section 241(b)(3) of the INA, as amended by section 305(a) of division C of Public Law 104-208" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_mil-vet-honor" text="the person is an honorably discharged veteran" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_PrsnActiveDutyUSMil_b" text="the person is on active duty in the U.S. military" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE17.03b6iiiSat20140730_b" text="HBEE 17.03(b)(6)(iii) is satisfied for the person (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personAmrsnAdmtdUSUndFOEF584UndHBEE1701d3Eff073014_b" text="the person is an Amerasian, admitted to the United States under Foreign Operations Export Financing, and Related Programs Appropriation Act, 1988 section 584" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citLprEnterOtherExemptStatus_b" text="the person is a legal permanent resident who first entered the United States under another exempt category and who later converted to LPR status" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citSIV_b" text="the person is a citizen or national of Iraq or Afghanistan with Special Immigrant Status" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Bob</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Loblaw</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_qualNonCitPrior19960822_b" text="the person became a qualified non-citizen prior to August 22, 1996" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perNonCitEntrUSPriorAug96_b" text="the person is a non-citizen who entered the United States prior to August 22, 1996 and remained continuously present without absence of more than 30 consecutive days or a combined total absence of 90 days before obtaining qualified non-citizen on or after that date" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personAmIndnMbrFedRcgdTrbPerISDEA4eUndHBEE1701d10iiEff073014_b" text="the person is an American Indian who is a member of a Federally-recognized Indian tribe, as defined in section 4(e) of the Indian Self-Determination and Education Assistance Act, 25 USC section 450b(e)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1988-08-08</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personDfrdActnUndDHSActnUndHBEE1701g10Eff073014_b" text="the person is an individual with deferred action under DHS's deferred action for childhood arrivals process, as described in the Secretary of Homeland Security's June 15, 2012 memorandum" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citAIANCanada_b" text="the person is an American Indian who was born in Canada" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_Pregnant_b" text="the person is pregnant" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE17.035yrSat20140730_b" text="HBEE 17.03 is satisfied for the person (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <unknown-val />
+              <change-point date="2016-08-01">
+                <boolean-val>true</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2017" />
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Bob Loblaw|Bob Loblaw">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+    <test-case name="Subject to bar - not met" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="si_PrsnRefugee_b" text="the person is a refugee" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE17.01d2Refugee_b" text="the person is considered to be a refugee under HBEE 17.01(d)(2)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citUsNat_b" text="the person is a U.S. Citizen or National" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_personQlfdNonCtznUndHBEE1701dEff073014_b" text="the person is considered to be a qualified non-citizen under HBEE 17.01(d) (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE17.03b1Sat20140730_b" text="HBEE 17.03(b)(1) is satisfied for the person (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personAsyleeUndINA208UndHBEE1701d4Eff073014_b" text="the person is considered an asylee under INA 208" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citCubanHatianHBEE17.01d2ii_b" text="the person is a Cuban or Haitian entrant as defined in 501(e)(2) of the Refugee Assistance Act as clarified under HBEE 17.01(d)(2)(ii)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personVctmSvrTrfkgPerTVPA107b1UndHBEE1701d9Eff073014_b" text="the person is a victim of a severe form of trafficking, in accordance with section 107(b)(1) of the Trafficking Victims Protection Act of 2000" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personNonCtznWhsDprtnWthldUndINA243hUndHBEE1701d5iEff073014_b" text="the person is considered a non-citizen whose deportation has been withheld under section 243(h) of the INA, as in effect prior to April 1, 1997" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personNonCtznWhsDptnWthldUndINA241b3UndHBEE1701d5iiEff073014_b" text="the person is considered a non-citizen whose deportation has been withheld under section 241(b)(3) of the INA, as amended by section 305(a) of division C of Public Law 104-208" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_mil-vet-honor" text="the person is an honorably discharged veteran" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_PrsnActiveDutyUSMil_b" text="the person is on active duty in the U.S. military" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE17.03b6iiiSat20140730_b" text="HBEE 17.03(b)(6)(iii) is satisfied for the person (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personAmrsnAdmtdUSUndFOEF584UndHBEE1701d3Eff073014_b" text="the person is an Amerasian, admitted to the United States under Foreign Operations Export Financing, and Related Programs Appropriation Act, 1988 section 584" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citLprEnterOtherExemptStatus_b" text="the person is a legal permanent resident who first entered the United States under another exempt category and who later converted to LPR status" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citSIV_b" text="the person is a citizen or national of Iraq or Afghanistan with Special Immigrant Status" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Bob</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Loblaw</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_qualNonCitPrior19960822_b" text="the person became a qualified non-citizen prior to August 22, 1996" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perNonCitEntrUSPriorAug96_b" text="the person is a non-citizen who entered the United States prior to August 22, 1996 and remained continuously present without absence of more than 30 consecutive days or a combined total absence of 90 days before obtaining qualified non-citizen on or after that date" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personAmIndnMbrFedRcgdTrbPerISDEA4eUndHBEE1701d10iiEff073014_b" text="the person is an American Indian who is a member of a Federally-recognized Indian tribe, as defined in section 4(e) of the Indian Self-Determination and Education Assistance Act, 25 USC section 450b(e)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1988-08-08</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personDfrdActnUndDHSActnUndHBEE1701g10Eff073014_b" text="the person is an individual with deferred action under DHS's deferred action for childhood arrivals process, as described in the Secretary of Homeland Security's June 15, 2012 memorandum" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citAIANCanada_b" text="the person is an American Indian who was born in Canada" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_Pregnant_b" text="the person is pregnant" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_fiveYrsSincePerQualNonCitizen_b" text="it has been five years since the person became a qualified non-citizen" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE17.035yrSat20140730_b" text="HBEE 17.03 is satisfied for the person (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2016-08-01">
+                <boolean-val>false</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_pIsHtnGrntdHumParStat_b" text="the person is a Haitian granted Humanitarian Parole status" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2017" />
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Bob Loblaw|Bob Loblaw">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+    <test-case name="Subject to bar - met" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="si_PrsnRefugee_b" text="the person is a refugee" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE17.01d2Refugee_b" text="the person is considered to be a refugee under HBEE 17.01(d)(2)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citUsNat_b" text="the person is a U.S. Citizen or National" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_personQlfdNonCtznUndHBEE1701dEff073014_b" text="the person is considered to be a qualified non-citizen under HBEE 17.01(d) (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE17.03b1Sat20140730_b" text="HBEE 17.03(b)(1) is satisfied for the person (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personAsyleeUndINA208UndHBEE1701d4Eff073014_b" text="the person is considered an asylee under INA 208" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citCubanHatianHBEE17.01d2ii_b" text="the person is a Cuban or Haitian entrant as defined in 501(e)(2) of the Refugee Assistance Act as clarified under HBEE 17.01(d)(2)(ii)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personVctmSvrTrfkgPerTVPA107b1UndHBEE1701d9Eff073014_b" text="the person is a victim of a severe form of trafficking, in accordance with section 107(b)(1) of the Trafficking Victims Protection Act of 2000" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personNonCtznWhsDprtnWthldUndINA243hUndHBEE1701d5iEff073014_b" text="the person is considered a non-citizen whose deportation has been withheld under section 243(h) of the INA, as in effect prior to April 1, 1997" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personNonCtznWhsDptnWthldUndINA241b3UndHBEE1701d5iiEff073014_b" text="the person is considered a non-citizen whose deportation has been withheld under section 241(b)(3) of the INA, as amended by section 305(a) of division C of Public Law 104-208" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_mil-vet-honor" text="the person is an honorably discharged veteran" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_PrsnActiveDutyUSMil_b" text="the person is on active duty in the U.S. military" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE17.03b6iiiSat20140730_b" text="HBEE 17.03(b)(6)(iii) is satisfied for the person (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personAmrsnAdmtdUSUndFOEF584UndHBEE1701d3Eff073014_b" text="the person is an Amerasian, admitted to the United States under Foreign Operations Export Financing, and Related Programs Appropriation Act, 1988 section 584" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citLprEnterOtherExemptStatus_b" text="the person is a legal permanent resident who first entered the United States under another exempt category and who later converted to LPR status" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citSIV_b" text="the person is a citizen or national of Iraq or Afghanistan with Special Immigrant Status" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Bob</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Loblaw</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_qualNonCitPrior19960822_b" text="the person became a qualified non-citizen prior to August 22, 1996" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perNonCitEntrUSPriorAug96_b" text="the person is a non-citizen who entered the United States prior to August 22, 1996 and remained continuously present without absence of more than 30 consecutive days or a combined total absence of 90 days before obtaining qualified non-citizen on or after that date" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personAmIndnMbrFedRcgdTrbPerISDEA4eUndHBEE1701d10iiEff073014_b" text="the person is an American Indian who is a member of a Federally-recognized Indian tribe, as defined in section 4(e) of the Indian Self-Determination and Education Assistance Act, 25 USC section 450b(e)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1988-08-08</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personDfrdActnUndDHSActnUndHBEE1701g10Eff073014_b" text="the person is an individual with deferred action under DHS's deferred action for childhood arrivals process, as described in the Secretary of Homeland Security's June 15, 2012 memorandum" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citAIANCanada_b" text="the person is an American Indian who was born in Canada" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_Pregnant_b" text="the person is pregnant" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_fiveYrsSincePerQualNonCitizen_b" text="it has been five years since the person became a qualified non-citizen" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE17.035yrSat20140730_b" text="HBEE 17.03 is satisfied for the person (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2016-08-01">
+                <boolean-val>true</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_pIsHtnGrntdHumParStat_b" text="the person is a Haitian granted Humanitarian Parole status" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2017" />
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Bob Loblaw|Bob Loblaw">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+  </test-case-set>
+  <outcome-set>
+    <outcome name="so_HBEE17.035yrSat20140730_b" display-name="Meets citizenship requirements" text="HBEE 17.03 is satisfied for the person (eff. 07/30/2014)" type="boolean" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+  </outcome-set>
+</test-script>

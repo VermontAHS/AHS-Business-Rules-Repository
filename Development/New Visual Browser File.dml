@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root schema-version="1" product-version="10.4.6">
+  <rule-diagram>
+    <browser-object type="item" id="1" x="339" y="744" width="159" height="64" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="si_peIsFrPrvtDutyNrsgSrvcs_b" />
+      </rules>
+      <uplinks>
+        <rule-item-ref id="2" />
+      </uplinks>
+      <downlinks />
+      <hiddenlinks />
+    </browser-object>
+    <browser-object type="item" id="2" x="332" y="651" width="168" height="64" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="b178@03Source_DVHA_HBEE_Pt5Sec2830_Sec30_30_06_HBEE30_0620160801_doc" />
+      </rules>
+      <uplinks>
+        <rule-item-ref id="3" />
+        <rule-item-ref id="14" />
+      </uplinks>
+      <downlinks>
+        <rule-item-ref id="1" />
+      </downlinks>
+      <hiddenlinks />
+    </browser-object>
+    <browser-object type="item" id="3" x="433" y="535" width="175" height="79" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="st_peIsAnthrMedNcsryNonCovExpUndHBEE3006cEff080116_b" />
+      </rules>
+      <uplinks>
+        <rule-item-ref id="4" />
+      </uplinks>
+      <downlinks>
+        <rule-item-ref id="2" />
+      </downlinks>
+      <hiddenlinks />
+    </browser-object>
+    <browser-object type="item" id="4" x="335" y="436" width="174" height="69" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="st_peIsAlwblMedExpUndHBEE3006cEff080116_b" />
+      </rules>
+      <uplinks>
+        <rule-item-ref id="5" />
+        <rule-item-ref id="11" />
+      </uplinks>
+      <downlinks>
+        <rule-item-ref id="3" />
+        <rule-item-ref id="14" />
+      </downlinks>
+      <hiddenlinks />
+    </browser-object>
+    <browser-object type="item" id="5" x="423" y="342" width="168" height="64" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="so_peIsAlwblMedExpUndHBEE3006Eff080116_b" />
+      </rules>
+      <uplinks>
+        <rule-item-ref id="7" />
+        <rule-item-ref id="114" />
+      </uplinks>
+      <downlinks>
+        <rule-item-ref id="4" />
+      </downlinks>
+      <hiddenlinks />
+    </browser-object>
+    <browser-object type="item" id="7" x="430" y="233" width="170" height="64" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="so_HBEE30.06ExpAllowMed_b" />
+      </rules>
+      <uplinks>
+        <rule-item-ref id="8" />
+        <rule-item-ref id="9" />
+        <rule-item-ref id="10" />
+      </uplinks>
+      <downlinks>
+        <rule-item-ref id="5" />
+      </downlinks>
+      <hiddenlinks />
+    </browser-object>
+    <browser-object type="item" id="8" x="438" y="70" width="166" height="70" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="b89@01Config_01SourceMap_DVHASourceMapProps_xsrc" />
+      </rules>
+      <uplinks />
+      <downlinks>
+        <rule-item-ref id="7" />
+      </downlinks>
+      <hiddenlinks />
+    </browser-object>
+    <browser-object type="item" id="9" x="176" y="68" width="232" height="80" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="st_expprogramLoanUsdToPayAllwblMedExpHBEE30.06IncurrdBefrDurgAcctngPerid_b" />
+      </rules>
+      <uplinks />
+      <downlinks>
+        <rule-item-ref id="7" />
+      </downlinks>
+      <hiddenlinks />
+    </browser-object>
+    <browser-object type="item" id="10" x="634" y="75" width="250" height="70" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="st_epPersExpCnBUsdRdcExcsRsrcRetroCvgUndHBEE3004b3Eff071515_b" />
+      </rules>
+      <uplinks />
+      <downlinks>
+        <rule-item-ref id="7" />
+      </downlinks>
+      <hiddenlinks />
+    </browser-object>
+    <browser-object type="item" id="11" x="220" y="344" width="172" height="64" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="si_personexpAllowblMediclExpUndrHBEE30.06c_b" />
+      </rules>
+      <uplinks>
+        <rule-item-ref id="12" />
+      </uplinks>
+      <downlinks>
+        <rule-item-ref id="4" />
+      </downlinks>
+      <hiddenlinks />
+    </browser-object>
+    <browser-object type="item" id="12" x="150" y="236" width="254" height="66" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="st_expprogramAllwblnoncvrdMedExpHBEE30.05f220160801_b" />
+      </rules>
+      <uplinks>
+        <rule-item-ref id="13" />
+      </uplinks>
+      <downlinks>
+        <rule-item-ref id="11" />
+      </downlinks>
+      <hiddenlinks />
+    </browser-object>
+    <browser-object type="item" id="13" x="-19" y="67" width="168" height="101" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="p27@03Source_DVHA_HBEE_Pt5Sec2830_Sec30_30_05_HBEE30_05Props_xsrc" />
+      </rules>
+      <uplinks />
+      <downlinks>
+        <rule-item-ref id="12" />
+      </downlinks>
+      <hiddenlinks />
+    </browser-object>
+    <browser-object type="item" id="14" x="203" y="535" width="176" height="68" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="st_peIsAlwblMedExpUndHBEE3006c6Eff080116_b" />
+      </rules>
+      <uplinks>
+        <rule-item-ref id="4" />
+      </uplinks>
+      <downlinks>
+        <rule-item-ref id="2" />
+      </downlinks>
+      <hiddenlinks />
+    </browser-object>
+    <browser-object type="item" id="114" x="1201" y="200" width="157" height="65" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="p27@03Source_DVHA_HBEE_Pt5Sec2830_Sec30_30_06_HBEE30_06Props_xsrc" />
+      </rules>
+      <uplinks />
+      <downlinks>
+        <rule-item-ref id="5" />
+        <rule-item-ref id="137" />
+        <rule-item-ref id="138" />
+        <rule-item-ref id="139" />
+        <rule-item-ref id="140" />
+        <rule-item-ref id="141" />
+        <rule-item-ref id="142" />
+        <rule-item-ref id="143" />
+        <rule-item-ref id="144" />
+        <rule-item-ref id="145" />
+        <rule-item-ref id="146" />
+        <rule-item-ref id="147" />
+      </downlinks>
+      <hiddenlinks />
+    </browser-object>
+    <browser-object type="item" id="137" x="1226" y="539" width="92" height="72" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="st_pePrtnOfAmtOwdByPrsn_b" />
+      </rules>
+      <uplinks>
+        <rule-item-ref id="114" />
+      </uplinks>
+      <downlinks />
+      <hiddenlinks />
+    </browser-object>
+    <browser-object type="item" id="138" x="1115" y="532" width="96" height="83" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="si_expTPL_b" />
+      </rules>
+      <uplinks>
+        <rule-item-ref id="114" />
+      </uplinks>
+      <downlinks />
+      <hiddenlinks />
+    </browser-object>
+    <browser-object type="item" id="139" x="1331" y="522" width="88" height="113" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="st_peDdctblAmtUndHBEE3006c1iiiEff080116_b" />
+      </rules>
+      <uplinks>
+        <rule-item-ref id="114" />
+      </uplinks>
+      <downlinks />
+      <hiddenlinks />
+    </browser-object>
+    <browser-object type="item" id="140" x="1014" y="527" width="89" height="121" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="st_peIsAlwblMedExpUndHBEE3006c1Eff080116_b" />
+      </rules>
+      <uplinks>
+        <rule-item-ref id="114" />
+      </uplinks>
+      <downlinks />
+      <hiddenlinks />
+    </browser-object>
+    <browser-object type="item" id="141" x="1436" y="526" width="88" height="113" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="st_peDdctblAmtUndHBEE3006c2Eff080116_b" />
+      </rules>
+      <uplinks>
+        <rule-item-ref id="114" />
+      </uplinks>
+      <downlinks />
+      <hiddenlinks />
+    </browser-object>
+    <browser-object type="item" id="142" x="818" y="497" width="89" height="121" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="st_peIsAlwblMedExpUndHBEE3006c2Eff080116_b" />
+      </rules>
+      <uplinks>
+        <rule-item-ref id="114" />
+      </uplinks>
+      <downlinks />
+      <hiddenlinks />
+    </browser-object>
+    <browser-object type="item" id="143" x="1539" y="523" width="88" height="113" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="st_peDdctblAmtUndHBEE3006c3vEff080116_b" />
+      </rules>
+      <uplinks>
+        <rule-item-ref id="114" />
+      </uplinks>
+      <downlinks />
+      <hiddenlinks />
+    </browser-object>
+    <browser-object type="item" id="144" x="916" y="515" width="89" height="121" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="st_peIsAlwblMedExpUndHBEE3006c3Eff080116_b" />
+      </rules>
+      <uplinks>
+        <rule-item-ref id="114" />
+      </uplinks>
+      <downlinks />
+      <hiddenlinks />
+    </browser-object>
+    <browser-object type="item" id="145" x="1649" y="506" width="88" height="113" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="st_peExpDdctblAmtUndHBEE3006c4ivEff080116_b" />
+      </rules>
+      <uplinks>
+        <rule-item-ref id="114" />
+      </uplinks>
+      <downlinks />
+      <hiddenlinks />
+    </browser-object>
+    <browser-object type="item" id="146" x="714" y="497" width="89" height="121" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="st_peIsAlwblMedExpUndHBEE3006c4Eff080116_b" />
+      </rules>
+      <uplinks>
+        <rule-item-ref id="114" />
+      </uplinks>
+      <downlinks />
+      <hiddenlinks />
+    </browser-object>
+    <browser-object type="item" id="147" x="1660" y="417" width="80" height="60" text="" font-name="Arial" font-size="7" text-color="-16777216" background-color="-5383962">
+      <rules>
+        <rule-bit conclusion="si_peExpenseAmt_b" />
+      </rules>
+      <uplinks>
+        <rule-item-ref id="114" />
+      </uplinks>
+      <downlinks />
+      <hiddenlinks />
+    </browser-object>
+  </rule-diagram>
+</root>

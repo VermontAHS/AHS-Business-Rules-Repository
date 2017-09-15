@@ -1,0 +1,135 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+      <attribute name="p27" type="currency">
+        <text>
+          <base>the SNAP maximum allotment for 1 person</base>
+        </text>
+      </attribute>
+      <attribute name="p28" type="currency">
+        <text>
+          <base>the SNAP maximum allotment for 2 people</base>
+        </text>
+      </attribute>
+      <attribute name="p29" type="currency">
+        <text>
+          <base>the SNAP maximum allotment for 3 people</base>
+        </text>
+      </attribute>
+      <attribute name="p30" type="currency">
+        <text>
+          <base>the SNAP maximum allotment for 4 people</base>
+        </text>
+      </attribute>
+      <attribute name="p31" type="currency">
+        <text>
+          <base>the SNAP maximum allotment for 5 people</base>
+        </text>
+      </attribute>
+      <attribute name="p32" type="currency">
+        <text>
+          <base>the SNAP maximum allotment for 6 people</base>
+        </text>
+      </attribute>
+      <attribute name="p33" type="currency">
+        <text>
+          <base>the SNAP maximum allotment for 7 people</base>
+        </text>
+      </attribute>
+      <attribute name="p34" type="currency">
+        <text>
+          <base>the SNAP maximum allotment for 8 people</base>
+        </text>
+      </attribute>
+      <attribute name="p35" type="currency">
+        <text>
+          <base>the SNAP maximum allotment for each additional person</base>
+        </text>
+      </attribute>
+      <attribute name="p36" type="text" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the SNAP area</base>
+        </text>
+      </attribute>
+      <attribute name="p37" type="text" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the SNAP sub-area</base>
+        </text>
+      </attribute>
+      <attribute name="p40" type="currency">
+        <text>
+          <base>the SNAP minimum allotment for 1-2 people</base>
+        </text>
+      </attribute>
+      <attribute name="p41" type="currency">
+        <text>
+          <base>the SNAP standard deduction for 1-2 people</base>
+        </text>
+      </attribute>
+      <attribute name="p42" type="currency">
+        <text>
+          <base>the SNAP standard deduction for 3 people</base>
+        </text>
+      </attribute>
+      <attribute name="p43" type="currency">
+        <text>
+          <base>the SNAP standard deduction for 4 people</base>
+        </text>
+      </attribute>
+      <attribute name="p44" type="currency">
+        <text>
+          <base>the SNAP standard deduction for 5 people</base>
+        </text>
+      </attribute>
+      <attribute name="p45" type="currency">
+        <text>
+          <base>the SNAP standard deduction for 6+ people</base>
+        </text>
+      </attribute>
+      <attribute name="p46" type="currency">
+        <text>
+          <base>the SNAP maximum shelter deduction</base>
+        </text>
+      </attribute>
+      <attribute name="p47" type="currency">
+        <text>
+          <base>the SNAP homeless household shelter estimate</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="p26" type="currency">
+        <text>
+          <base>the SNAP maximum thrifty food plan allotment for the person's need group for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p38" type="currency">
+        <text>
+          <base>the SNAP standard deduction for the person's need group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p39" type="currency">
+        <text>
+          <base>the SNAP minimum thrifty food plan allotment for the person's need group for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

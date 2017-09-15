@@ -1,0 +1,68 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global" />
+    <entity id="program" name="the program" containment-parent-id="person" containment-relationship-id="personsprograms">
+      <attribute name="b8" type="boolean" public-name="so_RMA5121AppliestoProgrm20051201_b">
+        <text>
+          <base>RMA 5121 applies to the program (eff. 12/01/2005)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('RMA 5121',singular),o('to the program (eff. 12/01/2005)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="person" name="the person" containment-parent-id="global" containment-relationship-id="people">
+      <attribute name="b9" type="boolean" public-name="so_RMA5121Agency20051201_b">
+        <text>
+          <base>the person meets the resettlement agency requirements under RMA 5121 (eff. 12/01/2005)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the resettlement agency requirements under RMA 5121 (eff. 12/01/2005)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" public-name="soRMA5121Student20051201_b">
+        <text>
+          <base>the person meets the student requirements under RMA 5121 (eff. 12/01/2005)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the student requirements under RMA 5121 (eff. 12/01/2005)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" public-name="soRMA5121AltElig20051201_b">
+        <text>
+          <base>the person meets the alternative eligibility requirements under RMA 5121 (eff. 12/01/2005)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the alternative eligibility requirements under RMA 5121 (eff. 12/01/2005)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" public-name="si_studentApprPlan_b">
+        <text>
+          <base>the person's enrollment as a full-time student in an institution of higher learning is approved by the state as part of an employability plan or part of a plan for an unaccompanied minor</base>
+          <parse>s(ver('10.4.6.76'),v(approve,t(simple,present,normal)),ob('the person''s enrollment as a full-time student in an institution of higher learning',singular),o('by the state as part of an employability plan or part of a plan for an unaccompanied minor'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" public-name="si_resettleAgencyProvided_b">
+        <text>
+          <base>the person has provided the name of the person's resettlement agency</base>
+          <parse>s(ver('10.4.6.76'),v(provide,t(simple,present,perfect)),sb('the person',singular),o('the name of the person''s resettlement agency'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" public-name="si_studentFullHigherLearning_b">
+        <text>
+          <base>the person is a full-time student in an institution of higher learning</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('a full-time student in an institution of higher learning'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" public-name="si_recvRefugeeCash_b">
+        <text>
+          <base>the person is receiving refugee cash assistance</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('receiving refugee cash assistance'))</parse>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="person" target="program" is-containment="true" public-id="personsprograms" reverse-public-id="programsperson" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" />
+    <relationship source="global" target="person" is-containment="true" public-id="people" reverse-public-id="global_people_rev" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

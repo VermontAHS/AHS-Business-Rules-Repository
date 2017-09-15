@@ -1,0 +1,519 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+      <attribute name="b136" type="boolean" public-name="st_AdjustedNetIncomeTestHBEE7.03a1">
+        <text>
+          <base>there is an adjusted net income test under HBEE 7.03(a)(1) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adjusted net income test under HBEE 7.03(a)(1) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b137" type="boolean" public-name="st_AdjustedNetIncomeHBEE7.03a2i_b">
+        <text>
+          <base>there is an adjusted net income test under HBEE 7.03(a)(2)(i) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adjusted net income test under HBEE 7.03(a)(2)(i) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b138" type="boolean" public-name="so_AdjNetIcmTstFPLTstHBEE703a2i07152015_b">
+        <text>
+          <base>the adjusted net income test is an FPL% test under HBEE 7.03(a)(2)(i) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the adjusted net income test',singular),o('an FPL% test under HBEE 7.03(a)(2)(i) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p7" type="number" public-name="so_AdjNetIcmFPLPctLmtHBEE703a2i07152015_n">
+        <text>
+          <base>the adjusted net income FPL percentage limit under HBEE 7.03(a)(2)(i) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="b143" type="boolean" public-name="st_AdjustedNetIncomeHBEE7.03a3i_b">
+        <text>
+          <base>there is an adjusted net income test under HBEE 7.03(a)(3)(i) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adjusted net income test under HBEE 7.03(a)(3)(i) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p8" type="number" public-name="so_AdjNetFPLPercHBEE7.03a3i_c">
+        <text>
+          <base>the adjusted net income FPL percentage limit under HBEE 7.03(a)(3)(i) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p9" type="number" public-name="so_AdjustedINcomeFPLPerHBEE7.03a5iE_c">
+        <text>
+          <base>the adjusted net income FPL percentage limit under HBEE 7.03(a)(5)(i)(E) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="b149" type="boolean" public-name="st_AdjustNetInHBEE7.03a8iii_b">
+        <text>
+          <base>there is an adjusted net income test under HBEE 7.03(a)(8)(iii) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adjusted net income test under HBEE 7.03(a)(8)(iii) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p11" type="number" public-name="so_AdjNetIcmFPLPctLmtHBEE703a2i_n">
+        <text>
+          <base>the adjusted net income FPL percentage limit under HBEE 7.03(a)(2)(i)</base>
+        </text>
+      </attribute>
+      <attribute name="p12" type="number" public-name="so_AdjNetIcmFPLPctLmtHBEE703a3i_n">
+        <text>
+          <base>the adjusted net income FPL percentage limit under HBEE 7.03(a)(3)(i)</base>
+        </text>
+      </attribute>
+      <attribute name="p13" type="number" public-name="so_AdjNetIcmFPLPctLmtHBEE703a5iE_n">
+        <text>
+          <base>the adjusted net income FPL percentage limit under HBEE 7.03(a)(5)(i)(E)</base>
+        </text>
+      </attribute>
+      <attribute name="p18" type="number" public-name="so_TMAErngsFPLPctLimtHBEE703a6iDIII07152015_n">
+        <text>
+          <base>the TMA earnings FPL percentage limit under HBEE 7.03(a)(6)(i)(D)(III) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b24" type="boolean" public-name="so_HBEE7.03a3iCat20150715_b">
+        <text>
+          <base>the person meets the categorical requirements under HBEE 7.03(a)(3)(i) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the categorical requirements under HBEE 7.03(a)(3)(i) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean" public-name="st_AllContEligRequHBEE7.03a3iiB_b">
+        <text>
+          <base>the person meets the continuous eligibility requirements under HBEE 7.03(a)(3)(ii)(B) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the continuous eligibility requirements under HBEE 7.03(a)(3)(ii)(B) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" public-name="si_RecInpatientServicesDateHBEE7.03a3iiBI_b">
+        <text>
+          <base>the person is receiving inpatient services covered by Medicaid</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('receiving inpatient services covered by Medicaid'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b55" type="boolean" public-name="so_HBEE7.03a6iCat20150715_b">
+        <text>
+          <base>the person meets the categorical requirements under HBEE 7.03(a)(6)(i) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the categorical requirements under HBEE 7.03(a)(6)(i) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b56" type="boolean" public-name="st_7.03a6iASat_b">
+        <text>
+          <base>the person meets the categorical requirements for pregnant women under HBEE 7.03(a)(6)(i)(A) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the categorical requirements for pregnant women under HBEE 7.03(a)(6)(i)(A) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b57" type="boolean" public-name="st_HBEE7.03a6iBSat_b">
+        <text>
+          <base>the person meets the categorical requirements for parents and caretaker relatives under HBEE 7.03(a)(6)(i)(B) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the categorical requirements for parents and caretaker relatives under HBEE 7.03(a)(6)(i)(B) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b66" type="boolean" public-name="so_PerMeetsCompReqmtsHBEE703a6iDI_b">
+        <text>
+          <base>the person meets the compliance requirements under HBEE 7.03(a)(6)(i)(D)(I)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the compliance requirements under HBEE 7.03(a)(6)(i)(D)(I)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b68" type="boolean" public-name="st_HBEE7.03a6iDIISat_b">
+        <text>
+          <base>HBEE 7.03(a)(6)(i)(D)(II) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 7.03(a)(6)(i)(D)(II)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b91" type="boolean" public-name="st_7.03a7iiSat_b">
+        <text>
+          <base>HBEE 7.03(a)(7)(ii) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 7.03(a)(7)(ii)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b94" type="boolean" public-name="so_HBEE7.03a8iCat20150715_b">
+        <text>
+          <base>HBEE 7.03(a)(8)(i) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 7.03(a)(8)(i)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p1" type="currency" public-name="si_ParentCaretakerP2420B1_n">
+        <text>
+          <base>the parent or caretaker income standard under Medicaid Procedures P-2420B(1) for the person's family size</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p2" type="currency" public-name="so_AdjNetIncome7.03a1_c">
+        <text>
+          <base>the monthly adjusted net income limit for the person under HBEE 7.03(a)(1) (eff. 07/15/2015)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p5" type="currency" public-name="so_AdjNetIncomeHBEE7.03a8iii_c">
+        <text>
+          <base>the monthly adjusted net income limit for the person under HBEE 7.03(a)(8)(iii) (eff. 07/15/2015)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="b135" type="boolean" public-name="si_enrolledMEC_b">
+        <text>
+          <base>the person is enrolled in MEC</base>
+          <parse>s(ver('10.4.6.76'),v(enroll,t(simple,present,normal)),ob('the person',singular),o('in MEC'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p10" type="currency" public-name="so_PerMnthlyADjNetIcmLmit703a1_c">
+        <text>
+          <base>the monthly adjusted net income limit for the person under HBEE 7.03(a)(1)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="b155" type="boolean" public-name="st_HBEE7.03a6iDAddtlSixMonthSat_b">
+        <text>
+          <base>the person meets the compliance requirements under HBEE 7.03(a)(6)(i)(D)(I) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the compliance requirements under HBEE 7.03(a)(6)(i)(D)(I) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p14" type="currency" public-name="so_PerMnthlyADjNetIcmLmit703a8iii_c">
+        <text>
+          <base>the monthly adjusted net income limit for the person under HBEE 7.03(a)(8)(iii)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="b160" type="boolean" public-name="si_HBEE29.09d6Sat_b">
+        <text>
+          <base>HBEE 29.09(d)(6) is satisfied for the person</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.09(d)(6)',singular),o('for the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b161" type="boolean" public-name="si_pregMedApplyPost_b">
+        <text>
+          <base>it is the case that the person applied for Medicaid after the person's pregnancy ended</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the person applied for Medicaid after the person''s pregnancy ended'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b162" type="boolean" public-name="si_enroll703a6iMo6_b">
+        <text>
+          <base>it is the case that the person has been eligible for and enrolled in Medicaid coverage under HBEE 7.03(a)(6)(i) for at least 6 months</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the person has been eligible for and enrolled in Medicaid coverage under HBEE 7.03(a)(6)(i) for at least 6 months'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b163" type="boolean" public-name="si_reportTMALate_b">
+        <text>
+          <base>it is the case that the person has reported gross earnings and child care expenses necessary for employment in the preceding three months after the 21st day of the fourth, seventh, and tenth months of the 12-month TMA period</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the person has reported gross earnings and child care expenses necessary for employment in the preceding three months after the 21st day of the fourth, seventh, and tenth months of the 12-month TMA period'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b164" type="boolean" public-name="si_reportTMATimely_b">
+        <text>
+          <base>it is the case that the person has reported gross earnings and child care expenses necessary for employment in the preceding three months by the 21st day of the fourth, seventh, and tenth months of the 12-month TMA period</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the person has reported gross earnings and child care expenses necessary for employment in the preceding three months by the 21st day of the fourth, seventh, and tenth months of the 12-month TMA period'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b166" type="boolean" public-name="si_eligMedicareA_b">
+        <text>
+          <base>it is the case that the person is entitled to or enrolled in Medicare part A</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the person is entitled to or enrolled in Medicare part A'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b167" type="boolean" public-name="si_eligMedicareB_b">
+        <text>
+          <base>it is the case that the person is entitled to or enrolled in Medicare part B</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the person is entitled to or enrolled in Medicare part B'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b168" type="boolean" public-name="si_enroll703a1Past_b">
+        <text>
+          <base>it is the case that the person was eligible for and enrolled in Medicaid coverage under HBEE 7.03(a)(1)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the person was eligible for and enrolled in Medicaid coverage under HBEE 7.03(a)(1)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b169" type="boolean" public-name="si_elig703a1Past3of6_b">
+        <text>
+          <base>it is the case that the person was eligible for and enrolled in Medicaid coverage under HBEE 7.03(a)(1) in at least 3 out of the 6 months immediately preceding the month that eligibility was lost</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the person was eligible for and enrolled in Medicaid coverage under HBEE 7.03(a)(1) in at least 3 out of the 6 months immediately preceding the month that eligibility was lost'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b170" type="boolean" public-name="si_elig703a2Past_b">
+        <text>
+          <base>it is the case that the person was eligible for and enrolled in Medicaid coverage under HBEE 7.03(a)(2)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the person was eligible for and enrolled in Medicaid coverage under HBEE 7.03(a)(2)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b171" type="boolean" public-name="si_elig703a3Past_b">
+        <text>
+          <base>it is the case that the person was eligible for and enrolled in Medicaid coverage under HBEE 7.03(a)(3)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the person was eligible for and enrolled in Medicaid coverage under HBEE 7.03(a)(3)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b172" type="boolean" public-name="si_reportTMAMonth_b">
+        <text>
+          <base>it is the month in which the person reported gross earnings and child care expenses necessary for employment in the preceding three months after the 21st day of the fourth, seventh, and tenth months of the 12-month TMA period</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the month in which the person reported gross earnings and child care expenses necessary for employment in the preceding three months after the 21st day of the fourth, seventh, and tenth months of the 12-month TMA period'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b173" type="boolean" public-name="si_ineligMedicaidPast12_b">
+        <text>
+          <base>the person became ineligible for Medicaid coverage during the preceding 12 months</base>
+          <parse>s(ver('10.4.6.76'),v(become,t(simple,past,normal)),sb('the person',plural),o('ineligible for Medicaid coverage during the preceding 12 months'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b174" type="boolean" public-name="si_ineligMedicaidPast4_b">
+        <text>
+          <base>the person became ineligible for Medicaid coverage during the preceding 4 months</base>
+          <parse>s(ver('10.4.6.76'),v(become,t(simple,past,normal)),sb('the person',plural),o('ineligible for Medicaid coverage during the preceding 4 months'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b175" type="boolean" public-name="si_inelig703a1Past12Earn_b">
+        <text>
+          <base>the person became ineligible for Medicaid coverage under HBEE 7.03(a)(1) during the preceding 12 months due to increased earnings</base>
+          <parse>s(ver('10.4.6.76'),v(become,t(simple,past,normal)),sb('the person',plural),o('ineligible for Medicaid coverage under HBEE 7.03(a)(1) during the preceding 12 months due to increased earnings'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b176" type="boolean" public-name="si_inelig703a1Past4Support_b">
+        <text>
+          <base>the person became ineligible for Medicaid coverage under HBEE 7.03(a)(1) during the preceding 4 months due to increased collection of spousal support</base>
+          <parse>s(ver('10.4.6.76'),v(become,t(simple,past,normal)),sb('the person',plural),o('ineligible for Medicaid coverage under HBEE 7.03(a)(1) during the preceding 4 months due to increased collection of spousal support'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b178" type="boolean" public-name="si_inelig703a2Past12Earn_b">
+        <text>
+          <base>the person became ineligible for Medicaid coverage under HBEE 7.03(a)(2) during the preceding 12 months due to increased earnings</base>
+          <parse>s(ver('10.4.6.76'),v(become,t(simple,past,normal)),sb('the person',plural),o('ineligible for Medicaid coverage under HBEE 7.03(a)(2) during the preceding 12 months due to increased earnings'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b179" type="boolean" public-name="si_inelig703a2Past4Support_b">
+        <text>
+          <base>the person became ineligible for Medicaid coverage under HBEE 7.03(a)(2) during the preceding 4 months due to increased collection of spousal support</base>
+          <parse>s(ver('10.4.6.76'),v(become,t(simple,past,normal)),sb('the person',plural),o('ineligible for Medicaid coverage under HBEE 7.03(a)(2) during the preceding 4 months due to increased collection of spousal support'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b181" type="boolean" public-name="si_inelig703a3Past12Earn_b">
+        <text>
+          <base>the person became ineligible for Medicaid coverage under HBEE 7.03(a)(3) during the preceding 12 months due to increased earnings</base>
+          <parse>s(ver('10.4.6.76'),v(become,t(simple,past,normal)),sb('the person',plural),o('ineligible for Medicaid coverage under HBEE 7.03(a)(3) during the preceding 12 months due to increased earnings'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b182" type="boolean" public-name="si_inelig703a3Past4Support_b">
+        <text>
+          <base>the person became ineligible for Medicaid coverage under HBEE 7.03(a)(3) during the preceding 4 months due to increased collection of spousal support</base>
+          <parse>s(ver('10.4.6.76'),v(become,t(simple,past,normal)),sb('the person',plural),o('ineligible for Medicaid coverage under HBEE 7.03(a)(3) during the preceding 4 months due to increased collection of spousal support'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b184" type="boolean" public-name="si_incLessChildU185FPL_b">
+        <text>
+          <base>the person's average gross earnings (less cost for child care necessary for employment) during the preceding 3 months are less than or equal to the TMA earnings FPL percentage limit under HBEE 7.03(a)(6)(i)(D)(III) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s average gross earnings (less cost for child care necessary for employment) during the preceding 3 months',plural),o('less than or equal to the TMA earnings FPL percentage limit under HBEE 7.03(a)(6)(i)(D)(III) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b185" type="boolean" public-name="si_incEarnedPast3_b">
+        <text>
+          <base>the person has earnings in all of the previous three months</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('earnings in all of the previous three months'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b186" type="boolean" public-name="si_reportTMALateCause_b">
+        <text>
+          <base>the person has good cause for not reporting gross earnings and child care expenses necessary for employment in the preceding three months by the 21st day of the fourth, seventh, and tenth months of the 12-month TMA period on a timely basis</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('good cause for not reporting gross earnings and child care expenses necessary for employment in the preceding three months by the 21st day of the fourth, seventh, and tenth months of the 12-month TMA period on a timely basis'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b187" type="boolean" public-name="si_eligMedicaidMCA_b">
+        <text>
+          <base>the person is eligible for Medicaid coverage under a MCA coverage group</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('eligible for Medicaid coverage under a MCA coverage group'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b189" type="boolean" public-name="si_incU703a1Last3of6_b">
+        <text>
+          <base>the person's household income was at or below the income limit for parents and other caretaker relatives under HBEE 7.03(a)(1) for the person's family size in at least 3 out of the 6 months immediately preceding the month that eligibility was lost under HBEE 7.03(a)(2)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s household income',singular),o('at or below the income limit for parents and other caretaker relatives under HBEE 7.03(a)(1) for the person''s family size in at least 3 out of the 6 months immediately preceding the month that eligibility was lost under HBEE 7.03(a)(2)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b190" type="boolean" public-name="si_incEarnPast3Causel_b">
+        <text>
+          <base>the person's lack of earnings in all of the previous three months was due to an involuntary loss of employment, illness, or other good cause as determined by AHS</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s lack of earnings in all of the previous three months',singular),o('due to an involuntary loss of employment, illness, or other good cause as determined by AHS'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b191" type="boolean" public-name="so_HBEE7.03a1Cat20150715_b">
+        <text>
+          <base>the person meets the categorical requirements under HBEE 7.03(a)(1) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the categorical requirements under HBEE 7.03(a)(1) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b192" type="boolean" public-name="so_HBEE7.03a5Cat20150715_b">
+        <text>
+          <base>the person meets the categorical requirements under HBEE 7.03(a)(5) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the categorical requirements under HBEE 7.03(a)(5) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b193" type="boolean" public-name="so_HBEE7.03a9Cat20150715_b">
+        <text>
+          <base>the person meets the categorical requirements under HBEE 7.03(a)(9) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the categorical requirements under HBEE 7.03(a)(9) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b194" type="boolean" public-name="so_HBEE7.03a7Cat20150715_b">
+        <text>
+          <base>HBEE 7.03(a)(7) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.5.40'),v(satisfy,t(simple,present,normal)),ob('HBEE 7.03(a)(7)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b195" type="boolean" public-name="so_HBEE7.03a6iDIncOth20150715_b">
+        <text>
+          <base>the person meets the other income requirements under HBEE 7.03(a)(6)(i)(D) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the other income requirements under HBEE 7.03(a)(6)(i)(D) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b196" type="boolean" public-name="so_HBEE7.03a2iRetro20150715_b">
+        <text>
+          <base>there is a potential retroactive eligibility period for the person under HBEE 7.03(a)(2)(i) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('a potential retroactive eligibility period for the person under HBEE 7.03(a)(2)(i) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b197" type="boolean" public-name="so_HBEE7.03a2iCat20150715_b">
+        <text>
+          <base>the person meets the categorical requirements under HBEE 7.03(a)(2)(i) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the categorical requirements under HBEE 7.03(a)(2)(i) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b198" type="boolean" public-name="so_HBEE7.03a8iCat_b">
+        <text>
+          <base>HBEE 7.03(a)(8)(i) is satisfied for the person</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 7.03(a)(8)(i)',singular),o('for the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p15" type="currency" public-name="so_PerAdjNetIcmLmitBdgtgPrdHBEE703a107152015_c">
+        <text>
+          <base>the adjusted net income limit for the budgeting period for the person under HBEE 7.03(a)(1) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p16" type="currency" public-name="so_PerAdjNetIcmLmitBdgtgPrdForPrgrmHBEE703a8iii07152015_c">
+        <text>
+          <base>the adjusted net income limit for the budgeting period for the person for the program under HBEE 7.03(a)(8)(iii) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="b200" type="boolean" public-name="si_elig703a3Past3of6_b">
+        <text>
+          <base>it is the case that the person was eligible for and enrolled in Medicaid coverage under HBEE 7.03(a)(3) in at least 3 out of the 6 months immediately preceding the month that the person's parent or caretaker relative's eligibility under HBEE 7.03(a)(1) was lost</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the person was eligible for and enrolled in Medicaid coverage under HBEE 7.03(a)(3) in at least 3 out of the 6 months immediately preceding the month that the person''s parent or caretaker relative''s eligibility under HBEE 7.03(a)(1) was lost'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p19" type="currency" public-name="si_avgEarnLessChildCareLast3Mo_c">
+        <text>
+          <base>the person's average gross earnings (less cost for child care necessary for employment) during the preceding 3 months</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b120" type="boolean" public-name="so_HBEE7.03a9Apply20150715_b">
+        <text>
+          <base>HBEE 7.03(a)(9) applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 7.03(a)(9)',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b139" type="boolean" public-name="so_HBEE7.03a2iiiCont20150715_b">
+        <text>
+          <base>the person meets the continuous eligibility requirements for the program under HBEE 7.03(a)(2)(iii) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the continuous eligibility requirements for the program under HBEE 7.03(a)(2)(iii) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b140" type="boolean" public-name="st_ContEligRequirHBEE7.03a2iii07152015_b">
+        <text>
+          <base>there are continuous eligibility requirements for the person for the program under HBEE 7.03(a)(2)(iii) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',plural),o('continuous eligibility requirements for the person for the program under HBEE 7.03(a)(2)(iii) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b141" type="boolean" public-name="st_ContEligRequirHBEE7.03a2iii_b">
+        <text>
+          <base>there are continuous eligibility requirements for the person for the program under HBEE 7.03(a)(2)(iii)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',plural),o('continuous eligibility requirements for the person for the program under HBEE 7.03(a)(2)(iii)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b142" type="boolean" public-name="so_HBEE7.03a2iiiApply_b">
+        <text>
+          <base>the person meets the continuous eligibility requirements for the program under HBEE 7.03(a)(2)(iii)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the continuous eligibility requirements for the program under HBEE 7.03(a)(2)(iii)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b151" type="boolean" public-name="st_ContEligRequirHBEE7.03a3ii_b">
+        <text>
+          <base>there are continuous eligibility requirements for the program under HBEE 7.03(a)(3)(ii) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',plural),o('continuous eligibility requirements for the program under HBEE 7.03(a)(3)(ii) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b152" type="boolean" public-name="so_HBEE7.03a3iiApply_b">
+        <text>
+          <base>there are continuous eligibility requirements for the program under HBEE 7.03(a)(3)(ii)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',plural),o('continuous eligibility requirements for the program under HBEE 7.03(a)(3)(ii)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b153" type="boolean" public-name="st_AddtlSixMonthHBEE7.03a6iC_b">
+        <text>
+          <base>there are compliance requirements for the person for the program under HBEE 7.03(a)(6)(i)(D)(I) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',plural),o('compliance requirements for the person for the program under HBEE 7.03(a)(6)(i)(D)(I) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b154" type="boolean" public-name="so_HBEE7.03a6iDIApply_b">
+        <text>
+          <base>there are compliance requirements for the person for the program under HBEE 7.03(a)(6)(i)(D)(I)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',plural),o('compliance requirements for the person for the program under HBEE 7.03(a)(6)(i)(D)(I)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b156" type="boolean" public-name="so_HBEE7.03a6iDApply20150715_b">
+        <text>
+          <base>there are other income requirements for the person for the program under HBEE 7.03(a)(6)(i)(D) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',plural),o('other income requirements for the person for the program under HBEE 7.03(a)(6)(i)(D) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b157" type="boolean" public-name="so_HBEE7.03a6iDApply_b">
+        <text>
+          <base>there are other income requirements for the person for the program under HBEE 7.03(a)(6)(i)(D)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',plural),o('other income requirements for the person for the program under HBEE 7.03(a)(6)(i)(D)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p20" type="number" public-name="st_PerAvgGrossErngsPRecdg3MnthPctFPLHBEE7.03a6iDIII20150715_n">
+        <text>
+          <base>the person's average gross earnings (less cost for child care necessary for employment) during the preceding 3 months as a percentage of FPL for the program under HBEE 7.03(a)(6)(i)(D)(III) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+      <attribute name="b199" type="boolean">
+        <text>
+          <base>the group member is the person's primary person under HBEE 7.03(a)(6)(i) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s primary person under HBEE 7.03(a)(6)(i) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

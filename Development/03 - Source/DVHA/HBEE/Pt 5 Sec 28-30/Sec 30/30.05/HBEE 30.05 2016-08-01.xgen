@@ -1,0 +1,1431 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 30.05 applies to the program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 30.05',singular),o('to the program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b2" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is a medically-needy program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('a medically-needy program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the benefit effective date is the first day of the month in which the person is determined eligible for the program under HBEE 30.05(d) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the benefit effective date',singular),o('the first day of the month in which the person is determined eligible for the program under HBEE 30.05(d) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person used covered medical expenses to meet the income spenddown test for the program under HBEE 30.05(f) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(use,t(simple,past,normal)),sb('the person',plural),o('covered medical expenses to meet the income spenddown test for the program under HBEE 30.05(f) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person passes the income test for the program under HBEE 30.05 (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the income test for the program under HBEE 30.05 (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person passes the income test for the program under HBEE 30.05(f)(1) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the income test for the program under HBEE 30.05(f)(1) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person passes the income test for the program under HBEE 30.05(f)(2) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the income test for the program under HBEE 30.05(f)(2) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person passes the income test for the program under HBEE 30.05(f)(3) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the income test for the program under HBEE 30.05(f)(3) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person passes the income test for the program under HBEE 30.05(f)(4) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the income test for the program under HBEE 30.05(f)(4) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b65" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has an income spenddown for the accounting period for the program under HBEE 30.05(a) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('an income spenddown for the accounting period for the program under HBEE 30.05(a) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b66" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is an income spenddown for the program under HBEE 30.05 (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an income spenddown for the program under HBEE 30.05 (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b68" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is an adjusted net income limit test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adjusted net income limit test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p2" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's excess income amount for the accounting period for the program under HBEE 30.05(a) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p3" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the total adjusted net income for the person's financial group for the accounting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p4" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the applicable income maximum for the person's financial group for the accounting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p5" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's financial responsibility group's total health insurance expenditures during the accounting period for the program under HBEE 30.05(f)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p8" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's financial responsibility group's total noncovered medical expenditures during the accounting period for the program under HBEE 30.05(f)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p10" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's financial responsibility group's total covered medical expenditures that exceed limitations on amount, duration, or scope of services covered during the accounting period for the program under HBEE 30.05(f)(3) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p12" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's financial responsibility group's total covered medical expenditures that do not exceed limitations on amount, duration, or scope of services covered during the accounting period for the program under HBEE 30.05(f)(4) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p13" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's total covered medical expenditures that do not exceed limitations on amount, duration, or scope of services covered during the accounting period for the program under HBEE 30.05(f)(4) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p14" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's total health insurance expenditures during the accounting period for the program under HBEE 30.05(f)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p15" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's total noncovered medical expenditures during the accounting period for the program under HBEE 30.05(f)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p16" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's total covered medical expenditures that exceed limitations on amount, duration, or scope of services covered during the accounting period for the program under HBEE 30.05(f)(3) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b4" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 30.05(d)(3) applies to the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 30.05(d)(3)',singular),o('to the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has special eligibility dates due to meeting the person's spenddown using noncovered assistive community care services under HBEE 30.06(c)(4)</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('special eligibility dates due to meeting the person''s spenddown using noncovered assistive community care services under HBEE 30.06(c)(4)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the group member program" id="groupmemberprogram" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+      <attribute name="b12" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is in the person's financial group for the group member program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('in the person''s financial group for the group member program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p17" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the group member's total health insurance expenditures during the accounting period for the person for the group member program under HBEE 30.05(f)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p19" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the group member's noncovered medical expenditures during the accounting period for the person for the group member program under HBEE 30.05(f)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p21" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the group member's covered medical expenditures that exceed limitations on amount, duration, or scope of services covered during the accounting period for the person for the group member program under HBEE 30.05(f)(3) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p23" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the group member's covered medical expenditures that do not exceed limitations on amount, duration, or scope of services covered during the accounting period for the person for the group member program under HBEE 30.05(f)(4) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's expense" id="personsexpense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+      <attribute name="b22" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense exceeds limitations on amount, duration, or scope of services covered under DVHA Rules 7201-7606</base>
+          <parse>s(ver('10.4.6.76'),v(exceed,t(simple,present,normal)),sb('the person''s expense',singular),o('limitations on amount, duration, or scope of services covered under DVHA Rules 7201-7606'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is payable by a state or local program other than a program that receives Medicaid funding</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('payable by a state or local program other than a program that receives Medicaid funding'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b38" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is considered a bona fide loan under HBEE 30.05(g)(4) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person''s expense',singular),o('a bona fide loan under HBEE 30.05(g)(4) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b39" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is an obligation documented from its outset by a written contract and a specified repayment schedule</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an obligation documented from its outset by a written contract and a specified repayment schedule'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b40" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(b)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(b)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b41" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(c)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(c)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b42" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(d)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(d)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b43" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is a deductible medical expense under HBEE 30.05(h) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a deductible medical expense under HBEE 30.05(h) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b44" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense has been incurred</base>
+          <parse>s(ver('10.4.6.76'),v(incur,t(simple,present,perfect)),ob('the person''s expense',singular))</parse>
+        </text>
+      </attribute>
+      <attribute name="b45" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it can be reasonably assumed that the person's expense will continue</base>
+          <parse>s(ver('10.4.6.76'),v(be+can,t(simple,modal,normal)),sb('it',singular),o('reasonably assumed that the person''s expense will continue'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b46" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is considered a predictable medical expense under HBEE 30.05(h) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person''s expense',singular),o('a predictable medical expense under HBEE 30.05(h) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b47" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is considered a predictable medical expense under HBEE 30.05(h)(1) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person''s expense',singular),o('a predictable medical expense under HBEE 30.05(h)(1) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b48" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is considered a predictable medical expense under HBEE 30.05(h)(2) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person''s expense',singular),o('a predictable medical expense under HBEE 30.05(h)(2) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b49" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is considered a predictable medical expense under HBEE 30.05(h)(3) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person''s expense',singular),o('a predictable medical expense under HBEE 30.05(h)(3) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b50" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is considered a predictable medical expense under HBEE 30.05(h)(4) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person''s expense',singular),o('a predictable medical expense under HBEE 30.05(h)(4) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b51" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(c)(1)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(c)(1)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b52" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(c)(3)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(c)(3)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b53" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is an allowable medical expense under HBEE 30.06(c)(4)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06(c)(4)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b59" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it is the case that the service provider for the person's expense has confirmed that the unpaid liability has not been forgiven</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the service provider for the person''s expense has confirmed that the unpaid liability has not been forgiven'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b64" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is a medical expense</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a medical expense'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p7" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's expense's available spenddown amount</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the expense program" id="expenseprogram" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+      <attribute name="b15" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is an allowable spenddown expense for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable spenddown expense for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is an allowable health insurance expense for the expense program under HBEE 30.05(f)(1) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable health insurance expense for the expense program under HBEE 30.05(f)(1) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is an allowable noncovered medical expense for the expense program under HBEE 30.05(f)(2) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable noncovered medical expense for the expense program under HBEE 30.05(f)(2) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is an allowable covered medical expense for the expense program that exceeds limitations on amount, duration, or scope of services covered expense under HBEE 30.05(f)(3) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable covered medical expense for the expense program that exceeds limitations on amount, duration, or scope of services covered expense under HBEE 30.05(f)(3) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is an allowable covered medical expense for the expense program that does not exceed limitations on amount, duration, or scope of services covered expense under HBEE 30.05(f)(4) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable covered medical expense for the expense program that does not exceed limitations on amount, duration, or scope of services covered expense under HBEE 30.05(f)(4) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is a deductible medical expense for the expense program under HBEE 30.05(g) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a deductible medical expense for the expense program under HBEE 30.05(g) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is a deductible medical expense for the expense program under HBEE 30.05(g)(1) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a deductible medical expense for the expense program under HBEE 30.05(g)(1) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is a deductible medical expense under HBEE 30.05(g)(2) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a deductible medical expense under HBEE 30.05(g)(2) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is a deductible medical expense under HBEE 30.05(g)(3) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a deductible medical expense under HBEE 30.05(g)(3) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense was incurred during the accounting period for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(incur,t(simple,past,normal)),ob('the person''s expense',singular),o('during the accounting period for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense was incurred before the accounting period for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(incur,t(simple,past,normal)),ob('the person''s expense',singular),o('before the accounting period for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b34" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense was paid during the accounting period for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(pay,t(simple,past,normal)),ob('the person''s expense',singular),o('during the accounting period for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has established continuing liability for the person's expense for the expense program under HBEE 30.05(i) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(establish,t(simple,present,perfect)),sb('the person',singular),o('continuing liability for the person''s expense for the expense program under HBEE 30.05(i) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is a loan that was used to pay for an allowable medical expenses under HBEE 30.06 that was incurred before or during the accounting period for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a loan that was used to pay for an allowable medical expenses under HBEE 30.06 that was incurred before or during the accounting period for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b54" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has established continuing liability for the person's expense for the expense program under HBEE 30.05(i)(1) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(establish,t(simple,present,perfect)),sb('the person',singular),o('continuing liability for the person''s expense for the expense program under HBEE 30.05(i)(1) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b55" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has established continuing liability for the person's expense for the expense program under HBEE 30.05(i)(2) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(establish,t(simple,present,perfect)),sb('the person',singular),o('continuing liability for the person''s expense for the expense program under HBEE 30.05(i)(2) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b56" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has established continuing liability for the person's expense for the expense program under HBEE 30.05(i)(3) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(establish,t(simple,present,perfect)),sb('the person',singular),o('continuing liability for the person''s expense for the expense program under HBEE 30.05(i)(3) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b57" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense was incurred within six months of the latter of either the date of application or the first day of the accounting period for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(incur,t(simple,past,normal)),ob('the person''s expense',singular),o('within six months of the latter of either the date of application or the first day of the accounting period for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b58" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is a bill for the person's expense that is dated within 90 days of the latter of either the date of application or the first day of the accounting period for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('a bill for the person''s expense that is dated within 90 days of the latter of either the date of application or the first day of the accounting period for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b60" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it is the case that the service provider for the person's expense has confirmed that the unpaid liability is not expected to be forgiven at any time within the accounting period for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the service provider for the person''s expense has confirmed that the unpaid liability is not expected to be forgiven at any time within the accounting period for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b61" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is a deductible medical expense for the expense program under HBEE 30.05 (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a deductible medical expense for the expense program under HBEE 30.05 (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p18" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's health insurance expenditure for the person's expense during the accounting period for the expense program under HBEE 30.05(f)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p20" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's noncovered medical expenditure for the person's expense during the accounting period for the expense program under HBEE 30.05(f)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p22" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's covered medical expenditure that exceed limitations on amount, duration, or scope of services covered for the person's expense during the accounting period for the expense program under HBEE 30.05(f)(3) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p24" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's covered medical expenditure that do not exceed limitations on amount, duration, or scope of services covered for the person's expense during the accounting period for the expense program under HBEE 30.05(f)(3) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+    <entity name="the group member" id="groupmember" containment-relationship-id="personsgroupmembers" containment-parent-id="person" />
+  </entities>
+  <relationships>
+    <relationship type="ManyToMany" relationship-id="groupmemberscontainingpersonsprogramforthegroupmemberprogram" reverse-relationship-id="personscontainedgroupmemberprogramsfortheprogram" text="the group member's containing person's program for the group member program" reverse-text="the person's contained group member programs for the program" source="groupmemberprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="groupmembersprogramforthegroupmemberprogram" reverse-relationship-id="personsrepresentativegroupmemberprogramsfortheprogram" text="the group member's program for the group member program" reverse-text="the person's representative group member programs for the program" source="groupmemberprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="personsprogramfortheexpenseprogram" reverse-relationship-id="personsexpensesfortheprogram" text="the person's program for the expense program" reverse-text="the person's expenses for the program" source="expenseprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" text="the group member's group member programs" reverse-text="the group member program's group member" source="groupmember" target="groupmemberprogram" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" text="the person's expense's expense programs" reverse-text="the person's expense for the expense program" source="personsexpense" target="expenseprogram" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" text="the person's group members" reverse-text="the group member's containing person" source="person" target="groupmember" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" text="the person's expenses" reverse-text="the person's expense's person" source="person" target="personsexpense" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="HBEE 30.05 applies to the program (eff. 08/01/2016)" ruleburst="true" concludes="b1" folder="1" source-offset="71">
+      <rule-xml>
+        <conclude attr-id="b1" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b2" />
+              <attribute attr-id="b68" silent="true" invisible-if-true="true" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the person's expense is a deductible medical expense for the expense program under HBEE 30.05 (eff. 08/01/2016)" ruleburst="true" concludes="b61" folder="1" source-offset="305">
+      <rule-xml>
+        <conclude attr-id="b61" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b28" />
+              <for>
+                <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                <attribute attr-id="b43" />
+              </for>
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="the person's excess income amount for the accounting period for the program under HBEE 30.05(a) (eff. 08/01/2016) " ruleburst="true" concludes="p2 = Maximum(p3 - p4,0)" folder="2" source-offset="709">
+      <rule-xml>
+        <conclude attr-id="p2" entity-id="program" scope-id="program0">
+          <value>
+            <maximum>
+              <minus>
+                <attribute attr-id="p3" />
+                <attribute attr-id="p4" />
+              </minus>
+              <number-value>0</number-value>
+            </maximum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="the person has an income spenddown for the accounting period for the program under HBEE 30.05(a) (eff. 08/01/2016)" ruleburst="true" concludes="b65" folder="2" source-offset="1080">
+      <rule-xml>
+        <conclude attr-id="b65" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <greater-than>
+              <attribute attr-id="p2" />
+              <number-value>0</number-value>
+            </greater-than>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="the benefit effective date is the first day of the month in which the person is determined eligible for the program under HBEE 30.05(d) (eff. 08/01/2016)" ruleburst="true" concludes="b3" folder="3" source-offset="1748">
+      <rule-xml>
+        <conclude attr-id="b3" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <not>
+                <attribute attr-id="b65" />
+              </not>
+              <and>
+                <attribute attr-id="b65" />
+                <or>
+                  <for>
+                    <relationship relationship-id="programsperson" target-entity-id="person" />
+                    <attribute attr-id="b4" />
+                  </for>
+                  <not>
+                    <attribute attr-id="b5" />
+                  </not>
+                </or>
+              </and>
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="HBEE 30.05(d)(3) applies to the person (eff. 08/01/2016)" ruleburst="true" concludes="b4" folder="3" source-offset="2595">
+      <rule-xml>
+        <conclude attr-id="b4" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b6" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="there is an income spenddown for the program under HBEE 30.05 (eff. 08/01/2016)" ruleburst="true" concludes="b66" folder="4" source-offset="2874">
+      <rule-xml>
+        <conclude attr-id="b66" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b1" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="7" name="the person passes the income test for the program under HBEE 30.05 (eff. 08/01/2016)" ruleburst="true" concludes="b7" folder="4" source-offset="3021">
+      <rule-xml>
+        <conclude attr-id="b7" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b8" />
+              <and>
+                <not>
+                  <attribute attr-id="b8" />
+                </not>
+                <attribute attr-id="b9" />
+              </and>
+              <and>
+                <not>
+                  <attribute attr-id="b8" />
+                </not>
+                <not>
+                  <attribute attr-id="b9" />
+                </not>
+                <attribute attr-id="b10" />
+              </and>
+              <and>
+                <not>
+                  <attribute attr-id="b8" />
+                </not>
+                <not>
+                  <attribute attr-id="b9" />
+                </not>
+                <not>
+                  <attribute attr-id="b10" />
+                </not>
+                <attribute attr-id="b11" />
+              </and>
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="8" name="the person passes the income test for the program under HBEE 30.05(f)(1) (eff. 08/01/2016)" ruleburst="true" concludes="b8" folder="5" source-offset="4252">
+      <rule-xml>
+        <conclude attr-id="b8" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <greater-than-equals>
+              <attribute attr-id="p5" />
+              <attribute attr-id="p2" />
+            </greater-than-equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="9" name="the person's financial responsibility group's total health insurance expenditures during the accounting period for the program under HBEE 30.05(f)(1) (eff. 08/01/2016) " ruleburst="true" concludes="p5 = InstanceSum(personscontainedgroupmemberprogramsfortheprogram,p17)" folder="5" source-offset="5202">
+      <rule-xml>
+        <conclude attr-id="p5" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum>
+              <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+              <attribute attr-id="p17" />
+            </instance-sum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="10" name="the group member's total health insurance expenditures during the accounting period for the person for the group member program under HBEE 30.05(f)(1) (eff. 08/01/2016)" ruleburst="true" concludes="p17" folder="5" source-offset="5693">
+      <rule-xml>
+        <table-conclude attr-id="p17" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <row>
+            <value>
+              <instance-value-if>
+                <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                <attribute attr-id="p14" />
+                <true-value />
+              </instance-value-if>
+            </value>
+            <condition>
+              <attribute attr-id="b12" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="11" name="the person's total health insurance expenditures during the accounting period for the program under HBEE 30.05(f)(1) (eff. 08/01/2016) " ruleburst="true" concludes="p14 = InstanceSum(personsexpensesfortheprogram,p18)" folder="5" source-offset="6711">
+      <rule-xml>
+        <conclude attr-id="p14" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum>
+              <relationship relationship-id="personsexpensesfortheprogram" target-entity-id="expenseprogram" />
+              <attribute attr-id="p18" />
+            </instance-sum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="12" name="the person's health insurance expenditure for the person's expense during the accounting period for the expense program under HBEE 30.05(f)(1) (eff. 08/01/2016)" ruleburst="true" concludes="p18" folder="5" source-offset="7119">
+      <rule-xml>
+        <table-conclude attr-id="p18" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <row>
+            <value>
+              <instance-value-if>
+                <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                <attribute attr-id="p7" />
+                <true-value />
+              </instance-value-if>
+            </value>
+            <condition>
+              <attribute attr-id="b24" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="13" name="the person's expense is an allowable health insurance expense for the expense program under HBEE 30.05(f)(1) (eff. 08/01/2016)" ruleburst="true" concludes="b24" folder="5" source-offset="7623">
+      <rule-xml>
+        <conclude attr-id="b24" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <for>
+                <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                <attribute attr-id="b40" />
+              </for>
+              <attribute attr-id="b15" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="14" name="the person passes the income test for the program under HBEE 30.05(f)(2) (eff. 08/01/2016)" ruleburst="true" concludes="b9" folder="6" source-offset="7993">
+      <rule-xml>
+        <conclude attr-id="b9" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <greater-than-equals>
+              <plus>
+                <attribute attr-id="p5" />
+                <attribute attr-id="p8" />
+              </plus>
+              <attribute attr-id="p2" />
+            </greater-than-equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="15" name="the person's financial responsibility group's total noncovered medical expenditures during the accounting period for the program under HBEE 30.05(f)(2) (eff. 08/01/2016) " ruleburst="true" concludes="p8 = InstanceSum(personscontainedgroupmemberprogramsfortheprogram,p19)" folder="6" source-offset="9125">
+      <rule-xml>
+        <conclude attr-id="p8" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum>
+              <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+              <attribute attr-id="p19" />
+            </instance-sum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="16" name="the group member's noncovered medical expenditures during the accounting period for the person for the group member program under HBEE 30.05(f)(2) (eff. 08/01/2016)" ruleburst="true" concludes="p19" folder="6" source-offset="9614">
+      <rule-xml>
+        <table-conclude attr-id="p19" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <row>
+            <value>
+              <instance-value-if>
+                <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                <attribute attr-id="p15" />
+                <true-value />
+              </instance-value-if>
+            </value>
+            <condition>
+              <attribute attr-id="b12" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="17" name="the person's total noncovered medical expenditures during the accounting period for the program under HBEE 30.05(f)(2) (eff. 08/01/2016) " ruleburst="true" concludes="p15 = InstanceSum(personsexpensesfortheprogram,p20)" folder="6" source-offset="10634">
+      <rule-xml>
+        <conclude attr-id="p15" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum>
+              <relationship relationship-id="personsexpensesfortheprogram" target-entity-id="expenseprogram" />
+              <attribute attr-id="p20" />
+            </instance-sum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="18" name="the person's noncovered medical expenditure for the person's expense during the accounting period for the expense program under HBEE 30.05(f)(2) (eff. 08/01/2016)" ruleburst="true" concludes="p20" folder="6" source-offset="11046">
+      <rule-xml>
+        <table-conclude attr-id="p20" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <row>
+            <value>
+              <instance-value-if>
+                <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                <attribute attr-id="p7" />
+                <true-value />
+              </instance-value-if>
+            </value>
+            <condition>
+              <attribute attr-id="b25" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="19" name="the person's expense is an allowable noncovered medical expense for the expense program under HBEE 30.05(f)(2) (eff. 08/01/2016)" ruleburst="true" concludes="b25" folder="6" source-offset="11554">
+      <rule-xml>
+        <conclude attr-id="b25" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <for>
+                <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                <attribute attr-id="b41" />
+              </for>
+              <attribute attr-id="b15" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="20" name="the person did not use covered medical expenses to meet the income spenddown test for the program under HBEE 30.05(f) (eff. 08/01/2016)" ruleburst="true" concludes="not b5" folder="6" source-offset="11862">
+      <rule-xml>
+        <conclude attr-id="b5" entity-id="program" scope-id="program0">
+          <value>
+            <false-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b8" />
+              <and>
+                <not>
+                  <attribute attr-id="b8" />
+                </not>
+                <attribute attr-id="b9" />
+              </and>
+              <and>
+                <not>
+                  <attribute attr-id="b8" />
+                </not>
+                <not>
+                  <attribute attr-id="b9" />
+                </not>
+                <attribute attr-id="b10" />
+              </and>
+            </or>
+          </condition>
+          <otherwise>
+            <true-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="21" name="the person passes the income test for the program under HBEE 30.05(f)(3) (eff. 08/01/2016)" ruleburst="true" concludes="b10" folder="7" source-offset="12729">
+      <rule-xml>
+        <conclude attr-id="b10" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <greater-than-equals>
+              <plus>
+                <attribute attr-id="p5" />
+                <attribute attr-id="p8" />
+                <attribute attr-id="p10" />
+              </plus>
+              <attribute attr-id="p2" />
+            </greater-than-equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="22" name="the person's financial responsibility group's total covered medical expenditures that exceed limitations on amount, duration, or scope of services covered during the accounting period for the program under HBEE 30.05(f)(3) (eff. 08/01/2016)" ruleburst="true" concludes="p10 = InstanceSum(personscontainedgroupmemberprogramsfortheprogram,p21)" folder="7" source-offset="14253">
+      <rule-xml>
+        <conclude attr-id="p10" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum>
+              <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+              <attribute attr-id="p21" />
+            </instance-sum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="23" name="the group member's covered medical expenditures that exceed limitations on amount, duration, or scope of services covered during the accounting period for the person for the group member program under HBEE 30.05(f)(3) (eff. 08/01/2016)" ruleburst="true" concludes="p21" folder="7" source-offset="14884">
+      <rule-xml>
+        <table-conclude attr-id="p21" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <row>
+            <value>
+              <instance-value-if>
+                <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                <attribute attr-id="p16" />
+                <true-value />
+              </instance-value-if>
+            </value>
+            <condition>
+              <attribute attr-id="b12" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="24" name="the person's total covered medical expenditures that exceed limitations on amount, duration, or scope of services covered during the accounting period for the program under HBEE 30.05(f)(3) (eff. 08/01/2016) " ruleburst="true" concludes="p16 = InstanceSum(personsexpensesfortheprogram,p22)" folder="7" source-offset="16197">
+      <rule-xml>
+        <conclude attr-id="p16" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum>
+              <relationship relationship-id="personsexpensesfortheprogram" target-entity-id="expenseprogram" />
+              <attribute attr-id="p22" />
+            </instance-sum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="25" name="the person's covered medical expenditure that exceed limitations on amount, duration, or scope of services covered for the person's expense during the accounting period for the expense program under HBEE 30.05(f)(3) (eff. 08/01/2016)" ruleburst="true" concludes="p22" folder="7" source-offset="16751">
+      <rule-xml>
+        <table-conclude attr-id="p22" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <row>
+            <value>
+              <instance-value-if>
+                <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                <attribute attr-id="p7" />
+                <true-value />
+              </instance-value-if>
+            </value>
+            <condition>
+              <attribute attr-id="b26" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="26" name="the person's expense is an allowable covered medical expense for the expense program that exceeds limitations on amount, duration, or scope of services covered expense under HBEE 30.05(f)(3) (eff. 08/01/2016)" ruleburst="true" concludes="b26" folder="7" source-offset="17410">
+      <rule-xml>
+        <conclude attr-id="b26" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <for>
+                <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                <attribute attr-id="b42" />
+              </for>
+              <attribute attr-id="b15" />
+              <for>
+                <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                <attribute attr-id="b22" />
+              </for>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="27" name="the person passes the income test for the program under HBEE 30.05(f)(4) (eff. 08/01/2016)" ruleburst="true" concludes="b11" folder="8" source-offset="18018">
+      <rule-xml>
+        <conclude attr-id="b11" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <greater-than-equals>
+              <plus>
+                <attribute attr-id="p5" />
+                <attribute attr-id="p8" />
+                <attribute attr-id="p10" />
+                <attribute attr-id="p12" />
+              </plus>
+              <attribute attr-id="p2" />
+            </greater-than-equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="28" name="the person's financial responsibility group's total covered medical expenditures that do not exceed limitations on amount, duration, or scope of services covered during the accounting period for the program under HBEE 30.05(f)(4) (eff. 08/01/2016)" ruleburst="true" concludes="p12 = InstanceSum(personscontainedgroupmemberprogramsfortheprogram,p23)" folder="8" source-offset="19813">
+      <rule-xml>
+        <conclude attr-id="p12" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum>
+              <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+              <attribute attr-id="p23" />
+            </instance-sum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="29" name="the group member's covered medical expenditures that do not exceed limitations on amount, duration, or scope of services covered during the accounting period for the person for the group member program under HBEE 30.05(f)(4) (eff. 08/01/2016)" ruleburst="true" concludes="p23" folder="8" source-offset="20458">
+      <rule-xml>
+        <table-conclude attr-id="p23" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <row>
+            <value>
+              <instance-value-if>
+                <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                <attribute attr-id="p13" />
+                <true-value />
+              </instance-value-if>
+            </value>
+            <condition>
+              <attribute attr-id="b12" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="30" name="the person's total covered medical expenditures that do not exceed limitations on amount, duration, or scope of services covered during the accounting period for the program under HBEE 30.05(f)(4) (eff. 08/01/2016) " ruleburst="true" concludes="p13 = InstanceSum(personsexpensesfortheprogram,p24)" folder="8" source-offset="21800">
+      <rule-xml>
+        <conclude attr-id="p13" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum>
+              <relationship relationship-id="personsexpensesfortheprogram" target-entity-id="expenseprogram" />
+              <attribute attr-id="p24" />
+            </instance-sum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="31" name="the person's covered medical expenditure that do not exceed limitations on amount, duration, or scope of services covered for the person's expense during the accounting period for the expense program under HBEE 30.05(f)(3) (eff. 08/01/2016)" ruleburst="true" concludes="p24" folder="8" source-offset="22368">
+      <rule-xml>
+        <table-conclude attr-id="p24" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <row>
+            <value>
+              <instance-value-if>
+                <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                <attribute attr-id="p7" />
+                <true-value />
+              </instance-value-if>
+            </value>
+            <condition>
+              <attribute attr-id="b27" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="32" name="the person's expense is an allowable covered medical expense for the expense program that does not exceed limitations on amount, duration, or scope of services covered expense under HBEE 30.05(f)(4) (eff. 08/01/2016)" ruleburst="true" concludes="b27" folder="8" source-offset="23042">
+      <rule-xml>
+        <conclude attr-id="b27" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <for>
+                <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                <attribute attr-id="b42" />
+              </for>
+              <attribute attr-id="b15" />
+              <not>
+                <for>
+                  <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                  <attribute attr-id="b22" />
+                </for>
+              </not>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="33" name="the person's expense is a deductible medical expense for the expense program under HBEE 30.05(g) (eff. 08/01/2016)" ruleburst="true" concludes="b28" folder="9" source-offset="23617">
+      <rule-xml>
+        <conclude attr-id="b28" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <for>
+                <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                <attribute attr-id="b64" />
+              </for>
+              <or>
+                <attribute attr-id="b29" />
+                <attribute attr-id="b30" />
+                <attribute attr-id="b31" />
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="34" name="the person's expense is a deductible medical expense for the expense program under HBEE 30.05(g)(1) (eff. 08/01/2016)" ruleburst="true" concludes="b29" folder="9" source-offset="24129">
+      <rule-xml>
+        <conclude attr-id="b29" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <for>
+                <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                <attribute attr-id="b44" />
+              </for>
+              <or>
+                <attribute attr-id="b32" />
+                <and>
+                  <attribute attr-id="b33" />
+                  <attribute attr-id="b34" />
+                </and>
+                <and>
+                  <attribute attr-id="b33" />
+                  <not>
+                    <attribute attr-id="b34" />
+                  </not>
+                  <attribute attr-id="b35" />
+                </and>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="35" name="the person's expense is a deductible medical expense under HBEE 30.05(g)(2) (eff. 08/01/2016)" ruleburst="true" concludes="b30" folder="9" source-offset="24943">
+      <rule-xml>
+        <conclude attr-id="b30" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b34" />
+              <for>
+                <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                <attribute attr-id="b36" />
+              </for>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="36" name="the person's expense is a deductible medical expense under HBEE 30.05(g)(3) (eff. 08/01/2016)" ruleburst="true" concludes="b31" folder="9" source-offset="25259">
+      <rule-xml>
+        <conclude attr-id="b31" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b37" />
+              <for>
+                <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                <attribute attr-id="b38" />
+              </for>
+              <attribute attr-id="b35" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="37" name="the person's expense is considered a bona fide loan under HBEE 30.05(g)(4) (eff. 08/01/2016)" ruleburst="true" concludes="b38" folder="9" source-offset="25802">
+      <rule-xml>
+        <conclude attr-id="b38" entity-id="personsexpense" scope-id="personsexpense0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b39" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="38" name="the person's expense is a deductible medical expense under HBEE 30.05(h) (eff. 08/01/2016)" ruleburst="true" concludes="b43" folder="10" source-offset="26067">
+      <rule-xml>
+        <conclude attr-id="b43" entity-id="personsexpense" scope-id="personsexpense0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b64" />
+              <or>
+                <attribute attr-id="b44" />
+                <and>
+                  <not>
+                    <attribute attr-id="b44" />
+                  </not>
+                  <attribute attr-id="b45" />
+                  <attribute attr-id="b46" />
+                </and>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="39" name="the person's expense is considered a predictable medical expense under HBEE 30.05(h) (eff. 08/01/2016)" ruleburst="true" concludes="b46" folder="10" source-offset="26521">
+      <rule-xml>
+        <conclude attr-id="b46" entity-id="personsexpense" scope-id="personsexpense0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b47" />
+              <attribute attr-id="b48" />
+              <attribute attr-id="b49" />
+              <attribute attr-id="b50" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="40" name="the person's expense is considered a predictable medical expense under HBEE 30.05(h)(1) (eff. 08/01/2016)" ruleburst="true" concludes="b47" folder="10" source-offset="27091">
+      <rule-xml>
+        <conclude attr-id="b47" entity-id="personsexpense" scope-id="personsexpense0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b40" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="41" name="the person's expense is considered a predictable medical expense under HBEE 30.05(h)(2) (eff. 08/01/2016)" ruleburst="true" concludes="b48" folder="10" source-offset="27286">
+      <rule-xml>
+        <conclude attr-id="b48" entity-id="personsexpense" scope-id="personsexpense0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b51" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="42" name="the person's expense is considered a predictable medical expense under HBEE 30.05(h)(3) (eff. 08/01/2016)" ruleburst="true" concludes="b49" folder="10" source-offset="27484">
+      <rule-xml>
+        <conclude attr-id="b49" entity-id="personsexpense" scope-id="personsexpense0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b52" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="43" name="the person's expense is considered a predictable medical expense under HBEE 30.05(h)(4) (eff. 08/01/2016)" ruleburst="true" concludes="b50" folder="10" source-offset="27682">
+      <rule-xml>
+        <conclude attr-id="b50" entity-id="personsexpense" scope-id="personsexpense0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b53" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="44" name="the person has established continuing liability for the person's expense for the expense program under HBEE 30.05(i) (eff. 08/01/2016)" ruleburst="true" concludes="b35" folder="11" source-offset="27954">
+      <rule-xml>
+        <conclude attr-id="b35" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b54" />
+              <attribute attr-id="b55" />
+              <attribute attr-id="b56" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="45" name="the person has established continuing liability for the person's expense for the expense program under HBEE 30.05(i)(1) (eff. 08/01/2016)" ruleburst="true" concludes="b54" folder="11" source-offset="28537">
+      <rule-xml>
+        <conclude attr-id="b54" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b57" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="46" name="the person has established continuing liability for the person's expense for the expense program under HBEE 30.05(i)(2) (eff. 08/01/2016)" ruleburst="true" concludes="b55" folder="11" source-offset="28857">
+      <rule-xml>
+        <conclude attr-id="b55" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <not>
+                <attribute attr-id="b57" />
+              </not>
+              <attribute attr-id="b58" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="47" name="the person has established continuing liability for the person's expense for the expense program under HBEE 30.05(i)(3) (eff. 08/01/2016)" ruleburst="true" concludes="b56" folder="11" source-offset="29379">
+      <rule-xml>
+        <conclude attr-id="b56" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <not>
+                <attribute attr-id="b57" />
+              </not>
+              <for>
+                <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                <attribute attr-id="b59" />
+              </for>
+              <attribute attr-id="b60" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="30.05 Income spenddowns (08/01/2016, 16-02FP)" parent="0" id="1" />
+    <folder text="Para (a): Spending down excess income on medical expenses" parent="1" id="2" />
+    <folder text="Para (d): Eligibility date" parent="1" id="3" />
+    <folder text="Para (f): Deduction sequence" parent="1" id="4" />
+    <folder text="Para (f)(1): Deduction sequence - Health insurance expenses" parent="1" id="5" />
+    <folder text="Para (f)(2): Deduction sequence - Noncovered medical expenses" parent="1" id="6" />
+    <folder text="Para (f)(3): Deduction sequence - Covered medical expenses that exceed limitations" parent="1" id="7" />
+    <folder text="Para (f)(4): Deduction sequence - Covered medical expenses that do not exceed limitations" parent="1" id="8" />
+    <folder text="Para (g): Time frames for deductions" parent="1" id="9" />
+    <folder text="Para (h): Predictable expenses" parent="1" id="10" />
+    <folder text="Para (i): Establishing continuing liability for prior medical expenses" parent="1" id="11" />
+  </rule-folders>
+</root>

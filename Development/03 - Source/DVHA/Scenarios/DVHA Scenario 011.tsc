@@ -1,0 +1,681 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-script product-version="10.4.6.76" schema-version="4">
+  <test-case-set>
+    <test-case name="16.02 (SSN for QHP) + Basic scenario #1. Individual applies for QHP without subsidies, has an SSN, but refuses to provide it" notes="11. 16.02 (SSN for QHP) + Basic scenario #1. Individual applies for QHP without subsidies, has an SSN, but refuses to provide it. Result = ineligible for QHP.">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <attr-inst name="i_g_timestamp" text="the transaction date time" type="datetime">
+            <val>
+              <datetime-val>2017-02-08T08:34:58</datetime-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_g_application-date" text="the application date" type="date">
+            <val>
+              <date-val>2017-02-08</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true">
+              <ent-inst-ref ref-id="CSR-AIAN-300" />
+              
+              <ent-inst-ref ref-id="CSR-Tier3" />
+              <ent-inst-ref ref-id="APTC" />
+              <ent-inst-ref ref-id="CSR-Tier1" />
+              <ent-inst-ref ref-id="MCA-Pregnant" />
+              <ent-inst-ref ref-id="CSR-Tier4" />
+              <ent-inst-ref ref-id="MN-MCA" />
+              <ent-inst-ref ref-id="MCA-Adult" />
+              <ent-inst-ref ref-id="MCA-Child" />
+              <ent-inst-ref ref-id="CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="MCA-TMA-1925" />
+              <ent-inst-ref ref-id="VPR" />
+              <ent-inst-ref ref-id="MCA-EXT" />
+              <ent-inst-ref ref-id="QHP" />
+              <ent-inst-ref ref-id="MCA-PCR" />
+              <ent-inst-ref ref-id="CSR-Tier2" />
+            </relationship-inst>
+            <relationship-inst type="existingbenefitplans" complete="true" />
+            <relationship-inst type="caseresults" complete="true">
+              <ent-inst-ref ref-id="Insurance Exchange Access" />
+              <ent-inst-ref ref-id="Insurance Premium Reduction" />
+              <ent-inst-ref ref-id="Insurance Cost-Sharing Reduction" />
+              <ent-inst-ref ref-id="Medical Care Benefits" />
+              <ent-inst-ref ref-id="Insurance Premium Tax Credit" />
+            </relationship-inst>
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="program" entity-text="the program" inferred="yes" identifying-attribute="rb_p_ID">
+        <ent-inst id="Alex|MN-MCA" />
+        <ent-inst id="Alex|CSR-Tier4" />
+        <ent-inst id="Alex|MCA-Adult">
+          <attr-inst name="rb_p_req-eligibility" text="the person meets all of the eligibility requirements for the program" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2016-08-01">
+                <boolean-val>false</boolean-val>
+              </change-point>
+              <change-point date="2017-02-01">
+                <boolean-val>true</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Alex|MCA-Child" />
+        <ent-inst id="Alex|CSR-AIAN-IHP" />
+        <ent-inst id="Alex|CSR-Tier3" />
+        <ent-inst id="Alex|MCA-EXT" />
+        <ent-inst id="Alex|QHP">
+          <attr-inst name="rb_p_req-eligibility" text="the person meets all of the eligibility requirements for the program" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2016-08-01">
+                <boolean-val>false</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Alex|APTC">
+          <attr-inst name="rb_p_req-eligibility" text="the person meets all of the eligibility requirements for the program" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2016-08-01">
+                <boolean-val>false</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Alex|MCA-TMA-1925" />
+        
+        <ent-inst id="Alex|CSR-AIAN-300" />
+        <ent-inst id="Alex|CSR-Tier2" />
+        <ent-inst id="Alex|MCA-Pregnant" />
+        <ent-inst id="Alex|MCA-PCR" />
+        <ent-inst id="Alex|CSR-Tier1" />
+        <ent-inst id="Alex|VPR" />
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="si_hospice_b" text="the person is receiving hospice care" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesHomeOwn_b" text="the person lives in the person's own home" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_cPerOtherTaxFilerClaimDed_b" text="another tax filer can claim the person as a dependent for a benefit year beginning in the calendar year in which the person's benefit year begins" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personStRsdncIsVermont_b" text="the person lives in Vermont" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_eligMedicareB_b" text="it is the case that the person is entitled to or enrolled in Medicare part B" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_MeetsRequirementsForQHP_b" text="the person meets the requirements for eligibility for enrollment in a QHP under HBEE 11.00" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_eligMedicareA_b" text="it is the case that the person is entitled to or enrolled in Medicare part A" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsMntlAge7BsdOnTstAcptToAHS_b" text="the person has a mental age of 7 years or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsIQ49BsdOnTstAcptToAHS_b" text="the person has an I.Q. of 49 or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_AHSDetermineEligibility_b" text="it is the case that HHS has notified AHS that the person, or the person's spouse if married, did not comply with the requirement to file an income tax return in order to reconcile APTC payments for a year for which tax data would be utilized for verification of household income and family size" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resIntendVT_b" text="the person intends to reside in Vermont" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personJgdLglyCompetent_b" text="the person is judged legally incompetent" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personRcvgFedPymtsFrFostrCrAdptnAsstUndHBEE2107Eff073014_b" text="the person is receiving federal payments for foster care or adoption assistance under Title IV-E of the Social Security Act" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_filetaxreturn_b" text="the person is going to file a federal income tax return for the benefit year" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_recvAABD_b" text="the person is receiving AABD" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_MeetsRequirementsforAPTC_b" text="the person meets the requirements for APTC under HBEE 12.00" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_enrollMedMandatory_b" text="it is the case that the person is eligible for and enrolled in a mandatory coverage group" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_AttestEstPatObtSup_b" text="the person has attested that they will cooperate in establishing paternity and obtaining medical support and payments" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ResOutOfState_b" text="the person is currently out of state" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesFacCorrections_b" text="the person is living in a correctional facility" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_req-iap" text="the person is requesting insurance affordability assistance" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_req-ltc" text="the person is requesting long term care assistance" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ineligMedicaidPast12_b" text="the person became ineligible for Medicaid coverage during the preceding 12 months" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_Hospitilized_b" text="the person is hospitalized" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perIncarcerated_b" text="the person is incarcerated" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personReasonablyExpectsBeACitiOrNational_b" text="the person is reasonably expected to be a citizen or national for the entire period for which QHP enrollment is sought" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_aPerTaxFiler_b" text="the person is a tax filer" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personFndIncpblIndctIntBsdOnMedDocs_b" text="the person is found incapable of indicating intent based on medical documentation obtained from a physician, psychologist, or other person licensed by the state in the field of intellectual disabilities" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_ssn-none" text="it is the case that the person does not have a social security number" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ineligMedicaidPast4_b" text="the person became ineligible for Medicaid coverage during the preceding 4 months" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesInst_b" text="the person lives in an institution" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_receiving_mediciad_b" text="the person is currently receiving Medicaid benefits" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Alex</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perEligibleMEC_b" text="the person is eligible for MEC under HBEE 23.00" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_interstateAgree_b" text="the person's residency is subject to an interstate agreement" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perMedicaidEnrolled_b" text="the person is enrolled in Medicaid" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1988-08-08</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personSSNVrfdbyAHS_b" text="the person has provided the person's social security number" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_bPerConsMarr1.7703-1_b" text="the person is considered married at the close of the benefit year under 26 CFR 1.7703-1" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_Pregnant_b" text="the person is pregnant" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_pregnantHBEE7.03a2_b" text="the person is considered to be a pregnant woman under 7.03(a)(2)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_coopTPL_b" text="the person has attested that they will cooperate in identifying and providing information to assist in pursuing third parties who may be liable to pay for care and services under the plan" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personReasonablyExpectedToBeNonciti_b" text="the person is reasonably expected to be a non-citizen who is lawfully present for the entire period QHP enrollment is sought" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_medAcuteOnset_b" text="the person has sudden onset medical condition manifesting itself in acute symptoms of sufficient severity such that immediate medical attention is required" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citUsNat_b" text="the person has identified as a US Citizen or National" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personAsyleeUndINA208UndHBEE1701d4Eff073014_b" text="the person is considered an asylee under INA 208" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citCubanHatianHBEE17.01d2ii_b" text="the person is a Cuban or Haitian entrant as defined in 501€(2) of the Refugee Assistance Act as clarified under HBEE 17.01(d)(2)(ii)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personVctmSvrTrfkgPerTVPA107b1UndHBEE1701d9Eff073014_b" text="the person is a victim of a severe form of trafficking, in accordance with section 107(b)(1) of the Trafficking Victims Protection Act of 2000" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personNonCtznWhsDprtnWthldUndINA243hUndHBEE1701d5iEff073014_b" text="the person is considered a non-citizen whose deportation has been withheld under section 243(h) of the INA, as in effect prior to April 1, 1997" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personNonCtznWhsDptnWthldUndINA241b3UndHBEE1701d5iiEff073014_b" text="the person is considered a non-citizen whose deportation has been withheld under section 241(b)(3) of the INA, as amended by section 305(a) of division C of Public Law 104-208" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personAmrsnAdmtdUSUndFOEF584UndHBEE1701d3Eff073014_b" text="the person is an Amerasian, admitted to the United States under Foreign Operations Export Financing, and Related Programs Appropriation Act, 1988 section 584" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citLprEnterOtherExemptStatus_b" text="the person is a legal permanent resident who first entered the United States under another exempt category and who later converted to LPR status" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citSIV_b" text="the person is a citizen or national of Iraq or Afghanistan with Special Immigrant Status" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personAmIndnMbrFedRcgdTrbPerISDEA4eUndHBEE1701d10iiEff073014_b" text="the person is an American Indian who is a member of a Federally-recognized Indian tribe, as defined in section 4(e) of the Indian Self-Determination and Education Assistance Act, 25 USC section 450b(e)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citAIANCanada_b" text="the person is an American Indian who was born in Canada" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personAdmtdUSUndINA207UndHBEE1701d2iEff073014_b" text="the person is an individual admitted to the United States under section 207 of the INA" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personGrntdParoleCubHaitUndHBEE1701d2iiAEff073014_b" text="the person was granted parole status as a Cuban/Haitian entrant (Status Pending) on or after April 21, 1980" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personParldIntoUSAft101080UndHBEE1701d2iiAEff073014_b" text="the person has been paroled into the United States on or after October 10, 1980" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personSbjtRmvlDptUndINAUndHBEE1701d2iiBEff073014_b" text="the person is the subject of removal, deportation or exclusion proceedings under the Immigration and Nationality Act" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsAplctnAsylmPdgWDHSUndHBEE1701d2iiCEff073014_b" text="the person has an application for asylum pending with the Department of Homeland Security (DHS)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="true">
+              <ent-inst-ref ref-id="income 1" />
+            </relationship-inst>
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true">
+              <ent-inst-ref ref-id="Alex|Insurance Exchange Access" />
+              <ent-inst-ref ref-id="Alex|Insurance Premium Reduction" />
+              <ent-inst-ref ref-id="Alex|Insurance Cost-Sharing Reduction" />
+              <ent-inst-ref ref-id="Alex|Medical Care Benefits" />
+              <ent-inst-ref ref-id="Alex|Insurance Premium Tax Credit" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true">
+              <ent-inst-ref ref-id="Alex|Insurance Affordability Assistance" />
+            </relationship-inst>
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="true" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Alex|Alex" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true">
+              <ent-inst-ref ref-id="Alex|CSR-Tier3" />
+              <ent-inst-ref ref-id="Alex|MCA-Child" />
+              <ent-inst-ref ref-id="Alex|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Alex|MCA-Adult" />
+              <ent-inst-ref ref-id="Alex|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Alex|QHP" />
+              <ent-inst-ref ref-id="Alex|CSR-Tier4" />
+              <ent-inst-ref ref-id="Alex|VPR" />
+              
+              <ent-inst-ref ref-id="Alex|MN-MCA" />
+              <ent-inst-ref ref-id="Alex|CSR-Tier2" />
+              <ent-inst-ref ref-id="Alex|MCA-EXT" />
+              <ent-inst-ref ref-id="Alex|CSR-Tier1" />
+              <ent-inst-ref ref-id="Alex|APTC" />
+              <ent-inst-ref ref-id="Alex|MCA-PCR" />
+              <ent-inst-ref ref-id="Alex|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Alex|CSR-AIAN-300" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Alex|Alex">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Alex|Alex|MCA-Child" />
+              <ent-inst-ref ref-id="Alex|Alex|CSR-Tier4" />
+              <ent-inst-ref ref-id="Alex|Alex|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Alex|Alex|APTC" />
+              <ent-inst-ref ref-id="Alex|Alex|MCA-EXT" />
+              <ent-inst-ref ref-id="Alex|Alex|MCA-Adult" />
+              <ent-inst-ref ref-id="Alex|Alex|VPR" />
+              <ent-inst-ref ref-id="Alex|Alex|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Alex|Alex|CSR-Tier2" />
+              <ent-inst-ref ref-id="Alex|Alex|CSR-Tier1" />
+              <ent-inst-ref ref-id="Alex|Alex|CSR-AIAN-300" />
+              <ent-inst-ref ref-id="Alex|Alex|CSR-Tier3" />
+              <ent-inst-ref ref-id="Alex|Alex|MCA-PCR" />
+              <ent-inst-ref ref-id="Alex|Alex|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Alex|Alex|MN-MCA" />
+              <ent-inst-ref ref-id="Alex|Alex|QHP" />
+              
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmemberprogram" entity-text="the group member program" inferred="yes" identifying-attribute="rb_gmp_ID">
+        <ent-inst id="Alex|Alex|CSR-AIAN-300" />
+        <ent-inst id="Alex|Alex|MCA-Adult" />
+        <ent-inst id="Alex|Alex|MCA-Pregnant" />
+        <ent-inst id="Alex|Alex|MCA-Child" />
+        
+        <ent-inst id="Alex|Alex|MN-MCA" />
+        <ent-inst id="Alex|Alex|MCA-PCR" />
+        <ent-inst id="Alex|Alex|MCA-EXT" />
+        <ent-inst id="Alex|Alex|CSR-Tier3" />
+        <ent-inst id="Alex|Alex|CSR-AIAN-IHP" />
+        <ent-inst id="Alex|Alex|MCA-TMA-1925" />
+        <ent-inst id="Alex|Alex|CSR-Tier2" />
+        <ent-inst id="Alex|Alex|QHP" />
+        <ent-inst id="Alex|Alex|CSR-Tier1" />
+        <ent-inst id="Alex|Alex|VPR" />
+        <ent-inst id="Alex|Alex|CSR-Tier4" />
+        <ent-inst id="Alex|Alex|APTC" />
+      </ent-set>
+      <ent-set entity-type="income" entity-text="the person's income">
+        <ent-inst id="income 1">
+          <attr-inst name="i_inc_type" text="the person's income's type" type="text">
+            <val>
+              <text-val>Unemployment Insurance</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incAianRentUsageDist_b" text="the person's income is a distribution and payments from rents, leases, rights of way, royalties, usage rights, or natural resource extraction and harvest" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeAlaskaDist_b" text="the person's income is a distribution from Alaska Native Corporations and Settlement Trusts" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_inc_amt" text="the person's income's amount" type="currency">
+            <val>
+              <currency-val>100.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeBiaEdu_b" text="the person's income is student financial assistance provided under the Bureau of Indian Affairs education programs" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_inc_freq" text="the person's income's payment frequency" type="text">
+            <val>
+              <text-val>Weekly</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_IncTypScholarship_b" text="the person's income is a scholarship, award, or fellowship grant" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypePropertyNatRes_b" text="the person's income is a distribution resulting from real property ownership interests related to natural resources and improvements" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incAianCultural_b" text="the person's income is a payment resulting from ownership interests in or usage rights to items that have unique religious, spiritual, traditional, or cultural significance or rights that support subsistence or a traditional lifestyle according to applicable tribal law or custom" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incAianPropUnderSecInt_b" text="the person's income is a distribution from any property held in trust, subject to federal restrictions, located within the most recent boundaries of a prior federal reservation, or otherwise under the supervision of the Secretary of the Interior" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsincomesincomeprograms" complete="true">
+              <ent-inst-ref ref-id="Unemployment Insurance ($100.00; Weekly)|VPR" />
+              <ent-inst-ref ref-id="Unemployment Insurance ($100.00; Weekly)|MCA-PCR" />
+              <ent-inst-ref ref-id="Unemployment Insurance ($100.00; Weekly)|QHP" />
+              <ent-inst-ref ref-id="Unemployment Insurance ($100.00; Weekly)|APTC" />
+              <ent-inst-ref ref-id="Unemployment Insurance ($100.00; Weekly)|CSR-Tier2" />
+              <ent-inst-ref ref-id="Unemployment Insurance ($100.00; Weekly)|MN-MCA" />
+              <ent-inst-ref ref-id="Unemployment Insurance ($100.00; Weekly)|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Unemployment Insurance ($100.00; Weekly)|CSR-Tier1" />
+              <ent-inst-ref ref-id="Unemployment Insurance ($100.00; Weekly)|MCA-EXT" />
+              <ent-inst-ref ref-id="Unemployment Insurance ($100.00; Weekly)|CSR-Tier4" />
+              <ent-inst-ref ref-id="Unemployment Insurance ($100.00; Weekly)|CSR-Tier3" />
+              
+              <ent-inst-ref ref-id="Unemployment Insurance ($100.00; Weekly)|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Unemployment Insurance ($100.00; Weekly)|CSR-AIAN-300" />
+              <ent-inst-ref ref-id="Unemployment Insurance ($100.00; Weekly)|MCA-Adult" />
+              <ent-inst-ref ref-id="Unemployment Insurance ($100.00; Weekly)|MCA-Child" />
+              <ent-inst-ref ref-id="Unemployment Insurance ($100.00; Weekly)|MCA-TMA-1925" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="incomeprogram" entity-text="the income program" inferred="yes" identifying-attribute="rb_incp_ID">
+        <ent-inst id="Unemployment Insurance ($100.00; Weekly)|MCA-Child" />
+        <ent-inst id="Unemployment Insurance ($100.00; Weekly)|MCA-Pregnant" />
+        <ent-inst id="Unemployment Insurance ($100.00; Weekly)|CSR-Tier1" />
+        <ent-inst id="Unemployment Insurance ($100.00; Weekly)|VPR" />
+        <ent-inst id="Unemployment Insurance ($100.00; Weekly)|CSR-Tier3" />
+        <ent-inst id="Unemployment Insurance ($100.00; Weekly)|MCA-PCR" />
+        <ent-inst id="Unemployment Insurance ($100.00; Weekly)|MCA-Adult" />
+        <ent-inst id="Unemployment Insurance ($100.00; Weekly)|MCA-TMA-1925" />
+        <ent-inst id="Unemployment Insurance ($100.00; Weekly)|MCA-EXT" />
+        <ent-inst id="Unemployment Insurance ($100.00; Weekly)|CSR-Tier2" />
+        <ent-inst id="Unemployment Insurance ($100.00; Weekly)|MN-MCA" />
+        <ent-inst id="Unemployment Insurance ($100.00; Weekly)|QHP" />
+        <ent-inst id="Unemployment Insurance ($100.00; Weekly)|APTC" />
+        
+        <ent-inst id="Unemployment Insurance ($100.00; Weekly)|CSR-AIAN-300" />
+        <ent-inst id="Unemployment Insurance ($100.00; Weekly)|CSR-AIAN-IHP" />
+        <ent-inst id="Unemployment Insurance ($100.00; Weekly)|CSR-Tier4" />
+      </ent-set>
+      <ent-set entity-type="personsrequestedbenefit" entity-text="the person's requested benefit" inferred="yes" identifying-attribute="rb_reqb_ID">
+        <ent-inst id="Alex|Insurance Exchange Access">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Alex|Insurance Exchange Access|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Alex|Insurance Premium Reduction">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Alex|Insurance Premium Reduction|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Alex|Insurance Cost-Sharing Reduction">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Alex|Insurance Cost-Sharing Reduction|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Alex|Insurance Premium Tax Credit">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Alex|Insurance Premium Tax Credit|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Alex|Medical Care Benefits">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Alex|Medical Care Benefits|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="result" entity-text="the result" inferred="yes" identifying-attribute="rb_rslt_ID">
+        <ent-inst id="Alex|Medical Care Benefits|1" />
+        <ent-inst id="Alex|Insurance Premium Tax Credit|1" />
+        <ent-inst id="Alex|Insurance Exchange Access|1" />
+        <ent-inst id="Alex|Insurance Cost-Sharing Reduction|1" />
+        <ent-inst id="Alex|Insurance Premium Reduction|1" />
+      </ent-set>
+      <ent-set entity-type="case-result" entity-text="the case result" inferred="yes" identifying-attribute="o_crslt_type">
+        <ent-inst id="Medical Care Benefits" />
+        <ent-inst id="Insurance Premium Tax Credit" />
+        <ent-inst id="Insurance Exchange Access" />
+        <ent-inst id="Insurance Cost-Sharing Reduction" />
+        <ent-inst id="Insurance Premium Reduction" />
+      </ent-set>
+      <ent-set entity-type="personsrequestforassistance" entity-text="the person's request for assistance" inferred="yes" identifying-attribute="rb_reqa_ID">
+        <ent-inst id="Alex|Insurance Affordability Assistance" />
+      </ent-set>
+      <ent-set entity-type="baseprogram" entity-text="the base program" inferred="yes" identifying-attribute="the_base_program">
+        <ent-inst id="CSR-Tier3" />
+        <ent-inst id="MCA-Child" />
+        
+        <ent-inst id="MCA-PCR" />
+        <ent-inst id="QHP" />
+        <ent-inst id="MCA-Adult" />
+        <ent-inst id="MCA-EXT" />
+        <ent-inst id="CSR-Tier1" />
+        <ent-inst id="CSR-Tier4" />
+        <ent-inst id="APTC" />
+        <ent-inst id="VPR" />
+        <ent-inst id="CSR-Tier2" />
+        <ent-inst id="CSR-AIAN-IHP" />
+        <ent-inst id="CSR-AIAN-300" />
+        <ent-inst id="MN-MCA" />
+        <ent-inst id="MCA-Pregnant" />
+        <ent-inst id="MCA-TMA-1925" />
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2017" />
+      </ent-set>
+    </test-case>
+  </test-case-set>
+  <outcome-set>
+    <outcome name="rb_p_req-eligibility" display-name="Meets eligibility requirements" text="the person meets all of the eligibility requirements for the program" type="boolean" entity-type="program" entity-text="the program">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+  </outcome-set>
+</test-script>

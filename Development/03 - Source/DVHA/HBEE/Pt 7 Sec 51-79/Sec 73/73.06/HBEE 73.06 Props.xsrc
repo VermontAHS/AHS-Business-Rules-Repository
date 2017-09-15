@@ -1,0 +1,161 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+      <attribute name="p1" type="number" public-name="si_dayChgsToQHPAreEffective_n">
+        <text>
+          <base>the day of the month after which changes to QHP eligibility are effective on the first day of the month after the following month</base>
+        </text>
+      </attribute>
+      <attribute name="p2" type="date" public-name="si_lastDayNextMonth_d">
+        <text>
+          <base>the last day of the next month</base>
+        </text>
+      </attribute>
+      <attribute name="p3" type="date" public-name="si_firstDayPrevMonth_d">
+        <text>
+          <base>the first day of the previous month</base>
+        </text>
+      </attribute>
+      <attribute name="p4" type="date" public-name="si_lastDayPrevMonth_d">
+        <text>
+          <base>the last day of the previous month</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b1" type="boolean" public-name="st_BenDateEOFHBEE73.06a_b">
+        <text>
+          <base>the benefit end date is the end of the month for the person under HBEE 73.06(a) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the benefit end date',singular),o('the end of the month for the person under HBEE 73.06(a) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b2" type="boolean" public-name="st_HBEE73.06a2Sat_b">
+        <text>
+          <base>HBEE 73.06(a)(2) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 73.06(a)(2)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" public-name="st_HBEE73.06eSat_b">
+        <text>
+          <base>HBEE 73.06(e) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 73.06(e)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" public-name="si_QHPEligChangedAppealDec_b">
+        <text>
+          <base>the person's QHP eligibility changed due to an appeal decision</base>
+          <parse>s(ver('10.4.7.86'),v(change,t(simple,past,normal)),sb('the person''s QHP eligibility',plural),o('due to an appeal decision'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" public-name="si_AfterQHPEligEffNextPoint_b">
+        <text>
+          <base>it is after the point in the month after which changes to QHP eligibility are effective on the first day of the month after the following month</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('it',singular),o('after the point in the month after which changes to QHP eligibility are effective on the first day of the month after the following month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" public-name="si_ATCdecreasing_b">
+        <text>
+          <base>the person's APTC amount is decreasing</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s APTC amount',singular),o('decreasing'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" public-name="si_CSRLevelChanging_b">
+        <text>
+          <base>the person's CSR level is changing</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s CSR level',singular),o('changing'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" public-name="si_After15thDayMnth_b">
+        <text>
+          <base>it is after the 15th day of the current month</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('it',singular),o('after the 15th day of the current month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" public-name="si_HBEE71.03d9Sat_b">
+        <text>
+          <base>HBEE 71.03(d)(9) is satisfied for the person</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(9)',singular),o('for the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" public-name="si_HBEE71.03d5Sat_b">
+        <text>
+          <base>HBEE 71.03(d)(5) is satisfied for the person</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(5)',singular),o('for the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" public-name="si_HBEE71.03d4Sat_b">
+        <text>
+          <base>HBEE 71.03(d)(4) is satisfied for the person</base>
+          <parse>s(ver('10.4.7.86'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(4)',singular),o('for the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" public-name="st_BenEndDtFolMnthHBEE73.06b_b">
+        <text>
+          <base>the benefit end date is the end of the following month for the person under HBEE 73.06(b) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the benefit end date',singular),o('the end of the following month for the person under HBEE 73.06(b) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" public-name="st_BenEndDateFolMnthHBEE73.06c_b">
+        <text>
+          <base>the benefit end date is the end of the following month for the person under HBEE 73.06(c) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the benefit end date',singular),o('the end of the following month for the person under HBEE 73.06(c) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" public-name="st_benEndDtFollowMnHBEE73.06_07152015_b">
+        <text>
+          <base>the benefit end date is the end of the following month for the person under HBEE 73.06 (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the benefit end date',singular),o('the end of the following month for the person under HBEE 73.06 (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" public-name="st_benEndDtEndOfMnHBEE73.06_07152015_b">
+        <text>
+          <base>the benefit end date is the end of the month for the person under HBEE 73.06 (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the benefit end date',singular),o('the end of the month for the person under HBEE 73.06 (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b21" type="boolean" public-name="st_HBEE73.06applies_b">
+        <text>
+          <base>HBEE 73.06 applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 73.06',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

@@ -1,0 +1,1675 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity ref="global">
+      <attribute name="b118" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>AHS has developed alternate actuarial tables pursuant to Vermont Act 71  303(7)(2005)</base>
+          <parse>s(ver('10.4.6.76'),v(develop,t(simple,present,perfect)),sb('AHS',singular),o('alternate actuarial tables pursuant to Vermont Act 71  303(7)(2005)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p25" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the calculation date</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 25.03 applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 25.03',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b2" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is a long term care program</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the program',singular),o('a long term care program'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's transfer" id="personstransfer" containment-relationship-id="personstransfers" containment-parent-id="person">
+      <attribute name="b3" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03 (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03 (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(a) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(a) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 25.03(b) applies to the person's transfer (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 25.03(b)',singular),o('to the person''s transfer (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(b) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(b) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 25.03(c) applies to the person's transfer (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 25.03(c)',singular),o('to the person''s transfer (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(c) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(c) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 25.03(d) applies to the person's transfer (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 25.03(d)',singular),o('to the person''s transfer (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(d) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(d) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 25.03(e) applies to the person's transfer (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 25.03(e)',singular),o('to the person''s transfer (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(e) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(e) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 25.03(f) applies to the person's transfer (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 25.03(f)',singular),o('to the person''s transfer (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(f) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(f) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(g) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(g) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 25.03(h) applies to the person's transfer (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 25.03(h)',singular),o('to the person''s transfer (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(h) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(h) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 25.03(i) applies to the person's transfer (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(apply,t(simple,present,normal)),sb('HBEE 25.03(i)',singular),o('to the person''s transfer (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(i) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(i) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer was transferred for fair market value under HBEE 25.03(a) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('transferred for fair market value under HBEE 25.03(a) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is for a transferred resource</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s transfer',singular),o('for a transferred resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the value of the person's transfer is scheduled for receipt after the date of the transfer</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the value of the person''s transfer',singular),o('scheduled for receipt after the date of the transfer'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person can expect to receive the fair market value of the person's transfer within the person's expected lifetime under HBEE 25.03(b) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(expect+can,t(simple,modal,normal)),sb('the person',plural),o('to receive the fair market value of the person''s transfer within the person''s expected lifetime under HBEE 25.03(b) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(c)(1) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(c)(1) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(c)(4) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(c)(4) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(c)(5) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(c)(5) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(c)(6) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(c)(6) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(c)(7) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(c)(7) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer was more than 60 calendar months prior to the first month the person requests eligibility for Medicaid coverage of long-term care services and supports</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('more than 60 calendar months prior to the first month the person requests eligibility for Medicaid coverage of long-term care services and supports'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered otherwise eligible for Medicaid coverage of long-term care services and supports under HBEE 25.04(a)</base>
+          <parse>s(ver('10.4.7.86'),v(consider,t(simple,present,normal)),ob('the person',singular),o('otherwise eligible for Medicaid coverage of long-term care services and supports under HBEE 25.04(a)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer involves a trust</base>
+          <parse>s(ver('10.4.7.86'),v(involve,t(simple,present,normal)),sb('the person''s transfer',singular),o('a trust'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b38" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(d)(2) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(d)(2) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b39" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(d)(3) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(d)(3) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b40" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(d)(4) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(d)(4) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b51" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is for the transfer of a home</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s transfer',singular),o('for the transfer of a home'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b58" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(e)(4) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(e)(4) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b62" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(e)(5) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(e)(5) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b66" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer involves a life-estate interest in another person's home</base>
+          <parse>s(ver('10.4.7.86'),v(involve,t(simple,present,normal)),sb('the person''s transfer',singular),o('a life-estate interest in another person''s home'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b69" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(g)(1) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(g)(1) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b70" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(g)(2) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(g)(2) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b71" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(g)(3) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(g)(3) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b72" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(g)(4) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(g)(4) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b73" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer was for the sole benefit of the person</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('for the sole benefit of the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b74" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is from the institutionalized spouse to a community spouse before the initial determination of the institutionalized spouse's eligibility for Medicaid coverage of long-term services and supports</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person''s transfer',singular),o('from the institutionalized spouse to a community spouse before the initial determination of the institutionalized spouse''s eligibility for Medicaid coverage of long-term services and supports'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b81" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer involves an annuity</base>
+          <parse>s(ver('10.4.7.86'),v(involve,t(simple,present,normal)),sb('the person''s transfer',singular),o('an annuity'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b82" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(h)(1) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(h)(1) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b83" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(h)(2) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(h)(2) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b84" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(h)(1)(i) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(h)(1)(i) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b91" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(h)(2)(A) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(h)(2)(A) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b92" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(h)(2)(B) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(h)(2)(B) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b93" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(h)(2)(C) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(h)(2)(C) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b94" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(h)(2)(D) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.7.86'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(h)(2)(D) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b113" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer includes a repayment term that is actuarially-sound as determined in accordance with actuarial publications of the Office of the Chief of Actuary SSA and set forth in the Vermont's Medicaid Procedures Manual</base>
+          <parse>s(ver('10.4.7.86'),v(include,t(simple,present,normal)),sb('the person''s transfer',singular),o('a repayment term that is actuarially-sound as determined in accordance with actuarial publications of the Office of the Chief of Actuary SSA and set forth in the Vermont''s Medicaid Procedures Manual'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b119" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is documented with convincing evidence, which meets the satisfaction of the AHS, that demonstrate that the resources were transferred exclusively for a reason other than for the person to become or remain eligible for Medicaid coverage of long-term care services</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s transfer',singular),o('documented with convincing evidence, which meets the satisfaction of the AHS, that demonstrate that the resources were transferred exclusively for a reason other than for the person to become or remain eligible for Medicaid coverage of long-term care services'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b122" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has demonstrated to AHS's satisfaction that the person intended to dispose of the person's transfer at fair market value or for other valuable consideration</base>
+          <parse>s(ver('10.4.6.76'),v(demonstrate,t(simple,present,perfect)),sb('the person',singular),o('to AHS''s satisfaction that the person intended to dispose of the person''s transfer at fair market value or for other valuable consideration'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b123" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer was a transfer of excluded income or resources</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('a transfer of excluded income or resources'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b125" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer established a trust solely for the benefit of the person</base>
+          <parse>s(ver('10.4.6.76'),v(establish,t(simple,past,normal)),sb('the person''s transfer',plural),o('a trust solely for the benefit of the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b126" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person was under 65 years of age at the time of the person's transfer</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person',singular),o('under 65 years of age at the time of the person''s transfer'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b127" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer established a trust that meets all of the criteria under HBEE 29.08(e)(1)(ii)(F)</base>
+          <parse>s(ver('10.4.6.76'),v(establish,t(simple,past,normal)),sb('the person''s transfer',plural),o('a trust that meets all of the criteria under HBEE 29.08(e)(1)(ii)(F)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b128" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer established a pooled trust that meets all of the criteria under HBEE 29.08(e)(1)(ii)(G)</base>
+          <parse>s(ver('10.4.6.76'),v(establish,t(simple,past,normal)),sb('the person''s transfer',plural),o('a pooled trust that meets all of the criteria under HBEE 29.08(e)(1)(ii)(G)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b129" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer established a revocable trust</base>
+          <parse>s(ver('10.4.6.76'),v(establish,t(simple,past,normal)),sb('the person''s transfer',plural),o('a revocable trust'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b133" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(e)(1) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(e)(1) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b134" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer was transferred to the person's spouse</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('transferred to the person''s spouse'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b135" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(e)(2) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(e)(2) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b136" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer was transferred to the person's child who was under age 21 on the date of the transfer</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('transferred to the person''s child who was under age 21 on the date of the transfer'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b137" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(e)(3) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(e)(3) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b138" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer was transferred to the person's child who is blind or permanently and totally disabled</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('transferred to the person''s child who is blind or permanently and totally disabled'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b139" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer was transferred to the person's brother or sister who had an equity interest in the home on the date of the transfer and resided in the home continuously for at least one year immediately prior to the date the person began to receive Medicaid coverage of long-term care services and supports</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('transferred to the person''s brother or sister who had an equity interest in the home on the date of the transfer and resided in the home continuously for at least one year immediately prior to the date the person began to receive Medicaid coverage of long-term care services and supports'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b140" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer was transferred to the person's child who resided in the home continuously for at least two years immediately prior to the date the person began to receive Medicaid coverage of long-term care services and supports and provided care to the person during part of this period that allowed the person to postpone receipt of Medicaid coverage of long-term care services and supports</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('transferred to the person''s child who resided in the home continuously for at least two years immediately prior to the date the person began to receive Medicaid coverage of long-term care services and supports and provided care to the person during part of this period that allowed the person to postpone receipt of Medicaid coverage of long-term care services and supports'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b141" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is for the purchase of a life-estate interest in the person's residence</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s transfer',singular),o('for the purchase of a life-estate interest in the person''s residence'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b142" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person resided in the home for at least one year after the person's transfer</base>
+          <parse>s(ver('10.4.6.76'),v(reside,t(simple,past,normal)),sb('the person',plural),o('in the home for at least one year after the person''s transfer'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b143" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is from the institutionalized spouse to a third party for the sole benefit of the community spouse before the initial determination of the institutionalized spouse's eligibility for Medicaid coverage of long-term services and supports</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s transfer',singular),o('from the institutionalized spouse to a third party for the sole benefit of the community spouse before the initial determination of the institutionalized spouse''s eligibility for Medicaid coverage of long-term services and supports'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b144" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is for a trust for the sole benefit of the person's child who is blind or permanently and totally disabled</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s transfer',singular),o('for a trust for the sole benefit of the person''s child who is blind or permanently and totally disabled'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b145" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is for a trust for the sole benefit of an individual under the age of 65 years who is disabled</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s transfer',singular),o('for a trust for the sole benefit of an individual under the age of 65 years who is disabled'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b146" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer was for the purchase of an annuity</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s transfer',singular),o('for the purchase of an annuity'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b147" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the annuity purchased by the person's transfer specifies Vermont Medicaid as the first remainder beneficiary up to the amount of Medicaid payments, including payments for Medicaid coverage of long-term care services and supports, made by the state on behalf of the person</base>
+          <parse>s(ver('10.4.6.76'),v(specify,t(simple,present,normal)),sb('the annuity purchased by the person''s transfer',singular),o('Vermont Medicaid as the first remainder beneficiary up to the amount of Medicaid payments, including payments for Medicaid coverage of long-term care services and supports, made by the state on behalf of the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b148" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the annuity purchased by the person's transfer specifies the person's minor or disabled child or the person's community spouse as the first remainder beneficiary</base>
+          <parse>s(ver('10.4.6.76'),v(specify,t(simple,present,normal)),sb('the annuity purchased by the person''s transfer',singular),o('the person''s minor or disabled child or the person''s community spouse as the first remainder beneficiary'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b149" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the annuity purchased by the person's transfer specifies Vermont Medicaid as the second remainder beneficiary</base>
+          <parse>s(ver('10.4.6.76'),v(specify,t(simple,present,normal)),sb('the annuity purchased by the person''s transfer',singular),o('Vermont Medicaid as the second remainder beneficiary'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b150" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer established an annuity that meets all of the criteria under HBEE 29.08(d)(1)</base>
+          <parse>s(ver('10.4.6.76'),v(establish,t(simple,past,normal)),sb('the person''s transfer',plural),o('an annuity that meets all of the criteria under HBEE 29.08(d)(1)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b151" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the annuity established by the person's transfer is irrevocable and nonassignable</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the annuity established by the person''s transfer',singular),o('irrevocable and nonassignable'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b152" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the annuity established by the person's transfer provides payments to the person in equal intervals and amounts with no deferral and no balloon payments</base>
+          <parse>s(ver('10.4.6.76'),v(provide,t(simple,present,normal)),sb('the annuity established by the person''s transfer',singular),o('payments to the person in equal intervals and amounts with no deferral and no balloon payments'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b153" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the annuity established by the person's transfer exceeds the life expectancy of the person as determined using the actuarial publications of the Office of the Chief Actuary of the SSA</base>
+          <parse>s(ver('10.4.6.76'),v(exceed,t(simple,present,normal)),sb('the annuity established by the person''s transfer',singular),o('the life expectancy of the person as determined using the actuarial publications of the Office of the Chief Actuary of the SSA'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b154" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the annuity established by the person's transfer returns at least the amount used to establish the contract and any additional payments plus earnings (as specified in the contract) to the person</base>
+          <parse>s(ver('10.4.6.76'),v(return,t(simple,present,normal)),sb('the annuity established by the person''s transfer',singular),o('at least the amount used to establish the contract and any additional payments plus earnings (as specified in the contract) to the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b155" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the annuity established by the person's transfer is considered an individual retirement annuity according to § 408(b) of the Code</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the annuity established by the person''s transfer',singular),o('an individual retirement annuity according to § 408(b) of the Code'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b156" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the annuity established by the person's transfer is considered a deemed Individual Retirement Account (IRA) under a qualified employer plan according to § 408(q) of the Code</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the annuity established by the person''s transfer',singular),o('a deemed Individual Retirement Account (IRA) under a qualified employer plan according to § 408(q) of the Code'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b157" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the annuity established by the person's transfer was purchased with proceeds from a traditional IRA (§ 408(a) of the Code)</base>
+          <parse>s(ver('10.4.6.76'),v(purchase,t(simple,past,normal)),ob('the annuity established by the person''s transfer',singular),o('with proceeds from a traditional IRA (§ 408(a) of the Code)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b158" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the annuity established by the person's transfer was purchased with proceeds from certain accounts or trusts with are treated as traditional IRAs (§ 408(c) of the Code)</base>
+          <parse>s(ver('10.4.6.76'),v(purchase,t(simple,past,normal)),ob('the annuity established by the person''s transfer',singular),o('with proceeds from certain accounts or trusts with are treated as traditional IRAs (§ 408(c) of the Code)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b159" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the annuity established by the person's transfer was purchased with proceeds from a simplified retirement account (§ 408 (p) of the Code)</base>
+          <parse>s(ver('10.4.6.76'),v(purchase,t(simple,past,normal)),ob('the annuity established by the person''s transfer',singular),o('with proceeds from a simplified retirement account (§ 408 (p) of the Code)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b160" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the annuity established by the person's transfer was purchased with proceeds from a simplified employee pension (§ 408 (k) of the Code)</base>
+          <parse>s(ver('10.4.6.76'),v(purchase,t(simple,past,normal)),ob('the annuity established by the person''s transfer',singular),o('with proceeds from a simplified employee pension (§ 408 (k) of the Code)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b161" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the annuity established by the person's transfer was purchased with proceeds from Roth IRA (§ 408A of the Code)</base>
+          <parse>s(ver('10.4.6.76'),v(purchase,t(simple,past,normal)),ob('the annuity established by the person''s transfer',singular),o('with proceeds from Roth IRA (§ 408A of the Code)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b162" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer involves a promissory note or other income-producing resource</base>
+          <parse>s(ver('10.4.6.76'),v(involve,t(simple,present,normal)),sb('the person''s transfer',singular),o('a promissory note or other income-producing resource'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b163" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the contract established by the person's transfer provides payments to the person in equal amounts during the term of the loan with no deferral and no balloon payments</base>
+          <parse>s(ver('10.4.6.76'),v(provide,t(simple,present,normal)),sb('the contract established by the person''s transfer',singular),o('payments to the person in equal amounts during the term of the loan with no deferral and no balloon payments'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b164" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the contract established by the person's transfer prohibits the cancellation of the balance upon the death of the lender</base>
+          <parse>s(ver('10.4.6.76'),v(prohibit,t(simple,present,normal)),sb('the contract established by the person''s transfer',singular),o('the cancellation of the balance upon the death of the lender'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b165" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is allowed under HBEE 25.03(c)(3) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(allow,t(simple,present,normal)),ob('the person''s transfer',singular),o('under HBEE 25.03(c)(3) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b166" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer is the removal of the person's name from a joint account</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s transfer',singular),o('the removal of the person''s name from a joint account'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b167" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has demonstrated to AHS's satisfaction that the funds in the joint account for the person's transfer were accumulated from the income or resource of an owner that is not the person</base>
+          <parse>s(ver('10.4.6.76'),v(demonstrate,t(simple,present,perfect)),sb('the person',singular),o('to AHS''s satisfaction that the funds in the joint account for the person''s transfer were accumulated from the income or resource of an owner that is not the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p1" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the fair market value of the person's transfer reduced by the applicable deductions at the time of transfer under HBEE 25.03(a) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p2" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the amount the person received for the person's transfer</base>
+        </text>
+      </attribute>
+      <attribute name="p3" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the fair market value of the person's transfer</base>
+        </text>
+      </attribute>
+      <attribute name="p4" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the applicable deductions to reduce the fair market value of the person's transfer under HBEE 25.03(a) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p5" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the amount of any legally enforceable liens or debts against the income or resource of the person's transfer that reduced the transferor's equity in the income or resource</base>
+        </text>
+      </attribute>
+      <attribute name="p6" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer's reasonable and necessary costs</base>
+        </text>
+      </attribute>
+      <attribute name="p7" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the value received by the person for the person's transfer</base>
+        </text>
+      </attribute>
+      <attribute name="p8" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the value of income or resources returned to the transferor from the person's transfer</base>
+        </text>
+      </attribute>
+      <attribute name="p9" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the value of verified payments or in-kind support given in behalf of compensation for receipt of income or resources from the person's transfer HBEE 25.03(a) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p10" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the value of personal services included in the person's transfer</base>
+        </text>
+      </attribute>
+      <attribute name="p11" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the payments for medical care included in the person's transfer</base>
+        </text>
+      </attribute>
+      <attribute name="p12" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the funeral expenses of the individual's deceased spouse included in the person's transfer</base>
+        </text>
+      </attribute>
+      <attribute name="p13" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the value of the taxes, mortgage payments, property insurance, or normal repairs, maintenance and upkeep on the transferred property included in the person's transfer</base>
+        </text>
+      </attribute>
+      <attribute name="p14" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the value of support and maintenance provided in the transferor's own home or in the home of the person who received the income or resources in the person's transfer</base>
+        </text>
+      </attribute>
+      <attribute name="p15" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the date the person expects to receive the fair market value of the person's transfer</base>
+        </text>
+      </attribute>
+      <attribute name="p16" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the end of the person's expected lifetime at the time of the person's transfer under HBEE 25.03(b) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p22" type="number" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expected remaining lifetime in years at the time of the person's transfer under HBEE 25.03(b) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p23" type="number" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expected remaining lifetime in years at the time of the person's transfer per AHS alternate actuarial tables</base>
+        </text>
+      </attribute>
+      <attribute name="p24" type="number" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expected remaining lifetime in years at the time of the person's transfer per the actuarial publications of the Office of the Chief Actuary of the SSA</base>
+        </text>
+      </attribute>
+      <attribute name="p26" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the amount the person is considered to have received for the person's transfer under HBEE 25.03(a) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p27" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the amount the person is considered to have received for the person's transfer under HBEE 25.03(h)(3) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p28" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the amount the person is considered to have received for the person's transfer under HBEE 25.03(i)(2) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global" />
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="personstransfers" reverse-relationship-id="personstransfersperson" text="the person's transfers" reverse-text="the person's transfer's person" source="person" target="personstransfer" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="HBEE 25.03 applies to the program (eff. 07/15/2015)" ruleburst="true" concludes="b1" folder="1" source-offset="70">
+      <rule-xml>
+        <conclude attr-id="b1" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b2" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the person's transfer is allowed under HBEE 25.03 (eff. 07/15/2015)" ruleburst="true" concludes="b3" folder="1" source-offset="199">
+      <rule-xml>
+        <conclude attr-id="b3" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b4" />
+              <and>
+                <attribute attr-id="b5" />
+                <attribute attr-id="b6" />
+              </and>
+              <and>
+                <attribute attr-id="b7" />
+                <attribute attr-id="b8" />
+              </and>
+              <and>
+                <attribute attr-id="b9" />
+                <attribute attr-id="b10" />
+              </and>
+              <and>
+                <attribute attr-id="b11" />
+                <attribute attr-id="b12" />
+              </and>
+              <and>
+                <attribute attr-id="b13" />
+                <attribute attr-id="b14" />
+              </and>
+              <attribute attr-id="b15" />
+              <and>
+                <attribute attr-id="b16" />
+                <attribute attr-id="b17" />
+              </and>
+              <and>
+                <attribute attr-id="b18" />
+                <attribute attr-id="b19" />
+              </and>
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="the person's transfer is allowed under HBEE 25.03(a) (eff. 07/15/2015)" ruleburst="true" concludes="b4" folder="2" source-offset="1598">
+      <rule-xml>
+        <conclude attr-id="b4" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b20" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="the person's transfer was transferred for fair market value under HBEE 25.03(a) (eff. 07/15/2015)" ruleburst="true" concludes="b20" folder="2" source-offset="2090">
+      <rule-xml>
+        <conclude attr-id="b20" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <less-than-equals>
+              <attribute attr-id="p1" />
+              <attribute attr-id="p26" />
+            </less-than-equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="the amount the person is considered to have received for the person's transfer under HBEE 25.03(a) (eff. 07/15/2015)" ruleburst="true" concludes="p26" folder="2" source-offset="2746">
+      <rule-xml>
+        <table-conclude attr-id="p26" entity-id="personstransfer" scope-id="personstransfer0">
+          <row>
+            <value>
+              <attribute attr-id="p27" />
+            </value>
+            <condition>
+              <attribute attr-id="b16" />
+            </condition>
+          </row>
+          <row>
+            <value>
+              <attribute attr-id="p28" />
+            </value>
+            <condition>
+              <attribute attr-id="b18" />
+            </condition>
+          </row>
+          <otherwise>
+            <attribute attr-id="p2" />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="the fair market value of the person's transfer reduced by the applicable deductions at the time of transfer under HBEE 25.03(a) (eff. 07/15/2015) " ruleburst="true" concludes="p1 = p3 - p4" folder="2" source-offset="3343">
+      <rule-xml>
+        <conclude attr-id="p1" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <minus>
+              <attribute attr-id="p3" />
+              <attribute attr-id="p4" />
+            </minus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="the applicable deductions to reduce the fair market value of the person's transfer under HBEE 25.03(a) (eff. 07/15/2015) " ruleburst="true" concludes="p4 = p5 + p6 + p7 + p8 + p9" folder="2" source-offset="3679">
+      <rule-xml>
+        <conclude attr-id="p4" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <plus>
+              <attribute attr-id="p5" />
+              <attribute attr-id="p6" />
+              <attribute attr-id="p7" />
+              <attribute attr-id="p8" />
+              <attribute attr-id="p9" />
+            </plus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="7" name="the value of verified payments or in-kind support given in behalf of compensation for receipt of income or resources from the person's transfer HBEE 25.03(a) (eff. 07/15/2015) " ruleburst="true" concludes="p9 = p10 + p11 + p12 + p13 + p14" folder="2" source-offset="4395">
+      <rule-xml>
+        <conclude attr-id="p9" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <plus>
+              <attribute attr-id="p10" />
+              <attribute attr-id="p11" />
+              <attribute attr-id="p12" />
+              <attribute attr-id="p13" />
+              <attribute attr-id="p14" />
+            </plus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="8" name="HBEE 25.03(b) applies to the person's transfer (eff. 07/15/2015)" ruleburst="true" concludes="b5" folder="3" source-offset="5248">
+      <rule-xml>
+        <conclude attr-id="b5" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b21" />
+              <attribute attr-id="b22" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="9" name="the person's transfer is allowed under HBEE 25.03(b) (eff. 07/15/2015)" ruleburst="true" concludes="b6" folder="3" source-offset="5481">
+      <rule-xml>
+        <conclude attr-id="b6" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b23" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="10" name="the person can expect to receive the fair market value of the person's transfer within the person's expected lifetime under HBEE 25.03(b) (eff. 07/15/2015)" ruleburst="true" concludes="b23" folder="3" source-offset="5724">
+      <rule-xml>
+        <conclude attr-id="b23" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <less-than-equals>
+              <attribute attr-id="p15" />
+              <attribute attr-id="p16" />
+            </less-than-equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="11" name="the end of the person's expected lifetime at the time of the person's transfer under HBEE 25.03(b) (eff. 07/15/2015) " ruleburst="true" concludes="p16 = AddYears(p25,p22)" folder="3" source-offset="6109">
+      <rule-xml>
+        <conclude attr-id="p16" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <add-years>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p25" />
+              </scope-for>
+              <attribute attr-id="p22" />
+            </add-years>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="12" name="the person's expected remaining lifetime in years at the time of the person's transfer under HBEE 25.03(b) (eff. 07/15/2015)" ruleburst="true" concludes="p22" folder="3" source-offset="6416">
+      <rule-xml>
+        <table-conclude attr-id="p22" entity-id="personstransfer" scope-id="personstransfer0">
+          <row>
+            <value>
+              <attribute attr-id="p23" />
+            </value>
+            <condition>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="b118" />
+              </scope-for>
+            </condition>
+          </row>
+          <otherwise>
+            <attribute attr-id="p24" />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="13" name="HBEE 25.03(c) applies to the person's transfer (eff. 07/15/2015)" ruleburst="true" concludes="b7" folder="4" source-offset="7243">
+      <rule-xml>
+        <conclude attr-id="b7" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <not>
+                <attribute attr-id="b4" />
+              </not>
+              <or>
+                <not>
+                  <attribute attr-id="b5" />
+                </not>
+                <and>
+                  <attribute attr-id="b5" />
+                  <not>
+                    <attribute attr-id="b6" />
+                  </not>
+                </and>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="14" name="the person's transfer is allowed under HBEE 25.03(c) (eff. 07/15/2015)" ruleburst="true" concludes="b8" folder="4" source-offset="7655">
+      <rule-xml>
+        <conclude attr-id="b8" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b25" />
+              <attribute attr-id="b165" />
+              <attribute attr-id="b26" />
+              <attribute attr-id="b27" />
+              <attribute attr-id="b28" />
+              <attribute attr-id="b29" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="15" name="the person's transfer is allowed under HBEE 25.03(c)(1) (eff. 07/15/2015)" ruleburst="true" concludes="b25" folder="5" source-offset="8290">
+      <rule-xml>
+        <conclude attr-id="b25" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b30" />
+              <attribute attr-id="b31" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="16" name="the person's transfer is allowed under HBEE 25.03(c)(3) (eff. 07/15/2015)" ruleburst="true" concludes="b165" folder="6" source-offset="8781">
+      <rule-xml>
+        <conclude attr-id="b165" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b166" />
+              <attribute attr-id="b167" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="17" name="the person's transfer is allowed under HBEE 25.03(c)(4) (eff. 07/15/2015)" ruleburst="true" concludes="b26" folder="7" source-offset="9318">
+      <rule-xml>
+        <conclude attr-id="b26" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b119" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="18" name="the person's transfer is allowed under HBEE 25.03(c)(5) (eff. 07/15/2015)" ruleburst="true" concludes="b27" folder="8" source-offset="9785">
+      <rule-xml>
+        <conclude attr-id="b27" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <and>
+                <attribute attr-id="b9" />
+                <attribute attr-id="b10" />
+              </and>
+              <and>
+                <attribute attr-id="b11" />
+                <attribute attr-id="b12" />
+              </and>
+              <attribute attr-id="b15" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="19" name="the person's transfer is allowed under HBEE 25.03(c)(6) (eff. 07/15/2015)" ruleburst="true" concludes="b28" folder="9" source-offset="10322">
+      <rule-xml>
+        <conclude attr-id="b28" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b122" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="20" name="the person's transfer is allowed under HBEE 25.03(c)(7) (eff. 07/15/2015)" ruleburst="true" concludes="b29" folder="10" source-offset="10638">
+      <rule-xml>
+        <conclude attr-id="b29" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b123" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="21" name="HBEE 25.03(d) applies to the person's transfer (eff. 07/15/2015)" ruleburst="true" concludes="b9" folder="11" source-offset="10848">
+      <rule-xml>
+        <conclude attr-id="b9" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b36" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="22" name="the person's transfer is allowed under HBEE 25.03(d) (eff. 07/15/2015)" ruleburst="true" concludes="b10" folder="11" source-offset="10967">
+      <rule-xml>
+        <conclude attr-id="b10" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b38" />
+              <attribute attr-id="b39" />
+              <attribute attr-id="b40" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="23" name="the person's transfer is allowed under HBEE 25.03(d)(2) (eff. 07/15/2015)" ruleburst="true" concludes="b38" folder="11" source-offset="12033">
+      <rule-xml>
+        <conclude attr-id="b38" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b125" />
+              <attribute attr-id="b126" />
+              <attribute attr-id="b127" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="24" name="the person's transfer is allowed under HBEE 25.03(d)(3) (eff. 07/15/2015)" ruleburst="true" concludes="b39" folder="11" source-offset="12402">
+      <rule-xml>
+        <conclude attr-id="b39" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b128" />
+              <attribute attr-id="b126" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="25" name="the person's transfer is allowed under HBEE 25.03(d)(4) (eff. 07/15/2015)" ruleburst="true" concludes="b40" folder="11" source-offset="12688">
+      <rule-xml>
+        <conclude attr-id="b40" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b129" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="26" name="HBEE 25.03(e) applies to the person's transfer (eff. 07/15/2015)" ruleburst="true" concludes="b11" folder="12" source-offset="12891">
+      <rule-xml>
+        <conclude attr-id="b11" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b51" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="27" name="the person's transfer is allowed under HBEE 25.03(e) (eff. 07/15/2015)" ruleburst="true" concludes="b12" folder="12" source-offset="13024">
+      <rule-xml>
+        <conclude attr-id="b12" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b133" />
+              <attribute attr-id="b135" />
+              <attribute attr-id="b137" />
+              <attribute attr-id="b58" />
+              <attribute attr-id="b62" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="28" name="the person's transfer is allowed under HBEE 25.03(e)(1) (eff. 07/15/2015)" ruleburst="true" concludes="b133" folder="12" source-offset="13520">
+      <rule-xml>
+        <conclude attr-id="b133" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b134" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="29" name="the person's transfer is allowed under HBEE 25.03(e)(2) (eff. 07/15/2015)" ruleburst="true" concludes="b135" folder="12" source-offset="13673">
+      <rule-xml>
+        <conclude attr-id="b135" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b136" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="30" name="the person's transfer is allowed under HBEE 25.03(e)(3) (eff. 07/15/2015)" ruleburst="true" concludes="b137" folder="12" source-offset="13874">
+      <rule-xml>
+        <conclude attr-id="b137" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b138" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="31" name="the person's transfer is allowed under HBEE 25.03(e)(4) (eff. 07/15/2015)" ruleburst="true" concludes="b58" folder="12" source-offset="14075">
+      <rule-xml>
+        <conclude attr-id="b58" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b139" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="32" name="the person's transfer is allowed under HBEE 25.03(e)(5) (eff. 07/15/2015)" ruleburst="true" concludes="b62" folder="12" source-offset="14480">
+      <rule-xml>
+        <conclude attr-id="b62" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b140" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="33" name="HBEE 25.03(f) applies to the person's transfer (eff. 07/15/2015)" ruleburst="true" concludes="b13" folder="13" source-offset="15065">
+      <rule-xml>
+        <conclude attr-id="b13" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b66" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="34" name="the person's transfer is allowed under HBEE 25.03(f) (eff. 07/15/2015)" ruleburst="true" concludes="b14" folder="13" source-offset="15225">
+      <rule-xml>
+        <conclude attr-id="b14" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b141" />
+              <attribute attr-id="b142" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="35" name="the person's transfer is allowed under HBEE 25.03(g) (eff. 07/15/2015)" ruleburst="true" concludes="b15" folder="14" source-offset="15538">
+      <rule-xml>
+        <conclude attr-id="b15" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b69" />
+              <attribute attr-id="b70" />
+              <attribute attr-id="b71" />
+              <attribute attr-id="b72" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="36" name="the person's transfer is allowed under HBEE 25.03(g)(1) (eff. 07/15/2015)" ruleburst="true" concludes="b69" folder="14" source-offset="15949">
+      <rule-xml>
+        <conclude attr-id="b69" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b73" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="37" name="the person's transfer is allowed under HBEE 25.03(g)(2) (eff. 07/15/2015)" ruleburst="true" concludes="b70" folder="14" source-offset="16101">
+      <rule-xml>
+        <conclude attr-id="b70" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b74" />
+              <attribute attr-id="b143" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="38" name="the person's transfer is allowed under HBEE 25.03(g)(3) (eff. 07/15/2015)" ruleburst="true" concludes="b71" folder="14" source-offset="16675">
+      <rule-xml>
+        <conclude attr-id="b71" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b138" />
+              <attribute attr-id="b144" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="39" name="the person's transfer is allowed under HBEE 25.03(g)(4) (eff. 07/15/2015)" ruleburst="true" concludes="b72" folder="14" source-offset="17014">
+      <rule-xml>
+        <conclude attr-id="b72" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b145" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="40" name="HBEE 25.03(h) applies to the person's transfer (eff. 07/15/2015)" ruleburst="true" concludes="b16" folder="15" source-offset="17265">
+      <rule-xml>
+        <conclude attr-id="b16" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b81" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="41" name="the person's transfer is allowed under HBEE 25.03(h) (eff. 07/15/2015)" ruleburst="true" concludes="b17" folder="15" source-offset="17388">
+      <rule-xml>
+        <conclude attr-id="b17" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b82" />
+              <attribute attr-id="b83" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="42" name="the person's transfer is allowed under HBEE 25.03(h)(1) (eff. 07/15/2015)" ruleburst="true" concludes="b82" folder="16" source-offset="17692">
+      <rule-xml>
+        <conclude attr-id="b82" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b84" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="43" name="the person's transfer is allowed under HBEE 25.03(h)(1)(i) (eff. 07/15/2015)" ruleburst="true" concludes="b84" folder="16" source-offset="17859">
+      <rule-xml>
+        <conclude attr-id="b84" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b146" />
+              <or>
+                <attribute attr-id="b147" />
+                <and>
+                  <attribute attr-id="b148" />
+                  <attribute attr-id="b149" />
+                </and>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="44" name="the person's transfer is allowed under HBEE 25.03(h)(2) (eff. 07/15/2015)" ruleburst="true" concludes="b83" folder="17" source-offset="18667">
+      <rule-xml>
+        <conclude attr-id="b83" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b91" />
+              <attribute attr-id="b92" />
+              <attribute attr-id="b93" />
+              <attribute attr-id="b94" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="45" name="the person's transfer is allowed under HBEE 25.03(h)(2)(A) (eff. 07/15/2015)" ruleburst="true" concludes="b91" folder="17" source-offset="19093">
+      <rule-xml>
+        <conclude attr-id="b91" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b150" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="46" name="the person's transfer is allowed under HBEE 25.03(h)(2)(B) (eff. 07/15/2015)" ruleburst="true" concludes="b92" folder="17" source-offset="19286">
+      <rule-xml>
+        <conclude attr-id="b92" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b151" />
+              <attribute attr-id="b152" />
+              <not>
+                <attribute attr-id="b153" />
+              </not>
+              <attribute attr-id="b154" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="47" name="the person's transfer is allowed under HBEE 25.03(h)(2)(C) (eff. 07/15/2015)" ruleburst="true" concludes="b93" folder="17" source-offset="20039">
+      <rule-xml>
+        <conclude attr-id="b93" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b155" />
+              <attribute attr-id="b156" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="48" name="the person's transfer is allowed under HBEE 25.03(h)(2)(D) (eff. 07/15/2015)" ruleburst="true" concludes="b94" folder="17" source-offset="20447">
+      <rule-xml>
+        <conclude attr-id="b94" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b157" />
+              <attribute attr-id="b158" />
+              <attribute attr-id="b159" />
+              <attribute attr-id="b160" />
+              <attribute attr-id="b161" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="49" name="the amount the person is considered to have received for the person's transfer under HBEE 25.03(h)(3) (eff. 07/15/2015) " ruleburst="true" concludes="p27 = 0" folder="18" source-offset="21299">
+      <rule-xml>
+        <conclude attr-id="p27" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <number-value>0</number-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="50" name="HBEE 25.03(i) applies to the person's transfer (eff. 07/15/2015)" ruleburst="true" concludes="b18" folder="19" source-offset="22573">
+      <rule-xml>
+        <conclude attr-id="b18" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b162" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="51" name="the person's transfer is allowed under HBEE 25.03(i) (eff. 07/15/2015)" ruleburst="true" concludes="b19" folder="19" source-offset="22739">
+      <rule-xml>
+        <conclude attr-id="b19" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b113" />
+              <attribute attr-id="b163" />
+              <attribute attr-id="b164" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="52" name="the amount the person is considered to have received for the person's transfer under HBEE 25.03(i)(2) (eff. 07/15/2015) " ruleburst="true" concludes="p28 = 0" folder="19" source-offset="23369">
+      <rule-xml>
+        <conclude attr-id="p28" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <number-value>0</number-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="25.03 Allowable transfers (07/15/2015, 15-02)" parent="0" id="1" />
+    <folder text="Para (a): Transfers for fair-market value - in general" parent="1" id="2" />
+    <folder text="Para (b): Receipt of fair market value after the date of the transfer" parent="1" id="3" />
+    <folder text="Para (c): Transfers for less than fair-market value - in general" parent="1" id="4" />
+    <folder text="Para (c)(1): Time of transfer - beyond look-back period" parent="1" id="5" />
+    <folder text="Para (c)(3): Property transferred of a person other than the individual or their spouse" parent="1" id="6" />
+    <folder text="Para (c)(4): Transfer of resource for a purpose other than creation or maintenance of eligibility for Medicaid coverage of long-term care services and supports" parent="1" id="7" />
+    <folder text="Para (c)(5): Transfers of specified property for the benefit of certain family members" parent="1" id="8" />
+    <folder text="Para (c)(6): Intent to transfer for fair market value" parent="1" id="9" />
+    <folder text="Para (c)(7): Transfer of excluded income or resources" parent="1" id="10" />
+    <folder text="Para (d): Allowable transfers involving trusts" parent="1" id="11" />
+    <folder text="Para (e): Allowable transfers of homes to family members" parent="1" id="12" />
+    <folder text="Para (f): Allowable transfers involving life-estate interests in another individual's home" parent="1" id="13" />
+    <folder text="Para (g): Other allowable transfers" parent="1" id="14" />
+    <folder text="Para (h): Transfers involving annuities" parent="1" id="15" />
+    <folder text="Para (h)(1): Transfers involving annuities - In general" parent="1" id="16" />
+    <folder text="Para (h)(2): Transfers involving annuities - Additional requirements" parent="1" id="17" />
+    <folder text="Para (h)(3): Impermissible transfers" parent="1" id="18" />
+    <folder text="Para (i): Allowable transfers involving promissory notes and other income-producing resources" parent="1" id="19" />
+  </rule-folders>
+</root>

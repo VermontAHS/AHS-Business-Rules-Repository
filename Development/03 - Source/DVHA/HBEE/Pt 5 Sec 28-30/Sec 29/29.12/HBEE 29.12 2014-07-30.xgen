@@ -1,0 +1,544 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b73" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program uses MABD-based Medicaid methodologies</base>
+          <parse>s(ver('10.4.6.76'),v(use,t(simple,present,normal)),sb('the program',singular),o('MABD-based Medicaid methodologies'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's income" id="personsincome" containment-relationship-id="personsincomes" containment-parent-id="person">
+      <attribute name="b4" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income type is considered earned income under HBEE 29.12(b) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(consider,t(simple,present,normal)),ob('the person''s income type',singular),o('earned income under HBEE 29.12(b) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income type is considered earned income under HBEE 29.12(b)(1) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(consider,t(simple,present,normal)),ob('the person''s income type',singular),o('earned income under HBEE 29.12(b)(1) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income type is considered earned income under HBEE 29.12(b)(2) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(consider,t(simple,present,normal)),ob('the person''s income type',singular),o('earned income under HBEE 29.12(b)(2) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income type is considered earned income under HBEE 29.12(b)(3) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(consider,t(simple,present,normal)),ob('the person''s income type',singular),o('earned income under HBEE 29.12(b)(3) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income type is considered earned income under HBEE 29.12(b)(4) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(consider,t(simple,present,normal)),ob('the person''s income type',singular),o('earned income under HBEE 29.12(b)(4) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is gross salary or commissions or bonuses or severance pay received as a result of employment</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('gross salary or commissions or bonuses or severance pay received as a result of employment'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is payments from the Economic Opportunity Act of 1964 listed under HBEE 29.12(b)(3) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('payments from the Economic Opportunity Act of 1964 listed under HBEE 29.12(b)(3) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is a payment from the Economic Opportunity Act of 1964 under HBEE 29.12(b)(3)(i) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a payment from the Economic Opportunity Act of 1964 under HBEE 29.12(b)(3)(i) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is a payment from the Economic Opportunity Act of 1964 under HBEE 29.12(b)(3)(ii) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a payment from the Economic Opportunity Act of 1964 under HBEE 29.12(b)(3)(ii) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is a payment from the Economic Opportunity Act of 1964 under HBEE 29.12(b)(3)(iii) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a payment from the Economic Opportunity Act of 1964 under HBEE 29.12(b)(3)(iii) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is a payment from the Economic Opportunity Act of 1964 under HBEE 29.12(b)(3)(iv) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a payment from the Economic Opportunity Act of 1964 under HBEE 29.12(b)(3)(iv) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is a payment from the Economic Opportunity Act of 1964 under HBEE 29.12(b)(3)(v) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a payment from the Economic Opportunity Act of 1964 under HBEE 29.12(b)(3)(v) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is a payment from the Economic Opportunity Act of 1964 under HBEE 29.12(b)(3)(vi) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('a payment from the Economic Opportunity Act of 1964 under HBEE 29.12(b)(3)(vi) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is an EOA payment from the Youth Employment Demonstration act program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('an EOA payment from the Youth Employment Demonstration act program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is an EOA payment from the Job Corps Program under Title I Part A</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('an EOA payment from the Job Corps Program under Title I Part A'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is an EOA payment from Work Training Programs under Title I Part A</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('an EOA payment from Work Training Programs under Title I Part A'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is an EOA payment from Work Study Programs Title I Part C</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('an EOA payment from Work Study Programs Title I Part C'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is an EOA payment from Community Action Programs Title II</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('an EOA payment from Community Action Programs Title II'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is an EOA payment from Voluntary Assistance Program for Needy Children Title II</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('an EOA payment from Voluntary Assistance Program for Needy Children Title II'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income type is considered earned income under HBEE 29.12(b)(4)(i) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(consider,t(simple,present,normal)),ob('the person''s income type',singular),o('earned income under HBEE 29.12(b)(4)(i) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income type is considered earned income under HBEE 29.12(b)(4)(ii) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(consider,t(simple,present,normal)),ob('the person''s income type',singular),o('earned income under HBEE 29.12(b)(4)(ii) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income type is considered earned income under HBEE 29.12(b)(4)(iii) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(consider,t(simple,present,normal)),ob('the person''s income type',singular),o('earned income under HBEE 29.12(b)(4)(iii) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is employment under Title I of the Elementary and Secondary Education Act</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('employment under Title I of the Elementary and Secondary Education Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is wages from participation in the Limited Work Experience Program under the Workforce Investment Act of 1998</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('wages from participation in the Limited Work Experience Program under the Workforce Investment Act of 1998'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is Earnings from the Senior Community Service Employment (SCSE) program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('Earnings from the Senior Community Service Employment (SCSE) program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income type is considered self-employment income under HBEE 29.12(c) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(consider,t(simple,present,normal)),ob('the person''s income type',singular),o('self-employment income under HBEE 29.12(c) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b34" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income type is considered self-employment income under HBEE 29.12(c)(1) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(consider,t(simple,present,normal)),ob('the person''s income type',singular),o('self-employment income under HBEE 29.12(c)(1) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is net earnings from self-employment</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('net earnings from self-employment'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income type is considered unearned income under HBEE 29.12(d) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(consider,t(simple,present,normal)),ob('the person''s income type',singular),o('unearned income under HBEE 29.12(d) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b38" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income type is considered unearned income under HBEE 29.12(d)(1) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(consider,t(simple,present,normal)),ob('the person''s income type',singular),o('unearned income under HBEE 29.12(d)(1) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the income program" id="incomeprogram" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+      <attribute name="b30" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 29.12 applies to the income program (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.5.40'),v(apply,t(simple,present,normal)),sb('HBEE 29.12',singular),o('to the income program (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global" />
+  </entities>
+  <relationships>
+    <relationship type="ManyToMany" relationship-id="personsprogramfortheincomeprogram" reverse-relationship-id="personsincomesfortheprogram" text="the person's program for the income program" reverse-text="the person's incomes for the program" source="incomeprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" text="the person's income's income programs" reverse-text="the person's income for the income program" source="personsincome" target="incomeprogram" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" text="the person's incomes" reverse-text="the person's income's person" source="person" target="personsincome" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="HBEE 29.12 applies to the income program (eff. 07/30/2014)" ruleburst="true" concludes="b30" folder="1" source-offset="66">
+      <rule-xml>
+        <conclude attr-id="b30" entity-id="incomeprogram" scope-id="incomeprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="program0">
+              <relationship relationship-id="personsprogramfortheincomeprogram" target-entity-id="program" />
+              <attribute attr-id="b73" />
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the person's income type is considered earned income under HBEE 29.12(b) (eff. 07/30/2014)" ruleburst="true" concludes="b4" folder="2" source-offset="335">
+      <rule-xml>
+        <conclude attr-id="b4" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b5" />
+              <attribute attr-id="b6" />
+              <attribute attr-id="b7" />
+              <attribute attr-id="b8" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="the person's income type is considered earned income under HBEE 29.12(b)(1) (eff. 07/30/2014)" ruleburst="true" concludes="b5" folder="3" source-offset="852">
+      <rule-xml>
+        <conclude attr-id="b5" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b9" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="the person's income type is considered earned income under HBEE 29.12(b)(2) (eff. 07/30/2014)" ruleburst="true" concludes="b6" folder="4" source-offset="1089">
+      <rule-xml>
+        <conclude attr-id="b6" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b32" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="the person's income type is considered earned income under HBEE 29.12(b)(3) (eff. 07/30/2014)" ruleburst="true" concludes="b7" folder="5" source-offset="1313">
+      <rule-xml>
+        <conclude attr-id="b7" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b11" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="the person's income is payments from the Economic Opportunity Act of 1964 listed under HBEE 29.12(b)(3) (eff. 07/30/2014)" ruleburst="true" concludes="b11" folder="5" source-offset="1544">
+      <rule-xml>
+        <conclude attr-id="b11" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b12" />
+              <attribute attr-id="b13" />
+              <attribute attr-id="b14" />
+              <attribute attr-id="b15" />
+              <attribute attr-id="b16" />
+              <attribute attr-id="b17" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="the person's income is a payment from the Economic Opportunity Act of 1964 under HBEE 29.12(b)(3)(i) (eff. 07/30/2014)" ruleburst="true" concludes="b12" folder="5" source-offset="2446">
+      <rule-xml>
+        <conclude attr-id="b12" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b18" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="7" name="the person's income is a payment from the Economic Opportunity Act of 1964 under HBEE 29.12(b)(3)(ii) (eff. 07/30/2014)" ruleburst="true" concludes="b13" folder="5" source-offset="2671">
+      <rule-xml>
+        <conclude attr-id="b13" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b19" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="8" name="the person's income is a payment from the Economic Opportunity Act of 1964 under HBEE 29.12(b)(3)(iii) (eff. 07/30/2014)" ruleburst="true" concludes="b14" folder="5" source-offset="2893">
+      <rule-xml>
+        <conclude attr-id="b14" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b20" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="9" name="the person's income is a payment from the Economic Opportunity Act of 1964 under HBEE 29.12(b)(3)(iv) (eff. 07/30/2014)" ruleburst="true" concludes="b15" folder="5" source-offset="3117">
+      <rule-xml>
+        <conclude attr-id="b15" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b21" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="10" name="the person's income is a payment from the Economic Opportunity Act of 1964 under HBEE 29.12(b)(3)(v) (eff. 07/30/2014)" ruleburst="true" concludes="b16" folder="5" source-offset="3331">
+      <rule-xml>
+        <conclude attr-id="b16" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b22" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="11" name="the person's income is a payment from the Economic Opportunity Act of 1964 under HBEE 29.12(b)(3)(vi) (eff. 07/30/2014)" ruleburst="true" concludes="b17" folder="5" source-offset="3544">
+      <rule-xml>
+        <conclude attr-id="b17" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b23" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="12" name="the person's income type is considered earned income under HBEE 29.12(b)(4) (eff. 07/30/2014)" ruleburst="true" concludes="b8" folder="6" source-offset="3795">
+      <rule-xml>
+        <conclude attr-id="b8" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b24" />
+              <attribute attr-id="b25" />
+              <attribute attr-id="b26" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="13" name="the person's income type is considered earned income under HBEE 29.12(b)(4)(i) (eff. 07/30/2014)" ruleburst="true" concludes="b24" folder="6" source-offset="4216">
+      <rule-xml>
+        <conclude attr-id="b24" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b27" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="14" name="the person's income type is considered earned income under HBEE 29.12(b)(4)(ii) (eff. 07/30/2014)" ruleburst="true" concludes="b25" folder="6" source-offset="4423">
+      <rule-xml>
+        <conclude attr-id="b25" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b28" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="15" name="the person's income type is considered earned income under HBEE 29.12(b)(4)(iii) (eff. 07/30/2014)" ruleburst="true" concludes="b26" folder="6" source-offset="4667">
+      <rule-xml>
+        <conclude attr-id="b26" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b29" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="16" name="the person's income type is considered self-employment income under HBEE 29.12(c) (eff. 07/30/2014)" ruleburst="true" concludes="b32" folder="7" source-offset="4926">
+      <rule-xml>
+        <conclude attr-id="b32" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b34" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="17" name="the person's income type is considered self-employment income under HBEE 29.12(c)(1) (eff. 07/30/2014)" ruleburst="true" concludes="b34" folder="7" source-offset="5145">
+      <rule-xml>
+        <conclude attr-id="b34" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b35" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="18" name="the person's income type is considered unearned income under HBEE 29.12(d) (eff. 07/30/2014)" ruleburst="true" concludes="b37" folder="8" source-offset="5438">
+      <rule-xml>
+        <conclude attr-id="b37" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b38" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="19" name="the person's income type is considered unearned income under HBEE 29.12(d)(1) (eff. 07/30/2014)" ruleburst="true" concludes="b38" folder="8" source-offset="6169">
+      <rule-xml>
+        <conclude attr-id="b38" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <not>
+              <attribute attr-id="b4" />
+            </not>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="29.12 Types of income (07/30/2014, 14-04)" parent="0" id="1" />
+    <folder text="29.12(b):  Earned Income" parent="1" id="2" />
+    <folder text="29.12(b)(1)" parent="2" id="3" />
+    <folder text="29.12(b)(2)" parent="2" id="4" />
+    <folder text="29.12(b)(3)" parent="2" id="5" />
+    <folder text="29.12(b)(4)" parent="2" id="6" />
+    <folder text="29.12(c):  Self-Employment income" parent="1" id="7" />
+    <folder text="29.12(d):  Unearned Income" parent="1" id="8" />
+  </rule-folders>
+</root>

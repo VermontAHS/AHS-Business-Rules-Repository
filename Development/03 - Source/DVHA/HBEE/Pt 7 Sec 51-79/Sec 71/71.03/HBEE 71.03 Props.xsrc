@@ -1,0 +1,483 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b4" type="boolean" public-name="si_perEnrollOrNonEnrollUnintentOrErr_b">
+        <text>
+          <base>the person's enrollment or non-enrollment in a QHP was unintentional, inadvertent, or erroneous</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s enrollment or non-enrollment in a QHP',singular),o('unintentional, inadvertent, or erroneous'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" public-name="si_perEnrollOrNonEnrollWasErrByOfficer_b">
+        <text>
+          <base>the person's enrollment or non-enrollment in a QHP was the result of an error, misrepresentation, misconduct or inaction of an officer, employee, or agent of AHS or HHS or it's instrumentalities</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s enrollment or non-enrollment in a QHP',singular),o('the result of an error, misrepresentation, misconduct or inaction of an officer, employee, or agent of AHS or HHS or it''s instrumentalities'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" public-name="si_perEnrollOrNonEnrollWasErrByAuthAHS_b">
+        <text>
+          <base>the person's enrollment or non-enrollment in a QHP was caused by an error, misrepresentation, misconduct or inaction of an individual or entity authorized by AHS to provide enrollment assistance or conduct enrollment activities, as evaluated and determined by AHS</base>
+          <parse>s(ver('10.4.6.76'),v(cause,t(simple,past,normal)),ob('the person''s enrollment or non-enrollment in a QHP',singular),o('by an error, misrepresentation, misconduct or inaction of an individual or entity authorized by AHS to provide enrollment assistance or conduct enrollment activities, as evaluated and determined by AHS'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" public-name="si_perLostEligSepDivorceStatDeathTerm_b">
+        <text>
+          <base>the person's lost eligibility for coverage was the result of a legal separation, divorce, cessation of dependent status, the employee's death, termination of employment or reduction in the number of hours of employment</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,past,normal)),sb('the person''s lost eligibility for coverage',singular),o('the result of a legal separation, divorce, cessation of dependent status, the employee''s death, termination of employment or reduction in the number of hours of employment'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" public-name="so_HBEE71.03dSatisfied_b">
+        <text>
+          <base>the person is eligible for a special enrollment period under HBEE 71.03(d) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('eligible for a special enrollment period under HBEE 71.03(d) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" public-name="st_HBEE71.03d1Satisfied_b">
+        <text>
+          <base>HBEE 71.03(d)(1) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(1)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" public-name="st_HBEE71.03d2Satisfied_b">
+        <text>
+          <base>HBEE 71.03(d)(2) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(2)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" public-name="st_HBEE71.03d3Satisfied_b">
+        <text>
+          <base>HBEE 71.03(d)(3) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(3)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" public-name="st_HBEE71.03d4Satisfied_b">
+        <text>
+          <base>HBEE 71.03(d)(4) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(4)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" public-name="st_HBEE71.03d5Satisfied_b">
+        <text>
+          <base>HBEE 71.03(d)(5) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(5)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" public-name="st_HBEE71.03d6Satisfied_b">
+        <text>
+          <base>HBEE 71.03(d)(6) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(6)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" public-name="st_HBEE71.03d7Satisfied_b">
+        <text>
+          <base>HBEE 71.03(d)(7) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(7)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" public-name="st_HBEE71.03d8Satisfied_b">
+        <text>
+          <base>HBEE 71.03(d)(8) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(8)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" public-name="st_HBEE71.03d9Satisfied_b">
+        <text>
+          <base>HBEE 71.03(d)(9) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(9)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" public-name="st_HBEE71.03d1iSatisfied_b">
+        <text>
+          <base>HBEE 71.03(d)(1)(i) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(1)(i)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" public-name="st_HBEE71.03d1iiSatisfied_b">
+        <text>
+          <base>HBEE 71.03(d)(1)(ii) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(1)(ii)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" public-name="st_HBEE71.03d1iiiSatisfied_b">
+        <text>
+          <base>HBEE 71.03(d)(1)(iii) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(1)(iii)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" public-name="st_HBEE71.03eSatisfied_b">
+        <text>
+          <base>HBEE 71.03(e) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(e)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" public-name="si_perEnrollNonCalYrGrpOrIndivCovrg_b">
+        <text>
+          <base>the person was enrolled in a non-calendar year group health plan or individual health insurance coverage</base>
+          <parse>s(ver('10.4.6.76'),v(enroll,t(simple,past,normal)),ob('the person',singular),o('in a non-calendar year group health plan or individual health insurance coverage'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" public-name="si_perLostMedNeedyCovrg1stTimeYr_b">
+        <text>
+          <base>the person lost medically needy coverage for the first time during the calendar year</base>
+          <parse>s(ver('10.4.6.76'),v(lose,t(simple,past,normal)),sb('the person',plural),o('medically needy coverage for the first time during the calendar year'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" public-name="st_HBEE71.03d2iSatisfied">
+        <text>
+          <base>HBEE 71.03(d)(2)(i) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(2)(i)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" public-name="st_HBEE71.03d2iiSatisfied">
+        <text>
+          <base>HBEE 71.03(d)(2)(ii) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(2)(ii)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" public-name="si_perGainedOrBecameDep_b">
+        <text>
+          <base>the person gained a dependent or became a dependent through marriage, birth, adoption, placement for adoption, or placement in foster care, or through a child support order or other court order</base>
+          <parse>s(ver('10.4.6.76'),v(gain,t(simple,past,normal)),sb('the person',plural),o('a dependent or became a dependent through marriage, birth, adoption, placement for adoption, or placement in foster care, or through a child support order or other court order'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" public-name="si_perLostOrNoLongrConsidDep_b">
+        <text>
+          <base>the person lost a dependent or was no longer considered a dependent through divorce or legal separation as defined by state law in the state in which the divorce or legal separation occurred</base>
+          <parse>s(ver('10.4.6.76'),v(lose,t(simple,past,normal)),sb('the person',plural),o('a dependent or was no longer considered a dependent through divorce or legal separation as defined by state law in the state in which the divorce or legal separation occurred'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" public-name="si_perDied_b">
+        <text>
+          <base>the person died</base>
+          <parse>s(ver('10.4.6.76'),v(die,t(simple,past,normal)),sb('the person',plural))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" public-name="si_perEligUnderHBEE17.02_b">
+        <text>
+          <base>the person became newly eligible for enrollment in a QHP through VHC because the person satisfied the requirements under HBEE 17.02</base>
+          <parse>s(ver('10.4.6.76'),v(become,t(simple,past,normal)),sb('the person',plural),o('newly eligible for enrollment in a QHP through VHC because the person satisfied the requirements under HBEE 17.02'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" public-name="si_perEligUnderHBEE19.01_b">
+        <text>
+          <base>the person became newly eligible for enrollment in a QHP through VHC because the person satisfied the requirements under HBEE 19.01</base>
+          <parse>s(ver('10.4.6.76'),v(become,t(simple,past,normal)),sb('the person',plural),o('newly eligible for enrollment in a QHP through VHC because the person satisfied the requirements under HBEE 19.01'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean" public-name="si_perDemstratQHPViolatProvisn_b">
+        <text>
+          <base>the person adequately demonstrated to AHS that the QHP in which the person was enrolled substantially violated a material provision of its contract in relation to the person</base>
+          <parse>s(ver('10.4.6.76'),v(demonstrate,t(simple,past,normal)),sb('the person adequately',plural),o('to AHS that the QHP in which the person was enrolled substantially violated a material provision of its contract in relation to the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean" public-name="st_HBEE71.03d6iSatisfied_b">
+        <text>
+          <base>HBEE 71.03(d)(6)(i) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(6)(i)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean" public-name="st_HBEE71.03d6iiiSatisfied_b">
+        <text>
+          <base>HBEE 71.03(d)(6)(iii) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(6)(iii)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b34" type="boolean" public-name="si_perNewlyEligOrIneligForAPTC_b">
+        <text>
+          <base>the person was determined newly eligible or newly ineligible for APTC</base>
+          <parse>s(ver('10.4.6.76'),v(determine,t(simple,past,normal)),ob('the person',singular),o('newly eligible or newly ineligible for APTC'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" public-name="si_perHadChgEligForCSR_b">
+        <text>
+          <base>the person had a change in eligibility for CSR</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,past,normal)),sb('the person',plural),o('a change in eligibility for CSR'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" public-name="si_perEnrllAndDetermEligAPTCBecausInelig_b">
+        <text>
+          <base>the person was enrolled in an eligible employer-sponsored plan and was determined newly eligible for APTC based in part on a finding that the person was ineligible for qualifying coverage in an eligible-employer sponsored plan</base>
+          <parse>s(ver('10.4.6.76'),v(enroll,t(simple,past,normal)),ob('the person',singular),o('in an eligible employer-sponsored plan and was determined newly eligible for APTC based in part on a finding that the person was ineligible for qualifying coverage in an eligible-employer sponsored plan'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" public-name="si_perEmpDiscontinOrChgCovrgDur60Days_b">
+        <text>
+          <base>the person's employer discontinued or changed available coverage during the next 60 days and the person was allowed to terminate existing coverage</base>
+          <parse>s(ver('10.4.6.76'),v(discontinue,t(simple,past,normal)),sb('the person''s employer',plural),o('or changed available coverage during the next 60 days and the person was allowed to terminate existing coverage'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b38" type="boolean" public-name="si_perGainQHPFromPermMove_b">
+        <text>
+          <base>the person gained access to new QHP's as a result of a permanent move</base>
+          <parse>s(ver('10.4.6.76'),v(gain,t(simple,past,normal)),sb('the person',plural),o('access to new QHP''s as a result of a permanent move'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b39" type="boolean" public-name="si_perMinCovrgUndrHBEE23For1orMoreDys_b">
+        <text>
+          <base>the person had minimum essential coverage under HBEE 23.00 for at least 1 day during the 60 days preceding the date of the permanent move</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,past,normal)),sb('the person',plural),o('minimum essential coverage under HBEE 23.00 for at least 1 day during the 60 days preceding the date of the permanent move'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b40" type="boolean" public-name="si_perLivedOutOfUSOrInUSTerrAtPermMove_b">
+        <text>
+          <base>the person lived outside the United States or in a United States territory at the time of the permanent move</base>
+          <parse>s(ver('10.4.6.76'),v(live,t(simple,past,normal)),sb('the person',plural),o('outside the United States or in a United States territory at the time of the permanent move'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b42" type="boolean" public-name="si_perIsIndianSec4IHCIA_b">
+        <text>
+          <base>the person was an Indian as defined by section 4 of the Indian Health Care Improvement Act</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person',singular),o('an Indian as defined by section 4 of the Indian Health Care Improvement Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b43" type="boolean" public-name="st_HBEE71.03d9iSatisfied_b">
+        <text>
+          <base>HBEE 71.03(d)(9)(i) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(9)(i)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b44" type="boolean" public-name="st_HBEE71.03d9iiSatisfied_b">
+        <text>
+          <base>HBEE 71.03(d)(9)(ii) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(9)(ii)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b45" type="boolean" public-name="st_HBEE71.03d9iiiSatisfied_b">
+        <text>
+          <base>HBEE 71.03(d)(9)(iii) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(9)(iii)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b46" type="boolean" public-name="st_HBEE71.03d9ivSatisfied_b">
+        <text>
+          <base>HBEE 71.03(d)(9)(iv) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(9)(iv)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b47" type="boolean" public-name="st_HBEE71.03d9vSatisfied_b">
+        <text>
+          <base>HBEE 71.03(d)(9)(v) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(d)(9)(v)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b48" type="boolean" public-name="si_perMissedOpnEnrollWaitEmpDetElig_b">
+        <text>
+          <base>the person missed the person's initial open enrollment period while waiting for the employer to be determined eligible</base>
+          <parse>s(ver('10.4.6.76'),v(miss,t(simple,past,normal)),sb('the person',plural),o('the person''s initial open enrollment period while waiting for the employer to be determined eligible'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b49" type="boolean" public-name="si_perWithCertExmptNotifHHSNoLongrElig_b">
+        <text>
+          <base>the person had a certificate of exemption and was notified by HHS that the person was no longer eligible for an exemption</base>
+          <parse>s(ver('10.4.5.40'),v(have,t(simple,past,normal)),sb('the person',plural),o('a certificate of exemption and was notified by HHS that the person was no longer eligible for an exemption'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b50" type="boolean" public-name="si_perEligExmptUnderHBEE23.06_b">
+        <text>
+          <base>the person became eligible for enrollment in a QHP that was a catastrophic plan by receiving a certificate of exemption under HBEE 23.06</base>
+          <parse>s(ver('10.4.6.76'),v(become,t(simple,past,normal)),sb('the person',plural),o('eligible for enrollment in a QHP that was a catastrophic plan by receiving a certificate of exemption under HBEE 23.06'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b51" type="boolean" public-name="si_perEnrollTerminatOnCitiznshipImmigratStat_b">
+        <text>
+          <base>the person enrolled in a QHP had been terminated based on a citizenship or immigration status inconsistency and had submitted sufficient documentation of citizenship or immigration status</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,perfect)),sb('the person enrolled in a QHP',singular),o('terminated based on a citizenship or immigration status inconsistency and had submitted sufficient documentation of citizenship or immigration status'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b52" type="boolean" public-name="si_perEnrollQHPVictmDomAbusUndrHBEE12.03_b">
+        <text>
+          <base>the person was eligible for enrollment in a QHP and a victim of domestic abuse or spousal abandonment under HBEE 12.03</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person',singular),o('eligible for enrollment in a QHP and a victim of domestic abuse or spousal abandonment under HBEE 12.03'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b53" type="boolean" public-name="st_HBEE71.03e1Satisfied_b">
+        <text>
+          <base>HBEE 71.03(e)(1) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(e)(1)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b54" type="boolean" public-name="st_HBEE71.03e3Satisfied_b">
+        <text>
+          <base>HBEE 71.03(e)(3) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(e)(3)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b55" type="boolean" public-name="st_HBEE71.03e1iSatisfied_b">
+        <text>
+          <base>HBEE 71.03(e)(1)(i) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(e)(1)(i)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b56" type="boolean" public-name="st_HBEE71.03e1iiSatisfied_b">
+        <text>
+          <base>HBEE 71.03(e)(1)(ii) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(e)(1)(ii)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b57" type="boolean" public-name="si_perFailPayPremTimelyCOBRA_b">
+        <text>
+          <base>the person failed to pay premiums on a timely basis (including COBRA premiums prior to expiration of COBRA coverage)</base>
+          <parse>s(ver('10.4.5.40'),v(fail,t(simple,past,normal)),sb('the person',plural),o('to pay premiums on a timely basis (including COBRA premiums prior to expiration of COBRA coverage)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b58" type="boolean" public-name="si_perCovrgTerminatedForCause_b">
+        <text>
+          <base>the person's coverage was terminated for cause but not limited to termination because of an action by the person that constituted fraud or because the person made an intentional misrepresentation of a material fact</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s coverage',singular),o('terminated for cause but not limited to termination because of an action by the person that constituted fraud or because the person made an intentional misrepresentation of a material fact'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b59" type="boolean" public-name="st_HBEE71.03e3iSatisfied_b">
+        <text>
+          <base>HBEE 71.03(e)(3)(i) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(e)(3)(i)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b60" type="boolean" public-name="st_HBEE71.03e3iiSatisfied_b">
+        <text>
+          <base>HBEE 71.03(e)(3)(ii) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(e)(3)(ii)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b61" type="boolean" public-name="st_HBEE71.03e3iiiSatisfied_b">
+        <text>
+          <base>HBEE 71.03(e)(3)(iii) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(e)(3)(iii)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b64" type="boolean" public-name="st_HBEE71.03e3iASatisfied_b">
+        <text>
+          <base>HBEE 71.03(e)(3)(i)(A) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(e)(3)(i)(A)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b65" type="boolean" public-name="st_HBEE71.03e3iBSatisfied_b">
+        <text>
+          <base>HBEE 71.03(e)(3)(i)(B) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(e)(3)(i)(B)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b66" type="boolean" public-name="st_HBEE71.03e3iCSatisfied_b">
+        <text>
+          <base>HBEE 71.03(e)(3)(i)(C) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(e)(3)(i)(C)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b67" type="boolean" public-name="st_HBEE71.03e3iDSatisfied_b">
+        <text>
+          <base>HBEE 71.03(e)(3)(i)(D) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 71.03(e)(3)(i)(D)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b68" type="boolean" public-name="si_perLostEligIndivMrktHMO_b">
+        <text>
+          <base>the person's lost eligibility for coverage was in the individual market through an HMO, or other arrangement, that did not provide benefits to person's who no longer reside, live or work in the service area</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s lost eligibility for coverage',singular),o('in the individual market through an HMO, or other arrangement, that did not provide benefits to person''s who no longer reside, live or work in the service area'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b69" type="boolean" public-name="si_perLostEligGroupMrktHMO_b">
+        <text>
+          <base>the person's lost eligibility for coverage was in the group market through an HMO, or other arrangement, that did not provide benefits to person's who no longer reside, live or work in the service area</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s lost eligibility for coverage',singular),o('in the group market through an HMO, or other arrangement, that did not provide benefits to person''s who no longer reside, live or work in the service area'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b70" type="boolean" public-name="si_perLostEligPlanNoLngrOffrdBenefits_b">
+        <text>
+          <base>the person's lost eligibility for coverage was a situation in which the plan no longer offered any benefits to the class of similarly situated person's including the person</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s lost eligibility for coverage',singular),o('a situation in which the plan no longer offered any benefits to the class of similarly situated person''s including the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b72" type="boolean" public-name="si_perCovrgCOBRAWasExhausted_b">
+        <text>
+          <base>the person's coverage was COBRA continuation coverage and the COBRA continuation coverage was exhausted</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s coverage',singular),o('COBRA continuation coverage and the COBRA continuation coverage was exhausted'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b73" type="boolean" public-name="si_perDependntHasDied_b">
+        <text>
+          <base>the person's dependent died</base>
+          <parse>s(ver('10.4.6.76'),v(die,t(simple,past,normal)),sb('the person''s dependent',plural))</parse>
+        </text>
+      </attribute>
+      <attribute name="b74" type="boolean" public-name="si_perDependntEnrollSameQHP_b">
+        <text>
+          <base>the person's dependent is enrolled in the same QHP as the person</base>
+          <parse>s(ver('10.4.6.76'),v(enroll,t(simple,present,normal)),ob('the person''s dependent',singular),o('in the same QHP as the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b75" type="boolean" public-name="si_perDependntDetEligIneligAPTC_b">
+        <text>
+          <base>the person's dependent was determined newly eligible or newly ineligible for APTC</base>
+          <parse>s(ver('10.4.6.76'),v(determine,t(simple,past,normal)),ob('the person''s dependent',singular),o('newly eligible or newly ineligible for APTC'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b76" type="boolean" public-name="si_perDependntChgEligCSR_b">
+        <text>
+          <base>the person's dependent had a change in eligibility for CSR</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,past,normal)),sb('the person''s dependent',plural),o('a change in eligibility for CSR'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b77" type="boolean" public-name="si_perConsiderdEligCatastrophicPln_b">
+        <text>
+          <base>the person is under eligibility consideration for a catastrophic plan</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('under eligibility consideration for a catastrophic plan'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b78" type="boolean" public-name="si_perCovrgWasCOBRA_b">
+        <text>
+          <base>the person's coverage was COBRA continuation coverage</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person''s coverage',singular),o('COBRA continuation coverage'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b79" type="boolean" public-name="si_perEmpContribForCovrgTerminated_b">
+        <text>
+          <base>the employer contributions towards the person's coverage have been terminated</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,perfect)),sb('the employer contributions towards the person''s coverage',plural),o('terminated'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b80" type="boolean" public-name="si_perChgToDifferntQHPDuringEval_b">
+        <text>
+          <base>it is the case that the person has already changed from one QHP to another during the month of evaluation</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the person has already changed from one QHP to another during the month of evaluation'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

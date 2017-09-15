@@ -1,0 +1,643 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity ref="global">
+      <attribute name="b31" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the adjusted net income floor test is an FPL% test under HBEE 12.03(a) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the adjusted net income floor test',singular),o('an FPL% test under HBEE 12.03(a) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the adjusted net income floor test is an inclusive comparison test under HBEE 12.03(a) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the adjusted net income floor test',singular),o('an inclusive comparison test under HBEE 12.03(a) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p3" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the adjusted net income FPL percentage limit under HBEE 12.03(a) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p4" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the adjusted net income FPL percentage floor under HBEE 12.03(a) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 12.03 applies to the program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 12.03',singular),o('to the program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is an adjusted net income test for the program under HBEE 12.03(a) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adjusted net income test for the program under HBEE 12.03(a) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the adjusted net income test is an FPL% test for the program under HBEE 12.03(a) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the adjusted net income test',singular),o('an FPL% test for the program under HBEE 12.03(a) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is an adjusted net income floor for the person for the program under HBEE 12.03(a) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adjusted net income floor for the person for the program under HBEE 12.03(a) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is APTC</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('APTC'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b38" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is an APTC-based program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('an APTC-based program'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b2" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered to be an applicable tax filer under HBEE 12.03 (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be an applicable tax filer under HBEE 12.03 (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 12.03(a) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 12.03(a)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 12.03(b) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 12.03(b)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 12.03(c) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 12.03(c)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is expected to file a federal income tax return for the benefit year</base>
+          <parse>s(ver('10.4.6.76'),v(expect,t(simple,present,normal)),ob('the person',singular),o('to file a federal income tax return for the benefit year'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 12.03(b) applies to the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 12.03(b)',singular),o('to the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered married at the close of the benefit year under 26 CFR 1.7703-1</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('married at the close of the benefit year under 26 CFR 1.7703-1'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 12.03(b)(1) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 12.03(b)(1)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 12.03(b)(2) applies to the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 12.03(b)(2)',singular),o('to the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 12.03(b)(2) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 12.03(b)(2)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person will file a joint return for the benefit year</base>
+          <parse>s(ver('10.4.6.76'),v(will,t(simple,present,normal)),sb('the person',plural),o('file a joint return for the benefit year'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person will file a tax return using a filing status of married filing separately</base>
+          <parse>s(ver('10.4.6.76'),v(will,t(simple,present,normal)),sb('the person',plural),o('file a tax return using a filing status of married filing separately'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 12.03(b)(5) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 12.03(b)(5)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 12.03(b)(2)(i) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 12.03(b)(2)(i)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 12.03(b)(2)(ii) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 12.03(b)(2)(ii)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 12.03(b)(2)(iii) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 12.03(b)(2)(iii)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is living apart from the person's spouse at the time the person files the person's tax return</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('living apart from the person''s spouse at the time the person files the person''s tax return'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 12.03(b)(3) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 12.03(b)(3)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 12.03(b)(4) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 12.03(b)(4)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person will certify on the person's tax return that the person is a victim of domestic abuse or spousal abandonment</base>
+          <parse>s(ver('10.4.6.76'),v(certify,t(simple,future,normal)),sb('the person',plural),o('on the person''s tax return that the person is a victim of domestic abuse or spousal abandonment'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered a victim of domestic abuse</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('a victim of domestic abuse'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered a victim of spousal abandonment</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('a victim of spousal abandonment'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has satisfied the requirements under HBEE 12.03(b)(2) for each of the three preceding taxable years</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,perfect)),sb('the person',singular),o('the requirements under HBEE 12.03(b)(2) for each of the three preceding taxable years'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>another tax filer can claim the person as a dependent for a benefit year beginning in the calendar year in which the person's benefit year begins</base>
+          <parse>s(ver('10.4.6.76'),v(claim+can,t(simple,modal,normal)),sb('another tax filer',plural),o('the person as a dependent for a benefit year beginning in the calendar year in which the person''s benefit year begins'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 12.03(e) is satisfied for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 12.03(e)',singular),o('for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b34" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered to be lawfully present in the United States under HBEE 17.01(g)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be lawfully present in the United States under HBEE 17.01(g)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is ineligible for Medicaid solely because of immigration status under HBEE 17.02(d)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('ineligible for Medicaid solely because of immigration status under HBEE 17.02(d)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b39" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is considered a non-citizen under HBEE 17.01(h)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('a non-citizen under HBEE 17.01(h)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the group member" id="groupmember" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+      <attribute name="b32" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person expects to claim a personal exemption deduction for the group member for the benefit year</base>
+          <parse>s(ver('10.4.6.76'),v(expect,t(simple,present,normal)),sb('the person',singular),o('to claim a personal exemption deduction for the group member for the benefit year'))</parse>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship type="ManyToMany" relationship-id="groupmembersrepresentativeperson" reverse-relationship-id="personsrepresentationsasagroupmember" text="the group member's representative person" reverse-text="the person's representations as a group member" source="groupmember" target="person" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" text="the person's group members" reverse-text="the group member's containing person" source="person" target="groupmember" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="HBEE 12.03 applies to the program (eff. 08/01/2016)" ruleburst="true" concludes="b1" folder="1" source-offset="74">
+      <rule-xml>
+        <conclude attr-id="b1" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b38" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the person is considered to be an applicable tax filer under HBEE 12.03 (eff. 08/01/2016)" ruleburst="true" concludes="b2" folder="1" source-offset="201">
+      <rule-xml>
+        <conclude attr-id="b2" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b3" />
+              <or>
+                <not>
+                  <attribute attr-id="b9" />
+                </not>
+                <and>
+                  <attribute attr-id="b9" />
+                  <attribute attr-id="b4" />
+                </and>
+              </or>
+              <attribute attr-id="b5" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="HBEE 12.03(a) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b3" folder="2" source-offset="672">
+      <rule-xml>
+        <conclude attr-id="b3" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b7" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="there is an adjusted net income floor for the person for the program under HBEE 12.03(a) (eff. 08/01/2016)" ruleburst="true" concludes="b29" folder="2" source-offset="854">
+      <rule-xml>
+        <conclude attr-id="b29" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b1" />
+              <not>
+                <for>
+                  <relationship relationship-id="programsperson" target-entity-id="person" />
+                  <attribute attr-id="b30" />
+                </for>
+              </not>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="the adjusted net income floor test is an FPL% test under HBEE 12.03(a) (eff. 08/01/2016)" ruleburst="true" concludes="b31" folder="2" source-offset="1106">
+      <rule-xml>
+        <conclude attr-id="b31" entity-id="global" scope-id="global0">
+          <value>
+            <true-value />
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="the adjusted net income FPL percentage floor under HBEE 12.03(a) (eff. 08/01/2016) " ruleburst="true" concludes="p4 = 100" folder="2" source-offset="1202">
+      <rule-xml>
+        <conclude attr-id="p4" entity-id="global" scope-id="global0">
+          <value>
+            <number-value>100</number-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="the adjusted net income floor test is an inclusive comparison test under HBEE 12.03(a) (eff. 08/01/2016)" ruleburst="true" concludes="b36" folder="2" source-offset="1304">
+      <rule-xml>
+        <conclude attr-id="b36" entity-id="global" scope-id="global0">
+          <value>
+            <true-value />
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="7" name="there is an adjusted net income test for the program under HBEE 12.03(a) (eff. 08/01/2016)" ruleburst="true" concludes="b6" folder="2" source-offset="1434">
+      <rule-xml>
+        <conclude attr-id="b6" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b1" />
+              <attribute attr-id="b37" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="8" name="the adjusted net income test is an FPL% test for the program under HBEE 12.03(a) (eff. 08/01/2016)" ruleburst="true" concludes="b28" folder="2" source-offset="1621">
+      <rule-xml>
+        <conclude attr-id="b28" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b1" />
+              <attribute attr-id="b37" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="9" name="the adjusted net income FPL percentage limit under HBEE 12.03(a) (eff. 08/01/2016) " ruleburst="true" concludes="p3 = 400" folder="2" source-offset="1817">
+      <rule-xml>
+        <conclude attr-id="p3" entity-id="global" scope-id="global0">
+          <value>
+            <number-value>400</number-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="10" name="HBEE 12.03(b) applies to the person (eff. 08/01/2016)" ruleburst="true" concludes="b9" folder="3" source-offset="1973">
+      <rule-xml>
+        <conclude attr-id="b9" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b10" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="11" name="HBEE 12.03(b) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b4" folder="3" source-offset="2130">
+      <rule-xml>
+        <conclude attr-id="b4" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b11" />
+              <and>
+                <not>
+                  <attribute attr-id="b11" />
+                </not>
+                <attribute attr-id="b12" />
+                <or>
+                  <not>
+                    <attribute attr-id="b12" />
+                  </not>
+                  <attribute attr-id="b13" />
+                </or>
+              </and>
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="12" name="HBEE 12.03(b)(1) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b11" folder="3" source-offset="2574">
+      <rule-xml>
+        <conclude attr-id="b11" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b14" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="13" name="HBEE 12.03(b)(2) applies to the person (eff. 08/01/2016)" ruleburst="true" concludes="b12" folder="3" source-offset="2712">
+      <rule-xml>
+        <conclude attr-id="b12" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b15" />
+              <attribute attr-id="b16" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="14" name="HBEE 12.03(b)(2) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b13" folder="3" source-offset="2944">
+      <rule-xml>
+        <conclude attr-id="b13" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b17" />
+              <attribute attr-id="b18" />
+              <attribute attr-id="b19" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="15" name="HBEE 12.03(b)(2)(i) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b17" folder="3" source-offset="3246">
+      <rule-xml>
+        <conclude attr-id="b17" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b20" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="16" name="HBEE 12.03(b)(2)(ii) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b18" folder="3" source-offset="3433">
+      <rule-xml>
+        <conclude attr-id="b18" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b21" />
+              <attribute attr-id="b22" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="17" name="HBEE 12.03(b)(2)(iii) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b19" folder="3" source-offset="4017">
+      <rule-xml>
+        <conclude attr-id="b19" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b23" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="18" name="HBEE 12.03(b)(3) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b21" folder="3" source-offset="4222">
+      <rule-xml>
+        <conclude attr-id="b21" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b24" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="19" name="HBEE 12.03(b)(4) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b22" folder="3" source-offset="4354">
+      <rule-xml>
+        <conclude attr-id="b22" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b25" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="20" name="HBEE 12.03(b)(5) is not satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="not b16" folder="3" source-offset="4491">
+      <rule-xml>
+        <conclude attr-id="b16" entity-id="person" scope-id="person0">
+          <value>
+            <false-value />
+          </value>
+          <condition>
+            <attribute attr-id="b26" />
+          </condition>
+          <otherwise>
+            <true-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="21" name="HBEE 12.03(c) is not satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="not b5" folder="4" source-offset="4929">
+      <rule-xml>
+        <conclude attr-id="b5" entity-id="person" scope-id="person0">
+          <value>
+            <false-value />
+          </value>
+          <condition>
+            <attribute attr-id="b27" />
+          </condition>
+          <otherwise>
+            <true-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="22" name="HBEE 12.03(e) is satisfied for the person (eff. 08/01/2016)" ruleburst="true" concludes="b30" folder="5" source-offset="5342">
+      <rule-xml>
+        <conclude attr-id="b30" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <exists scope-id="groupmember0">
+              <relationship relationship-id="personsgroupmembers" target-entity-id="groupmember" />
+              <and>
+                <attribute attr-id="b32" />
+                <exists scope-id="the member">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <and>
+                    <attribute attr-id="b39" />
+                    <attribute attr-id="b34" />
+                    <attribute attr-id="b35" />
+                  </and>
+                </exists>
+              </and>
+            </exists>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="12.03 Applicable tax filer  (08/01/2016, 16-02FP)" parent="0" id="1" />
+    <folder text="Para (a): In General" parent="1" id="2" />
+    <folder text="Para (b): Married tax filers must file joint return" parent="1" id="3" />
+    <folder text="Para (c): Tax dependent" parent="1" id="4" />
+    <folder text="Pare (e): Individual lawfully present" parent="1" id="5" />
+  </rule-folders>
+</root>

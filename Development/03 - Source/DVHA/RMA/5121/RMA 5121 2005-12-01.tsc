@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-script product-version="10.4.6.76" schema-version="4">
+  <test-case-set>
+    <test-case name="5121 satisfied medicaid ineligible_resettlement agency_RMA eligible" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val />
+            </val>
+          </attr-inst>
+          <attr-inst name="b10@03Source_DVHA_RMA_5121_RMA512120051201_doc" text="the person is a full-time student in institutions of higher learning unless approved by the state as part of an employability plan or part of a plan for an unaccompanied minor" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="b7@03Source_DVHA_RMA_5121_RMA512120051201_doc" text="the person has been residing in the U.S. for fewer months than the RMA eligibility period defined" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="b9@03Source_DVHA_RMA_5121_RMA512120051201_doc" text="the person is a dependent children of and part of the same assistance group as applicants meeting these requirements" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="b6@03Source_DVHA_RMA_5121_RMA512120051201_doc" text="the person provided the name of the resettlement agency that resettled them" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="b5@03Source_DVHA_RMA_5121_RMA512120051201_doc" text="the person is ineligible for Medicaid under the state Medicaid plan" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Monica</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="b11@03Source_DVHA_RMA_5121_RMA512120051201_doc" text="the person receives refugee cash assistance" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="b8@03Source_DVHA_RMA_5121_RMA512120051201_doc" text="the person meets immigration or asylee status and identification requirements specified at 45 CFR, section 400, Subpart D" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Monica|Monica" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="p11@00Framework_01Eligibility_EligibilityFrameworkProps_xsrc">
+        <ent-inst id="Monica|Monica">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="p7@02Common_FPL_FPLProps_xsrc">
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+  </test-case-set>
+  <outcome-set />
+</test-script>

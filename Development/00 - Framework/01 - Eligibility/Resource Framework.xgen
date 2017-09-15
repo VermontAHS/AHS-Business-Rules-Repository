@@ -1,0 +1,285 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b6" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the budgeting period is monthly for the person's financial group for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the budgeting period',singular),o('monthly for the person''s financial group for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the budgeting period is annualized monthly for the person's financial group for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the budgeting period',singular),o('annualized monthly for the person''s financial group for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the budgeting period is annual for the person's financial group for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the budgeting period',singular),o('annual for the person''s financial group for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p1" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the total countable resources for the person's financial group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p2" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's total countable resources for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p3" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the total countable resources attributable to the person's financial group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p4" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the total countable resource exclusion for the person's financial group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p6" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the total countable resources attributable to the person for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p7" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the total countable resource exclusion for the person for the program</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the group member program" id="groupmemberprogram" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is in the person's financial group for the group member program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('in the person''s financial group for the group member program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p10" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the group member's total countable resources for the person's financial group for the group member program</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's resource" id="personsresource" containment-relationship-id="personsresources" containment-parent-id="person">
+      <attribute name="b4" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's resource is accessible</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('accessible'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's resource is active during the current month</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('active during the current month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's resource is active during the current year</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('active during the current year'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the resource program" id="resourceprogram" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+      <attribute name="b2" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's resource is countable for the resource program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('countable for the resource program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's resource is active for the resource program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('active for the resource program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's resource is excluded for the resource program</base>
+          <parse>s(ver('10.4.5.40'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('for the resource program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p5" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's resource's countable value for the resource program</base>
+        </text>
+      </attribute>
+      <attribute name="p8" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's resource's representative value for the resource program</base>
+        </text>
+      </attribute>
+      <attribute name="p9" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the resource exclusion for the person's resource for the resource program</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global" />
+    <entity name="the group member" id="groupmember" containment-relationship-id="personsgroupmembers" containment-parent-id="person" />
+  </entities>
+  <relationships>
+    <relationship type="ManyToMany" relationship-id="groupmemberscontainingpersonsprogramforthegroupmemberprogram" reverse-relationship-id="personscontainedgroupmemberprogramsfortheprogram" text="the group member's containing person's program for the group member program" reverse-text="the person's contained group member programs for the program" source="groupmemberprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="groupmembersprogramforthegroupmemberprogram" reverse-relationship-id="personsrepresentativegroupmemberprogramsfortheprogram" text="the group member's program for the group member program" reverse-text="the person's representative group member programs for the program" source="groupmemberprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="personsprogramfortheresourceprogram" reverse-relationship-id="personsresourcesfortheprogram" text="the person's program for the resource program" reverse-text="the person's resources for the program" source="resourceprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" text="the person's resource's resource programs" reverse-text="the person's resource for the resource program" source="personsresource" target="resourceprogram" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" text="the group member's group member programs" reverse-text="the group member program's group member" source="groupmember" target="groupmemberprogram" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" text="the person's group members" reverse-text="the group member's containing person" source="person" target="groupmember" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" text="the person's resources" reverse-text="the person's resource's person" source="person" target="personsresource" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="the total countable resources for the person's financial group for the program " ruleburst="true" concludes="p1 = InstanceSum(personscontainedgroupmemberprogramsfortheprogram,p10) + p3 - p4" folder="2" source-offset="663">
+      <rule-xml>
+        <conclude attr-id="p1" entity-id="program" scope-id="program0">
+          <value>
+            <minus>
+              <plus>
+                <instance-sum>
+                  <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+                  <attribute attr-id="p10" />
+                </instance-sum>
+                <attribute attr-id="p3" />
+              </plus>
+              <attribute attr-id="p4" />
+            </minus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the group member's total countable resources for the person's financial group for the group member program" ruleburst="true" concludes="p10" folder="2" source-offset="1199">
+      <rule-xml>
+        <table-conclude attr-id="p10" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <row>
+            <value>
+              <instance-value-if>
+                <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                <attribute attr-id="p2" />
+                <true-value />
+              </instance-value-if>
+            </value>
+            <condition>
+              <attribute attr-id="b1" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="the person's total countable resources for the program " ruleburst="true" concludes="p2 = InstanceSum(personsresourcesfortheprogram,p5) + p6 - p7" folder="3" source-offset="1740">
+      <rule-xml>
+        <conclude attr-id="p2" entity-id="program" scope-id="program0">
+          <value>
+            <minus>
+              <plus>
+                <instance-sum>
+                  <relationship relationship-id="personsresourcesfortheprogram" target-entity-id="resourceprogram" />
+                  <attribute attr-id="p5" />
+                </instance-sum>
+                <attribute attr-id="p6" />
+              </plus>
+              <attribute attr-id="p7" />
+            </minus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="the person's resource is countable for the resource program" ruleburst="true" concludes="b2" folder="4" source-offset="2150">
+      <rule-xml>
+        <conclude attr-id="b2" entity-id="resourceprogram" scope-id="resourceprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b3" silent-if-true="true" invisible-if-true="true" />
+              <for>
+                <relationship relationship-id="personsresourcefortheresourceprogram" target-entity-id="personsresource" />
+                <attribute attr-id="b4" silent-if-true="true" invisible-if-true="true" />
+              </for>
+              <not>
+                <attribute attr-id="b5" />
+              </not>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="the person's resource is active for the resource program" ruleburst="true" concludes="b3" folder="4" source-offset="2564">
+      <rule-xml>
+        <conclude attr-id="b3" entity-id="resourceprogram" scope-id="resourceprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="program0">
+              <relationship relationship-id="personsprogramfortheresourceprogram" target-entity-id="program" />
+              <or>
+                <and>
+                  <or>
+                    <attribute attr-id="b6" silent-if-true="true" silent-if-false="true" invisible-if-false="true" />
+                    <attribute attr-id="b7" silent-if-true="true" silent-if-false="true" invisible-if-false="true" />
+                  </or>
+                  <scope-for scope-ref="resourceprogram0" target-entity-id="resourceprogram">
+                    <for>
+                      <relationship relationship-id="personsresourcefortheresourceprogram" target-entity-id="personsresource" />
+                      <attribute attr-id="b8" />
+                    </for>
+                  </scope-for>
+                </and>
+                <and>
+                  <attribute attr-id="b13" silent-if-true="true" silent-if-false="true" invisible-if-false="true" />
+                  <scope-for scope-ref="resourceprogram0" target-entity-id="resourceprogram">
+                    <for>
+                      <relationship relationship-id="personsresourcefortheresourceprogram" target-entity-id="personsresource" />
+                      <attribute attr-id="b10" />
+                    </for>
+                  </scope-for>
+                </and>
+              </or>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="the person's resource's countable value for the resource program" ruleburst="true" concludes="p5" folder="4" source-offset="3402">
+      <rule-xml>
+        <table-conclude attr-id="p5" entity-id="resourceprogram" scope-id="resourceprogram0">
+          <row>
+            <value>
+              <minus>
+                <attribute attr-id="p8" />
+                <attribute attr-id="p9" />
+              </minus>
+            </value>
+            <condition>
+              <attribute attr-id="b2" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="Total Countable Resources" parent="0" id="1" />
+    <folder text="Group-Level" parent="1" id="2" />
+    <folder text="Person-Level" parent="1" id="3" />
+    <folder text="Resource-Level" parent="1" id="4" />
+  </rule-folders>
+</root>

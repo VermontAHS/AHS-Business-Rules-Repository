@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-script product-version="10.4.6.76" schema-version="4">
+  <test-case-set>
+    <test-case name="(1) Earned: Gross Salary [29.12(b)(1)]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Joe</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Zamofo</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="true">
+              <ent-inst-ref ref-id="income 1" />
+            </relationship-inst>
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Joe Zamofo|Joe Zamofo" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Joe Zamofo|Joe Zamofo">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="income" entity-text="the person's income">
+        <ent-inst id="income 1">
+          <attr-inst name="si_incTypeEmpl_b" text="the person's income is gross salary or commissions or bonuses or severance pay received as a result of employment" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_inc_amt" text="the person's income's amount" type="currency">
+            <val>
+              <currency-val>500.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE29.12bIncTypEarn20140730_b" text="the person's income type is considered earned income under HBEE 29.12(b) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE29.12cIncTypSelf20140730_b" text="the person's income type is considered self-employment income under HBEE 29.12(c) (eff. 07/30/2014)" type="boolean" />
+          <attr-inst name="so_HBEE29.12dIncTypUnearn20140730_b" text="the person's income type is considered unearned income under HBEE 29.12(d) (eff. 07/30/2014)" type="boolean" />
+          <relationship-set>
+            <relationship-inst type="personsincomesincomeprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+        <ent-inst id="2017" />
+      </ent-set>
+    </test-case>
+    <test-case name="(2) Earned: EOA Payment from CAP Title II [29.12(b)(3)(v)]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Joe</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Zamofo</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="true">
+              <ent-inst-ref ref-id="income 1" />
+            </relationship-inst>
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Joe Zamofo|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Joe Zamofo|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="income" entity-text="the person's income">
+        <ent-inst id="income 1">
+          <attr-inst name="si_incTypeEmpl_b" text="the person's income is gross salary or commissions or bonuses or severance pay received as a result of employment" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeEoaCapTitleII_b" text="the person's income is an EOA payment from Community Action Programs Title II" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_inc_amt" text="the person's income's amount" type="currency">
+            <val>
+              <currency-val>500.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE29.12bIncTypEarn20140730_b" text="the person's income type is considered earned income under HBEE 29.12(b) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE29.12cIncTypSelf20140730_b" text="the person's income type is considered self-employment income under HBEE 29.12(c) (eff. 07/30/2014)" type="boolean" />
+          <attr-inst name="so_HBEE29.12dIncTypUnearn20140730_b" text="the person's income type is considered unearned income under HBEE 29.12(d) (eff. 07/30/2014)" type="boolean" />
+          <relationship-set>
+            <relationship-inst type="personsincomesincomeprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+    <test-case name="(3) Earned: Wages from LWE Program [29.12(b)(4)(ii)]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Joe</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Zamofo</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="true">
+              <ent-inst-ref ref-id="income 1" />
+            </relationship-inst>
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Joe Zamofo|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Joe Zamofo|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="income" entity-text="the person's income">
+        <ent-inst id="income 1">
+          <attr-inst name="si_incTypeWia98LimWkExpPrg_b" text="the person's income is wages from participation in the Limited Work Experience Program under the Workforce Investment Act of 1998" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_inc_amt" text="the person's income's amount" type="currency">
+            <val>
+              <currency-val>500.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE29.12bIncTypEarn20140730_b" text="the person's income type is considered earned income under HBEE 29.12(b) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE29.12cIncTypSelf20140730_b" text="the person's income type is considered self-employment income under HBEE 29.12(c) (eff. 07/30/2014)" type="boolean" />
+          <attr-inst name="so_HBEE29.12dIncTypUnearn20140730_b" text="the person's income type is considered unearned income under HBEE 29.12(d) (eff. 07/30/2014)" type="boolean" />
+          <relationship-set>
+            <relationship-inst type="personsincomesincomeprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+    <test-case name="(4) Self-Emplymt [29.12(c)]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Joe</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Zamofo</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="true">
+              <ent-inst-ref ref-id="income 1" />
+            </relationship-inst>
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Joe Zamofo|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Joe Zamofo|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="income" entity-text="the person's income">
+        <ent-inst id="income 1">
+          <attr-inst name="i_inc_amt" text="the person's income's amount" type="currency">
+            <val>
+              <currency-val>500.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeSelfNet_b" text="the person's income is net earnings from self-employment" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE29.12bIncTypEarn20140730_b" text="the person's income type is considered earned income under HBEE 29.12(b) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE29.12cIncTypSelf20140730_b" text="the person's income type is considered self-employment income under HBEE 29.12(c) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE29.12dIncTypUnearn20140730_b" text="the person's income type is considered unearned income under HBEE 29.12(d) (eff. 07/30/2014)" type="boolean" />
+          <relationship-set>
+            <relationship-inst type="personsincomesincomeprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+    <test-case name="(5) Unearned: Any type not Earned [29.12(d)(1)]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Joe</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Zamofo</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="true">
+              <ent-inst-ref ref-id="income 1" />
+            </relationship-inst>
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Joe Zamofo|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Joe Zamofo|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="income" entity-text="the person's income">
+        <ent-inst id="income 1">
+          <attr-inst name="i_inc_amt" text="the person's income's amount" type="currency">
+            <val>
+              <currency-val>500.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeSelfNet_b" text="the person's income is net earnings from self-employment" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeScsePrg_b" text="the person's income is Earnings from the Senior Community Service Employment (SCSE) program" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeWia98LimWkExpPrg_b" text="the person's income is wages from participation in the Limited Work Experience Program under the Workforce Investment Act of 1998" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeEmplEseaTitleI_b" text="the person's income is employment under Title I of the Elementary and Secondary Education Act" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeEoaYedPrg_b" text="the person's income is an EOA payment from the Youth Employment Demonstration act program" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeEoaJcpTitleIA_b" text="the person's income is an EOA payment from the Job Corps Program under Title I Part A" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeEoaWtpTitleIA_b" text="the person's income is an EOA payment from Work Training Programs under Title I Part A" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeEoaWspTitleIC_b" text="the person's income is an EOA payment from Work Study Programs Title I Part C" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeEoaCapTitleII_b" text="the person's income is an EOA payment from Community Action Programs Title II" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeEoaVapncTitleII_b" text="the person's income is an EOA payment from Voluntary Assistance Program for Needy Children Title II" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeEmpl_b" text="the person's income is gross salary or commissions or bonuses or severance pay received as a result of employment" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE29.12bIncTypEarn20140730_b" text="the person's income type is considered earned income under HBEE 29.12(b) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE29.12cIncTypSelf20140730_b" text="the person's income type is considered self-employment income under HBEE 29.12(c) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE29.12dIncTypUnearn20140730_b" text="the person's income type is considered unearned income under HBEE 29.12(d) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsincomesincomeprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+  </test-case-set>
+  <outcome-set>
+    <outcome name="so_HBEE29.12bIncTypEarn20140730_b" display-name="so_HBEE29.12bIncTypEarn20140730_b" text="the person's income type is considered earned income under HBEE 29.12(b) (eff. 07/30/2014)" type="boolean" entity-type="income" entity-text="the person's income">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+    <outcome name="so_HBEE29.12cIncTypSelf20140730_b" display-name="so_HBEE29.12cIncTypSelf20140730_b" text="the person's income type is considered self-employment income under HBEE 29.12(c) (eff. 07/30/2014)" type="boolean" entity-type="income" entity-text="the person's income">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+    <outcome name="so_HBEE29.12dIncTypUnearn20140730_b" display-name="so_HBEE29.12dIncTypUnearn20140730_b" text="the person's income type is considered unearned income under HBEE 29.12(d) (eff. 07/30/2014)" type="boolean" entity-type="income" entity-text="the person's income">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+  </outcome-set>
+</test-script>

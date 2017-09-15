@@ -1,0 +1,7 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity ref="global" />
+  </entities>
+  <relationships />
+  <rules />
+</root>

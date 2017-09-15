@@ -1,0 +1,1161 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity ref="global">
+      <attribute name="p5" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the benefit type for medical care benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p8" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the request type for medical assistance</base>
+        </text>
+      </attribute>
+      <attribute name="p12" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the benefit type for Medicare savings benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p13" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the benefit type for long term care benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p14" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the benefit type for insurance exchange access benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p15" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the benefit type for insurance premium tax credit benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p16" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the benefit type for insurance premium reduction benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p17" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the benefit type for insurance cost-sharing reduction benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p18" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the benefit type for supplemental pharmacy coverage benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p19" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the request type for long term care assistance</base>
+        </text>
+      </attribute>
+      <attribute name="p20" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the request type for insurance assistance</base>
+        </text>
+      </attribute>
+      <attribute name="p21" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the request type for insurance affordability assistance</base>
+        </text>
+      </attribute>
+      <attribute name="p22" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the benefit type for family planning benefits</base>
+        </text>
+      </attribute>
+      <attribute name="p24" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the delimiter for instance IDs</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b42" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is requesting long term care assistance</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('requesting long term care assistance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b43" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is requesting insurance assistance</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('requesting insurance assistance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b46" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is requesting insurance affordability assistance</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('requesting insurance affordability assistance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b49" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is requesting a full medical determination</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('requesting a full medical determination'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p23" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's unique ID</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's requested benefit" id="personsrequestedbenefit" containment-relationship-id="personsrequestedbenefits" containment-parent-id="person">
+      <attribute name="b7" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's requested benefit is for medical care benefits</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s requested benefit',singular),o('for medical care benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's requested benefit is for Medicare savings benefits</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s requested benefit',singular),o('for Medicare savings benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's requested benefit is for long term care benefits</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s requested benefit',singular),o('for long term care benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's requested benefit is for insurance exchange access benefits</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s requested benefit',singular),o('for insurance exchange access benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's requested benefit is for insurance premium tax credit benefits</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s requested benefit',singular),o('for insurance premium tax credit benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's requested benefit is for insurance premium reduction benefits</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s requested benefit',singular),o('for insurance premium reduction benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's requested benefit is for insurance cost-sharing reduction benefits</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s requested benefit',singular),o('for insurance cost-sharing reduction benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b34" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's requested benefit is for supplemental pharmacy coverage benefits</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s requested benefit',singular),o('for supplemental pharmacy coverage benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b47" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's requested benefit is for family planning benefits</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s requested benefit',singular),o('for family planning benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p1" type="text" ruleburst="true" is-used="True" default-gender="generic">
+        <text lang="en-US">
+          <base>the person's requested benefit</base>
+        </text>
+      </attribute>
+      <attribute name="p25" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's requested benefit's identifier</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the case result" id="caseresult" containment-relationship-id="caseresults" containment-parent-id="global">
+      <attribute name="b25" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the case result is for medical care benefits</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the case result',singular),o('for medical care benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the case result is for Medicare savings benefits</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the case result',singular),o('for Medicare savings benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the case result is for long term care benefits</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the case result',singular),o('for long term care benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the case result is for insurance exchange access benefits</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the case result',singular),o('for insurance exchange access benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b38" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the case result is for insurance premium tax credit benefits</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the case result',singular),o('for insurance premium tax credit benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b39" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the case result is for insurance premium reduction benefits</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the case result',singular),o('for insurance premium reduction benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b40" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the case result is for insurance cost-sharing reduction benefits</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the case result',singular),o('for insurance cost-sharing reduction benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b41" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the case result is for supplemental pharmacy coverage benefits</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the case result',singular),o('for supplemental pharmacy coverage benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b48" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the case result is for family planning benefits</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the case result',singular),o('for family planning benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p11" type="text" ruleburst="true" is-used="True" default-gender="generic">
+        <text lang="en-US">
+          <base>the case result</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's request for assistance" id="personsrequestforassistance" containment-relationship-id="personsrequestsforassistance" containment-parent-id="person">
+      <attribute name="b4" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's request for assistance is for medical assistance</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s request for assistance',singular),o('for medical assistance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's request for assistance is for long term care assistance</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s request for assistance',singular),o('for long term care assistance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's request for assistance is for insurance assistance</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s request for assistance',singular),o('for insurance assistance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b44" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's request for assistance is for insurance affordability assistance</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s request for assistance',singular),o('for insurance affordability assistance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p9" type="text" ruleburst="true" is-used="True" default-gender="generic">
+        <text lang="en-US">
+          <base>the person's request for assistance</base>
+        </text>
+      </attribute>
+      <attribute name="p26" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's request for assistance's identifier</base>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="personsrequestsforassistance" reverse-relationship-id="person_personsrequestsforassistance_rev" text="the person's requests for assistance" source="person" target="personsrequestforassistance" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsrequestedbenefits" reverse-relationship-id="personfortherequestedbenefit" text="the person's requested benefits" reverse-text="the person for the requested benefit" source="person" target="personsrequestedbenefit" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="caseresults" reverse-relationship-id="global_caseresults_rev" text="the case results" source="global" target="caseresult" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="the benefit type for medical care benefits " ruleburst="true" concludes="p5 = &quot;Medical Care Benefits&quot;" folder="2" source-offset="399">
+      <rule-xml>
+        <conclude attr-id="p5" entity-id="global" scope-id="global0">
+          <value>
+            <string-value>Medical Care Benefits</string-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the benefit type for Medicare savings benefits " ruleburst="true" concludes="p12 = &quot;Medicare Cost-Sharing Reduction&quot;" folder="2" source-offset="500">
+      <rule-xml>
+        <conclude attr-id="p12" entity-id="global" scope-id="global0">
+          <value>
+            <string-value>Medicare Cost-Sharing Reduction</string-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="the benefit type for long term care benefits " ruleburst="true" concludes="p13 = &quot;Long Term Care&quot;" folder="2" source-offset="626">
+      <rule-xml>
+        <conclude attr-id="p13" entity-id="global" scope-id="global0">
+          <value>
+            <string-value>Long Term Care</string-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="the benefit type for family planning benefits " ruleburst="true" concludes="p22 = &quot;Family Planning&quot;" folder="2" source-offset="716">
+      <rule-xml>
+        <conclude attr-id="p22" entity-id="global" scope-id="global0">
+          <value>
+            <string-value>Family Planning</string-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="the benefit type for insurance exchange access benefits " ruleburst="true" concludes="p14 = &quot;Insurance Exchange Access&quot;" folder="2" source-offset="809">
+      <rule-xml>
+        <conclude attr-id="p14" entity-id="global" scope-id="global0">
+          <value>
+            <string-value>Insurance Exchange Access</string-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="the benefit type for insurance premium tax credit benefits " ruleburst="true" concludes="p15 = &quot;Insurance Premium Tax Credit&quot;" folder="2" source-offset="932">
+      <rule-xml>
+        <conclude attr-id="p15" entity-id="global" scope-id="global0">
+          <value>
+            <string-value>Insurance Premium Tax Credit</string-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="the benefit type for insurance premium reduction benefits " ruleburst="true" concludes="p16 = &quot;Insurance Premium Reduction&quot;" folder="2" source-offset="1064">
+      <rule-xml>
+        <conclude attr-id="p16" entity-id="global" scope-id="global0">
+          <value>
+            <string-value>Insurance Premium Reduction</string-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="7" name="the benefit type for insurance cost-sharing reduction benefits " ruleburst="true" concludes="p17 = &quot;Insurance Cost-Sharing Reduction&quot;" folder="2" source-offset="1193">
+      <rule-xml>
+        <conclude attr-id="p17" entity-id="global" scope-id="global0">
+          <value>
+            <string-value>Insurance Cost-Sharing Reduction</string-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="8" name="the benefit type for supplemental pharmacy coverage benefits " ruleburst="true" concludes="p18 = &quot;Supplemental Pharmacy Coverage&quot;" folder="2" source-offset="1337">
+      <rule-xml>
+        <conclude attr-id="p18" entity-id="global" scope-id="global0">
+          <value>
+            <string-value>Supplemental Pharmacy Coverage</string-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="9" name="the person's requested benefits" ruleburst="true" concludes="InferInstance(personsrequestedbenefits)" folder="2" source-offset="1476">
+      <rule-xml>
+        <table-conclude-instance relationship-id="personsrequestedbenefits" source="person" source-scope-id="person0">
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p23" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p24" />
+                </scope-for>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p5" />
+                </scope-for>
+              </concatenate>
+            </identity>
+            <condition>
+              <exists scope-id="personsrequestforassistance0">
+                <relationship relationship-id="personsrequestsforassistance" target-entity-id="personsrequestforassistance" />
+                <or>
+                  <attribute attr-id="b4" />
+                  <attribute attr-id="b44" />
+                  <attribute attr-id="b26" />
+                </or>
+              </exists>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p23" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p24" />
+                </scope-for>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p12" />
+                </scope-for>
+              </concatenate>
+            </identity>
+            <condition>
+              <exists scope-id="personsrequestforassistance0">
+                <relationship relationship-id="personsrequestsforassistance" target-entity-id="personsrequestforassistance" />
+                <attribute attr-id="b4" />
+              </exists>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p23" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p24" />
+                </scope-for>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p13" />
+                </scope-for>
+              </concatenate>
+            </identity>
+            <condition>
+              <exists scope-id="personsrequestforassistance0">
+                <relationship relationship-id="personsrequestsforassistance" target-entity-id="personsrequestforassistance" />
+                <attribute attr-id="b26" />
+              </exists>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p23" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p24" />
+                </scope-for>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p22" />
+                </scope-for>
+              </concatenate>
+            </identity>
+            <condition>
+              <exists scope-id="personsrequestforassistance0">
+                <relationship relationship-id="personsrequestsforassistance" target-entity-id="personsrequestforassistance" />
+                <attribute attr-id="b4" />
+              </exists>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p23" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p24" />
+                </scope-for>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p14" />
+                </scope-for>
+              </concatenate>
+            </identity>
+            <condition>
+              <exists scope-id="personsrequestforassistance0">
+                <relationship relationship-id="personsrequestsforassistance" target-entity-id="personsrequestforassistance" />
+                <or>
+                  <attribute attr-id="b27" />
+                  <attribute attr-id="b44" />
+                </or>
+              </exists>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p23" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p24" />
+                </scope-for>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p15" />
+                </scope-for>
+              </concatenate>
+            </identity>
+            <condition>
+              <exists scope-id="personsrequestforassistance0">
+                <relationship relationship-id="personsrequestsforassistance" target-entity-id="personsrequestforassistance" />
+                <attribute attr-id="b44" />
+              </exists>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p23" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p24" />
+                </scope-for>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p16" />
+                </scope-for>
+              </concatenate>
+            </identity>
+            <condition>
+              <exists scope-id="personsrequestforassistance0">
+                <relationship relationship-id="personsrequestsforassistance" target-entity-id="personsrequestforassistance" />
+                <attribute attr-id="b44" />
+              </exists>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p23" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p24" />
+                </scope-for>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p17" />
+                </scope-for>
+              </concatenate>
+            </identity>
+            <condition>
+              <exists scope-id="personsrequestforassistance0">
+                <relationship relationship-id="personsrequestsforassistance" target-entity-id="personsrequestforassistance" />
+                <or>
+                  <attribute attr-id="b27" />
+                  <attribute attr-id="b44" />
+                </or>
+              </exists>
+            </condition>
+          </row>
+        </table-conclude-instance>
+      </rule-xml>
+    </rule>
+    <rule id="10" name="the person's requested benefit " ruleburst="true" concludes="p1 = Substring(p25,Length(p23) + Length(p24),Length(p25))" folder="2" source-offset="4907">
+      <rule-xml>
+        <conclude attr-id="p1" entity-id="personsrequestedbenefit" scope-id="personsrequestedbenefit0">
+          <value>
+            <substring>
+              <attribute attr-id="p25" />
+              <plus>
+                <length>
+                  <for>
+                    <relationship relationship-id="personfortherequestedbenefit" target-entity-id="person" />
+                    <attribute attr-id="p23" />
+                  </for>
+                </length>
+                <length>
+                  <scope-for scope-ref="global0" target-entity-id="global">
+                    <attribute attr-id="p24" />
+                  </scope-for>
+                </length>
+              </plus>
+              <length>
+                <attribute attr-id="p25" />
+              </length>
+            </substring>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="11" name="the person's requested benefit is for medical care benefits" ruleburst="true" concludes="b7" folder="2" source-offset="5444">
+      <rule-xml>
+        <conclude attr-id="b7" entity-id="personsrequestedbenefit" scope-id="personsrequestedbenefit0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p1" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p5" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="12" name="the person's requested benefit is for Medicare savings benefits" ruleburst="true" concludes="b28" folder="2" source-offset="5599">
+      <rule-xml>
+        <conclude attr-id="b28" entity-id="personsrequestedbenefit" scope-id="personsrequestedbenefit0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p1" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p12" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="13" name="the person's requested benefit is for long term care benefits" ruleburst="true" concludes="b29" folder="2" source-offset="5764">
+      <rule-xml>
+        <conclude attr-id="b29" entity-id="personsrequestedbenefit" scope-id="personsrequestedbenefit0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p1" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p13" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="14" name="the person's requested benefit is for family planning benefits" ruleburst="true" concludes="b47" folder="2" source-offset="5925">
+      <rule-xml>
+        <conclude attr-id="b47" entity-id="personsrequestedbenefit" scope-id="personsrequestedbenefit0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p1" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p22" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="15" name="the person's requested benefit is for insurance exchange access benefits" ruleburst="true" concludes="b30" folder="2" source-offset="6088">
+      <rule-xml>
+        <conclude attr-id="b30" entity-id="personsrequestedbenefit" scope-id="personsrequestedbenefit0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p1" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p14" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="16" name="the person's requested benefit is for insurance premium tax credit benefits" ruleburst="true" concludes="b31" folder="2" source-offset="6271">
+      <rule-xml>
+        <conclude attr-id="b31" entity-id="personsrequestedbenefit" scope-id="personsrequestedbenefit0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p1" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p15" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="17" name="the person's requested benefit is for insurance premium reduction benefits" ruleburst="true" concludes="b32" folder="2" source-offset="6460">
+      <rule-xml>
+        <conclude attr-id="b32" entity-id="personsrequestedbenefit" scope-id="personsrequestedbenefit0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p1" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p16" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="18" name="the person's requested benefit is for insurance cost-sharing reduction benefits" ruleburst="true" concludes="b33" folder="2" source-offset="6647">
+      <rule-xml>
+        <conclude attr-id="b33" entity-id="personsrequestedbenefit" scope-id="personsrequestedbenefit0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p1" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p17" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="19" name="the person's requested benefit is for supplemental pharmacy coverage benefits" ruleburst="true" concludes="b34" folder="2" source-offset="6844">
+      <rule-xml>
+        <conclude attr-id="b34" entity-id="personsrequestedbenefit" scope-id="personsrequestedbenefit0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p1" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p18" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="20" name="the case result is for medical care benefits" ruleburst="true" concludes="b25" folder="3" source-offset="7260">
+      <rule-xml>
+        <conclude attr-id="b25" entity-id="caseresult" scope-id="caseresult0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p11" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p5" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="21" name="the case result is for Medicare savings benefits" ruleburst="true" concludes="b35" folder="3" source-offset="7387">
+      <rule-xml>
+        <conclude attr-id="b35" entity-id="caseresult" scope-id="caseresult0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p11" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p12" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="22" name="the case result is for long term care benefits" ruleburst="true" concludes="b36" folder="3" source-offset="7523">
+      <rule-xml>
+        <conclude attr-id="b36" entity-id="caseresult" scope-id="caseresult0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p11" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p13" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="23" name="the case result is for family planning benefits" ruleburst="true" concludes="b48" folder="3" source-offset="7655">
+      <rule-xml>
+        <conclude attr-id="b48" entity-id="caseresult" scope-id="caseresult0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p11" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p22" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="24" name="the case result is for insurance exchange access benefits" ruleburst="true" concludes="b37" folder="3" source-offset="7789">
+      <rule-xml>
+        <conclude attr-id="b37" entity-id="caseresult" scope-id="caseresult0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p11" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p14" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="25" name="the case result is for insurance premium tax credit benefits" ruleburst="true" concludes="b38" folder="3" source-offset="7943">
+      <rule-xml>
+        <conclude attr-id="b38" entity-id="caseresult" scope-id="caseresult0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p11" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p15" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="26" name="the case result is for insurance premium reduction benefits" ruleburst="true" concludes="b39" folder="3" source-offset="8103">
+      <rule-xml>
+        <conclude attr-id="b39" entity-id="caseresult" scope-id="caseresult0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p11" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p16" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="27" name="the case result is for insurance cost-sharing reduction benefits" ruleburst="true" concludes="b40" folder="3" source-offset="8261">
+      <rule-xml>
+        <conclude attr-id="b40" entity-id="caseresult" scope-id="caseresult0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p11" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p17" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="28" name="the case result is for supplemental pharmacy coverage benefits" ruleburst="true" concludes="b41" folder="3" source-offset="8429">
+      <rule-xml>
+        <conclude attr-id="b41" entity-id="caseresult" scope-id="caseresult0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p11" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p18" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="29" name="the request type for medical assistance " ruleburst="true" concludes="p8 = &quot;Medical Assistance&quot;" folder="4" source-offset="8845">
+      <rule-xml>
+        <conclude attr-id="p8" entity-id="global" scope-id="global0">
+          <value>
+            <string-value>Medical Assistance</string-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="30" name="the request type for long term care assistance " ruleburst="true" concludes="p19 = &quot;Long Term Care Assistance&quot;" folder="4" source-offset="8937">
+      <rule-xml>
+        <conclude attr-id="p19" entity-id="global" scope-id="global0">
+          <value>
+            <string-value>Long Term Care Assistance</string-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="31" name="the request type for insurance assistance " ruleburst="true" concludes="p20 = &quot;Insurance Assistance&quot;" folder="4" source-offset="9051">
+      <rule-xml>
+        <conclude attr-id="p20" entity-id="global" scope-id="global0">
+          <value>
+            <string-value>Insurance Assistance</string-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="32" name="the request type for insurance affordability assistance " ruleburst="true" concludes="p21 = &quot;Insurance Affordability Assistance&quot;" folder="4" source-offset="9150">
+      <rule-xml>
+        <conclude attr-id="p21" entity-id="global" scope-id="global0">
+          <value>
+            <string-value>Insurance Affordability Assistance</string-value>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="33" name="the person's requests for assistance" ruleburst="true" concludes="InferInstance(personsrequestsforassistance)" folder="4" source-offset="9292">
+      <rule-xml>
+        <table-conclude-instance relationship-id="personsrequestsforassistance" source="person" source-scope-id="person0">
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p23" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p24" />
+                </scope-for>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p8" />
+                </scope-for>
+              </concatenate>
+            </identity>
+            <condition>
+              <and>
+                <not>
+                  <unknown>
+                    <attribute attr-id="b49" />
+                  </unknown>
+                </not>
+                <attribute attr-id="b49" />
+              </and>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p23" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p24" />
+                </scope-for>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p19" />
+                </scope-for>
+              </concatenate>
+            </identity>
+            <condition>
+              <and>
+                <not>
+                  <unknown>
+                    <attribute attr-id="b42" />
+                  </unknown>
+                </not>
+                <attribute attr-id="b42" />
+              </and>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p23" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p24" />
+                </scope-for>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p20" />
+                </scope-for>
+              </concatenate>
+            </identity>
+            <condition>
+              <and>
+                <not>
+                  <unknown>
+                    <attribute attr-id="b43" />
+                  </unknown>
+                </not>
+                <attribute attr-id="b43" />
+              </and>
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <concatenate>
+                <attribute attr-id="p23" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p24" />
+                </scope-for>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p21" />
+                </scope-for>
+              </concatenate>
+            </identity>
+            <condition>
+              <and>
+                <not>
+                  <unknown>
+                    <attribute attr-id="b46" />
+                  </unknown>
+                </not>
+                <attribute attr-id="b46" />
+              </and>
+            </condition>
+          </row>
+        </table-conclude-instance>
+      </rule-xml>
+    </rule>
+    <rule id="34" name="the person's request for assistance " ruleburst="true" concludes="p9 = Substring(p26,Length(p23) + Length(p24),Length(p26))" folder="4" source-offset="10962">
+      <rule-xml>
+        <conclude attr-id="p9" entity-id="personsrequestforassistance" scope-id="personsrequestforassistance0">
+          <value>
+            <substring>
+              <attribute attr-id="p26" />
+              <plus>
+                <length>
+                  <for>
+                    <relationship relationship-id="person_personsrequestsforassistance_rev" target-entity-id="person" />
+                    <attribute attr-id="p23" />
+                  </for>
+                </length>
+                <length>
+                  <scope-for scope-ref="global0" target-entity-id="global">
+                    <attribute attr-id="p24" />
+                  </scope-for>
+                </length>
+              </plus>
+              <length>
+                <attribute attr-id="p26" />
+              </length>
+            </substring>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="35" name="the person's request for assistance is for medical assistance" ruleburst="true" concludes="b4" folder="4" source-offset="11540">
+      <rule-xml>
+        <conclude attr-id="b4" entity-id="personsrequestforassistance" scope-id="personsrequestforassistance0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p9" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p8" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="36" name="the person's request for assistance is for long term care assistance" ruleburst="true" concludes="b26" folder="4" source-offset="11699">
+      <rule-xml>
+        <conclude attr-id="b26" entity-id="personsrequestforassistance" scope-id="personsrequestforassistance0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p9" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p19" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="37" name="the person's request for assistance is for insurance assistance" ruleburst="true" concludes="b27" folder="4" source-offset="11874">
+      <rule-xml>
+        <conclude attr-id="b27" entity-id="personsrequestforassistance" scope-id="personsrequestforassistance0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p9" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p20" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="38" name="the person's request for assistance is for insurance affordability assistance" ruleburst="true" concludes="b44" folder="4" source-offset="12039">
+      <rule-xml>
+        <conclude attr-id="b44" entity-id="personsrequestforassistance" scope-id="personsrequestforassistance0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p9" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p21" />
+              </scope-for>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="Program Requests" parent="0" id="1" />
+    <folder text="Person-Level Requested Benefits" parent="1" id="2" />
+    <folder text="Global-Level Benefits" parent="1" id="3" />
+    <folder text="Person-Level Requests for Assistance" parent="1" id="4" />
+  </rule-folders>
+</root>

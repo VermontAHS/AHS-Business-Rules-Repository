@@ -1,0 +1,463 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity ref="global" />
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>HBEE 28.03 applies to the program</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 28.03',singular),o('to the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b2" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>HBEE 28.03 applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 28.03',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>there are alternative eligibility requirements for the program under HBEE 28.03(h)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',plural),o('alternative eligibility requirements for the program under HBEE 28.03(h)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>there are alternative eligibility requirements for the program under HBEE 28.03(h) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',plural),o('alternative eligibility requirements for the program under HBEE 28.03(h) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the person meets the alternative eligibility requirements for the program under HBEE 28.03(h)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the alternative eligibility requirements for the program under HBEE 28.03(h)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the person meets the alternative eligibility requirements for the program under HBEE 28.03(h) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the alternative eligibility requirements for the program under HBEE 28.03(h) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program includes additional people in family size under HBEE 28.03(j)(3)</base>
+          <parse>s(ver('10.4.6.76'),v(include,t(simple,present,normal)),sb('the program',singular),o('additional people in family size under HBEE 28.03(j)(3)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the program includes additional people in family size under HBEE 28.03(j)(3) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(include,t(simple,present,normal)),sb('the program',singular),o('additional people in family size under HBEE 28.03(j)(3) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p1" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the monthly income disregard for the person's financial group for the program under HBEE 28.03(c)(4)</base>
+        </text>
+      </attribute>
+      <attribute name="p2" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the monthly income disregard for the person's financial group for the program under HBEE 28.03(c)(4) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p7" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the annual income disregard for the person's financial group for the program under HBEE 28.03(c)(4)</base>
+        </text>
+      </attribute>
+      <attribute name="p8" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the annual income disregard for the person's financial group for the program under HBEE 28.03(c)(4) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the income program" id="incomeprogram" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+      <attribute name="b7" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>HBEE 28.03 applies to the income program</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 28.03',singular),o('to the income program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>HBEE 28.03 applies to the income program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 28.03',singular),o('to the income program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the group member program" id="groupmemberprogram" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+      <attribute name="b9" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the group member's MAGI-based income is included in the person's household income for the group member program under HBEE 28.03</base>
+          <parse>s(ver('10.4.6.76'),v(include,t(simple,present,normal)),ob('the group member''s MAGI-based income',singular),o('in the person''s household income for the group member program under HBEE 28.03'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the group member's MAGI-based income is included in the person's household income for the group member program under HBEE 28.03 (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(include,t(simple,present,normal)),ob('the group member''s MAGI-based income',singular),o('in the person''s household income for the group member program under HBEE 28.03 (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the group member is included in the person's household for the group member program under HBEE 28.03</base>
+          <parse>s(ver('10.4.6.76'),v(include,t(simple,present,normal)),ob('the group member',singular),o('in the person''s household for the group member program under HBEE 28.03'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the group member is included in the person's household for the group member program under HBEE 28.03 (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(include,t(simple,present,normal)),ob('the group member',singular),o('in the person''s household for the group member program under HBEE 28.03 (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p5" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the number of additional people to include in the person's family size for the group member program under HBEE 28.03(j)(3)</base>
+        </text>
+      </attribute>
+      <attribute name="p6" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the number of additional people to include in the person's family size for the group member program under HBEE 28.03(j)(3) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's income" id="personsincome" containment-relationship-id="personsincomes" containment-parent-id="person">
+      <attribute name="b11" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the person's income is excluded under HBEE 28.03</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 28.03'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the person's income is excluded under HBEE 28.03 (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('under HBEE 28.03 (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p3" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the educational income exclusion for the person's income under HBEE 28.03(d)(2)</base>
+        </text>
+      </attribute>
+      <attribute name="p4" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the educational income exclusion for the person's income under HBEE 28.03(d)(2) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b15" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the budgeting period is monthly for the person's financial group under HBEE 28.03(g)(1)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the budgeting period',singular),o('monthly for the person''s financial group under HBEE 28.03(g)(1)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the budgeting period is monthly for the person's financial group under HBEE 28.03(g)(1) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the budgeting period',singular),o('monthly for the person''s financial group under HBEE 28.03(g)(1) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the budgeting period is annual for the person's financial group under HBEE 28.03(g)(2)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the budgeting period',singular),o('annual for the person''s financial group under HBEE 28.03(g)(2)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en">
+          <base>the budgeting period is annual for the person's financial group under HBEE 28.03(g)(2) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the budgeting period',singular),o('annual for the person''s financial group under HBEE 28.03(g)(2) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the group member" id="groupmember" containment-relationship-id="personsgroupmembers" containment-parent-id="person" />
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" text="the person's group members" reverse-text="the group member's containing person" source="person" target="groupmember" is-implicit="false" is-containment="true" />
+    <relationship type="ManyToMany" relationship-id="personsprevioussortorderpeople" reverse-relationship-id="personssubsequentsortorderpeople" text="the person's previous sort-order people" reverse-text="the person's subsequent sort-order people" source="person" target="person" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="groupmembersrepresentativeperson" reverse-relationship-id="personsrepresentationsasagroupmember" text="the group member's representative person" reverse-text="the person's representations as a group member" source="groupmember" target="person" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" text="the group member's group member programs" reverse-text="the group member program's group member" source="groupmember" target="groupmemberprogram" is-implicit="false" is-containment="true" />
+    <relationship type="ManyToMany" relationship-id="groupmemberscontainingpersonsprogramforthegroupmemberprogram" reverse-relationship-id="personscontainedgroupmemberprogramsfortheprogram" text="the group member's containing person's program for the group member program" reverse-text="the person's contained group member programs for the program" source="groupmemberprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="groupmembersprogramforthegroupmemberprogram" reverse-relationship-id="personsrepresentativegroupmemberprogramsfortheprogram" text="the group member's program for the group member program" reverse-text="the person's representative group member programs for the program" source="groupmemberprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" text="the person's incomes" reverse-text="the person's income's person" source="person" target="personsincome" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" text="the person's income's income programs" reverse-text="the person's income for the income program" source="personsincome" target="incomeprogram" is-implicit="false" is-containment="true" />
+    <relationship type="ManyToMany" relationship-id="programsprevioussortorderprograms" reverse-relationship-id="program_programsprevioussortorderprograms_rev" text="the program's previous sort-order programs" source="program" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="personsprogramfortheincomeprogram" reverse-relationship-id="personsincomesfortheprogram" text="the person's program for the income program" reverse-text="the person's incomes for the program" source="incomeprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="groupmemberscontainingpersonforthegroupmemberprogram" reverse-relationship-id="personscontainedgroupmemberprograms" text="the group member's containing person for the group member program" reverse-text="the person's contained group member programs" source="groupmemberprogram" target="person" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="groupmembersrepresentativepersonforthegroupmemberprogram" reverse-relationship-id="personsrepresentativegroupmemberprograms" text="the group member's representative person for the group member program" reverse-text="the person's representative group member programs" source="groupmemberprogram" target="person" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="groupmemberprogramsforthegroupmemberprogram" reverse-relationship-id="groupmemberprogram_groupmemberprogramsforthegroupmemberprogram_rev" text="the group member programs for the group member program" source="groupmemberprogram" target="groupmemberprogram" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="groupmembersrepresentationsasagroupmember" reverse-relationship-id="groupmember_groupmembersrepresentationsasagroupmember_rev" text="the group member's representations as a group member" source="groupmember" target="groupmember" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="programswiththesamebenefittypeastheprogram" reverse-relationship-id="program_programswiththesamebenefittypeastheprogram_rev" text="the programs with the same benefit type as the program" source="program" target="program" is-implicit="false" is-containment="false" />
+  </relationships>
+  <rules>
+    <rule ruleburst="true" folder="0" name="HBEE 28.03 applies to the program" id="1" concludes="b1">
+      <rule-xml>
+        <table-conclude attr-id="b1" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <attribute attr-id="b2" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2015-07-15</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="HBEE 28.03 applies to the income program" id="2" concludes="b7">
+      <rule-xml>
+        <table-conclude attr-id="b7" entity-id="incomeprogram" scope-id="incomeprogram0">
+          <row>
+            <value>
+              <attribute attr-id="b8" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2015-07-15</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the group member's MAGI-based income is included in the person's household income for the group member program under HBEE 28.03" id="3" concludes="b9">
+      <rule-xml>
+        <table-conclude attr-id="b9" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <row>
+            <value>
+              <attribute attr-id="b10" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2015-07-15</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the person's income is excluded under HBEE 28.03" id="4" concludes="b11">
+      <rule-xml>
+        <table-conclude attr-id="b11" entity-id="personsincome" scope-id="personsincome0">
+          <row>
+            <value>
+              <attribute attr-id="b12" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2015-07-15</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the monthly income disregard for the person's financial group for the program under HBEE 28.03(c)(4)" id="5" concludes="p1">
+      <rule-xml>
+        <table-conclude attr-id="p1" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <attribute attr-id="p2" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2015-07-15</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the annual income disregard for the person's financial group for the program under HBEE 28.03(c)(4)" id="6" concludes="p7">
+      <rule-xml>
+        <table-conclude attr-id="p7" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <attribute attr-id="p8" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2015-07-15</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the educational income exclusion for the person's income under HBEE 28.03(d)(2)" id="7" concludes="p3">
+      <rule-xml>
+        <table-conclude attr-id="p3" entity-id="personsincome" scope-id="personsincome0">
+          <row>
+            <value>
+              <attribute attr-id="p4" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2015-07-15</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the group member is included in the person's household for the group member program under HBEE 28.03" id="8" concludes="b13">
+      <rule-xml>
+        <table-conclude attr-id="b13" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <row>
+            <value>
+              <attribute attr-id="b14" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2015-07-15</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the budgeting period is monthly for the person's financial group under HBEE 28.03(g)(1)" id="9" concludes="b15">
+      <rule-xml>
+        <table-conclude attr-id="b15" entity-id="person" scope-id="person0">
+          <row>
+            <value>
+              <attribute attr-id="b16" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2015-07-15</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the budgeting period is annual for the person's financial group under HBEE 28.03(g)(2)" id="10" concludes="b17">
+      <rule-xml>
+        <table-conclude attr-id="b17" entity-id="person" scope-id="person0">
+          <row>
+            <value>
+              <attribute attr-id="b18" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2015-07-15</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="there are alternative eligibility requirements for the program under HBEE 28.03(h)" id="11" concludes="b19">
+      <rule-xml>
+        <table-conclude attr-id="b19" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <attribute attr-id="b20" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2015-07-15</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the person meets the alternative eligibility requirements for the program under HBEE 28.03(h)" id="12" concludes="b21">
+      <rule-xml>
+        <table-conclude attr-id="b21" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <attribute attr-id="b22" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2015-07-15</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the program includes additional people in family size under HBEE 28.03(j)(3)" id="13" concludes="b23">
+      <rule-xml>
+        <table-conclude attr-id="b23" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <attribute attr-id="b24" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2015-07-15</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the number of additional people to include in the person's family size for the group member program under HBEE 28.03(j)(3)" id="14" concludes="p5">
+      <rule-xml>
+        <table-conclude attr-id="p5" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <row>
+            <value>
+              <attribute attr-id="p6" />
+            </value>
+            <condition>
+              <temporal-on-or-after>
+                <date-value>2015-07-15</date-value>
+              </temporal-on-or-after>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+</root>

@@ -1,0 +1,189 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b5" type="boolean" public-name="st_personFilesAppResidcIndivAbandonInInstitution_b">
+        <text>
+          <base>the individual who applied for Medicaid on the person's behalf resides in Vermont</base>
+          <parse>s(ver('10.4.6.76'),v(reside,t(simple,present,normal)),sb('the individual who applied for Medicaid on the person''s behalf',singular),o('in Vermont'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" public-name="so_HBEE21.06Sateff073014.b">
+        <text>
+          <base>HBEE 21.06 is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 21.06',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" public-name="so_HBEE21.06aSateff073014_b">
+        <text>
+          <base>HBEE 21.06(a) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 21.06(a)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" public-name="so_HBEE21.06bSateff073014_b">
+        <text>
+          <base>HBEE 21.06(b) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 21.06(b)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" public-name="so_HBEE21.06cSateff07302014_b">
+        <text>
+          <base>HBEE 21.06(c) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 21.06(c)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" public-name="so_HBEE21.06dSateff073014_b">
+        <text>
+          <base>HBEE 21.06(d) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 21.06(d)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" public-name="so_HBEE21.06eSateff073014_b">
+        <text>
+          <base>HBEE 21.06(e) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 21.06(e)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" public-name="so_HBEE21.06Applyeff073014_b">
+        <text>
+          <base>HBEE 21.06 applies to the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 21.06',singular),o('to the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" public-name="so_HBEE21.06bApplyeff073014_b">
+        <text>
+          <base>HBEE 21.06(b) applies to the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 21.06(b)',singular),o('to the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" public-name="so_HBEE21.06cApplyeff073014_b">
+        <text>
+          <base>HBEE 21.06(c) applies to the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 21.06(c)',singular),o('to the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" public-name="so_HBEE21.06dApplyeff073014_b">
+        <text>
+          <base>HBEE 21.06(d) applies to the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 21.06(d)',singular),o('to the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" public-name="so_HBEE21.06eApplyeff073014_b">
+        <text>
+          <base>HBEE 21.06(e) applies to the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 21.06(e)',singular),o('to the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" public-name="so_HBEE21.06aApplyeff073014_b">
+        <text>
+          <base>HBEE 21.06(a) applies to the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 21.06(a)',singular),o('to the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" public-name="st_personParentApplyMedicaidOnIndivBehalf_b">
+        <text>
+          <base>the parent (or legal guardian if parental rights are terminated) who applied for Medicaid on the person's behalf resides in Vermont</base>
+          <parse>s(ver('10.4.6.76'),v(reside,t(simple,present,normal)),sb('the parent (or legal guardian if parental rights are terminated) who applied for Medicaid on the person''s behalf',singular),o('in Vermont'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" public-name="st_personConsidIncapablIndicatiIntentRegardResidenceUnderHBEE21.02_b">
+        <text>
+          <base>the person is considered incapable of indicating intent regarding residency under HBEE 21.02</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('incapable of indicating intent regarding residency under HBEE 21.02'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean" public-name="si_resIntendVT_b">
+        <text>
+          <base>the person intends to reside in Vermont</base>
+          <parse>s(ver('10.4.6.76'),v(intend,t(simple,present,normal)),sb('the person',singular),o('to reside in Vermont'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean" public-name="si_resEnterVTJob_b">
+        <text>
+          <base>the person entered Vermont with a job commitment</base>
+          <parse>s(ver('10.4.6.76'),v(enter,t(simple,past,normal)),sb('the person',plural),o('Vermont with a job commitment'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean" public-name="si_resSeekEmplVT_b">
+        <text>
+          <base>the person is seeking employment in Vermont</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('seeking employment in Vermont'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b34" type="boolean" public-name="si_resIntentIncapBefore21_b">
+        <text>
+          <base>the person became incapable of indicating intent regarding residency before age 21</base>
+          <parse>s(ver('10.4.6.76'),v(become,t(simple,past,normal)),sb('the person',plural),o('incapable of indicating intent regarding residency before age 21'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" public-name="si_resParentsDiffStates_b">
+        <text>
+          <base>the person's parents (or legal guardians if parental rights are terminated) reside in separate states</base>
+          <parse>s(ver('10.4.6.76'),v(reside,t(simple,present,normal)),sb('the person''s parents (or legal guardians if parental rights are terminated)',plural),o('in separate states'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" public-name="si_instVT_b">
+        <text>
+          <base>the person's institution is located in Vermont</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s institution',singular),o('located in Vermont'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" public-name="si_parentsAbandoned_b">
+        <text>
+          <base>the person has been abandoned by the person's parents</base>
+          <parse>s(ver('10.4.6.76'),v(abandon,t(simple,present,perfect)),ob('the person',singular),o('by the person''s parents'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b39" type="boolean" public-name="si_resHomeOtherStateReturn_b">
+        <text>
+          <base>the person owns a home as defined in 29.08(a)(1) in another state to which the person intends to return</base>
+          <parse>s(ver('10.4.5.40'),v(own,t(simple,present,normal)),sb('the person',singular),o('a home as defined in 29.08(a)(1) in another state to which the person intends to return'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b40" type="boolean" public-name="si_perHasLegalGuardian_b">
+        <text>
+          <base>the person has a legal guardian</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('a legal guardian'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

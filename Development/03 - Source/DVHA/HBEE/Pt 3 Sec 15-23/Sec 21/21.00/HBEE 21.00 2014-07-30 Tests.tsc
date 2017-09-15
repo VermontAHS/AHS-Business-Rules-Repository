@@ -1,0 +1,2054 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-script product-version="10.4.6.76" schema-version="4">
+  <test-case-set>
+    <test-case name="Lives in VT" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true">
+              <ent-inst-ref ref-id="CSR-AIAN-300" />
+              <ent-inst-ref ref-id="CSR-Tier3" />
+              <ent-inst-ref ref-id="APTC" />
+              <ent-inst-ref ref-id="CSR-Tier1" />
+              <ent-inst-ref ref-id="MCA-Pregnant" />
+              <ent-inst-ref ref-id="CSR-Tier4" />
+              <ent-inst-ref ref-id="MN-MCA" />
+              <ent-inst-ref ref-id="MCA-Adult" />
+              <ent-inst-ref ref-id="MCA-Child" />
+              <ent-inst-ref ref-id="CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="MCA-TMA-1925" />
+              <ent-inst-ref ref-id="VPR" />
+              <ent-inst-ref ref-id="MCA-EXT" />
+              <ent-inst-ref ref-id="QHP" />
+              <ent-inst-ref ref-id="MCA-PCR" />
+              <ent-inst-ref ref-id="CSR-Tier2" />
+            </relationship-inst>
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true">
+              <ent-inst-ref ref-id="Insurance Exchange Access" />
+              <ent-inst-ref ref-id="Insurance Cost-Sharing Reduction" />
+              <ent-inst-ref ref-id="Insurance Premium Reduction" />
+              <ent-inst-ref ref-id="Insurance Premium Tax Credit" />
+              <ent-inst-ref ref-id="Medical Care Benefits" />
+            </relationship-inst>
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="program" entity-text="the program" inferred="yes" identifying-attribute="rb_p_ID">
+        <ent-inst id="Bob Loblaw|MCA-PCR">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|CSR-AIAN-IHP">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|CSR-Tier1">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|MCA-Adult">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2014-07-30">
+                <boolean-val>true</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|CSR-Tier3">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|QHP">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|CSR-Tier4">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|MCA-Pregnant">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|MCA-Child">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|CSR-AIAN-300">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|MCA-EXT">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|MCA-TMA-1925">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|MN-MCA">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|CSR-Tier2">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|APTC">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|VPR">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Bob</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Loblaw</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_req-iap" text="the person is requesting insurance affordability assistance" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_interstateAgree_b" text="the person's residency is subject to an interstate agreement" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesInst_b" text="the person lives in an institution" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_recvAABD_b" text="the person is receiving AABD" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1988-08-08</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsIQ49BsdOnTstAcptToAHS_b" text="the person has an I.Q. of 49 or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsMntlAge7BsdOnTstAcptToAHS_b" text="the person has a mental age of 7 years or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personJgdLglyCompetent_b" text="the person is judged legally incompetent" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personFndIncpblIndctIntBsdOnMedDocs_b" text="the person is found incapable of indicating intent based on medical documentation obtained from a physician, psychologist, or other person licensed by the state in the field of intellectual disabilities" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personStRsdncIsVermont_b" text="the person lives in Vermont" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resIntendVT_b" text="the person intends to reside in Vermont" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personRcvgFedPymtsFrFostrCrAdptnAsstUndHBEE2107Eff073014_b" text="the person is receiving federal payments for foster care or adoption assistance under Title IV-E of the Social Security Act" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Exchange Access" />
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Cost-Sharing Reduction" />
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Premium Reduction" />
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Premium Tax Credit" />
+              <ent-inst-ref ref-id="Bob Loblaw|Medical Care Benefits" />
+            </relationship-inst>
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Affordability Assistance" />
+            </relationship-inst>
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Bob Loblaw|APTC" />
+              <ent-inst-ref ref-id="Bob Loblaw|MN-MCA" />
+              <ent-inst-ref ref-id="Bob Loblaw|QHP" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-AIAN-300" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-Tier2" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-Tier4" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-EXT" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-Tier3" />
+              <ent-inst-ref ref-id="Bob Loblaw|VPR" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-Child" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-Tier1" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-Adult" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-PCR" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Bob Loblaw|Bob Loblaw">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-Tier1" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-EXT" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-Adult" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-Tier4" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|QHP" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|VPR" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-Tier2" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-PCR" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-Tier3" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|APTC" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MN-MCA" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-Child" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-AIAN-300" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmemberprogram" entity-text="the group member program" inferred="yes" identifying-attribute="rb_gmp_ID">
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-AIAN-300" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MN-MCA" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-Adult" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|QHP" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-PCR" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-Tier2" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|APTC" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-Tier1" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|VPR" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-EXT" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-Pregnant" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-AIAN-IHP" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-Tier4" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-Child" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-TMA-1925" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-Tier3" />
+      </ent-set>
+      <ent-set entity-type="personsrequestedbenefit" entity-text="the person's requested benefit" inferred="yes" identifying-attribute="rb_reqb_ID">
+        <ent-inst id="Bob Loblaw|Insurance Cost-Sharing Reduction">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Cost-Sharing Reduction|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Insurance Exchange Access">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Exchange Access|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Medical Care Benefits">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Medical Care Benefits|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Insurance Premium Tax Credit">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Premium Tax Credit|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Insurance Premium Reduction">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Premium Reduction|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="result" entity-text="the result" inferred="yes" identifying-attribute="rb_rslt_ID">
+        <ent-inst id="Bob Loblaw|Medical Care Benefits|1" />
+        <ent-inst id="Bob Loblaw|Insurance Premium Reduction|1" />
+        <ent-inst id="Bob Loblaw|Insurance Exchange Access|1" />
+        <ent-inst id="Bob Loblaw|Insurance Premium Tax Credit|1" />
+        <ent-inst id="Bob Loblaw|Insurance Cost-Sharing Reduction|1" />
+      </ent-set>
+      <ent-set entity-type="case-result" entity-text="the case result" inferred="yes" identifying-attribute="o_crslt_type">
+        <ent-inst id="Insurance Premium Tax Credit" />
+        <ent-inst id="Insurance Cost-Sharing Reduction" />
+        <ent-inst id="Insurance Exchange Access" />
+        <ent-inst id="Insurance Premium Reduction" />
+        <ent-inst id="Medical Care Benefits" />
+      </ent-set>
+      <ent-set entity-type="personsrequestforassistance" entity-text="the person's request for assistance" inferred="yes" identifying-attribute="rb_reqa_ID">
+        <ent-inst id="Bob Loblaw|Insurance Affordability Assistance" />
+      </ent-set>
+      <ent-set entity-type="baseprogram" entity-text="the base program" inferred="yes" identifying-attribute="the_base_program">
+        <ent-inst id="CSR-Tier3" />
+        <ent-inst id="MCA-Pregnant" />
+        <ent-inst id="CSR-AIAN-300" />
+        <ent-inst id="CSR-Tier4" />
+        <ent-inst id="MCA-TMA-1925" />
+        <ent-inst id="VPR" />
+        <ent-inst id="CSR-AIAN-IHP" />
+        <ent-inst id="MN-MCA" />
+        <ent-inst id="CSR-Tier1" />
+        <ent-inst id="MCA-EXT" />
+        <ent-inst id="MCA-Adult" />
+        <ent-inst id="APTC" />
+        <ent-inst id="MCA-PCR" />
+        <ent-inst id="CSR-Tier2" />
+        <ent-inst id="MCA-Child" />
+        <ent-inst id="QHP" />
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2017" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+    <test-case name="Spouse lives in VT" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true">
+              <ent-inst-ref ref-id="CSR-AIAN-300" />
+              <ent-inst-ref ref-id="CSR-Tier3" />
+              <ent-inst-ref ref-id="APTC" />
+              <ent-inst-ref ref-id="CSR-Tier1" />
+              <ent-inst-ref ref-id="MCA-Pregnant" />
+              <ent-inst-ref ref-id="CSR-Tier4" />
+              <ent-inst-ref ref-id="MN-MCA" />
+              <ent-inst-ref ref-id="MCA-Adult" />
+              <ent-inst-ref ref-id="MCA-Child" />
+              <ent-inst-ref ref-id="CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="MCA-TMA-1925" />
+              <ent-inst-ref ref-id="VPR" />
+              <ent-inst-ref ref-id="MCA-EXT" />
+              <ent-inst-ref ref-id="QHP" />
+              <ent-inst-ref ref-id="MCA-PCR" />
+              <ent-inst-ref ref-id="CSR-Tier2" />
+            </relationship-inst>
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true">
+              <ent-inst-ref ref-id="Insurance Exchange Access" />
+              <ent-inst-ref ref-id="Insurance Cost-Sharing Reduction" />
+              <ent-inst-ref ref-id="Insurance Premium Reduction" />
+              <ent-inst-ref ref-id="Insurance Premium Tax Credit" />
+              <ent-inst-ref ref-id="Medical Care Benefits" />
+            </relationship-inst>
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+              <ent-inst-ref ref-id="person 2" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="program" entity-text="the program" inferred="yes" identifying-attribute="rb_p_ID">
+        <ent-inst id="Bob Loblaw|MCA-PCR">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|CSR-AIAN-IHP">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|CSR-Tier1">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|MCA-Adult">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2014-07-30">
+                <boolean-val>false</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|CSR-Tier3">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|QHP">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|CSR-Tier4">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|MCA-Pregnant">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|MCA-Child">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|CSR-AIAN-300">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|MCA-EXT">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|MCA-TMA-1925">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|MN-MCA">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|CSR-Tier2">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|APTC">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2014-07-30">
+                <boolean-val>true</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|VPR">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|VPR">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|CSR-Tier3">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|MN-MCA">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|MCA-PCR">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|MCA-Pregnant">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|MCA-TMA-1925">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|CSR-Tier2">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|CSR-AIAN-IHP">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|APTC">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|MCA-Adult">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|CSR-AIAN-300">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|QHP">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|MCA-Child">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|MCA-EXT">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|CSR-Tier1">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|CSR-Tier4">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Bob</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Loblaw</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_req-iap" text="the person is requesting insurance affordability assistance" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_interstateAgree_b" text="the person's residency is subject to an interstate agreement" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesInst_b" text="the person lives in an institution" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_recvAABD_b" text="the person is receiving AABD" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1988-08-08</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsIQ49BsdOnTstAcptToAHS_b" text="the person has an I.Q. of 49 or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsMntlAge7BsdOnTstAcptToAHS_b" text="the person has a mental age of 7 years or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personJgdLglyCompetent_b" text="the person is judged legally incompetent" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personFndIncpblIndctIntBsdOnMedDocs_b" text="the person is found incapable of indicating intent based on medical documentation obtained from a physician, psychologist, or other person licensed by the state in the field of intellectual disabilities" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personStRsdncIsVermont_b" text="the person lives in Vermont" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resIntendVT_b" text="the person intends to reside in Vermont" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personRcvgFedPymtsFrFostrCrAdptnAsstUndHBEE2107Eff073014_b" text="the person is receiving federal payments for foster care or adoption assistance under Title IV-E of the Social Security Act" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_IntentToReturnAbsence_b" text="the person left the state with the intent to return when the purpose of the absence has been accomplished" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personAndSpouseEnrolledQHPThruVHC_b" text="it is the case that the person is a tax dependent in a household where both spouses are enrolled in a QHP through the same Exchange that is not VHC" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ResOutOfState_b" text="the person is currently out of state" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perResVtWhenLeft_b" text="the person was considered a Vermont resident when the person left the state" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Exchange Access" />
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Cost-Sharing Reduction" />
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Premium Reduction" />
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Premium Tax Credit" />
+              <ent-inst-ref ref-id="Bob Loblaw|Medical Care Benefits" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Affordability Assistance" />
+            </relationship-inst>
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw" />
+              <ent-inst-ref ref-id="Bob Loblaw|Lindsay Funke" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Bob Loblaw|APTC" />
+              <ent-inst-ref ref-id="Bob Loblaw|MN-MCA" />
+              <ent-inst-ref ref-id="Bob Loblaw|QHP" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-AIAN-300" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-Tier2" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-Tier4" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-EXT" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-Tier3" />
+              <ent-inst-ref ref-id="Bob Loblaw|VPR" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-Child" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-Tier1" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-Adult" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-PCR" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 2">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Lindsay</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Funke</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_interstateAgree_b" text="the person's residency is subject to an interstate agreement" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesInst_b" text="the person lives in an institution" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_recvAABD_b" text="the person is receiving AABD" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1979-09-09</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsIQ49BsdOnTstAcptToAHS_b" text="the person has an I.Q. of 49 or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsMntlAge7BsdOnTstAcptToAHS_b" text="the person has a mental age of 7 years or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personJgdLglyCompetent_b" text="the person is judged legally incompetent" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personFndIncpblIndctIntBsdOnMedDocs_b" text="the person is found incapable of indicating intent based on medical documentation obtained from a physician, psychologist, or other person licensed by the state in the field of intellectual disabilities" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personStRsdncIsVermont_b" text="the person lives in Vermont" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resIntendVT_b" text="the person intends to reside in Vermont" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personRcvgFedPymtsFrFostrCrAdptnAsstUndHBEE2107Eff073014_b" text="the person is receiving federal payments for foster care or adoption assistance under Title IV-E of the Social Security Act" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_aPerTaxFiler_b" text="the person is a tax filer" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_cPerOtherTaxFilerClaimDed_b" text="another tax filer can claim the person as a dependent for a benefit year beginning in the calendar year in which the person's benefit year begins" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_bPerWillFileJointRet_b" text="the person will file a joint return for the benefit year" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="related-party 1" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Lindsay Funke|Lindsay Funke" />
+              <ent-inst-ref ref-id="Lindsay Funke|Bob Loblaw" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true">
+              <ent-inst-ref ref-id="Lindsay Funke|VPR" />
+              <ent-inst-ref ref-id="Lindsay Funke|CSR-Tier2" />
+              <ent-inst-ref ref-id="Lindsay Funke|CSR-AIAN-300" />
+              <ent-inst-ref ref-id="Lindsay Funke|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Lindsay Funke|APTC" />
+              <ent-inst-ref ref-id="Lindsay Funke|MCA-EXT" />
+              <ent-inst-ref ref-id="Lindsay Funke|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Lindsay Funke|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Lindsay Funke|MCA-Adult" />
+              <ent-inst-ref ref-id="Lindsay Funke|MCA-Child" />
+              <ent-inst-ref ref-id="Lindsay Funke|CSR-Tier1" />
+              <ent-inst-ref ref-id="Lindsay Funke|QHP" />
+              <ent-inst-ref ref-id="Lindsay Funke|MCA-PCR" />
+              <ent-inst-ref ref-id="Lindsay Funke|MN-MCA" />
+              <ent-inst-ref ref-id="Lindsay Funke|CSR-Tier3" />
+              <ent-inst-ref ref-id="Lindsay Funke|CSR-Tier4" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Bob Loblaw|Bob Loblaw">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-Tier1" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-EXT" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-Adult" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-Tier4" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|QHP" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|VPR" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-Tier2" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-PCR" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-Tier3" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|APTC" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MN-MCA" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-Child" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-AIAN-300" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|Bob Loblaw">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Lindsay Funke|Bob Loblaw|APTC" />
+              <ent-inst-ref ref-id="Lindsay Funke|Bob Loblaw|CSR-Tier4" />
+              <ent-inst-ref ref-id="Lindsay Funke|Bob Loblaw|MN-MCA" />
+              <ent-inst-ref ref-id="Lindsay Funke|Bob Loblaw|CSR-Tier1" />
+              <ent-inst-ref ref-id="Lindsay Funke|Bob Loblaw|QHP" />
+              <ent-inst-ref ref-id="Lindsay Funke|Bob Loblaw|CSR-Tier3" />
+              <ent-inst-ref ref-id="Lindsay Funke|Bob Loblaw|VPR" />
+              <ent-inst-ref ref-id="Lindsay Funke|Bob Loblaw|MCA-EXT" />
+              <ent-inst-ref ref-id="Lindsay Funke|Bob Loblaw|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Lindsay Funke|Bob Loblaw|CSR-AIAN-300" />
+              <ent-inst-ref ref-id="Lindsay Funke|Bob Loblaw|MCA-PCR" />
+              <ent-inst-ref ref-id="Lindsay Funke|Bob Loblaw|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Lindsay Funke|Bob Loblaw|CSR-Tier2" />
+              <ent-inst-ref ref-id="Lindsay Funke|Bob Loblaw|MCA-Child" />
+              <ent-inst-ref ref-id="Lindsay Funke|Bob Loblaw|MCA-Adult" />
+              <ent-inst-ref ref-id="Lindsay Funke|Bob Loblaw|CSR-AIAN-IHP" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Lindsay Funke">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Lindsay Funke|MCA-PCR" />
+              <ent-inst-ref ref-id="Bob Loblaw|Lindsay Funke|MCA-Child" />
+              <ent-inst-ref ref-id="Bob Loblaw|Lindsay Funke|QHP" />
+              <ent-inst-ref ref-id="Bob Loblaw|Lindsay Funke|MCA-Adult" />
+              <ent-inst-ref ref-id="Bob Loblaw|Lindsay Funke|CSR-AIAN-300" />
+              <ent-inst-ref ref-id="Bob Loblaw|Lindsay Funke|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Bob Loblaw|Lindsay Funke|CSR-Tier3" />
+              <ent-inst-ref ref-id="Bob Loblaw|Lindsay Funke|APTC" />
+              <ent-inst-ref ref-id="Bob Loblaw|Lindsay Funke|CSR-Tier4" />
+              <ent-inst-ref ref-id="Bob Loblaw|Lindsay Funke|MCA-EXT" />
+              <ent-inst-ref ref-id="Bob Loblaw|Lindsay Funke|CSR-Tier1" />
+              <ent-inst-ref ref-id="Bob Loblaw|Lindsay Funke|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Bob Loblaw|Lindsay Funke|CSR-Tier2" />
+              <ent-inst-ref ref-id="Bob Loblaw|Lindsay Funke|VPR" />
+              <ent-inst-ref ref-id="Bob Loblaw|Lindsay Funke|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Bob Loblaw|Lindsay Funke|MN-MCA" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|Lindsay Funke">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Lindsay Funke|Lindsay Funke|VPR" />
+              <ent-inst-ref ref-id="Lindsay Funke|Lindsay Funke|APTC" />
+              <ent-inst-ref ref-id="Lindsay Funke|Lindsay Funke|MCA-Child" />
+              <ent-inst-ref ref-id="Lindsay Funke|Lindsay Funke|QHP" />
+              <ent-inst-ref ref-id="Lindsay Funke|Lindsay Funke|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Lindsay Funke|Lindsay Funke|MCA-EXT" />
+              <ent-inst-ref ref-id="Lindsay Funke|Lindsay Funke|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Lindsay Funke|Lindsay Funke|MN-MCA" />
+              <ent-inst-ref ref-id="Lindsay Funke|Lindsay Funke|MCA-PCR" />
+              <ent-inst-ref ref-id="Lindsay Funke|Lindsay Funke|MCA-Adult" />
+              <ent-inst-ref ref-id="Lindsay Funke|Lindsay Funke|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Lindsay Funke|Lindsay Funke|CSR-Tier4" />
+              <ent-inst-ref ref-id="Lindsay Funke|Lindsay Funke|CSR-Tier3" />
+              <ent-inst-ref ref-id="Lindsay Funke|Lindsay Funke|CSR-Tier2" />
+              <ent-inst-ref ref-id="Lindsay Funke|Lindsay Funke|CSR-Tier1" />
+              <ent-inst-ref ref-id="Lindsay Funke|Lindsay Funke|CSR-AIAN-300" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmemberprogram" entity-text="the group member program" inferred="yes" identifying-attribute="rb_gmp_ID">
+        <ent-inst id="Bob Loblaw|Bob Loblaw|VPR" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-Pregnant" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-Tier3" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-AIAN-300" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-TMA-1925" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|QHP" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-Child" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-Tier1" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-Tier4" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|APTC" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-EXT" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-Tier2" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-AIAN-IHP" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MN-MCA" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-PCR" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-Adult" />
+        <ent-inst id="Bob Loblaw|Lindsay Funke|APTC" />
+        <ent-inst id="Bob Loblaw|Lindsay Funke|MCA-TMA-1925" />
+        <ent-inst id="Lindsay Funke|Bob Loblaw|MCA-Adult" />
+        <ent-inst id="Lindsay Funke|Bob Loblaw|CSR-AIAN-300" />
+        <ent-inst id="Lindsay Funke|Bob Loblaw|MN-MCA" />
+        <ent-inst id="Bob Loblaw|Lindsay Funke|CSR-Tier3" />
+        <ent-inst id="Lindsay Funke|Lindsay Funke|MCA-Pregnant" />
+        <ent-inst id="Bob Loblaw|Lindsay Funke|MCA-Adult" />
+        <ent-inst id="Lindsay Funke|Lindsay Funke|CSR-Tier2" />
+        <ent-inst id="Lindsay Funke|Lindsay Funke|MCA-Child" />
+        <ent-inst id="Lindsay Funke|Bob Loblaw|APTC" />
+        <ent-inst id="Lindsay Funke|Lindsay Funke|CSR-Tier4" />
+        <ent-inst id="Bob Loblaw|Lindsay Funke|MCA-EXT" />
+        <ent-inst id="Lindsay Funke|Bob Loblaw|CSR-AIAN-IHP" />
+        <ent-inst id="Bob Loblaw|Lindsay Funke|VPR" />
+        <ent-inst id="Lindsay Funke|Lindsay Funke|MCA-EXT" />
+        <ent-inst id="Lindsay Funke|Bob Loblaw|MCA-Child" />
+        <ent-inst id="Lindsay Funke|Bob Loblaw|MCA-EXT" />
+        <ent-inst id="Bob Loblaw|Lindsay Funke|MN-MCA" />
+        <ent-inst id="Bob Loblaw|Lindsay Funke|CSR-Tier1" />
+        <ent-inst id="Lindsay Funke|Bob Loblaw|VPR" />
+        <ent-inst id="Lindsay Funke|Bob Loblaw|MCA-TMA-1925" />
+        <ent-inst id="Lindsay Funke|Lindsay Funke|QHP" />
+        <ent-inst id="Lindsay Funke|Lindsay Funke|CSR-AIAN-300" />
+        <ent-inst id="Lindsay Funke|Lindsay Funke|CSR-Tier1" />
+        <ent-inst id="Lindsay Funke|Lindsay Funke|VPR" />
+        <ent-inst id="Lindsay Funke|Bob Loblaw|CSR-Tier3" />
+        <ent-inst id="Bob Loblaw|Lindsay Funke|MCA-PCR" />
+        <ent-inst id="Lindsay Funke|Bob Loblaw|CSR-Tier1" />
+        <ent-inst id="Lindsay Funke|Bob Loblaw|MCA-Pregnant" />
+        <ent-inst id="Lindsay Funke|Lindsay Funke|CSR-AIAN-IHP" />
+        <ent-inst id="Bob Loblaw|Lindsay Funke|CSR-Tier4" />
+        <ent-inst id="Bob Loblaw|Lindsay Funke|CSR-Tier2" />
+        <ent-inst id="Lindsay Funke|Bob Loblaw|QHP" />
+        <ent-inst id="Bob Loblaw|Lindsay Funke|CSR-AIAN-IHP" />
+        <ent-inst id="Lindsay Funke|Lindsay Funke|MCA-PCR" />
+        <ent-inst id="Lindsay Funke|Lindsay Funke|MCA-TMA-1925" />
+        <ent-inst id="Bob Loblaw|Lindsay Funke|MCA-Child" />
+        <ent-inst id="Lindsay Funke|Bob Loblaw|MCA-PCR" />
+        <ent-inst id="Bob Loblaw|Lindsay Funke|MCA-Pregnant" />
+        <ent-inst id="Lindsay Funke|Bob Loblaw|CSR-Tier2" />
+        <ent-inst id="Lindsay Funke|Lindsay Funke|MCA-Adult" />
+        <ent-inst id="Lindsay Funke|Lindsay Funke|MN-MCA" />
+        <ent-inst id="Bob Loblaw|Lindsay Funke|QHP" />
+        <ent-inst id="Lindsay Funke|Bob Loblaw|CSR-Tier4" />
+        <ent-inst id="Bob Loblaw|Lindsay Funke|CSR-AIAN-300" />
+        <ent-inst id="Lindsay Funke|Lindsay Funke|APTC" />
+        <ent-inst id="Lindsay Funke|Lindsay Funke|CSR-Tier3" />
+      </ent-set>
+      <ent-set entity-type="personsrequestedbenefit" entity-text="the person's requested benefit" inferred="yes" identifying-attribute="rb_reqb_ID">
+        <ent-inst id="Bob Loblaw|Insurance Cost-Sharing Reduction">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Cost-Sharing Reduction|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Insurance Exchange Access">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Exchange Access|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Medical Care Benefits">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Medical Care Benefits|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Insurance Premium Tax Credit">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Premium Tax Credit|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Insurance Premium Reduction">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Premium Reduction|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="result" entity-text="the result" inferred="yes" identifying-attribute="rb_rslt_ID">
+        <ent-inst id="Bob Loblaw|Medical Care Benefits|1" />
+        <ent-inst id="Bob Loblaw|Insurance Premium Reduction|1" />
+        <ent-inst id="Bob Loblaw|Insurance Exchange Access|1" />
+        <ent-inst id="Bob Loblaw|Insurance Premium Tax Credit|1" />
+        <ent-inst id="Bob Loblaw|Insurance Cost-Sharing Reduction|1" />
+      </ent-set>
+      <ent-set entity-type="case-result" entity-text="the case result" inferred="yes" identifying-attribute="o_crslt_type">
+        <ent-inst id="Insurance Premium Tax Credit" />
+        <ent-inst id="Insurance Cost-Sharing Reduction" />
+        <ent-inst id="Insurance Exchange Access" />
+        <ent-inst id="Insurance Premium Reduction" />
+        <ent-inst id="Medical Care Benefits" />
+      </ent-set>
+      <ent-set entity-type="personsrequestforassistance" entity-text="the person's request for assistance" inferred="yes" identifying-attribute="rb_reqa_ID">
+        <ent-inst id="Bob Loblaw|Insurance Affordability Assistance" />
+      </ent-set>
+      <ent-set entity-type="baseprogram" entity-text="the base program" inferred="yes" identifying-attribute="the_base_program">
+        <ent-inst id="CSR-Tier3" />
+        <ent-inst id="MCA-Pregnant" />
+        <ent-inst id="CSR-AIAN-300" />
+        <ent-inst id="CSR-Tier4" />
+        <ent-inst id="MCA-TMA-1925" />
+        <ent-inst id="VPR" />
+        <ent-inst id="CSR-AIAN-IHP" />
+        <ent-inst id="MN-MCA" />
+        <ent-inst id="CSR-Tier1" />
+        <ent-inst id="MCA-EXT" />
+        <ent-inst id="MCA-Adult" />
+        <ent-inst id="APTC" />
+        <ent-inst id="MCA-PCR" />
+        <ent-inst id="CSR-Tier2" />
+        <ent-inst id="MCA-Child" />
+        <ent-inst id="QHP" />
+      </ent-set>
+      <ent-set entity-type="related-party" entity-text="the related party">
+        <ent-inst id="related-party 1">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Spouse</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Bob Loblaw</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2017" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+    <test-case name="Former resident" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true">
+              <ent-inst-ref ref-id="CSR-AIAN-300" />
+              <ent-inst-ref ref-id="CSR-Tier3" />
+              <ent-inst-ref ref-id="APTC" />
+              <ent-inst-ref ref-id="CSR-Tier1" />
+              <ent-inst-ref ref-id="MCA-Pregnant" />
+              <ent-inst-ref ref-id="CSR-Tier4" />
+              <ent-inst-ref ref-id="MN-MCA" />
+              <ent-inst-ref ref-id="MCA-Adult" />
+              <ent-inst-ref ref-id="MCA-Child" />
+              <ent-inst-ref ref-id="CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="MCA-TMA-1925" />
+              <ent-inst-ref ref-id="VPR" />
+              <ent-inst-ref ref-id="MCA-EXT" />
+              <ent-inst-ref ref-id="QHP" />
+              <ent-inst-ref ref-id="MCA-PCR" />
+              <ent-inst-ref ref-id="CSR-Tier2" />
+            </relationship-inst>
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true">
+              <ent-inst-ref ref-id="Insurance Exchange Access" />
+              <ent-inst-ref ref-id="Insurance Cost-Sharing Reduction" />
+              <ent-inst-ref ref-id="Insurance Premium Reduction" />
+              <ent-inst-ref ref-id="Insurance Premium Tax Credit" />
+              <ent-inst-ref ref-id="Medical Care Benefits" />
+            </relationship-inst>
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="program" entity-text="the program" inferred="yes" identifying-attribute="rb_p_ID">
+        <ent-inst id="Bob Loblaw|MCA-PCR">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|CSR-AIAN-IHP">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|CSR-Tier1">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|MCA-Adult">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2014-07-30">
+                <boolean-val>false</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|CSR-Tier3">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|QHP">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|CSR-Tier4">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|MCA-Pregnant">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|MCA-Child">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|CSR-AIAN-300">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|MCA-EXT">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|MCA-TMA-1925">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|MN-MCA">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|CSR-Tier2">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|APTC">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2014-07-30">
+                <boolean-val>false</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|VPR">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" />
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Bob</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Loblaw</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_req-iap" text="the person is requesting insurance affordability assistance" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_interstateAgree_b" text="the person's residency is subject to an interstate agreement" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesInst_b" text="the person lives in an institution" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_recvAABD_b" text="the person is receiving AABD" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1988-08-08</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsIQ49BsdOnTstAcptToAHS_b" text="the person has an I.Q. of 49 or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsMntlAge7BsdOnTstAcptToAHS_b" text="the person has a mental age of 7 years or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personJgdLglyCompetent_b" text="the person is judged legally incompetent" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personFndIncpblIndctIntBsdOnMedDocs_b" text="the person is found incapable of indicating intent based on medical documentation obtained from a physician, psychologist, or other person licensed by the state in the field of intellectual disabilities" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personStRsdncIsVermont_b" text="the person lives in Vermont" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resIntendVT_b" text="the person intends to reside in Vermont" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personRcvgFedPymtsFrFostrCrAdptnAsstUndHBEE2107Eff073014_b" text="the person is receiving federal payments for foster care or adoption assistance under Title IV-E of the Social Security Act" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_IntentToReturnAbsence_b" text="the person left the state with the intent to return when the purpose of the absence has been accomplished" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personAndSpouseEnrolledQHPThruVHC_b" text="it is the case that the person is a tax dependent in a household where both spouses are enrolled in a QHP through the same Exchange that is not VHC" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ResOutOfState_b" text="the person is currently out of state" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perResVtWhenLeft_b" text="the person was considered a Vermont resident when the person left the state" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Exchange Access" />
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Cost-Sharing Reduction" />
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Premium Reduction" />
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Premium Tax Credit" />
+              <ent-inst-ref ref-id="Bob Loblaw|Medical Care Benefits" />
+            </relationship-inst>
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Affordability Assistance" />
+            </relationship-inst>
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Bob Loblaw|APTC" />
+              <ent-inst-ref ref-id="Bob Loblaw|MN-MCA" />
+              <ent-inst-ref ref-id="Bob Loblaw|QHP" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-AIAN-300" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-Tier2" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-Tier4" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-EXT" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-Tier3" />
+              <ent-inst-ref ref-id="Bob Loblaw|VPR" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-Child" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-Tier1" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-Adult" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-PCR" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Bob Loblaw|Bob Loblaw">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-Tier1" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-EXT" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-Adult" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-Tier4" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|QHP" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|VPR" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-Tier2" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-PCR" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-Tier3" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|APTC" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MN-MCA" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-Child" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-AIAN-300" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmemberprogram" entity-text="the group member program" inferred="yes" identifying-attribute="rb_gmp_ID">
+        <ent-inst id="Bob Loblaw|Bob Loblaw|VPR" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-Pregnant" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-Tier3" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-AIAN-300" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-TMA-1925" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|QHP" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-Child" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-Tier1" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-Tier4" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|APTC" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-EXT" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-Tier2" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-AIAN-IHP" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MN-MCA" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-PCR" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-Adult" />
+      </ent-set>
+      <ent-set entity-type="personsrequestedbenefit" entity-text="the person's requested benefit" inferred="yes" identifying-attribute="rb_reqb_ID">
+        <ent-inst id="Bob Loblaw|Insurance Cost-Sharing Reduction">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Cost-Sharing Reduction|1" />
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Cost-Sharing Reduction|2" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Insurance Exchange Access">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Exchange Access|1" />
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Exchange Access|2" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Medical Care Benefits">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Medical Care Benefits|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Insurance Premium Tax Credit">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Premium Tax Credit|1" />
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Premium Tax Credit|2" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Insurance Premium Reduction">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Premium Reduction|1" />
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Premium Reduction|2" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="result" entity-text="the result" inferred="yes" identifying-attribute="rb_rslt_ID">
+        <ent-inst id="Bob Loblaw|Medical Care Benefits|1" />
+        <ent-inst id="Bob Loblaw|Insurance Premium Reduction|1" />
+        <ent-inst id="Bob Loblaw|Insurance Exchange Access|1" />
+        <ent-inst id="Bob Loblaw|Insurance Premium Tax Credit|1" />
+        <ent-inst id="Bob Loblaw|Insurance Cost-Sharing Reduction|1" />
+        <ent-inst id="Bob Loblaw|Insurance Premium Reduction|2" />
+        <ent-inst id="Bob Loblaw|Insurance Cost-Sharing Reduction|2" />
+        <ent-inst id="Bob Loblaw|Insurance Exchange Access|2" />
+        <ent-inst id="Bob Loblaw|Insurance Premium Tax Credit|2" />
+      </ent-set>
+      <ent-set entity-type="case-result" entity-text="the case result" inferred="yes" identifying-attribute="o_crslt_type">
+        <ent-inst id="Insurance Premium Tax Credit" />
+        <ent-inst id="Insurance Cost-Sharing Reduction" />
+        <ent-inst id="Insurance Exchange Access" />
+        <ent-inst id="Insurance Premium Reduction" />
+        <ent-inst id="Medical Care Benefits" />
+      </ent-set>
+      <ent-set entity-type="personsrequestforassistance" entity-text="the person's request for assistance" inferred="yes" identifying-attribute="rb_reqa_ID">
+        <ent-inst id="Bob Loblaw|Insurance Affordability Assistance" />
+      </ent-set>
+      <ent-set entity-type="baseprogram" entity-text="the base program" inferred="yes" identifying-attribute="the_base_program">
+        <ent-inst id="CSR-Tier3" />
+        <ent-inst id="MCA-Pregnant" />
+        <ent-inst id="CSR-AIAN-300" />
+        <ent-inst id="CSR-Tier4" />
+        <ent-inst id="MCA-TMA-1925" />
+        <ent-inst id="VPR" />
+        <ent-inst id="CSR-AIAN-IHP" />
+        <ent-inst id="MN-MCA" />
+        <ent-inst id="CSR-Tier1" />
+        <ent-inst id="MCA-EXT" />
+        <ent-inst id="MCA-Adult" />
+        <ent-inst id="APTC" />
+        <ent-inst id="MCA-PCR" />
+        <ent-inst id="CSR-Tier2" />
+        <ent-inst id="MCA-Child" />
+        <ent-inst id="QHP" />
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2017" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+    <test-case name="Temp absence" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true">
+              <ent-inst-ref ref-id="CSR-AIAN-300" />
+              <ent-inst-ref ref-id="CSR-Tier3" />
+              <ent-inst-ref ref-id="APTC" />
+              <ent-inst-ref ref-id="CSR-Tier1" />
+              <ent-inst-ref ref-id="MCA-Pregnant" />
+              <ent-inst-ref ref-id="CSR-Tier4" />
+              <ent-inst-ref ref-id="MN-MCA" />
+              <ent-inst-ref ref-id="MCA-Adult" />
+              <ent-inst-ref ref-id="MCA-Child" />
+              <ent-inst-ref ref-id="CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="MCA-TMA-1925" />
+              <ent-inst-ref ref-id="VPR" />
+              <ent-inst-ref ref-id="MCA-EXT" />
+              <ent-inst-ref ref-id="QHP" />
+              <ent-inst-ref ref-id="MCA-PCR" />
+              <ent-inst-ref ref-id="CSR-Tier2" />
+            </relationship-inst>
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true">
+              <ent-inst-ref ref-id="Insurance Exchange Access" />
+              <ent-inst-ref ref-id="Insurance Cost-Sharing Reduction" />
+              <ent-inst-ref ref-id="Insurance Premium Reduction" />
+              <ent-inst-ref ref-id="Insurance Premium Tax Credit" />
+              <ent-inst-ref ref-id="Medical Care Benefits" />
+            </relationship-inst>
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="program" entity-text="the program" inferred="yes" identifying-attribute="rb_p_ID">
+        <ent-inst id="Bob Loblaw|MCA-PCR" />
+        <ent-inst id="Bob Loblaw|CSR-AIAN-IHP" />
+        <ent-inst id="Bob Loblaw|CSR-Tier1" />
+        <ent-inst id="Bob Loblaw|MCA-Adult">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2014-07-30">
+                <boolean-val>true</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|CSR-Tier3" />
+        <ent-inst id="Bob Loblaw|QHP" />
+        <ent-inst id="Bob Loblaw|CSR-Tier4" />
+        <ent-inst id="Bob Loblaw|MCA-Pregnant" />
+        <ent-inst id="Bob Loblaw|MCA-Child" />
+        <ent-inst id="Bob Loblaw|CSR-AIAN-300" />
+        <ent-inst id="Bob Loblaw|MCA-EXT" />
+        <ent-inst id="Bob Loblaw|MCA-TMA-1925" />
+        <ent-inst id="Bob Loblaw|MN-MCA" />
+        <ent-inst id="Bob Loblaw|CSR-Tier2" />
+        <ent-inst id="Bob Loblaw|APTC">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2014-07-30">
+                <boolean-val>true</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|VPR" />
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Bob</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Loblaw</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_req-iap" text="the person is requesting insurance affordability assistance" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_interstateAgree_b" text="the person's residency is subject to an interstate agreement" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesInst_b" text="the person lives in an institution" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_recvAABD_b" text="the person is receiving AABD" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1988-08-08</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsIQ49BsdOnTstAcptToAHS_b" text="the person has an I.Q. of 49 or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsMntlAge7BsdOnTstAcptToAHS_b" text="the person has a mental age of 7 years or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personJgdLglyCompetent_b" text="the person is judged legally incompetent" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personFndIncpblIndctIntBsdOnMedDocs_b" text="the person is found incapable of indicating intent based on medical documentation obtained from a physician, psychologist, or other person licensed by the state in the field of intellectual disabilities" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personStRsdncIsVermont_b" text="the person lives in Vermont" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resIntendVT_b" text="the person intends to reside in Vermont" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personRcvgFedPymtsFrFostrCrAdptnAsstUndHBEE2107Eff073014_b" text="the person is receiving federal payments for foster care or adoption assistance under Title IV-E of the Social Security Act" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_IntentToReturnAbsence_b" text="the person left the state with the intent to return when the purpose of the absence has been accomplished" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personAndSpouseEnrolledQHPThruVHC_b" text="it is the case that the person is a tax dependent in a household where both spouses are enrolled in a QHP through the same Exchange that is not VHC" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ResOutOfState_b" text="the person is currently out of state" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perResVtWhenLeft_b" text="the person was considered a Vermont resident when the person left the state" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_MeetsResidencyForAnotherState_b" text="it is the case that another state has verified that the person meets the residency standard of that state" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Exchange Access" />
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Cost-Sharing Reduction" />
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Premium Reduction" />
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Premium Tax Credit" />
+              <ent-inst-ref ref-id="Bob Loblaw|Medical Care Benefits" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Affordability Assistance" />
+            </relationship-inst>
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Bob Loblaw|APTC" />
+              <ent-inst-ref ref-id="Bob Loblaw|MN-MCA" />
+              <ent-inst-ref ref-id="Bob Loblaw|QHP" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-AIAN-300" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-Tier2" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-Tier4" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-EXT" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-Tier3" />
+              <ent-inst-ref ref-id="Bob Loblaw|VPR" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-Child" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-Tier1" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-Adult" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-PCR" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Bob Loblaw|Bob Loblaw">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-Tier1" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-EXT" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-Adult" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-Tier4" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|QHP" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|VPR" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-Tier2" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-PCR" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-Tier3" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|APTC" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MN-MCA" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-Child" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-AIAN-300" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmemberprogram" entity-text="the group member program" inferred="yes" identifying-attribute="rb_gmp_ID">
+        <ent-inst id="Bob Loblaw|Bob Loblaw|VPR" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-Pregnant" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-Tier3" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-AIAN-300" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-TMA-1925" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|QHP" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-Child" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-Tier1" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-Tier4" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|APTC" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-EXT" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-Tier2" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-AIAN-IHP" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MN-MCA" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-PCR" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-Adult" />
+      </ent-set>
+      <ent-set entity-type="personsrequestedbenefit" entity-text="the person's requested benefit" inferred="yes" identifying-attribute="rb_reqb_ID">
+        <ent-inst id="Bob Loblaw|Insurance Cost-Sharing Reduction">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Cost-Sharing Reduction|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Insurance Exchange Access">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Exchange Access|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Medical Care Benefits">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Medical Care Benefits|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Insurance Premium Tax Credit">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Premium Tax Credit|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Insurance Premium Reduction">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Premium Reduction|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="result" entity-text="the result" inferred="yes" identifying-attribute="rb_rslt_ID">
+        <ent-inst id="Bob Loblaw|Medical Care Benefits|1" />
+        <ent-inst id="Bob Loblaw|Insurance Premium Reduction|1" />
+        <ent-inst id="Bob Loblaw|Insurance Exchange Access|1" />
+        <ent-inst id="Bob Loblaw|Insurance Premium Tax Credit|1" />
+        <ent-inst id="Bob Loblaw|Insurance Cost-Sharing Reduction|1" />
+      </ent-set>
+      <ent-set entity-type="case-result" entity-text="the case result" inferred="yes" identifying-attribute="o_crslt_type">
+        <ent-inst id="Insurance Premium Tax Credit" />
+        <ent-inst id="Insurance Cost-Sharing Reduction" />
+        <ent-inst id="Insurance Exchange Access" />
+        <ent-inst id="Insurance Premium Reduction" />
+        <ent-inst id="Medical Care Benefits" />
+      </ent-set>
+      <ent-set entity-type="personsrequestforassistance" entity-text="the person's request for assistance" inferred="yes" identifying-attribute="rb_reqa_ID">
+        <ent-inst id="Bob Loblaw|Insurance Affordability Assistance" />
+      </ent-set>
+      <ent-set entity-type="baseprogram" entity-text="the base program" inferred="yes" identifying-attribute="the_base_program">
+        <ent-inst id="CSR-Tier3" />
+        <ent-inst id="MCA-Pregnant" />
+        <ent-inst id="CSR-AIAN-300" />
+        <ent-inst id="CSR-Tier4" />
+        <ent-inst id="MCA-TMA-1925" />
+        <ent-inst id="VPR" />
+        <ent-inst id="CSR-AIAN-IHP" />
+        <ent-inst id="MN-MCA" />
+        <ent-inst id="CSR-Tier1" />
+        <ent-inst id="MCA-EXT" />
+        <ent-inst id="MCA-Adult" />
+        <ent-inst id="APTC" />
+        <ent-inst id="MCA-PCR" />
+        <ent-inst id="CSR-Tier2" />
+        <ent-inst id="MCA-Child" />
+        <ent-inst id="QHP" />
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2017" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+    <test-case name="Non-resident" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true">
+              <ent-inst-ref ref-id="CSR-AIAN-300" />
+              <ent-inst-ref ref-id="CSR-Tier3" />
+              <ent-inst-ref ref-id="APTC" />
+              <ent-inst-ref ref-id="CSR-Tier1" />
+              <ent-inst-ref ref-id="MCA-Pregnant" />
+              <ent-inst-ref ref-id="CSR-Tier4" />
+              <ent-inst-ref ref-id="MN-MCA" />
+              <ent-inst-ref ref-id="MCA-Adult" />
+              <ent-inst-ref ref-id="MCA-Child" />
+              <ent-inst-ref ref-id="CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="MCA-TMA-1925" />
+              <ent-inst-ref ref-id="VPR" />
+              <ent-inst-ref ref-id="MCA-EXT" />
+              <ent-inst-ref ref-id="QHP" />
+              <ent-inst-ref ref-id="MCA-PCR" />
+              <ent-inst-ref ref-id="CSR-Tier2" />
+            </relationship-inst>
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true">
+              <ent-inst-ref ref-id="Insurance Exchange Access" />
+              <ent-inst-ref ref-id="Insurance Cost-Sharing Reduction" />
+              <ent-inst-ref ref-id="Insurance Premium Reduction" />
+              <ent-inst-ref ref-id="Insurance Premium Tax Credit" />
+              <ent-inst-ref ref-id="Medical Care Benefits" />
+            </relationship-inst>
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="program" entity-text="the program" inferred="yes" identifying-attribute="rb_p_ID">
+        <ent-inst id="Bob Loblaw|MCA-PCR" />
+        <ent-inst id="Bob Loblaw|CSR-AIAN-IHP" />
+        <ent-inst id="Bob Loblaw|CSR-Tier1" />
+        <ent-inst id="Bob Loblaw|MCA-Adult">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2014-07-30">
+                <boolean-val>false</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|CSR-Tier3" />
+        <ent-inst id="Bob Loblaw|QHP" />
+        <ent-inst id="Bob Loblaw|CSR-Tier4" />
+        <ent-inst id="Bob Loblaw|MCA-Pregnant" />
+        <ent-inst id="Bob Loblaw|MCA-Child" />
+        <ent-inst id="Bob Loblaw|CSR-AIAN-300" />
+        <ent-inst id="Bob Loblaw|MCA-EXT" />
+        <ent-inst id="Bob Loblaw|MCA-TMA-1925" />
+        <ent-inst id="Bob Loblaw|MN-MCA" />
+        <ent-inst id="Bob Loblaw|CSR-Tier2" />
+        <ent-inst id="Bob Loblaw|APTC">
+          <attr-inst name="so_HBEE21.00Sat20140730_b" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2014-07-30">
+                <boolean-val>false</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|VPR" />
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Bob</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Loblaw</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_req-iap" text="the person is requesting insurance affordability assistance" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_interstateAgree_b" text="the person's residency is subject to an interstate agreement" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesInst_b" text="the person lives in an institution" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_recvAABD_b" text="the person is receiving AABD" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1988-08-08</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsIQ49BsdOnTstAcptToAHS_b" text="the person has an I.Q. of 49 or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsMntlAge7BsdOnTstAcptToAHS_b" text="the person has a mental age of 7 years or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personJgdLglyCompetent_b" text="the person is judged legally incompetent" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personFndIncpblIndctIntBsdOnMedDocs_b" text="the person is found incapable of indicating intent based on medical documentation obtained from a physician, psychologist, or other person licensed by the state in the field of intellectual disabilities" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personStRsdncIsVermont_b" text="the person lives in Vermont" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resIntendVT_b" text="the person intends to reside in Vermont" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personRcvgFedPymtsFrFostrCrAdptnAsstUndHBEE2107Eff073014_b" text="the person is receiving federal payments for foster care or adoption assistance under Title IV-E of the Social Security Act" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personAndSpouseEnrolledQHPThruVHC_b" text="it is the case that the person is a tax dependent in a household where both spouses are enrolled in a QHP through the same Exchange that is not VHC" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ResOutOfState_b" text="the person is currently out of state" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perResVtWhenLeft_b" text="the person was considered a Vermont resident when the person left the state" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Exchange Access" />
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Cost-Sharing Reduction" />
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Premium Reduction" />
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Premium Tax Credit" />
+              <ent-inst-ref ref-id="Bob Loblaw|Medical Care Benefits" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Affordability Assistance" />
+            </relationship-inst>
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Bob Loblaw|APTC" />
+              <ent-inst-ref ref-id="Bob Loblaw|MN-MCA" />
+              <ent-inst-ref ref-id="Bob Loblaw|QHP" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-AIAN-300" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-Tier2" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-Tier4" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-EXT" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-Tier3" />
+              <ent-inst-ref ref-id="Bob Loblaw|VPR" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-Child" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Bob Loblaw|CSR-Tier1" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-Adult" />
+              <ent-inst-ref ref-id="Bob Loblaw|MCA-PCR" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Bob Loblaw|Bob Loblaw">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-Tier1" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-EXT" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-Adult" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-Tier4" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|QHP" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|VPR" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-Tier2" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-PCR" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-Tier3" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|APTC" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MN-MCA" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|MCA-Child" />
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw|CSR-AIAN-300" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmemberprogram" entity-text="the group member program" inferred="yes" identifying-attribute="rb_gmp_ID">
+        <ent-inst id="Bob Loblaw|Bob Loblaw|VPR" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-Pregnant" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-Tier3" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-AIAN-300" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-TMA-1925" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|QHP" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-Child" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-Tier1" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-Tier4" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|APTC" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-EXT" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-Tier2" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|CSR-AIAN-IHP" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MN-MCA" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-PCR" />
+        <ent-inst id="Bob Loblaw|Bob Loblaw|MCA-Adult" />
+      </ent-set>
+      <ent-set entity-type="personsrequestedbenefit" entity-text="the person's requested benefit" inferred="yes" identifying-attribute="rb_reqb_ID">
+        <ent-inst id="Bob Loblaw|Insurance Cost-Sharing Reduction">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Cost-Sharing Reduction|1" />
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Cost-Sharing Reduction|2" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Insurance Exchange Access">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Exchange Access|1" />
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Exchange Access|2" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Medical Care Benefits">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Medical Care Benefits|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Insurance Premium Tax Credit">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Premium Tax Credit|1" />
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Premium Tax Credit|2" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Insurance Premium Reduction">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Premium Reduction|1" />
+              <ent-inst-ref ref-id="Bob Loblaw|Insurance Premium Reduction|2" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="result" entity-text="the result" inferred="yes" identifying-attribute="rb_rslt_ID">
+        <ent-inst id="Bob Loblaw|Medical Care Benefits|1" />
+        <ent-inst id="Bob Loblaw|Insurance Premium Reduction|1" />
+        <ent-inst id="Bob Loblaw|Insurance Exchange Access|1" />
+        <ent-inst id="Bob Loblaw|Insurance Premium Tax Credit|1" />
+        <ent-inst id="Bob Loblaw|Insurance Cost-Sharing Reduction|1" />
+        <ent-inst id="Bob Loblaw|Insurance Premium Tax Credit|2" />
+        <ent-inst id="Bob Loblaw|Insurance Exchange Access|2" />
+        <ent-inst id="Bob Loblaw|Insurance Cost-Sharing Reduction|2" />
+        <ent-inst id="Bob Loblaw|Insurance Premium Reduction|2" />
+      </ent-set>
+      <ent-set entity-type="case-result" entity-text="the case result" inferred="yes" identifying-attribute="o_crslt_type">
+        <ent-inst id="Insurance Premium Tax Credit" />
+        <ent-inst id="Insurance Cost-Sharing Reduction" />
+        <ent-inst id="Insurance Exchange Access" />
+        <ent-inst id="Insurance Premium Reduction" />
+        <ent-inst id="Medical Care Benefits" />
+      </ent-set>
+      <ent-set entity-type="personsrequestforassistance" entity-text="the person's request for assistance" inferred="yes" identifying-attribute="rb_reqa_ID">
+        <ent-inst id="Bob Loblaw|Insurance Affordability Assistance" />
+      </ent-set>
+      <ent-set entity-type="baseprogram" entity-text="the base program" inferred="yes" identifying-attribute="the_base_program">
+        <ent-inst id="CSR-Tier3" />
+        <ent-inst id="MCA-Pregnant" />
+        <ent-inst id="CSR-AIAN-300" />
+        <ent-inst id="CSR-Tier4" />
+        <ent-inst id="MCA-TMA-1925" />
+        <ent-inst id="VPR" />
+        <ent-inst id="CSR-AIAN-IHP" />
+        <ent-inst id="MN-MCA" />
+        <ent-inst id="CSR-Tier1" />
+        <ent-inst id="MCA-EXT" />
+        <ent-inst id="MCA-Adult" />
+        <ent-inst id="APTC" />
+        <ent-inst id="MCA-PCR" />
+        <ent-inst id="CSR-Tier2" />
+        <ent-inst id="MCA-Child" />
+        <ent-inst id="QHP" />
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2017" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+  </test-case-set>
+  <outcome-set>
+    <outcome name="so_HBEE21.00Sat20140730_b" display-name="Vermont resident" text="HBEE 21.00 is satisfied for the person for the program (eff. 07/30/2014)" type="boolean" entity-type="program" entity-text="the program">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+  </outcome-set>
+</test-script>

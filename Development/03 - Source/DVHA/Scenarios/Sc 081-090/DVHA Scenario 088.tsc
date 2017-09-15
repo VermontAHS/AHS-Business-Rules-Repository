@@ -1,0 +1,3387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-script product-version="10.4.6.76" schema-version="4">
+  <test-case-set>
+    <test-case name="MABD_Spouse or MN_MABD" notes="59. MABD Medically Needy coverage group for HH of 2 (couple) + basic scenario #2. Alex and Bobby are age 62 and disabled. They have a combined HH income of $1,300/monthly from SSDI and have no resources.  Result = Alex and Bobby qualify for the Medically Needy coverage group, but are over-income for MABD (have a spenddown).&#xD;&#xA;&#xD;&#xA;88, Use Scenario 59: for one of the spouses, answer the categorical questions for MABD-Spouse, indicating that they have been receiving SSDI based on disability, and were in December 1983. The other spouse continues to be eligible under MN-MABD; the MABD-Spouse can deduct a portion of their income and is eligible for MABD-Spouse.&#xD;&#xA;&#xD;&#xA;NOTE [5/4/17] : Discovered we need a fix for 30.05 (replace 'and' with 'or)....Will revisit after that fix has been implemented.&#xD;&#xA;NOTE [5/23/17]: Bobby's enrollment for MN-MABD should flip to TRUE on the start date of Alex's $5000 medical expense&#xD;&#xA;[5/31/17] If the inferrable attribute 'the expense has been incurred' is set directly in test case, the enrollment/eligibility dates do not properly use the impacting expense's start date.   (Make sure not to set this directly in cases).">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <attr-inst name="i_g_timestamp" text="the transaction date time" type="datetime">
+            <val>
+              <datetime-val>2017-02-08T08:34:58</datetime-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_g_application-date" text="the application date" type="date">
+            <val>
+              <date-val>2017-02-08</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true">
+              <ent-inst-ref ref-id="MSP-QMB" />
+              <ent-inst-ref ref-id="SMG-Newborn" />
+              <ent-inst-ref ref-id="RMA" />
+              <ent-inst-ref ref-id="MABD-Pickle" />
+              <ent-inst-ref ref-id="MN-MABD" />
+              <ent-inst-ref ref-id="MABD-Dec73" />
+              <ent-inst-ref ref-id="MSP-QI" />
+              <ent-inst-ref ref-id="MABD-Aug72" />
+              <ent-inst-ref ref-id="SMG-IV-E" />
+              <ent-inst-ref ref-id="SMG-Former-foster" />
+              <ent-inst-ref ref-id="MABD-1619" />
+              <ent-inst-ref ref-id="MABD-MWPD" />
+              <ent-inst-ref ref-id="MCA-Pregnant" />
+              <ent-inst-ref ref-id="MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="MABD-DAC" />
+              <ent-inst-ref ref-id="MABD-Spouse" />
+              <ent-inst-ref ref-id="MN-MCA" />
+              <ent-inst-ref ref-id="MCA-Adult" />
+              <ent-inst-ref ref-id="MCA-Child" />
+              <ent-inst-ref ref-id="MSP-QDWI" />
+              <ent-inst-ref ref-id="MCA-TMA-1925" />
+              <ent-inst-ref ref-id="MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="MCA-EXT" />
+              <ent-inst-ref ref-id="SMG-Adoption" />
+              <ent-inst-ref ref-id="MSP-SLMB" />
+              <ent-inst-ref ref-id="SMG-BCCT" />
+              <ent-inst-ref ref-id="MCA-PCR" />
+              <ent-inst-ref ref-id="SMG-FPS" />
+            </relationship-inst>
+            <relationship-inst type="existingbenefitplans" complete="true" />
+            <relationship-inst type="caseresults" complete="true">
+              <ent-inst-ref ref-id="Medical Care Benefits" />
+              <ent-inst-ref ref-id="Family Planning" />
+              <ent-inst-ref ref-id="Medicare Cost-Sharing Reduction" />
+            </relationship-inst>
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+              <ent-inst-ref ref-id="person 2" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="true">
+              <ent-inst-ref ref-id="address 1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="program" entity-text="the program" inferred="yes" identifying-attribute="rb_p_ID">
+        <ent-inst id="Bobby|MCA-Child" />
+        <ent-inst id="Alex|MCA-EXT" />
+        <ent-inst id="Alex|MCA-Child" />
+        <ent-inst id="Alex|MCA-PCR" />
+        <ent-inst id="Bobby|MCA-Pregnant" />
+        <ent-inst id="Bobby|MN-MCA" />
+        <ent-inst id="Bobby|MCA-PCR" />
+        <ent-inst id="Alex|MCA-Adult" />
+        <ent-inst id="Bobby|MCA-Adult" />
+        <ent-inst id="Bobby|MCA-EXT" />
+        <ent-inst id="Bobby|MCA-TMA-1925" />
+        <ent-inst id="Alex|MCA-TMA-1925" />
+        <ent-inst id="Alex|MCA-Pregnant" />
+        <ent-inst id="Alex|MN-MCA" />
+        <ent-inst id="Bobby|SMG-Former-foster" />
+        <ent-inst id="Alex|MABD-MWPD" />
+        <ent-inst id="Bobby|MABD-Spouse" />
+        <ent-inst id="Bobby|SMG-Adoption" />
+        <ent-inst id="Alex|SMG-Adoption" />
+        <ent-inst id="Alex|MSP-SLMB" />
+        <ent-inst id="Bobby|MABD-DAC" />
+        <ent-inst id="Bobby|SMG-Newborn" />
+        <ent-inst id="Alex|MABD-DAC" />
+        <ent-inst id="Bobby|MABD-SSI-eligible" />
+        <ent-inst id="Bobby|MABD-SSI-enrolled" />
+        <ent-inst id="Alex|MABD-SSI-enrolled" />
+        <ent-inst id="Bobby|MABD-Aug72" />
+        <ent-inst id="Bobby|SMG-FPS" />
+        <ent-inst id="Alex|MABD-Dec73" />
+        <ent-inst id="Alex|SMG-FPS" />
+        <ent-inst id="Alex|MSP-QDWI" />
+        <ent-inst id="Alex|SMG-IV-E" />
+        <ent-inst id="Bobby|MN-MABD">
+          <attr-inst name="rb_p_req-eligibility" text="the person meets all of the eligibility requirements for the program" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2016-08-01">
+                <boolean-val>false</boolean-val>
+              </change-point>
+              <change-point date="2017-03-15">
+                <boolean-val>true</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_programExcssIncmAmtAccntgPrdUndrHBEE30.05a20160801_c" text="the person's excess income amount for the accounting period for the program under HBEE 30.05(a) (eff. 08/01/2016)" type="currency">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2015-07-15">
+                <currency-val>1530.0</currency-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="p224@00Framework_01Eligibility_EligibilityFrameworkProps_xsrc" text="the end of the person's spenddown accounting period for the program" type="date">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2015-07-15">
+                <date-val>2017-05-31</date-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="p222@00Framework_01Eligibility_EligibilityFrameworkProps_xsrc" text="the start of the person's spenddown accounting period for the program" type="date">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2015-07-15">
+                <date-val>2016-12-01</date-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="rb_p_req-enroll" text="the person meets all of the enrollment requirements for the program" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2016-11-08">
+                <boolean-val>false</boolean-val>
+              </change-point>
+              <change-point date="2017-03-15">
+                <boolean-val>true</boolean-val>
+              </change-point>
+              <change-point date="2018-02-08">
+                <uncertain-val />
+              </change-point>
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bobby|MABD-Dec73" />
+        <ent-inst id="Bobby|SMG-IV-E" />
+        <ent-inst id="Alex|MABD-Spouse">
+          <attr-inst name="rb_p_req-eligibility" text="the person meets all of the eligibility requirements for the program" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2016-08-01">
+                <boolean-val>true</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="rb_p_req-enroll" text="the person meets all of the enrollment requirements for the program" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2016-11-01">
+                <boolean-val>true</boolean-val>
+              </change-point>
+              <change-point date="2018-02-01">
+                <uncertain-val />
+              </change-point>
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bobby|RMA" />
+        <ent-inst id="Bobby|MSP-SLMB" />
+        <ent-inst id="Bobby|MSP-QMB" />
+        <ent-inst id="Alex|MSP-QI" />
+        <ent-inst id="Alex|MSP-QMB" />
+        <ent-inst id="Bobby|MABD-MWPD" />
+        <ent-inst id="Alex|MABD-SSI-eligible" />
+        <ent-inst id="Bobby|SMG-BCCT" />
+        <ent-inst id="Alex|SMG-Former-foster" />
+        <ent-inst id="Alex|MN-MABD">
+          <attr-inst name="rb_p_req-eligibility" text="the person meets all of the eligibility requirements for the program" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2016-08-01">
+                <boolean-val>false</boolean-val>
+              </change-point>
+              <change-point date="2017-03-15">
+                <boolean-val>true</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="p222@00Framework_01Eligibility_EligibilityFrameworkProps_xsrc" text="the start of the person's spenddown accounting period for the program" type="date">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2015-07-15">
+                <date-val>2017-02-01</date-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="p224@00Framework_01Eligibility_EligibilityFrameworkProps_xsrc" text="the end of the person's spenddown accounting period for the program" type="date">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2015-07-15">
+                <date-val>2017-07-31</date-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_programExcssIncmAmtAccntgPrdUndrHBEE30.05a20160801_c" text="the person's excess income amount for the accounting period for the program under HBEE 30.05(a) (eff. 08/01/2016)" type="currency">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2015-07-15">
+                <currency-val>1530.0</currency-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="rb_p_req-enroll" text="the person meets all of the enrollment requirements for the program" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2016-11-08">
+                <boolean-val>false</boolean-val>
+              </change-point>
+              <change-point date="2017-03-15">
+                <boolean-val>true</boolean-val>
+              </change-point>
+              <change-point date="2018-02-08">
+                <uncertain-val />
+              </change-point>
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bobby|MABD-1619" />
+        <ent-inst id="Bobby|MSP-QDWI" />
+        <ent-inst id="Alex|RMA" />
+        <ent-inst id="Bobby|MABD-Pickle" />
+        <ent-inst id="Alex|SMG-BCCT" />
+        <ent-inst id="Bobby|MSP-QI" />
+        <ent-inst id="Alex|MABD-Pickle" />
+        <ent-inst id="Alex|SMG-Newborn" />
+        <ent-inst id="Alex|MABD-1619" />
+        <ent-inst id="Alex|MABD-Aug72" />
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="si_bPerWillFileJointRet_b" text="the person will file a joint return for the benefit year" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesHomeOwn_b" text="the person lives in the person's own home" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_enroll703a1Past_b" text="it is the case that the person was eligible for and enrolled in Medicaid coverage under HBEE 7.03(a)(1)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_cPerOtherTaxFilerClaimDed_b" text="another tax filer can claim the person as a dependent for a benefit year beginning in the calendar year in which the person's benefit year begins" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personStRsdncIsVermont_b" text="the person lives in Vermont" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_eligMedicareA_b" text="it is the case that the person is entitled to or enrolled in Medicare part A" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsMntlAge7BsdOnTstAcptToAHS_b" text="the person has a mental age of 7 years or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsIQ49BsdOnTstAcptToAHS_b" text="the person has an I.Q. of 49 or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_AHSDetermineEligibility_b" text="it is the case that HHS has notified AHS that the person, or the person's spouse if married, did not comply with the requirement to file an income tax return in order to reconcile APTC payments for a year for which tax data would be utilized for verification of household income and family size" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resIntendVT_b" text="the person intends to reside in Vermont" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personJgdLglyCompetent_b" text="the person is judged legally incompetent" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_filetaxreturn_b" text="the person is going to file a federal income tax return for the benefit year" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_recvAABD_b" text="the person is receiving AABD" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_AttestEstPatObtSup_b" text="the person is cooperating in establishing paternity and obtaining medical support and payments" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ResOutOfState_b" text="the person is currently out of state" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesFacCorrections_b" text="the person is living in a correctional facility" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personRcvgFedPymtsFrFostrCrAdptnAsstUndHBEE2107Eff073014_b" text="the person is receiving federal payments for foster care or adoption assistance under Title IV-E of the Social Security Act" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ineligMedicaidPast12_b" text="the person became ineligible for Medicaid coverage during the preceding 12 months" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perIncarcerated_b" text="the person is incarcerated" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_eligMedicareB_b" text="it is the case that the person is entitled to or enrolled in Medicare part B" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personReasonablyExpectsBeACitiOrNational_b" text="the person is reasonably expected to be a citizen or national for the entire period for which QHP enrollment is sought" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_aPerTaxFiler_b" text="the person is expected to file a federal income tax return for the benefit year" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personFndIncpblIndctIntBsdOnMedDocs_b" text="the person is found incapable of indicating intent based on medical documentation obtained from a physician, psychologist, or other person licensed by the state in the field of intellectual disabilities" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_ssn-none" text="it is the case that the person does not have a social security number" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ineligMedicaidPast4_b" text="the person became ineligible for Medicaid coverage during the preceding 4 months" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesInst_b" text="the person lives in an institution" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_receiving_mediciad_b" text="the person is currently receiving Medicaid benefits" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Alex</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_interstateAgree_b" text="the person's residency is subject to an interstate agreement" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>2001-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personSSNVrfdbyAHS_b" text="the person has provided the person's social security number" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_bPerConsMarr1.7703-1_b" text="the person is considered married at the close of the benefit year under 26 CFR 1.7703-1" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_Pregnant_b" text="the person is pregnant" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citUsNat_b" text="the person is a U.S. Citizen or National" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_coopTPL_b" text="the person is cooperating in identifying and providing information to assist in pursuing third parties who may be liable to pay for care and services under the plan" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_req-med" text="the person is requesting a full medical determination" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-disabled" text="the person is disabled" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_disabledBlindDetVSH_b" text="the VSH Disability Determination Team has determined that the person is blind or disabled according to SSI/AABD standards" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_PrsnDisabledAHSDetermination_b" text="the person has been determined disabled by the AHS's disability determination unit" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perConMembCatNdyHBEE8.05_b" text="the person is considered a member of a categorically-needy coverage group under HBEE 8.05" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_req-ltc" text="the person is requesting long term care assistance" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perAndSpousAdmSameResCareHm_b" text="the person and the person's spouse have been admitted to the same residential care home" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perAndSpousAdmSameInstLongTrmSameMn_b" text="the person and the person's spouse have been admitted to the same institution for long-term care in the same month" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perRecvCustCareHomeAABD2766_b" text="the person is receiving custodial care in their home under AABD 2766" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-blind" text="the person is blind" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_PrsnDeterminedBlindAHS_b" text="the person has been determined blind by the AHS's disability determination unit" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_PrsnRecpeintSSBlindness_b" text="the person is in receipt of social security benefits based on the blindness" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_recvSSIPendDisab_b" text="the person is receiving SSI pending a final determination of blindness or disability" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_blindBefore22_b" text="the person has blindness that began before the age of 22" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_PASSPlan_b" text="the person has a Plan to Achieve Self-Support (PASS)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeLimitPIL_c" text="the PIL for the person's Medicaid group as defined in HBEE 29.04" type="currency">
+            <val>
+              <currency-val>1025.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resourceLimitSSI_c" text="the SSI/AABD resource maximum for the person's Medicaid group as defined in HBEE 29.04" type="currency">
+            <val>
+              <currency-val>3000.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_req-ins" text="the person is requesting insurance assistance" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_req-iap" text="the person is requesting insurance affordability assistance" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_PerMnthlyADjNetIcmLmit703a8iii_c" text="the monthly adjusted net income limit for the person under HBEE 7.03(a)(8)(iii)" type="currency">
+            <val>
+              <currency-val>1025.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perReqMedCvrgExpIncur3MnApp_b" text="the person is requesting Medicaid coverage for expenses incurred during the three months preceding the month of application" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_hospice_b" text="the person is receiving hospice care" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_PublicAssistance_b" text="the person is receiving public assistance" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_spend_down_b" text="the person has become eligible for medical coverage as medically needy only after spend down" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_recvSSIDec1983_b" text="the person was receiving SSI/AABD in December 1983" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_survivingSpouse_b" text="the person is a surviving spouse" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_spouseObtainLegalDis_b" text="the person is a spouse who has obtained a legal dissolution" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_applySSIMedicaidBefore19880701_b" text="the person applied for SSI-related Medicaid no later than July 1, 1988" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_lostSSIJan1984StatElim_b" text="the person lost SSI/AABD in January 1984 due to a statutory elimination of an additional benefit reduction factor for surviving spouses before attainment of age 60" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_survivingSpouseContinuousJan84_b" text="the person has been continuously entitled to surviving spouse insurance based on disability since January 1984" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_eligSSIExceptIncrSocSec_b" text="it is the case that the person would continue to be eligible for SSI/AABD if the person had not received the increase in social security disability or retirement benefits" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_disregard_8.05h2i_c" text="the person's increase in social security disability or retirement benefits" type="currency">
+            <val>
+              <currency-val>550.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_paylevel_8.05b2i_c" text="the SSI/AABD payment level for the person's Medicaid group as defined in HBEE 29.04" type="currency">
+            <val>
+              <currency-val>735.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="true" />
+            <relationship-inst type="personsresources" complete="true" />
+            <relationship-inst type="personsincomes" complete="true">
+              <ent-inst-ref ref-id="income 1" />
+            </relationship-inst>
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 1" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestedbenefits" complete="true">
+              <ent-inst-ref ref-id="Alex|Medical Care Benefits" />
+              <ent-inst-ref ref-id="Alex|Family Planning" />
+              <ent-inst-ref ref-id="Alex|Medicare Cost-Sharing Reduction" />
+            </relationship-inst>
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true">
+              <ent-inst-ref ref-id="Alex|Medical Assistance" />
+            </relationship-inst>
+            <relationship-inst type="personsexpenses" complete="true">
+              <ent-inst-ref ref-id="expense 1" />
+              <ent-inst-ref ref-id="expense 2" />
+            </relationship-inst>
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Alex|Alex" />
+              <ent-inst-ref ref-id="Alex|Bobby" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true">
+              <ent-inst-ref ref-id="Alex|RMA" />
+              <ent-inst-ref ref-id="Alex|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Alex|MCA-Child" />
+              <ent-inst-ref ref-id="Alex|MN-MABD" />
+              <ent-inst-ref ref-id="Alex|MSP-QDWI" />
+              <ent-inst-ref ref-id="Alex|MCA-Adult" />
+              <ent-inst-ref ref-id="Alex|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Alex|MSP-QMB" />
+              <ent-inst-ref ref-id="Alex|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Alex|SMG-Adoption" />
+              <ent-inst-ref ref-id="Alex|SMG-IV-E" />
+              <ent-inst-ref ref-id="Alex|MN-MCA" />
+              <ent-inst-ref ref-id="Alex|MCA-EXT" />
+              <ent-inst-ref ref-id="Alex|MABD-Aug72" />
+              <ent-inst-ref ref-id="Alex|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Alex|MABD-DAC" />
+              <ent-inst-ref ref-id="Alex|SMG-BCCT" />
+              <ent-inst-ref ref-id="Alex|MSP-QI" />
+              <ent-inst-ref ref-id="Alex|MABD-Dec73" />
+              <ent-inst-ref ref-id="Alex|MABD-MWPD" />
+              <ent-inst-ref ref-id="Alex|MABD-Pickle" />
+              <ent-inst-ref ref-id="Alex|MABD-1619" />
+              <ent-inst-ref ref-id="Alex|SMG-FPS" />
+              <ent-inst-ref ref-id="Alex|MSP-SLMB" />
+              <ent-inst-ref ref-id="Alex|MABD-Spouse" />
+              <ent-inst-ref ref-id="Alex|MCA-PCR" />
+              <ent-inst-ref ref-id="Alex|SMG-Newborn" />
+              <ent-inst-ref ref-id="Alex|MABD-SSI-eligible" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 2">
+          <attr-inst name="si_livesHomeOwn_b" text="the person lives in the person's own home" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_enroll703a1Past_b" text="it is the case that the person was eligible for and enrolled in Medicaid coverage under HBEE 7.03(a)(1)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_cPerOtherTaxFilerClaimDed_b" text="another tax filer can claim the person as a dependent for a benefit year beginning in the calendar year in which the person's benefit year begins" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personStRsdncIsVermont_b" text="the person lives in Vermont" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_eligMedicareA_b" text="it is the case that the person is entitled to or enrolled in Medicare part A" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsMntlAge7BsdOnTstAcptToAHS_b" text="the person has a mental age of 7 years or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsIQ49BsdOnTstAcptToAHS_b" text="the person has an I.Q. of 49 or less based on tests acceptable to AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_AHSDetermineEligibility_b" text="it is the case that HHS has notified AHS that the person, or the person's spouse if married, did not comply with the requirement to file an income tax return in order to reconcile APTC payments for a year for which tax data would be utilized for verification of household income and family size" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resIntendVT_b" text="the person intends to reside in Vermont" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personJgdLglyCompetent_b" text="the person is judged legally incompetent" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_filetaxreturn_b" text="the person is going to file a federal income tax return for the benefit year" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_recvAABD_b" text="the person is receiving AABD" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_AttestEstPatObtSup_b" text="the person is cooperating in establishing paternity and obtaining medical support and payments" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ResOutOfState_b" text="the person is currently out of state" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesFacCorrections_b" text="the person is living in a correctional facility" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_req-iap" text="the person is requesting insurance affordability assistance" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personRcvgFedPymtsFrFostrCrAdptnAsstUndHBEE2107Eff073014_b" text="the person is receiving federal payments for foster care or adoption assistance under Title IV-E of the Social Security Act" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perIncarcerated_b" text="the person is incarcerated" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_eligMedicareB_b" text="it is the case that the person is entitled to or enrolled in Medicare part B" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personReasonablyExpectsBeACitiOrNational_b" text="the person is reasonably expected to be a citizen or national for the entire period for which QHP enrollment is sought" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personFndIncpblIndctIntBsdOnMedDocs_b" text="the person is found incapable of indicating intent based on medical documentation obtained from a physician, psychologist, or other person licensed by the state in the field of intellectual disabilities" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_ssn-none" text="it is the case that the person does not have a social security number" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ineligMedicaidPast4_b" text="the person became ineligible for Medicaid coverage during the preceding 4 months" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesInst_b" text="the person lives in an institution" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_elig703a2Past_b" text="it is the case that the person was eligible for and enrolled in Medicaid coverage under HBEE 7.03(a)(2)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_receiving_mediciad_b" text="the person is currently receiving Medicaid benefits" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Bobby</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_interstateAgree_b" text="the person's residency is subject to an interstate agreement" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1955-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personSSNVrfdbyAHS_b" text="the person has provided the person's social security number" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_Pregnant_b" text="the person is pregnant" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citUsNat_b" text="the person is a U.S. Citizen or National" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_coopTPL_b" text="the person is cooperating in identifying and providing information to assist in pursuing third parties who may be liable to pay for care and services under the plan" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_aPerTaxFiler_b" text="the person is expected to file a federal income tax return for the benefit year" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_bPerConsMarr1.7703-1_b" text="the person is considered married at the close of the benefit year under 26 CFR 1.7703-1" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_bPerWillFileJointRet_b" text="the person will file a joint return for the benefit year" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_PrsnDisabledAHSDetermination_b" text="the person has been determined disabled by the AHS's disability determination unit" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-disabled" text="the person is disabled" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_disabledBlindDetVSH_b" text="the VSH Disability Determination Team has determined that the person is blind or disabled according to SSI/AABD standards" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_req-ltc" text="the person is requesting long term care assistance" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perRecvCustCareHomeAABD2766_b" text="the person is receiving custodial care in their home under AABD 2766" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-blind" text="the person is blind" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_PrsnRecpeintSSBlindness_b" text="the person is in receipt of social security benefits based on the blindness" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_recvSSIPendDisab_b" text="the person is receiving SSI pending a final determination of blindness or disability" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_PrsnDeterminedBlindAHS_b" text="the person has been determined blind by the AHS's disability determination unit" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_blindBefore22_b" text="the person has blindness that began before the age of 22" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_PASSPlan_b" text="the person has a Plan to Achieve Self-Support (PASS)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perAndSpousAdmSameResCareHm_b" text="the person and the person's spouse have been admitted to the same residential care home" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perAndSpousAdmSameInstLongTrmSameMn_b" text="the person and the person's spouse have been admitted to the same institution for long-term care in the same month" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perConMembCatNdyHBEE8.05_b" text="the person is considered a member of a categorically-needy coverage group under HBEE 8.05" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeLimitPIL_c" text="the PIL for the person's Medicaid group as defined in HBEE 29.04" type="currency">
+            <val>
+              <currency-val>1025.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resourceLimitSSI_c" text="the SSI/AABD resource maximum for the person's Medicaid group as defined in HBEE 29.04" type="currency">
+            <val>
+              <currency-val>3000.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_req-med" text="the person is requesting a full medical determination" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_req-ins" text="the person is requesting insurance assistance" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_perReqMedCvrgExpIncur3MnApp_b" text="the person is requesting Medicaid coverage for expenses incurred during the three months preceding the month of application" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_hospice_b" text="the person is receiving hospice care" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_PublicAssistance_b" text="the person is receiving public assistance" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_spend_down_b" text="the person has become eligible for medical coverage as medically needy only after spend down" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_PerMnthlyADjNetIcmLmit703a8iii_c" text="the monthly adjusted net income limit for the person under HBEE 7.03(a)(8)(iii)" type="currency">
+            <val>
+              <currency-val>1025.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_disregard_8.05h2i_c" text="the person's increase in social security disability or retirement benefits" type="currency">
+            <val>
+              <currency-val>0.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="true" />
+            <relationship-inst type="personsresources" complete="true" />
+            <relationship-inst type="personsincomes" complete="true" />
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 2" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestedbenefits" complete="true">
+              <ent-inst-ref ref-id="Bobby|Medicare Cost-Sharing Reduction" />
+              <ent-inst-ref ref-id="Bobby|Family Planning" />
+              <ent-inst-ref ref-id="Bobby|Medical Care Benefits" />
+            </relationship-inst>
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="related-party 1" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true">
+              <ent-inst-ref ref-id="Bobby|Medical Assistance" />
+            </relationship-inst>
+            <relationship-inst type="personsexpenses" complete="true">
+              <ent-inst-ref ref-id="expense 3" />
+            </relationship-inst>
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Bobby|Bobby" />
+              <ent-inst-ref ref-id="Bobby|Alex" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true">
+              <ent-inst-ref ref-id="Bobby|MABD-Aug72" />
+              <ent-inst-ref ref-id="Bobby|MCA-EXT" />
+              <ent-inst-ref ref-id="Bobby|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Bobby|MABD-MWPD" />
+              <ent-inst-ref ref-id="Bobby|MSP-QDWI" />
+              <ent-inst-ref ref-id="Bobby|MSP-SLMB" />
+              <ent-inst-ref ref-id="Bobby|MABD-Pickle" />
+              <ent-inst-ref ref-id="Bobby|MSP-QI" />
+              <ent-inst-ref ref-id="Bobby|SMG-Adoption" />
+              <ent-inst-ref ref-id="Bobby|MABD-1619" />
+              <ent-inst-ref ref-id="Bobby|MCA-PCR" />
+              <ent-inst-ref ref-id="Bobby|SMG-BCCT" />
+              <ent-inst-ref ref-id="Bobby|MSP-QMB" />
+              <ent-inst-ref ref-id="Bobby|MCA-Adult" />
+              <ent-inst-ref ref-id="Bobby|SMG-IV-E" />
+              <ent-inst-ref ref-id="Bobby|MN-MCA" />
+              <ent-inst-ref ref-id="Bobby|RMA" />
+              <ent-inst-ref ref-id="Bobby|MABD-Spouse" />
+              <ent-inst-ref ref-id="Bobby|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Bobby|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Bobby|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Bobby|MABD-DAC" />
+              <ent-inst-ref ref-id="Bobby|MN-MABD" />
+              <ent-inst-ref ref-id="Bobby|SMG-Newborn" />
+              <ent-inst-ref ref-id="Bobby|MABD-Dec73" />
+              <ent-inst-ref ref-id="Bobby|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Bobby|MCA-Child" />
+              <ent-inst-ref ref-id="Bobby|SMG-FPS" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Alex|Alex">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Alex|Alex|MABD-Dec73" />
+              <ent-inst-ref ref-id="Alex|Alex|MCA-Child" />
+              <ent-inst-ref ref-id="Alex|Alex|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Alex|Alex|RMA" />
+              <ent-inst-ref ref-id="Alex|Alex|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Alex|Alex|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Alex|Alex|MABD-DAC" />
+              <ent-inst-ref ref-id="Alex|Alex|SMG-FPS" />
+              <ent-inst-ref ref-id="Alex|Alex|MCA-EXT" />
+              <ent-inst-ref ref-id="Alex|Alex|MCA-Adult" />
+              <ent-inst-ref ref-id="Alex|Alex|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Alex|Alex|MSP-QMB" />
+              <ent-inst-ref ref-id="Alex|Alex|MSP-QDWI" />
+              <ent-inst-ref ref-id="Alex|Alex|MN-MABD" />
+              <ent-inst-ref ref-id="Alex|Alex|MABD-Aug72" />
+              <ent-inst-ref ref-id="Alex|Alex|MABD-Pickle" />
+              <ent-inst-ref ref-id="Alex|Alex|SMG-Newborn" />
+              <ent-inst-ref ref-id="Alex|Alex|SMG-IV-E" />
+              <ent-inst-ref ref-id="Alex|Alex|MABD-1619" />
+              <ent-inst-ref ref-id="Alex|Alex|SMG-BCCT" />
+              <ent-inst-ref ref-id="Alex|Alex|MSP-SLMB" />
+              <ent-inst-ref ref-id="Alex|Alex|MABD-MWPD" />
+              <ent-inst-ref ref-id="Alex|Alex|MCA-PCR" />
+              <ent-inst-ref ref-id="Alex|Alex|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Alex|Alex|MN-MCA" />
+              <ent-inst-ref ref-id="Alex|Alex|SMG-Adoption" />
+              <ent-inst-ref ref-id="Alex|Alex|MSP-QI" />
+              <ent-inst-ref ref-id="Alex|Alex|MABD-Spouse" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Alex|Bobby">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Alex|Bobby|MABD-MWPD" />
+              <ent-inst-ref ref-id="Alex|Bobby|MSP-QI" />
+              <ent-inst-ref ref-id="Alex|Bobby|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Alex|Bobby|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Alex|Bobby|MABD-Aug72" />
+              <ent-inst-ref ref-id="Alex|Bobby|MCA-PCR" />
+              <ent-inst-ref ref-id="Alex|Bobby|MCA-EXT" />
+              <ent-inst-ref ref-id="Alex|Bobby|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Alex|Bobby|MABD-Dec73" />
+              <ent-inst-ref ref-id="Alex|Bobby|SMG-IV-E" />
+              <ent-inst-ref ref-id="Alex|Bobby|MABD-Pickle" />
+              <ent-inst-ref ref-id="Alex|Bobby|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Alex|Bobby|SMG-FPS" />
+              <ent-inst-ref ref-id="Alex|Bobby|MN-MCA" />
+              <ent-inst-ref ref-id="Alex|Bobby|MN-MABD" />
+              <ent-inst-ref ref-id="Alex|Bobby|MSP-QDWI" />
+              <ent-inst-ref ref-id="Alex|Bobby|MSP-QMB" />
+              <ent-inst-ref ref-id="Alex|Bobby|SMG-Adoption" />
+              <ent-inst-ref ref-id="Alex|Bobby|RMA" />
+              <ent-inst-ref ref-id="Alex|Bobby|MABD-Spouse" />
+              <ent-inst-ref ref-id="Alex|Bobby|MCA-Child" />
+              <ent-inst-ref ref-id="Alex|Bobby|MCA-Adult" />
+              <ent-inst-ref ref-id="Alex|Bobby|SMG-Newborn" />
+              <ent-inst-ref ref-id="Alex|Bobby|MABD-1619" />
+              <ent-inst-ref ref-id="Alex|Bobby|MABD-DAC" />
+              <ent-inst-ref ref-id="Alex|Bobby|MSP-SLMB" />
+              <ent-inst-ref ref-id="Alex|Bobby|SMG-BCCT" />
+              <ent-inst-ref ref-id="Alex|Bobby|MCA-Pregnant" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bobby|Bobby">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Bobby|Bobby|SMG-FPS" />
+              <ent-inst-ref ref-id="Bobby|Bobby|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MN-MCA" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MN-MABD" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MSP-QDWI" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MABD-Pickle" />
+              <ent-inst-ref ref-id="Bobby|Bobby|SMG-BCCT" />
+              <ent-inst-ref ref-id="Bobby|Bobby|SMG-Newborn" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MCA-Child" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MSP-QMB" />
+              <ent-inst-ref ref-id="Bobby|Bobby|SMG-Adoption" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MABD-Spouse" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Bobby|Bobby|RMA" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MSP-SLMB" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MABD-1619" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MABD-DAC" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MABD-MWPD" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MSP-QI" />
+              <ent-inst-ref ref-id="Bobby|Bobby|SMG-IV-E" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MCA-EXT" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MCA-PCR" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MABD-Dec73" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MABD-Aug72" />
+              <ent-inst-ref ref-id="Bobby|Bobby|MCA-Adult" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bobby|Alex">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Bobby|Alex|MSP-QMB" />
+              <ent-inst-ref ref-id="Bobby|Alex|SMG-FPS" />
+              <ent-inst-ref ref-id="Bobby|Alex|SMG-IV-E" />
+              <ent-inst-ref ref-id="Bobby|Alex|MN-MABD" />
+              <ent-inst-ref ref-id="Bobby|Alex|SMG-BCCT" />
+              <ent-inst-ref ref-id="Bobby|Alex|MABD-Pickle" />
+              <ent-inst-ref ref-id="Bobby|Alex|MABD-Dec73" />
+              <ent-inst-ref ref-id="Bobby|Alex|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Bobby|Alex|MCA-Child" />
+              <ent-inst-ref ref-id="Bobby|Alex|MABD-1619" />
+              <ent-inst-ref ref-id="Bobby|Alex|RMA" />
+              <ent-inst-ref ref-id="Bobby|Alex|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Bobby|Alex|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Bobby|Alex|MSP-QDWI" />
+              <ent-inst-ref ref-id="Bobby|Alex|MCA-Adult" />
+              <ent-inst-ref ref-id="Bobby|Alex|MABD-Spouse" />
+              <ent-inst-ref ref-id="Bobby|Alex|MABD-MWPD" />
+              <ent-inst-ref ref-id="Bobby|Alex|MABD-DAC" />
+              <ent-inst-ref ref-id="Bobby|Alex|MCA-EXT" />
+              <ent-inst-ref ref-id="Bobby|Alex|SMG-Newborn" />
+              <ent-inst-ref ref-id="Bobby|Alex|MCA-PCR" />
+              <ent-inst-ref ref-id="Bobby|Alex|MSP-SLMB" />
+              <ent-inst-ref ref-id="Bobby|Alex|MN-MCA" />
+              <ent-inst-ref ref-id="Bobby|Alex|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Bobby|Alex|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Bobby|Alex|SMG-Adoption" />
+              <ent-inst-ref ref-id="Bobby|Alex|MABD-Aug72" />
+              <ent-inst-ref ref-id="Bobby|Alex|MSP-QI" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmemberprogram" entity-text="the group member program" inferred="yes" identifying-attribute="rb_gmp_ID">
+        <ent-inst id="Alex|Alex|MCA-EXT" />
+        <ent-inst id="Bobby|Bobby|MCA-PCR" />
+        <ent-inst id="Alex|Bobby|MCA-Pregnant" />
+        <ent-inst id="Alex|Bobby|MCA-Child" />
+        <ent-inst id="Bobby|Alex|MCA-Pregnant" />
+        <ent-inst id="Alex|Alex|MN-MCA" />
+        <ent-inst id="Bobby|Alex|MCA-PCR" />
+        <ent-inst id="Bobby|Bobby|MCA-Adult" />
+        <ent-inst id="Bobby|Alex|MN-MCA" />
+        <ent-inst id="Alex|Alex|MCA-Adult" />
+        <ent-inst id="Alex|Alex|MCA-PCR" />
+        <ent-inst id="Bobby|Bobby|MCA-EXT" />
+        <ent-inst id="Alex|Alex|MCA-TMA-1925" />
+        <ent-inst id="Bobby|Alex|MCA-TMA-1925" />
+        <ent-inst id="Alex|Alex|MCA-Pregnant" />
+        <ent-inst id="Bobby|Alex|MCA-EXT" />
+        <ent-inst id="Alex|Alex|MCA-Child" />
+        <ent-inst id="Alex|Bobby|MCA-TMA-1925" />
+        <ent-inst id="Bobby|Bobby|MN-MCA" />
+        <ent-inst id="Alex|Bobby|MN-MCA" />
+        <ent-inst id="Bobby|Alex|MCA-Child" />
+        <ent-inst id="Alex|Bobby|MCA-PCR" />
+        <ent-inst id="Bobby|Alex|MCA-Adult" />
+        <ent-inst id="Bobby|Bobby|MCA-TMA-1925" />
+        <ent-inst id="Bobby|Bobby|MCA-Child" />
+        <ent-inst id="Alex|Bobby|MCA-Adult" />
+        <ent-inst id="Bobby|Bobby|MCA-Pregnant" />
+        <ent-inst id="Alex|Bobby|MCA-EXT" />
+        <ent-inst id="Bobby|Bobby|MSP-SLMB" />
+        <ent-inst id="Alex|Bobby|SMG-IV-E" />
+        <ent-inst id="Alex|Alex|MSP-QI" />
+        <ent-inst id="Alex|Bobby|MSP-SLMB" />
+        <ent-inst id="Bobby|Alex|MSP-QDWI" />
+        <ent-inst id="Bobby|Alex|MABD-MWPD" />
+        <ent-inst id="Bobby|Alex|MABD-SSI-enrolled" />
+        <ent-inst id="Bobby|Bobby|SMG-BCCT" />
+        <ent-inst id="Bobby|Alex|SMG-Adoption" />
+        <ent-inst id="Alex|Bobby|MABD-DAC" />
+        <ent-inst id="Bobby|Bobby|MSP-QI" />
+        <ent-inst id="Alex|Bobby|MABD-Spouse" />
+        <ent-inst id="Bobby|Bobby|RMA" />
+        <ent-inst id="Alex|Alex|MABD-DAC" />
+        <ent-inst id="Alex|Bobby|SMG-Newborn" />
+        <ent-inst id="Bobby|Bobby|MABD-SSI-eligible" />
+        <ent-inst id="Bobby|Alex|SMG-Former-foster" />
+        <ent-inst id="Alex|Bobby|MSP-QMB" />
+        <ent-inst id="Bobby|Bobby|MSP-QDWI" />
+        <ent-inst id="Alex|Alex|MABD-Dec73" />
+        <ent-inst id="Alex|Alex|RMA" />
+        <ent-inst id="Alex|Alex|SMG-BCCT" />
+        <ent-inst id="Bobby|Alex|MSP-QI" />
+        <ent-inst id="Alex|Bobby|MSP-QI" />
+        <ent-inst id="Alex|Bobby|MABD-Dec73" />
+        <ent-inst id="Bobby|Alex|MABD-Dec73" />
+        <ent-inst id="Bobby|Alex|MABD-Spouse" />
+        <ent-inst id="Alex|Alex|SMG-Adoption" />
+        <ent-inst id="Bobby|Alex|MSP-SLMB" />
+        <ent-inst id="Alex|Alex|MABD-SSI-enrolled" />
+        <ent-inst id="Bobby|Bobby|MABD-1619" />
+        <ent-inst id="Bobby|Bobby|MABD-Aug72" />
+        <ent-inst id="Bobby|Bobby|MABD-SSI-enrolled" />
+        <ent-inst id="Alex|Alex|MSP-QMB" />
+        <ent-inst id="Bobby|Alex|MABD-1619" />
+        <ent-inst id="Bobby|Bobby|SMG-Former-foster" />
+        <ent-inst id="Alex|Bobby|SMG-FPS" />
+        <ent-inst id="Bobby|Alex|SMG-FPS" />
+        <ent-inst id="Alex|Alex|SMG-FPS" />
+        <ent-inst id="Bobby|Alex|MABD-SSI-eligible" />
+        <ent-inst id="Alex|Alex|MABD-Aug72" />
+        <ent-inst id="Alex|Bobby|MSP-QDWI" />
+        <ent-inst id="Bobby|Alex|MSP-QMB" />
+        <ent-inst id="Bobby|Alex|MABD-DAC" />
+        <ent-inst id="Bobby|Bobby|MABD-Spouse" />
+        <ent-inst id="Alex|Bobby|MABD-Pickle" />
+        <ent-inst id="Bobby|Bobby|SMG-IV-E" />
+        <ent-inst id="Alex|Bobby|MABD-SSI-eligible" />
+        <ent-inst id="Alex|Bobby|SMG-Former-foster" />
+        <ent-inst id="Alex|Bobby|MABD-SSI-enrolled" />
+        <ent-inst id="Alex|Alex|SMG-IV-E" />
+        <ent-inst id="Bobby|Alex|SMG-Newborn" />
+        <ent-inst id="Alex|Bobby|MABD-Aug72" />
+        <ent-inst id="Bobby|Alex|SMG-BCCT" />
+        <ent-inst id="Bobby|Bobby|MABD-MWPD" />
+        <ent-inst id="Alex|Bobby|MN-MABD" />
+        <ent-inst id="Bobby|Bobby|MABD-Pickle" />
+        <ent-inst id="Alex|Alex|MSP-SLMB" />
+        <ent-inst id="Alex|Bobby|SMG-BCCT" />
+        <ent-inst id="Bobby|Bobby|SMG-Adoption" />
+        <ent-inst id="Alex|Alex|MABD-Spouse" />
+        <ent-inst id="Alex|Bobby|RMA" />
+        <ent-inst id="Bobby|Alex|MABD-Pickle" />
+        <ent-inst id="Alex|Alex|MABD-1619" />
+        <ent-inst id="Bobby|Alex|SMG-IV-E" />
+        <ent-inst id="Alex|Alex|SMG-Newborn" />
+        <ent-inst id="Alex|Alex|SMG-Former-foster" />
+        <ent-inst id="Bobby|Alex|MN-MABD" />
+        <ent-inst id="Alex|Bobby|MABD-MWPD" />
+        <ent-inst id="Bobby|Bobby|MN-MABD" />
+        <ent-inst id="Alex|Alex|MABD-Pickle" />
+        <ent-inst id="Bobby|Bobby|SMG-FPS" />
+        <ent-inst id="Alex|Bobby|MABD-1619" />
+        <ent-inst id="Bobby|Bobby|MABD-Dec73" />
+        <ent-inst id="Alex|Alex|MABD-MWPD" />
+        <ent-inst id="Alex|Alex|MSP-QDWI" />
+        <ent-inst id="Bobby|Bobby|SMG-Newborn" />
+        <ent-inst id="Alex|Alex|MN-MABD" />
+        <ent-inst id="Bobby|Bobby|MABD-DAC" />
+        <ent-inst id="Alex|Bobby|SMG-Adoption" />
+        <ent-inst id="Bobby|Bobby|MSP-QMB" />
+        <ent-inst id="Bobby|Alex|RMA" />
+        <ent-inst id="Alex|Alex|MABD-SSI-eligible" />
+        <ent-inst id="Bobby|Alex|MABD-Aug72" />
+      </ent-set>
+      <ent-set entity-type="income" entity-text="the person's income">
+        <ent-inst id="income 1">
+          <attr-inst name="i_inc_type" text="the person's income's type" type="text">
+            <val>
+              <text-val>Social Security Benefits</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incAianPropUnderSecInt_b" text="the person's income is a distribution from any property held in trust, subject to federal restrictions, located within the most recent boundaries of a prior federal reservation, or otherwise under the supervision of the Secretary of the Interior" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incAianRentUsageDist_b" text="the person's income is a distribution and payments from rents, leases, rights of way, royalties, usage rights, or natural resource extraction and harvest" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeAlaskaDist_b" text="the person's income is a distribution from Alaska Native Corporations and Settlement Trusts" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_inc_freq" text="the person's income's payment frequency" type="text">
+            <val>
+              <text-val>Monthly</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incAianCultural_b" text="the person's income is a payment resulting from ownership interests in or usage rights to items that have unique religious, spiritual, traditional, or cultural significance or rights that support subsistence or a traditional lifestyle according to applicable tribal law or custom" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_IncTypScholarship_b" text="the person's income is a scholarship, award, or fellowship grant" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypePropertyNatRes_b" text="the person's income is a distribution resulting from real property ownership interests related to natural resources and improvements" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_inc_amt" text="the person's income's amount" type="currency">
+            <val>
+              <currency-val>1300.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeBiaEdu_b" text="the person's income is student financial assistance provided under the Bureau of Indian Affairs education programs" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_piIsFrmHmEqtyCvsnPlnUsdToRdcExcsEqtyInHm_b" text="the person's income is from a home equity conversion plan or home equity loan that is being used to reduce the excess equity in the person's home" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_piIsDstrbnRsltgFrmExcsOfFedPrtctdRghts_b" text="the person's income is a distribution resulting from the exercise of federally-protected rights relating to such real property ownership interests" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_piIsDstrbLctdOnRsrvtn_b" text="the person's income is a distribution located on or near a reservation or within the most recent boundaries of a prior federal reservation" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_piIsFrmHmEqtyCvsnPlnOrHmEqtyLn_b" text="the person's income is from a home equity conversion plan or home equity loan" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incNeedBased_b" text="the person's income is assistance based on financial need" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeLifeInsurance_b" text="the person's income is dividends received on life insurance policies" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeCatastrophe_b" text="the person's income is assistance and interest earned on assistance for a catastrophe from the Disaster Relief and Emergency Assistance Act or other comparable assistance provided by the federal, state or local government" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeBillsPaid_b" text="the person's income is bills that are paid directly to vendors by a third party" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeEmpl_b" text="the person's income is gross salary or commissions or bonuses or severance pay received as a result of employment" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeGrantReceived_b" text="the person's income is a grant, scholarship or fellowship" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeInfrequentUnearned_b" text="the person's income is an infrequent or irregular source of unearned income received which does not exceed 60 dollars per calendar quarter" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeNeedBased_b" text="the person's income is any assistance received based on need which is funded wholly by the state, such as General Assistance" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeHomeEnergyAssistance_b" text="the person's income is home energy assistance provided by a private nonprofit organization or a regulated supplier of home energy" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeSupportServicePayments_b" text="the person's income is support service payments made directly to the providers of services in the Limited Work Experience Program under the Workforce Investment Act of 1998" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeTrustFind_b" text="the person's income is payments made by someone other than the person to a third-party trust for the person" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeBenefitsForOthers_b" text="the person's income is benefits that was intended to cover the financial need of other individuals, such as AABD-EP grants" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeReceipts_b" text="the person's income is receipts from the sale, exchange or replacement of a resource" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeInKindOthers_b" text="the person's income is in-kind assistance" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeDeathOfAPerson_b" text="the person's income is payments occasioned by the death of another person" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeMedicalCareOrServices_b" text="the person's income is assistance received in cash or in kind (including food, clothing, or shelter) under a government program that provides medical care or services (including vocational rehabilitation)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeLimitedWorkExperience_b" text="the person's income is a needs-based payment of 10 dollars per day made to participants of the Limited Work Experience Program under the Workforce Investment Act of 1998" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeRetroactivePayments_b" text="the person's income is retroactive payments of SSI, AABD or OASDI benefits in cases where the payments were included in determining financial eligibility for Medicaid in the month it was actually owed to the person" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_IncomeEarnedIncomeTaxCredit_b" text="the person's income is an Earned Income Tax Credit payment" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeHomeProduce_b" text="the person's income is home produce used for personal consumption" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeCountableResource_b" text="the person's income is interest and dividend income from a countable resource or from a resource excluded under a federal statute other than § 1613 of the SSA" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeInfrequentEarned_b" text="the person's income is an infrequent or irregular earned income source received which does not exceed 30 dollars per calendar quarter" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeEmplEseaTitleI_b" text="the person's income is employment under Title I of the Elementary and Secondary Education Act" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeTempEmployment_b" text="the person's income is wages paid by the Census Bureau for temporary employment" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeHomeEquity_b" text="the person's income is income from a home equity conversion plan" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeCashSupport_b" text="the person's income is cash support" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeLoanProceeds" text="the person's income is proceeds of a loan" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeGiftsOrCashFromOthers_b" text="the person's income is irregular and unpredictable voluntary cash contributions or gifts received from friends or relatives" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeChildSupport_b" text="the person's income is a child support payment" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeReplacementLost_b" text="the person's income is unearned income received from replacement of lost, stolen or destroyed income" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeVictimsCompensation_b" text="the person's income is state-administered victims' compensation payments" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeStateOrLocalRelocation_b" text="the person's income is state or local government relocation payments" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeTaxCredit_b" text="the person's income is Earned Income Tax Credit payments" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeChoreHomemaker_b" text="the person's income is from payment received for chore, attendant or homemaker services under a government program" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeFosterCare_b" text="the person's income is payments received for providing foster care for children or adults placed in the person's home by a public or private non-profit placement agency" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeRefundedTaxes_b" text="the person's income is the amount refunded on income taxes that the person has already paid" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeRefundFood_b" text="the person's income is public agency's refund of taxes received on food or real property" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incomeBurialSpace_b" text="the person's income is interest on an excluded burial space purchase agreement if left to accumulate as part of the value of the agreement" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeTaxExemptInterest_b" text="the person's income is tax-exempt interest" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeEoaCapTitleII_b" text="the person's income is an EOA payment from Community Action Programs Title II" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_WeatherizationAssistance_b" text="the person's income is weatherization assistance" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeEoaVapncTitleII_b" text="the person's income is an EOA payment from Voluntary Assistance Program for Needy Children Title II" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incAianOffresResourceDist_b" text="the person's income is a distribution from federally protected rights regarding off-reservation hunting, fishing, gathering, or usage of natural resources" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeEoaYedPrg_b" text="the person's income is an EOA payment from the Youth Employment Demonstration act program" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeForeignEarned_b" text="the person's income is foreign earned income" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeSelfNet_b" text="the person's income is net earnings from self-employment" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeSocialSecurity_b" text="the person's income is social security" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_income_provided_28.03c3_b" text="the person's income is provided by the tax filer claiming the person as a tax dependent" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeEoaJcpTitleIA_b" text="the person's income is an EOA payment from the Job Corps Program under Title I Part A" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeScsePrg_b" text="the person's income is Earnings from the Senior Community Service Employment (SCSE) program" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incVA_b" text="the person's income is a VA payment" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeWia98LimWkExpPrg_b" text="the person's income is wages from participation in the Limited Work Experience Program under the Workforce Investment Act of 1998" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeEoaWtpTitleIA_b" text="the person's income is an EOA payment from Work Training Programs under Title I Part A" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incTypeEoaWspTitleIC_b" text="the person's income is an EOA payment from Work Study Programs Title I Part C" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incConfAssetsWWII_b" text="the person's income is settlement payments to victims of Nazi persecution or their legal heirs resulting from the confiscation of the assets during World War II" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incAgentOrangeSettlementPayments_b" text="the person's income is Agent Orange Settlement payments" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incAssRecLowIncomeEnergyAssistance_b" text="the person's income is assistance received under the Low-Income Home Energy Assistance Act, either in cash or through vendor payments" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incAssistanceEECorECP_b" text="the person's income is assistance received under the Emergency Energy Conservation or Energy Crisis Program" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incAlaskaNASettlements_b" text="the person's income is received under the Alaska Native Claims Settlement Act" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incAustGovernmentPensionSystem_b" text="the person's income is war reparations paid under the Austrian government's pension system" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incDepTangCentralCVAC_b" text="the person's income is earnings deposited in a special savings account under the Tangible Assets project managed by the Central Vermont Community Action Council and authorized by PRWORA" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incDisReliefEmergenceAssistance_b" text="the person's income is assistance received under the Disaster Relief and Emergency Assistance Act or other comparable assistance provided by Federal, State, or local government or from a disaster assistance organization" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incOldAmericansAct_b" text="the person's income is the value of food or meals received under the Older Americans Act" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incValueNSLACNA_b" text="the person's income is the value of meals and food commodities distributed under the National School Lunch Act and the Child Nutrition Act" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_increstWWII_b" text="the person's income is compensation paid to Americans of Japanese or Aleut ancestry as restitution for their incarceration during World War II" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incFosterProgramsEtc_b" text="the person's income is compensation or remuneration received for volunteer work in ACTION programs including foster grandparents, RSVP, SCORE, ACV, ACE, VISTA, Senior Companion Program, and UYA" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incGrantsUSDofE_b" text="the person's income is a grant or loan received for educational purposes under any U.S. Department of Education program" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incHolocaustReparations_b" text="the person's income is German reparations to concentration camp survivors, slave laborers, partisans, and other victims of the Holocaust" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incValueRecWCProgram_b" text="the person's income is the value of the food or vouchers received through the WIC Program" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incRelocationAssistance_b" text="the person's income is the value of relocation assistance to displaced persons under the Uniform Relocation and Real Properties Acquisition Policies Act" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incPerCapitaInidianTribes_b" text="the person's income is the per capita distribution to certain Indian Tribes" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incLandsHeldIndianTribes_b" text="the person's income is receipts from lands held in trust for certain Indian Tribes" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incNetherlandsAct_b" text="the person's income is Netherlands Act on Benefits for Victims of Persecution 1940-1945 payments" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incValue3Sqaures_b" text="the person's income is the value of 3SquaresVT or 3SquaresVT cash-out checks" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incRadiationExposureComp_b" text="the person's income is payments from the Radiation Exposure Compensation Trust Fund" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incSection163a2f_b" text="the person's income is an account established and maintained in accordance with Section 1631(a)(2)(F) of the Act" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incUSHousingActEtc_b" text="the person's income is the value of assistance received under the U.S. Housing Act, U.S. Housing Authorization Act and the Housing and Urban Development Act" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_incSusanWalker_b" text="the person's income is payments as a result of a settlement in the case of Susan Walker v. Bayer Corporation et al" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsincomesincomeprograms" complete="true">
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|MSP-QMB" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|MCA-Adult" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|MSP-QDWI" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|SMG-BCCT" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|SMG-IV-E" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|SMG-Adoption" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|MCA-EXT" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|MN-MCA" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|MABD-Dec73" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|MABD-MWPD" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|SMG-FPS" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|MSP-QI" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|MCA-PCR" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|MABD-DAC" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|MABD-Spouse" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|MABD-Pickle" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|SMG-Newborn" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|MN-MABD" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|RMA" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|MABD-1619" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|MSP-SLMB" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|MABD-Aug72" />
+              <ent-inst-ref ref-id="Social Security Benefits ($1,300.00; Monthly)|MCA-Child" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="incomeprogram" entity-text="the income program" inferred="yes" identifying-attribute="rb_incp_ID">
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|MABD-1619" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|MABD-DAC" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|MCA-EXT" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|MCA-PCR" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|MCA-Pregnant" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|MN-MABD" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|MCA-Child" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|MABD-Dec73" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|SMG-BCCT" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|MABD-SSI-enrolled" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|MABD-MWPD" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|MCA-Adult" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|SMG-Former-foster" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|MCA-TMA-1925" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|MSP-SLMB" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|RMA" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|MABD-Aug72" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|SMG-FPS" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|SMG-Newborn" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|SMG-IV-E" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|MABD-Pickle" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|MSP-QI" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|MABD-SSI-eligible" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|SMG-Adoption" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|MSP-QDWI" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|MABD-Spouse" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|MN-MCA" />
+        <ent-inst id="Social Security Benefits ($1,300.00; Monthly)|MSP-QMB" />
+      </ent-set>
+      <ent-set entity-type="personsrequestedbenefit" entity-text="the person's requested benefit" inferred="yes" identifying-attribute="rb_reqb_ID">
+        <ent-inst id="Bobby|Medicare Cost-Sharing Reduction">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bobby|Medicare Cost-Sharing Reduction|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bobby|Family Planning">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bobby|Family Planning|2" />
+              <ent-inst-ref ref-id="Bobby|Family Planning|3" />
+              <ent-inst-ref ref-id="Bobby|Family Planning|1" />
+              <ent-inst-ref ref-id="Bobby|Family Planning|4" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bobby|Medical Care Benefits">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bobby|Medical Care Benefits|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Alex|Medical Care Benefits">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Alex|Medical Care Benefits|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Alex|Family Planning">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Alex|Family Planning|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Alex|Medicare Cost-Sharing Reduction">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Alex|Medicare Cost-Sharing Reduction|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="result" entity-text="the result" inferred="yes" identifying-attribute="rb_rslt_ID">
+        <ent-inst id="Bobby|Family Planning|1" />
+        <ent-inst id="Bobby|Medical Care Benefits|1" />
+        <ent-inst id="Bobby|Medicare Cost-Sharing Reduction|1" />
+        <ent-inst id="Alex|Medical Care Benefits|1" />
+        <ent-inst id="Alex|Family Planning|1" />
+        <ent-inst id="Alex|Medicare Cost-Sharing Reduction|1" />
+        <ent-inst id="Bobby|Family Planning|2" />
+        <ent-inst id="Bobby|Family Planning|3" />
+        <ent-inst id="Bobby|Family Planning|4" />
+      </ent-set>
+      <ent-set entity-type="case-result" entity-text="the case result" inferred="yes" identifying-attribute="o_crslt_type">
+        <ent-inst id="Medical Care Benefits" />
+        <ent-inst id="Family Planning" />
+        <ent-inst id="Medicare Cost-Sharing Reduction" />
+      </ent-set>
+      <ent-set entity-type="personsrequestforassistance" entity-text="the person's request for assistance" inferred="yes" identifying-attribute="rb_reqa_ID">
+        <ent-inst id="Bobby|Medical Assistance" />
+        <ent-inst id="Alex|Medical Assistance" />
+      </ent-set>
+      <ent-set entity-type="baseprogram" entity-text="the base program" inferred="yes" identifying-attribute="the_base_program">
+        <ent-inst id="MCA-TMA-1925" />
+        <ent-inst id="MCA-EXT" />
+        <ent-inst id="MCA-Adult" />
+        <ent-inst id="MCA-PCR" />
+        <ent-inst id="MCA-Pregnant" />
+        <ent-inst id="MCA-Child" />
+        <ent-inst id="MN-MCA" />
+        <ent-inst id="MABD-MWPD" />
+        <ent-inst id="MABD-Spouse" />
+        <ent-inst id="MABD-Aug72" />
+        <ent-inst id="MABD-1619" />
+        <ent-inst id="SMG-Former-foster" />
+        <ent-inst id="MABD-Pickle" />
+        <ent-inst id="SMG-Newborn" />
+        <ent-inst id="MSP-QDWI" />
+        <ent-inst id="MABD-Dec73" />
+        <ent-inst id="SMG-IV-E" />
+        <ent-inst id="SMG-FPS" />
+        <ent-inst id="MSP-QI" />
+        <ent-inst id="SMG-BCCT" />
+        <ent-inst id="MABD-DAC" />
+        <ent-inst id="MSP-QMB" />
+        <ent-inst id="MABD-SSI-eligible" />
+        <ent-inst id="MSP-SLMB" />
+        <ent-inst id="RMA" />
+        <ent-inst id="MABD-SSI-enrolled" />
+        <ent-inst id="SMG-Adoption" />
+        <ent-inst id="MN-MABD" />
+      </ent-set>
+      <ent-set entity-type="person-address" entity-text="the person's address">
+        <ent-inst id="person-address 2">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>184 Main St</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person-address 1">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>184 Main St</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="address" entity-text="the address">
+        <ent-inst id="address 1">
+          <attr-inst name="i_addr_city" text="the address's city" type="text">
+            <val>
+              <text-val>Waterbury</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_addr_postal" text="the address's postal code" type="text">
+            <val>
+              <text-val>05676</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_addr_state-abbr" text="the address's state" type="text">
+            <val>
+              <text-val>VT</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_addr_street" text="the address's street" type="text">
+            <val>
+              <text-val>184 Main St</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="related-party" entity-text="the related party">
+        <ent-inst id="related-party 1">
+          <attr-inst name="i_rp_date-start" text="the start date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2012-12-21</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Alex</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Spouse</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2017" />
+        <ent-inst id="2016" />
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+      </ent-set>
+      <ent-set entity-type="expense" entity-text="the person's expense">
+        <ent-inst id="expense 1">
+          <attr-inst name="i_exp_type" text="the person's expense's type" type="text">
+            <val>
+              <text-val>Medical</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_freq" text="the person's expense's payment frequency" type="text">
+            <val>
+              <text-val>Monthly</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>100.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsPrmFrHlthInsThtCvrsMedCareSrvcs_b" text="the person's expense is a health insurance expense" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expPerCareHomeHealthAgency_b" text="the person's expense is for a personal care service performed by a home-health agency" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrGnrlSprvsnOfPhysMntlWlBng_b" text="the person's expense is for general supervision of physical and mental well-being where a physician states such care is required due to a specific diagnosis" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsMntcExpns_b" text="the person's expense is a maintenance expense" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peSvcPrvdrHsSmbtdPrvdQlfdToPrvdSvc_b" text="the service's provider for the person's expense has submitted a statement that the provider is qualified to provide the service" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrPrslCrSvcPerDVHA7411.4_b" text="the person's expense is for a personal care service as described in DVHA Rule 7411.4" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expExceedLimitsDvha7201-7606_b" text="the person's expense exceeds limitations on amount, duration, or scope of services covered under DVHA Rules 7201-7606" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expTPL_b" text="the person's expense is subject to payment by a third party" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expPerCareProvPhysQual_b" text="the person's expense is for a personal care service performed by a provider identified by the patient's physician as qualified to provide the service" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expPlanSubmit6mo_b" text="the plan of care for the service recipient for the person's expense was submitted within 6 months" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expBusinessSelf_b" text="the person's expense is a business expense from self-employment income" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expSpndDwnResUse_b" text="the person's expense should be used to spenddown excess resources for medically-needy Medicaid coverage" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expLoan_b" text="the person's expense is a loan" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expProvNotForgiven_b" text="it is the case that the service provider for the person's expense has confirmed that the unpaid liability has not been forgiven" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peAHSDtrmdDocOfMedNcstyIsRqd_b" text="AHS has determined that the person's expense is a common remedy for the person's the medical condition and the usage is within the maximum amount" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expTransMedSrvNoncovered_b" text="the person's expense is for transportation that was essential to secure a noncovered medical service" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expContractSchedule_b" text="the person's expense is an obligation documented from its outset by a written contract and a specified repayment schedule" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peFrSvcPrvdByLglGrdn_b" text="the person's expense is for a service provided by the service recipient's legal guardian" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsAlwblRmBrd_b" text="the person's expense is allowable room and board" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peFrSvcPrvdByStepParent_b" text="the person's expense is for a service provided by the service recipient's step-parent" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsCstMlsPrvdChldPrvdDyCrInHm_b" text="the person's expense is the cost of any meals provided to children for whom an individual provides day care in their own home" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peFrSvcPrvdToPrsnUndAge21_b" text="the person's expense is for a service provided to a person under the age of 21" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peFrSvcPrvdByParent_b" text="the person's expense is for a service provided by the service recipient's parent" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsBsnOptgCsts_b" text="the person's expense is business operating costs" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsAtndtCrSrvcs_b" text="the person's expense is attendant care services" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsActlOpExpnsNcsryPrdcCshRcptsFrCmrclBrdgHs_b" text="the person's expense is the actual operating expenses necessary to produce cash receipts for commercial boarding houses" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peFrDctblPCSvcUndDVHA7406.2_b" text="the person's expense is for a personal care service as described in DVHA Rule 7406.2" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsAmtUsdCmplyWTrmsCrtOrdrdSprt_b" text="the person's expense is an amount used to comply with the terms of court-ordered support" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrPrvtDutyNrsgSrvcs_b" text="the person's expense is for private-duty nursing services" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsForSvcItmNotCvdByMdcd_b" text="the person's expense is for a service or item covered by Medicaid" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrPersCareSvc_b" text="the person's expense is for a personal care service" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFdrlStLclIncTxs_b" text="the person's expense is federal state and local income taxes" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrCmrclTransport_b" text="the person's expense is for commercial transportation" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrDentalSrvcs" text="the person's expense is for dental services" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrDdctblPCSrvcFrAstMngMoney_b" text="the person's expense is for assistance with managing money" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrPrivtTransport_b" text="the person's expense is for private transportation" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsCstPrchCrgFrGdDog_b" text="the person's expense is the cost of purchasing and caring for a guide dog" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsForOTCDrug_b" text="the person's expense is for an over-the-counter drug" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSvcPrvdByPrsnSpouse_b" text="the person's expense is for a service provided by the service recipient's spouse" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSvcPrvdBySmnLvgWPrsn_b" text="the person's expense is for a service provided by someone living in the person's home" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSvcPrvdByPrsnSibling_b" text="the person's expense is for a service provided by the service recipient's sibling" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSvcPrvdByPrsnUndAge18_b" text="the person's expense is for a service provided by a person under age 18" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSrvcPrvdInLvlIVRsdtlCrFctly_b" text="the person's expense is for a service provided in a level IV residential care home" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSrvcPrvdInHome_b" text="the person's expense is for a service provided in the person's home" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSrvMedNcsryInRltnToMedCndtn_b" text="the service provider for the person's expense has submitted a statement that the services are necessary in relation to the service recipient's particular medical condition" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSvcPrvdByLvlIIIRdtnlCrHomeLcnsdByAHS_b" text="the person's expense is for a service provided by a level III residential care home licensed by AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSvcPrvdByPrsnChild_b" text="the person's expense is for a service provided by the service recipient's child" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSvcPrvdByPrsnGrndchild_b" text="the person's expense is for a service provided by the service recipient's grandchild" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_pePymtExcdPrsnIncAssets_b" text="the person's expense exceeds the service recipient's own income or assets" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsWrkRltdFees_b" text="the person's expense is work-related fees" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsMedExpRcgzdByStLaw_b" text="the person's expense is a necessary medical or remedial expense recognized by state law" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsStrctlModsToHome_b" text="the person's expense is structural modifications to the home" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsMlsCnsmdDrgWrkHrs_b" text="the person's expense is meals consumed during work hours" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsTtlIVDSprtPymt_b" text="the person's expense is a Title IV-D support payment" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFstrCrPmtsMdToLcnsdFCHms_b" text="the person's expense is foster care payments made by AHS to licensed foster homes" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsImptRltdTrng_b" text="the person's expense is impairment related training" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsMdclDvc_b" text="the person's expense is a medical device" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSvcPrvdTo181920yo_b" text="the person's expense is for a service provided to an individual that is 18, 19 or 20 years old" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsSSTxsMdtryPnsnCtrbns_b" text="the person's expense is social security taxes and mandatory pension contributions" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsOrdyNcsryExpFrActMgmtCptlInvst_b" text="the person's expense is ordinary and necessary expenses for active management of capital investments" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_pePrsnHsSpcfdOngNeedFrPCSvcInCrntPln_b" text="the service's provider for the person's expense has specified an ongoing need for personal care services in the current plan" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsTrptnToFrmWrk_b" text="the person's expense is transportation to and from work including vehicle modifications" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peWsPdFrmPrsnIncmOrAssts_b" text="the person's expense was paid from the service recipient's own income or assets" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_peIsFrACCS_b" text="the person's expense is for Assistive Community Care Services (ACCS)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_psIsFrSvcPrvdByParentIndMinorChld_b" text="the person's expense is for a service provided by the parent of the service recipient's minor child" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peWsFrPrchsdFuelFrNonCmrclVhcl_b" text="the person's expense was for purchased fuel for a family-owned vehicle or other non-commercial vehicle" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peSvcPrvdrSbmtdLstOfReqdPCSvcs_b" text="the service provider for the person's expense has submitted a list of the personal care services required by the service recipient" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_pPlnOfCrWasSbmtdWthn2Years_b" text="the plan of care for the service recipient for the person's expense was submitted within 2 years" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peWsPdByStOrLclPrgmOthThnMedicaid_b" text="the person's expense is payable by a state or local program other than a program that receives Medicaid funding" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_pPrvdrSbmtdStmtThtLOCPrvdByLvlVResCrHmIsPAppr_b" text="the service's provider for the person's expense has submitted a statement that the level of care provided by the particular residential care home is appropriate" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peSvcPrvdrSbmtdPlnofCare_b" text="the service provider for the person's expense has submitted a plan of care for the service recipient" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peAvlblSpdnDwnAmt_c" text="the person's expense's available spenddown amount" type="currency">
+            <val>
+              <currency-val>100.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peHsBnVrfd_b" text="the person's expense has been verified" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personexpRsnblyAssmExpWllContnu_b" text="it can be reasonably assumed that the person's expense will continue" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrMedNscrySvcOrItm_b" text="the patient's physician has verified that the person's expense is for a service or item that is medically necessary" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_date-start" text="the person's expense start date" type="date">
+            <val>
+              <date-val>2015-01-01</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true">
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|MCA-Child" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|MCA-PCR" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|MABD-Aug72" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|SMG-BCCT" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|SMG-Adoption" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|MABD-Pickle" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|MSP-QDWI" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|MABD-Spouse" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|MN-MABD" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|SMG-FPS" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|MABD-1619" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|MCA-Adult" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|MSP-QI" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|MABD-MWPD" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|SMG-IV-E" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|MABD-DAC" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|SMG-Newborn" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|MN-MCA" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|MSP-SLMB" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|RMA" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|MSP-QMB" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|MABD-Dec73" />
+              <ent-inst-ref ref-id="Medical ($100.00; Monthly)|MCA-EXT" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="expense 2">
+          <attr-inst name="i_exp_freq" text="the person's expense's payment frequency" type="text">
+            <val>
+              <text-val>Once</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_type" text="the person's expense's type" type="text">
+            <val>
+              <text-val>Medical</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>5000.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_date-start" text="the person's expense start date" type="date">
+            <val>
+              <date-val>2017-03-15</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsForSvcItmNotCvdByMdcd_b" text="the person's expense is for a service or item covered by Medicaid" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peWsPdFrmPrsnIncmOrAssts_b" text="the person's expense was paid from the service recipient's own income or assets" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_peIsFrACCS_b" text="the person's expense is for Assistive Community Care Services (ACCS)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_psIsFrSvcPrvdByParentIndMinorChld_b" text="the person's expense is for a service provided by the parent of the service recipient's minor child" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peWsFrPrchsdFuelFrNonCmrclVhcl_b" text="the person's expense was for purchased fuel for a family-owned vehicle or other non-commercial vehicle" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peSvcPrvdrSbmtdLstOfReqdPCSvcs_b" text="the service provider for the person's expense has submitted a list of the personal care services required by the service recipient" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_pPlnOfCrWasSbmtdWthn2Years_b" text="the plan of care for the service recipient for the person's expense was submitted within 2 years" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peWsPdByStOrLclPrgmOthThnMedicaid_b" text="the person's expense is payable by a state or local program other than a program that receives Medicaid funding" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_pPrvdrSbmtdStmtThtLOCPrvdByLvlVResCrHmIsPAppr_b" text="the service's provider for the person's expense has submitted a statement that the level of care provided by the particular residential care home is appropriate" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peSvcPrvdrSbmtdPlnofCare_b" text="the service provider for the person's expense has submitted a plan of care for the service recipient" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsAmtUsdCmplyWTrmsCrtOrdrdSprt_b" text="the person's expense is an amount used to comply with the terms of court-ordered support" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsTtlIVDSprtPymt_b" text="the person's expense is a Title IV-D support payment" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expBusinessSelf_b" text="the person's expense is a business expense from self-employment income" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personexpRsnblyAssmExpWllContnu_b" text="it can be reasonably assumed that the person's expense will continue" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peSvcPrvdrHsSmbtdPrvdQlfdToPrvdSvc_b" text="the service's provider for the person's expense has submitted a statement that the provider is qualified to provide the service" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsMntcExpns_b" text="the person's expense is a maintenance expense" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrPrslCrSvcPerDVHA7411.4_b" text="the person's expense is for a personal care service as described in DVHA Rule 7411.4" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrGnrlSprvsnOfPhysMntlWlBng_b" text="the person's expense is for general supervision of physical and mental well-being where a physician states such care is required due to a specific diagnosis" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expExceedLimitsDvha7201-7606_b" text="the person's expense exceeds limitations on amount, duration, or scope of services covered under DVHA Rules 7201-7606" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expTPL_b" text="the person's expense is subject to payment by a third party" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expPerCareHomeHealthAgency_b" text="the person's expense is for a personal care service performed by a home-health agency" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expPerCareProvPhysQual_b" text="the person's expense is for a personal care service performed by a provider identified by the patient's physician as qualified to provide the service" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expPlanSubmit6mo_b" text="the plan of care for the service recipient for the person's expense was submitted within 6 months" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expLoan_b" text="the person's expense is a loan" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expProvNotForgiven_b" text="it is the case that the service provider for the person's expense has confirmed that the unpaid liability has not been forgiven" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peAHSDtrmdDocOfMedNcstyIsRqd_b" text="AHS has determined that the person's expense is a common remedy for the person's the medical condition and the usage is within the maximum amount" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expTransMedSrvNoncovered_b" text="the person's expense is for transportation that was essential to secure a noncovered medical service" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expContractSchedule_b" text="the person's expense is an obligation documented from its outset by a written contract and a specified repayment schedule" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peFrSvcPrvdByLglGrdn_b" text="the person's expense is for a service provided by the service recipient's legal guardian" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peFrSvcPrvdByStepParent_b" text="the person's expense is for a service provided by the service recipient's step-parent" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peFrSvcPrvdToPrsnUndAge21_b" text="the person's expense is for a service provided to a person under the age of 21" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peFrSvcPrvdByParent_b" text="the person's expense is for a service provided by the service recipient's parent" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peFrDctblPCSvcUndDVHA7406.2_b" text="the person's expense is for a personal care service as described in DVHA Rule 7406.2" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peHsBnVrfd_b" text="the person's expense has been verified" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsAlwblRmBrd_b" text="the person's expense is allowable room and board" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsCstMlsPrvdChldPrvdDyCrInHm_b" text="the person's expense is the cost of any meals provided to children for whom an individual provides day care in their own home" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFdrlStLclIncTxs_b" text="the person's expense is federal state and local income taxes" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrCmrclTransport_b" text="the person's expense is for commercial transportation" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsCstPrchCrgFrGdDog_b" text="the person's expense is the cost of purchasing and caring for a guide dog" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrDentalSrvcs" text="the person's expense is for dental services" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrDdctblPCSrvcFrAstMngMoney_b" text="the person's expense is for assistance with managing money" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsBsnOptgCsts_b" text="the person's expense is business operating costs" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsAtndtCrSrvcs_b" text="the person's expense is attendant care services" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsActlOpExpnsNcsryPrdcCshRcptsFrCmrclBrdgHs_b" text="the person's expense is the actual operating expenses necessary to produce cash receipts for commercial boarding houses" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsForOTCDrug_b" text="the person's expense is for an over-the-counter drug" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrMedNscrySvcOrItm_b" text="the patient's physician has verified that the person's expense is for a service or item that is medically necessary" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expSpndDwnResUse_b" text="the person's expense should be used to spenddown excess resources for medically-needy Medicaid coverage" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrPrvtDutyNrsgSrvcs_b" text="the person's expense is for private-duty nursing services" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrPersCareSvc_b" text="the person's expense is for a personal care service" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSrvcPrvdInLvlIVRsdtlCrFctly_b" text="the person's expense is for a service provided in a level IV residential care home" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrPrivtTransport_b" text="the person's expense is for private transportation" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSrvcPrvdInHome_b" text="the person's expense is for a service provided in the person's home" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSrvMedNcsryInRltnToMedCndtn_b" text="the service provider for the person's expense has submitted a statement that the services are necessary in relation to the service recipient's particular medical condition" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSvcPrvdByPrsnSpouse_b" text="the person's expense is for a service provided by the service recipient's spouse" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSvcPrvdBySmnLvgWPrsn_b" text="the person's expense is for a service provided by someone living in the person's home" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSvcPrvdByPrsnSibling_b" text="the person's expense is for a service provided by the service recipient's sibling" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFstrCrPmtsMdToLcnsdFCHms_b" text="the person's expense is foster care payments made by AHS to licensed foster homes" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsImptRltdTrng_b" text="the person's expense is impairment related training" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSvcPrvdByPrsnUndAge18_b" text="the person's expense is for a service provided by a person under age 18" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsMdclDvc_b" text="the person's expense is a medical device" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSvcPrvdTo181920yo_b" text="the person's expense is for a service provided to an individual that is 18, 19 or 20 years old" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSvcPrvdByLvlIIIRdtnlCrHomeLcnsdByAHS_b" text="the person's expense is for a service provided by a level III residential care home licensed by AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSvcPrvdByPrsnChild_b" text="the person's expense is for a service provided by the service recipient's child" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSvcPrvdByPrsnGrndchild_b" text="the person's expense is for a service provided by the service recipient's grandchild" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsMedExpRcgzdByStLaw_b" text="the person's expense is a necessary medical or remedial expense recognized by state law" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsWrkRltdFees_b" text="the person's expense is work-related fees" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsStrctlModsToHome_b" text="the person's expense is structural modifications to the home" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsMlsCnsmdDrgWrkHrs_b" text="the person's expense is meals consumed during work hours" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsSSTxsMdtryPnsnCtrbns_b" text="the person's expense is social security taxes and mandatory pension contributions" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsOrdyNcsryExpFrActMgmtCptlInvst_b" text="the person's expense is ordinary and necessary expenses for active management of capital investments" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_pePrsnHsSpcfdOngNeedFrPCSvcInCrntPln_b" text="the service's provider for the person's expense has specified an ongoing need for personal care services in the current plan" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsTrptnToFrmWrk_b" text="the person's expense is transportation to and from work including vehicle modifications" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsPrmFrHlthInsThtCvrsMedCareSrvcs_b" text="the person's expense is a health insurance expense" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peAvlblSpdnDwnAmt_c" text="the person's expense's available spenddown amount" type="currency">
+            <val>
+              <currency-val>0.0</currency-val>
+              <change-point date="2017-03-02">
+                <currency-val>5000.0</currency-val>
+              </change-point>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_date-end" text="the person's expense end date" type="date">
+            <val>
+              <date-val>2017-03-16</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true">
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|SMG-Newborn" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|MSP-QMB" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|MSP-QDWI" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|MSP-QI" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|MABD-DAC" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|SMG-Adoption" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|SMG-FPS" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|MABD-Dec73" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|MABD-Spouse" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|MN-MCA" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|SMG-IV-E" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|MABD-Pickle" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|MCA-Adult" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|MABD-Aug72" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|MCA-EXT" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|MCA-Child" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|MABD-1619" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|RMA" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|SMG-BCCT" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|MN-MABD" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|MSP-SLMB" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|MABD-MWPD" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Medical ($5,000.00; Once)|MCA-PCR" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="expense 3">
+          <attr-inst name="i_exp_freq" text="the person's expense's payment frequency" type="text">
+            <val>
+              <text-val>Monthly</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>10.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_type" text="the person's expense's type" type="text">
+            <val>
+              <text-val>Medical</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrGnrlSprvsnOfPhysMntlWlBng_b" text="the person's expense is for general supervision of physical and mental well-being where a physician states such care is required due to a specific diagnosis" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsMntcExpns_b" text="the person's expense is a maintenance expense" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peSvcPrvdrHsSmbtdPrvdQlfdToPrvdSvc_b" text="the service's provider for the person's expense has submitted a statement that the provider is qualified to provide the service" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrPrslCrSvcPerDVHA7411.4_b" text="the person's expense is for a personal care service as described in DVHA Rule 7411.4" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_date-start" text="the person's expense start date" type="date">
+            <val>
+              <date-val>2016-12-15</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_date-end" text="the person's expense end date" type="date">
+            <val>
+              <date-val>2016-12-15</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_pePrtnOfAmtOwdByPrsn_b" text="the portion of the person's expense owed by the person" type="currency">
+            <val>
+              <currency-val>10.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expProvNotForgiven_b" text="it is the case that the service provider for the person's expense has confirmed that the unpaid liability has not been forgiven" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expExceedLimitsDvha7201-7606_b" text="the person's expense exceeds limitations on amount, duration, or scope of services covered under DVHA Rules 7201-7606" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expTPL_b" text="the person's expense is subject to payment by a third party" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expPerCareHomeHealthAgency_b" text="the person's expense is for a personal care service performed by a home-health agency" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expPerCareProvPhysQual_b" text="the person's expense is for a personal care service performed by a provider identified by the patient's physician as qualified to provide the service" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expPlanSubmit6mo_b" text="the plan of care for the service recipient for the person's expense was submitted within 6 months" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expBusinessSelf_b" text="the person's expense is a business expense from self-employment income" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expSpndDwnResUse_b" text="the person's expense should be used to spenddown excess resources for medically-needy Medicaid coverage" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expLoan_b" text="the person's expense is a loan" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peAHSDtrmdDocOfMedNcstyIsRqd_b" text="AHS has determined that the person's expense is a common remedy for the person's the medical condition and the usage is within the maximum amount" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expTransMedSrvNoncovered_b" text="the person's expense is for transportation that was essential to secure a noncovered medical service" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_expContractSchedule_b" text="the person's expense is an obligation documented from its outset by a written contract and a specified repayment schedule" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_pePymtExcdPrsnIncAssets_b" text="the person's expense exceeds the service recipient's own income or assets" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrPrvtDutyNrsgSrvcs_b" text="the person's expense is for private-duty nursing services" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsWrkRltdFees_b" text="the person's expense is work-related fees" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSvcPrvdByPrsnSpouse_b" text="the person's expense is for a service provided by the service recipient's spouse" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peFrSvcPrvdByLglGrdn_b" text="the person's expense is for a service provided by the service recipient's legal guardian" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsMedExpRcgzdByStLaw_b" text="the person's expense is a necessary medical or remedial expense recognized by state law" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsForSvcItmNotCvdByMdcd_b" text="the person's expense is for a service or item covered by Medicaid" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsAlwblRmBrd_b" text="the person's expense is allowable room and board" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrPersCareSvc_b" text="the person's expense is for a personal care service" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peFrSvcPrvdByStepParent_b" text="the person's expense is for a service provided by the service recipient's step-parent" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsStrctlModsToHome_b" text="the person's expense is structural modifications to the home" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsCstMlsPrvdChldPrvdDyCrInHm_b" text="the person's expense is the cost of any meals provided to children for whom an individual provides day care in their own home" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsMlsCnsmdDrgWrkHrs_b" text="the person's expense is meals consumed during work hours" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSvcPrvdBySmnLvgWPrsn_b" text="the person's expense is for a service provided by someone living in the person's home" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsTtlIVDSprtPymt_b" text="the person's expense is a Title IV-D support payment" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSvcPrvdByPrsnSibling_b" text="the person's expense is for a service provided by the service recipient's sibling" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peFrSvcPrvdToPrsnUndAge21_b" text="the person's expense is for a service provided to a person under the age of 21" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFdrlStLclIncTxs_b" text="the person's expense is federal state and local income taxes" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrCmrclTransport_b" text="the person's expense is for commercial transportation" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFstrCrPmtsMdToLcnsdFCHms_b" text="the person's expense is foster care payments made by AHS to licensed foster homes" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsImptRltdTrng_b" text="the person's expense is impairment related training" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSvcPrvdByPrsnUndAge18_b" text="the person's expense is for a service provided by a person under age 18" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrDentalSrvcs" text="the person's expense is for dental services" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrMedNscrySvcOrItm_b" text="the patient's physician has verified that the person's expense is for a service or item that is medically necessary" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsMdclDvc_b" text="the person's expense is a medical device" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSrvcPrvdInLvlIVRsdtlCrFctly_b" text="the person's expense is for a service provided in a level IV residential care home" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peHsBnVrfd_b" text="the person's expense has been verified" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peFrSvcPrvdByParent_b" text="the person's expense is for a service provided by the service recipient's parent" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSvcPrvdTo181920yo_b" text="the person's expense is for a service provided to an individual that is 18, 19 or 20 years old" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrDdctblPCSrvcFrAstMngMoney_b" text="the person's expense is for assistance with managing money" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsBsnOptgCsts_b" text="the person's expense is business operating costs" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrPrivtTransport_b" text="the person's expense is for private transportation" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsCstPrchCrgFrGdDog_b" text="the person's expense is the cost of purchasing and caring for a guide dog" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsAtndtCrSrvcs_b" text="the person's expense is attendant care services" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsActlOpExpnsNcsryPrdcCshRcptsFrCmrclBrdgHs_b" text="the person's expense is the actual operating expenses necessary to produce cash receipts for commercial boarding houses" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peFrDctblPCSvcUndDVHA7406.2_b" text="the person's expense is for a personal care service as described in DVHA Rule 7406.2" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsSSTxsMdtryPnsnCtrbns_b" text="the person's expense is social security taxes and mandatory pension contributions" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsOrdyNcsryExpFrActMgmtCptlInvst_b" text="the person's expense is ordinary and necessary expenses for active management of capital investments" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSrvcPrvdInHome_b" text="the person's expense is for a service provided in the person's home" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSrvMedNcsryInRltnToMedCndtn_b" text="the service provider for the person's expense has submitted a statement that the services are necessary in relation to the service recipient's particular medical condition" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSvcPrvdByLvlIIIRdtnlCrHomeLcnsdByAHS_b" text="the person's expense is for a service provided by a level III residential care home licensed by AHS" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_pePrsnHsSpcfdOngNeedFrPCSvcInCrntPln_b" text="the service's provider for the person's expense has specified an ongoing need for personal care services in the current plan" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsTrptnToFrmWrk_b" text="the person's expense is transportation to and from work including vehicle modifications" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSvcPrvdByPrsnChild_b" text="the person's expense is for a service provided by the service recipient's child" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsAmtUsdCmplyWTrmsCrtOrdrdSprt_b" text="the person's expense is an amount used to comply with the terms of court-ordered support" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsFrSvcPrvdByPrsnGrndchild_b" text="the person's expense is for a service provided by the service recipient's grandchild" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsPrmFrHlthInsThtCvrsMedCareSrvcs_b" text="the person's expense is a health insurance expense" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peIsForOTCDrug_b" text="the person's expense is for an over-the-counter drug" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peWsPdFrmPrsnIncmOrAssts_b" text="the person's expense was paid from the service recipient's own income or assets" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_peIsFrACCS_b" text="the person's expense is for Assistive Community Care Services (ACCS)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_psIsFrSvcPrvdByParentIndMinorChld_b" text="the person's expense is for a service provided by the parent of the service recipient's minor child" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peWsFrPrchsdFuelFrNonCmrclVhcl_b" text="the person's expense was for purchased fuel for a family-owned vehicle or other non-commercial vehicle" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peSvcPrvdrSbmtdLstOfReqdPCSvcs_b" text="the service provider for the person's expense has submitted a list of the personal care services required by the service recipient" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_pPlnOfCrWasSbmtdWthn2Years_b" text="the plan of care for the service recipient for the person's expense was submitted within 2 years" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peWsPdByStOrLclPrgmOthThnMedicaid_b" text="the person's expense is payable by a state or local program other than a program that receives Medicaid funding" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_pPrvdrSbmtdStmtThtLOCPrvdByLvlVResCrHmIsPAppr_b" text="the service's provider for the person's expense has submitted a statement that the level of care provided by the particular residential care home is appropriate" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peSvcPrvdrSbmtdPlnofCare_b" text="the service provider for the person's expense has submitted a plan of care for the service recipient" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_peAvlblSpdnDwnAmt_c" text="the person's expense's available spenddown amount" type="currency">
+            <val>
+              <currency-val>10.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personexpRsnblyAssmExpWllContnu_b" text="it can be reasonably assumed that the person's expense will continue" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true">
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|MN-MCA" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|MCA-Child" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|MABD-1619" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|MCA-EXT" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|MSP-QDWI" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|SMG-BCCT" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|MABD-MWPD" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|MABD-Aug72" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|MCA-PCR" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|RMA" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|MSP-SLMB" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|MCA-Adult" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|MABD-Pickle" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|MSP-QMB" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|MSP-QI" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|MABD-Dec73" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|MABD-Spouse" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|SMG-IV-E" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|MABD-DAC" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|SMG-FPS" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|MN-MABD" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|SMG-Adoption" />
+              <ent-inst-ref ref-id="Medical ($10.00; Monthly)|SMG-Newborn" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="expenseprogram" entity-text="the expense program" inferred="yes" identifying-attribute="rb_expp_ID">
+        <ent-inst id="Medical ($100.00; Monthly)|MABD-SSI-enrolled" />
+        <ent-inst id="Medical ($100.00; Monthly)|SMG-Newborn" />
+        <ent-inst id="Medical ($100.00; Monthly)|MABD-SSI-eligible" />
+        <ent-inst id="Medical ($100.00; Monthly)|MABD-DAC" />
+        <ent-inst id="Medical ($100.00; Monthly)|RMA" />
+        <ent-inst id="Medical ($100.00; Monthly)|MCA-EXT" />
+        <ent-inst id="Medical ($100.00; Monthly)|MSP-QDWI" />
+        <ent-inst id="Medical ($100.00; Monthly)|MABD-Aug72" />
+        <ent-inst id="Medical ($100.00; Monthly)|MCA-TMA-1925" />
+        <ent-inst id="Medical ($100.00; Monthly)|MSP-QMB" />
+        <ent-inst id="Medical ($100.00; Monthly)|MN-MCA" />
+        <ent-inst id="Medical ($100.00; Monthly)|MN-MABD" />
+        <ent-inst id="Medical ($100.00; Monthly)|MCA-Pregnant" />
+        <ent-inst id="Medical ($100.00; Monthly)|SMG-Adoption" />
+        <ent-inst id="Medical ($100.00; Monthly)|MSP-QI" />
+        <ent-inst id="Medical ($100.00; Monthly)|MABD-Dec73" />
+        <ent-inst id="Medical ($100.00; Monthly)|SMG-FPS" />
+        <ent-inst id="Medical ($100.00; Monthly)|MSP-SLMB" />
+        <ent-inst id="Medical ($100.00; Monthly)|MABD-1619" />
+        <ent-inst id="Medical ($100.00; Monthly)|SMG-BCCT" />
+        <ent-inst id="Medical ($100.00; Monthly)|SMG-IV-E" />
+        <ent-inst id="Medical ($100.00; Monthly)|SMG-Former-foster" />
+        <ent-inst id="Medical ($100.00; Monthly)|MABD-MWPD" />
+        <ent-inst id="Medical ($100.00; Monthly)|MCA-PCR" />
+        <ent-inst id="Medical ($100.00; Monthly)|MCA-Child" />
+        <ent-inst id="Medical ($100.00; Monthly)|MCA-Adult" />
+        <ent-inst id="Medical ($100.00; Monthly)|MABD-Spouse" />
+        <ent-inst id="Medical ($100.00; Monthly)|MABD-Pickle" />
+        <ent-inst id="Medical ($5,000.00; Once)|MSP-QDWI" />
+        <ent-inst id="Medical ($5,000.00; Once)|MCA-EXT" />
+        <ent-inst id="Medical ($5,000.00; Once)|MCA-Pregnant" />
+        <ent-inst id="Medical ($5,000.00; Once)|MCA-PCR" />
+        <ent-inst id="Medical ($5,000.00; Once)|MABD-Pickle" />
+        <ent-inst id="Medical ($5,000.00; Once)|MABD-SSI-eligible" />
+        <ent-inst id="Medical ($5,000.00; Once)|MABD-Dec73" />
+        <ent-inst id="Medical ($5,000.00; Once)|MCA-Adult" />
+        <ent-inst id="Medical ($5,000.00; Once)|MSP-QI" />
+        <ent-inst id="Medical ($5,000.00; Once)|MABD-SSI-enrolled" />
+        <ent-inst id="Medical ($5,000.00; Once)|SMG-Newborn" />
+        <ent-inst id="Medical ($5,000.00; Once)|MABD-1619" />
+        <ent-inst id="Medical ($5,000.00; Once)|MSP-QMB" />
+        <ent-inst id="Medical ($5,000.00; Once)|SMG-IV-E" />
+        <ent-inst id="Medical ($5,000.00; Once)|MABD-Aug72" />
+        <ent-inst id="Medical ($5,000.00; Once)|SMG-BCCT" />
+        <ent-inst id="Medical ($5,000.00; Once)|MN-MCA" />
+        <ent-inst id="Medical ($5,000.00; Once)|RMA" />
+        <ent-inst id="Medical ($5,000.00; Once)|MABD-Spouse" />
+        <ent-inst id="Medical ($5,000.00; Once)|SMG-FPS" />
+        <ent-inst id="Medical ($5,000.00; Once)|MCA-Child" />
+        <ent-inst id="Medical ($5,000.00; Once)|MABD-MWPD" />
+        <ent-inst id="Medical ($5,000.00; Once)|MABD-DAC" />
+        <ent-inst id="Medical ($5,000.00; Once)|SMG-Adoption" />
+        <ent-inst id="Medical ($5,000.00; Once)|MSP-SLMB" />
+        <ent-inst id="Medical ($5,000.00; Once)|MN-MABD" />
+        <ent-inst id="Medical ($5,000.00; Once)|SMG-Former-foster" />
+        <ent-inst id="Medical ($5,000.00; Once)|MCA-TMA-1925" />
+        <ent-inst id="Medical ($10.00; Monthly)|MABD-DAC" />
+        <ent-inst id="Medical ($10.00; Monthly)|MCA-EXT" />
+        <ent-inst id="Medical ($10.00; Monthly)|MABD-Spouse" />
+        <ent-inst id="Medical ($10.00; Monthly)|MN-MCA" />
+        <ent-inst id="Medical ($10.00; Monthly)|MABD-Pickle" />
+        <ent-inst id="Medical ($10.00; Monthly)|MABD-SSI-enrolled" />
+        <ent-inst id="Medical ($10.00; Monthly)|MABD-MWPD" />
+        <ent-inst id="Medical ($10.00; Monthly)|RMA" />
+        <ent-inst id="Medical ($10.00; Monthly)|MCA-Child" />
+        <ent-inst id="Medical ($10.00; Monthly)|SMG-FPS" />
+        <ent-inst id="Medical ($10.00; Monthly)|MCA-PCR" />
+        <ent-inst id="Medical ($10.00; Monthly)|MSP-QI" />
+        <ent-inst id="Medical ($10.00; Monthly)|MCA-Adult" />
+        <ent-inst id="Medical ($10.00; Monthly)|MABD-1619" />
+        <ent-inst id="Medical ($10.00; Monthly)|SMG-Adoption" />
+        <ent-inst id="Medical ($10.00; Monthly)|MCA-Pregnant" />
+        <ent-inst id="Medical ($10.00; Monthly)|MCA-TMA-1925" />
+        <ent-inst id="Medical ($10.00; Monthly)|SMG-BCCT" />
+        <ent-inst id="Medical ($10.00; Monthly)|MABD-SSI-eligible" />
+        <ent-inst id="Medical ($10.00; Monthly)|SMG-Former-foster" />
+        <ent-inst id="Medical ($10.00; Monthly)|SMG-IV-E" />
+        <ent-inst id="Medical ($10.00; Monthly)|MABD-Dec73" />
+        <ent-inst id="Medical ($10.00; Monthly)|MSP-QDWI" />
+        <ent-inst id="Medical ($10.00; Monthly)|SMG-Newborn" />
+        <ent-inst id="Medical ($10.00; Monthly)|MABD-Aug72" />
+        <ent-inst id="Medical ($10.00; Monthly)|MSP-SLMB" />
+        <ent-inst id="Medical ($10.00; Monthly)|MN-MABD" />
+        <ent-inst id="Medical ($10.00; Monthly)|MSP-QMB" />
+      </ent-set>
+    </test-case>
+  </test-case-set>
+  <outcome-set>
+    <outcome name="rb_p_req-eligibility" display-name="Meets all eligibility requirements" text="the person meets all of the eligibility requirements for the program" type="boolean" entity-type="program" entity-text="the program">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+    <outcome name="p222@00Framework_01Eligibility_EligibilityFrameworkProps_xsrc" display-name="Start of spenddown acctg period" text="the start of the person's spenddown accounting period for the program" type="date" entity-type="program" entity-text="the program">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+    <outcome name="p224@00Framework_01Eligibility_EligibilityFrameworkProps_xsrc" display-name="The end of spendown acctg period" text="the end of the person's spenddown accounting period for the program" type="date" entity-type="program" entity-text="the program">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+    <outcome name="so_programExcssIncmAmtAccntgPrdUndrHBEE30.05a20160801_c" display-name="Spenddown amount" text="the person's excess income amount for the accounting period for the program under HBEE 30.05(a) (eff. 08/01/2016)" type="currency" entity-type="program" entity-text="the program">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+    <outcome name="st_programTtlHelthInsExpndtrDurgAcctgPriodUndrHBEE30.05f120160801_c" display-name="Total health insurance expenditures" text="the person's total health insurance expenditures during the accounting period for the program under HBEE 30.05(f)(1) (eff. 08/01/2016)" type="currency" entity-type="program" entity-text="the program">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+    <outcome name="rb_p_req-enroll" display-name="Meets all enrollment requirements" text="the person meets all of the enrollment requirements for the program" type="boolean" entity-type="program" entity-text="the program">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+  </outcome-set>
+</test-script>

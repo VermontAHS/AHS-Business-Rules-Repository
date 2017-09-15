@@ -1,0 +1,182 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b23" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 21.13 is satisfied for the person for the program (eff. 7/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 21.13',singular),o('for the person for the program (eff. 7/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 21.13(c) applies to the program (eff. 7/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 21.13(c)',singular),o('to the program (eff. 7/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b34" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is a Medicaid program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('a Medicaid program'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b16" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person left the state with the intent to return when the purpose of the absence has been accomplished</base>
+          <parse>s(ver('10.4.6.76'),v(leave,t(simple,past,normal)),sb('the person',plural),o('the state with the intent to return when the purpose of the absence has been accomplished'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it is the case that another state has verified that the person meets the residency standard of that state</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that another state has verified that the person meets the residency standard of that state'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 21.13 applies to the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 21.13',singular),o('to the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is currently out of state</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('currently out of state'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 21.13(b) is satisfied for the person (eff. 7/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 21.13(b)',singular),o('for the person (eff. 7/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 21.13(c) is satisfied for the person (eff. 7/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 21.13(c)',singular),o('for the person (eff. 7/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person was considered a Vermont resident when the person left the state</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,past,normal)),ob('the person',singular),o('a Vermont resident when the person left the state'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="HBEE 21.13 applies to the person (eff. 07/30/2014)" ruleburst="true" concludes="b21" folder="1" source-offset="87">
+      <rule-xml>
+        <conclude attr-id="b21" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b22" />
+              <or>
+                <not>
+                  <attribute attr-id="b22" />
+                </not>
+                <attribute attr-id="b30" />
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="HBEE 21.13 is satisfied for the person for the program (eff. 7/30/2014)" ruleburst="true" concludes="b23" folder="1" source-offset="362">
+      <rule-xml>
+        <conclude attr-id="b23" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <attribute attr-id="b27" />
+              </for>
+              <or>
+                <not>
+                  <attribute attr-id="b28" />
+                </not>
+                <and>
+                  <attribute attr-id="b28" />
+                  <for>
+                    <relationship relationship-id="programsperson" target-entity-id="person" />
+                    <attribute attr-id="b29" />
+                  </for>
+                </and>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="HBEE 21.13(b) is satisfied for the person (eff. 7/30/2014)" ruleburst="true" concludes="b27" folder="2" source-offset="749">
+      <rule-xml>
+        <conclude attr-id="b27" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b16" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="HBEE 21.13(c) applies to the program (eff. 7/30/2014)" ruleburst="true" concludes="b28" folder="3" source-offset="953">
+      <rule-xml>
+        <conclude attr-id="b28" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b34" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="HBEE 21.13(c) is satisfied for the person (eff. 7/30/2014)" ruleburst="true" concludes="b29" folder="3" source-offset="1057">
+      <rule-xml>
+        <conclude attr-id="b29" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <not>
+              <attribute attr-id="b17" />
+            </not>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="21.13 Temporary absences from the state (07/30/2014, 14-04)" parent="0" id="1" />
+    <folder text="Para (b): Definition" parent="1" id="2" />
+    <folder text="Para (c): Exception" parent="1" id="3" />
+  </rule-folders>
+</root>

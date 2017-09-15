@@ -1,0 +1,1936 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the person's income" id="personsincome" containment-relationship-id="personsincomes" containment-parent-id="person">
+      <attribute name="b25" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is wages</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('wages'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is self-employment</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('self-employment'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is royalties</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('royalties'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is military basic allowance for housing</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('military basic allowance for housing'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is military basic allowance for subsistence</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('military basic allowance for subsistence'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is temporary disability insurance</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('temporary disability insurance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is worker's compensation</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('worker''s compensation'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is other earned income</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('other earned income'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is social security benefits</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('social security benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b34" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is veteran's benefits</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('veteran''s benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is pension and retirement benefits</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('pension and retirement benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is unemployment insurance benefits</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('unemployment insurance benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is supplemental security income benefits</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('supplemental security income benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b38" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is alimony</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('alimony'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b39" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is child support</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('child support'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b40" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is other unearned income</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('other unearned income'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b59" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is paid weekly</base>
+          <parse>s(ver('10.4.5.40'),v(pay,t(simple,present,normal)),ob('the person''s income',singular),o('weekly'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b60" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is paid every other week</base>
+          <parse>s(ver('10.4.5.40'),v(pay,t(simple,present,normal)),ob('the person''s income',singular),o('every other week'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b61" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is paid twice per month</base>
+          <parse>s(ver('10.4.5.40'),v(pay,t(simple,present,normal)),ob('the person''s income',singular),o('twice per month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b62" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is paid monthly</base>
+          <parse>s(ver('10.4.5.40'),v(pay,t(simple,present,normal)),ob('the person''s income',singular),o('monthly'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b63" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is paid every other month</base>
+          <parse>s(ver('10.4.5.40'),v(pay,t(simple,present,normal)),ob('the person''s income',singular),o('every other month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b64" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is paid quarterly</base>
+          <parse>s(ver('10.4.5.40'),v(pay,t(simple,present,normal)),ob('the person''s income',singular),o('quarterly'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b65" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is paid twice per year</base>
+          <parse>s(ver('10.4.5.40'),v(pay,t(simple,present,normal)),ob('the person''s income',singular),o('twice per year'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b66" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is paid yearly</base>
+          <parse>s(ver('10.4.5.40'),v(pay,t(simple,present,normal)),ob('the person''s income',singular),o('yearly'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b67" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is paid once</base>
+          <parse>s(ver('10.4.5.40'),v(pay,t(simple,present,normal)),ob('the person''s income',singular),o('once'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p4" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's income's type</base>
+        </text>
+      </attribute>
+      <attribute name="p8" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's income's payment frequency</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's expense" id="personsexpense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+      <attribute name="b41" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is a child support expense</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a child support expense'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b42" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is a dependent care expense</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a dependent care expense'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b43" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is a housing expense</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a housing expense'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b44" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is a medical expense</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a medical expense'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b45" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is a utility expense</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a utility expense'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b69" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is paid monthly</base>
+          <parse>s(ver('10.4.5.40'),v(pay,t(simple,present,normal)),ob('the person''s expense',singular),o('monthly'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b70" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is paid every other month</base>
+          <parse>s(ver('10.4.5.40'),v(pay,t(simple,present,normal)),ob('the person''s expense',singular),o('every other month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b71" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is paid quarterly</base>
+          <parse>s(ver('10.4.5.40'),v(pay,t(simple,present,normal)),ob('the person''s expense',singular),o('quarterly'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b72" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is paid twice per year</base>
+          <parse>s(ver('10.4.5.40'),v(pay,t(simple,present,normal)),ob('the person''s expense',singular),o('twice per year'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b73" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is paid yearly</base>
+          <parse>s(ver('10.4.5.40'),v(pay,t(simple,present,normal)),ob('the person''s expense',singular),o('yearly'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b74" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is paid once</base>
+          <parse>s(ver('10.4.5.40'),v(pay,t(simple,present,normal)),ob('the person''s expense',singular),o('once'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b76" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is paid twice per month</base>
+          <parse>s(ver('10.4.5.40'),v(pay,t(simple,present,normal)),ob('the person''s expense',singular),o('twice per month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b77" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is paid weekly</base>
+          <parse>s(ver('10.4.5.40'),v(pay,t(simple,present,normal)),ob('the person''s expense',singular),o('weekly'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b78" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is paid every other week</base>
+          <parse>s(ver('10.4.5.40'),v(pay,t(simple,present,normal)),ob('the person''s expense',singular),o('every other week'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p5" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's expense's type</base>
+        </text>
+      </attribute>
+      <attribute name="p9" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's expense's payment frequency</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's resource" id="personsresource" containment-relationship-id="personsresources" containment-parent-id="person">
+      <attribute name="b46" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's resource is cash</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('cash'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b47" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's resource is a savings account</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a savings account'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b48" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's resource is a checking account</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a checking account'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b49" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's resource is stocks</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('stocks'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b50" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's resource is bonds</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('bonds'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b51" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's resource is savings certificates</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('savings certificates'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b52" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's resource is a mutual fund</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a mutual fund'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b53" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's resource is trust fund</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('trust fund'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b54" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's resource is precious metals</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('precious metals'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b55" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's resource is another asset</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('another asset'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p6" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's resource's type</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's address" id="personsaddress" containment-relationship-id="personsaddresses" containment-parent-id="person">
+      <attribute name="b56" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's address is a residential address</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s address',singular),o('a residential address'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b57" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's address is a mailing address</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s address',singular),o('a mailing address'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p7" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's address's type</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the related party" id="relatedparty" containment-relationship-id="personsrelatedparties" containment-parent-id="person">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is spouse</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('spouse'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is other relative</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('other relative'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is unrelated</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('unrelated'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is customarily purchases food and prepares meals together</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('customarily purchases food and prepares meals together'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is under parental control</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('under parental control'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is has parental control</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('has parental control'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is foster child</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('foster child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is foster parent</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('foster parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b79" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is biological child</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('biological child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b80" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is adopted child</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('adopted child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b81" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is step-child</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('step-child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b82" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is biological parent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('biological parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b83" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is adopted parent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('adopted parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b84" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is step-parent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('step-parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b85" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is biological sibling</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('biological sibling'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b86" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is adopted sibling</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('adopted sibling'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b87" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is step-sibling</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('step-sibling'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b89" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is tax filer</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('tax filer'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b90" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is tax dependent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('tax dependent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b91" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is noncitizen sponsor</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('noncitizen sponsor'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b92" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is sponsored noncitizen</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('sponsored noncitizen'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b93" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is has primary responsibility for care</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('has primary responsibility for care'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b94" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is primarily responsible for care</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('primarily responsible for care'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b95" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is under sole custody</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('under sole custody'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b96" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is has sole custody</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('has sole custody'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b97" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the related party's relationship to the person is spends most nights</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('spends most nights'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p2" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the related party's relationship to the person</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global" />
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="personsrelatedparties" reverse-relationship-id="relatedpartyssourceperson" text="the person's related parties" reverse-text="the related party's source person" source="person" target="relatedparty" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" text="the person's resources" reverse-text="the person's resource's person" source="person" target="personsresource" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsaddresses" reverse-relationship-id="personsaddressperson" text="the person's addresses" reverse-text="the person's address' person" source="person" target="personsaddress" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" text="the person's expenses" reverse-text="the person's expense's person" source="person" target="personsexpense" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" text="the person's incomes" reverse-text="the person's income's person" source="person" target="personsincome" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="the related party's relationship to the person is spouse" ruleburst="true" concludes="b1" folder="2" source-offset="56">
+      <rule-xml>
+        <conclude attr-id="b1" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Spouse</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the related party's relationship to the person is biological child" ruleburst="true" concludes="b79" folder="2" source-offset="314">
+      <rule-xml>
+        <conclude attr-id="b79" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Biological Child</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="the related party's relationship to the person is adopted child" ruleburst="true" concludes="b80" folder="2" source-offset="485">
+      <rule-xml>
+        <conclude attr-id="b80" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Adopted Child</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="the related party's relationship to the person is step-child" ruleburst="true" concludes="b81" folder="2" source-offset="647">
+      <rule-xml>
+        <conclude attr-id="b81" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Step-Child</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="the related party's relationship to the person is biological parent" ruleburst="true" concludes="b82" folder="2" source-offset="920">
+      <rule-xml>
+        <conclude attr-id="b82" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Biological Parent</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="the related party's relationship to the person is adopted parent" ruleburst="true" concludes="b83" folder="2" source-offset="1094">
+      <rule-xml>
+        <conclude attr-id="b83" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Adopted Parent</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="the related party's relationship to the person is step-parent" ruleburst="true" concludes="b84" folder="2" source-offset="1259">
+      <rule-xml>
+        <conclude attr-id="b84" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Step-Parent</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="7" name="the related party's relationship to the person is biological sibling" ruleburst="true" concludes="b85" folder="2" source-offset="1537">
+      <rule-xml>
+        <conclude attr-id="b85" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Biological Sibling</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="8" name="the related party's relationship to the person is adopted sibling" ruleburst="true" concludes="b86" folder="2" source-offset="1714">
+      <rule-xml>
+        <conclude attr-id="b86" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Adopted Sibling</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="9" name="the related party's relationship to the person is step-sibling" ruleburst="true" concludes="b87" folder="2" source-offset="1882">
+      <rule-xml>
+        <conclude attr-id="b87" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Step-Sibling</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="10" name="the related party's relationship to the person is other relative" ruleburst="true" concludes="b4" folder="2" source-offset="2042">
+      <rule-xml>
+        <conclude attr-id="b4" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Other Relative</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="11" name="the related party's relationship to the person is unrelated" ruleburst="true" concludes="b5" folder="2" source-offset="2207">
+      <rule-xml>
+        <conclude attr-id="b5" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Unrelated</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="12" name="the related party's relationship to the person is customarily purchases food and prepares meals together" ruleburst="true" concludes="b6" folder="3" source-offset="2386">
+      <rule-xml>
+        <conclude attr-id="b6" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Purchase and Prepare</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="13" name="the related party's relationship to the person is has primary responsibility for care" ruleburst="true" concludes="b93" folder="3" source-offset="2603">
+      <rule-xml>
+        <conclude attr-id="b93" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Has Primary Responsibility For Care</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="14" name="the related party's relationship to the person is primarily responsible for care" ruleburst="true" concludes="b94" folder="3" source-offset="2831">
+      <rule-xml>
+        <conclude attr-id="b94" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Primarily Responsible For Care</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="15" name="the related party's relationship to the person is under parental control" ruleburst="true" concludes="b7" folder="3" source-offset="3045">
+      <rule-xml>
+        <conclude attr-id="b7" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Under Parental Control</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="16" name="the related party's relationship to the person is has parental control" ruleburst="true" concludes="b8" folder="3" source-offset="3233">
+      <rule-xml>
+        <conclude attr-id="b8" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Has Parental Control</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="17" name="the related party's relationship to the person is foster child" ruleburst="true" concludes="b9" folder="3" source-offset="3416">
+      <rule-xml>
+        <conclude attr-id="b9" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Foster Child</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="18" name="the related party's relationship to the person is foster parent" ruleburst="true" concludes="b10" folder="3" source-offset="3574">
+      <rule-xml>
+        <conclude attr-id="b10" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Foster Parent</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="19" name="the related party's relationship to the person is tax filer" ruleburst="true" concludes="b89" folder="3" source-offset="3862">
+      <rule-xml>
+        <table-conclude attr-id="b89" entity-id="relatedparty" scope-id="relatedparty0">
+          <row>
+            <value>
+              <true-value />
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p2" />
+                <string-value>Tax Filer</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <uncertain-value />
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p2" />
+                <string-value>Possible Tax Filer</string-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="20" name="the related party's relationship to the person is tax dependent" ruleburst="true" concludes="b90" folder="3" source-offset="4169">
+      <rule-xml>
+        <conclude attr-id="b90" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Tax Dependent</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="21" name="the related party's relationship to the person is noncitizen sponsor" ruleburst="true" concludes="b91" folder="3" source-offset="4572">
+      <rule-xml>
+        <conclude attr-id="b91" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Noncitizen Sponsor</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="22" name="the related party's relationship to the person is sponsored noncitizen" ruleburst="true" concludes="b92" folder="3" source-offset="4749">
+      <rule-xml>
+        <conclude attr-id="b92" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Sponsored Noncitizen</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="23" name="the related party's relationship to the person is under sole custody" ruleburst="true" concludes="b95" folder="3" source-offset="4933">
+      <rule-xml>
+        <conclude attr-id="b95" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Under Sole Custody</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="24" name="the related party's relationship to the person is has sole custody" ruleburst="true" concludes="b96" folder="3" source-offset="5110">
+      <rule-xml>
+        <conclude attr-id="b96" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Has Sole Custody</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="25" name="the related party's relationship to the person is spends most nights" ruleburst="true" concludes="b97" folder="3" source-offset="5282">
+      <rule-xml>
+        <conclude attr-id="b97" entity-id="relatedparty" scope-id="relatedparty0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p2" />
+              <string-value>Spends Most Nights</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="26" name="the person's income is paid weekly" ruleburst="true" concludes="b59" folder="5" source-offset="9255">
+      <rule-xml>
+        <conclude attr-id="b59" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p8" />
+              <string-value>Weekly</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="27" name="the person's income is paid every other week" ruleburst="true" concludes="b60" folder="5" source-offset="9367">
+      <rule-xml>
+        <conclude attr-id="b60" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p8" />
+              <string-value>Bi-Weekly</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="28" name="the person's income is paid twice per month" ruleburst="true" concludes="b61" folder="5" source-offset="9495">
+      <rule-xml>
+        <conclude attr-id="b61" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p8" />
+              <string-value>Semi-Monthly</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="29" name="the person's income is paid monthly" ruleburst="true" concludes="b62" folder="5" source-offset="9628">
+      <rule-xml>
+        <conclude attr-id="b62" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p8" />
+              <string-value>Monthly</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="30" name="the person's income is paid every other month" ruleburst="true" concludes="b63" folder="5" source-offset="9743">
+      <rule-xml>
+        <conclude attr-id="b63" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p8" />
+              <string-value>Bi-Monthly</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="31" name="the person's income is paid quarterly" ruleburst="true" concludes="b64" folder="5" source-offset="9874">
+      <rule-xml>
+        <conclude attr-id="b64" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p8" />
+              <string-value>Quarterly</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="32" name="the person's income is paid twice per year" ruleburst="true" concludes="b65" folder="5" source-offset="9995">
+      <rule-xml>
+        <conclude attr-id="b65" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p8" />
+              <string-value>Semi-Annually</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="33" name="the person's income is paid yearly" ruleburst="true" concludes="b66" folder="5" source-offset="10129">
+      <rule-xml>
+        <conclude attr-id="b66" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p8" />
+              <string-value>Annually</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="34" name="the person's income is paid once" ruleburst="true" concludes="b67" folder="5" source-offset="10245">
+      <rule-xml>
+        <conclude attr-id="b67" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p8" />
+              <string-value>Once</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="35" name="the person's income is wages" ruleburst="true" concludes="b25" folder="6" source-offset="10367">
+      <rule-xml>
+        <conclude attr-id="b25" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p4" />
+              <string-value>Wages</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="36" name="the person's income is self-employment" ruleburst="true" concludes="b26" folder="6" source-offset="10458">
+      <rule-xml>
+        <conclude attr-id="b26" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p4" />
+              <string-value>Self-Employment</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="37" name="the person's income is royalties" ruleburst="true" concludes="b27" folder="6" source-offset="10579">
+      <rule-xml>
+        <conclude attr-id="b27" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p4" />
+              <string-value>Royalties</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="38" name="the person's income is military basic allowance for housing" ruleburst="true" concludes="b28" folder="6" source-offset="10682">
+      <rule-xml>
+        <conclude attr-id="b28" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p4" />
+              <string-value>Military - BAH</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="39" name="the person's income is military basic allowance for subsistence" ruleburst="true" concludes="b29" folder="6" source-offset="10822">
+      <rule-xml>
+        <conclude attr-id="b29" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p4" />
+              <string-value>Military - BAS</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="40" name="the person's income is temporary disability insurance" ruleburst="true" concludes="b30" folder="6" source-offset="10966">
+      <rule-xml>
+        <conclude attr-id="b30" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p4" />
+              <string-value>Temp Disability Ins</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="41" name="the person's income is worker's compensation" ruleburst="true" concludes="b31" folder="6" source-offset="11110">
+      <rule-xml>
+        <conclude attr-id="b31" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p4" />
+              <string-value>Worker's Comp</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="42" name="the person's income is other earned income" ruleburst="true" concludes="b32" folder="6" source-offset="11233">
+      <rule-xml>
+        <conclude attr-id="b32" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p4" />
+              <string-value>Other Earned Income</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="43" name="the person's income is social security benefits" ruleburst="true" concludes="b33" folder="6" source-offset="11366">
+      <rule-xml>
+        <conclude attr-id="b33" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p4" />
+              <string-value>Social Security Benefits</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="44" name="the person's income is veteran's benefits" ruleburst="true" concludes="b34" folder="6" source-offset="11514">
+      <rule-xml>
+        <conclude attr-id="b34" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p4" />
+              <string-value>Veteran's Benefits</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="45" name="the person's income is pension and retirement benefits" ruleburst="true" concludes="b35" folder="6" source-offset="11644">
+      <rule-xml>
+        <conclude attr-id="b35" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p4" />
+              <string-value>Pension or Retirement</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="46" name="the person's income is unemployment insurance benefits" ruleburst="true" concludes="b36" folder="6" source-offset="11793">
+      <rule-xml>
+        <conclude attr-id="b36" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p4" />
+              <string-value>Unemployment Insurance</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="47" name="the person's income is supplemental security income benefits" ruleburst="true" concludes="b37" folder="6" source-offset="11944">
+      <rule-xml>
+        <conclude attr-id="b37" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p4" />
+              <string-value>SSI</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="48" name="the person's income is alimony" ruleburst="true" concludes="b38" folder="6" source-offset="12063">
+      <rule-xml>
+        <conclude attr-id="b38" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p4" />
+              <string-value>Alimony</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="49" name="the person's income is child support" ruleburst="true" concludes="b39" folder="6" source-offset="12160">
+      <rule-xml>
+        <conclude attr-id="b39" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p4" />
+              <string-value>Child Support</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="50" name="the person's income is other unearned income" ruleburst="true" concludes="b40" folder="6" source-offset="12275">
+      <rule-xml>
+        <conclude attr-id="b40" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p4" />
+              <string-value>Other Unearned Income</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="51" name="the person's expense is paid weekly" ruleburst="true" concludes="b77" folder="7" source-offset="12439">
+      <rule-xml>
+        <conclude attr-id="b77" entity-id="personsexpense" scope-id="personsexpense0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p9" />
+              <string-value>Weekly</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="52" name="the person's expense is paid every other week" ruleburst="true" concludes="b78" folder="7" source-offset="12553">
+      <rule-xml>
+        <conclude attr-id="b78" entity-id="personsexpense" scope-id="personsexpense0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p9" />
+              <string-value>Bi-Weekly</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="53" name="the person's expense is paid twice per month" ruleburst="true" concludes="b76" folder="7" source-offset="12683">
+      <rule-xml>
+        <conclude attr-id="b76" entity-id="personsexpense" scope-id="personsexpense0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p9" />
+              <string-value>Semi-Monthly</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="54" name="the person's expense is paid monthly" ruleburst="true" concludes="b69" folder="7" source-offset="12818">
+      <rule-xml>
+        <conclude attr-id="b69" entity-id="personsexpense" scope-id="personsexpense0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p9" />
+              <string-value>Monthly</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="55" name="the person's expense is paid every other month" ruleburst="true" concludes="b70" folder="7" source-offset="12935">
+      <rule-xml>
+        <conclude attr-id="b70" entity-id="personsexpense" scope-id="personsexpense0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p9" />
+              <string-value>Bi-Monthly</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="56" name="the person's expense is paid quarterly" ruleburst="true" concludes="b71" folder="7" source-offset="13068">
+      <rule-xml>
+        <conclude attr-id="b71" entity-id="personsexpense" scope-id="personsexpense0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p9" />
+              <string-value>Quarterly</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="57" name="the person's expense is paid twice per year" ruleburst="true" concludes="b72" folder="7" source-offset="13191">
+      <rule-xml>
+        <conclude attr-id="b72" entity-id="personsexpense" scope-id="personsexpense0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p9" />
+              <string-value>Semi-Annually</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="58" name="the person's expense is paid yearly" ruleburst="true" concludes="b73" folder="7" source-offset="13327">
+      <rule-xml>
+        <conclude attr-id="b73" entity-id="personsexpense" scope-id="personsexpense0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p9" />
+              <string-value>Annually</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="59" name="the person's expense is paid once" ruleburst="true" concludes="b74" folder="7" source-offset="13445">
+      <rule-xml>
+        <conclude attr-id="b74" entity-id="personsexpense" scope-id="personsexpense0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p9" />
+              <string-value>Once</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="60" name="the person's expense is a child support expense" ruleburst="true" concludes="b41" folder="8" source-offset="13570">
+      <rule-xml>
+        <conclude attr-id="b41" entity-id="personsexpense" scope-id="personsexpense0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p5" />
+              <string-value>Child Support</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="61" name="the person's expense is a dependent care expense" ruleburst="true" concludes="b42" folder="8" source-offset="13697">
+      <rule-xml>
+        <conclude attr-id="b42" entity-id="personsexpense" scope-id="personsexpense0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p5" />
+              <string-value>Dependent Care</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="62" name="the person's expense is a housing expense" ruleburst="true" concludes="b43" folder="8" source-offset="13827">
+      <rule-xml>
+        <conclude attr-id="b43" entity-id="personsexpense" scope-id="personsexpense0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p5" />
+              <string-value>Housing</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="63" name="the person's expense is a medical expense" ruleburst="true" concludes="b44" folder="8" source-offset="13936">
+      <rule-xml>
+        <conclude attr-id="b44" entity-id="personsexpense" scope-id="personsexpense0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p5" />
+              <string-value>Medical</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="64" name="the person's expense is a utility expense" ruleburst="true" concludes="b45" folder="8" source-offset="14045">
+      <rule-xml>
+        <conclude attr-id="b45" entity-id="personsexpense" scope-id="personsexpense0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p5" />
+              <string-value>Utility</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="65" name="the person's resource is cash" ruleburst="true" concludes="b46" folder="10" source-offset="14196">
+      <rule-xml>
+        <conclude attr-id="b46" entity-id="personsresource" scope-id="personsresource0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p6" />
+              <string-value>Cash</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="66" name="the person's resource is a savings account" ruleburst="true" concludes="b47" folder="10" source-offset="14288">
+      <rule-xml>
+        <conclude attr-id="b47" entity-id="personsresource" scope-id="personsresource0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p6" />
+              <string-value>Savings Account</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="67" name="the person's resource is a checking account" ruleburst="true" concludes="b48" folder="10" source-offset="14415">
+      <rule-xml>
+        <conclude attr-id="b48" entity-id="personsresource" scope-id="personsresource0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p6" />
+              <string-value>Checking Account</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="68" name="the person's resource is stocks" ruleburst="true" concludes="b49" folder="10" source-offset="14545">
+      <rule-xml>
+        <conclude attr-id="b49" entity-id="personsresource" scope-id="personsresource0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p6" />
+              <string-value>Stocks</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="69" name="the person's resource is bonds" ruleburst="true" concludes="b50" folder="10" source-offset="14643">
+      <rule-xml>
+        <conclude attr-id="b50" entity-id="personsresource" scope-id="personsresource0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p6" />
+              <string-value>Bonds</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="70" name="the person's resource is savings certificates" ruleburst="true" concludes="b51" folder="10" source-offset="14738">
+      <rule-xml>
+        <conclude attr-id="b51" entity-id="personsresource" scope-id="personsresource0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p6" />
+              <string-value>Certificate of Deposit</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="71" name="the person's resource is a mutual fund" ruleburst="true" concludes="b52" folder="10" source-offset="14882">
+      <rule-xml>
+        <conclude attr-id="b52" entity-id="personsresource" scope-id="personsresource0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p6" />
+              <string-value>Mutual Fund</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="72" name="the person's resource is trust fund" ruleburst="true" concludes="b53" folder="10" source-offset="14997">
+      <rule-xml>
+        <conclude attr-id="b53" entity-id="personsresource" scope-id="personsresource0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p6" />
+              <string-value>Trust Fund</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="73" name="the person's resource is precious metals" ruleburst="true" concludes="b54" folder="10" source-offset="15107">
+      <rule-xml>
+        <conclude attr-id="b54" entity-id="personsresource" scope-id="personsresource0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p6" />
+              <string-value>Precious Metals</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="74" name="the person's resource is another asset" ruleburst="true" concludes="b55" folder="10" source-offset="15232">
+      <rule-xml>
+        <conclude attr-id="b55" entity-id="personsresource" scope-id="personsresource0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p6" />
+              <string-value>Other Asset</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="75" name="the person's address is a residential address" ruleburst="true" concludes="b56" folder="12" source-offset="15386">
+      <rule-xml>
+        <conclude attr-id="b56" entity-id="personsaddress" scope-id="personsaddress0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p7" />
+              <string-value>Residential</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="76" name="the person's address is a mailing address" ruleburst="true" concludes="b57" folder="12" source-offset="15507">
+      <rule-xml>
+        <conclude attr-id="b57" entity-id="personsaddress" scope-id="personsaddress0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p7" />
+              <string-value>Mailing</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="The Related Party" parent="0" id="1" />
+    <folder text="Familial Relationships" parent="1" id="2" />
+    <folder text="Non-Familial Relationships" parent="1" id="3" />
+    <folder text="The Person's Income" parent="0" id="4" />
+    <folder text="Income Frequency" parent="4" id="5" />
+    <folder text="Income Types" parent="4" id="6" />
+    <folder text="The Person's Expense" parent="0" id="7" />
+    <folder text="Expense Types" parent="7" id="8" />
+    <folder text="The Person's Resource" parent="0" id="9" />
+    <folder text="Resource Types" parent="9" id="10" />
+    <folder text="The Person's Address" parent="0" id="11" />
+    <folder text="Address Type" parent="11" id="12" />
+  </rule-folders>
+</root>

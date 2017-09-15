@@ -1,0 +1,995 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+      <attribute name="p78" type="text" substitutable="true" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>this state</base>
+        </text>
+      </attribute>
+      <attribute name="p79" type="text" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>this state's abbreviation</base>
+        </text>
+      </attribute>
+      <attribute name="p80" type="text" substitutable="true" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>this state's government</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b1" type="boolean" public-name="i_per_med-blind">
+        <text>
+          <base>the person is blind</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('blind'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b2" type="boolean" public-name="i_per_med-disabled">
+        <text>
+          <base>the person is disabled</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('disabled'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p62" type="date" public-name="i_per_dob">
+        <text>
+          <base>the person's date of birth</base>
+        </text>
+      </attribute>
+      <attribute name="p63" type="number" public-name="rb_per_age">
+        <text>
+          <base>the person's age in years</base>
+        </text>
+      </attribute>
+      <attribute name="p64" type="number" public-name="rb_p_ageYrsMonthEnd_n">
+        <text>
+          <base>the person's age in years at the end of the month</base>
+        </text>
+      </attribute>
+      <attribute name="p93" type="text" public-name="i_per_name-first">
+        <text>
+          <base>the person's first name</base>
+        </text>
+      </attribute>
+      <attribute name="p94" type="text" public-name="i_per_name-mid">
+        <text>
+          <base>the person's middle name</base>
+        </text>
+      </attribute>
+      <attribute name="p95" type="text" public-name="i_per_name-last">
+        <text>
+          <base>the person's last name</base>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" public-name="i_per_ssn-none">
+        <text>
+          <base>it is the case that the person does not have a social security number</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the person does not have a social security number'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b38" type="boolean" public-name="i_per_tribal">
+        <text>
+          <base>the person is a member of a Federally-recognized Indian tribe</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('a member of a Federally-recognized Indian tribe'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b40" type="boolean" public-name="i_per_mil-vet-honor">
+        <text>
+          <base>the person is an honorably discharged veteran</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('an honorably discharged veteran'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p118" type="number" public-name="i_per_preg-num">
+        <text>
+          <base>the number of children that the person is expecting to deliver</base>
+        </text>
+      </attribute>
+      <attribute name="p120" type="date">
+        <text>
+          <base>the first day of the person's birth month</base>
+        </text>
+      </attribute>
+      <attribute name="b69" type="boolean" public-name="rb_per_ageU26">
+        <text>
+          <base>the person is under 26 years of age</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('under 26 years of age'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b70" type="boolean" public-name="rb_per_ageU1">
+        <text>
+          <base>the person is under 1 year of age</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('under 1 year of age'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b71" type="boolean" public-name="rb_per_ageU22">
+        <text>
+          <base>the person is under 22 years of age</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('under 22 years of age'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b72" type="boolean" public-name="rb_per_age60oO">
+        <text>
+          <base>the person is 60 years of age or older</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('60 years of age or older'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b73" type="boolean" public-name="rb_per_age65oO">
+        <text>
+          <base>the person is 65 years of age or older</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('65 years of age or older'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b74" type="boolean" public-name="rb_per_age60oODtM">
+        <text>
+          <base>the person is 60 years of age or older during the month</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('60 years of age or older during the month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b75" type="boolean" public-name="rb_per_age65oODtM">
+        <text>
+          <base>the person is 65 years of age or older during the month</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('65 years of age or older during the month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b76" type="boolean" public-name="rb_per_ageU18DtM">
+        <text>
+          <base>the person is under 18 years of age during the month</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('under 18 years of age during the month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b77" type="boolean" public-name="rb_per_ageU22DtM">
+        <text>
+          <base>the person is under 22 years of age during the month</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('under 22 years of age during the month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b94" type="boolean" public-name="rb_per_ageU18">
+        <text>
+          <base>the person is under 18 years of age</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('under 18 years of age'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b95" type="boolean" public-name="rb_per_ageU21">
+        <text>
+          <base>the person is under 21 years of age</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('under 21 years of age'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b96" type="boolean" public-name="rb_per_ageU19">
+        <text>
+          <base>the person is under 19 years of age</base>
+          <parse>s(ver('10.4.7.86'),v(be,t(simple,present,normal)),sb('the person',singular),o('under 19 years of age'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b109" type="boolean" public-name="rb_per_blind-or-disabled">
+        <text>
+          <base>the person is blind or disabled</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('blind or disabled'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p142" type="currency" public-name="rb_per_AGI-Adjustment-Grp">
+        <text>
+          <base>the total adjustment to taxable gross income for the person's tax household</base>
+        </text>
+      </attribute>
+      <attribute name="p143" type="date" public-name="i_per_dod">
+        <text>
+          <base>the person's date of death</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="p133" type="currency">
+        <text>
+          <base>the person's total monthly countable gross earned income for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p134" type="currency">
+        <text>
+          <base>the total monthly countable gross earned income for the person's financial group for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p135" type="currency">
+        <text>
+          <base>the total monthly countable gross unearned income for the person's financial group for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p136" type="currency">
+        <text>
+          <base>the person's total monthly countable gross unearned income for the program</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+      <attribute name="p60" type="currency" public-name="i_inc_amt">
+        <text>
+          <base>the person's income's amount</base>
+        </text>
+      </attribute>
+      <attribute name="p77" type="text" public-name="i_inc_type">
+        <text>
+          <base>the person's income's type</base>
+        </text>
+      </attribute>
+      <attribute name="p101" type="text" public-name="i_inc_ID">
+        <text>
+          <base>the person's income's unique ID</base>
+        </text>
+      </attribute>
+      <attribute name="b117" type="boolean" public-name="rb_inc_AGI-Taxable">
+        <text>
+          <base>the person's income is included in taxable gross income</base>
+          <parse>s(ver('10.4.6.76'),v(include,t(simple,present,normal)),ob('the person''s income',singular),o('in taxable gross income'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+      <attribute name="b112" type="boolean">
+        <text>
+          <base>the person's income is considered earned income for the income program</base>
+          <parse>s(ver('10.4.5.40'),v(consider,t(simple,present,normal)),ob('the person''s income',singular),o('earned income for the income program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b113" type="boolean">
+        <text>
+          <base>the person's income is considered unearned income for the income program</base>
+          <parse>s(ver('10.4.5.40'),v(consider,t(simple,present,normal)),ob('the person''s income',singular),o('unearned income for the income program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p137" type="currency">
+        <text>
+          <base>the person's income's total monthly gross earned income amount for the income program</base>
+        </text>
+      </attribute>
+      <attribute name="p138" type="currency">
+        <text>
+          <base>the person's income's total monthly gross unearned income amount for the income program</base>
+        </text>
+      </attribute>
+      <attribute name="p141" type="text" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the person's income's category for the income program</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+      <attribute name="p59" type="currency" public-name="i_exp_amt">
+        <text>
+          <base>the person's expense's amount</base>
+        </text>
+      </attribute>
+      <attribute name="p76" type="text" public-name="i_exp_type">
+        <text>
+          <base>the person's expense's type</base>
+        </text>
+      </attribute>
+      <attribute name="p100" type="text" public-name="i_exp_ID">
+        <text>
+          <base>the person's expense's unique ID</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+      <attribute name="p102" type="text" public-name="i_res_ID">
+        <text>
+          <base>the person's resource's unique ID</base>
+        </text>
+      </attribute>
+      <attribute name="p109" type="text" public-name="i_res_type">
+        <text>
+          <base>the person's resource's type</base>
+        </text>
+      </attribute>
+      <attribute name="p111" type="currency" public-name="i_res_value-encumbrance">
+        <text>
+          <base>the total amount owed in mortgages, liens or other encumbrances on the person's resource</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+      <attribute name="p115" type="text">
+        <text>
+          <base>the person's resource's valuation method for the resource program</base>
+        </text>
+      </attribute>
+      <attribute name="p116" type="currency">
+        <text>
+          <base>the person's resource's value for the resource program</base>
+        </text>
+      </attribute>
+      <attribute name="p117" type="text">
+        <text>
+          <base>the person's resource's valuation method for the resource program</base>
+        </text>
+      </attribute>
+      <attribute name="b42" type="boolean">
+        <text>
+          <base>the person's resource uses equity valuation for the resource program</base>
+          <parse>s(ver('10.4.5.40'),v(use,t(simple,present,normal)),sb('the person''s resource',singular),o('equity valuation for the resource program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b98" type="boolean">
+        <text>
+          <base>the person's resource uses market valuation for the resource program</base>
+          <parse>s(ver('10.4.6.76'),v(use,t(simple,present,normal)),sb('the person''s resource',singular),o('market valuation for the resource program'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+      <attribute name="b3" type="boolean">
+        <text>
+          <base>it is the case that the group member customarily purchases food and prepares meals with the person</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the group member customarily purchases food and prepares meals with the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean">
+        <text>
+          <base>the group member is the person's spouse</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s spouse'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean">
+        <text>
+          <base>the group member is the person's child</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean">
+        <text>
+          <base>the group member is under parental control of the person</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('under parental control of the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean">
+        <text>
+          <base>the group member is the person's parent</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean">
+        <text>
+          <base>the group member has parental control over the person</base>
+          <parse>s(ver('10.4.5.40'),v(have,t(simple,present,normal)),sb('the group member',singular),o('parental control over the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean">
+        <text>
+          <base>the group member is the person's foster parent</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s foster parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean">
+        <text>
+          <base>the group member is the person's foster child</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s foster child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean">
+        <text>
+          <base>the group member shares a residential address with the person</base>
+          <parse>s(ver('10.4.6.76'),v(share,t(simple,present,normal)),sb('the group member',singular),o('a residential address with the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean">
+        <text>
+          <base>the group member is the person's other relative</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s other relative'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b34" type="boolean">
+        <text>
+          <base>the group member is related to the person</base>
+          <parse>s(ver('10.4.5.40'),v(relate,t(simple,present,normal)),ob('the group member',singular),o('to the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b52" type="boolean">
+        <text>
+          <base>the group member is the person's biological child</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s biological child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b53" type="boolean">
+        <text>
+          <base>the group member is the person's adopted child</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s adopted child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b54" type="boolean">
+        <text>
+          <base>the group member is the person's step-child</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s step-child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b55" type="boolean">
+        <text>
+          <base>the group member is the person's biological parent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s biological parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b56" type="boolean">
+        <text>
+          <base>the group member is the person's adopted parent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s adopted parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b57" type="boolean">
+        <text>
+          <base>the group member is the person's step-parent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s step-parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b58" type="boolean">
+        <text>
+          <base>the group member is the person's biological sibling</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s biological sibling'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b59" type="boolean">
+        <text>
+          <base>the group member is the person's adopted sibling</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s adopted sibling'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b60" type="boolean">
+        <text>
+          <base>the group member is the person's step-sibling</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s step-sibling'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b62" type="boolean">
+        <text>
+          <base>the group member is the person's sibling</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s sibling'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b64" type="boolean">
+        <text>
+          <base>the group member is the person's tax dependent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s tax dependent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b65" type="boolean">
+        <text>
+          <base>the person expects to claim a personal exemption deduction for the group member for the benefit year</base>
+          <parse>s(ver('10.4.6.76'),v(expect,t(simple,present,normal)),sb('the person',singular),o('to claim a personal exemption deduction for the group member for the benefit year'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b66" type="boolean">
+        <text>
+          <base>the group member is the person's tax filer</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s tax filer'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b78" type="boolean">
+        <text>
+          <base>the group member lives with the person</base>
+          <parse>s(ver('10.4.6.76'),v(live,t(simple,present,normal)),sb('the group member',singular),o('with the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b79" type="boolean">
+        <text>
+          <base>the group member is the person's noncitizen sponsor</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s noncitizen sponsor'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b80" type="boolean">
+        <text>
+          <base>the group member is the person's sponsored noncitizen</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s sponsored noncitizen'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b83" type="boolean">
+        <text>
+          <base>the group member is absent from the person's residential address</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('absent from the person''s residential address'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b86" type="boolean">
+        <text>
+          <base>the group member will return to the person's residential address by the end of the month following the month in which the group member left</base>
+          <parse>s(ver('10.4.6.76'),v(return,t(simple,future,normal)),sb('the group member',plural),o('to the person''s residential address by the end of the month following the month in which the group member left'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b87" type="boolean">
+        <text>
+          <base>the group member is absent from the person's residential address to attend school</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('absent from the person''s residential address to attend school'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b88" type="boolean">
+        <text>
+          <base>the group member returns to the person's residential address for vacations, holidays, or some weekends</base>
+          <parse>s(ver('10.4.6.76'),v(return,t(simple,present,normal)),sb('the group member',singular),o('to the person''s residential address for vacations, holidays, or some weekends'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b91" type="boolean">
+        <text>
+          <base>the group member is absent from the person's residential address due to a duty assignment as a member of the armed forces on active duty</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('absent from the person''s residential address due to a duty assignment as a member of the armed forces on active duty'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b92" type="boolean">
+        <text>
+          <base>there is evidence that indicates that the group member should no longer be considered to be living at the person's residential address</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('evidence that indicates that the group member should no longer be considered to be living at the person''s residential address'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b99" type="boolean">
+        <text>
+          <base>the group member has primary responsibility for the person's care</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the group member',singular),o('primary responsibility for the person''s care'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b100" type="boolean">
+        <text>
+          <base>the group member's care is the primary responsibility of the person</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member''s care',singular),o('the primary responsibility of the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b103" type="boolean">
+        <text>
+          <base>the person has a court order or binding separation, divorce, or custody agreement establishing sole physical custody of the group member</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('a court order or binding separation, divorce, or custody agreement establishing sole physical custody of the group member'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b104" type="boolean">
+        <text>
+          <base>the group member has a court order or binding separation, divorce, or custody agreement establishing sole physical custody of the person</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the group member',singular),o('a court order or binding separation, divorce, or custody agreement establishing sole physical custody of the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b107" type="boolean">
+        <text>
+          <base>the group member is the parent with whom the person spends the most nights</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the parent with whom the person spends the most nights'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b118" type="boolean">
+        <text>
+          <base>the group member is the person's spouse's tax dependent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s spouse''s tax dependent'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+      <attribute name="b28" type="boolean">
+        <text>
+          <base>the group member is the person's resident spouse for the group member program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s resident spouse for the group member program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p139" type="currency">
+        <text>
+          <base>the group member's total monthly countable gross earned income for the person's financial group for the group member program</base>
+        </text>
+      </attribute>
+      <attribute name="p140" type="currency">
+        <text>
+          <base>the group member's total monthly countable gross unearned income for the person's financial group for the group member program</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="relatedparty" name="the related party" containment-relationship-id="personsrelatedparties" containment-parent-id="person" identifying-attribute-name="p70@02Common_CommonProps_xsrc" identifying-attribute-text="the related party's identifier" public-id="related-party">
+      <attribute name="p65" type="text" default-gender="generic" substitutable="true">
+        <text>
+          <base>the related party</base>
+        </text>
+      </attribute>
+      <attribute name="p66" type="text" public-name="i_rp_type">
+        <text>
+          <base>the related party's relationship to the person</base>
+        </text>
+      </attribute>
+      <attribute name="p67" type="date" public-name="i_rp_date-start">
+        <text>
+          <base>the start date for the related party's relationship to the person</base>
+        </text>
+      </attribute>
+      <attribute name="p68" type="date" public-name="i_rp_date-end">
+        <text>
+          <base>the end date for the related party's relationship to the person</base>
+        </text>
+      </attribute>
+      <attribute name="p69" type="text" public-name="i_rp_target-ID">
+        <text>
+          <base>the related party's target person's unique ID</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is active</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('active'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p70" type="text">
+        <text>
+          <base>the related party's identifier</base>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is customarily purchases food and prepares meals together</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('customarily purchases food and prepares meals together'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is spouse</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('spouse'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is under parental control</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('under parental control'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is has parental control</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('has parental control'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is foster child</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('foster child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is foster parent</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('foster parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is other relative</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('other relative'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is unrelated</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('unrelated'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p103" type="text" public-name="i_rp_ID">
+        <text>
+          <base>the related party's unique ID</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="b43" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is biological child</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('biological child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b44" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is adopted child</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('adopted child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b45" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is step-child</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('step-child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b46" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is biological parent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('biological parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b47" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is adopted parent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('adopted parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b48" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is step-parent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('step-parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b49" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is biological sibling</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('biological sibling'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b50" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is adopted sibling</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('adopted sibling'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b51" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is step-sibling</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('step-sibling'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b67" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is tax dependent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('tax dependent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b68" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is tax filer</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('tax filer'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b81" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is noncitizen sponsor</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('noncitizen sponsor'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b82" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is sponsored noncitizen</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('sponsored noncitizen'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b101" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is has primary responsibility for care</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('has primary responsibility for care'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b102" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is primarily responsible for care</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('primarily responsible for care'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b105" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is under sole custody</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('under sole custody'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b106" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is has sole custody</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('has sole custody'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b108" type="boolean">
+        <text>
+          <base>the related party's relationship to the person is spends most nights</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the related party''s relationship to the person',singular),o('spends most nights'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsaddress" name="the person's address" identifying-attribute-name="the_persons_address" identifying-attribute-text="the person's address" containment-relationship-id="personsaddresses" containment-parent-id="person" public-id="person-address">
+      <attribute name="p81" type="text" substitutable="true" default-gender="generic" public-name="the_persons_address">
+        <text>
+          <base>the person's address</base>
+        </text>
+      </attribute>
+      <attribute name="p82" type="text" public-name="i_per-addr_street">
+        <text>
+          <base>the person's address's street</base>
+        </text>
+      </attribute>
+      <attribute name="p83" type="text" public-name="i_per-addr_street2">
+        <text>
+          <base>the person's address's street 2</base>
+        </text>
+      </attribute>
+      <attribute name="p84" type="text" public-name="i_per-addr_city">
+        <text>
+          <base>the person's address's city</base>
+        </text>
+      </attribute>
+      <attribute name="p85" type="text" public-name="i_per-addr_state">
+        <text>
+          <base>the person's address's state</base>
+        </text>
+      </attribute>
+      <attribute name="p86" type="text" public-name="i_per-addr_zip">
+        <text>
+          <base>the person's address's postal code</base>
+        </text>
+      </attribute>
+      <attribute name="p87" type="date" public-name="i_per-addr_date-start">
+        <text>
+          <base>the person's address's start date</base>
+        </text>
+      </attribute>
+      <attribute name="p89" type="text" public-name="i_per-addr_type">
+        <text>
+          <base>the person's address's type</base>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" public-name="rb_per-addr_res-active">
+        <text>
+          <base>the person's address is the person's active residential address</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s address',singular),o('the person''s active residential address'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p98" type="text" public-name="i_per-addr_ID">
+        <text>
+          <base>the person's address's unique ID</base>
+        </text>
+      </attribute>
+      <attribute name="p99" type="text" public-name="i_per-addr_target-ID">
+        <text>
+          <base>the person's address's target address's unique ID</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p126" type="date" public-name="i_per-addr_date-end">
+        <text>
+          <base>the person's address's end date</base>
+        </text>
+      </attribute>
+      <attribute name="b84" type="boolean" public-name="rb_per-addr_absent">
+        <text>
+          <base>the person is absent from the person's address</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('absent from the person''s address'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b93" type="boolean" public-name="i_per-addr_evidence-not-there">
+        <text>
+          <base>there is evidence that indicates that the person should no longer be considered to be living at the person's address</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('evidence that indicates that the person should no longer be considered to be living at the person''s address'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="address" name="the address" identifying-attribute-name="p96@02Common_CommonProps_xsrc" identifying-attribute-text="the address" containment-relationship-id="addresses" containment-parent-id="global" public-id="address">
+      <attribute name="p96" type="text" substitutable="true" default-gender="generic">
+        <text>
+          <base>the address</base>
+        </text>
+      </attribute>
+      <attribute name="p97" type="text" public-name="i_addr_ID">
+        <text>
+          <base>the address's unique ID</base>
+        </text>
+      </attribute>
+      <attribute name="p104" type="text" public-name="i_addr_street">
+        <text>
+          <base>the address's street</base>
+        </text>
+      </attribute>
+      <attribute name="p105" type="text" public-name="i_addr_apt">
+        <text>
+          <base>the address's street 2</base>
+        </text>
+      </attribute>
+      <attribute name="p106" type="text" public-name="i_addr_city">
+        <text>
+          <base>the address's city</base>
+        </text>
+      </attribute>
+      <attribute name="p107" type="text" public-name="i_addr_state-abbr">
+        <text>
+          <base>the address's state</base>
+        </text>
+      </attribute>
+      <attribute name="p108" type="text" public-name="i_addr_postal">
+        <text>
+          <base>the address's postal code</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsabsence" name="the person's absence" identifying-attribute-name="the_persons_absence" identifying-attribute-text="the person's absence" containment-relationship-id="absencesfromthepersonsaddress" containment-parent-id="personsaddress">
+      <attribute name="p121" type="text" substitutable="true" public-name="the_persons_absence">
+        <text>
+          <base>the person's absence</base>
+        </text>
+      </attribute>
+      <attribute name="p122" type="date" public-name="i_per-abs_date-end">
+        <text>
+          <base>the person's absence's end date</base>
+        </text>
+      </attribute>
+      <attribute name="p123" type="date" public-name="i_per-abs_date-start">
+        <text>
+          <base>the person's absence's start date</base>
+        </text>
+      </attribute>
+      <attribute name="p124" type="text" public-name="i_per-abs_ID">
+        <text>
+          <base>the person's absence's unique ID</base>
+        </text>
+      </attribute>
+      <attribute name="p125" type="text" public-name="i_per-abs_type">
+        <text>
+          <base>the person's absence's type</base>
+        </text>
+      </attribute>
+      <attribute name="p127" type="date">
+        <text>
+          <base>the end of the month following the month in which the person's absence began</base>
+        </text>
+      </attribute>
+      <attribute name="b90" type="boolean" public-name="i_per-abs_returnsOccasionally">
+        <text>
+          <base>the person returns during the person's absence for vacations, holidays, or some weekends</base>
+          <parse>s(ver('10.4.6.76'),v(return,t(simple,present,normal)),sb('the person',singular),o('during the person''s absence for vacations, holidays, or some weekends'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b110" type="boolean" public-name="rb_per-abs_reason-active-duty">
+        <text>
+          <base>the person's absence is due to a duty assignment as a member of the armed forces on active duty</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s absence',singular),o('due to a duty assignment as a member of the armed forces on active duty'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b111" type="boolean" public-name="i_per-abs_reason-school">
+        <text>
+          <base>the person's absence is for school</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s absence',singular),o('for school'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personstransfer" name="the person's transfer" containment-relationship-id="personstransfers" containment-parent-id="person" identifying-attribute-name="p129@02Common_CommonProps_xsrc" identifying-attribute-text="the person's transfer">
+      <attribute name="p129" type="text" substitutable="true">
+        <text>
+          <base>the person's transfer</base>
+        </text>
+      </attribute>
+      <attribute name="p130" type="text" public-name="i_trn_ID">
+        <text>
+          <base>the person's transfer's unique ID</base>
+        </text>
+      </attribute>
+      <attribute name="p131" type="date" public-name="i_trn_date">
+        <text>
+          <base>the person's transfer's transfer date</base>
+        </text>
+      </attribute>
+      <attribute name="p132" type="currency" public-name="i_trn_value">
+        <text>
+          <base>the transferred value for the person's transfer</base>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="relatedparty" text="the person's related parties" relationship-id="personsrelatedparties" reverse-relationship-id="relatedpartyssourceperson" reverse-text="the related party's source person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" silent-if-known="true" invisible-if-known="true" />
+    <relationship source="relatedparty" target="person" is-containment="false" public-id="" reverse-public-id="" text="the related party's target person" relationship-id="relatedpartystargetperson" reverse-relationship-id="personsrepresentationsasrelatedparties" reverse-text="the person's representations as related parties" type="ManyToMany" is-computed="false" silent-if-known="true" invisible-if-known="true" />
+    <relationship source="person" target="personsaddress" text="the person's addresses" relationship-id="personsaddresses" reverse-relationship-id="personsaddressperson" reverse-text="the person's address' person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="global" target="address" text="the addresses" relationship-id="addresses" reverse-relationship-id="global_addresses_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsaddress" target="address" is-containment="false" public-id="" reverse-public-id="" text="the person's address's target address" relationship-id="personsaddressstargetaddress" reverse-relationship-id="addressstargetaddresses" reverse-text="the address's target addresses" type="ManyToMany" is-computed="false" silent-if-known="true" invisible-if-known="true" />
+    <relationship source="personsaddress" target="personsabsence" text="the absences from the person's address" relationship-id="absencesfromthepersonsaddress" reverse-relationship-id="personsabsencesaddress" reverse-text="the person's absence's address" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personstransfer" text="the person's transfers" relationship-id="personstransfers" reverse-relationship-id="personstransfersperson" reverse-text="the person's transfer's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personstransfer" target="personstransfer" is-containment="false" public-id="" reverse-public-id="" text="the transfers occurring during the same month as the person's transfer" relationship-id="transfersoccurringduringthesamemonthasthepersonstransfer" reverse-relationship-id="personstransfer_transfersoccurringduringthesamemonthasthepersonstransfer_rev" reverse-text="" type="ManyToMany" is-computed="false" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

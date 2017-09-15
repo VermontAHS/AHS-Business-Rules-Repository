@@ -1,0 +1,2129 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity ref="global">
+      <attribute name="b15" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it is before the month of application</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('before the month of application'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it is the first day of the current month</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the first day of the current month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b58" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it is the month of application</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the month of application'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b82" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it is before the first day of the second month following the month of publication of the revised annual FPL</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('before the first day of the second month following the month of publication of the revised annual FPL'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p6" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the first day of the application month</base>
+        </text>
+      </attribute>
+      <attribute name="p8" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the first day of the current month</base>
+        </text>
+      </attribute>
+      <attribute name="p9" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the first day of the next month</base>
+        </text>
+      </attribute>
+      <attribute name="p15" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the application date</base>
+        </text>
+      </attribute>
+      <attribute name="p30" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the date in the current month after which changes to QHP eligibility are effective on the first day of the month after the following month</base>
+        </text>
+      </attribute>
+      <attribute name="p31" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the last day of the current month</base>
+        </text>
+      </attribute>
+      <attribute name="p32" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the year for the calculation date</base>
+        </text>
+      </attribute>
+      <attribute name="p33" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the month for the calculation date</base>
+        </text>
+      </attribute>
+      <attribute name="p34" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the day of the month after which changes to QHP eligibility are effective on the first day of the month after the following month</base>
+        </text>
+      </attribute>
+      <attribute name="p35" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the 15th day of the current month</base>
+        </text>
+      </attribute>
+      <attribute name="p39" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the last day of the application month</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program uses MAGI-based Medicaid methodologies</base>
+          <parse>s(ver('10.4.6.76'),v(use,t(simple,present,normal)),sb('the program',singular),o('MAGI-based Medicaid methodologies'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b2" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program uses MAGI methodologies</base>
+          <parse>s(ver('10.4.6.76'),v(use,t(simple,present,normal)),sb('the program',singular),o('MAGI methodologies'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is a MCA program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('a MCA program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person met the nonfinancial requirements for the program during the three months preceding the month of application</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,past,normal)),sb('the person',plural),o('the nonfinancial requirements for the program during the three months preceding the month of application'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all the non-financial eligibility requirements for the program</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the non-financial eligibility requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it is the case that the person incurred medical expenses and met the nonfinancial requirements for the program during the month</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the person incurred medical expenses and met the nonfinancial requirements for the program during the month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person passes the absolute resource test for the program during the month</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the absolute resource test for the program during the month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person passes the absolute resource test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the absolute resource test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person has excess resources for the application month for the program</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('excess resources for the application month for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is a CSR program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('a CSR program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b50" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person met the nonfinancial requirements for the program during the month</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,past,normal)),sb('the person',plural),o('the nonfinancial requirements for the program during the month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b53" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is the eligibility group with the highest income standard under which the person may be determined eligible using MAGI-based methodologies</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('the eligibility group with the highest income standard under which the person may be determined eligible using MAGI-based methodologies'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b54" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all the categorical requirements for the program</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the categorical requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b61" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is an adjusted net income limit test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('an adjusted net income limit test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b62" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program should be considered when determining the highest income standard under which the person may be determined eligible using MAGI-based methodologies</base>
+          <parse>s(ver('10.4.6.76'),v(consider+should,t(simple,modal,normal)),ob('the program',singular),o('when determining the highest income standard under which the person may be determined eligible using MAGI-based methodologies'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b63" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it is the case that all of the person's financial responsibility group's unearned income for the program is from sources that give assistance based on financial need</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that all of the person''s financial responsibility group''s unearned income for the program is from sources that give assistance based on financial need'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b65" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it is the case that all of the person's unearned income for the program is from sources that give assistance based on financial need</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that all of the person''s unearned income for the program is from sources that give assistance based on financial need'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b68" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is APTC</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('APTC'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b69" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is MCA-Pregnant</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MCA-Pregnant'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b70" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is MCA-Child</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MCA-Child'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b71" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is MCA-Adult</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MCA-Adult'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b72" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is VPR</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('VPR'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b79" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program uses MABD-based Medicaid methodologies</base>
+          <parse>s(ver('10.4.6.76'),v(use,t(simple,present,normal)),sb('the program',singular),o('MABD-based Medicaid methodologies'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b80" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is a MABD program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('a MABD program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b81" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is a MSP program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('a MSP program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b84" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is SMG-FPS</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('SMG-FPS'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p7" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the first day of the earliest month in which the person incurred medical expenses and met the nonfinancial requirements for the program during the three months preceding the month of application</base>
+        </text>
+      </attribute>
+      <attribute name="p10" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's excess resource amount for the application month for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p11" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the total countable resources for the person's financial group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p12" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the countable resource limit for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p13" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the start of the person's spenddown accounting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p14" type="number" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the number of months in the person's spenddown accounting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p17" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the amount by which the total adjusted net income for the person's financial group is less than the adjusted net income limit for the budgeting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p18" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the adjusted net income limit for the budgeting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p19" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the total adjusted net income for the person's financial group for the budgeting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p20" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the total adjusted net income for the person's financial group for the accounting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p21" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the applicable income maximum for the person's financial group for the accounting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p22" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the end of the person's spenddown accounting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p25" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the latter of either the date of application or the first day of the accounting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p36" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the adjusted net income FPL percentage limit for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p43" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>5 percent of the FPL for the person's applicable family size for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p44" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the annual FPL for the person's need group for the program</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b3" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person resides with a parent or caretaker who is considered a resident of Vermont under HBEE 21.06(a)</base>
+          <parse>s(ver('10.4.6.76'),v(reside,t(simple,present,normal)),sb('the person',singular),o('with a parent or caretaker who is considered a resident of Vermont under HBEE 21.06(a)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 21.06(a) is satisfied for the person</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 21.06(a)',singular),o('for the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is a parent whose own child is living in the household</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('a parent whose own child is living in the household'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b34" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is a child or pregnant woman who is exempt from the five-year bar under HBEE 17.03(c)(6)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('a child or pregnant woman who is exempt from the five-year bar under HBEE 17.03(c)(6)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 17.03(c)(6) applies to the person</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 17.03(c)(6)',singular),o('to the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 17.03(c)(6) is satisfied for the person</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.03(c)(6)',singular),o('for the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b49" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person incurred medical expenses during the month</base>
+          <parse>s(ver('10.4.6.76'),v(incur,t(simple,past,normal)),sb('the person',plural),o('medical expenses during the month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b51" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it is after the point in the month after which changes to QHP eligibility are effective on the first day of the month after the following month</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('after the point in the month after which changes to QHP eligibility are effective on the first day of the month after the following month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b52" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it is after the 15th day of the current month</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('after the 15th day of the current month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b76" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it is the case that the person applied for Medicaid after the person's pregnancy ended</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the person applied for Medicaid after the person''s pregnancy ended'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b77" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person was receiving Medicaid when the person's pregnancy ended</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person',singular),o('receiving Medicaid when the person''s pregnancy ended'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b78" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is currently receiving Medicaid benefits</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('currently receiving Medicaid benefits'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b86" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets the categorical eligibility requirements for MABD</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the categorical eligibility requirements for MABD'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b87" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is receiving health benefits from another state</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('receiving health benefits from another state'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p45" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the date the person's pregnancy ends</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the group member" id="groupmember" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+      <attribute name="b6" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member lives with the person</base>
+          <parse>s(ver('10.4.6.76'),v(live,t(simple,present,normal)),sb('the group member',singular),o('with the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is considered to be the person's parent or caretaker relative under HBEE 3.00</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the group member',singular),o('to be the person''s parent or caretaker relative under HBEE 3.00'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's child</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s child'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the group member program" id="groupmemberprogram" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+      <attribute name="b64" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is in the person's financial group for the group member program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('in the person''s financial group for the group member program'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's income" id="personsincome" containment-relationship-id="personsincomes" containment-parent-id="person">
+      <attribute name="b67" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is assistance based on financial need</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('assistance based on financial need'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the income program" id="incomeprogram" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+      <attribute name="b66" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is considered unearned income for the income program</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person''s income',singular),o('unearned income for the income program'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's expense" id="personsexpense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+      <attribute name="b13" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is active during the current month</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('active during the current month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is a medical expense</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a medical expense'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is active</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('active'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense was paid after the application date</base>
+          <parse>s(ver('10.4.6.76'),v(pay,t(simple,past,normal)),ob('the person''s expense',singular),o('after the application date'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b41" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is a loan</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a loan'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b42" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is an allowable medical expense under HBEE 30.06</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable medical expense under HBEE 30.06'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b48" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it is the case that the service provider for the person's expense has confirmed that the unpaid liability has not been forgiven</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the service provider for the person''s expense has confirmed that the unpaid liability has not been forgiven'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b85" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense has been incurred</base>
+          <parse>s(ver('10.4.6.76'),v(incur,t(simple,present,perfect)),ob('the person''s expense',singular))</parse>
+        </text>
+      </attribute>
+      <attribute name="p24" type="date" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the date the person's expense was paid</base>
+        </text>
+      </attribute>
+      <attribute name="p28" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the latest bill date for the person's expense</base>
+        </text>
+      </attribute>
+      <attribute name="p29" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the date the service provider for the person's expense forgives the unpaid liability</base>
+        </text>
+      </attribute>
+      <attribute name="p48" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's expense start date</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the expense program" id="expenseprogram" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+      <attribute name="b28" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is for the accounting period for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('for the accounting period for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b38" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense was incurred during the accounting period for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(incur,t(simple,past,normal)),ob('the person''s expense',singular),o('during the accounting period for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b39" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense was paid during the accounting period for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(pay,t(simple,past,normal)),ob('the person''s expense',singular),o('during the accounting period for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b43" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense is a loan that was used to pay for an allowable medical expenses under HBEE 30.06 that was incurred before or during the accounting period for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a loan that was used to pay for an allowable medical expenses under HBEE 30.06 that was incurred before or during the accounting period for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b44" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense was incurred before the accounting period for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(incur,t(simple,past,normal)),ob('the person''s expense',singular),o('before the accounting period for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b45" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's expense was incurred within six months of the latter of either the date of application or the first day of the accounting period for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(incur,t(simple,past,normal)),ob('the person''s expense',singular),o('within six months of the latter of either the date of application or the first day of the accounting period for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b46" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there is a bill for the person's expense that is dated within 90 days of the latter of either the date of application or the first day of the accounting period for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',singular),o('a bill for the person''s expense that is dated within 90 days of the latter of either the date of application or the first day of the accounting period for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b47" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>it is the case that the service provider for the person's expense has confirmed that the unpaid liability is not expected to be forgiven at any time within the accounting period for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the service provider for the person''s expense has confirmed that the unpaid liability is not expected to be forgiven at any time within the accounting period for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p26" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the number of months between the date the person's expense was incurred and the latter of either the date of application or the first day of the accounting period for the expense program</base>
+        </text>
+      </attribute>
+      <attribute name="p27" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the number of days between the bill for the person's expense and the latter of either the date of application or the first day of the accounting period for the expense program</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's resource" id="personsresource" containment-relationship-id="personsresources" containment-parent-id="person">
+      <attribute name="b20" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's resource is excludable under HBEE 29.08(c)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('excludable under HBEE 29.08(c)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's resource is excluded under HBEE 29.08(c)</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('under HBEE 29.08(c)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's resource is active</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('active'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p16" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's resource</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the resource program" id="resourceprogram" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+      <attribute name="b24" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's resource is excludable for the resource program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('excludable for the resource program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's resource is excluded for the resource program</base>
+          <parse>s(ver('10.4.6.76'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('for the resource program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's resource became excludable for the resource program after the application date</base>
+          <parse>s(ver('10.4.6.76'),v(become,t(simple,past,normal)),sb('the person''s resource',plural),o('excludable for the resource program after the application date'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's resource is a burial fund that is excludable under HBEE 29.08(c) during the accounting period for the resource program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('a burial fund that is excludable under HBEE 29.08(c) during the accounting period for the resource program'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the existing benefit" id="existingbenefit" containment-relationship-id="existingbenefitplansexistingbenefits" containment-parent-id="existingbenefitplan">
+      <attribute name="b88" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the existing benefit is active</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the existing benefit',singular),o('active'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b89" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the existing benefit is eligible</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the existing benefit',singular),o('eligible'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b90" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the existing benefit is enrolled</base>
+          <parse>s(ver('10.4.6.76'),v(enroll,t(simple,present,normal)),ob('the existing benefit',singular))</parse>
+        </text>
+      </attribute>
+      <attribute name="b91" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the existing benefit is from this state</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the existing benefit',singular),o('from this state'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b92" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the existing benefit is a health benefit</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the existing benefit',singular),o('a health benefit'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's transfer" id="personstransfer" containment-relationship-id="personstransfers" containment-parent-id="person">
+      <attribute name="b55" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer occurred after the application month</base>
+          <parse>s(ver('10.4.6.76'),v(occur,t(simple,past,normal)),sb('the person''s transfer',plural),o('after the application month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b56" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer occurred during the current month</base>
+          <parse>s(ver('10.4.6.76'),v(occur,t(simple,past,normal)),sb('the person''s transfer',plural),o('during the current month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b57" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's transfer occurred prior to the current month</base>
+          <parse>s(ver('10.4.6.76'),v(occur,t(simple,past,normal)),sb('the person''s transfer',plural),o('prior to the current month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p37" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the first day of the transfer month for the person's transfer</base>
+        </text>
+      </attribute>
+      <attribute name="p38" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's transfer's transfer date</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the poverty guideline" id="povertyguideline" containment-relationship-id="povertyguidelines" containment-parent-id="global">
+      <attribute name="b83" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the poverty guideline is active</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the poverty guideline',singular),o('active'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p46" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the first day of the second month following the poverty guideline's start date</base>
+        </text>
+      </attribute>
+      <attribute name="p47" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline's start date</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the existing benefit plan" id="existingbenefitplan" containment-relationship-id="existingbenefitplans" containment-parent-id="global" />
+  </entities>
+  <relationships>
+    <relationship type="ManyToMany" relationship-id="groupmemberscontainingpersonsprogramforthegroupmemberprogram" reverse-relationship-id="personscontainedgroupmemberprogramsfortheprogram" text="the group member's containing person's program for the group member program" reverse-text="the person's contained group member programs for the program" source="groupmemberprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="transfersoccurringduringthesamemonthasthepersonstransfer" reverse-relationship-id="personstransfer_transfersoccurringduringthesamemonthasthepersonstransfer_rev" text="the transfers occurring during the same month as the person's transfer" source="personstransfer" target="personstransfer" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="groupmembersprogramforthegroupmemberprogram" reverse-relationship-id="personsrepresentativegroupmemberprogramsfortheprogram" text="the group member's program for the group member program" reverse-text="the person's representative group member programs for the program" source="groupmemberprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="expensesthatwerepaidbythepersonsexpense" reverse-relationship-id="expensethatpaidthepersonsexpense" text="the expenses that were paid by the person's expense" reverse-text="the expense that paid the person's expense" source="personsexpense" target="personsexpense" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="personsprogramfortheresourceprogram" reverse-relationship-id="personsresourcesfortheprogram" text="the person's program for the resource program" reverse-text="the person's resources for the program" source="resourceprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="existingbenefitplansexistingbenefits" reverse-relationship-id="existingbenefitsplan" text="the existing benefit plan's existing benefits" reverse-text="the existing benefit's plan" source="existingbenefitplan" target="existingbenefit" is-implicit="false" is-containment="true" />
+    <relationship type="ManyToMany" relationship-id="personsprogramfortheexpenseprogram" reverse-relationship-id="personsexpensesfortheprogram" text="the person's program for the expense program" reverse-text="the person's expenses for the program" source="expenseprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="personsprogramfortheincomeprogram" reverse-relationship-id="personsincomesfortheprogram" text="the person's program for the income program" reverse-text="the person's incomes for the program" source="incomeprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" text="the person's resource's resource programs" reverse-text="the person's resource for the resource program" source="personsresource" target="resourceprogram" is-implicit="false" is-containment="true" />
+    <relationship type="ManyToMany" relationship-id="groupmembersrepresentativeperson" reverse-relationship-id="personsrepresentationsasagroupmember" text="the group member's representative person" reverse-text="the person's representations as a group member" source="groupmember" target="person" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" text="the group member's group member programs" reverse-text="the group member program's group member" source="groupmember" target="groupmemberprogram" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" text="the person's expense's expense programs" reverse-text="the person's expense for the expense program" source="personsexpense" target="expenseprogram" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" text="the person's income's income programs" reverse-text="the person's income for the income program" source="personsincome" target="incomeprogram" is-implicit="false" is-containment="true" />
+    <relationship type="ManyToMany" relationship-id="personsexistingbenefits" reverse-relationship-id="existingbenefitsrecipients" text="the person's existing benefits" reverse-text="the existing benefit's recipients" source="person" target="existingbenefit" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" text="the person's group members" reverse-text="the group member's containing person" source="person" target="groupmember" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="existingbenefitplans" reverse-relationship-id="global_existingbenefitplans_rev" text="the existing benefit plans" source="global" target="existingbenefitplan" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="povertyguidelines" reverse-relationship-id="global_povertyguidelines_rev" text="the poverty guidelines" source="global" target="povertyguideline" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personstransfers" reverse-relationship-id="personstransfersperson" text="the person's transfers" reverse-text="the person's transfer's person" source="person" target="personstransfer" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" text="the person's resources" reverse-text="the person's resource's person" source="person" target="personsresource" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" text="the person's expenses" reverse-text="the person's expense's person" source="person" target="personsexpense" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" text="the person's incomes" reverse-text="the person's income's person" source="person" target="personsincome" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="the program uses MAGI-based Medicaid methodologies" ruleburst="true" concludes="b1" folder="2" source-offset="36">
+      <rule-xml>
+        <conclude attr-id="b1" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b8" />
+              <attribute attr-id="b84" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the program uses MAGI methodologies" ruleburst="true" concludes="b2" folder="2" source-offset="162">
+      <rule-xml>
+        <conclude attr-id="b2" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b68" />
+              <attribute attr-id="b31" />
+              <attribute attr-id="b72" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="the program uses MABD-based Medicaid methodologies" ruleburst="true" concludes="b79" folder="2" source-offset="299">
+      <rule-xml>
+        <conclude attr-id="b79" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b80" />
+              <attribute attr-id="b81" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="the program is the eligibility group with the highest income standard under which the person may be determined eligible using MAGI-based methodologies" ruleburst="true" concludes="b53" folder="2" source-offset="530">
+      <rule-xml>
+        <conclude attr-id="b53" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b62" silent="true" invisible="true" />
+              <attribute attr-id="b54" />
+              <attribute attr-id="b61" silent="true" invisible="true" />
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <for-all scope-id="the other program">
+                  <relationship relationship-id="personsprograms" target-entity-id="program" />
+                  <or>
+                    <instance-equals>
+                      <scope-ref id="the other program" />
+                      <scope-ref id="program0" />
+                    </instance-equals>
+                    <not>
+                      <attribute attr-id="b62" silent="true" invisible="true" />
+                    </not>
+                    <and>
+                      <attribute attr-id="b62" silent="true" invisible="true" />
+                      <or>
+                        <not>
+                          <attribute attr-id="b54" silent-if-true="true" invisible-if-true="true" />
+                        </not>
+                        <not>
+                          <scope-for scope-ref="program0" target-entity-id="program">
+                            <attribute attr-id="b61" silent="true" invisible="true" />
+                          </scope-for>
+                        </not>
+                        <and>
+                          <scope-for scope-ref="program0" target-entity-id="program">
+                            <attribute attr-id="b61" silent="true" invisible="true" />
+                          </scope-for>
+                          <less-than>
+                            <attribute attr-id="p36" />
+                            <scope-for scope-ref="program0" target-entity-id="program">
+                              <attribute attr-id="p36" />
+                            </scope-for>
+                          </less-than>
+                        </and>
+                      </or>
+                    </and>
+                  </or>
+                </for-all>
+              </for>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="the program should be considered when determining the highest income standard under which the person may be determined eligible using MAGI-based methodologies" ruleburst="true" concludes="b62" folder="2" source-offset="2225">
+      <rule-xml>
+        <conclude attr-id="b62" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b69" />
+              <attribute attr-id="b70" />
+              <attribute attr-id="b71" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="5 percent of the FPL for the person's applicable family size for the program " ruleburst="true" concludes="p43 = p44 * 0.05" folder="2" source-offset="2522">
+      <rule-xml>
+        <conclude attr-id="p43" entity-id="program" scope-id="program0">
+          <value>
+            <multiply>
+              <attribute attr-id="p44" />
+              <number-value>0.05</number-value>
+            </multiply>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="the person meets the categorical eligibility requirements for MABD" ruleburst="true" concludes="b86" folder="4" source-offset="3067">
+      <rule-xml>
+        <conclude attr-id="b86" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <exists scope-id="program0">
+              <relationship relationship-id="personsprograms" target-entity-id="program" />
+              <and>
+                <attribute attr-id="b80" silent="true" invisible="true" />
+                <or>
+                  <not>
+                    <attribute attr-id="b80" silent="true" invisible="true" />
+                  </not>
+                  <and>
+                    <attribute attr-id="b54" />
+                    <or>
+                      <not>
+                        <attribute attr-id="b54" />
+                      </not>
+                      <attribute attr-id="b11" />
+                    </or>
+                  </and>
+                </or>
+              </and>
+            </exists>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="7" name="the person is receiving health benefits from another state" ruleburst="true" concludes="b87" folder="4" source-offset="3599">
+      <rule-xml>
+        <conclude attr-id="b87" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <exists scope-id="existingbenefit0">
+              <relationship relationship-id="personsexistingbenefits" target-entity-id="existingbenefit" />
+              <and>
+                <attribute attr-id="b88" />
+                <attribute attr-id="b89" />
+                <attribute attr-id="b90" />
+                <not>
+                  <attribute attr-id="b91" />
+                </not>
+                <attribute attr-id="b92" />
+              </and>
+            </exists>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="8" name="the person resides with a parent or caretaker who is considered a resident of Vermont under HBEE 21.06(a)" ruleburst="true" concludes="b3" folder="5" source-offset="4013">
+      <rule-xml>
+        <conclude attr-id="b3" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <exists scope-id="groupmember0">
+              <relationship relationship-id="personsgroupmembers" target-entity-id="groupmember" />
+              <and>
+                <attribute attr-id="b9" />
+                <attribute attr-id="b6" />
+                <for scope-id="the caretaker">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <attribute attr-id="b7" />
+                </for>
+              </and>
+            </exists>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="9" name="it is before the month of application" ruleburst="true" concludes="b15" folder="6" source-offset="4612">
+      <rule-xml>
+        <conclude attr-id="b15" entity-id="global" scope-id="global0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <temporal-before>
+              <attribute attr-id="p6" />
+            </temporal-before>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="10" name="the person met the nonfinancial requirements for the program during the three months preceding the month of application" ruleburst="true" concludes="b10" folder="6" source-offset="4737">
+      <rule-xml>
+        <conclude attr-id="b10" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <interval-sometimes>
+              <add-months>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p6" />
+                </scope-for>
+                <negate>
+                  <number-value>3</number-value>
+                </negate>
+              </add-months>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p6" />
+              </scope-for>
+              <attribute attr-id="b11" />
+            </interval-sometimes>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="11" name="the first day of the earliest month in which the person incurred medical expenses and met the nonfinancial requirements for the program during the three months preceding the month of application " ruleburst="true" concludes="p7 = WhenNext(AddMonths(p6,-3),b12)" folder="6" source-offset="5108">
+      <rule-xml>
+        <conclude attr-id="p7" entity-id="program" scope-id="program0">
+          <value>
+            <when-next>
+              <add-months>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p6" />
+                </scope-for>
+                <negate>
+                  <number-value>3</number-value>
+                </negate>
+              </add-months>
+              <attribute attr-id="b12" />
+            </when-next>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="12" name="it is the case that the person incurred medical expenses and met the nonfinancial requirements for the program during the month" ruleburst="true" concludes="b12" folder="6" source-offset="5540">
+      <rule-xml>
+        <conclude attr-id="b12" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <for>
+                <relationship relationship-id="programsperson" target-entity-id="person" />
+                <attribute attr-id="b49" />
+              </for>
+              <attribute attr-id="b50" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="13" name="the person incurred medical expenses during the month" ruleburst="true" concludes="b49" folder="6" source-offset="5826">
+      <rule-xml>
+        <conclude attr-id="b49" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <exists scope-id="personsexpense0">
+              <relationship relationship-id="personsexpenses" target-entity-id="personsexpense" />
+              <and>
+                <attribute attr-id="b13" />
+                <attribute attr-id="b14" />
+              </and>
+            </exists>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="14" name="the person met the nonfinancial requirements for the program during the month" ruleburst="true" concludes="b50" folder="6" source-offset="6070">
+      <rule-xml>
+        <conclude attr-id="b50" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <interval-sometimes>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p8" />
+              </scope-for>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p9" />
+              </scope-for>
+              <attribute attr-id="b11" />
+            </interval-sometimes>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="15" name="the person passes the absolute resource test for the program during the month" ruleburst="true" concludes="b16" folder="8" source-offset="6395">
+      <rule-xml>
+        <conclude attr-id="b16" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <interval-sometimes>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p8" />
+              </scope-for>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p9" />
+              </scope-for>
+              <attribute attr-id="b17" />
+            </interval-sometimes>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="16" name="the person has excess resources for the application month for the program" ruleburst="true" concludes="b18" folder="8" source-offset="6666">
+      <rule-xml>
+        <conclude attr-id="b18" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <interval-sometimes>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p6" />
+              </scope-for>
+              <add-months>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p6" />
+                </scope-for>
+                <number-value>1</number-value>
+              </add-months>
+              <not>
+                <attribute attr-id="b17" />
+              </not>
+            </interval-sometimes>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="17" name="the person's excess resource amount for the application month for the program " ruleburst="true" concludes="p10 = IntervalMinimum(p6,AddMonths(p6,1),p11 - p12)" folder="8" source-offset="6981">
+      <rule-xml>
+        <conclude attr-id="p10" entity-id="program" scope-id="program0">
+          <value>
+            <interval-minimum>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p6" />
+              </scope-for>
+              <add-months>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p6" />
+                </scope-for>
+                <number-value>1</number-value>
+              </add-months>
+              <minus>
+                <attribute attr-id="p11" />
+                <attribute attr-id="p12" />
+              </minus>
+            </interval-minimum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="18" name="the person's resource is a burial fund that is excludable under HBEE 29.08(c) during the accounting period for the resource program" ruleburst="true" concludes="b27" folder="8" source-offset="7356">
+      <rule-xml>
+        <conclude attr-id="b27" entity-id="resourceprogram" scope-id="resourceprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="program0">
+              <relationship relationship-id="personsprogramfortheresourceprogram" target-entity-id="program" />
+              <interval-sometimes>
+                <attribute attr-id="p13" />
+                <add-months>
+                  <attribute attr-id="p13" />
+                  <attribute attr-id="p14" />
+                </add-months>
+                <scope-for scope-ref="resourceprogram0" target-entity-id="resourceprogram">
+                  <for>
+                    <relationship relationship-id="personsresourcefortheresourceprogram" target-entity-id="personsresource" />
+                    <attribute attr-id="b20" />
+                  </for>
+                </scope-for>
+              </interval-sometimes>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="19" name="the person's resource is excludable under HBEE 29.08(c)" ruleburst="true" concludes="b20" folder="8" source-offset="7964">
+      <rule-xml>
+        <conclude attr-id="b20" entity-id="personsresource" scope-id="personsresource0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b21" />
+              <attribute attr-id="b22" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="20" name="the person's resource became excludable for the resource program after the application date" ruleburst="true" concludes="b26" folder="8" source-offset="8133">
+      <rule-xml>
+        <conclude attr-id="b26" entity-id="resourceprogram" scope-id="resourceprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <greater-than>
+              <when-next>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p15" />
+                </scope-for>
+                <attribute attr-id="b24" />
+              </when-next>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p15" />
+              </scope-for>
+            </greater-than>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="21" name="the person's resource is excludable for the resource program" ruleburst="true" concludes="b24" folder="8" source-offset="8377">
+      <rule-xml>
+        <conclude attr-id="b24" entity-id="resourceprogram" scope-id="resourceprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b25" />
+              <for>
+                <relationship relationship-id="personsresourcefortheresourceprogram" target-entity-id="personsresource" />
+                <attribute attr-id="b22" />
+              </for>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="22" name="the amount by which the total adjusted net income for the person's financial group is less than the adjusted net income limit for the budgeting period for the program " ruleburst="true" concludes="p17 = Maximum(p18 - p19,0)" folder="8" source-offset="8557">
+      <rule-xml>
+        <conclude attr-id="p17" entity-id="program" scope-id="program0">
+          <value>
+            <maximum>
+              <minus>
+                <attribute attr-id="p18" />
+                <attribute attr-id="p19" />
+              </minus>
+              <number-value>0</number-value>
+            </maximum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="23" name="the person's expense is for the accounting period for the expense program" ruleburst="true" concludes="b28" folder="8" source-offset="8948">
+      <rule-xml>
+        <conclude attr-id="b28" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="program0">
+              <relationship relationship-id="personsprogramfortheexpenseprogram" target-entity-id="program" />
+              <interval-sometimes>
+                <attribute attr-id="p13" />
+                <add-months>
+                  <attribute attr-id="p13" />
+                  <attribute attr-id="p14" />
+                </add-months>
+                <scope-for scope-ref="expenseprogram0" target-entity-id="expenseprogram">
+                  <for>
+                    <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                    <attribute attr-id="b29" />
+                  </for>
+                </scope-for>
+              </interval-sometimes>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="24" name="the person's expense was paid after the application date" ruleburst="true" concludes="b30" folder="8" source-offset="9616">
+      <rule-xml>
+        <conclude attr-id="b30" entity-id="personsexpense" scope-id="personsexpense0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <greater-than>
+              <attribute attr-id="p24" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p15" />
+              </scope-for>
+            </greater-than>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="25" name="the total adjusted net income for the person's financial group for the accounting period for the program " ruleburst="true" concludes="p20 = IntervalDailySumIf(p13,AddMonths(p13,p14),p19,b37)" folder="9" source-offset="9778">
+      <rule-xml>
+        <conclude attr-id="p20" entity-id="program" scope-id="program0">
+          <value>
+            <interval-daily-sum-if>
+              <attribute attr-id="p13" />
+              <add-months>
+                <attribute attr-id="p13" />
+                <attribute attr-id="p14" />
+              </add-months>
+              <attribute attr-id="p19" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="b37" />
+              </scope-for>
+            </interval-daily-sum-if>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="26" name="the applicable income maximum for the person's financial group for the accounting period for the program " ruleburst="true" concludes="p21 = IntervalDailySumIf(p13,AddMonths(p13,p14),p18,b37)" folder="9" source-offset="10351">
+      <rule-xml>
+        <conclude attr-id="p21" entity-id="program" scope-id="program0">
+          <value>
+            <interval-daily-sum-if>
+              <attribute attr-id="p13" />
+              <add-months>
+                <attribute attr-id="p13" />
+                <attribute attr-id="p14" />
+              </add-months>
+              <attribute attr-id="p18" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="b37" />
+              </scope-for>
+            </interval-daily-sum-if>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="27" name="the end of the person's spenddown accounting period for the program " ruleburst="true" concludes="p22 = AddDays(AddMonths(p13,p14),-1)" folder="9" source-offset="10891">
+      <rule-xml>
+        <conclude attr-id="p22" entity-id="program" scope-id="program0">
+          <value>
+            <add-days>
+              <add-months>
+                <attribute attr-id="p13" />
+                <attribute attr-id="p14" />
+              </add-months>
+              <negate>
+                <number-value>1</number-value>
+              </negate>
+            </add-days>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="28" name="the person's expense has been incurred" ruleburst="true" concludes="b85" folder="9" source-offset="11183">
+      <rule-xml>
+        <conclude attr-id="b85" entity-id="personsexpense" scope-id="personsexpense0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <temporal-on-or-after>
+              <attribute attr-id="p48" />
+            </temporal-on-or-after>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="29" name="the person's expense was incurred before the accounting period for the expense program" ruleburst="true" concludes="b44" folder="9" source-offset="11308">
+      <rule-xml>
+        <conclude attr-id="b44" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="program0">
+              <relationship relationship-id="personsprogramfortheexpenseprogram" target-entity-id="program" />
+              <less-than>
+                <scope-for scope-ref="expenseprogram0" target-entity-id="expenseprogram">
+                  <for>
+                    <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                    <attribute attr-id="p48" />
+                  </for>
+                </scope-for>
+                <attribute attr-id="p13" />
+              </less-than>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="30" name="the person's expense was incurred during the accounting period for the expense program" ruleburst="true" concludes="b38" folder="9" source-offset="11623">
+      <rule-xml>
+        <conclude attr-id="b38" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="program0">
+              <relationship relationship-id="personsprogramfortheexpenseprogram" target-entity-id="program" />
+              <and>
+                <greater-than-equals>
+                  <scope-for scope-ref="expenseprogram0" target-entity-id="expenseprogram">
+                    <for>
+                      <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                      <attribute attr-id="p48" />
+                    </for>
+                  </scope-for>
+                  <attribute attr-id="p13" />
+                </greater-than-equals>
+                <less-than-equals>
+                  <scope-for scope-ref="expenseprogram0" target-entity-id="expenseprogram">
+                    <for>
+                      <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                      <attribute attr-id="p48" />
+                    </for>
+                  </scope-for>
+                  <attribute attr-id="p22" />
+                </less-than-equals>
+              </and>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="31" name="the person's expense was paid during the accounting period for the expense program" ruleburst="true" concludes="b39" folder="9" source-offset="12060">
+      <rule-xml>
+        <conclude attr-id="b39" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="program0">
+              <relationship relationship-id="personsprogramfortheexpenseprogram" target-entity-id="program" />
+              <and>
+                <greater-than-equals>
+                  <scope-for scope-ref="expenseprogram0" target-entity-id="expenseprogram">
+                    <for>
+                      <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                      <attribute attr-id="p24" />
+                    </for>
+                  </scope-for>
+                  <attribute attr-id="p13" />
+                </greater-than-equals>
+                <less-than-equals>
+                  <scope-for scope-ref="expenseprogram0" target-entity-id="expenseprogram">
+                    <for>
+                      <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                      <attribute attr-id="p24" />
+                    </for>
+                  </scope-for>
+                  <attribute attr-id="p22" />
+                </less-than-equals>
+              </and>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="32" name="the person's expense is a loan that was used to pay for an allowable medical expenses under HBEE 30.06 that was incurred before or during the accounting period for the expense program" ruleburst="true" concludes="b43" folder="9" source-offset="12508">
+      <rule-xml>
+        <conclude attr-id="b43" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <for>
+                <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                <attribute attr-id="b41" />
+              </for>
+              <for scope-id="program0">
+                <relationship relationship-id="personsprogramfortheexpenseprogram" target-entity-id="program" />
+                <scope-for scope-ref="expenseprogram0" target-entity-id="expenseprogram">
+                  <for scope-id="personsexpense0">
+                    <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                    <exists scope-id="the paid expense">
+                      <relationship relationship-id="expensesthatwerepaidbythepersonsexpense" target-entity-id="personsexpense" />
+                      <and>
+                        <attribute attr-id="b42" />
+                        <less-than-equals>
+                          <attribute attr-id="p48" />
+                          <scope-for scope-ref="program0" target-entity-id="program">
+                            <attribute attr-id="p22" />
+                          </scope-for>
+                        </less-than-equals>
+                      </and>
+                    </exists>
+                  </for>
+                </scope-for>
+              </for>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="33" name="the person's expense was incurred within six months of the latter of either the date of application or the first day of the accounting period for the expense program" ruleburst="true" concludes="b45" folder="9" source-offset="13409">
+      <rule-xml>
+        <conclude attr-id="b45" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="program0">
+              <relationship relationship-id="personsprogramfortheexpenseprogram" target-entity-id="program" />
+              <less-than>
+                <scope-for scope-ref="expenseprogram0" target-entity-id="expenseprogram">
+                  <attribute attr-id="p26" />
+                </scope-for>
+                <number-value>6</number-value>
+              </less-than>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="34" name="the number of months between the date the person's expense was incurred and the latter of either the date of application or the first day of the accounting period for the expense program " ruleburst="true" concludes="p26 = MonthDifference(p48,InstanceValueIf(personsprogramfortheexpenseprogram,p25,true))" folder="9" source-offset="13888">
+      <rule-xml>
+        <conclude attr-id="p26" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <value>
+            <month-difference>
+              <for>
+                <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                <attribute attr-id="p48" />
+              </for>
+              <instance-value-if>
+                <relationship relationship-id="personsprogramfortheexpenseprogram" target-entity-id="program" />
+                <attribute attr-id="p25" />
+                <true-value />
+              </instance-value-if>
+            </month-difference>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="35" name="there is a bill for the person's expense that is dated within 90 days of the latter of either the date of application or the first day of the accounting period for the expense program" ruleburst="true" concludes="b46" folder="9" source-offset="14397">
+      <rule-xml>
+        <conclude attr-id="b46" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="program0">
+              <relationship relationship-id="personsprogramfortheexpenseprogram" target-entity-id="program" />
+              <less-than>
+                <scope-for scope-ref="expenseprogram0" target-entity-id="expenseprogram">
+                  <attribute attr-id="p27" />
+                </scope-for>
+                <number-value>90</number-value>
+              </less-than>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="36" name="the number of days between the bill for the person's expense and the latter of either the date of application or the first day of the accounting period for the expense program " ruleburst="true" concludes="p27 = DayDifference(p28,InstanceValueIf(personsprogramfortheexpenseprogram,p25,true))" folder="9" source-offset="14885">
+      <rule-xml>
+        <conclude attr-id="p27" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <value>
+            <day-difference>
+              <for>
+                <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                <attribute attr-id="p28" />
+              </for>
+              <instance-value-if>
+                <relationship relationship-id="personsprogramfortheexpenseprogram" target-entity-id="program" />
+                <attribute attr-id="p25" />
+                <true-value />
+              </instance-value-if>
+            </day-difference>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="37" name="the latter of either the date of application or the first day of the accounting period for the program " ruleburst="true" concludes="p25 = Maximum(p15,p13)" folder="9" source-offset="15393">
+      <rule-xml>
+        <conclude attr-id="p25" entity-id="program" scope-id="program0">
+          <value>
+            <maximum>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p15" />
+              </scope-for>
+              <attribute attr-id="p13" />
+            </maximum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="38" name="it is the case that the service provider for the person's expense has confirmed that the unpaid liability is not expected to be forgiven at any time within the accounting period for the expense program" ruleburst="true" concludes="b47" folder="9" source-offset="15629">
+      <rule-xml>
+        <conclude attr-id="b47" entity-id="expenseprogram" scope-id="expenseprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <for>
+                <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                <attribute attr-id="b48" />
+              </for>
+              <or>
+                <unknown>
+                  <for>
+                    <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                    <attribute attr-id="p29" />
+                  </for>
+                </unknown>
+                <uncertain>
+                  <for>
+                    <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                    <attribute attr-id="p29" />
+                  </for>
+                </uncertain>
+                <for scope-id="program0">
+                  <relationship relationship-id="personsprogramfortheexpenseprogram" target-entity-id="program" />
+                  <greater-than>
+                    <scope-for scope-ref="expenseprogram0" target-entity-id="expenseprogram">
+                      <for>
+                        <relationship relationship-id="personsexpensefortheexpenseprogram" target-entity-id="personsexpense" />
+                        <attribute attr-id="p29" />
+                      </for>
+                    </scope-for>
+                    <attribute attr-id="p22" />
+                  </greater-than>
+                </for>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="39" name="the person is a parent whose own child is living in the household" ruleburst="true" concludes="b32" folder="10" source-offset="16496">
+      <rule-xml>
+        <conclude attr-id="b32" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <exists scope-id="groupmember0">
+              <relationship relationship-id="personsgroupmembers" target-entity-id="groupmember" />
+              <and>
+                <attribute attr-id="b33" />
+                <attribute attr-id="b6" />
+              </and>
+            </exists>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="40" name="the person is a child or pregnant woman who is exempt from the five-year bar under HBEE 17.03(c)(6)" ruleburst="true" concludes="b34" folder="11" source-offset="16756">
+      <rule-xml>
+        <conclude attr-id="b34" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <attribute attr-id="b35" />
+              <attribute attr-id="b36" />
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="41" name="it is after the point in the month after which changes to QHP eligibility are effective on the first day of the month after the following month" ruleburst="true" concludes="b51" folder="12" source-offset="16986">
+      <rule-xml>
+        <conclude attr-id="b51" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <temporal-after>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p30" />
+                </scope-for>
+              </temporal-after>
+              <temporal-on-or-before>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p31" />
+                </scope-for>
+              </temporal-on-or-before>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="42" name="the date in the current month after which changes to QHP eligibility are effective on the first day of the month after the following month " ruleburst="true" concludes="p30 = MakeDate(p32,p33,p34)" folder="12" source-offset="17399">
+      <rule-xml>
+        <conclude attr-id="p30" entity-id="global" scope-id="global0">
+          <value>
+            <make-date>
+              <attribute attr-id="p32" />
+              <attribute attr-id="p33" />
+              <attribute attr-id="p34" />
+            </make-date>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="43" name="it is after the 15th day of the current month" ruleburst="true" concludes="b52" folder="12" source-offset="17788">
+      <rule-xml>
+        <conclude attr-id="b52" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <temporal-after>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p35" />
+                </scope-for>
+              </temporal-after>
+              <temporal-on-or-before>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p31" />
+                </scope-for>
+              </temporal-on-or-before>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="44" name="the 15th day of the current month " ruleburst="true" concludes="p35 = MakeDate(p32,p33,15)" folder="12" source-offset="17998">
+      <rule-xml>
+        <conclude attr-id="p35" entity-id="global" scope-id="global0">
+          <value>
+            <make-date>
+              <attribute attr-id="p32" />
+              <attribute attr-id="p33" />
+              <number-value>15</number-value>
+            </make-date>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="45" name="it is the month of application" ruleburst="true" concludes="b58" folder="13" source-offset="18167">
+      <rule-xml>
+        <conclude attr-id="b58" entity-id="global" scope-id="global0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <temporal-on-or-after>
+                <attribute attr-id="p6" />
+              </temporal-on-or-after>
+              <temporal-on-or-before>
+                <attribute attr-id="p39" />
+              </temporal-on-or-before>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="46" name="the last day of the application month " ruleburst="true" concludes="p39 = AddDays(AddMonths(MakeDate(ExtractYear(p15),ExtractMonth(p15),1),1),-1)" folder="13" source-offset="18378">
+      <rule-xml>
+        <conclude attr-id="p39" entity-id="global" scope-id="global0">
+          <value>
+            <add-days>
+              <add-months>
+                <make-date>
+                  <extract-year>
+                    <attribute attr-id="p15" />
+                  </extract-year>
+                  <extract-month>
+                    <attribute attr-id="p15" />
+                  </extract-month>
+                  <number-value>1</number-value>
+                </make-date>
+                <number-value>1</number-value>
+              </add-months>
+              <negate>
+                <number-value>1</number-value>
+              </negate>
+            </add-days>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="47" name="the person's transfer occurred after the application month" ruleburst="true" concludes="b55" folder="13" source-offset="18617">
+      <rule-xml>
+        <conclude attr-id="b55" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <greater-than-equals>
+              <attribute attr-id="p38" />
+              <add-months>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p6" />
+                </scope-for>
+                <number-value>1</number-value>
+              </add-months>
+            </greater-than-equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="48" name="the person's transfer occurred during the current month" ruleburst="true" concludes="b56" folder="13" source-offset="18804">
+      <rule-xml>
+        <conclude attr-id="b56" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <greater-than-equals>
+                <attribute attr-id="p38" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p8" />
+                </scope-for>
+              </greater-than-equals>
+              <less-than-equals>
+                <attribute attr-id="p38" />
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p31" />
+                </scope-for>
+              </less-than-equals>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="49" name="the person's transfer occurred prior to the current month" ruleburst="true" concludes="b57" folder="13" source-offset="19050">
+      <rule-xml>
+        <conclude attr-id="b57" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <less-than>
+              <attribute attr-id="p38" />
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <attribute attr-id="p8" />
+              </scope-for>
+            </less-than>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="50" name="the first day of the transfer month for the person's transfer " ruleburst="true" concludes="p37 = MakeDate(ExtractYear(p38),ExtractMonth(p38),1)" folder="13" source-offset="19205">
+      <rule-xml>
+        <conclude attr-id="p37" entity-id="personstransfer" scope-id="personstransfer0">
+          <value>
+            <make-date>
+              <extract-year>
+                <attribute attr-id="p38" />
+              </extract-year>
+              <extract-month>
+                <attribute attr-id="p38" />
+              </extract-month>
+              <number-value>1</number-value>
+            </make-date>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="51" name="the person's transfer (the other transfer) is a member of the transfers occurring during the same month as the person's transfer" ruleburst="true" concludes="IsMemberOf(&quot;personstransfer&quot;, &quot;the other transfer&quot;, transfersoccurringduringthesamemonthasthepersonstransfer)" folder="13" source-offset="19446">
+      <rule-xml>
+        <conclude-rel relationship-id="transfersoccurringduringthesamemonthasthepersonstransfer" source="personstransfer" source-scope-id="personstransfer0" target-scope-id="the other transfer">
+          <condition>
+            <equals>
+              <attribute attr-id="p37" />
+              <scope-for scope-ref="personstransfer0" target-entity-id="personstransfer">
+                <attribute attr-id="p37" />
+              </scope-for>
+            </equals>
+          </condition>
+        </conclude-rel>
+      </rule-xml>
+    </rule>
+    <rule id="52" name="it is the case that all of the person's financial responsibility group's unearned income for the program is from sources that give assistance based on financial need" ruleburst="true" concludes="b63" folder="14" source-offset="19869">
+      <rule-xml>
+        <conclude attr-id="b63" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for-all scope-id="groupmemberprogram0">
+              <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+              <or>
+                <not>
+                  <attribute attr-id="b64" />
+                </not>
+                <and>
+                  <attribute attr-id="b64" />
+                  <for scope-id="the member program">
+                    <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                    <attribute attr-id="b65" />
+                  </for>
+                </and>
+              </or>
+            </for-all>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="53" name="it is the case that all of the person's unearned income for the program is from sources that give assistance based on financial need" ruleburst="true" concludes="b65" folder="14" source-offset="20749">
+      <rule-xml>
+        <conclude attr-id="b65" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for-all scope-id="incomeprogram0">
+              <relationship relationship-id="personsincomesfortheprogram" target-entity-id="incomeprogram" />
+              <or>
+                <not>
+                  <attribute attr-id="b66" />
+                </not>
+                <and>
+                  <attribute attr-id="b66" />
+                  <for scope-id="personsincome0">
+                    <relationship relationship-id="personsincomefortheincomeprogram" target-entity-id="personsincome" />
+                    <attribute attr-id="b67" />
+                  </for>
+                </and>
+              </or>
+            </for-all>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="54" name="it is before the first day of the second month following the month of publication of the revised annual FPL" ruleburst="true" concludes="b82" folder="14" source-offset="21353">
+      <rule-xml>
+        <conclude attr-id="b82" entity-id="global" scope-id="global0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <exists scope-id="povertyguideline0">
+              <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+              <and>
+                <attribute attr-id="b83" />
+                <temporal-before>
+                  <attribute attr-id="p46" />
+                </temporal-before>
+              </and>
+            </exists>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="55" name="the first day of the second month following the poverty guideline's start date " ruleburst="true" concludes="p46 = AddMonths(MakeDate(ExtractYear(p47),ExtractMonth(p47),1),2)" folder="14" source-offset="21699">
+      <rule-xml>
+        <conclude attr-id="p46" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <value>
+            <add-months>
+              <make-date>
+                <extract-year>
+                  <attribute attr-id="p47" />
+                </extract-year>
+                <extract-month>
+                  <attribute attr-id="p47" />
+                </extract-month>
+                <number-value>1</number-value>
+              </make-date>
+              <number-value>2</number-value>
+            </add-months>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="56" name="it is the case that the person applied for Medicaid after the person's pregnancy ended" ruleburst="true" concludes="b76" folder="15" source-offset="21996">
+      <rule-xml>
+        <conclude attr-id="b76" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <not>
+                <attribute attr-id="b77" />
+              </not>
+              <not>
+                <unknown>
+                  <attribute attr-id="p45" />
+                </unknown>
+              </not>
+              <certain>
+                <attribute attr-id="p45" />
+              </certain>
+              <greater-than>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p15" />
+                </scope-for>
+                <attribute attr-id="p45" />
+              </greater-than>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="57" name="the person was receiving Medicaid when the person's pregnancy ended" ruleburst="true" concludes="b77" folder="15" source-offset="22396">
+      <rule-xml>
+        <conclude attr-id="b77" entity-id="person" scope-id="person0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <value-at>
+              <attribute attr-id="p45" />
+              <attribute attr-id="b78" />
+            </value-at>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="HBEE Map" parent="0" id="1" />
+    <folder text="Financial Methodologies" parent="1" id="2" />
+    <folder text="Program Eligibility" parent="1" id="3" />
+    <folder text="MABD Coverage Group" parent="3" id="4" />
+    <folder text="Requirement References" parent="1" id="5" />
+    <folder text="Retroactive Eligibility" parent="1" id="6" />
+    <folder text="Spenddowns" parent="1" id="7" />
+    <folder text="Resource Spenddowns" parent="7" id="8" />
+    <folder text="Income Spenddowns" parent="7" id="9" />
+    <folder text="Residency" parent="1" id="10" />
+    <folder text="Citizenship" parent="1" id="11" />
+    <folder text="Effective Dates" parent="1" id="12" />
+    <folder text="Transfers" parent="1" id="13" />
+    <folder text="Income" parent="1" id="14" />
+    <folder text="Demographics" parent="1" id="15" />
+  </rule-folders>
+</root>

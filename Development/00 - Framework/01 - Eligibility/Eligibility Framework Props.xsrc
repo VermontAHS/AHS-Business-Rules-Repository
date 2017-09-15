@@ -1,0 +1,1699 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+      <attribute name="p6" type="number" display-unformatted="true">
+        <text>
+          <base>the number of people</base>
+        </text>
+      </attribute>
+      <attribute name="p10" type="number">
+        <text>
+          <base>the maximum number of group members</base>
+        </text>
+      </attribute>
+      <attribute name="p86" type="number">
+        <text>
+          <base>the maximum number of programs</base>
+        </text>
+      </attribute>
+      <attribute name="p187" type="date">
+        <text>
+          <base>the first mailing date on or after the transaction</base>
+        </text>
+      </attribute>
+      <attribute name="p190" type="timeofday">
+        <text>
+          <base>the cutoff time to send mail</base>
+        </text>
+      </attribute>
+      <attribute name="p193" type="text" public-name="i_g_ID">
+        <text>
+          <base>the case ID</base>
+        </text>
+      </attribute>
+      <attribute name="p198" type="text">
+        <text>
+          <base>the delimiter for instance IDs</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p199" type="date" public-name="i_g_application-date">
+        <text>
+          <base>the application date</base>
+        </text>
+      </attribute>
+      <attribute name="p205" type="date">
+        <text>
+          <base>the first day of the application year</base>
+        </text>
+      </attribute>
+      <attribute name="p207" type="date">
+        <text>
+          <base>the last day of the application year</base>
+        </text>
+      </attribute>
+      <attribute name="p220" type="date">
+        <text>
+          <base>the first day of the application month</base>
+        </text>
+      </attribute>
+      <attribute name="p279" type="date">
+        <text>
+          <base>the first day of the month following the application month</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global" identifying-attribute-name="the_person" identifying-attribute-text="the person" public-id="person">
+      <attribute name="p7" type="text" public-name="i_per_ID">
+        <text>
+          <base>the person's unique ID</base>
+        </text>
+      </attribute>
+      <attribute name="p85" type="number">
+        <text>
+          <base>the number of programs for the person</base>
+        </text>
+      </attribute>
+      <attribute name="p163" type="text" default-gender="generic" substitutable="true" public-name="the_person">
+        <text>
+          <base>the person</base>
+        </text>
+      </attribute>
+      <attribute name="p171" type="number">
+        <text>
+          <base>the person's sort order</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" identifying-attribute-name="rb_p_ID" identifying-attribute-text="the program's identifier" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="p2" type="text" substitutable="true" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program</base>
+        </text>
+      </attribute>
+      <attribute name="b1" type="boolean" public-name="rb_p_req-eligibility">
+        <text>
+          <base>the person meets all of the eligibility requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all of the eligibility requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b2" type="boolean">
+        <text>
+          <base>the person has an error for the program</base>
+          <parse>s(ver('10.4.5.40'),v(have,t(simple,present,normal)),sb('the person',singular),o('an error for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean">
+        <text>
+          <base>the person has a referral for the program</base>
+          <parse>s(ver('10.4.5.40'),v(have,t(simple,present,normal)),sb('the person',singular),o('a referral for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" public-name="rb_p_req-continue">
+        <text>
+          <base>the person meets all of the continuous eligibility requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all of the continuous eligibility requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" public-name="rb_p_req-standard">
+        <text>
+          <base>the person meets all of the standard eligibility requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all of the standard eligibility requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" public-name="rb_p_req-alternate">
+        <text>
+          <base>the person meets an alternative eligibility requirement for the program</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('an alternative eligibility requirement for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" public-name="rb_p_req-non">
+        <text>
+          <base>the person meets all the non-financial eligibility requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the non-financial eligibility requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" public-name="rb_p_req-fin">
+        <text>
+          <base>the person meets all the financial eligibility requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the financial eligibility requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" public-name="rb_p_req-cat">
+        <text>
+          <base>the person meets all the categorical requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the categorical requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" public-name="rb_p_req-non-res">
+        <text>
+          <base>the person meets all the residency requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the residency requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" public-name="rb_p_req-non-id">
+        <text>
+          <base>the person meets all the identity requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the identity requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" public-name="rb_p_req-non-cit">
+        <text>
+          <base>the person meets all the citizenship requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the citizenship requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" public-name="rb_p_req-non-inst">
+        <text>
+          <base>the person meets all the institutional requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the institutional requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" public-name="rb_p_req-non-prod">
+        <text>
+          <base>the person meets all the productivity requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the productivity requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" public-name="rb_p_req-non-admin">
+        <text>
+          <base>the person meets all the administrative requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the administrative requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" public-name="rb_p_req-non-other">
+        <text>
+          <base>the person meets all the other non-financial requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the other non-financial requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" public-name="rb_p_req-non-appl">
+        <text>
+          <base>the person meets all the application requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the application requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" public-name="rb_p_req-non-veri">
+        <text>
+          <base>the person meets all the verification requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the verification requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" public-name="rb_p_req-fin-inc">
+        <text>
+          <base>the person meets all the income requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the income requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" public-name="rb_p_req-fin-res">
+        <text>
+          <base>the person meets all the resource requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the resource requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" public-name="rb_p_req-fin-other">
+        <text>
+          <base>the person meets all the other financial requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the other financial requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" public-name="rb_p_req-fin-inc-gro-lim">
+        <text>
+          <base>the person passes the countable gross income limit test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the countable gross income limit test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" public-name="rb_p_req-fin-inc-net-lim">
+        <text>
+          <base>the person passes the adjusted net income limit test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the adjusted net income limit test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" public-name="rb_p_req-fin-inc-other">
+        <text>
+          <base>the person meets all the other income requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the other income requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" public-name="rb_p_req-fin-res-cnt">
+        <text>
+          <base>the person passes the countable resource test for the program</base>
+          <parse>s(ver('10.4.5.40'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the countable resource test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" public-name="rb_p_req-fin-res-other">
+        <text>
+          <base>the person meets all the other resource requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the other resource requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean">
+        <text>
+          <base>the person is authorized to receive the program under an existing benefit plan</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('authorized to receive the program under an existing benefit plan'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" public-name="rb_p_req-non-deprv">
+        <text>
+          <base>the person meets all the deprivation requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the deprivation requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean" public-name="rb_p_req-non-serv">
+        <text>
+          <base>the person meets all the service requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the service requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean" public-name="rb_p_req-non-compl">
+        <text>
+          <base>the person meets all the compliance requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the compliance requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean" public-name="rb_p_req-enroll">
+        <text>
+          <base>the person meets all of the enrollment requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all of the enrollment requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b34" type="boolean">
+        <text>
+          <base>the person is requesting the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('requesting the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p3" type="text" substitutable="true">
+        <text>
+          <base>the program's benefit type</base>
+        </text>
+      </attribute>
+      <attribute name="p4" type="number">
+        <text>
+          <base>the program's rank for the program's benefit type</base>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" public-name="rb_p_req-enroll-priority">
+        <text>
+          <base>the program is the person's highest priority program for the program's benefit type</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the program',singular),o('the person''s highest priority program for the program''s benefit type'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" public-name="rb_p_req-non-time">
+        <text>
+          <base>the person meets all the time limit requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the time limit requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" public-name="rb_p_req-fin-inc-gro-lim-abs">
+        <text>
+          <base>the person passes the absolute countable gross income limit test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the absolute countable gross income limit test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b38" type="boolean" public-name="rb_p_req-fin-inc-gro-lim-rel">
+        <text>
+          <base>the person passes the relative countable gross income limit test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the relative countable gross income limit test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p12" type="text">
+        <text>
+          <base>the countable gross income limit test type for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p13" type="text">
+        <text>
+          <base>the countable gross income limit comparison type for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p14" type="text" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the budgeting period for the person's financial group for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p15" type="text">
+        <text>
+          <base>the budgeting method for the person's financial group for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p16" type="text">
+        <text>
+          <base>the rounding method for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p17" type="currency" public-name="rb_p_incCntGrpBudget_c">
+        <text>
+          <base>the total countable gross income for the person's financial group for the budgeting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p18" type="currency" public-name="rb_p_req-fin-inc-gro-lim-abs-amt">
+        <text>
+          <base>the countable gross income limit for the budgeting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p19" type="number" public-name="rb_p_incCntGrpBudgetRel">
+        <text>
+          <base>the total countable gross income for the person's financial group for the budgeting period as a percentage of the income standard for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p20" type="number" public-name="rb_p_req-fin-inc-gro-lim-rel-pct">
+        <text>
+          <base>the countable gross income standard percentage limit for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p21" type="currency" public-name="rb_p_req-fin-inc-gro-lim-rel-std">
+        <text>
+          <base>the countable gross income limit standard for the person's need group for the budgeting period for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="b39" type="boolean" public-name="rb_p_req-fin-inc-gro-lim-fpl">
+        <text>
+          <base>the person passes the countable gross income limit FPL% test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the countable gross income limit FPL% test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p22" type="number" public-name="rb_p_req-fin-inc-gro-lim-fpl-pct">
+        <text>
+          <base>the countable gross income FPL percentage limit for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p23" type="number" public-name="rb_p_incCntGrpBudgetFPL">
+        <text>
+          <base>the total countable gross income for the person's financial group for the budgeting period as a percentage of FPL for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p24" type="currency">
+        <text>
+          <base>the annual FPL for the person's need group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p25" type="currency">
+        <text>
+          <base>the annualized total countable gross income for the person's financial group for the budgeting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="b40" type="boolean" public-name="rb_p_req-fin-inc-gro-lim-cust">
+        <text>
+          <base>the person passes the custom countable gross income limit test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the custom countable gross income limit test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b41" type="boolean" public-name="rb_p_req-fin-inc-net-lim-abs">
+        <text>
+          <base>the person passes the absolute adjusted net income limit test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the absolute adjusted net income limit test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b42" type="boolean" public-name="rb_p_req-fin-inc-net-lim-fpl">
+        <text>
+          <base>the person passes the adjusted net income FPL% limit test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the adjusted net income FPL% limit test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b43" type="boolean" public-name="rb_p_req-fin-inc-net-lim-rel">
+        <text>
+          <base>the person passes the relative adjusted net income limit test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the relative adjusted net income limit test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b44" type="boolean" public-name="rb_p_req-fin-inc-net-lim-cust">
+        <text>
+          <base>the person passes the custom adjusted net income limit test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the custom adjusted net income limit test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p26" type="currency" public-name="rb_p_incAdjGrpBudget_c">
+        <text>
+          <base>the total adjusted net income for the person's financial group for the budgeting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p27" type="currency" public-name="rb_p_req-fin-inc-net-lim-abs-amt">
+        <text>
+          <base>the adjusted net income limit for the budgeting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p28" type="number">
+        <text>
+          <base>the total adjusted net income for the person's financial group for the budgeting period as a percentage of FPL for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p29" type="number" public-name="rb_p_req-fin-inc-net-lim-fpl-pct">
+        <text>
+          <base>the adjusted net income FPL percentage limit for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p30" type="currency">
+        <text>
+          <base>the annualized total adjusted net income for the person's financial group for the budgeting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p31" type="number">
+        <text>
+          <base>the total adjusted net income for the person's financial group for the budgeting period as a percentage of the income standard for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p32" type="number" public-name="rb_p_req-fin-inc-net-lim-rel-pct">
+        <text>
+          <base>the adjusted net income standard percentage limit for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p33" type="currency" public-name="rb_p_req-fin-inc-net-lim-rel-amt">
+        <text>
+          <base>the adjusted net income limit standard for the person's need group for the budgeting period for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p34" type="currency">
+        <text>
+          <base>the total monthly income deductions for the person's financial group for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p35" type="text">
+        <text>
+          <base>the resource test type for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p36" type="text">
+        <text>
+          <base>the resource limit type for the program</base>
+        </text>
+      </attribute>
+      <attribute name="b45" type="boolean" public-name="rb_p_req-fin-res-cnt-abs">
+        <text>
+          <base>the person passes the absolute resource test for the program</base>
+          <parse>s(ver('10.4.5.40'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the absolute resource test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b46" type="boolean" public-name="rb_p_req-fin-res-cnt-cust">
+        <text>
+          <base>the person passes the custom resource test for the program</base>
+          <parse>s(ver('10.4.5.40'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the custom resource test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p37" type="currency" public-name="rb_p_resCntGrp_c">
+        <text>
+          <base>the total countable resources for the person's financial group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p38" type="currency" public-name="rb_p_req-fin-res-cnt-abs-amt">
+        <text>
+          <base>the countable resource limit for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p41" type="number" public-name="rb_p_numGrpNeed">
+        <text>
+          <base>the number of people in the person's need group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p47" type="number" public-name="rb_p_numGrpLive">
+        <text>
+          <base>the number of people considered to live with the person for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p48" type="number" public-name="rb_p_numGrpFiling">
+        <text>
+          <base>the number of people in the person's filing group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p49" type="number" public-name="rb_p_numGrpFin">
+        <text>
+          <base>the number of people in the person's financial group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p52" type="currency">
+        <text>
+          <base>the total monthly countable gross income attributable to the person's financial group for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p57" type="currency">
+        <text>
+          <base>the total monthly countable gross income attributable to the person for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p69" type="number" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the rounding digits for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p80" type="number">
+        <text>
+          <base>the prospective number of weekly payments per month for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p81" type="number">
+        <text>
+          <base>the prospective number of bi-weekly payments per month for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p112" type="number" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the rounding modifier for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p115" type="currency">
+        <text>
+          <base>the person's total monthly income deductions for the budgeting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p116" type="currency">
+        <text>
+          <base>the total monthly income disregard for the person's financial group for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p117" type="currency">
+        <text>
+          <base>the total monthly deductible expense exclusion for the person's financial group for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p119" type="currency">
+        <text>
+          <base>the total monthly income disregard for the person for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p120" type="currency">
+        <text>
+          <base>the total monthly deductible expense exclusion for the person for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p151" type="currency">
+        <text>
+          <base>the person's total countable resources for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p152" type="currency">
+        <text>
+          <base>the total countable resources attributable to the person's financial group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p153" type="currency">
+        <text>
+          <base>the total countable resource exclusion for the person's financial group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p158" type="currency">
+        <text>
+          <base>the total countable resources attributable to the person for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p159" type="currency">
+        <text>
+          <base>the total countable resource exclusion for the person for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p167" type="text">
+        <text>
+          <base>the adjusted net income limit comparison type for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p168" type="text">
+        <text>
+          <base>the adjusted net income limit test type for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p169" type="currency">
+        <text>
+          <base>the total monthly re-includable gross income for the person's financial group for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="b66" type="boolean">
+        <text>
+          <base>the date is within the person's benefit plan period for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the date',singular),o('within the person''s benefit plan period for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p178" type="date">
+        <text>
+          <base>the start of the person's benefit plan period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p179" type="date">
+        <text>
+          <base>the start of the person's existing benefit plan period for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p180" type="date">
+        <text>
+          <base>the end of the person's benefit plan period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p181" type="date">
+        <text>
+          <base>the end of the person's existing benefit plan period for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p182" type="number">
+        <text>
+          <base>the number of months in the person's benefit plan period for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p183" type="date">
+        <text>
+          <base>the first day of the month following the start of the person's benefit plan period for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p184" type="date">
+        <text>
+          <base>the effective date for a timely notice of adverse action for the person's eligibility for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p185" type="number">
+        <text>
+          <base>the number of days for a timely notice of adverse action for the person's eligibility for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p186" type="date">
+        <text>
+          <base>the last day of the month for the effective date for a timely notice of adverse action for the person's eligibility for the program</base>
+        </text>
+      </attribute>
+      <attribute name="b67" type="boolean">
+        <text>
+          <base>the person is in a protected enrollment period for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('in a protected enrollment period for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b68" type="boolean">
+        <text>
+          <base>the person became ineligible for the program during the month</base>
+          <parse>s(ver('10.4.5.40'),v(become,t(simple,past,normal)),sb('the person',plural),o('ineligible for the program during the month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b69" type="boolean">
+        <text>
+          <base>the person has an adverse action for the program</base>
+          <parse>s(ver('10.4.5.40'),v(have,t(simple,present,normal)),sb('the person',singular),o('an adverse action for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b70" type="boolean">
+        <text>
+          <base>the person's benefit level for the program is less than the person's existing benefit level</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s benefit level for the program',singular),o('less than the person''s existing benefit level'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b71" type="boolean">
+        <text>
+          <base>there are timely notice of adverse action requirements for the program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('timely notice of adverse action requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b72" type="boolean">
+        <text>
+          <base>the person's enrollment is suspended for the program</base>
+          <parse>s(ver('10.4.6.76'),v(suspend,t(simple,present,normal)),ob('the person''s enrollment',singular),o('for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b75" type="boolean">
+        <text>
+          <base>the person is within the potential retroactive eligibility period for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('within the potential retroactive eligibility period for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p201" type="number">
+        <text>
+          <base>the number of months of potential retroactive eligibility for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p202" type="date">
+        <text>
+          <base>the person's calculated first eligibility date for the program</base>
+        </text>
+      </attribute>
+      <attribute name="b76" type="boolean">
+        <text>
+          <base>the benefit effective date is the first day of the month following the month in which the person is determined eligible for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the benefit effective date',singular),o('the first day of the month following the month in which the person is determined eligible for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p203" type="date">
+        <text>
+          <base>the first day of the month following the person's calculated first eligibility date for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p204" type="date">
+        <text>
+          <base>the calculated start of the person's benefit plan period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p206" type="date">
+        <text>
+          <base>the calculated end of the person's benefit plan period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p208" type="text">
+        <text>
+          <base>the countable gross income floor test type for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p209" type="text">
+        <text>
+          <base>the countable gross income floor comparison type for the program</base>
+        </text>
+      </attribute>
+      <attribute name="b77" type="boolean" public-name="rb_p_req-fin-inc-gro-flr">
+        <text>
+          <base>the person passes the countable gross income floor test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the countable gross income floor test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b78" type="boolean" public-name="rb_p_req-fin-inc-gro-flr-abs">
+        <text>
+          <base>the person passes the absolute countable gross income floor test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the absolute countable gross income floor test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b79" type="boolean" public-name="rb_p_req-fin-inc-gro-flr-rel">
+        <text>
+          <base>the person passes the relative countable gross income floor test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the relative countable gross income floor test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b80" type="boolean" public-name="rb_p_req-fin-inc-gro-flr-fpl">
+        <text>
+          <base>the person passes the countable gross income floor FPL% test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the countable gross income floor FPL% test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b81" type="boolean" public-name="rb_p_req-fin-inc-gro-flr-cust">
+        <text>
+          <base>the person passes the custom countable gross income floor test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the custom countable gross income floor test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p210" type="currency" public-name="rb_p_req-fin-inc-gro-flr-abs-amt">
+        <text>
+          <base>the countable gross income floor for the budgeting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p211" type="number" public-name="rb_p_req-fin-inc-gro-flr-fpl-pct">
+        <text>
+          <base>the countable gross income FPL percentage floor for the program</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="p212" type="number" public-name="rb_p_req-fin-inc-gro-flr-rel-pct">
+        <text>
+          <base>the countable gross income standard percentage floor for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p213" type="currency" public-name="rb_p_req-fin-inc-gro-flr-rel-std">
+        <text>
+          <base>the countable gross income floor standard for the person's need group for the budgeting period for the program</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="p214" type="number" public-name="rb_p_req-fin-inc-net-flr-rel-pct">
+        <text>
+          <base>the adjusted net income standard percentage floor for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p215" type="currency" public-name="rb_p_req-fin-inc-net-flr-rel-std">
+        <text>
+          <base>the adjusted net income floor standard for the person's need group for the budgeting period for the program</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="p216" type="currency" public-name="rb_p_req-fin-inc-net-flr-abs-amt">
+        <text>
+          <base>the adjusted net income floor for the budgeting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p217" type="number" public-name="rb_p_req-fin-inc-net-flr-fpl-pct">
+        <text>
+          <base>the adjusted net income FPL percentage floor for the program</base>
+        </text>
+      </attribute>
+      <attribute name="b82" type="boolean" public-name="rb_p_req-fin-inc-net-flr">
+        <text>
+          <base>the person passes the adjusted net income floor test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the adjusted net income floor test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b83" type="boolean" public-name="rb_p_req-fin-inc-net-flr-abs">
+        <text>
+          <base>the person passes the absolute adjusted net income floor test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the absolute adjusted net income floor test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b84" type="boolean" public-name="rb_p_req-fin-inc-net-flr-fpl">
+        <text>
+          <base>the person passes the adjusted net income FPL% floor test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the adjusted net income FPL% floor test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b85" type="boolean" public-name="rb_p_req-fin-inc-net-flr-rel">
+        <text>
+          <base>the person passes the relative adjusted net income floor test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the relative adjusted net income floor test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b86" type="boolean" public-name="rb_p_req-fin-inc-net-flr-cust">
+        <text>
+          <base>the person passes the custom adjusted net income floor test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the custom adjusted net income floor test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p218" type="text">
+        <text>
+          <base>the adjusted net income floor comparison type for the program</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="p219" type="text">
+        <text>
+          <base>the adjusted net income floor test type for the program</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="p221" type="date">
+        <text>
+          <base>the first day of the month in which the person is determined eligible for the program</base>
+        </text>
+      </attribute>
+      <attribute name="b87" type="boolean">
+        <text>
+          <base>the benefit effective date is the first day of the month in which the person is determined eligible for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the benefit effective date',singular),o('the first day of the month in which the person is determined eligible for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p222" type="date">
+        <text>
+          <base>the start of the person's spenddown accounting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p223" type="number">
+        <text>
+          <base>the number of months in the person's spenddown accounting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="b88" type="boolean">
+        <text>
+          <base>the person has a request for the program</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('a request for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p224" type="date">
+        <text>
+          <base>the end of the person's spenddown accounting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p225" type="text" public-name="rb_p_ID">
+        <text>
+          <base>the program's identifier</base>
+        </text>
+      </attribute>
+      <attribute name="b90" type="boolean">
+        <text>
+          <base>the person became ineligible for the program during the previous month</base>
+          <parse>s(ver('10.4.6.76'),v(become,t(simple,past,normal)),sb('the person',plural),o('ineligible for the program during the previous month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p226" type="number">
+        <text>
+          <base>the program's sort order</base>
+        </text>
+      </attribute>
+      <attribute name="p232" type="text" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the program's code</base>
+        </text>
+      </attribute>
+      <attribute name="p240" type="currency">
+        <text>
+          <base>the total monthly countable gross income exclusion for the person's financial group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p241" type="currency">
+        <text>
+          <base>the total monthly countable gross income exclusion for the person for the program</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="b91" type="boolean">
+        <text>
+          <base>the budgeting period is monthly for the person's financial group for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the budgeting period',singular),o('monthly for the person''s financial group for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b92" type="boolean">
+        <text>
+          <base>the budgeting period is annual for the person's financial group for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the budgeting period',singular),o('annual for the person''s financial group for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b93" type="boolean">
+        <text>
+          <base>the budgeting period is annualized monthly for the person's financial group for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the budgeting period',singular),o('annualized monthly for the person''s financial group for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b94" type="boolean">
+        <text>
+          <base>the budgeting method is anticipated for the person's financial group for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the budgeting method',singular),o('anticipated for the person''s financial group for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b95" type="boolean">
+        <text>
+          <base>the budgeting method is prospective for the person's financial group for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the budgeting method',singular),o('prospective for the person''s financial group for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b96" type="boolean">
+        <text>
+          <base>the budgeting method is custom for the person's financial group for the program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the budgeting method',singular),o('custom for the person''s financial group for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p249" type="currency">
+        <text>
+          <base>the person's total monthly countable gross income for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p252" type="currency">
+        <text>
+          <base>the person's total annual countable gross income for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p256" type="currency">
+        <text>
+          <base>the total monthly countable gross income for the person's financial group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p257" type="currency">
+        <text>
+          <base>the total annual countable gross income for the person's financial group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p258" type="currency">
+        <text>
+          <base>the total annualized monthly countable gross income for the person's financial group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p260" type="currency">
+        <text>
+          <base>the total annual countable gross income attributable to the person for the program</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="p261" type="currency">
+        <text>
+          <base>the total annual countable gross income attributable to the person's financial group for the program</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="p262" type="currency">
+        <text>
+          <base>the total annual countable gross income exclusion for the person for the program</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="p263" type="currency">
+        <text>
+          <base>the total annual countable gross income exclusion for the person's financial group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p264" type="currency">
+        <text>
+          <base>the total monthly adjusted net income for the person's financial group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p265" type="currency">
+        <text>
+          <base>the total annual adjusted net income for the person's financial group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p266" type="currency">
+        <text>
+          <base>the total annualized monthly adjusted net income for the person's financial group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p267" type="currency">
+        <text>
+          <base>the total annual re-includable gross income for the person's financial group for the program</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="p268" type="currency">
+        <text>
+          <base>the total annual income deductions for the person's financial group for the program</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="p270" type="currency">
+        <text>
+          <base>the total annual income disregard for the person's financial group for the program</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="p271" type="currency">
+        <text>
+          <base>the total annual deductible expense exclusion for the person's financial group for the program</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="p272" type="currency">
+        <text>
+          <base>the person's total annual income deductions for the budgeting period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p273" type="currency">
+        <text>
+          <base>the total annual income disregard for the person for the program</base>
+          <parse />
+        </text>
+      </attribute>
+      <attribute name="p274" type="currency">
+        <text>
+          <base>the total annual deductible expense exclusion for the person for the program</base>
+        </text>
+      </attribute>
+      <attribute name="b97" type="boolean" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the person has a retroactive request for the program</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('a retroactive request for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b99" type="boolean">
+        <text>
+          <base>the person meets all the retroactive requirements for the program</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all the retroactive requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b100" type="boolean">
+        <text>
+          <base>the person has a prospective request for the program</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('a prospective request for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p278" type="date">
+        <text>
+          <base>the start of the person's prospective request period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="b101" type="boolean" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the person meets sufficient eligibility requirements to be enrolled in the program</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('sufficient eligibility requirements to be enrolled in the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b102" type="boolean">
+        <text>
+          <base>the person meets the spenddown requirements for the program</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the spenddown requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b103" type="boolean">
+        <text>
+          <base>the person meets the income spenddown requirements for the program</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the income spenddown requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b104" type="boolean">
+        <text>
+          <base>the person has excess income for the program</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('excess income for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b105" type="boolean">
+        <text>
+          <base>the person meets the resource spenddown requirements for the program</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the resource spenddown requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b106" type="boolean">
+        <text>
+          <base>the person has excess resources for the program</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('excess resources for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b107" type="boolean">
+        <text>
+          <base>the person passes the resource spenddown test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the resource spenddown test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b108" type="boolean">
+        <text>
+          <base>the person passes the income spenddown test for the program</base>
+          <parse>s(ver('10.4.6.76'),v(pass,t(simple,present,normal)),sb('the person',singular),o('the income spenddown test for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b109" type="boolean">
+        <text>
+          <base>the person meets the eligibility start date requirements for the program</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the eligibility start date requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b110" type="boolean">
+        <text>
+          <base>the person meets the eligibility end date requirements for the program</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the eligibility end date requirements for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p280" type="date">
+        <text>
+          <base>the first day of the month following the start of the person's prospective request period for the program</base>
+        </text>
+      </attribute>
+      <attribute name="b111" type="boolean" public-name="rb_p_spenddown">
+        <text>
+          <base>the person has a spenddown for the program</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('a spenddown for the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p283" type="number">
+        <text>
+          <base>the total countable gross income for the person's financial group for the budgeting period as a percentage of the income floor standard for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p284" type="number">
+        <text>
+          <base>the total adjusted net income for the person's financial group for the budgeting period as a percentage of the income floor standard for the program</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="groupmember" name="the group member" identifying-attribute-name="rb_gm_ID" identifying-attribute-text="the group member's identifier" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+      <attribute name="p5" type="text" substitutable="true" default-gender="generic">
+        <text>
+          <base>the group member</base>
+        </text>
+      </attribute>
+      <attribute name="p11" type="text" public-name="rb_gm_ID">
+        <text>
+          <base>the group member's identifier</base>
+        </text>
+      </attribute>
+      <attribute name="p46" type="text" default-gender="generic" substitutable="true">
+        <text>
+          <base>the group member's containing person</base>
+        </text>
+      </attribute>
+      <attribute name="p197" type="text">
+        <text>
+          <base>the group member's identifier's target ID</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" identifying-attribute-name="rb_gmp_ID" identifying-attribute-text="the group member program's identifier" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+      <attribute name="p42" type="text" substitutable="true">
+        <text>
+          <base>the group member program</base>
+        </text>
+      </attribute>
+      <attribute name="p45" type="text" default-gender="generic" public-name="rb_gmp_ID">
+        <text>
+          <base>the group member program's identifier</base>
+        </text>
+      </attribute>
+      <attribute name="b47" type="boolean">
+        <text>
+          <base>the group member is in the person's need group for the group member program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('in the person''s need group for the group member program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b48" type="boolean">
+        <text>
+          <base>the group member is considered to live with the person for the group member program</base>
+          <parse>s(ver('10.4.5.40'),v(consider,t(simple,present,normal)),ob('the group member',singular),o('to live with the person for the group member program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b49" type="boolean">
+        <text>
+          <base>the group member is in the person's filing group for the group member program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('in the person''s filing group for the group member program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b50" type="boolean" silent-if-uncertain="true" invisible-if-uncertain="true">
+        <text>
+          <base>the group member is in the person's financial group for the group member program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the group member',singular),o('in the person''s financial group for the group member program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p227" type="text" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the group member program's program code</base>
+        </text>
+      </attribute>
+      <attribute name="p235" type="number" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the group member's count value for the person's financial group for the group member program</base>
+        </text>
+      </attribute>
+      <attribute name="p236" type="number" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the group member's count value for the person's filing group for the group member program</base>
+        </text>
+      </attribute>
+      <attribute name="p237" type="number" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the group member's count value for the person's household group for the group member program</base>
+        </text>
+      </attribute>
+      <attribute name="p238" type="number" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the group member's count value for the person's need group for the group member program</base>
+        </text>
+      </attribute>
+      <attribute name="p239" type="number">
+        <text>
+          <base>the group member's number of additional people to include in the person's need group for the group member program</base>
+        </text>
+      </attribute>
+      <attribute name="p244" type="currency">
+        <text>
+          <base>the group member's total monthly income deductions for the person's financial group for the group member program</base>
+        </text>
+      </attribute>
+      <attribute name="p246" type="currency">
+        <text>
+          <base>the group member's total monthly countable gross income for the person's financial group for the group member program</base>
+        </text>
+      </attribute>
+      <attribute name="p251" type="currency">
+        <text>
+          <base>the group member's total annual countable gross income for the person's financial group for the group member program</base>
+        </text>
+      </attribute>
+      <attribute name="p269" type="currency">
+        <text>
+          <base>the group member's total annual income deductions for the person's financial group for the group member program</base>
+        </text>
+      </attribute>
+      <attribute name="p281" type="currency">
+        <text>
+          <base>the group member's total countable resources for the person's financial group for the group member program</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person" identifying-attribute-name="p165@00Framework_01Eligibility_EligibilityFrameworkProps_xsrc" identifying-attribute-text="the person's income" public-id="income">
+      <attribute name="p82" type="number">
+        <text>
+          <base>the number of remaining payments this month for the person's income</base>
+        </text>
+      </attribute>
+      <attribute name="p83" type="number">
+        <text>
+          <base>the number of remaining payments this year for the person's income</base>
+        </text>
+      </attribute>
+      <attribute name="p103" type="text" public-name="i_inc_freq">
+        <text>
+          <base>the person's income's payment frequency</base>
+        </text>
+      </attribute>
+      <attribute name="p147" type="number">
+        <text>
+          <base>the number of payments this month for the person's income</base>
+        </text>
+      </attribute>
+      <attribute name="p148" type="number">
+        <text>
+          <base>the number of payments this year for the person's income</base>
+        </text>
+      </attribute>
+      <attribute name="p165" type="text" substitutable="true">
+        <text>
+          <base>the person's income</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="incomeprogram" name="the income program" identifying-attribute-name="rb_incp_ID" identifying-attribute-text="the income program's identifier" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+      <attribute name="p55" type="text" substitutable="true">
+        <text>
+          <base>the income program</base>
+        </text>
+      </attribute>
+      <attribute name="b52" type="boolean">
+        <text>
+          <base>the person's income is excluded for the income program</base>
+          <parse>s(ver('10.4.5.40'),v(exclude,t(simple,present,normal)),ob('the person''s income',singular),o('for the income program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p62" type="currency">
+        <text>
+          <base>the person's income's custom countable income amount for the budgeting period for the income program</base>
+        </text>
+      </attribute>
+      <attribute name="p63" type="currency">
+        <text>
+          <base>the person's income's monthly countable income exclusion for the income program</base>
+        </text>
+      </attribute>
+      <attribute name="p66" type="currency">
+        <text>
+          <base>the person's income's prospective monthly countable income amount for the income program</base>
+        </text>
+      </attribute>
+      <attribute name="p67" type="currency">
+        <text>
+          <base>the person's income's prospective annual countable income amount for the income program</base>
+        </text>
+      </attribute>
+      <attribute name="p70" type="number" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the rounding digits for the income program</base>
+        </text>
+      </attribute>
+      <attribute name="p72" type="number" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the rounding modifier for the income program</base>
+        </text>
+      </attribute>
+      <attribute name="p73" type="currency">
+        <text>
+          <base>the person's income's countable income amount per payment for the income program</base>
+        </text>
+      </attribute>
+      <attribute name="p74" type="number">
+        <text>
+          <base>the prospective number of payments per month for income paid weekly for the income program</base>
+        </text>
+      </attribute>
+      <attribute name="p75" type="number">
+        <text>
+          <base>the prospective number of payments per month for income paid every other week for the income program</base>
+        </text>
+      </attribute>
+      <attribute name="p84" type="text" public-name="rb_incp_ID">
+        <text>
+          <base>the income program's identifier</base>
+        </text>
+      </attribute>
+      <attribute name="p87" type="currency">
+        <text>
+          <base>the income exclusion amount per payment for the person's income for the income program</base>
+        </text>
+      </attribute>
+      <attribute name="p94" type="currency">
+        <text>
+          <base>the person's income's representative payment amount for the income program</base>
+        </text>
+      </attribute>
+      <attribute name="p229" type="text">
+        <text>
+          <base>the income program's program code</base>
+        </text>
+      </attribute>
+      <attribute name="p247" type="currency">
+        <text>
+          <base>the person's income's total monthly countable income amount for the income program</base>
+        </text>
+      </attribute>
+      <attribute name="p248" type="currency">
+        <text>
+          <base>the person's income's monthly countable income amount for the income program</base>
+        </text>
+      </attribute>
+      <attribute name="p254" type="currency">
+        <text>
+          <base>the person's income's annual countable income amount for the income program</base>
+        </text>
+      </attribute>
+      <attribute name="p255" type="currency">
+        <text>
+          <base>the person's income's total annual countable income amount for the income program</base>
+        </text>
+      </attribute>
+      <attribute name="p259" type="currency">
+        <text>
+          <base>the person's income's annual countable income exclusion for the income program</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person" identifying-attribute-name="the_persons_expense" identifying-attribute-text="the person's expense" public-id="expense">
+      <attribute name="p114" type="text" public-name="i_exp_freq">
+        <text>
+          <base>the person's expense's payment frequency</base>
+        </text>
+      </attribute>
+      <attribute name="p136" type="number">
+        <text>
+          <base>the number of payments this month for the person's expense</base>
+        </text>
+      </attribute>
+      <attribute name="p137" type="number">
+        <text>
+          <base>the number of payments this year for the person's expense</base>
+        </text>
+      </attribute>
+      <attribute name="p145" type="number">
+        <text>
+          <base>the number of remaining payments this month for the person's expense</base>
+        </text>
+      </attribute>
+      <attribute name="p146" type="number">
+        <text>
+          <base>the number of remaining payments this year for the person's expense</base>
+        </text>
+      </attribute>
+      <attribute name="p164" type="text" substitutable="true" public-name="the_persons_expense">
+        <text>
+          <base>the person's expense</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="expenseprogram" name="the expense program" identifying-attribute-name="rb_expp_ID" identifying-attribute-text="the expense program's identifier" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+      <attribute name="p111" type="text" substitutable="true" default-gender="generic">
+        <text>
+          <base>the expense program</base>
+        </text>
+      </attribute>
+      <attribute name="p113" type="text" public-name="rb_expp_ID">
+        <text>
+          <base>the expense program's identifier</base>
+        </text>
+      </attribute>
+      <attribute name="p118" type="currency">
+        <text>
+          <base>the person's expense's total monthly deductible amount for the expense program</base>
+        </text>
+      </attribute>
+      <attribute name="b61" type="boolean">
+        <text>
+          <base>the person's expense is deductible for the expense program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('deductible for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p121" type="currency">
+        <text>
+          <base>the person's expense's monthly deductible amount for the expense program</base>
+        </text>
+      </attribute>
+      <attribute name="p122" type="currency">
+        <text>
+          <base>the person's expense's annual deductible expense exclusion for the expense program</base>
+        </text>
+      </attribute>
+      <attribute name="p123" type="currency">
+        <text>
+          <base>the person's expense's custom deductible amount for the budgeting period for the expense program</base>
+        </text>
+      </attribute>
+      <attribute name="p126" type="number" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the rounding modifier for the expense program</base>
+        </text>
+      </attribute>
+      <attribute name="p127" type="number" silent-if-true="true" silent-if-false="true" silent-if-uncertain="true" silent-if-unknown="true" invisible-if-true="true" invisible-if-false="true" invisible-if-uncertain="true" invisible-if-unknown="true">
+        <text>
+          <base>the rounding digits for the expense program</base>
+        </text>
+      </attribute>
+      <attribute name="p129" type="currency">
+        <text>
+          <base>the person's expense's prospective monthly deductible amount for the expense program</base>
+        </text>
+      </attribute>
+      <attribute name="p130" type="number">
+        <text>
+          <base>the prospective number of payments per month for expenses paid weekly for the expense program</base>
+        </text>
+      </attribute>
+      <attribute name="p131" type="number">
+        <text>
+          <base>the prospective number of payments per month for expenses paid every other week for the expense program</base>
+        </text>
+      </attribute>
+      <attribute name="p132" type="currency">
+        <text>
+          <base>the person's expense's prospective annual deductible amount for the expense program</base>
+        </text>
+      </attribute>
+      <attribute name="p135" type="currency">
+        <text>
+          <base>the person's expense's deductible amount per payment for the expense program</base>
+        </text>
+      </attribute>
+      <attribute name="p138" type="currency">
+        <text>
+          <base>the person's expense's representative payment amount for the expense program</base>
+        </text>
+      </attribute>
+      <attribute name="p139" type="currency">
+        <text>
+          <base>the deductible expense exclusion per payment for the person's expense for the expense program</base>
+        </text>
+      </attribute>
+      <attribute name="b89" type="boolean">
+        <text>
+          <base>the person's expense is an allowable spenddown expense for the expense program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('an allowable spenddown expense for the expense program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p230" type="text">
+        <text>
+          <base>the expense program's program code</base>
+        </text>
+      </attribute>
+      <attribute name="p275" type="currency">
+        <text>
+          <base>the person's expense's total annual deductible amount for the expense program</base>
+        </text>
+      </attribute>
+      <attribute name="p276" type="currency">
+        <text>
+          <base>the person's expense's monthly deductible expense exclusion for the expense program</base>
+        </text>
+      </attribute>
+      <attribute name="p277" type="currency">
+        <text>
+          <base>the person's expense's annual deductible amount for the expense program</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person" identifying-attribute-name="p166@00Framework_01Eligibility_EligibilityFrameworkProps_xsrc" identifying-attribute-text="the person's resource" public-id="resource">
+      <attribute name="p166" type="text" substitutable="true">
+        <text>
+          <base>the person's resource</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="resourceprogram" name="the resource program" identifying-attribute-name="rb_resp_ID" identifying-attribute-text="the resource program's identifier" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+      <attribute name="p155" type="text" substitutable="true" default-gender="generic">
+        <text>
+          <base>the resource program</base>
+        </text>
+      </attribute>
+      <attribute name="p156" type="text" public-name="rb_resp_ID">
+        <text>
+          <base>the resource program's identifier</base>
+        </text>
+      </attribute>
+      <attribute name="p157" type="currency">
+        <text>
+          <base>the person's resource's countable value for the resource program</base>
+        </text>
+      </attribute>
+      <attribute name="b62" type="boolean">
+        <text>
+          <base>the person's resource is countable for the resource program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('countable for the resource program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b63" type="boolean">
+        <text>
+          <base>the person's resource is excluded for the resource program</base>
+          <parse>s(ver('10.4.5.40'),v(exclude,t(simple,present,normal)),ob('the person''s resource',singular),o('for the resource program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p161" type="currency">
+        <text>
+          <base>the person's resource's representative value for the resource program</base>
+        </text>
+      </attribute>
+      <attribute name="p162" type="currency">
+        <text>
+          <base>the resource exclusion for the person's resource for the resource program</base>
+        </text>
+      </attribute>
+      <attribute name="b64" type="boolean">
+        <text>
+          <base>the person's resource is active for the resource program</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person''s resource',singular),o('active for the resource program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p231" type="text">
+        <text>
+          <base>the resource program's program code</base>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" silent-if-known="true" invisible-if-known="true" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" silent-if-known="true" invisible-if-known="true" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" silent-if-known="true" invisible-if-known="true" />
+    <relationship source="person" target="person" is-containment="false" public-id="" reverse-public-id="" text="the person's previous sort-order people" relationship-id="personsprevioussortorderpeople" reverse-relationship-id="personssubsequentsortorderpeople" reverse-text="the person's subsequent sort-order people" type="ManyToMany" is-computed="false" silent-if-known="true" invisible-if-known="true" />
+    <relationship source="groupmember" target="person" is-containment="false" public-id="" reverse-public-id="" text="the group member's representative person" relationship-id="groupmembersrepresentativeperson" reverse-relationship-id="personsrepresentationsasagroupmember" reverse-text="the person's representations as a group member" type="ManyToMany" is-computed="false" silent-if-known="true" invisible-if-known="true" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" silent-if-known="true" invisible-if-known="true" />
+    <relationship source="groupmemberprogram" target="program" is-containment="false" public-id="" reverse-public-id="" text="the group member's containing person's program for the group member program" relationship-id="groupmemberscontainingpersonsprogramforthegroupmemberprogram" reverse-relationship-id="personscontainedgroupmemberprogramsfortheprogram" reverse-text="the person's contained group member programs for the program" type="ManyToMany" is-computed="false" silent-if-known="true" invisible-if-known="true" />
+    <relationship source="groupmemberprogram" target="program" is-containment="false" public-id="" reverse-public-id="" text="the group member's program for the group member program" relationship-id="groupmembersprogramforthegroupmemberprogram" reverse-relationship-id="personsrepresentativegroupmemberprogramsfortheprogram" reverse-text="the person's representative group member programs for the program" type="ManyToMany" is-computed="false" silent-if-known="true" invisible-if-known="true" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" silent-if-known="true" invisible-if-known="true" />
+    <relationship source="program" target="program" is-containment="false" public-id="" reverse-public-id="" text="the program's previous sort-order programs" relationship-id="programsprevioussortorderprograms" reverse-relationship-id="program_programsprevioussortorderprograms_rev" reverse-text="" type="ManyToMany" is-computed="false" silent-if-known="true" invisible-if-known="true" />
+    <relationship source="incomeprogram" target="program" is-containment="false" public-id="" reverse-public-id="" text="the person's program for the income program" relationship-id="personsprogramfortheincomeprogram" reverse-relationship-id="personsincomesfortheprogram" reverse-text="the person's incomes for the program" type="ManyToMany" is-computed="false" silent-if-known="true" invisible-if-known="true" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" silent-if-known="true" invisible-if-known="true" />
+    <relationship source="expenseprogram" target="program" is-containment="false" public-id="" reverse-public-id="" text="the person's program for the expense program" relationship-id="personsprogramfortheexpenseprogram" reverse-relationship-id="personsexpensesfortheprogram" reverse-text="the person's expenses for the program" type="ManyToMany" is-computed="false" silent-if-known="true" invisible-if-known="true" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="resourceprogram" target="program" is-containment="false" public-id="" reverse-public-id="" text="the person's program for the resource program" relationship-id="personsprogramfortheresourceprogram" reverse-relationship-id="personsresourcesfortheprogram" reverse-text="the person's resources for the program" type="ManyToMany" is-computed="false" silent-if-known="true" invisible-if-known="true" />
+    <relationship source="groupmemberprogram" target="person" is-containment="false" public-id="" reverse-public-id="" text="the group member's containing person for the group member program" relationship-id="groupmemberscontainingpersonforthegroupmemberprogram" reverse-relationship-id="personscontainedgroupmemberprograms" reverse-text="the person's contained group member programs" type="ManyToMany" is-computed="false" silent-if-known="true" invisible-if-known="true" />
+    <relationship source="groupmemberprogram" target="person" is-containment="false" public-id="" reverse-public-id="" text="the group member's representative person for the group member program" relationship-id="groupmembersrepresentativepersonforthegroupmemberprogram" reverse-relationship-id="personsrepresentativegroupmemberprograms" reverse-text="the person's representative group member programs" type="ManyToMany" is-computed="false" silent-if-known="true" invisible-if-known="true" />
+    <relationship source="groupmemberprogram" target="groupmemberprogram" is-containment="false" public-id="" reverse-public-id="" text="the group member programs for the group member program" relationship-id="groupmemberprogramsforthegroupmemberprogram" reverse-relationship-id="groupmemberprogram_groupmemberprogramsforthegroupmemberprogram_rev" reverse-text="" type="ManyToMany" is-computed="false" silent-if-known="true" invisible-if-known="true" />
+    <relationship source="groupmember" target="groupmember" is-containment="false" public-id="" reverse-public-id="" text="the group member's representations as a group member" relationship-id="groupmembersrepresentationsasagroupmember" reverse-relationship-id="groupmember_groupmembersrepresentationsasagroupmember_rev" reverse-text="" type="ManyToMany" is-computed="false" silent-if-known="true" invisible-if-known="true" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

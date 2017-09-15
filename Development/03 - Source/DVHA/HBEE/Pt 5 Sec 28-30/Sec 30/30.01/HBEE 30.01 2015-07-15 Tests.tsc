@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-script product-version="10.4.6.76" schema-version="4">
+  <test-case-set>
+    <test-case name="Community Living" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Malik</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE30.01LivingComm20150715_b" text="the person is considered to be in a community living arrangement under HBEE 30.01 (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE30.01LivingLTC20150715_b" text="the person is considered to be in a long-term care living arrangement under HBEE 30.01 (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="i_per_req-ltc" text="the person is requesting long term care assistance" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_hospice_b" text="the person is receiving hospice care" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Malik|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Malik|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2014" />
+        <ent-inst id="2015" />
+        <ent-inst id="2016" />
+        <ent-inst id="2013" />
+      </ent-set>
+    </test-case>
+    <test-case name="LTC Arrangement" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true">
+              <ent-inst-ref ref-id="Medicaid for the Aged, Blind, and Disabled - August 1972 AABD Eligible" />
+              <ent-inst-ref ref-id="Medicaid for the Aged, Blind, and Disabled - SSI Eligible" />
+              <ent-inst-ref ref-id="Long Term Care under MABD - Special Income Level" />
+              <ent-inst-ref ref-id="Medicaid for the Aged, Blind, and Disabled - Surviving Spouse" />
+              <ent-inst-ref ref-id="Medically-Needy Medicaid for Children and Adults" />
+              <ent-inst-ref ref-id="Medicaid for Children and Adults - Pregnant Woman" />
+              <ent-inst-ref ref-id="Long Term Care under MABD - Hospice Services" />
+              <ent-inst-ref ref-id="Medicaid for Children and Adults - Transitional Medical Assistance Sec 1925" />
+              <ent-inst-ref ref-id="Medicaid for Children and Adults - Extended for Increased Spousal Support" />
+              <ent-inst-ref ref-id="Long Term Care under MCA" />
+              <ent-inst-ref ref-id="Long Term Care under MABD - Home and Community-Based Services" />
+              <ent-inst-ref ref-id="Medicaid for the Aged, Blind, and Disabled - SSI/AABD Enrollee" />
+              <ent-inst-ref ref-id="Medicaid for the Aged, Blind, and Disabled - December 1973 Medicaid Eligible" />
+              <ent-inst-ref ref-id="Medicaid for Children and Adults - Transitional Medical Assistance non-Sec 1925" />
+              <ent-inst-ref ref-id="Medicaid for the Aged, Blind, and Disabled - Pickle Amendment" />
+              <ent-inst-ref ref-id="Medically-Needy Medicaid for the Aged, Blind, and Disabled" />
+              <ent-inst-ref ref-id="Medicaid for Children and Adults - Adult" />
+              <ent-inst-ref ref-id="Medicaid for the Aged, Blind, and Disabled - Disabled Adult Child" />
+              <ent-inst-ref ref-id="Medicaid for the Aged, Blind, and Disabled - Medicaid for Working People with Disabilities" />
+              <ent-inst-ref ref-id="Long Term Care under MABD - Katie Beckett" />
+              <ent-inst-ref ref-id="Long Term Care under MABD - MWPD" />
+              <ent-inst-ref ref-id="Medicaid for the Aged, Blind, and Disabled - Section 1619(b)" />
+              <ent-inst-ref ref-id="Medicaid for Children and Adults - Parent and Other Caretaker Relative" />
+              <ent-inst-ref ref-id="Medicaid for Children and Adults - Child" />
+              <ent-inst-ref ref-id="Long Term Care under MABD - SSI/AABD Ineligible" />
+            </relationship-inst>
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true">
+              <ent-inst-ref ref-id="Medical Care Benefits" />
+              <ent-inst-ref ref-id="Long Term Care" />
+            </relationship-inst>
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="program" entity-text="the program" inferred="yes" identifying-attribute="rb_p_ID">
+        <ent-inst id="Medicaid for the Aged, Blind, and Disabled - Pickle Amendment" />
+        <ent-inst id="Medicaid for the Aged, Blind, and Disabled - Disabled Adult Child" />
+        <ent-inst id="Long Term Care under MABD - SSI/AABD Ineligible" />
+        <ent-inst id="Medicaid for Children and Adults - Pregnant Woman" />
+        <ent-inst id="Long Term Care under MABD - Katie Beckett" />
+        <ent-inst id="Medically-Needy Medicaid for the Aged, Blind, and Disabled" />
+        <ent-inst id="Long Term Care under MCA" />
+        <ent-inst id="Medicaid for the Aged, Blind, and Disabled - SSI/AABD Enrollee" />
+        <ent-inst id="Long Term Care under MABD - MWPD" />
+        <ent-inst id="Medicaid for Children and Adults - Extended for Increased Spousal Support" />
+        <ent-inst id="Long Term Care under MABD - Special Income Level" />
+        <ent-inst id="Medicaid for Children and Adults - Parent and Other Caretaker Relative" />
+        <ent-inst id="Medicaid for Children and Adults - Child" />
+        <ent-inst id="Medicaid for the Aged, Blind, and Disabled - SSI Eligible" />
+        <ent-inst id="Medicaid for the Aged, Blind, and Disabled - Surviving Spouse" />
+        <ent-inst id="Medicaid for Children and Adults - Adult" />
+        <ent-inst id="Long Term Care under MABD - Home and Community-Based Services" />
+        <ent-inst id="Medicaid for the Aged, Blind, and Disabled - August 1972 AABD Eligible" />
+        <ent-inst id="Medicaid for the Aged, Blind, and Disabled - Section 1619(b)" />
+        <ent-inst id="Medicaid for the Aged, Blind, and Disabled - December 1973 Medicaid Eligible" />
+        <ent-inst id="Long Term Care under MABD - Hospice Services" />
+        <ent-inst id="Medicaid for the Aged, Blind, and Disabled - Medicaid for Working People with Disabilities" />
+        <ent-inst id="Medicaid for Children and Adults - Transitional Medical Assistance non-Sec 1925" />
+        <ent-inst id="Medically-Needy Medicaid for Children and Adults" />
+        <ent-inst id="Medicaid for Children and Adults - Transitional Medical Assistance Sec 1925" />
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Malik</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE30.01LivingComm20150715_b" text="the person is considered to be in a community living arrangement under HBEE 30.01 (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE30.01LivingLTC20150715_b" text="the person is considered to be in a long-term care living arrangement under HBEE 30.01 (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="i_per_req-ltc" text="the person is requesting long term care assistance" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_hospice_b" text="the person is receiving hospice care" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true">
+              <ent-inst-ref ref-id="Medical Care Benefits" />
+              <ent-inst-ref ref-id="Long Term Care" />
+            </relationship-inst>
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true">
+              <ent-inst-ref ref-id="Long Term Care Assistance" />
+            </relationship-inst>
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Malik|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true">
+              <ent-inst-ref ref-id="Medicaid for the Aged, Blind, and Disabled - August 1972 AABD Eligible" />
+              <ent-inst-ref ref-id="Medicaid for the Aged, Blind, and Disabled - SSI Eligible" />
+              <ent-inst-ref ref-id="Long Term Care under MABD - Special Income Level" />
+              <ent-inst-ref ref-id="Medicaid for the Aged, Blind, and Disabled - Surviving Spouse" />
+              <ent-inst-ref ref-id="Medically-Needy Medicaid for Children and Adults" />
+              <ent-inst-ref ref-id="Medicaid for Children and Adults - Pregnant Woman" />
+              <ent-inst-ref ref-id="Long Term Care under MABD - Hospice Services" />
+              <ent-inst-ref ref-id="Medicaid for Children and Adults - Transitional Medical Assistance Sec 1925" />
+              <ent-inst-ref ref-id="Medicaid for Children and Adults - Extended for Increased Spousal Support" />
+              <ent-inst-ref ref-id="Long Term Care under MCA" />
+              <ent-inst-ref ref-id="Long Term Care under MABD - Home and Community-Based Services" />
+              <ent-inst-ref ref-id="Medicaid for the Aged, Blind, and Disabled - SSI/AABD Enrollee" />
+              <ent-inst-ref ref-id="Medicaid for the Aged, Blind, and Disabled - December 1973 Medicaid Eligible" />
+              <ent-inst-ref ref-id="Medicaid for Children and Adults - Transitional Medical Assistance non-Sec 1925" />
+              <ent-inst-ref ref-id="Medicaid for the Aged, Blind, and Disabled - Pickle Amendment" />
+              <ent-inst-ref ref-id="Medically-Needy Medicaid for the Aged, Blind, and Disabled" />
+              <ent-inst-ref ref-id="Medicaid for the Aged, Blind, and Disabled - Disabled Adult Child" />
+              <ent-inst-ref ref-id="Medicaid for the Aged, Blind, and Disabled - Medicaid for Working People with Disabilities" />
+              <ent-inst-ref ref-id="Long Term Care under MABD - Katie Beckett" />
+              <ent-inst-ref ref-id="Medicaid for Children and Adults - Adult" />
+              <ent-inst-ref ref-id="Long Term Care under MABD - MWPD" />
+              <ent-inst-ref ref-id="Medicaid for the Aged, Blind, and Disabled - Section 1619(b)" />
+              <ent-inst-ref ref-id="Medicaid for Children and Adults - Parent and Other Caretaker Relative" />
+              <ent-inst-ref ref-id="Medicaid for Children and Adults - Child" />
+              <ent-inst-ref ref-id="Long Term Care under MABD - SSI/AABD Ineligible" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Malik|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="personsrequestedbenefit" entity-text="the person's requested benefit" inferred="yes" identifying-attribute="rb_reqb_ID">
+        <ent-inst id="Medical Care Benefits">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Long Term Care">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="result" entity-text="the result" inferred="yes" identifying-attribute="rb_rslt_ID">
+        <ent-inst id="1" />
+      </ent-set>
+      <ent-set entity-type="case-result" entity-text="the case result" inferred="yes" identifying-attribute="o_crslt_type">
+        <ent-inst id="Medical Care Benefits" />
+        <ent-inst id="Long Term Care" />
+      </ent-set>
+      <ent-set entity-type="personsrequestforassistance" entity-text="the person's request for assistance" inferred="yes" identifying-attribute="rb_reqa_ID">
+        <ent-inst id="Long Term Care Assistance" />
+      </ent-set>
+      <ent-set entity-type="baseprogram" entity-text="the base program" inferred="yes" identifying-attribute="the_base_program">
+        <ent-inst id="Medicaid for Children and Adults - Pregnant Woman" />
+        <ent-inst id="Long Term Care under MABD - Home and Community-Based Services" />
+        <ent-inst id="Medicaid for Children and Adults - Transitional Medical Assistance non-Sec 1925" />
+        <ent-inst id="Medically-Needy Medicaid for Children and Adults" />
+        <ent-inst id="Medicaid for Children and Adults - Parent and Other Caretaker Relative" />
+        <ent-inst id="Medicaid for Children and Adults - Adult" />
+        <ent-inst id="Long Term Care under MABD - Katie Beckett" />
+        <ent-inst id="Long Term Care under MABD - MWPD" />
+        <ent-inst id="Long Term Care under MCA" />
+        <ent-inst id="Medicaid for the Aged, Blind, and Disabled - Disabled Adult Child" />
+        <ent-inst id="Medicaid for the Aged, Blind, and Disabled - Section 1619(b)" />
+        <ent-inst id="Medicaid for the Aged, Blind, and Disabled - SSI Eligible" />
+        <ent-inst id="Long Term Care under MABD - Hospice Services" />
+        <ent-inst id="Medicaid for the Aged, Blind, and Disabled - August 1972 AABD Eligible" />
+        <ent-inst id="Medicaid for the Aged, Blind, and Disabled - Pickle Amendment" />
+        <ent-inst id="Medicaid for Children and Adults - Child" />
+        <ent-inst id="Medicaid for Children and Adults - Transitional Medical Assistance Sec 1925" />
+        <ent-inst id="Medicaid for the Aged, Blind, and Disabled - SSI/AABD Enrollee" />
+        <ent-inst id="Medicaid for Children and Adults - Extended for Increased Spousal Support" />
+        <ent-inst id="Medically-Needy Medicaid for the Aged, Blind, and Disabled" />
+        <ent-inst id="Long Term Care under MABD - Special Income Level" />
+        <ent-inst id="Medicaid for the Aged, Blind, and Disabled - December 1973 Medicaid Eligible" />
+        <ent-inst id="Medicaid for the Aged, Blind, and Disabled - Medicaid for Working People with Disabilities" />
+        <ent-inst id="Long Term Care under MABD - SSI/AABD Ineligible" />
+        <ent-inst id="Medicaid for the Aged, Blind, and Disabled - Surviving Spouse" />
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2014" />
+        <ent-inst id="2015" />
+        <ent-inst id="2016" />
+        <ent-inst id="2013" />
+      </ent-set>
+    </test-case>
+    <test-case name="LTC Arrangement - hospice" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Malik</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE30.01LivingComm20150715_b" text="the person is considered to be in a community living arrangement under HBEE 30.01 (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE30.01LivingLTC20150715_b" text="the person is considered to be in a long-term care living arrangement under HBEE 30.01 (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="i_per_req-ltc" text="the person is requesting long term care assistance" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_hospice_b" text="the person is receiving hospice care" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Malik|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Malik|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2014" />
+        <ent-inst id="2015" />
+        <ent-inst id="2016" />
+        <ent-inst id="2013" />
+      </ent-set>
+    </test-case>
+  </test-case-set>
+  <outcome-set>
+    <outcome name="so_HBEE30.01LivingComm20150715_b" display-name="so_HBEE30.01LivingComm20150715_b" text="the person is considered to be in a community living arrangement under HBEE 30.01 (eff. 07/15/2015)" type="boolean" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+    <outcome name="so_HBEE30.01LivingLTC20150715_b" display-name="so_HBEE30.01LivingLTC20150715_b" text="the person is considered to be in a long-term care living arrangement under HBEE 30.01 (eff. 07/15/2015)" type="boolean" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+  </outcome-set>
+</test-script>

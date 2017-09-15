@@ -1,0 +1,153 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b2" type="boolean" public-name="si_livesHomeOwn_b">
+        <text>
+          <base>the person lives in the person's own home</base>
+          <parse>s(ver('10.4.5.40'),v(live,t(simple,present,normal)),sb('the person',singular),o('in the person''s own home'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" public-name="si_livesHomeOther_b">
+        <text>
+          <base>the person lives in the household of another person</base>
+          <parse>s(ver('10.4.5.40'),v(live,t(simple,present,normal)),sb('the person',singular),o('in the household of another person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" public-name="si_livesInstPublic_b">
+        <text>
+          <base>the person lives in a public institution</base>
+          <parse>s(ver('10.4.5.40'),v(live,t(simple,present,normal)),sb('the person',singular),o('in a public institution'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" public-name="si_livesInstVSH_b">
+        <text>
+          <base>the person lives in the Vermont State Hospital (VSH) or successor entity or entities</base>
+          <parse>s(ver('10.4.5.40'),v(live,t(simple,present,normal)),sb('the person',singular),o('in the Vermont State Hospital (VSH) or successor entity or entities'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" public-name="si_livesInstICF_b">
+        <text>
+          <base>the person lives in an intermediate care facility for persons with developmental disabilities (ICF-DD)</base>
+          <parse>s(ver('10.4.6.76'),v(live,t(simple,present,normal)),sb('the person',singular),o('in an intermediate care facility for persons with developmental disabilities (ICF-DD)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" public-name="si_livesInstPrivate_b">
+        <text>
+          <base>the person lives in a private facility</base>
+          <parse>s(ver('10.4.5.40'),v(live,t(simple,present,normal)),sb('the person',singular),o('in a private facility'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" public-name="si_instMedical_b">
+        <text>
+          <base>it is the case that the primary purpose of the person's facility is to provide medical care other than the treatment of mental disease</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that the primary purpose of the person''s facility is to provide medical care other than the treatment of mental disease'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" public-name="si_instSupportAgrmnt_b">
+        <text>
+          <base>there is an agreement or contract obliging the institution to provide total support to the person</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',singular),o('an agreement or contract obliging the institution to provide total support to the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" public-name="si_instSupportTransfer_b">
+        <text>
+          <base>there has been a transfer of property to the institution by the person or on the person's behalf</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,perfect)),sb('there',singular),o('a transfer of property to the institution by the person or on the person''s behalf'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" public-name="si_instSupportExhausted_b">
+        <text>
+          <base>maintenance by the institution has been of sufficient duration to fully exhaust the person's equity in the property transferred to the institution at a rate equal to the monthly charges to other residents in the institution</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,perfect)),sb('maintenance by the institution',singular),o('of sufficient duration to fully exhaust the person''s equity in the property transferred to the institution at a rate equal to the monthly charges to other residents in the institution'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" public-name="si_instLeaveRestricted_b">
+        <text>
+          <base>there are restrictions on the person's freedom to leave the institution</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('there',plural),o('restrictions on the person''s freedom to leave the institution'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" public-name="si_livesInstBrattleboro_b">
+        <text>
+          <base>the person lives at the Brattleboro Retreat</base>
+          <parse>s(ver('10.4.5.40'),v(live,t(simple,present,normal)),sb('the person',singular),o('at the Brattleboro Retreat'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" public-name="si_livedInstBrattleboro21_b">
+        <text>
+          <base>the person was a patient at the Brattleboro Retreat on the person's 21st birthday</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,past,normal)),sb('the person',singular),o('a patient at the Brattleboro Retreat on the person''s 21st birthday'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" public-name="si_livedInstVSH21_b">
+        <text>
+          <base>the person was living in the Vermont State Hospital (VSH) or successor entity or entities on the person's 21st birthday</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,past,normal)),sb('the person',singular),o('living in the Vermont State Hospital (VSH) or successor entity or entities on the person''s 21st birthday'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" public-name="si_disabledBlindDetVSH_b">
+        <text>
+          <base>the VSH Disability Determination Team has determined that the person is blind or disabled according to SSI/AABD standards</base>
+          <parse>s(ver('10.4.5.40'),v(determine,t(simple,present,perfect)),sb('the VSH Disability Determination Team',singular),o('that the person is blind or disabled according to SSI/AABD standards'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" public-name="so_HBEE20.01Sat20140730_b">
+        <text>
+          <base>HBEE 20.01 is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 20.01',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" public-name="st_HBEE20.01Sat_b">
+        <text>
+          <base>HBEE 20.01 is satisfied for the person</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 20.01',singular),o('for the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" public-name="si_enrollMedicaid21_b">
+        <text>
+          <base>the person was enrolled in Medicaid on the person's 21st birthday</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,past,normal)),sb('the person',singular),o('enrolled in Medicaid on the person''s 21st birthday'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

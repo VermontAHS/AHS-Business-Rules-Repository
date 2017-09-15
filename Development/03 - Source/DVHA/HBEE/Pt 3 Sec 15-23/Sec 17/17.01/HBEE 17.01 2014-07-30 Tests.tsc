@@ -1,0 +1,1227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-script product-version="10.4.6.76" schema-version="4">
+  <test-case-set>
+    <test-case name="(1) 1701d1 - Qual. Non-citizen: Is LPR (set directly)" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_personQlfdNonCtznUndHBEE1701dEff073014_b" text="the person is considered to be a qualified non-citizen under HBEE 17.01(d) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_citLPR_b" text="the person is a lawful, permanent resident of the United States (LPR)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personNonCtznUndHBEE1701hEff073014_b" text="the person is considered a non-citizen under HBEE 17.01(h) (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2013" />
+        <ent-inst id="2014" />
+        <ent-inst id="2016" />
+        <ent-inst id="2015" />
+        <ent-inst id="2017" />
+      </ent-set>
+    </test-case>
+    <test-case name="(2) 1701d2iiC - Qual. Non-citizen: App for asylum pending with DHS" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_personQlfdNonCtznUndHBEE1701dEff073014_b" text="the person is considered to be a qualified non-citizen under HBEE 17.01(d) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_personHsAplctnAsylmPdgWDHSUndHBEE1701d2iiCEff073014_b" text="the person has an application for asylum pending with the Department of Homeland Security (DHS)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personFinOrdOfRmvlHsBnEntrdUndHBEE1701d2iiBEff073014_b" text="a final, non-appealable, and legally enforceable order of removal, deportation or exclusion has been entered for the person" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personNonCtznUndHBEE1701hEff073014_b" text="the person is considered a non-citizen under HBEE 17.01(h) (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2013" />
+        <ent-inst id="2014" />
+        <ent-inst id="2016" />
+        <ent-inst id="2015" />
+        <ent-inst id="2017" />
+      </ent-set>
+    </test-case>
+    <test-case name="(3) 1701d5i - Qual. Non-citizen: Deportation withheld under INA 243h" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_personQlfdNonCtznUndHBEE1701dEff073014_b" text="the person is considered to be a qualified non-citizen under HBEE 17.01(d) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_personNonCtznWhsDprtnWthldUndINA243hUndHBEE1701d5iEff073014_b" text="the person is considered a non-citizen whose deportation has been withheld under section 243(h) of the INA, as in effect prior to April 1, 1997" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personNonCtznUndHBEE1701hEff073014_b" text="the person is considered a non-citizen under HBEE 17.01(h) (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2013" />
+        <ent-inst id="2014" />
+        <ent-inst id="2016" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+    <test-case name="(4) 1701d10ii - Qual. Non-citizen: American Indian, Fed-recognized tribe (per ISDEAA)" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_personQlfdNonCtznUndHBEE1701dEff073014_b" text="the person is considered to be a qualified non-citizen under HBEE 17.01(d) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_personAmIndnMbrFedRcgdTrbPerISDEA4eUndHBEE1701d10iiEff073014_b" text="the person is an American Indian who is a member of a Federally-recognized Indian tribe, as defined in section 4(e) of the Indian Self-Determination and Education Assistance Act, 25 USC section 450b(e)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personNonCtznUndHBEE1701hEff073014_b" text="the person is considered a non-citizen under HBEE 17.01(h) (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2013" />
+        <ent-inst id="2014" />
+        <ent-inst id="2016" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+    <test-case name="(5) 1701d - NOT Qual. Non-citizen: No valid qualifications" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_personQlfdNonCtznUndHBEE1701dEff073014_b" text="the person is considered to be a qualified non-citizen under HBEE 17.01(d) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_personAdmtdUSUndINA207UndHBEE1701d2iEff073014_b" text="the person is a refugee admitted to the United States under section 207 of the INA" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personParldIntoUSAft101080UndHBEE1701d2iiAEff073014_b" text="the person has been paroled into the United States on or after October 10, 1980" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personGrntdParoleCubHaitUndHBEE1701d2iiAEff073014_b" text="the person was granted parole status as a Cuban/Haitian entrant (Status Pending) on or after April 21, 1980" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personSbjtRmvlDptUndINAUndHBEE1701d2iiBEff073014_b" text="the person is the subject of removal, deportation or exclusion proceedings under the Immigration and Nationality Act" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsAplctnAsylmPdgWDHSUndHBEE1701d2iiCEff073014_b" text="the person has an application for asylum pending with the Department of Homeland Security (DHS)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personFinOrdOfRmvlHsBnEntrdUndHBEE1701d2iiBEff073014_b" text="a final, non-appealable, and legally enforceable order of removal, deportation or exclusion has been entered for the person" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personAmrsnAdmtdUSUndFOEF584UndHBEE1701d3Eff073014_b" text="the person is an Amerasian, admitted to the United States under Foreign Operations Export Financing, and Related Programs Appropriation Act, 1988 section 584" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personAsyleeUndINA208UndHBEE1701d4Eff073014_b" text="the person is considered an asylee under INA 208" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personNonCtznWhsDprtnWthldUndINA243hUndHBEE1701d5iEff073014_b" text="the person is considered a non-citizen whose deportation has been withheld under section 243(h) of the INA, as in effect prior to April 1, 1997" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personNonCtznWhsDptnWthldUndINA241b3UndHBEE1701d5iiEff073014_b" text="the person is considered a non-citizen whose deportation has been withheld under section 241(b)(3) of the INA, as amended by section 305(a) of division C of Public Law 104-208" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personNonCtznGrntdPrle1YrByUSCISUndINA212d5UndHBEE1701d6Eff073014_b" text="the person is a non-citizen who has been granted parole for at least one year by the USCIS under INA 212(d)(5)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personNonCtznGrntdCndtlEtryUndINA203a7UndHBEE1701d7Eff073014_b" text="the person is a non-citizen who has been granted conditional entry under section 203(a)(7) of the INA" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_personQlfdBtrdNonCtznUndHBEE1701eEff073014_b" text="the person is considered a qualified battered non-citizen under HBEE 17.01(e) (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personVctmSvrTrfkgPerTVPA107b1UndHBEE1701d9Eff073014_b" text="the person is a victim of a severe form of trafficking, in accordance with section 107(b)(1) of the Trafficking Victims Protection Act of 2000" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personAmIndnMbrFedRcgdTrbPerISDEA4eUndHBEE1701d10iiEff073014_b" text="the person is an American Indian who is a member of a Federally-recognized Indian tribe, as defined in section 4(e) of the Indian Self-Determination and Education Assistance Act, 25 USC section 450b(e)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citLPR_b" text="the person is a lawful, permanent resident of the United States (LPR)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citAIANCanada_b" text="the person is an American Indian who was born in Canada" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2013" />
+        <ent-inst id="2014" />
+        <ent-inst id="2016" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+    <test-case name="(6) 1701e1i - Qual. Battered Non-citizen: Battered by co-residential member of parent's family, +is petition pending for residency under VAWA [1701e2iiiA]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_personQlfdBtrdNonCtznUndHBEE1701eEff073014_b" text="the person is considered a qualified battered non-citizen under HBEE 17.01(e) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="st_personNonCtznUndHBEE1701hEff073014_b" text="the person is considered a non-citizen under HBEE 17.01(h) (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_qualNonCitBatteredHBEE17.02e2_b" text="the person meets the definition of a qualified non-citizen under HBEE 17.01(e)(2) as a battered non-citizen" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2015" />
+        <ent-inst id="2013" />
+      </ent-set>
+    </test-case>
+    <test-case name="(7) 1701e1ii - Qual. Battered Non-citizen: Parent of child victim, +pending petition filed by spouse [1701e2iiiB]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_personQlfdBtrdNonCtznUndHBEE1701eEff073014_b" text="the person is considered a qualified battered non-citizen under HBEE 17.01(e) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="st_personNonCtznUndHBEE1701hEff073014_b" text="the person is considered a non-citizen under HBEE 17.01(h) (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_qualNonCitBatteredHBEE17.02e2Parent_b" text="the person is a parent of a child who has met the definition of a qualified non-citizen under HBEE 17.01(e)(2) as a battered non-citizen" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2015" />
+        <ent-inst id="2013" />
+      </ent-set>
+    </test-case>
+    <test-case name="(8) 1701e1iii - Qual. Battered Non-citizen: Child residing in victim's house, +pending petition for suspension of deportation [1701e2iiiC]" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_personQlfdBtrdNonCtznUndHBEE1701eEff073014_b" text="the person is considered a qualified battered non-citizen under HBEE 17.01(e) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="st_personNonCtznUndHBEE1701hEff073014_b" text="the person is considered a non-citizen under HBEE 17.01(h) (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_qualNonCitBatteredHBEE17.02e2Child_b" text="the person is a child residing in the same household as someone who has met the definition of a qualified non-citizen under HBEE 17.01(e)(2) as a battered non-citizen" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2015" />
+        <ent-inst id="2013" />
+      </ent-set>
+    </test-case>
+    <test-case name="(9) 1701g2 - Lawfully Present in US: Valid non-Imm status per 1107a.17" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_personLwflyPrstUSUndHBEE1701gEff073014_b" text="the person is considered to be lawfully present in the United States under HBEE 17.01(g) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_personDfrdActnUndDHSActnUndHBEE1701g10Eff073014_b" text="the person is an individual with deferred action under DHS's deferred action for childhood arrivals process, as described in the Secretary of Homeland Security's June 15, 2012 memorandum" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personVldNonImmStatUSC1101a1517UndHBEE1701g2Eff073014_b" text="the person is in a valid non-immigrant status, as defined in 8 USC sections 1101(a)(15) or 1101(a)(17)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personNonCtznUndHBEE1701hEff073014_b" text="the person is considered a non-citizen under HBEE 17.01(h) (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+    <test-case name="(10) 1701g4ii - Lawfully Present in US: LP Class, granted TPS" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_personLwflyPrstUSUndHBEE1701gEff073014_b" text="the person is considered to be lawfully present in the United States under HBEE 17.01(g) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_personDfrdActnUndDHSActnUndHBEE1701g10Eff073014_b" text="the person is an individual with deferred action under DHS's deferred action for childhood arrivals process, as described in the Secretary of Homeland Security's June 15, 2012 memorandum" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personRtdTPSPerUSC1254aUndHBEE1701g4iiEff073014_b" text="the person was granted Temporary Protected Status (TPS) in accordance with 8 USC section 1254a and individuals with pending applications for TPS who have been granted employment authorization" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personNonCtznUndHBEE1701hEff073014_b" text="the person is considered a non-citizen under HBEE 17.01(h) (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+    <test-case name="(11) 1701g4vi - Lawfully Present in US: LP Class, granted Deferred Action Status" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_personLwflyPrstUSUndHBEE1701gEff073014_b" text="the person is considered to be lawfully present in the United States under HBEE 17.01(g) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_personDfrdActnUndDHSActnUndHBEE1701g10Eff073014_b" text="the person is an individual with deferred action under DHS's deferred action for childhood arrivals process, as described in the Secretary of Homeland Security's June 15, 2012 memorandum" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personGtdDfrdActnStatUndHBEE1701g4viEff073014_b" text="the person was granted Deferred Action status" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personNonCtznUndHBEE1701hEff073014_b" text="the person is considered a non-citizen under HBEE 17.01(h) (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+    <test-case name="(12) 1701g5,5ii - Lawfully Present in US: Pending asylum appl for 180 days, +Under 14" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_personLwflyPrstUSUndHBEE1701gEff073014_b" text="the person is considered to be lawfully present in the United States under HBEE 17.01(g) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_personDfrdActnUndDHSActnUndHBEE1701g10Eff073014_b" text="the person is an individual with deferred action under DHS's deferred action for childhood arrivals process, as described in the Secretary of Homeland Security's June 15, 2012 memorandum" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personUndAge14_b" text="the person is under the age of 14" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personPdgAppAsylmUndUSC1158UndHBEE1701g5iEff073014_b" text="the person is an individual with a pending application for asylum under 8 USC section 1158" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personNonCtznUndHBEE1701hEff073014_b" text="the person is considered a non-citizen under HBEE 17.01(h) (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+    <test-case name="(13) 1701g9 - Lawfully Present in US: Victim of severe human trafficking" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_personLwflyPrstUSUndHBEE1701gEff073014_b" text="the person is considered to be lawfully present in the United States under HBEE 17.01(g) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_personDfrdActnUndDHSActnUndHBEE1701g10Eff073014_b" text="the person is an individual with deferred action under DHS's deferred action for childhood arrivals process, as described in the Secretary of Homeland Security's June 15, 2012 memorandum" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personVctmSvrFrmTfckgPerVTVPAUndHBEE1701g9Eff073014_b" text="the person is a victim of a severe form of trafficking in persons, in accordance with the Victims of Trafficking and Violence Protection Act of 2000, Public Law 106-386, as amended (22 USC section 7105(b))" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_personNonCtznUndHBEE1701hEff073014_b" text="the person is considered a non-citizen under HBEE 17.01(h) (eff. 07/30/2014)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+    <test-case name="(14) 1701g10 - NOT Lawfully Present in US: Has deferred action for childhood arrivals" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_personLwflyPrstUSUndHBEE1701gEff073014_b" text="the person is considered to be lawfully present in the United States under HBEE 17.01(g) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_personDfrdActnUndDHSActnUndHBEE1701g10Eff073014_b" text="the person is an individual with deferred action under DHS's deferred action for childhood arrivals process, as described in the Secretary of Homeland Security's June 15, 2012 memorandum" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+    <test-case name="(15) 1701g - NOT Lawfully Present in US: All OR-conditionals false" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_personLwflyPrstUSUndHBEE1701gEff073014_b" text="the person is considered to be lawfully present in the United States under HBEE 17.01(g) (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_personDfrdActnUndDHSActnUndHBEE1701g10Eff073014_b" text="the person is an individual with deferred action under DHS's deferred action for childhood arrivals process, as described in the Secretary of Homeland Security's June 15, 2012 memorandum" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personVldNonImmStatUSC1101a1517UndHBEE1701g2Eff073014_b" text="the person is in a valid non-immigrant status, as defined in 8 USC sections 1101(a)(15) or 1101(a)(17)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personPrldFrProsDfdInspPdgRmvlPrcdgsUndHBEE1701g3Eff073014_b" text="the person was paroled for prosecution, for deferred inspection or pending removal proceedings" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personGtdTmpResStatPerUSC1160UndHBEE1701g4iEff073014_b" text="the person was granted temporary resident status in accordance with 8 USC section 1160 or 1255a" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personRtdTPSPerUSC1254aUndHBEE1701g4iiEff073014_b" text="the person was granted Temporary Protected Status (TPS) in accordance with 8 USC section 1254a and individuals with pending applications for TPS who have been granted employment authorization" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personGtdEmplyAuthPerCFR274a12cUndHBEE1701g4iiiEff073014_b" text="the person was granted employment authorization under 8 CFR section 274a.12(c)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personFmlyUntyBenePer101301UndHBEE1701g4ivEff073014_b" text="the person is a Family Unity beneficiary in accordance with section 301 of 101" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personQlfsLwfPresUndDEDUndHBEE1701g4vEff073014_b" text="the person qualifies as lawfully-present under Deferred Enforced Departure (DED) in accordance with a decision made by the President" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personGtdDfrdActnStatUndHBEE1701g4viEff073014_b" text="the person was granted Deferred Action status" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personBnfcyApvdVsaPetPdgAppAdjstStatUndHBEE1701g4viiiEff073014_b" text="the person is a beneficiary of an approved visa petition who has a pending application for adjustment of status" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personGtdEmplmtAuthUndUSC1231UndHBEE1701g5iEff073014_b" text="the person has been granted employment authorization under 8 USC section 1231" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personUndAge14_b" text="the person is under the age of 14" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personGtdWthldgRmvlUndCATUndHBEE1701g6Eff073014_b" text="the person has been granted withholding of removal under the Convention Against Torture" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personChldPdgAppSIJStatPerUSC1101a27JUndHBEE1701g7Eff073014_b" text="the person is a child who has a pending application for Special Immigrant Juvenile status as described in 8 USC section 1101(a)(27)(J)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personLwflyPresInAmSamoaUndHBEE1701g8Eff073014_b" text="the person is considered to be lawfully present in American Samoa under the immigration laws of American Samoa" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personVctmSvrFrmTfckgPerVTVPAUndHBEE1701g9Eff073014_b" text="the person is a victim of a severe form of trafficking in persons, in accordance with the Victims of Trafficking and Violence Protection Act of 2000, Public Law 106-386, as amended (22 USC section 7105(b))" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citStayOfRemoval_b" text="the person was granted an administrative stay of removal under 8 CFR part 241" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citLPR_b" text="the person is a lawful, permanent resident of the United States (LPR)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personAdmtdUSUndINA207UndHBEE1701d2iEff073014_b" text="the person is a refugee admitted to the United States under section 207 of the INA" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personGrntdParoleCubHaitUndHBEE1701d2iiAEff073014_b" text="the person was granted parole status as a Cuban/Haitian entrant (Status Pending) on or after April 21, 1980" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personSbjtRmvlDptUndINAUndHBEE1701d2iiBEff073014_b" text="the person is the subject of removal, deportation or exclusion proceedings under the Immigration and Nationality Act" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHsAplctnAsylmPdgWDHSUndHBEE1701d2iiCEff073014_b" text="the person has an application for asylum pending with the Department of Homeland Security (DHS)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personAmrsnAdmtdUSUndFOEF584UndHBEE1701d3Eff073014_b" text="the person is an Amerasian, admitted to the United States under Foreign Operations Export Financing, and Related Programs Appropriation Act, 1988 section 584" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personAsyleeUndINA208UndHBEE1701d4Eff073014_b" text="the person is considered an asylee under INA 208" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personNonCtznWhsDprtnWthldUndINA243hUndHBEE1701d5iEff073014_b" text="the person is considered a non-citizen whose deportation has been withheld under section 243(h) of the INA, as in effect prior to April 1, 1997" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personNonCtznWhsDptnWthldUndINA241b3UndHBEE1701d5iiEff073014_b" text="the person is considered a non-citizen whose deportation has been withheld under section 241(b)(3) of the INA, as amended by section 305(a) of division C of Public Law 104-208" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personNonCtznGrntdPrle1YrByUSCISUndINA212d5UndHBEE1701d6Eff073014_b" text="the person is a non-citizen who has been granted parole for at least one year by the USCIS under INA 212(d)(5)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personNonCtznGrntdCndtlEtryUndINA203a7UndHBEE1701d7Eff073014_b" text="the person is a non-citizen who has been granted conditional entry under section 203(a)(7) of the INA" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personVctmSvrTrfkgPerTVPA107b1UndHBEE1701d9Eff073014_b" text="the person is a victim of a severe form of trafficking, in accordance with section 107(b)(1) of the Trafficking Victims Protection Act of 2000" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_citAIANCanada_b" text="the person is an American Indian who was born in Canada" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personAmIndnMbrFedRcgdTrbPerISDEA4eUndHBEE1701d10iiEff073014_b" text="the person is an American Indian who is a member of a Federally-recognized Indian tribe, as defined in section 4(e) of the Indian Self-Determination and Education Assistance Act, 25 USC section 450b(e)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personParldIntoUSAft101080UndHBEE1701d2iiAEff073014_b" text="the person has been paroled into the United States on or after October 10, 1980" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_qualNonCitBatteredHBEE17.02e2_b" text="the person meets the definition of a qualified non-citizen under HBEE 17.01(e)(2) as a battered non-citizen" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_qualNonCitBatteredHBEE17.02e2Parent_b" text="the person is a parent of a child who has met the definition of a qualified non-citizen under HBEE 17.01(e)(2) as a battered non-citizen" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_qualNonCitBatteredHBEE17.02e2Child_b" text="the person is a child residing in the same household as someone who has met the definition of a qualified non-citizen under HBEE 17.01(e)(2) as a battered non-citizen" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_qualNonCitBattered_b" text="the person is a qualified battered non-citizen" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="false" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+    <test-case name="(20) 1701giii - NOT lawfully Present in the US: Granted Employment" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="st_HBEE1701g4iiiSatisfiedEff073014_b" text="HBEE 17.01(g)(4)(iii) is satisfied for the person (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_personGtdEmplyAuthPerCFR274a12cUndHBEE1701g4iiiEff073014_b" text="the person was granted employment authorization under 8 CFR section 274a.12(c)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true" />
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2013" />
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2015" />
+      </ent-set>
+    </test-case>
+  </test-case-set>
+  <outcome-set>
+    <outcome name="so_personQlfdNonCtznUndHBEE1701dEff073014_b" display-name="Is qualified non-citizen" text="the person is considered to be a qualified non-citizen under HBEE 17.01(d) (eff. 07/30/2014)" type="boolean" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+    <outcome name="so_personLwflyPrstUSUndHBEE1701gEff073014_b" display-name="Is lawfully present" text="the person is considered to be lawfully present in the United States under HBEE 17.01(g) (eff. 07/30/2014)" type="boolean" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+    <outcome name="so_personQlfdBtrdNonCtznUndHBEE1701eEff073014_b" display-name="Is qualified battered non-citizen" text="the person is considered a qualified battered non-citizen under HBEE 17.01(e) (eff. 07/30/2014)" type="boolean" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+    <outcome name="st_HBEE1701g4iiiSatisfiedEff073014_b" display-name="st_HBEE1701g4iiiSatisfiedEff073014_b" text="HBEE 17.01(g)(4)(iii) is satisfied for the person (eff. 07/30/2014)" type="boolean" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+  </outcome-set>
+</test-script>

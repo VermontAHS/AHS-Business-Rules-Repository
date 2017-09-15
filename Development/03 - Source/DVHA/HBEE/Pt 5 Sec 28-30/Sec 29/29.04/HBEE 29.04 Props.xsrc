@@ -1,0 +1,165 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b9" type="boolean" public-name="si_perDiedBfrFirstDayMnFollwCalMnDeath_b">
+        <text>
+          <base>the person has died during the month</base>
+          <parse>s(ver('10.4.6.76'),v(die,t(simple,present,perfect)),sb('the person',singular),o('during the month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" public-name="si_perSepBfrFirstDayMnFollwCalMnSep_b">
+        <text>
+          <base>the person was separated from the person's spouse during the month</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,past,normal)),sb('the person',singular),o('separated from the person''s spouse during the month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" public-name="si_perNdsLongTrmCareLT30ConsDays_b">
+        <text>
+          <base>the person is likely to need long-term care for fewer than 30 consecutive days</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('likely to need long-term care for fewer than 30 consecutive days'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" public-name="si_perAndSpousAdmSameResCareHm_b">
+        <text>
+          <base>the person and the person's spouse have been admitted to the same residential care home</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,perfect)),sb('the person and the person''s spouse',plural),o('admitted to the same residential care home'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" public-name="si_perAndSpousAdmSameInstLongTrmSameMn_b">
+        <text>
+          <base>the person and the person's spouse have been admitted to the same institution for long-term care in the same month</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,perfect)),sb('the person and the person''s spouse',plural),o('admitted to the same institution for long-term care in the same month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" public-name="si_perAndSpousLivSameInst6MnBgn1stMn_b">
+        <text>
+          <base>the person and the person's spouse have lived in the same institution at least six months beginning with the first month of their admission</base>
+          <parse>s(ver('10.4.6.76'),v(live,t(simple,present,perfect)),sb('the person and the person''s spouse',plural),o('in the same institution at least six months beginning with the first month of their admission'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" public-name="si_perRecvCustCareHomeAABD2766_b">
+        <text>
+          <base>the person is receiving custodial care in their home under AABD 2766</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('receiving custodial care in their home under AABD 2766'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" public-name="st_HBEE29.04dSatisfiedPer_b">
+        <text>
+          <base>HBEE 29.04(d) is satisfied for the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 29.04(d)',singular),o('for the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" public-name="si_perResrcAssesAllocDteMABDApp_b">
+        <text>
+          <base>it is the date of the person's initial application for Medicaid coverage of long-term care services and supports under MABD</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the date of the person''s initial application for Medicaid coverage of long-term care services and supports under MABD'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" public-name="si_perResHome4orMorePersons_b">
+        <text>
+          <base>the person's residential care home is designed for four or more persons</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s residential care home',singular),o('designed for four or more persons'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" public-name="si_grpMedicaidTwoAdvantage_b">
+        <text>
+          <base>it works to the advantage of the person and the person's spouse to be a Medicaid group of two</base>
+          <parse>s(ver('10.4.6.76'),v(work,t(simple,present,normal)),sb('it',singular),o('to the advantage of the person and the person''s spouse to be a Medicaid group of two'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b24" type="boolean" public-name="st_HBEE29.04bAppliesPer_b">
+        <text>
+          <base>HBEE 29.04(b) applies to the person for the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.04(b)',singular),o('to the person for the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" public-name="st_HBEE29.04cAppliesPer_b">
+        <text>
+          <base>HBEE 29.04(c) applies to the person for the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.04(c)',singular),o('to the person for the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" public-name="st_HBEE29.04eAppliesPer_b">
+        <text>
+          <base>HBEE 29.04(e) applies to the person for the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.04(e)',singular),o('to the person for the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+      <attribute name="b2" type="boolean" public-name="st_membPerMABDGrp29.04b_b">
+        <text>
+          <base>the group member is a member of the person's Medicaid group under HBEE 29.04(b) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('a member of the person''s Medicaid group under HBEE 29.04(b) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" public-name="st_membPerMABDGrp29.04c1_b">
+        <text>
+          <base>the group member is a member of the person's Medicaid group under HBEE 29.04(c)(1) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('a member of the person''s Medicaid group under HBEE 29.04(c)(1) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" public-name="st_membPerMABDGrp29.04e1_b">
+        <text>
+          <base>the group member is a member of the person's Medicaid group under HBEE 29.04(e)(1) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('a member of the person''s Medicaid group under HBEE 29.04(e)(1) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" public-name="st_membPerMABDGrp29.04c2_b">
+        <text>
+          <base>the group member is considered to be living with the person under HBEE 29.04(c)(2) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the group member',singular),o('to be living with the person under HBEE 29.04(c)(2) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+      <attribute name="b23" type="boolean" public-name="so_membPerMABDGrp29.04_b">
+        <text>
+          <base>the group member is a member of the person's Medicaid group for the group member program under HBEE 29.04 (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('a member of the person''s Medicaid group for the group member program under HBEE 29.04 (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" public-name="si_gmMbrPrsnsMedcdGrpHBEE2904_b">
+        <text>
+          <base>the group member is a member of the person's Medicaid group for the group member program under HBEE 29.04</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('a member of the person''s Medicaid group for the group member program under HBEE 29.04'))</parse>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

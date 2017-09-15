@@ -1,0 +1,352 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are continuous eligibility requirements for the program under DVHA policy</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',plural),o('continuous eligibility requirements for the program under DVHA policy'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b2" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets all of the continuous eligibility requirements for the program under DVHA policy</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('all of the continuous eligibility requirements for the program under DVHA policy'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are alternative eligibility requirements for the program under DVHA policy</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',plural),o('alternative eligibility requirements for the program under DVHA policy'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are continuous eligibility requirements for the program under HBEE 9.03(b)(2)(ii)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',plural),o('continuous eligibility requirements for the program under HBEE 9.03(b)(2)(ii)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are continuous eligibility requirements for the person for the program under HBEE 7.03(a)(2)(iii)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',plural),o('continuous eligibility requirements for the person for the program under HBEE 7.03(a)(2)(iii)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets the continuous eligibility requirements for the program under HBEE 7.03(a)(2)(iii)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the continuous eligibility requirements for the program under HBEE 7.03(a)(2)(iii)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are continuous eligibility requirements for the program under HBEE 7.03(a)(3)(ii)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',plural),o('continuous eligibility requirements for the program under HBEE 7.03(a)(3)(ii)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are alternative eligibility requirements for the program under HBEE 8.05(i)(1)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',plural),o('alternative eligibility requirements for the program under HBEE 8.05(i)(1)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b12" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are alternative eligibility requirements for the program under HBEE 8.05(i)(3)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',plural),o('alternative eligibility requirements for the program under HBEE 8.05(i)(3)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b15" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are alternative eligibility requirements for the program under HBEE 8.05(k)(2)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',plural),o('alternative eligibility requirements for the program under HBEE 8.05(k)(2)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b17" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets an alternative eligibility requirement for the program under DVHA policy</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('an alternative eligibility requirement for the program under DVHA policy'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are alternative eligibility requirements for the program under HBEE 28.03(h)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',plural),o('alternative eligibility requirements for the program under HBEE 28.03(h)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets the alternative eligibility requirements for the program under HBEE 28.03(h)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the alternative eligibility requirements for the program under HBEE 28.03(h)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are alternative eligibility requirements for the program under HBEE 8.05(a)(1)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',plural),o('alternative eligibility requirements for the program under HBEE 8.05(a)(1)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are alternative eligibility requirements for the program under RMA 5121</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',plural),o('alternative eligibility requirements for the program under RMA 5121'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>there are alternative eligibility requirements for the program under HBEE 8.05(c)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('there',plural),o('alternative eligibility requirements for the program under HBEE 8.05(c)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b6" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets the continuous eligibility requirements under HBEE 9.03(b)(2)(ii)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the continuous eligibility requirements under HBEE 9.03(b)(2)(ii)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets the continuous eligibility requirements under HBEE 7.03(a)(3)(ii)(B)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the continuous eligibility requirements under HBEE 7.03(a)(3)(ii)(B)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b13" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 8.05(i)(1) is satisfied for the person</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.05(i)(1)',singular),o('for the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b14" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 8.05(i)(3) is satisfied for the person</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 8.05(i)(3)',singular),o('for the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets the alternative eligibility requirements under RMA 5121</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the alternative eligibility requirements under RMA 5121'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets the alternative eligibility requirements under HBEE 8.05(a)(1)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the alternative eligibility requirements under HBEE 8.05(a)(1)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b27" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets the alternative eligibility requirements under HBEE 8.05(c)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the alternative eligibility requirements under HBEE 8.05(c)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person meets the alternative eligibility requirements under HBEE 8.05(k)(2)</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the alternative eligibility requirements under HBEE 8.05(k)(2)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="there are continuous eligibility requirements for the program under DVHA policy" ruleburst="true" concludes="b1" folder="2" source-offset="46">
+      <rule-xml>
+        <conclude attr-id="b1" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b7" />
+              <attribute attr-id="b9" />
+              <attribute attr-id="b5" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the person meets all of the continuous eligibility requirements for the program under DVHA policy" ruleburst="true" concludes="b2" folder="2" source-offset="437">
+      <rule-xml>
+        <conclude attr-id="b2" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <or>
+                <not>
+                  <attribute attr-id="b7" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b7" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                  <attribute attr-id="b8" />
+                </and>
+              </or>
+              <or>
+                <not>
+                  <attribute attr-id="b9" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b9" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                  <for>
+                    <relationship relationship-id="programsperson" target-entity-id="person" />
+                    <attribute attr-id="b10" />
+                  </for>
+                </and>
+              </or>
+              <or>
+                <not>
+                  <attribute attr-id="b5" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                </not>
+                <and>
+                  <attribute attr-id="b5" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                  <for>
+                    <relationship relationship-id="programsperson" target-entity-id="person" />
+                    <attribute attr-id="b6" />
+                  </for>
+                </and>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="there are alternative eligibility requirements for the program under DVHA policy" ruleburst="true" concludes="b3" folder="3" source-offset="2338">
+      <rule-xml>
+        <conclude attr-id="b3" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b20" />
+              <attribute attr-id="b24" />
+              <attribute attr-id="b11" />
+              <attribute attr-id="b12" />
+              <attribute attr-id="b15" />
+              <attribute attr-id="b18" />
+              <attribute attr-id="b22" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="the person meets an alternative eligibility requirement for the program under DVHA policy" ruleburst="true" concludes="b17" folder="3" source-offset="3072">
+      <rule-xml>
+        <conclude attr-id="b17" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <and>
+                <attribute attr-id="b20" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                <or>
+                  <not>
+                    <attribute attr-id="b20" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                  </not>
+                  <for>
+                    <relationship relationship-id="programsperson" target-entity-id="person" />
+                    <attribute attr-id="b26" />
+                  </for>
+                </or>
+              </and>
+              <and>
+                <attribute attr-id="b24" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                <or>
+                  <not>
+                    <attribute attr-id="b24" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                  </not>
+                  <for>
+                    <relationship relationship-id="programsperson" target-entity-id="person" />
+                    <attribute attr-id="b27" />
+                  </for>
+                </or>
+              </and>
+              <and>
+                <attribute attr-id="b11" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                <or>
+                  <not>
+                    <attribute attr-id="b11" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                  </not>
+                  <for>
+                    <relationship relationship-id="programsperson" target-entity-id="person" />
+                    <attribute attr-id="b13" />
+                  </for>
+                </or>
+              </and>
+              <and>
+                <attribute attr-id="b12" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                <or>
+                  <not>
+                    <attribute attr-id="b12" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                  </not>
+                  <for>
+                    <relationship relationship-id="programsperson" target-entity-id="person" />
+                    <attribute attr-id="b14" />
+                  </for>
+                </or>
+              </and>
+              <and>
+                <attribute attr-id="b15" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                <or>
+                  <not>
+                    <attribute attr-id="b15" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                  </not>
+                  <for>
+                    <relationship relationship-id="programsperson" target-entity-id="person" />
+                    <attribute attr-id="b28" />
+                  </for>
+                </or>
+              </and>
+              <and>
+                <attribute attr-id="b18" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                <or>
+                  <not>
+                    <attribute attr-id="b18" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                  </not>
+                  <attribute attr-id="b19" />
+                </or>
+              </and>
+              <and>
+                <attribute attr-id="b22" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                <or>
+                  <not>
+                    <attribute attr-id="b22" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                  </not>
+                  <for>
+                    <relationship relationship-id="programsperson" target-entity-id="person" />
+                    <attribute attr-id="b23" />
+                  </for>
+                </or>
+              </and>
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="Overall Eligibility" parent="0" id="1" />
+    <folder text="Continuous Eligibility" parent="1" id="2" />
+    <folder text="Alternative Eligibility" parent="1" id="3" />
+  </rule-folders>
+</root>

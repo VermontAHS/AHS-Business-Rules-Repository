@@ -1,0 +1,1148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-script product-version="10.4.6.76" schema-version="4">
+  <test-case-set>
+    <test-case name="(b) transfer to spouse over CSRA" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+              <ent-inst-ref ref-id="person 2" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_HBEE25.05TrnPnltyHrdshp20150715_b" text="the person is considered to have an undue hardship under HBEE 25.05 (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="st_HBEE25.05bSat20150715_b" text="HBEE 25.05(b) is satisfied for the person (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Donna</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personstransfers" complete="true">
+              <ent-inst-ref ref-id="personstransfer 1" />
+            </relationship-inst>
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Donna|1" />
+              <ent-inst-ref ref-id="Donna|2" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 2">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Eric</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resOverCsra_b" text="the person has resources in excess of the community spouse resource allocation (CSRA)" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="related-party 1" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Eric|2" />
+              <ent-inst-ref ref-id="Eric|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="personstransfer" entity-text="the person's transfer">
+        <ent-inst id="personstransfer 1">
+          <attr-inst name="so_AllowedHBEE25.03NoDt_b" text="the person's transfer is allowed under HBEE 25.03" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_trnToSpouse_b" text="the person's transfer was transferred to the person's spouse" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2013" />
+        <ent-inst id="2014" />
+        <ent-inst id="2016" />
+        <ent-inst id="2015" />
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Donna|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Donna|2">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Eric|2">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Eric|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="related-party" entity-text="the related party">
+        <ent-inst id="related-party 1">
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Donna</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Spouse</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+    <test-case name="(c) other hardship" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+              <ent-inst-ref ref-id="person 2" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_HBEE25.05TrnPnltyHrdshp20150715_b" text="the person is considered to have an undue hardship under HBEE 25.05 (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Donna</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE25.05cSat20150715_b" text="HBEE 25.05(c) is satisfied for the person (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_trnPenaltyHardshipReq_b" text="the person has requested an undue hardship exception for the transfer penalty" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_trnPenaltyHardshipDoc_b" text="the person has submitted documentation supporting the person's claim of undue hardship for the transfer penalty" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_transferHardshipPerAHS_b" text="AHS has determined that a transfer penalty would cause the person undue hardship" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="true">
+              <ent-inst-ref ref-id="personstransfer 1" />
+            </relationship-inst>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Donna|2" />
+              <ent-inst-ref ref-id="Donna|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 2">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Eric</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resOverCsra_b" text="the person has resources in excess of the community spouse resource allocation (CSRA)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="related-party 1" />
+            </relationship-inst>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Eric|2" />
+              <ent-inst-ref ref-id="Eric|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="personstransfer" entity-text="the person's transfer">
+        <ent-inst id="personstransfer 1">
+          <attr-inst name="so_AllowedHBEE25.03NoDt_b" text="the person's transfer is allowed under HBEE 25.03" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_trnToSpouse_b" text="the person's transfer was transferred to the person's spouse" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2013" />
+        <ent-inst id="2014" />
+        <ent-inst id="2016" />
+        <ent-inst id="2015" />
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Donna|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Donna|2">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Eric|2">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Eric|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="related-party" entity-text="the related party">
+        <ent-inst id="related-party 1">
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Donna</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Spouse</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+    <test-case name="(c) POA not acting in interest" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+              <ent-inst-ref ref-id="person 2" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_HBEE25.05TrnPnltyHrdshp20150715_b" text="the person is considered to have an undue hardship under HBEE 25.05 (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Donna</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE25.05cSat20150715_b" text="HBEE 25.05(c) is satisfied for the person (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_trnPenaltyHardshipReq_b" text="the person has requested an undue hardship exception for the transfer penalty" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_trnPenaltyHardshipDoc_b" text="the person has submitted documentation supporting the person's claim of undue hardship for the transfer penalty" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="true">
+              <ent-inst-ref ref-id="personstransfer 1" />
+            </relationship-inst>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Donna|2" />
+              <ent-inst-ref ref-id="Donna|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 2">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Eric</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resOverCsra_b" text="the person has resources in excess of the community spouse resource allocation (CSRA)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="related-party 1" />
+            </relationship-inst>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Eric|2" />
+              <ent-inst-ref ref-id="Eric|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="personstransfer" entity-text="the person's transfer">
+        <ent-inst id="personstransfer 1">
+          <attr-inst name="so_AllowedHBEE25.03NoDt_b" text="the person's transfer is allowed under HBEE 25.03" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_trnToSpouse_b" text="the person's transfer was transferred to the person's spouse" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_trnByPoa_b" text="the person's transfer was transferred by an agent under a power of attorney (POA) or a guardian of the person" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_trnByPoaNotInterestDecision_b" text="AHS or a court has determined that the agent under a power of attorney (POA) or guardian who transferred the person's transfer was not acting in the best interest of the person when the transfer was made" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2013" />
+        <ent-inst id="2014" />
+        <ent-inst id="2016" />
+        <ent-inst id="2015" />
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Donna|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Donna|2">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Eric|2">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Eric|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="related-party" entity-text="the related party">
+        <ent-inst id="related-party 1">
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Donna</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Spouse</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+    <test-case name="(c) exhausted all reasonable efforts to provide" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+              <ent-inst-ref ref-id="person 2" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_HBEE25.05TrnPnltyHrdshp20150715_b" text="the person is considered to have an undue hardship under HBEE 25.05 (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Donna</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE25.05cSat20150715_b" text="HBEE 25.05(c) is satisfied for the person (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_trnPenaltyHardshipReq_b" text="the person has requested an undue hardship exception for the transfer penalty" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_trnPenaltyHardshipDoc_b" text="the person has submitted documentation supporting the person's claim of undue hardship for the transfer penalty" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_trnProvideOtherNo_b" text="it is the case that AHS has determined that the person has exhausted all reasonable efforts to pay or provide the care of the person, or to provide for the needs of financially-dependent family members from other available sources" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personstransfers" complete="true">
+              <ent-inst-ref ref-id="personstransfer 1" />
+            </relationship-inst>
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Donna|2" />
+              <ent-inst-ref ref-id="Donna|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 2">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Eric</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resOverCsra_b" text="the person has resources in excess of the community spouse resource allocation (CSRA)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="related-party 1" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Eric|2" />
+              <ent-inst-ref ref-id="Eric|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="personstransfer" entity-text="the person's transfer">
+        <ent-inst id="personstransfer 1">
+          <attr-inst name="so_AllowedHBEE25.03NoDt_b" text="the person's transfer is allowed under HBEE 25.03" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_trnToSpouse_b" text="the person's transfer was transferred to the person's spouse" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_trnProvideRecipNo_b" text="the recipient of the person's transfer can make other arrangements to pay or provide the care of the person, or to provide for the needs of financially-dependent family members" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2013" />
+        <ent-inst id="2014" />
+        <ent-inst id="2016" />
+        <ent-inst id="2015" />
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Donna|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Donna|2">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Eric|2">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Eric|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="related-party" entity-text="the related party">
+        <ent-inst id="related-party 1">
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Donna</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Spouse</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+    <test-case name="(c) no hardship" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+              <ent-inst-ref ref-id="person 2" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_HBEE25.05TrnPnltyHrdshp20150715_b" text="the person is considered to have an undue hardship under HBEE 25.05 (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Donna</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE25.05cSat20150715_b" text="HBEE 25.05(c) is satisfied for the person (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_trnPenaltyHardshipReq_b" text="the person has requested an undue hardship exception for the transfer penalty" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_trnPenaltyHardshipDoc_b" text="the person has submitted documentation supporting the person's claim of undue hardship for the transfer penalty" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_trnProvideOtherNo_b" text="it is the case that AHS has determined that the person has exhausted all reasonable efforts to pay or provide the care of the person, or to provide for the needs of financially-dependent family members from other available sources" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_trnPenaltyQualBene_b" text="the transfer penalty would result in the person's immediate family qualifying for SSI; Reach Up; AABD; General Assistance; 3SquaresVTs; or another public assistance program requiring a comparable showing of financial need" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_trnPenaltySellPrimaryInc_b" text="the transfer penalty would require that assets such as a family farm or other family business that are the primary source of income for the person's spouse, parents, children or siblings be sold in order to acquire funds for the cost of the person's long-term care services and supports" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_transferHardshipPerAHS_b" text="AHS has determined that a transfer penalty would cause the person undue hardship" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="true">
+              <ent-inst-ref ref-id="personstransfer 1" />
+            </relationship-inst>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Donna|2" />
+              <ent-inst-ref ref-id="Donna|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 2">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Eric</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resOverCsra_b" text="the person has resources in excess of the community spouse resource allocation (CSRA)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="related-party 1" />
+            </relationship-inst>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Eric|2" />
+              <ent-inst-ref ref-id="Eric|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="personstransfer" entity-text="the person's transfer">
+        <ent-inst id="personstransfer 1">
+          <attr-inst name="so_AllowedHBEE25.03NoDt_b" text="the person's transfer is allowed under HBEE 25.03" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_trnToSpouse_b" text="the person's transfer was transferred to the person's spouse" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_trnProvideRecipNo_b" text="the recipient of the person's transfer can make other arrangements to pay or provide the care of the person, or to provide for the needs of financially-dependent family members" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_trnByPoa_b" text="the person's transfer was transferred by an agent under a power of attorney (POA) or a guardian of the person" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_trnByFraud_b" text="the person's transfer was the result of exploitation, fraud or misrepresentation" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_trnRecoverLost_b" text="it is the case that the person's transfer is not recoverable due to loss, destruction, theft, or other similar circumstances" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2013" />
+        <ent-inst id="2014" />
+        <ent-inst id="2016" />
+        <ent-inst id="2015" />
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Donna|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Donna|2">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Eric|2">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Eric|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="related-party" entity-text="the related party">
+        <ent-inst id="related-party 1">
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Donna</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Spouse</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+    <test-case name="(d) not requested" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+              <ent-inst-ref ref-id="person 2" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_HBEE25.05TrnPnltyHrdshp20150715_b" text="the person is considered to have an undue hardship under HBEE 25.05 (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Donna</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_trnPenaltyHardshipReq_b" text="the person has requested an undue hardship exception for the transfer penalty" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE25.05e3Sat20150715_b" text="HBEE 25.05(e)(3) is satisfied for the person (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="true">
+              <ent-inst-ref ref-id="personstransfer 1" />
+            </relationship-inst>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Donna|2" />
+              <ent-inst-ref ref-id="Donna|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 2">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Eric</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resOverCsra_b" text="the person has resources in excess of the community spouse resource allocation (CSRA)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="related-party 1" />
+            </relationship-inst>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Eric|2" />
+              <ent-inst-ref ref-id="Eric|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="personstransfer" entity-text="the person's transfer">
+        <ent-inst id="personstransfer 1">
+          <attr-inst name="so_AllowedHBEE25.03NoDt_b" text="the person's transfer is allowed under HBEE 25.03" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_trnToSpouse_b" text="the person's transfer was transferred to the person's spouse" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2013" />
+        <ent-inst id="2014" />
+        <ent-inst id="2016" />
+        <ent-inst id="2015" />
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Donna|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Donna|2">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Eric|2">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Eric|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="related-party" entity-text="the related party">
+        <ent-inst id="related-party 1">
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Donna</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Spouse</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+    <test-case name="(d) no doco" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+              <ent-inst-ref ref-id="person 2" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="so_HBEE25.05TrnPnltyHrdshp20150715_b" text="the person is considered to have an undue hardship under HBEE 25.05 (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Donna</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_trnPenaltyHardshipReq_b" text="the person has requested an undue hardship exception for the transfer penalty" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE25.05e3Sat20150715_b" text="HBEE 25.05(e)(3) is satisfied for the person (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_trnPenaltyHardshipDoc_b" text="the person has submitted documentation supporting the person's claim of undue hardship for the transfer penalty" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personstransfers" complete="true">
+              <ent-inst-ref ref-id="personstransfer 1" />
+            </relationship-inst>
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Donna|2" />
+              <ent-inst-ref ref-id="Donna|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 2">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Eric</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resOverCsra_b" text="the person has resources in excess of the community spouse resource allocation (CSRA)" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="related-party 1" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Eric|2" />
+              <ent-inst-ref ref-id="Eric|1" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="personstransfer" entity-text="the person's transfer">
+        <ent-inst id="personstransfer 1">
+          <attr-inst name="so_AllowedHBEE25.03NoDt_b" text="the person's transfer is allowed under HBEE 25.03" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_trnToSpouse_b" text="the person's transfer was transferred to the person's spouse" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2013" />
+        <ent-inst id="2014" />
+        <ent-inst id="2016" />
+        <ent-inst id="2015" />
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Donna|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Donna|2">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Eric|2">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Eric|1">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="related-party" entity-text="the related party">
+        <ent-inst id="related-party 1">
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Donna</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Spouse</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+  </test-case-set>
+  <outcome-set>
+    <outcome name="so_HBEE25.05TrnPnltyHrdshp20150715_b" display-name="so_HBEE25.05TrnPnltyHrdshp20150715_b" text="the person is considered to have an undue hardship under HBEE 25.05 (eff. 07/15/2015)" type="boolean" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+    <outcome name="st_HBEE25.05bSat20150715_b" display-name="st_HBEE25.05bSat20150715_b" text="HBEE 25.05(b) is satisfied for the person (eff. 07/15/2015)" type="boolean" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+    <outcome name="st_HBEE25.05cSat20150715_b" display-name="st_HBEE25.05cSat20150715_b" text="HBEE 25.05(c) is satisfied for the person (eff. 07/15/2015)" type="boolean" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+    <outcome name="st_HBEE25.05e3Sat20150715_b" display-name="st_HBEE25.05e3Sat20150715_b" text="HBEE 25.05(e)(3) is satisfied for the person (eff. 07/15/2015)" type="boolean" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+  </outcome-set>
+</test-script>

@@ -1,0 +1,2822 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-script product-version="10.4.6.76" schema-version="4">
+  <test-case-set>
+    <test-case name="(d) child with 2 parents" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <attr-inst name="st_MABDResLmtUndrMedcaidProP2420c2_c" text="the MABD resource limit under Medicaid Procedures P-2420C(1) for two people" type="currency">
+            <val>
+              <currency-val>1000.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_MABDResLmtUndrMedcaidProP2420c1_c" text="the MABD resource limit under Medicaid Procedures P-2420C(1) for one person" type="currency">
+            <val>
+              <currency-val>500.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true">
+              <ent-inst-ref ref-id="MSP-QMB" />
+              <ent-inst-ref ref-id="SMG-Newborn" />
+              <ent-inst-ref ref-id="RMA" />
+              <ent-inst-ref ref-id="MABD-Pickle" />
+              <ent-inst-ref ref-id="MN-MABD" />
+              <ent-inst-ref ref-id="MABD-Dec73" />
+              <ent-inst-ref ref-id="MSP-QI" />
+              <ent-inst-ref ref-id="MABD-Aug72" />
+              <ent-inst-ref ref-id="SMG-IV-E" />
+              <ent-inst-ref ref-id="SMG-Former-foster" />
+              <ent-inst-ref ref-id="MABD-1619" />
+              <ent-inst-ref ref-id="MABD-MWPD" />
+              <ent-inst-ref ref-id="MCA-Pregnant" />
+              <ent-inst-ref ref-id="MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="MABD-DAC" />
+              <ent-inst-ref ref-id="MABD-Spouse" />
+              <ent-inst-ref ref-id="MN-MCA" />
+              <ent-inst-ref ref-id="MCA-Adult" />
+              <ent-inst-ref ref-id="MCA-Child" />
+              <ent-inst-ref ref-id="MSP-QDWI" />
+              <ent-inst-ref ref-id="MCA-TMA-1925" />
+              <ent-inst-ref ref-id="MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="MCA-EXT" />
+              <ent-inst-ref ref-id="SMG-Adoption" />
+              <ent-inst-ref ref-id="MSP-SLMB" />
+              <ent-inst-ref ref-id="SMG-BCCT" />
+              <ent-inst-ref ref-id="MCA-PCR" />
+              <ent-inst-ref ref-id="SMG-FPS" />
+            </relationship-inst>
+            <relationship-inst type="existingbenefitplans" complete="true" />
+            <relationship-inst type="caseresults" complete="true">
+              <ent-inst-ref ref-id="Family Planning" />
+              <ent-inst-ref ref-id="Medical Care Benefits" />
+              <ent-inst-ref ref-id="Medicare Cost-Sharing Reduction" />
+            </relationship-inst>
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+              <ent-inst-ref ref-id="person 2" />
+              <ent-inst-ref ref-id="person 3" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="true">
+              <ent-inst-ref ref-id="address 1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="si_grpFinParentOne_b" text="the person's financial group includes only one of the person's parents" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_grpFinParentTwo_b" text="the person's financial group includes two of the person's parents" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="rb_per_ageU18" text="the person is under 18 years of age" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_personTtlCntResExclsionAsIndvdlChildUndrHBEE29.10d_c" text="the resource exclusion for the person's parents under HBEE 29.10(d)(1) (eff. 07/15/2015)" type="currency">
+            <expected-val>
+              <currency-val>1000.0</currency-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_req-med" text="the person is requesting medical assistance" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>2005-05-05</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_AlwaysBeenSingle_b" text="it is the case that the person has always been single" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_student_b" text="the person is a student" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ConfinedToPublicInsitution_b" text="the person is confined to a public institution or is in the custody of a public agency" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_MemberOfArmForces_b" text="the person is a member of the armed forces" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesInstPrivate_b" text="the person lives in a private facility" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_AdmittedToLongTermCare_b" text="the person has been admitted to long-term care" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="true" />
+            <relationship-inst type="personsresources" complete="true" />
+            <relationship-inst type="personsincomes" complete="true" />
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 1" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestedbenefits" complete="true">
+              <ent-inst-ref ref-id="Carl|Family Planning" />
+              <ent-inst-ref ref-id="Carl|Medical Care Benefits" />
+              <ent-inst-ref ref-id="Carl|Medicare Cost-Sharing Reduction" />
+            </relationship-inst>
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true">
+              <ent-inst-ref ref-id="Carl|Medical Assistance" />
+            </relationship-inst>
+            <relationship-inst type="personsexpenses" complete="true" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Carl|Carl" />
+              <ent-inst-ref ref-id="Carl|Lori" />
+              <ent-inst-ref ref-id="Carl|Rick" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true">
+              <ent-inst-ref ref-id="Carl|MABD-DAC" />
+              <ent-inst-ref ref-id="Carl|MCA-PCR" />
+              <ent-inst-ref ref-id="Carl|SMG-FPS" />
+              <ent-inst-ref ref-id="Carl|MCA-Adult" />
+              <ent-inst-ref ref-id="Carl|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Carl|MABD-MWPD" />
+              <ent-inst-ref ref-id="Carl|MSP-QMB" />
+              <ent-inst-ref ref-id="Carl|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Carl|MSP-QDWI" />
+              <ent-inst-ref ref-id="Carl|RMA" />
+              <ent-inst-ref ref-id="Carl|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Carl|MSP-QI" />
+              <ent-inst-ref ref-id="Carl|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Carl|SMG-Newborn" />
+              <ent-inst-ref ref-id="Carl|SMG-IV-E" />
+              <ent-inst-ref ref-id="Carl|MSP-SLMB" />
+              <ent-inst-ref ref-id="Carl|MN-MABD" />
+              <ent-inst-ref ref-id="Carl|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Carl|MABD-Aug72" />
+              <ent-inst-ref ref-id="Carl|SMG-Adoption" />
+              <ent-inst-ref ref-id="Carl|MABD-Pickle" />
+              <ent-inst-ref ref-id="Carl|MCA-Child" />
+              <ent-inst-ref ref-id="Carl|SMG-BCCT" />
+              <ent-inst-ref ref-id="Carl|MCA-EXT" />
+              <ent-inst-ref ref-id="Carl|MN-MCA" />
+              <ent-inst-ref ref-id="Carl|MABD-1619" />
+              <ent-inst-ref ref-id="Carl|MABD-Spouse" />
+              <ent-inst-ref ref-id="Carl|MABD-Dec73" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 2">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="true" />
+            <relationship-inst type="personsresources" complete="true" />
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 2" />
+            </relationship-inst>
+            <relationship-inst type="personsincomes" complete="true" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="related-party 1" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="true" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Lori|Lori" />
+              <ent-inst-ref ref-id="Lori|Rick" />
+              <ent-inst-ref ref-id="Lori|Carl" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true">
+              <ent-inst-ref ref-id="Lori|RMA" />
+              <ent-inst-ref ref-id="Lori|SMG-BCCT" />
+              <ent-inst-ref ref-id="Lori|MN-MABD" />
+              <ent-inst-ref ref-id="Lori|MABD-MWPD" />
+              <ent-inst-ref ref-id="Lori|MN-MCA" />
+              <ent-inst-ref ref-id="Lori|MSP-QMB" />
+              <ent-inst-ref ref-id="Lori|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Lori|MABD-Pickle" />
+              <ent-inst-ref ref-id="Lori|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Lori|MCA-PCR" />
+              <ent-inst-ref ref-id="Lori|SMG-Adoption" />
+              <ent-inst-ref ref-id="Lori|MSP-QDWI" />
+              <ent-inst-ref ref-id="Lori|SMG-IV-E" />
+              <ent-inst-ref ref-id="Lori|MABD-Spouse" />
+              <ent-inst-ref ref-id="Lori|MCA-Child" />
+              <ent-inst-ref ref-id="Lori|MABD-DAC" />
+              <ent-inst-ref ref-id="Lori|SMG-Newborn" />
+              <ent-inst-ref ref-id="Lori|MABD-Aug72" />
+              <ent-inst-ref ref-id="Lori|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Lori|MABD-Dec73" />
+              <ent-inst-ref ref-id="Lori|MCA-EXT" />
+              <ent-inst-ref ref-id="Lori|SMG-FPS" />
+              <ent-inst-ref ref-id="Lori|MCA-Adult" />
+              <ent-inst-ref ref-id="Lori|MSP-QI" />
+              <ent-inst-ref ref-id="Lori|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Lori|MSP-SLMB" />
+              <ent-inst-ref ref-id="Lori|MABD-1619" />
+              <ent-inst-ref ref-id="Lori|SMG-Former-foster" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 3">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="true" />
+            <relationship-inst type="personsresources" complete="true" />
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 3" />
+            </relationship-inst>
+            <relationship-inst type="personsincomes" complete="true" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="related-party 2" />
+              <ent-inst-ref ref-id="related-party 3" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="true" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Rick|Rick" />
+              <ent-inst-ref ref-id="Rick|Carl" />
+              <ent-inst-ref ref-id="Rick|Lori" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true">
+              <ent-inst-ref ref-id="Rick|MSP-QDWI" />
+              <ent-inst-ref ref-id="Rick|MABD-1619" />
+              <ent-inst-ref ref-id="Rick|MABD-DAC" />
+              <ent-inst-ref ref-id="Rick|SMG-Newborn" />
+              <ent-inst-ref ref-id="Rick|MABD-Spouse" />
+              <ent-inst-ref ref-id="Rick|MABD-Pickle" />
+              <ent-inst-ref ref-id="Rick|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Rick|MSP-QMB" />
+              <ent-inst-ref ref-id="Rick|SMG-FPS" />
+              <ent-inst-ref ref-id="Rick|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Rick|MCA-Child" />
+              <ent-inst-ref ref-id="Rick|MN-MCA" />
+              <ent-inst-ref ref-id="Rick|MABD-Dec73" />
+              <ent-inst-ref ref-id="Rick|MSP-QI" />
+              <ent-inst-ref ref-id="Rick|MCA-Adult" />
+              <ent-inst-ref ref-id="Rick|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Rick|MSP-SLMB" />
+              <ent-inst-ref ref-id="Rick|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Rick|MABD-MWPD" />
+              <ent-inst-ref ref-id="Rick|SMG-IV-E" />
+              <ent-inst-ref ref-id="Rick|RMA" />
+              <ent-inst-ref ref-id="Rick|MCA-PCR" />
+              <ent-inst-ref ref-id="Rick|MN-MABD" />
+              <ent-inst-ref ref-id="Rick|MCA-EXT" />
+              <ent-inst-ref ref-id="Rick|SMG-Adoption" />
+              <ent-inst-ref ref-id="Rick|MABD-Aug72" />
+              <ent-inst-ref ref-id="Rick|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Rick|SMG-BCCT" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2015" />
+        <ent-inst id="2013" />
+        <ent-inst id="2014" />
+        <ent-inst id="2017" />
+      </ent-set>
+      <ent-set entity-type="program" entity-text="the program" inferred="yes" identifying-attribute="rb_p_ID">
+        <ent-inst id="Lori|MSP-SLMB" />
+        <ent-inst id="Lori|MN-MCA" />
+        <ent-inst id="Lori|MCA-TMA-1925" />
+        <ent-inst id="Rick|MCA-TMA-1925" />
+        <ent-inst id="Rick|MCA-PCR" />
+        <ent-inst id="Carl|MABD-SSI-eligible">
+          <attr-inst name="so_HBEE29.10d20150715Applies_b" text="HBEE 29.10(d) applies to the person for the program (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2014-07-30">
+                <boolean-val>true</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Lori|MSP-QI" />
+        <ent-inst id="Carl|MSP-SLMB" />
+        <ent-inst id="Rick|MCA-EXT" />
+        <ent-inst id="Carl|SMG-Adoption" />
+        <ent-inst id="Carl|MABD-Dec73" />
+        <ent-inst id="Rick|SMG-BCCT" />
+        <ent-inst id="Carl|MABD-SSI-enrolled" />
+        <ent-inst id="Rick|MSP-QI" />
+        <ent-inst id="Rick|MABD-SSI-enrolled" />
+        <ent-inst id="Lori|MABD-SSI-enrolled" />
+        <ent-inst id="Lori|MABD-Spouse" />
+        <ent-inst id="Lori|RMA" />
+        <ent-inst id="Rick|MABD-DAC" />
+        <ent-inst id="Carl|MCA-Pregnant" />
+        <ent-inst id="Carl|MABD-1619" />
+        <ent-inst id="Rick|MCA-Adult" />
+        <ent-inst id="Lori|MABD-Dec73" />
+        <ent-inst id="Lori|MCA-Child" />
+        <ent-inst id="Rick|MCA-Pregnant" />
+        <ent-inst id="Lori|MABD-1619" />
+        <ent-inst id="Lori|MABD-Aug72" />
+        <ent-inst id="Lori|SMG-BCCT" />
+        <ent-inst id="Rick|MN-MCA" />
+        <ent-inst id="Lori|MABD-DAC" />
+        <ent-inst id="Rick|MABD-SSI-eligible" />
+        <ent-inst id="Carl|RMA" />
+        <ent-inst id="Lori|MCA-EXT" />
+        <ent-inst id="Carl|MCA-PCR" />
+        <ent-inst id="Lori|MSP-QMB" />
+        <ent-inst id="Lori|MCA-Pregnant" />
+        <ent-inst id="Rick|SMG-FPS" />
+        <ent-inst id="Carl|SMG-IV-E" />
+        <ent-inst id="Rick|MSP-QMB" />
+        <ent-inst id="Carl|MABD-Pickle" />
+        <ent-inst id="Rick|SMG-Former-foster" />
+        <ent-inst id="Carl|MSP-QDWI" />
+        <ent-inst id="Lori|SMG-Former-foster" />
+        <ent-inst id="Lori|SMG-Newborn" />
+        <ent-inst id="Carl|SMG-Former-foster" />
+        <ent-inst id="Carl|MCA-EXT" />
+        <ent-inst id="Carl|MN-MCA" />
+        <ent-inst id="Rick|MABD-Dec73" />
+        <ent-inst id="Carl|MABD-MWPD" />
+        <ent-inst id="Rick|MSP-QDWI" />
+        <ent-inst id="Rick|MABD-Spouse" />
+        <ent-inst id="Lori|SMG-IV-E" />
+        <ent-inst id="Lori|MABD-MWPD" />
+        <ent-inst id="Carl|MSP-QMB" />
+        <ent-inst id="Lori|MN-MABD" />
+        <ent-inst id="Rick|MABD-Aug72" />
+        <ent-inst id="Rick|SMG-Adoption" />
+        <ent-inst id="Rick|MABD-Pickle" />
+        <ent-inst id="Lori|MABD-Pickle" />
+        <ent-inst id="Rick|MSP-SLMB" />
+        <ent-inst id="Rick|RMA" />
+        <ent-inst id="Lori|MCA-PCR" />
+        <ent-inst id="Rick|MCA-Child" />
+        <ent-inst id="Carl|SMG-Newborn" />
+        <ent-inst id="Rick|MABD-1619" />
+        <ent-inst id="Carl|MABD-Spouse" />
+        <ent-inst id="Carl|MCA-Child" />
+        <ent-inst id="Rick|MABD-MWPD" />
+        <ent-inst id="Lori|MSP-QDWI" />
+        <ent-inst id="Carl|SMG-FPS" />
+        <ent-inst id="Lori|MCA-Adult" />
+        <ent-inst id="Rick|SMG-IV-E" />
+        <ent-inst id="Carl|SMG-BCCT" />
+        <ent-inst id="Carl|MCA-TMA-1925" />
+        <ent-inst id="Rick|SMG-Newborn" />
+        <ent-inst id="Carl|MABD-DAC" />
+        <ent-inst id="Carl|MCA-Adult" />
+        <ent-inst id="Carl|MSP-QI" />
+        <ent-inst id="Lori|SMG-FPS" />
+        <ent-inst id="Carl|MABD-Aug72" />
+        <ent-inst id="Carl|MN-MABD" />
+        <ent-inst id="Lori|MABD-SSI-eligible" />
+        <ent-inst id="Rick|MN-MABD" />
+        <ent-inst id="Lori|SMG-Adoption" />
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Rick|Rick">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Rick|Rick|SMG-IV-E" />
+              <ent-inst-ref ref-id="Rick|Rick|MABD-1619" />
+              <ent-inst-ref ref-id="Rick|Rick|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Rick|Rick|MABD-Spouse" />
+              <ent-inst-ref ref-id="Rick|Rick|MSP-QMB" />
+              <ent-inst-ref ref-id="Rick|Rick|SMG-Adoption" />
+              <ent-inst-ref ref-id="Rick|Rick|MABD-Pickle" />
+              <ent-inst-ref ref-id="Rick|Rick|MABD-Dec73" />
+              <ent-inst-ref ref-id="Rick|Rick|SMG-Newborn" />
+              <ent-inst-ref ref-id="Rick|Rick|MABD-Aug72" />
+              <ent-inst-ref ref-id="Rick|Rick|MN-MCA" />
+              <ent-inst-ref ref-id="Rick|Rick|MCA-PCR" />
+              <ent-inst-ref ref-id="Rick|Rick|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Rick|Rick|MABD-DAC" />
+              <ent-inst-ref ref-id="Rick|Rick|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Rick|Rick|SMG-BCCT" />
+              <ent-inst-ref ref-id="Rick|Rick|MCA-Child" />
+              <ent-inst-ref ref-id="Rick|Rick|MSP-SLMB" />
+              <ent-inst-ref ref-id="Rick|Rick|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Rick|Rick|MSP-QDWI" />
+              <ent-inst-ref ref-id="Rick|Rick|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Rick|Rick|MCA-Adult" />
+              <ent-inst-ref ref-id="Rick|Rick|RMA" />
+              <ent-inst-ref ref-id="Rick|Rick|MCA-EXT" />
+              <ent-inst-ref ref-id="Rick|Rick|MABD-MWPD" />
+              <ent-inst-ref ref-id="Rick|Rick|MN-MABD" />
+              <ent-inst-ref ref-id="Rick|Rick|SMG-FPS" />
+              <ent-inst-ref ref-id="Rick|Rick|MSP-QI" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lori|Lori">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Lori|Lori|RMA" />
+              <ent-inst-ref ref-id="Lori|Lori|SMG-BCCT" />
+              <ent-inst-ref ref-id="Lori|Lori|MCA-PCR" />
+              <ent-inst-ref ref-id="Lori|Lori|MCA-Child" />
+              <ent-inst-ref ref-id="Lori|Lori|MSP-QDWI" />
+              <ent-inst-ref ref-id="Lori|Lori|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Lori|Lori|MABD-Pickle" />
+              <ent-inst-ref ref-id="Lori|Lori|MABD-Spouse" />
+              <ent-inst-ref ref-id="Lori|Lori|MCA-EXT" />
+              <ent-inst-ref ref-id="Lori|Lori|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Lori|Lori|MCA-Adult" />
+              <ent-inst-ref ref-id="Lori|Lori|SMG-Newborn" />
+              <ent-inst-ref ref-id="Lori|Lori|MABD-DAC" />
+              <ent-inst-ref ref-id="Lori|Lori|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Lori|Lori|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Lori|Lori|SMG-Adoption" />
+              <ent-inst-ref ref-id="Lori|Lori|MABD-1619" />
+              <ent-inst-ref ref-id="Lori|Lori|MABD-Aug72" />
+              <ent-inst-ref ref-id="Lori|Lori|SMG-FPS" />
+              <ent-inst-ref ref-id="Lori|Lori|MSP-QI" />
+              <ent-inst-ref ref-id="Lori|Lori|MABD-MWPD" />
+              <ent-inst-ref ref-id="Lori|Lori|MABD-Dec73" />
+              <ent-inst-ref ref-id="Lori|Lori|MN-MCA" />
+              <ent-inst-ref ref-id="Lori|Lori|SMG-IV-E" />
+              <ent-inst-ref ref-id="Lori|Lori|MN-MABD" />
+              <ent-inst-ref ref-id="Lori|Lori|MSP-SLMB" />
+              <ent-inst-ref ref-id="Lori|Lori|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Lori|Lori|MSP-QMB" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Carl">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Carl|Carl|RMA" />
+              <ent-inst-ref ref-id="Carl|Carl|MSP-SLMB" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-Dec73" />
+              <ent-inst-ref ref-id="Carl|Carl|SMG-Newborn" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-Pickle" />
+              <ent-inst-ref ref-id="Carl|Carl|MSP-QI" />
+              <ent-inst-ref ref-id="Carl|Carl|MSP-QMB" />
+              <ent-inst-ref ref-id="Carl|Carl|SMG-BCCT" />
+              <ent-inst-ref ref-id="Carl|Carl|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Carl|Carl|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-Aug72" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-DAC" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Carl|Carl|MN-MCA" />
+              <ent-inst-ref ref-id="Carl|Carl|MCA-PCR" />
+              <ent-inst-ref ref-id="Carl|Carl|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-MWPD" />
+              <ent-inst-ref ref-id="Carl|Carl|SMG-FPS" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-1619" />
+              <ent-inst-ref ref-id="Carl|Carl|MCA-Child" />
+              <ent-inst-ref ref-id="Carl|Carl|SMG-Adoption" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-Spouse" />
+              <ent-inst-ref ref-id="Carl|Carl|MCA-Adult" />
+              <ent-inst-ref ref-id="Carl|Carl|MN-MABD" />
+              <ent-inst-ref ref-id="Carl|Carl|MCA-EXT" />
+              <ent-inst-ref ref-id="Carl|Carl|MSP-QDWI" />
+              <ent-inst-ref ref-id="Carl|Carl|SMG-IV-E" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Rick|Carl">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Rick|Carl|MABD-1619" />
+              <ent-inst-ref ref-id="Rick|Carl|MCA-EXT" />
+              <ent-inst-ref ref-id="Rick|Carl|MCA-PCR" />
+              <ent-inst-ref ref-id="Rick|Carl|MN-MCA" />
+              <ent-inst-ref ref-id="Rick|Carl|SMG-BCCT" />
+              <ent-inst-ref ref-id="Rick|Carl|MABD-Spouse" />
+              <ent-inst-ref ref-id="Rick|Carl|MN-MABD" />
+              <ent-inst-ref ref-id="Rick|Carl|MABD-MWPD" />
+              <ent-inst-ref ref-id="Rick|Carl|SMG-FPS" />
+              <ent-inst-ref ref-id="Rick|Carl|MSP-QMB" />
+              <ent-inst-ref ref-id="Rick|Carl|MSP-SLMB" />
+              <ent-inst-ref ref-id="Rick|Carl|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Rick|Carl|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Rick|Carl|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Rick|Carl|MSP-QDWI" />
+              <ent-inst-ref ref-id="Rick|Carl|MSP-QI" />
+              <ent-inst-ref ref-id="Rick|Carl|MCA-Child" />
+              <ent-inst-ref ref-id="Rick|Carl|SMG-Adoption" />
+              <ent-inst-ref ref-id="Rick|Carl|MABD-Dec73" />
+              <ent-inst-ref ref-id="Rick|Carl|MCA-Adult" />
+              <ent-inst-ref ref-id="Rick|Carl|RMA" />
+              <ent-inst-ref ref-id="Rick|Carl|SMG-IV-E" />
+              <ent-inst-ref ref-id="Rick|Carl|MABD-Pickle" />
+              <ent-inst-ref ref-id="Rick|Carl|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Rick|Carl|MABD-DAC" />
+              <ent-inst-ref ref-id="Rick|Carl|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Rick|Carl|MABD-Aug72" />
+              <ent-inst-ref ref-id="Rick|Carl|SMG-Newborn" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Lori">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Carl|Lori|MCA-Adult" />
+              <ent-inst-ref ref-id="Carl|Lori|MABD-DAC" />
+              <ent-inst-ref ref-id="Carl|Lori|MABD-Pickle" />
+              <ent-inst-ref ref-id="Carl|Lori|SMG-Newborn" />
+              <ent-inst-ref ref-id="Carl|Lori|MN-MABD" />
+              <ent-inst-ref ref-id="Carl|Lori|SMG-Adoption" />
+              <ent-inst-ref ref-id="Carl|Lori|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Carl|Lori|MSP-QDWI" />
+              <ent-inst-ref ref-id="Carl|Lori|MABD-Dec73" />
+              <ent-inst-ref ref-id="Carl|Lori|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Carl|Lori|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Carl|Lori|MABD-Spouse" />
+              <ent-inst-ref ref-id="Carl|Lori|MABD-Aug72" />
+              <ent-inst-ref ref-id="Carl|Lori|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Carl|Lori|MABD-MWPD" />
+              <ent-inst-ref ref-id="Carl|Lori|MN-MCA" />
+              <ent-inst-ref ref-id="Carl|Lori|MCA-Child" />
+              <ent-inst-ref ref-id="Carl|Lori|MABD-1619" />
+              <ent-inst-ref ref-id="Carl|Lori|SMG-IV-E" />
+              <ent-inst-ref ref-id="Carl|Lori|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Carl|Lori|MSP-SLMB" />
+              <ent-inst-ref ref-id="Carl|Lori|SMG-BCCT" />
+              <ent-inst-ref ref-id="Carl|Lori|MCA-PCR" />
+              <ent-inst-ref ref-id="Carl|Lori|MSP-QMB" />
+              <ent-inst-ref ref-id="Carl|Lori|RMA" />
+              <ent-inst-ref ref-id="Carl|Lori|MCA-EXT" />
+              <ent-inst-ref ref-id="Carl|Lori|MSP-QI" />
+              <ent-inst-ref ref-id="Carl|Lori|SMG-FPS" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Rick|Lori">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Rick|Lori|SMG-FPS" />
+              <ent-inst-ref ref-id="Rick|Lori|SMG-Adoption" />
+              <ent-inst-ref ref-id="Rick|Lori|MABD-DAC" />
+              <ent-inst-ref ref-id="Rick|Lori|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Rick|Lori|MN-MABD" />
+              <ent-inst-ref ref-id="Rick|Lori|MSP-QMB" />
+              <ent-inst-ref ref-id="Rick|Lori|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Rick|Lori|SMG-BCCT" />
+              <ent-inst-ref ref-id="Rick|Lori|MCA-PCR" />
+              <ent-inst-ref ref-id="Rick|Lori|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Rick|Lori|MSP-QI" />
+              <ent-inst-ref ref-id="Rick|Lori|RMA" />
+              <ent-inst-ref ref-id="Rick|Lori|SMG-IV-E" />
+              <ent-inst-ref ref-id="Rick|Lori|SMG-Newborn" />
+              <ent-inst-ref ref-id="Rick|Lori|MABD-Spouse" />
+              <ent-inst-ref ref-id="Rick|Lori|MCA-Adult" />
+              <ent-inst-ref ref-id="Rick|Lori|MCA-EXT" />
+              <ent-inst-ref ref-id="Rick|Lori|MABD-MWPD" />
+              <ent-inst-ref ref-id="Rick|Lori|MSP-QDWI" />
+              <ent-inst-ref ref-id="Rick|Lori|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Rick|Lori|MABD-1619" />
+              <ent-inst-ref ref-id="Rick|Lori|MN-MCA" />
+              <ent-inst-ref ref-id="Rick|Lori|MSP-SLMB" />
+              <ent-inst-ref ref-id="Rick|Lori|MABD-Pickle" />
+              <ent-inst-ref ref-id="Rick|Lori|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Rick|Lori|MABD-Dec73" />
+              <ent-inst-ref ref-id="Rick|Lori|MCA-Child" />
+              <ent-inst-ref ref-id="Rick|Lori|MABD-Aug72" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lori|Rick">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Lori|Rick|MSP-QDWI" />
+              <ent-inst-ref ref-id="Lori|Rick|MABD-DAC" />
+              <ent-inst-ref ref-id="Lori|Rick|MSP-QMB" />
+              <ent-inst-ref ref-id="Lori|Rick|SMG-Adoption" />
+              <ent-inst-ref ref-id="Lori|Rick|MABD-Dec73" />
+              <ent-inst-ref ref-id="Lori|Rick|RMA" />
+              <ent-inst-ref ref-id="Lori|Rick|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Lori|Rick|MABD-1619" />
+              <ent-inst-ref ref-id="Lori|Rick|MABD-MWPD" />
+              <ent-inst-ref ref-id="Lori|Rick|MABD-Spouse" />
+              <ent-inst-ref ref-id="Lori|Rick|MCA-Adult" />
+              <ent-inst-ref ref-id="Lori|Rick|MABD-Pickle" />
+              <ent-inst-ref ref-id="Lori|Rick|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Lori|Rick|MN-MCA" />
+              <ent-inst-ref ref-id="Lori|Rick|SMG-Newborn" />
+              <ent-inst-ref ref-id="Lori|Rick|SMG-FPS" />
+              <ent-inst-ref ref-id="Lori|Rick|MN-MABD" />
+              <ent-inst-ref ref-id="Lori|Rick|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Lori|Rick|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Lori|Rick|SMG-BCCT" />
+              <ent-inst-ref ref-id="Lori|Rick|MSP-QI" />
+              <ent-inst-ref ref-id="Lori|Rick|SMG-IV-E" />
+              <ent-inst-ref ref-id="Lori|Rick|MCA-Child" />
+              <ent-inst-ref ref-id="Lori|Rick|MCA-EXT" />
+              <ent-inst-ref ref-id="Lori|Rick|MABD-Aug72" />
+              <ent-inst-ref ref-id="Lori|Rick|MCA-PCR" />
+              <ent-inst-ref ref-id="Lori|Rick|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Lori|Rick|MSP-SLMB" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Rick">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Carl|Rick|MCA-Child" />
+              <ent-inst-ref ref-id="Carl|Rick|MSP-QI" />
+              <ent-inst-ref ref-id="Carl|Rick|MN-MABD" />
+              <ent-inst-ref ref-id="Carl|Rick|MCA-PCR" />
+              <ent-inst-ref ref-id="Carl|Rick|MSP-SLMB" />
+              <ent-inst-ref ref-id="Carl|Rick|RMA" />
+              <ent-inst-ref ref-id="Carl|Rick|MABD-MWPD" />
+              <ent-inst-ref ref-id="Carl|Rick|MABD-Dec73" />
+              <ent-inst-ref ref-id="Carl|Rick|MABD-Aug72" />
+              <ent-inst-ref ref-id="Carl|Rick|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Carl|Rick|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Carl|Rick|SMG-Adoption" />
+              <ent-inst-ref ref-id="Carl|Rick|MSP-QDWI" />
+              <ent-inst-ref ref-id="Carl|Rick|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Carl|Rick|SMG-Newborn" />
+              <ent-inst-ref ref-id="Carl|Rick|MABD-1619" />
+              <ent-inst-ref ref-id="Carl|Rick|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Carl|Rick|MSP-QMB" />
+              <ent-inst-ref ref-id="Carl|Rick|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Carl|Rick|SMG-BCCT" />
+              <ent-inst-ref ref-id="Carl|Rick|SMG-IV-E" />
+              <ent-inst-ref ref-id="Carl|Rick|MABD-DAC" />
+              <ent-inst-ref ref-id="Carl|Rick|SMG-FPS" />
+              <ent-inst-ref ref-id="Carl|Rick|MCA-Adult" />
+              <ent-inst-ref ref-id="Carl|Rick|MN-MCA" />
+              <ent-inst-ref ref-id="Carl|Rick|MABD-Pickle" />
+              <ent-inst-ref ref-id="Carl|Rick|MCA-EXT" />
+              <ent-inst-ref ref-id="Carl|Rick|MABD-Spouse" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lori|Carl">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Lori|Carl|SMG-BCCT" />
+              <ent-inst-ref ref-id="Lori|Carl|MABD-DAC" />
+              <ent-inst-ref ref-id="Lori|Carl|MABD-MWPD" />
+              <ent-inst-ref ref-id="Lori|Carl|MN-MCA" />
+              <ent-inst-ref ref-id="Lori|Carl|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Lori|Carl|MABD-1619" />
+              <ent-inst-ref ref-id="Lori|Carl|MCA-Adult" />
+              <ent-inst-ref ref-id="Lori|Carl|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Lori|Carl|MCA-PCR" />
+              <ent-inst-ref ref-id="Lori|Carl|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Lori|Carl|MSP-QI" />
+              <ent-inst-ref ref-id="Lori|Carl|MSP-SLMB" />
+              <ent-inst-ref ref-id="Lori|Carl|SMG-FPS" />
+              <ent-inst-ref ref-id="Lori|Carl|MABD-Dec73" />
+              <ent-inst-ref ref-id="Lori|Carl|SMG-Adoption" />
+              <ent-inst-ref ref-id="Lori|Carl|MCA-Child" />
+              <ent-inst-ref ref-id="Lori|Carl|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Lori|Carl|MABD-Aug72" />
+              <ent-inst-ref ref-id="Lori|Carl|RMA" />
+              <ent-inst-ref ref-id="Lori|Carl|MABD-Pickle" />
+              <ent-inst-ref ref-id="Lori|Carl|MSP-QMB" />
+              <ent-inst-ref ref-id="Lori|Carl|MN-MABD" />
+              <ent-inst-ref ref-id="Lori|Carl|MABD-Spouse" />
+              <ent-inst-ref ref-id="Lori|Carl|MSP-QDWI" />
+              <ent-inst-ref ref-id="Lori|Carl|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Lori|Carl|SMG-IV-E" />
+              <ent-inst-ref ref-id="Lori|Carl|MCA-EXT" />
+              <ent-inst-ref ref-id="Lori|Carl|SMG-Newborn" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmemberprogram" entity-text="the group member program" inferred="yes" identifying-attribute="rb_gmp_ID">
+        <ent-inst id="Lori|Rick|MABD-Spouse" />
+        <ent-inst id="Carl|Rick|SMG-IV-E" />
+        <ent-inst id="Rick|Carl|MN-MCA" />
+        <ent-inst id="Lori|Lori|MCA-PCR" />
+        <ent-inst id="Carl|Carl|SMG-IV-E" />
+        <ent-inst id="Carl|Lori|MSP-SLMB" />
+        <ent-inst id="Lori|Carl|MSP-SLMB" />
+        <ent-inst id="Rick|Carl|SMG-IV-E" />
+        <ent-inst id="Rick|Lori|SMG-Former-foster" />
+        <ent-inst id="Lori|Rick|MSP-QMB" />
+        <ent-inst id="Rick|Carl|MSP-QMB" />
+        <ent-inst id="Rick|Rick|MCA-EXT" />
+        <ent-inst id="Carl|Lori|MABD-1619" />
+        <ent-inst id="Carl|Rick|RMA" />
+        <ent-inst id="Rick|Lori|MSP-QMB" />
+        <ent-inst id="Carl|Rick|MCA-Child" />
+        <ent-inst id="Lori|Lori|MABD-SSI-enrolled" />
+        <ent-inst id="Carl|Rick|MN-MABD" />
+        <ent-inst id="Carl|Lori|SMG-Newborn" />
+        <ent-inst id="Carl|Lori|MSP-QDWI" />
+        <ent-inst id="Lori|Lori|MABD-Dec73" />
+        <ent-inst id="Rick|Lori|MCA-EXT" />
+        <ent-inst id="Carl|Lori|MABD-Pickle" />
+        <ent-inst id="Rick|Lori|SMG-IV-E" />
+        <ent-inst id="Carl|Rick|MSP-QI" />
+        <ent-inst id="Lori|Rick|SMG-Adoption" />
+        <ent-inst id="Rick|Rick|MABD-MWPD" />
+        <ent-inst id="Carl|Carl|MABD-Pickle" />
+        <ent-inst id="Carl|Carl|MCA-Pregnant" />
+        <ent-inst id="Carl|Rick|MABD-Aug72" />
+        <ent-inst id="Rick|Rick|SMG-Adoption" />
+        <ent-inst id="Lori|Carl|SMG-Former-foster" />
+        <ent-inst id="Carl|Rick|SMG-Newborn" />
+        <ent-inst id="Carl|Rick|MABD-Spouse" />
+        <ent-inst id="Lori|Rick|MABD-DAC" />
+        <ent-inst id="Carl|Rick|MABD-DAC" />
+        <ent-inst id="Lori|Lori|SMG-BCCT" />
+        <ent-inst id="Rick|Lori|MCA-Pregnant" />
+        <ent-inst id="Carl|Lori|MCA-PCR" />
+        <ent-inst id="Rick|Rick|RMA" />
+        <ent-inst id="Lori|Rick|MN-MCA" />
+        <ent-inst id="Lori|Rick|MABD-Dec73" />
+        <ent-inst id="Carl|Carl|SMG-Former-foster" />
+        <ent-inst id="Rick|Lori|SMG-Newborn" />
+        <ent-inst id="Rick|Lori|MSP-QI" />
+        <ent-inst id="Rick|Lori|MN-MABD" />
+        <ent-inst id="Carl|Lori|MCA-Adult" />
+        <ent-inst id="Lori|Lori|MABD-1619" />
+        <ent-inst id="Rick|Lori|SMG-FPS" />
+        <ent-inst id="Lori|Carl|SMG-Newborn" />
+        <ent-inst id="Lori|Rick|SMG-IV-E" />
+        <ent-inst id="Lori|Rick|MABD-1619" />
+        <ent-inst id="Lori|Carl|MABD-DAC" />
+        <ent-inst id="Lori|Carl|MCA-Adult" />
+        <ent-inst id="Lori|Carl|MSP-QI" />
+        <ent-inst id="Lori|Rick|SMG-Former-foster" />
+        <ent-inst id="Rick|Rick|MABD-1619" />
+        <ent-inst id="Rick|Lori|MCA-Adult" />
+        <ent-inst id="Carl|Carl|SMG-Adoption" />
+        <ent-inst id="Lori|Carl|MABD-1619" />
+        <ent-inst id="Carl|Carl|MSP-SLMB" />
+        <ent-inst id="Rick|Carl|MSP-QI" />
+        <ent-inst id="Carl|Carl|RMA" />
+        <ent-inst id="Lori|Rick|MSP-QI" />
+        <ent-inst id="Rick|Carl|MCA-PCR" />
+        <ent-inst id="Carl|Lori|SMG-FPS" />
+        <ent-inst id="Lori|Lori|MN-MCA" />
+        <ent-inst id="Carl|Lori|MABD-Aug72" />
+        <ent-inst id="Rick|Carl|SMG-Former-foster" />
+        <ent-inst id="Rick|Rick|MCA-Child" />
+        <ent-inst id="Carl|Lori|SMG-IV-E" />
+        <ent-inst id="Carl|Rick|MABD-SSI-enrolled" />
+        <ent-inst id="Rick|Rick|MN-MCA" />
+        <ent-inst id="Lori|Rick|MN-MABD" />
+        <ent-inst id="Lori|Lori|MSP-QI" />
+        <ent-inst id="Rick|Carl|MCA-TMA-1925" />
+        <ent-inst id="Rick|Carl|MCA-Child" />
+        <ent-inst id="Carl|Rick|MCA-TMA-1925" />
+        <ent-inst id="Rick|Carl|MABD-1619" />
+        <ent-inst id="Rick|Lori|MCA-TMA-1925" />
+        <ent-inst id="Lori|Lori|MCA-Adult" />
+        <ent-inst id="Carl|Carl|MABD-Aug72" />
+        <ent-inst id="Carl|Lori|MABD-SSI-eligible" />
+        <ent-inst id="Lori|Lori|MABD-DAC" />
+        <ent-inst id="Lori|Carl|MSP-QMB" />
+        <ent-inst id="Carl|Rick|MABD-Pickle" />
+        <ent-inst id="Rick|Rick|SMG-Newborn" />
+        <ent-inst id="Rick|Carl|MSP-QDWI" />
+        <ent-inst id="Lori|Lori|MABD-Spouse" />
+        <ent-inst id="Rick|Carl|MCA-EXT" />
+        <ent-inst id="Rick|Rick|MSP-SLMB" />
+        <ent-inst id="Lori|Carl|MABD-Aug72" />
+        <ent-inst id="Lori|Lori|MSP-QMB" />
+        <ent-inst id="Carl|Lori|MCA-TMA-1925" />
+        <ent-inst id="Lori|Lori|MABD-SSI-eligible" />
+        <ent-inst id="Lori|Lori|SMG-IV-E" />
+        <ent-inst id="Rick|Lori|MABD-Dec73" />
+        <ent-inst id="Lori|Carl|MCA-TMA-1925" />
+        <ent-inst id="Carl|Carl|SMG-Newborn" />
+        <ent-inst id="Rick|Rick|MABD-DAC" />
+        <ent-inst id="Lori|Rick|SMG-BCCT" />
+        <ent-inst id="Lori|Lori|MCA-Pregnant" />
+        <ent-inst id="Lori|Lori|MCA-Child" />
+        <ent-inst id="Lori|Lori|MABD-Pickle" />
+        <ent-inst id="Rick|Carl|MABD-SSI-eligible" />
+        <ent-inst id="Lori|Carl|MN-MABD" />
+        <ent-inst id="Carl|Carl|MCA-Adult" />
+        <ent-inst id="Carl|Carl|MSP-QI" />
+        <ent-inst id="Lori|Rick|SMG-FPS" />
+        <ent-inst id="Lori|Rick|MCA-Adult" />
+        <ent-inst id="Lori|Carl|MCA-Child" />
+        <ent-inst id="Rick|Lori|SMG-Adoption" />
+        <ent-inst id="Carl|Rick|SMG-Former-foster" />
+        <ent-inst id="Lori|Rick|MSP-QDWI" />
+        <ent-inst id="Carl|Lori|MABD-SSI-enrolled" />
+        <ent-inst id="Rick|Rick|MCA-TMA-1925" />
+        <ent-inst id="Lori|Carl|SMG-FPS" />
+        <ent-inst id="Carl|Lori|MABD-DAC" />
+        <ent-inst id="Carl|Carl|MCA-Child" />
+        <ent-inst id="Carl|Rick|MSP-SLMB" />
+        <ent-inst id="Rick|Rick|SMG-Former-foster" />
+        <ent-inst id="Rick|Carl|MABD-Aug72" />
+        <ent-inst id="Carl|Carl|MABD-DAC" />
+        <ent-inst id="Carl|Rick|MCA-Pregnant" />
+        <ent-inst id="Rick|Rick|MABD-SSI-enrolled" />
+        <ent-inst id="Carl|Carl|MABD-Dec73" />
+        <ent-inst id="Carl|Lori|MABD-Spouse" />
+        <ent-inst id="Rick|Carl|MSP-SLMB" />
+        <ent-inst id="Rick|Rick|MSP-QDWI" />
+        <ent-inst id="Rick|Lori|MCA-PCR" />
+        <ent-inst id="Rick|Rick|SMG-FPS" />
+        <ent-inst id="Carl|Lori|MN-MCA" />
+        <ent-inst id="Rick|Lori|MABD-SSI-eligible" />
+        <ent-inst id="Lori|Rick|MABD-MWPD" />
+        <ent-inst id="Rick|Carl|MCA-Adult" />
+        <ent-inst id="Rick|Rick|MCA-Adult" />
+        <ent-inst id="Carl|Lori|MCA-EXT" />
+        <ent-inst id="Lori|Lori|MCA-EXT" />
+        <ent-inst id="Lori|Rick|MABD-Pickle" />
+        <ent-inst id="Rick|Lori|MSP-SLMB" />
+        <ent-inst id="Lori|Lori|MN-MABD" />
+        <ent-inst id="Carl|Lori|MN-MABD" />
+        <ent-inst id="Lori|Carl|MABD-Pickle" />
+        <ent-inst id="Lori|Lori|SMG-Newborn" />
+        <ent-inst id="Rick|Carl|SMG-Adoption" />
+        <ent-inst id="Rick|Carl|MABD-MWPD" />
+        <ent-inst id="Carl|Rick|MCA-Adult" />
+        <ent-inst id="Carl|Carl|MN-MCA" />
+        <ent-inst id="Carl|Rick|MCA-PCR" />
+        <ent-inst id="Rick|Rick|MABD-Pickle" />
+        <ent-inst id="Lori|Lori|MSP-QDWI" />
+        <ent-inst id="Lori|Rick|MCA-EXT" />
+        <ent-inst id="Lori|Lori|MSP-SLMB" />
+        <ent-inst id="Rick|Carl|MABD-Spouse" />
+        <ent-inst id="Carl|Carl|MABD-SSI-enrolled" />
+        <ent-inst id="Rick|Rick|MABD-Spouse" />
+        <ent-inst id="Carl|Lori|MABD-Dec73" />
+        <ent-inst id="Lori|Carl|MABD-MWPD" />
+        <ent-inst id="Lori|Rick|MABD-SSI-enrolled" />
+        <ent-inst id="Rick|Carl|SMG-Newborn" />
+        <ent-inst id="Lori|Carl|MCA-EXT" />
+        <ent-inst id="Rick|Rick|MABD-SSI-eligible" />
+        <ent-inst id="Lori|Carl|MN-MCA" />
+        <ent-inst id="Lori|Carl|MABD-SSI-eligible" />
+        <ent-inst id="Rick|Rick|MSP-QI" />
+        <ent-inst id="Rick|Rick|MABD-Dec73" />
+        <ent-inst id="Rick|Rick|MABD-Aug72" />
+        <ent-inst id="Carl|Rick|MSP-QDWI" />
+        <ent-inst id="Carl|Carl|MABD-1619" />
+        <ent-inst id="Rick|Lori|MABD-DAC" />
+        <ent-inst id="Rick|Rick|MN-MABD" />
+        <ent-inst id="Rick|Rick|SMG-IV-E" />
+        <ent-inst id="Rick|Carl|SMG-BCCT" />
+        <ent-inst id="Rick|Rick|SMG-BCCT" />
+        <ent-inst id="Carl|Lori|SMG-Former-foster" />
+        <ent-inst id="Rick|Carl|MABD-Pickle" />
+        <ent-inst id="Rick|Carl|MN-MABD" />
+        <ent-inst id="Carl|Carl|MCA-EXT" />
+        <ent-inst id="Rick|Carl|RMA" />
+        <ent-inst id="Carl|Carl|SMG-BCCT" />
+        <ent-inst id="Lori|Lori|RMA" />
+        <ent-inst id="Rick|Lori|SMG-BCCT" />
+        <ent-inst id="Rick|Lori|MCA-Child" />
+        <ent-inst id="Carl|Rick|MSP-QMB" />
+        <ent-inst id="Carl|Lori|MABD-MWPD" />
+        <ent-inst id="Carl|Carl|SMG-FPS" />
+        <ent-inst id="Lori|Carl|MCA-PCR" />
+        <ent-inst id="Carl|Carl|MABD-Spouse" />
+        <ent-inst id="Lori|Rick|MCA-Child" />
+        <ent-inst id="Lori|Lori|MABD-Aug72" />
+        <ent-inst id="Rick|Lori|MABD-Spouse" />
+        <ent-inst id="Lori|Carl|MABD-Dec73" />
+        <ent-inst id="Carl|Rick|SMG-FPS" />
+        <ent-inst id="Rick|Rick|MSP-QMB" />
+        <ent-inst id="Rick|Rick|MCA-PCR" />
+        <ent-inst id="Lori|Rick|MABD-Aug72" />
+        <ent-inst id="Lori|Lori|SMG-Adoption" />
+        <ent-inst id="Carl|Carl|MSP-QDWI" />
+        <ent-inst id="Rick|Lori|RMA" />
+        <ent-inst id="Rick|Lori|MSP-QDWI" />
+        <ent-inst id="Lori|Rick|RMA" />
+        <ent-inst id="Rick|Carl|MABD-Dec73" />
+        <ent-inst id="Carl|Carl|MCA-TMA-1925" />
+        <ent-inst id="Carl|Rick|MABD-MWPD" />
+        <ent-inst id="Carl|Carl|MABD-SSI-eligible" />
+        <ent-inst id="Lori|Carl|SMG-IV-E" />
+        <ent-inst id="Lori|Carl|SMG-BCCT" />
+        <ent-inst id="Carl|Carl|MABD-MWPD" />
+        <ent-inst id="Lori|Lori|MABD-MWPD" />
+        <ent-inst id="Rick|Lori|MABD-1619" />
+        <ent-inst id="Lori|Lori|SMG-FPS" />
+        <ent-inst id="Carl|Lori|MSP-QI" />
+        <ent-inst id="Lori|Rick|MCA-PCR" />
+        <ent-inst id="Lori|Rick|MABD-SSI-eligible" />
+        <ent-inst id="Rick|Lori|MN-MCA" />
+        <ent-inst id="Carl|Rick|MCA-EXT" />
+        <ent-inst id="Carl|Carl|MCA-PCR" />
+        <ent-inst id="Carl|Lori|SMG-BCCT" />
+        <ent-inst id="Carl|Lori|SMG-Adoption" />
+        <ent-inst id="Carl|Lori|RMA" />
+        <ent-inst id="Carl|Rick|SMG-BCCT" />
+        <ent-inst id="Rick|Rick|MCA-Pregnant" />
+        <ent-inst id="Lori|Carl|MCA-Pregnant" />
+        <ent-inst id="Carl|Rick|MABD-SSI-eligible" />
+        <ent-inst id="Carl|Rick|MABD-Dec73" />
+        <ent-inst id="Rick|Carl|MCA-Pregnant" />
+        <ent-inst id="Rick|Lori|MABD-SSI-enrolled" />
+        <ent-inst id="Carl|Lori|MSP-QMB" />
+        <ent-inst id="Lori|Rick|SMG-Newborn" />
+        <ent-inst id="Rick|Carl|SMG-FPS" />
+        <ent-inst id="Rick|Carl|MABD-SSI-enrolled" />
+        <ent-inst id="Lori|Carl|RMA" />
+        <ent-inst id="Lori|Carl|MABD-SSI-enrolled" />
+        <ent-inst id="Lori|Lori|MCA-TMA-1925" />
+        <ent-inst id="Lori|Rick|MSP-SLMB" />
+        <ent-inst id="Rick|Lori|MABD-MWPD" />
+        <ent-inst id="Lori|Carl|SMG-Adoption" />
+        <ent-inst id="Carl|Rick|MN-MCA" />
+        <ent-inst id="Lori|Carl|MABD-Spouse" />
+        <ent-inst id="Carl|Carl|MSP-QMB" />
+        <ent-inst id="Carl|Lori|MCA-Pregnant" />
+        <ent-inst id="Lori|Rick|MCA-Pregnant" />
+        <ent-inst id="Lori|Carl|MSP-QDWI" />
+        <ent-inst id="Carl|Lori|MCA-Child" />
+        <ent-inst id="Lori|Rick|MCA-TMA-1925" />
+        <ent-inst id="Lori|Lori|SMG-Former-foster" />
+        <ent-inst id="Carl|Rick|MABD-1619" />
+        <ent-inst id="Rick|Lori|MABD-Pickle" />
+        <ent-inst id="Rick|Lori|MABD-Aug72" />
+        <ent-inst id="Carl|Carl|MN-MABD" />
+        <ent-inst id="Rick|Carl|MABD-DAC" />
+        <ent-inst id="Carl|Rick|SMG-Adoption" />
+      </ent-set>
+      <ent-set entity-type="personsrequestedbenefit" entity-text="the person's requested benefit" inferred="yes" identifying-attribute="rb_reqb_ID">
+        <ent-inst id="Carl|Medical Care Benefits">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Carl|Medical Care Benefits|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Medicare Cost-Sharing Reduction">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Carl|Medicare Cost-Sharing Reduction|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Family Planning">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Carl|Family Planning|2" />
+              <ent-inst-ref ref-id="Carl|Family Planning|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="result" entity-text="the result" inferred="yes" identifying-attribute="rb_rslt_ID">
+        <ent-inst id="Carl|Family Planning|1" />
+        <ent-inst id="Carl|Medical Care Benefits|1" />
+        <ent-inst id="Carl|Family Planning|2" />
+        <ent-inst id="Carl|Medicare Cost-Sharing Reduction|1" />
+      </ent-set>
+      <ent-set entity-type="case-result" entity-text="the case result" inferred="yes" identifying-attribute="o_crslt_type">
+        <ent-inst id="Medicare Cost-Sharing Reduction" />
+        <ent-inst id="Medical Care Benefits" />
+        <ent-inst id="Family Planning" />
+      </ent-set>
+      <ent-set entity-type="personsrequestforassistance" entity-text="the person's request for assistance" inferred="yes" identifying-attribute="rb_reqa_ID">
+        <ent-inst id="Carl|Medical Assistance" />
+      </ent-set>
+      <ent-set entity-type="baseprogram" entity-text="the base program" inferred="yes" identifying-attribute="the_base_program">
+        <ent-inst id="MSP-QMB" />
+        <ent-inst id="RMA" />
+        <ent-inst id="MN-MABD" />
+        <ent-inst id="MABD-Dec73" />
+        <ent-inst id="MSP-QI" />
+        <ent-inst id="MABD-Pickle" />
+        <ent-inst id="MABD-1619" />
+        <ent-inst id="MABD-SSI-enrolled" />
+        <ent-inst id="MCA-EXT" />
+        <ent-inst id="MABD-MWPD" />
+        <ent-inst id="SMG-Newborn" />
+        <ent-inst id="MABD-Spouse" />
+        <ent-inst id="MABD-DAC" />
+        <ent-inst id="MSP-QDWI" />
+        <ent-inst id="MSP-SLMB" />
+        <ent-inst id="MCA-TMA-1925" />
+        <ent-inst id="MCA-Pregnant" />
+        <ent-inst id="MCA-Adult" />
+        <ent-inst id="MABD-Aug72" />
+        <ent-inst id="MABD-SSI-eligible" />
+        <ent-inst id="MN-MCA" />
+        <ent-inst id="MCA-Child" />
+        <ent-inst id="SMG-BCCT" />
+        <ent-inst id="SMG-Adoption" />
+        <ent-inst id="MCA-PCR" />
+        <ent-inst id="SMG-FPS" />
+        <ent-inst id="SMG-IV-E" />
+        <ent-inst id="SMG-Former-foster" />
+      </ent-set>
+      <ent-set entity-type="person-address" entity-text="the person's address">
+        <ent-inst id="person-address 1">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person-address 2">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person-address 3">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="address" entity-text="the address">
+        <ent-inst id="address 1">
+          <attr-inst name="i_addr_street" text="the address's street" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="related-party" entity-text="the related party">
+        <ent-inst id="related-party 1">
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Biological Child</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="related-party 2">
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Biological Child</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="related-party 3">
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Spouse</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+    <test-case name="(d) child with 1 parent" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <attr-inst name="st_MABDResLmtUndrMedcaidProP2420c2_c" text="the MABD resource limit under Medicaid Procedures P-2420C(1) for two people" type="currency">
+            <val>
+              <currency-val>1000.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_MABDResLmtUndrMedcaidProP2420c1_c" text="the MABD resource limit under Medicaid Procedures P-2420C(1) for one person" type="currency">
+            <val>
+              <currency-val>500.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true">
+              <ent-inst-ref ref-id="MSP-QMB" />
+              <ent-inst-ref ref-id="SMG-Newborn" />
+              <ent-inst-ref ref-id="RMA" />
+              <ent-inst-ref ref-id="MABD-Pickle" />
+              <ent-inst-ref ref-id="MN-MABD" />
+              <ent-inst-ref ref-id="MABD-Dec73" />
+              <ent-inst-ref ref-id="MSP-QI" />
+              <ent-inst-ref ref-id="MABD-Aug72" />
+              <ent-inst-ref ref-id="SMG-IV-E" />
+              <ent-inst-ref ref-id="SMG-Former-foster" />
+              <ent-inst-ref ref-id="MABD-1619" />
+              <ent-inst-ref ref-id="MABD-MWPD" />
+              <ent-inst-ref ref-id="MCA-Pregnant" />
+              <ent-inst-ref ref-id="MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="MABD-DAC" />
+              <ent-inst-ref ref-id="MABD-Spouse" />
+              <ent-inst-ref ref-id="MN-MCA" />
+              <ent-inst-ref ref-id="MCA-Adult" />
+              <ent-inst-ref ref-id="MCA-Child" />
+              <ent-inst-ref ref-id="MSP-QDWI" />
+              <ent-inst-ref ref-id="MCA-TMA-1925" />
+              <ent-inst-ref ref-id="MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="MCA-EXT" />
+              <ent-inst-ref ref-id="SMG-Adoption" />
+              <ent-inst-ref ref-id="MSP-SLMB" />
+              <ent-inst-ref ref-id="SMG-BCCT" />
+              <ent-inst-ref ref-id="MCA-PCR" />
+              <ent-inst-ref ref-id="SMG-FPS" />
+            </relationship-inst>
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true">
+              <ent-inst-ref ref-id="Family Planning" />
+              <ent-inst-ref ref-id="Medical Care Benefits" />
+              <ent-inst-ref ref-id="Medicare Cost-Sharing Reduction" />
+            </relationship-inst>
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+              <ent-inst-ref ref-id="person 2" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="true">
+              <ent-inst-ref ref-id="address 1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="si_grpFinParentOne_b" text="the person's financial group includes only one of the person's parents" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_grpFinParentTwo_b" text="the person's financial group includes two of the person's parents" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="rb_per_ageU18" text="the person is under 18 years of age" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_personTtlCntResExclsionAsIndvdlChildUndrHBEE29.10d_c" text="the resource exclusion for the person's parents under HBEE 29.10(d)(1) (eff. 07/15/2015)" type="currency">
+            <expected-val>
+              <currency-val>500.0</currency-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_req-med" text="the person is requesting medical assistance" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_student_b" text="the person is a student" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>2005-05-05</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_AlwaysBeenSingle_b" text="it is the case that the person has always been single" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_ConfinedToPublicInsitution_b" text="the person is confined to a public institution or is in the custody of a public agency" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_MemberOfArmForces_b" text="the person is a member of the armed forces" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesInstPrivate_b" text="the person lives in a private facility" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_AdmittedToLongTermCare_b" text="the person has been admitted to long-term care" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="true" />
+            <relationship-inst type="personsresources" complete="true" />
+            <relationship-inst type="personsincomes" complete="true" />
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 1" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestedbenefits" complete="true">
+              <ent-inst-ref ref-id="Carl|Family Planning" />
+              <ent-inst-ref ref-id="Carl|Medical Care Benefits" />
+              <ent-inst-ref ref-id="Carl|Medicare Cost-Sharing Reduction" />
+            </relationship-inst>
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true">
+              <ent-inst-ref ref-id="Carl|Medical Assistance" />
+            </relationship-inst>
+            <relationship-inst type="personsexpenses" complete="true" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Carl|Carl" />
+              <ent-inst-ref ref-id="Carl|Rick" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true">
+              <ent-inst-ref ref-id="Carl|MABD-DAC" />
+              <ent-inst-ref ref-id="Carl|MCA-PCR" />
+              <ent-inst-ref ref-id="Carl|SMG-FPS" />
+              <ent-inst-ref ref-id="Carl|MCA-Adult" />
+              <ent-inst-ref ref-id="Carl|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Carl|MABD-MWPD" />
+              <ent-inst-ref ref-id="Carl|MSP-QMB" />
+              <ent-inst-ref ref-id="Carl|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Carl|MSP-QDWI" />
+              <ent-inst-ref ref-id="Carl|RMA" />
+              <ent-inst-ref ref-id="Carl|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Carl|MSP-QI" />
+              <ent-inst-ref ref-id="Carl|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Carl|SMG-Newborn" />
+              <ent-inst-ref ref-id="Carl|SMG-IV-E" />
+              <ent-inst-ref ref-id="Carl|MSP-SLMB" />
+              <ent-inst-ref ref-id="Carl|MN-MABD" />
+              <ent-inst-ref ref-id="Carl|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Carl|MABD-Aug72" />
+              <ent-inst-ref ref-id="Carl|SMG-Adoption" />
+              <ent-inst-ref ref-id="Carl|MABD-Pickle" />
+              <ent-inst-ref ref-id="Carl|MCA-Child" />
+              <ent-inst-ref ref-id="Carl|SMG-BCCT" />
+              <ent-inst-ref ref-id="Carl|MCA-EXT" />
+              <ent-inst-ref ref-id="Carl|MN-MCA" />
+              <ent-inst-ref ref-id="Carl|MABD-1619" />
+              <ent-inst-ref ref-id="Carl|MABD-Spouse" />
+              <ent-inst-ref ref-id="Carl|MABD-Dec73" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 2">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="true" />
+            <relationship-inst type="personsresources" complete="true" />
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 2" />
+            </relationship-inst>
+            <relationship-inst type="personsincomes" complete="true" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="related-party 1" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="true" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Rick|Rick" />
+              <ent-inst-ref ref-id="Rick|Carl" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true">
+              <ent-inst-ref ref-id="Rick|MSP-QDWI" />
+              <ent-inst-ref ref-id="Rick|MABD-1619" />
+              <ent-inst-ref ref-id="Rick|MABD-DAC" />
+              <ent-inst-ref ref-id="Rick|SMG-Newborn" />
+              <ent-inst-ref ref-id="Rick|MABD-Spouse" />
+              <ent-inst-ref ref-id="Rick|MABD-Pickle" />
+              <ent-inst-ref ref-id="Rick|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Rick|MSP-QMB" />
+              <ent-inst-ref ref-id="Rick|SMG-FPS" />
+              <ent-inst-ref ref-id="Rick|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Rick|MCA-Child" />
+              <ent-inst-ref ref-id="Rick|MN-MCA" />
+              <ent-inst-ref ref-id="Rick|MABD-Dec73" />
+              <ent-inst-ref ref-id="Rick|MSP-QI" />
+              <ent-inst-ref ref-id="Rick|MCA-Adult" />
+              <ent-inst-ref ref-id="Rick|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Rick|MSP-SLMB" />
+              <ent-inst-ref ref-id="Rick|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Rick|MABD-MWPD" />
+              <ent-inst-ref ref-id="Rick|SMG-IV-E" />
+              <ent-inst-ref ref-id="Rick|RMA" />
+              <ent-inst-ref ref-id="Rick|MCA-PCR" />
+              <ent-inst-ref ref-id="Rick|MN-MABD" />
+              <ent-inst-ref ref-id="Rick|MCA-EXT" />
+              <ent-inst-ref ref-id="Rick|SMG-Adoption" />
+              <ent-inst-ref ref-id="Rick|MABD-Aug72" />
+              <ent-inst-ref ref-id="Rick|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Rick|SMG-BCCT" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2015" />
+        <ent-inst id="2013" />
+        <ent-inst id="2014" />
+        <ent-inst id="2017" />
+      </ent-set>
+      <ent-set entity-type="program" entity-text="the program" inferred="yes" identifying-attribute="rb_p_ID">
+        <ent-inst id="Rick|SMG-FPS" />
+        <ent-inst id="Carl|MABD-SSI-eligible">
+          <attr-inst name="so_HBEE29.10d20150715Applies_b" text="HBEE 29.10(d) applies to the person for the program (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2014-07-30">
+                <boolean-val>true</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Rick|MCA-Pregnant" />
+        <ent-inst id="Carl|MABD-Pickle" />
+        <ent-inst id="Rick|SMG-Former-foster" />
+        <ent-inst id="Rick|MCA-Child" />
+        <ent-inst id="Carl|SMG-FPS" />
+        <ent-inst id="Carl|SMG-Newborn" />
+        <ent-inst id="Carl|MCA-Pregnant" />
+        <ent-inst id="Carl|MCA-PCR" />
+        <ent-inst id="Carl|MCA-Child" />
+        <ent-inst id="Rick|MSP-QI" />
+        <ent-inst id="Carl|MN-MABD" />
+        <ent-inst id="Carl|MSP-QMB" />
+        <ent-inst id="Rick|MSP-SLMB" />
+        <ent-inst id="Carl|MCA-Adult" />
+        <ent-inst id="Rick|MABD-SSI-eligible" />
+        <ent-inst id="Carl|MABD-Aug72" />
+        <ent-inst id="Rick|MABD-MWPD" />
+        <ent-inst id="Rick|MABD-1619" />
+        <ent-inst id="Carl|MSP-QI" />
+        <ent-inst id="Rick|MABD-Dec73" />
+        <ent-inst id="Rick|MCA-PCR" />
+        <ent-inst id="Rick|MABD-Spouse" />
+        <ent-inst id="Rick|MSP-QDWI" />
+        <ent-inst id="Carl|RMA" />
+        <ent-inst id="Rick|MABD-DAC" />
+        <ent-inst id="Rick|RMA" />
+        <ent-inst id="Carl|MSP-QDWI" />
+        <ent-inst id="Carl|MABD-Dec73" />
+        <ent-inst id="Carl|MCA-TMA-1925" />
+        <ent-inst id="Carl|SMG-IV-E" />
+        <ent-inst id="Carl|MN-MCA" />
+        <ent-inst id="Rick|SMG-BCCT" />
+        <ent-inst id="Rick|MSP-QMB" />
+        <ent-inst id="Rick|MCA-TMA-1925" />
+        <ent-inst id="Carl|MABD-MWPD" />
+        <ent-inst id="Carl|MABD-DAC" />
+        <ent-inst id="Carl|MABD-Spouse" />
+        <ent-inst id="Rick|MABD-Pickle" />
+        <ent-inst id="Carl|MABD-1619" />
+        <ent-inst id="Carl|MABD-SSI-enrolled" />
+        <ent-inst id="Rick|SMG-IV-E" />
+        <ent-inst id="Carl|SMG-Adoption" />
+        <ent-inst id="Carl|MCA-EXT" />
+        <ent-inst id="Carl|MSP-SLMB" />
+        <ent-inst id="Carl|SMG-Former-foster" />
+        <ent-inst id="Rick|MABD-Aug72" />
+        <ent-inst id="Rick|MN-MABD" />
+        <ent-inst id="Rick|MCA-EXT" />
+        <ent-inst id="Rick|MABD-SSI-enrolled" />
+        <ent-inst id="Rick|SMG-Adoption" />
+        <ent-inst id="Rick|MCA-Adult" />
+        <ent-inst id="Rick|SMG-Newborn" />
+        <ent-inst id="Carl|SMG-BCCT" />
+        <ent-inst id="Rick|MN-MCA" />
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Rick|Rick">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Rick|Rick|SMG-IV-E" />
+              <ent-inst-ref ref-id="Rick|Rick|MABD-1619" />
+              <ent-inst-ref ref-id="Rick|Rick|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Rick|Rick|MABD-Spouse" />
+              <ent-inst-ref ref-id="Rick|Rick|MSP-QMB" />
+              <ent-inst-ref ref-id="Rick|Rick|SMG-Adoption" />
+              <ent-inst-ref ref-id="Rick|Rick|MABD-Pickle" />
+              <ent-inst-ref ref-id="Rick|Rick|MABD-Dec73" />
+              <ent-inst-ref ref-id="Rick|Rick|SMG-Newborn" />
+              <ent-inst-ref ref-id="Rick|Rick|MABD-Aug72" />
+              <ent-inst-ref ref-id="Rick|Rick|MN-MCA" />
+              <ent-inst-ref ref-id="Rick|Rick|MCA-PCR" />
+              <ent-inst-ref ref-id="Rick|Rick|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Rick|Rick|MABD-DAC" />
+              <ent-inst-ref ref-id="Rick|Rick|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Rick|Rick|SMG-BCCT" />
+              <ent-inst-ref ref-id="Rick|Rick|MCA-Child" />
+              <ent-inst-ref ref-id="Rick|Rick|MSP-SLMB" />
+              <ent-inst-ref ref-id="Rick|Rick|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Rick|Rick|MSP-QDWI" />
+              <ent-inst-ref ref-id="Rick|Rick|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Rick|Rick|MCA-Adult" />
+              <ent-inst-ref ref-id="Rick|Rick|RMA" />
+              <ent-inst-ref ref-id="Rick|Rick|MCA-EXT" />
+              <ent-inst-ref ref-id="Rick|Rick|MABD-MWPD" />
+              <ent-inst-ref ref-id="Rick|Rick|MN-MABD" />
+              <ent-inst-ref ref-id="Rick|Rick|SMG-FPS" />
+              <ent-inst-ref ref-id="Rick|Rick|MSP-QI" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Carl">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Carl|Carl|RMA" />
+              <ent-inst-ref ref-id="Carl|Carl|MSP-SLMB" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-Dec73" />
+              <ent-inst-ref ref-id="Carl|Carl|SMG-Newborn" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-Pickle" />
+              <ent-inst-ref ref-id="Carl|Carl|MSP-QI" />
+              <ent-inst-ref ref-id="Carl|Carl|MSP-QMB" />
+              <ent-inst-ref ref-id="Carl|Carl|SMG-BCCT" />
+              <ent-inst-ref ref-id="Carl|Carl|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Carl|Carl|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-Aug72" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-DAC" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Carl|Carl|MN-MCA" />
+              <ent-inst-ref ref-id="Carl|Carl|MCA-PCR" />
+              <ent-inst-ref ref-id="Carl|Carl|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-MWPD" />
+              <ent-inst-ref ref-id="Carl|Carl|SMG-FPS" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-1619" />
+              <ent-inst-ref ref-id="Carl|Carl|MCA-Child" />
+              <ent-inst-ref ref-id="Carl|Carl|SMG-Adoption" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-Spouse" />
+              <ent-inst-ref ref-id="Carl|Carl|MCA-Adult" />
+              <ent-inst-ref ref-id="Carl|Carl|MN-MABD" />
+              <ent-inst-ref ref-id="Carl|Carl|MCA-EXT" />
+              <ent-inst-ref ref-id="Carl|Carl|MSP-QDWI" />
+              <ent-inst-ref ref-id="Carl|Carl|SMG-IV-E" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Rick">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Carl|Rick|MCA-Child" />
+              <ent-inst-ref ref-id="Carl|Rick|MSP-QI" />
+              <ent-inst-ref ref-id="Carl|Rick|MN-MABD" />
+              <ent-inst-ref ref-id="Carl|Rick|MCA-PCR" />
+              <ent-inst-ref ref-id="Carl|Rick|MSP-SLMB" />
+              <ent-inst-ref ref-id="Carl|Rick|RMA" />
+              <ent-inst-ref ref-id="Carl|Rick|MABD-MWPD" />
+              <ent-inst-ref ref-id="Carl|Rick|MABD-Dec73" />
+              <ent-inst-ref ref-id="Carl|Rick|MABD-Aug72" />
+              <ent-inst-ref ref-id="Carl|Rick|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Carl|Rick|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Carl|Rick|SMG-Adoption" />
+              <ent-inst-ref ref-id="Carl|Rick|MSP-QDWI" />
+              <ent-inst-ref ref-id="Carl|Rick|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Carl|Rick|SMG-Newborn" />
+              <ent-inst-ref ref-id="Carl|Rick|MABD-1619" />
+              <ent-inst-ref ref-id="Carl|Rick|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Carl|Rick|MSP-QMB" />
+              <ent-inst-ref ref-id="Carl|Rick|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Carl|Rick|SMG-BCCT" />
+              <ent-inst-ref ref-id="Carl|Rick|SMG-IV-E" />
+              <ent-inst-ref ref-id="Carl|Rick|MABD-DAC" />
+              <ent-inst-ref ref-id="Carl|Rick|SMG-FPS" />
+              <ent-inst-ref ref-id="Carl|Rick|MCA-Adult" />
+              <ent-inst-ref ref-id="Carl|Rick|MN-MCA" />
+              <ent-inst-ref ref-id="Carl|Rick|MABD-Pickle" />
+              <ent-inst-ref ref-id="Carl|Rick|MCA-EXT" />
+              <ent-inst-ref ref-id="Carl|Rick|MABD-Spouse" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Rick|Carl">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Rick|Carl|MABD-1619" />
+              <ent-inst-ref ref-id="Rick|Carl|MCA-EXT" />
+              <ent-inst-ref ref-id="Rick|Carl|MCA-PCR" />
+              <ent-inst-ref ref-id="Rick|Carl|MN-MCA" />
+              <ent-inst-ref ref-id="Rick|Carl|SMG-BCCT" />
+              <ent-inst-ref ref-id="Rick|Carl|MABD-Spouse" />
+              <ent-inst-ref ref-id="Rick|Carl|MN-MABD" />
+              <ent-inst-ref ref-id="Rick|Carl|MABD-MWPD" />
+              <ent-inst-ref ref-id="Rick|Carl|SMG-FPS" />
+              <ent-inst-ref ref-id="Rick|Carl|MSP-QMB" />
+              <ent-inst-ref ref-id="Rick|Carl|MSP-SLMB" />
+              <ent-inst-ref ref-id="Rick|Carl|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Rick|Carl|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Rick|Carl|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Rick|Carl|MSP-QDWI" />
+              <ent-inst-ref ref-id="Rick|Carl|MSP-QI" />
+              <ent-inst-ref ref-id="Rick|Carl|MCA-Child" />
+              <ent-inst-ref ref-id="Rick|Carl|SMG-Adoption" />
+              <ent-inst-ref ref-id="Rick|Carl|MABD-Dec73" />
+              <ent-inst-ref ref-id="Rick|Carl|MCA-Adult" />
+              <ent-inst-ref ref-id="Rick|Carl|RMA" />
+              <ent-inst-ref ref-id="Rick|Carl|SMG-IV-E" />
+              <ent-inst-ref ref-id="Rick|Carl|MABD-Pickle" />
+              <ent-inst-ref ref-id="Rick|Carl|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Rick|Carl|MABD-DAC" />
+              <ent-inst-ref ref-id="Rick|Carl|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Rick|Carl|MABD-Aug72" />
+              <ent-inst-ref ref-id="Rick|Carl|SMG-Newborn" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmemberprogram" entity-text="the group member program" inferred="yes" identifying-attribute="rb_gmp_ID">
+        <ent-inst id="Rick|Carl|MN-MABD" />
+        <ent-inst id="Rick|Carl|SMG-Former-foster" />
+        <ent-inst id="Carl|Rick|MABD-Pickle" />
+        <ent-inst id="Rick|Rick|MABD-Pickle" />
+        <ent-inst id="Rick|Rick|MABD-DAC" />
+        <ent-inst id="Carl|Rick|MABD-MWPD" />
+        <ent-inst id="Carl|Rick|MABD-Aug72" />
+        <ent-inst id="Carl|Carl|SMG-IV-E" />
+        <ent-inst id="Carl|Rick|MCA-Adult" />
+        <ent-inst id="Rick|Rick|MABD-SSI-eligible" />
+        <ent-inst id="Carl|Rick|MN-MABD" />
+        <ent-inst id="Carl|Carl|MSP-QMB" />
+        <ent-inst id="Carl|Rick|RMA" />
+        <ent-inst id="Rick|Carl|SMG-BCCT" />
+        <ent-inst id="Rick|Carl|MCA-PCR" />
+        <ent-inst id="Carl|Carl|MSP-SLMB" />
+        <ent-inst id="Rick|Carl|MSP-QMB" />
+        <ent-inst id="Carl|Rick|MABD-SSI-enrolled" />
+        <ent-inst id="Rick|Rick|MN-MABD" />
+        <ent-inst id="Rick|Carl|MCA-EXT" />
+        <ent-inst id="Carl|Rick|MCA-Child" />
+        <ent-inst id="Carl|Rick|SMG-FPS" />
+        <ent-inst id="Rick|Carl|MABD-SSI-eligible" />
+        <ent-inst id="Carl|Rick|MCA-EXT" />
+        <ent-inst id="Carl|Rick|SMG-Newborn" />
+        <ent-inst id="Rick|Rick|MN-MCA" />
+        <ent-inst id="Rick|Carl|MCA-Child" />
+        <ent-inst id="Rick|Rick|MSP-QI" />
+        <ent-inst id="Carl|Carl|SMG-Newborn" />
+        <ent-inst id="Carl|Rick|MSP-QMB" />
+        <ent-inst id="Carl|Rick|MCA-TMA-1925" />
+        <ent-inst id="Rick|Rick|MCA-TMA-1925" />
+        <ent-inst id="Rick|Rick|MSP-QMB" />
+        <ent-inst id="Carl|Carl|MCA-Pregnant" />
+        <ent-inst id="Carl|Carl|SMG-Adoption" />
+        <ent-inst id="Carl|Rick|MSP-QI" />
+        <ent-inst id="Carl|Carl|SMG-BCCT" />
+        <ent-inst id="Carl|Carl|MSP-QI" />
+        <ent-inst id="Rick|Rick|MCA-EXT" />
+        <ent-inst id="Carl|Carl|MABD-Aug72" />
+        <ent-inst id="Carl|Rick|SMG-IV-E" />
+        <ent-inst id="Rick|Rick|MCA-PCR" />
+        <ent-inst id="Carl|Carl|MCA-PCR" />
+        <ent-inst id="Rick|Rick|SMG-Newborn" />
+        <ent-inst id="Rick|Carl|MSP-QDWI" />
+        <ent-inst id="Carl|Rick|MCA-Pregnant" />
+        <ent-inst id="Carl|Carl|MABD-MWPD" />
+        <ent-inst id="Rick|Carl|MSP-SLMB" />
+        <ent-inst id="Rick|Carl|MABD-DAC" />
+        <ent-inst id="Rick|Rick|MABD-Aug72" />
+        <ent-inst id="Rick|Rick|MABD-MWPD" />
+        <ent-inst id="Carl|Rick|MABD-Dec73" />
+        <ent-inst id="Rick|Carl|MCA-Adult" />
+        <ent-inst id="Rick|Rick|SMG-Former-foster" />
+        <ent-inst id="Rick|Carl|SMG-IV-E" />
+        <ent-inst id="Rick|Rick|MSP-SLMB" />
+        <ent-inst id="Carl|Carl|MSP-QDWI" />
+        <ent-inst id="Rick|Carl|SMG-FPS" />
+        <ent-inst id="Carl|Carl|MCA-EXT" />
+        <ent-inst id="Carl|Rick|SMG-BCCT" />
+        <ent-inst id="Rick|Carl|RMA" />
+        <ent-inst id="Rick|Carl|MSP-QI" />
+        <ent-inst id="Carl|Carl|MN-MCA" />
+        <ent-inst id="Rick|Rick|MCA-Pregnant" />
+        <ent-inst id="Rick|Rick|SMG-BCCT" />
+        <ent-inst id="Rick|Rick|MABD-Spouse" />
+        <ent-inst id="Carl|Carl|MABD-DAC" />
+        <ent-inst id="Carl|Carl|MN-MABD" />
+        <ent-inst id="Carl|Carl|MABD-SSI-eligible" />
+        <ent-inst id="Carl|Rick|MCA-PCR" />
+        <ent-inst id="Rick|Carl|MABD-1619" />
+        <ent-inst id="Carl|Carl|MCA-Adult" />
+        <ent-inst id="Rick|Rick|RMA" />
+        <ent-inst id="Rick|Rick|MCA-Child" />
+        <ent-inst id="Carl|Rick|SMG-Former-foster" />
+        <ent-inst id="Rick|Carl|MABD-Spouse" />
+        <ent-inst id="Rick|Carl|SMG-Newborn" />
+        <ent-inst id="Carl|Carl|RMA" />
+        <ent-inst id="Rick|Carl|MABD-MWPD" />
+        <ent-inst id="Carl|Rick|MSP-QDWI" />
+        <ent-inst id="Carl|Carl|MCA-TMA-1925" />
+        <ent-inst id="Rick|Carl|MABD-Aug72" />
+        <ent-inst id="Rick|Rick|SMG-Adoption" />
+        <ent-inst id="Carl|Carl|MABD-Pickle" />
+        <ent-inst id="Carl|Carl|SMG-FPS" />
+        <ent-inst id="Rick|Carl|MCA-TMA-1925" />
+        <ent-inst id="Carl|Rick|MSP-SLMB" />
+        <ent-inst id="Carl|Rick|SMG-Adoption" />
+        <ent-inst id="Rick|Rick|MSP-QDWI" />
+        <ent-inst id="Carl|Carl|SMG-Former-foster" />
+        <ent-inst id="Carl|Rick|MABD-SSI-eligible" />
+        <ent-inst id="Rick|Rick|SMG-IV-E" />
+        <ent-inst id="Carl|Rick|MN-MCA" />
+        <ent-inst id="Carl|Rick|MABD-DAC" />
+        <ent-inst id="Carl|Rick|MABD-Spouse" />
+        <ent-inst id="Rick|Carl|MABD-Dec73" />
+        <ent-inst id="Rick|Rick|MABD-1619" />
+        <ent-inst id="Rick|Carl|MABD-SSI-enrolled" />
+        <ent-inst id="Rick|Carl|SMG-Adoption" />
+        <ent-inst id="Carl|Carl|MABD-Dec73" />
+        <ent-inst id="Carl|Carl|MABD-SSI-enrolled" />
+        <ent-inst id="Rick|Carl|MN-MCA" />
+        <ent-inst id="Rick|Rick|MABD-Dec73" />
+        <ent-inst id="Rick|Rick|MABD-SSI-enrolled" />
+        <ent-inst id="Carl|Rick|MABD-1619" />
+        <ent-inst id="Rick|Carl|MCA-Pregnant" />
+        <ent-inst id="Rick|Carl|MABD-Pickle" />
+        <ent-inst id="Carl|Carl|MABD-1619" />
+        <ent-inst id="Carl|Carl|MABD-Spouse" />
+        <ent-inst id="Carl|Carl|MCA-Child" />
+        <ent-inst id="Rick|Rick|SMG-FPS" />
+        <ent-inst id="Rick|Rick|MCA-Adult" />
+      </ent-set>
+      <ent-set entity-type="personsrequestedbenefit" entity-text="the person's requested benefit" inferred="yes" identifying-attribute="rb_reqb_ID">
+        <ent-inst id="Carl|Medical Care Benefits">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Carl|Medical Care Benefits|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Medicare Cost-Sharing Reduction">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Carl|Medicare Cost-Sharing Reduction|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Family Planning">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Carl|Family Planning|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="result" entity-text="the result" inferred="yes" identifying-attribute="rb_rslt_ID">
+        <ent-inst id="Carl|Medicare Cost-Sharing Reduction|1" />
+        <ent-inst id="Carl|Family Planning|1" />
+        <ent-inst id="Carl|Medical Care Benefits|1" />
+      </ent-set>
+      <ent-set entity-type="case-result" entity-text="the case result" inferred="yes" identifying-attribute="o_crslt_type">
+        <ent-inst id="Medicare Cost-Sharing Reduction" />
+        <ent-inst id="Medical Care Benefits" />
+        <ent-inst id="Family Planning" />
+      </ent-set>
+      <ent-set entity-type="personsrequestforassistance" entity-text="the person's request for assistance" inferred="yes" identifying-attribute="rb_reqa_ID">
+        <ent-inst id="Carl|Medical Assistance" />
+      </ent-set>
+      <ent-set entity-type="baseprogram" entity-text="the base program" inferred="yes" identifying-attribute="the_base_program">
+        <ent-inst id="MCA-TMA-1925" />
+        <ent-inst id="MABD-1619" />
+        <ent-inst id="SMG-IV-E" />
+        <ent-inst id="MSP-QDWI" />
+        <ent-inst id="MCA-Child" />
+        <ent-inst id="MN-MABD" />
+        <ent-inst id="MCA-Adult" />
+        <ent-inst id="MABD-Dec73" />
+        <ent-inst id="SMG-Newborn" />
+        <ent-inst id="MSP-QI" />
+        <ent-inst id="MCA-PCR" />
+        <ent-inst id="MN-MCA" />
+        <ent-inst id="MSP-SLMB" />
+        <ent-inst id="SMG-FPS" />
+        <ent-inst id="MSP-QMB" />
+        <ent-inst id="MABD-SSI-eligible" />
+        <ent-inst id="MCA-EXT" />
+        <ent-inst id="MABD-DAC" />
+        <ent-inst id="MABD-Pickle" />
+        <ent-inst id="MCA-Pregnant" />
+        <ent-inst id="MABD-MWPD" />
+        <ent-inst id="SMG-Adoption" />
+        <ent-inst id="SMG-Former-foster" />
+        <ent-inst id="MABD-Spouse" />
+        <ent-inst id="SMG-BCCT" />
+        <ent-inst id="MABD-Aug72" />
+        <ent-inst id="RMA" />
+        <ent-inst id="MABD-SSI-enrolled" />
+      </ent-set>
+      <ent-set entity-type="person-address" entity-text="the person's address">
+        <ent-inst id="person-address 1">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="false" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person-address 2">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="address" entity-text="the address">
+        <ent-inst id="address 1">
+          <attr-inst name="i_addr_street" text="the address's street" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="related-party" entity-text="the related party">
+        <ent-inst id="related-party 1">
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Biological Child</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+    <test-case name="(d) not a child" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <attr-inst name="st_MABDResLmtUndrMedcaidProP2420c2_c" text="the MABD resource limit under Medicaid Procedures P-2420C(1) for two people" type="currency">
+            <val>
+              <currency-val>1000.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_MABDResLmtUndrMedcaidProP2420c1_c" text="the MABD resource limit under Medicaid Procedures P-2420C(1) for one person" type="currency">
+            <val>
+              <currency-val>500.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true">
+              <ent-inst-ref ref-id="MSP-QMB" />
+              <ent-inst-ref ref-id="SMG-Newborn" />
+              <ent-inst-ref ref-id="RMA" />
+              <ent-inst-ref ref-id="MABD-Pickle" />
+              <ent-inst-ref ref-id="MN-MABD" />
+              <ent-inst-ref ref-id="MABD-Dec73" />
+              <ent-inst-ref ref-id="MSP-QI" />
+              <ent-inst-ref ref-id="MABD-Aug72" />
+              <ent-inst-ref ref-id="SMG-IV-E" />
+              <ent-inst-ref ref-id="SMG-Former-foster" />
+              <ent-inst-ref ref-id="MABD-1619" />
+              <ent-inst-ref ref-id="MABD-MWPD" />
+              <ent-inst-ref ref-id="MCA-Pregnant" />
+              <ent-inst-ref ref-id="MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="MABD-DAC" />
+              <ent-inst-ref ref-id="MABD-Spouse" />
+              <ent-inst-ref ref-id="MN-MCA" />
+              <ent-inst-ref ref-id="MCA-Adult" />
+              <ent-inst-ref ref-id="MCA-Child" />
+              <ent-inst-ref ref-id="MSP-QDWI" />
+              <ent-inst-ref ref-id="MCA-TMA-1925" />
+              <ent-inst-ref ref-id="MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="MCA-EXT" />
+              <ent-inst-ref ref-id="SMG-Adoption" />
+              <ent-inst-ref ref-id="MSP-SLMB" />
+              <ent-inst-ref ref-id="SMG-BCCT" />
+              <ent-inst-ref ref-id="MCA-PCR" />
+              <ent-inst-ref ref-id="SMG-FPS" />
+            </relationship-inst>
+            <relationship-inst type="existingbenefitplans" complete="true" />
+            <relationship-inst type="caseresults" complete="true">
+              <ent-inst-ref ref-id="Family Planning" />
+              <ent-inst-ref ref-id="Medical Care Benefits" />
+              <ent-inst-ref ref-id="Medicare Cost-Sharing Reduction" />
+            </relationship-inst>
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="si_grpFinParentOne_b" text="the person's financial group includes only one of the person's parents" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_grpFinParentTwo_b" text="the person's financial group includes two of the person's parents" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="rb_per_ageU18" text="the person is under 18 years of age" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_req-med" text="the person is requesting medical assistance" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1995-09-09</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="true" />
+            <relationship-inst type="personsincomes" complete="true" />
+            <relationship-inst type="personsaddresses" complete="true" />
+            <relationship-inst type="personsrequestedbenefits" complete="true">
+              <ent-inst-ref ref-id="Carl|Family Planning" />
+              <ent-inst-ref ref-id="Carl|Medical Care Benefits" />
+              <ent-inst-ref ref-id="Carl|Medicare Cost-Sharing Reduction" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true">
+              <ent-inst-ref ref-id="Carl|Medical Assistance" />
+            </relationship-inst>
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personstransfers" complete="true" />
+            <relationship-inst type="personsexpenses" complete="true" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Carl|Carl" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true">
+              <ent-inst-ref ref-id="Carl|MABD-DAC" />
+              <ent-inst-ref ref-id="Carl|MCA-PCR" />
+              <ent-inst-ref ref-id="Carl|SMG-FPS" />
+              <ent-inst-ref ref-id="Carl|MCA-Adult" />
+              <ent-inst-ref ref-id="Carl|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Carl|MABD-MWPD" />
+              <ent-inst-ref ref-id="Carl|MSP-QMB" />
+              <ent-inst-ref ref-id="Carl|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Carl|MSP-QDWI" />
+              <ent-inst-ref ref-id="Carl|RMA" />
+              <ent-inst-ref ref-id="Carl|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Carl|MSP-QI" />
+              <ent-inst-ref ref-id="Carl|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Carl|SMG-Newborn" />
+              <ent-inst-ref ref-id="Carl|SMG-IV-E" />
+              <ent-inst-ref ref-id="Carl|MSP-SLMB" />
+              <ent-inst-ref ref-id="Carl|MN-MABD" />
+              <ent-inst-ref ref-id="Carl|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Carl|MABD-Aug72" />
+              <ent-inst-ref ref-id="Carl|SMG-Adoption" />
+              <ent-inst-ref ref-id="Carl|MABD-Pickle" />
+              <ent-inst-ref ref-id="Carl|MCA-Child" />
+              <ent-inst-ref ref-id="Carl|SMG-BCCT" />
+              <ent-inst-ref ref-id="Carl|MCA-EXT" />
+              <ent-inst-ref ref-id="Carl|MN-MCA" />
+              <ent-inst-ref ref-id="Carl|MABD-1619" />
+              <ent-inst-ref ref-id="Carl|MABD-Spouse" />
+              <ent-inst-ref ref-id="Carl|MABD-Dec73" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2016" />
+        <ent-inst id="2015" />
+        <ent-inst id="2013" />
+        <ent-inst id="2014" />
+        <ent-inst id="2017" />
+      </ent-set>
+      <ent-set entity-type="program" entity-text="the program" inferred="yes" identifying-attribute="rb_p_ID">
+        <ent-inst id="Carl|MABD-Aug72" />
+        <ent-inst id="Carl|MN-MCA" />
+        <ent-inst id="Carl|MABD-SSI-eligible">
+          <attr-inst name="so_HBEE29.10d20150715Applies_b" text="HBEE 29.10(d) applies to the person for the program (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2014-07-30">
+                <boolean-val>false</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Carl|SMG-FPS" />
+        <ent-inst id="Carl|RMA" />
+        <ent-inst id="Carl|MSP-QI" />
+        <ent-inst id="Carl|MCA-Adult" />
+        <ent-inst id="Carl|MSP-QMB" />
+        <ent-inst id="Carl|MABD-SSI-enrolled" />
+        <ent-inst id="Carl|MABD-Dec73" />
+        <ent-inst id="Carl|SMG-Adoption" />
+        <ent-inst id="Carl|MCA-Child" />
+        <ent-inst id="Carl|MCA-TMA-1925" />
+        <ent-inst id="Carl|MABD-1619" />
+        <ent-inst id="Carl|MABD-MWPD" />
+        <ent-inst id="Carl|MSP-QDWI" />
+        <ent-inst id="Carl|MSP-SLMB" />
+        <ent-inst id="Carl|SMG-Former-foster" />
+        <ent-inst id="Carl|MABD-Pickle" />
+        <ent-inst id="Carl|MABD-Spouse" />
+        <ent-inst id="Carl|SMG-IV-E" />
+        <ent-inst id="Carl|MCA-Pregnant" />
+        <ent-inst id="Carl|MABD-DAC" />
+        <ent-inst id="Carl|MCA-EXT" />
+        <ent-inst id="Carl|MCA-PCR" />
+        <ent-inst id="Carl|SMG-Newborn" />
+        <ent-inst id="Carl|SMG-BCCT" />
+        <ent-inst id="Carl|MN-MABD" />
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Carl|Carl">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Carl|Carl|RMA" />
+              <ent-inst-ref ref-id="Carl|Carl|MSP-SLMB" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-Dec73" />
+              <ent-inst-ref ref-id="Carl|Carl|SMG-Newborn" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-Pickle" />
+              <ent-inst-ref ref-id="Carl|Carl|MSP-QI" />
+              <ent-inst-ref ref-id="Carl|Carl|MSP-QMB" />
+              <ent-inst-ref ref-id="Carl|Carl|SMG-BCCT" />
+              <ent-inst-ref ref-id="Carl|Carl|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-SSI-eligible" />
+              <ent-inst-ref ref-id="Carl|Carl|SMG-Former-foster" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-Aug72" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-DAC" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-SSI-enrolled" />
+              <ent-inst-ref ref-id="Carl|Carl|MN-MCA" />
+              <ent-inst-ref ref-id="Carl|Carl|MCA-PCR" />
+              <ent-inst-ref ref-id="Carl|Carl|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-MWPD" />
+              <ent-inst-ref ref-id="Carl|Carl|SMG-FPS" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-1619" />
+              <ent-inst-ref ref-id="Carl|Carl|MCA-Child" />
+              <ent-inst-ref ref-id="Carl|Carl|SMG-Adoption" />
+              <ent-inst-ref ref-id="Carl|Carl|MABD-Spouse" />
+              <ent-inst-ref ref-id="Carl|Carl|MCA-Adult" />
+              <ent-inst-ref ref-id="Carl|Carl|MN-MABD" />
+              <ent-inst-ref ref-id="Carl|Carl|MCA-EXT" />
+              <ent-inst-ref ref-id="Carl|Carl|MSP-QDWI" />
+              <ent-inst-ref ref-id="Carl|Carl|SMG-IV-E" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmemberprogram" entity-text="the group member program" inferred="yes" identifying-attribute="rb_gmp_ID">
+        <ent-inst id="Carl|Carl|SMG-Adoption" />
+        <ent-inst id="Carl|Carl|MN-MCA" />
+        <ent-inst id="Carl|Carl|MCA-EXT" />
+        <ent-inst id="Carl|Carl|MCA-Child" />
+        <ent-inst id="Carl|Carl|SMG-Newborn" />
+        <ent-inst id="Carl|Carl|SMG-FPS" />
+        <ent-inst id="Carl|Carl|MABD-Spouse" />
+        <ent-inst id="Carl|Carl|MCA-PCR" />
+        <ent-inst id="Carl|Carl|MSP-QMB" />
+        <ent-inst id="Carl|Carl|RMA" />
+        <ent-inst id="Carl|Carl|MCA-Adult" />
+        <ent-inst id="Carl|Carl|MABD-1619" />
+        <ent-inst id="Carl|Carl|MABD-DAC" />
+        <ent-inst id="Carl|Carl|MSP-SLMB" />
+        <ent-inst id="Carl|Carl|MSP-QI" />
+        <ent-inst id="Carl|Carl|SMG-IV-E" />
+        <ent-inst id="Carl|Carl|MN-MABD" />
+        <ent-inst id="Carl|Carl|MABD-SSI-eligible" />
+        <ent-inst id="Carl|Carl|MABD-Aug72" />
+        <ent-inst id="Carl|Carl|MSP-QDWI" />
+        <ent-inst id="Carl|Carl|SMG-BCCT" />
+        <ent-inst id="Carl|Carl|MABD-Pickle" />
+        <ent-inst id="Carl|Carl|MCA-TMA-1925" />
+        <ent-inst id="Carl|Carl|MABD-MWPD" />
+        <ent-inst id="Carl|Carl|SMG-Former-foster" />
+        <ent-inst id="Carl|Carl|MABD-Dec73" />
+        <ent-inst id="Carl|Carl|MABD-SSI-enrolled" />
+        <ent-inst id="Carl|Carl|MCA-Pregnant" />
+      </ent-set>
+      <ent-set entity-type="personsrequestedbenefit" entity-text="the person's requested benefit" inferred="yes" identifying-attribute="rb_reqb_ID">
+        <ent-inst id="Carl|Medical Care Benefits">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Carl|Medical Care Benefits|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Family Planning">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Carl|Family Planning|2" />
+              <ent-inst-ref ref-id="Carl|Family Planning|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Medicare Cost-Sharing Reduction">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Carl|Medicare Cost-Sharing Reduction|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="result" entity-text="the result" inferred="yes" identifying-attribute="rb_rslt_ID">
+        <ent-inst id="Carl|Medical Care Benefits|1" />
+        <ent-inst id="Carl|Family Planning|2" />
+        <ent-inst id="Carl|Medicare Cost-Sharing Reduction|1" />
+        <ent-inst id="Carl|Family Planning|1" />
+      </ent-set>
+      <ent-set entity-type="case-result" entity-text="the case result" inferred="yes" identifying-attribute="o_crslt_type">
+        <ent-inst id="Medicare Cost-Sharing Reduction" />
+        <ent-inst id="Medical Care Benefits" />
+        <ent-inst id="Family Planning" />
+      </ent-set>
+      <ent-set entity-type="personsrequestforassistance" entity-text="the person's request for assistance" inferred="yes" identifying-attribute="rb_reqa_ID">
+        <ent-inst id="Carl|Medical Assistance" />
+      </ent-set>
+      <ent-set entity-type="baseprogram" entity-text="the base program" inferred="yes" identifying-attribute="the_base_program">
+        <ent-inst id="RMA" />
+        <ent-inst id="MABD-Dec73" />
+        <ent-inst id="SMG-BCCT" />
+        <ent-inst id="MCA-PCR" />
+        <ent-inst id="MABD-Pickle" />
+        <ent-inst id="MABD-DAC" />
+        <ent-inst id="SMG-Newborn" />
+        <ent-inst id="MABD-Aug72" />
+        <ent-inst id="MCA-TMA-1925" />
+        <ent-inst id="MSP-SLMB" />
+        <ent-inst id="MABD-Spouse" />
+        <ent-inst id="SMG-Adoption" />
+        <ent-inst id="MSP-QDWI" />
+        <ent-inst id="SMG-FPS" />
+        <ent-inst id="MSP-QMB" />
+        <ent-inst id="MABD-SSI-enrolled" />
+        <ent-inst id="MABD-MWPD" />
+        <ent-inst id="MABD-1619" />
+        <ent-inst id="SMG-IV-E" />
+        <ent-inst id="MN-MCA" />
+        <ent-inst id="MSP-QI" />
+        <ent-inst id="MABD-SSI-eligible" />
+        <ent-inst id="MCA-Adult" />
+        <ent-inst id="MCA-Pregnant" />
+        <ent-inst id="SMG-Former-foster" />
+        <ent-inst id="MN-MABD" />
+        <ent-inst id="MCA-EXT" />
+        <ent-inst id="MCA-Child" />
+      </ent-set>
+    </test-case>
+    <test-case name="(e) transfer CSRA" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <attr-inst name="si_CsraMax_c" text="the CSRA maximum resource amount" type="currency">
+            <val>
+              <currency-val>119220.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+              <ent-inst-ref ref-id="person 2" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="st_HBEE29.10eApplies20150715_b" text="HBEE 29.10(e) applies to the person (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.10e2ResExclGrp20150715_c" text="the resource amount allocated to the person's community spouse under HBEE 29.10(e)(2) (eff. 07/15/2015)" type="currency">
+            <expected-val>
+              <currency-val>119220.0</currency-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_recvLtcEver_b" text="the person has received Medicaid coverage of long-term care service and supports" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resTransferCsHearing_c" text="the resource amount allocated to the person's community spouse as set by a fair hearing" type="currency">
+            <val>
+              <currency-val>0.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resTransferCsCourt_c" text="the resource amount transferred to the person's community spouse under a court order" type="currency">
+            <val>
+              <currency-val>0.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Bob</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Loblaw</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw" />
+              <ent-inst-ref ref-id="Bob Loblaw|Lindsay Funke" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 2">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Lindsay</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Funke</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_recvLTC_b" text="the person is receiving Medicaid coverage of long-term care service and supports" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_instMed_b" text="the person is living in a medical institution" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="related-party 1" />
+            </relationship-inst>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Lindsay Funke|Lindsay Funke" />
+              <ent-inst-ref ref-id="Lindsay Funke|Bob Loblaw" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2015" />
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2017" />
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Bob Loblaw|Bob Loblaw">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|Lindsay Funke">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Lindsay Funke">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|Bob Loblaw">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="related-party" entity-text="the related party">
+        <ent-inst id="related-party 1">
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Bob Loblaw</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Spouse</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+    <test-case name="(e) transfer hearing" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <attr-inst name="si_CsraMax_c" text="the CSRA maximum resource amount" type="currency">
+            <val>
+              <currency-val>119220.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+              <ent-inst-ref ref-id="person 2" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="st_HBEE29.10eApplies20150715_b" text="HBEE 29.10(e) applies to the person (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.10e2ResExclGrp20150715_c" text="the resource amount allocated to the person's community spouse under HBEE 29.10(e)(2) (eff. 07/15/2015)" type="currency">
+            <expected-val>
+              <currency-val>250000.0</currency-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_recvLtcEver_b" text="the person has received Medicaid coverage of long-term care service and supports" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resTransferCsHearing_c" text="the resource amount allocated to the person's community spouse as set by a fair hearing" type="currency">
+            <val>
+              <currency-val>250000.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resTransferCsCourt_c" text="the resource amount transferred to the person's community spouse under a court order" type="currency">
+            <val>
+              <currency-val>0.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Bob</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Loblaw</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw" />
+              <ent-inst-ref ref-id="Bob Loblaw|Lindsay Funke" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 2">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Lindsay</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Funke</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_recvLTC_b" text="the person is receiving Medicaid coverage of long-term care service and supports" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_instMed_b" text="the person is living in a medical institution" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="related-party 1" />
+            </relationship-inst>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Lindsay Funke|Lindsay Funke" />
+              <ent-inst-ref ref-id="Lindsay Funke|Bob Loblaw" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2015" />
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2017" />
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Bob Loblaw|Bob Loblaw">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Lindsay Funke">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|Bob Loblaw">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|Lindsay Funke">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="related-party" entity-text="the related party">
+        <ent-inst id="related-party 1">
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Bob Loblaw</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Spouse</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+    <test-case name="(e) transfer court order" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <attr-inst name="si_CsraMax_c" text="the CSRA maximum resource amount" type="currency">
+            <val>
+              <currency-val>119220.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+              <ent-inst-ref ref-id="person 2" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="st_HBEE29.10eApplies20150715_b" text="HBEE 29.10(e) applies to the person (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="st_HBEE29.10e2ResExclGrp20150715_c" text="the resource amount allocated to the person's community spouse under HBEE 29.10(e)(2) (eff. 07/15/2015)" type="currency">
+            <expected-val>
+              <currency-val>1000000.0</currency-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_recvLtcEver_b" text="the person has received Medicaid coverage of long-term care service and supports" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resTransferCsHearing_c" text="the resource amount allocated to the person's community spouse as set by a fair hearing" type="currency">
+            <val>
+              <currency-val>250000.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resTransferCsCourt_c" text="the resource amount transferred to the person's community spouse under a court order" type="currency">
+            <val>
+              <currency-val>1000000.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Bob</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Loblaw</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw" />
+              <ent-inst-ref ref-id="Bob Loblaw|Lindsay Funke" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 2">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Lindsay</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Funke</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_recvLTC_b" text="the person is receiving Medicaid coverage of long-term care service and supports" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_instMed_b" text="the person is living in a medical institution" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="related-party 1" />
+            </relationship-inst>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Lindsay Funke|Lindsay Funke" />
+              <ent-inst-ref ref-id="Lindsay Funke|Bob Loblaw" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2015" />
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2017" />
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Bob Loblaw|Bob Loblaw">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|Bob Loblaw">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Lindsay Funke">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|Lindsay Funke">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="related-party" entity-text="the related party">
+        <ent-inst id="related-party 1">
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Bob Loblaw</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Spouse</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+    <test-case name="(e) spouse on LTC" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <attr-inst name="si_CsraMax_c" text="the CSRA maximum resource amount" type="currency">
+            <val>
+              <currency-val>119220.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+              <ent-inst-ref ref-id="person 2" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="st_HBEE29.10eApplies20150715_b" text="HBEE 29.10(e) applies to the person (eff. 07/15/2015)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="si_recvLtcEver_b" text="the person has received Medicaid coverage of long-term care service and supports" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resTransferCsHearing_c" text="the resource amount allocated to the person's community spouse as set by a fair hearing" type="currency">
+            <val>
+              <currency-val>0.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_resTransferCsCourt_c" text="the resource amount transferred to the person's community spouse under a court order" type="currency">
+            <val>
+              <currency-val>0.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Bob</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Loblaw</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Bob Loblaw|Bob Loblaw" />
+              <ent-inst-ref ref-id="Bob Loblaw|Lindsay Funke" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 2">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Lindsay</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_name-last" text="the person's last name" type="text">
+            <val>
+              <text-val>Funke</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_recvLTC_b" text="the person is receiving Medicaid coverage of long-term care service and supports" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="related-party 1" />
+            </relationship-inst>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Lindsay Funke|Lindsay Funke" />
+              <ent-inst-ref ref-id="Lindsay Funke|Bob Loblaw" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2015" />
+        <ent-inst id="2016" />
+        <ent-inst id="2014" />
+        <ent-inst id="2013" />
+        <ent-inst id="2017" />
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Bob Loblaw|Bob Loblaw">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|Bob Loblaw">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob Loblaw|Lindsay Funke">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lindsay Funke|Lindsay Funke">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="related-party" entity-text="the related party">
+        <ent-inst id="related-party 1">
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Bob Loblaw</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Spouse</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+    </test-case>
+  </test-case-set>
+  <outcome-set>
+    <outcome name="so_personTtlCntResExclsionAsIndvdlChildUndrHBEE29.10d_c" display-name="si_personTtlCntResExclsionAsIndvdlChildUndrHBEE29.10d_c" text="the resource exclusion for the person's parents under HBEE 29.10(d)(1) (eff. 07/15/2015)" type="currency" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+    <outcome name="st_HBEE29.10eApplies20150715_b" display-name="st_HBEE29.10eApplies20150715_b" text="HBEE 29.10(e) applies to the person (eff. 07/15/2015)" type="boolean" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+    <outcome name="st_HBEE29.10e2ResExclGrp20150715_c" display-name="st_HBEE29.10e2ResExclGrp20150715_c" text="the resource amount allocated to the person's community spouse under HBEE 29.10(e)(2) (eff. 07/15/2015)" type="currency" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+    <outcome name="so_HBEE29.10d20150715Applies_b" display-name="29.10(d) applies to person" text="HBEE 29.10(d) applies to the person for the program (eff. 07/15/2015)" type="boolean" entity-type="program" entity-text="the program">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+  </outcome-set>
+</test-script>

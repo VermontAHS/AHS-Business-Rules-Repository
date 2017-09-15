@@ -1,0 +1,354 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity ref="global">
+      <attribute name="b4" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the budgeting period is annual under HBEE 28.05(c)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the budgeting period',singular),o('annual under HBEE 28.05(c)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p12" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>this state</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 28.03 applies to the program</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 28.03',singular),o('to the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 28.05 applies to the program</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 28.05',singular),o('to the program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p16" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the budgeting period for the person's financial group for the program under DVHA policy</base>
+        </text>
+      </attribute>
+      <attribute name="p17" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the budgeting method for the person's financial group for the program under DVHA policy</base>
+        </text>
+      </attribute>
+      <attribute name="p18" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the prospective number of weekly payments per month for the program under DVHA policy</base>
+        </text>
+      </attribute>
+      <attribute name="p19" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the prospective number of bi-weekly payments per month for the program under DVHA policy</base>
+        </text>
+      </attribute>
+      <attribute name="p20" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the rounding method for the program under DVHA policy</base>
+        </text>
+      </attribute>
+      <attribute name="p21" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the rounding digits for the program under DVHA policy</base>
+        </text>
+      </attribute>
+      <attribute name="p22" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the FPL locale for the program under DVHA policy</base>
+        </text>
+      </attribute>
+      <attribute name="p23" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the FPL date type for the program under DVHA policy</base>
+        </text>
+      </attribute>
+      <attribute name="p24" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the specific date for FPL calculations for the program under DVHA policy</base>
+        </text>
+      </attribute>
+      <attribute name="p25" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the specific year for FPL calculations for the program under DVHA policy</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b2" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the budgeting period is annual for the person's financial group under HBEE 28.03(g)(2)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the budgeting period',singular),o('annual for the person''s financial group under HBEE 28.03(g)(2)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's income" id="personsincome" containment-relationship-id="personsincomes" containment-parent-id="person">
+      <attribute name="b6" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income type is considered earned income under HBEE 29.12(b)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person''s income type',singular),o('earned income under HBEE 29.12(b)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income type is considered self-employment income under HBEE 29.12(c)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person''s income type',singular),o('self-employment income under HBEE 29.12(c)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income type is considered unearned income under HBEE 29.12(d)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person''s income type',singular),o('unearned income under HBEE 29.12(d)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p27" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's income's amount</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the income program" id="incomeprogram" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+      <attribute name="b5" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 29.12 applies to the income program</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.12',singular),o('to the income program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p26" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's income's representative payment amount for the income program under DVHA policy</base>
+        </text>
+      </attribute>
+      <attribute name="p28" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's income's category for the income program under DVHA policy</base>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" text="the person's income's income programs" reverse-text="the person's income for the income program" source="personsincome" target="incomeprogram" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" text="the person's incomes" reverse-text="the person's income's person" source="person" target="personsincome" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="the budgeting period for the person's financial group for the program under DVHA policy" ruleburst="true" concludes="p16" folder="3" source-offset="69">
+      <rule-xml>
+        <table-conclude attr-id="p16" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <string-value>Annual</string-value>
+            </value>
+            <condition>
+              <or>
+                <and>
+                  <attribute attr-id="b1" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                  <or>
+                    <not>
+                      <attribute attr-id="b1" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                    </not>
+                    <for>
+                      <relationship relationship-id="programsperson" target-entity-id="person" />
+                      <attribute attr-id="b2" />
+                    </for>
+                  </or>
+                </and>
+                <and>
+                  <attribute attr-id="b3" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                  <or>
+                    <not>
+                      <attribute attr-id="b3" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                    </not>
+                    <scope-for scope-ref="global0" target-entity-id="global">
+                      <attribute attr-id="b4" />
+                    </scope-for>
+                  </or>
+                </and>
+              </or>
+            </condition>
+          </row>
+          <otherwise>
+            <string-value>Monthly</string-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the budgeting method for the person's financial group for the program under DVHA policy" ruleburst="true" concludes="p17" folder="3" source-offset="998">
+      <rule-xml>
+        <table-conclude attr-id="p17" entity-id="program" scope-id="program0">
+          <otherwise>
+            <string-value>Prospective</string-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="the prospective number of weekly payments per month for the program under DVHA policy" ruleburst="true" concludes="p18" folder="3" source-offset="1204">
+      <rule-xml>
+        <table-conclude attr-id="p18" entity-id="program" scope-id="program0">
+          <otherwise>
+            <number-value>4.348125</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="the prospective number of bi-weekly payments per month for the program under DVHA policy" ruleburst="true" concludes="p19" folder="3" source-offset="1482">
+      <rule-xml>
+        <table-conclude attr-id="p19" entity-id="program" scope-id="program0">
+          <otherwise>
+            <number-value>2.1740625</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="the rounding method for the program under DVHA policy" ruleburst="true" concludes="p20" folder="4" source-offset="1795">
+      <rule-xml>
+        <table-conclude attr-id="p20" entity-id="program" scope-id="program0">
+          <otherwise>
+            <string-value>Nearest</string-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="the rounding digits for the program under DVHA policy" ruleburst="true" concludes="p21" folder="4" source-offset="1945">
+      <rule-xml>
+        <table-conclude attr-id="p21" entity-id="program" scope-id="program0">
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="the person's income's representative payment amount for the income program under DVHA policy" ruleburst="true" concludes="p26" folder="6" source-offset="2222">
+      <rule-xml>
+        <table-conclude attr-id="p26" entity-id="incomeprogram" scope-id="incomeprogram0">
+          <otherwise>
+            <for>
+              <relationship relationship-id="personsincomefortheincomeprogram" target-entity-id="personsincome" />
+              <attribute attr-id="p27" />
+            </for>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="7" name="the person's income's category for the income program under DVHA policy" ruleburst="true" concludes="p28" folder="7" source-offset="2394">
+      <rule-xml>
+        <table-conclude attr-id="p28" entity-id="incomeprogram" scope-id="incomeprogram0">
+          <row>
+            <value>
+              <string-value>Earned</string-value>
+            </value>
+            <condition>
+              <and>
+                <attribute attr-id="b5" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                <or>
+                  <for>
+                    <relationship relationship-id="personsincomefortheincomeprogram" target-entity-id="personsincome" />
+                    <attribute attr-id="b6" />
+                  </for>
+                  <for>
+                    <relationship relationship-id="personsincomefortheincomeprogram" target-entity-id="personsincome" />
+                    <attribute attr-id="b7" />
+                  </for>
+                </or>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Unearned</string-value>
+            </value>
+            <condition>
+              <and>
+                <attribute attr-id="b5" silent-if-uncertain="true" silent-if-certain="true" invisible-if-uncertain="true" invisible-if-certain="true" />
+                <for>
+                  <relationship relationship-id="personsincomefortheincomeprogram" target-entity-id="personsincome" />
+                  <attribute attr-id="b8" />
+                </for>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="8" name="the FPL locale for the program under DVHA policy" ruleburst="true" concludes="p22" folder="9" source-offset="3161">
+      <rule-xml>
+        <table-conclude attr-id="p22" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <string-value>Alaska</string-value>
+            </value>
+            <condition>
+              <equals>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p12" />
+                </scope-for>
+                <string-value>Alaska</string-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <string-value>Hawaii</string-value>
+            </value>
+            <condition>
+              <equals>
+                <scope-for scope-ref="global0" target-entity-id="global">
+                  <attribute attr-id="p12" />
+                </scope-for>
+                <string-value>Hawaii</string-value>
+              </equals>
+            </condition>
+          </row>
+          <otherwise>
+            <string-value>48+DC</string-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="9" name="the FPL date type for the program under DVHA policy" ruleburst="true" concludes="p23" folder="9" source-offset="3398">
+      <rule-xml>
+        <table-conclude attr-id="p23" entity-id="program" scope-id="program0">
+          <otherwise>
+            <string-value>Current</string-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="10" name="the specific date for FPL calculations for the program under DVHA policy" ruleburst="true" concludes="p24" folder="9" source-offset="3573">
+      <rule-xml>
+        <table-conclude attr-id="p24" entity-id="program" scope-id="program0">
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="11" name="the specific year for FPL calculations for the program under DVHA policy" ruleburst="true" concludes="p25" folder="9" source-offset="3693">
+      <rule-xml>
+        <table-conclude attr-id="p25" entity-id="program" scope-id="program0">
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="Financial Configuration" parent="0" id="1" />
+    <folder text="Budgeting Configuration" parent="1" id="2" />
+    <folder text="Budgeting Config" parent="2" id="3" />
+    <folder text="Rounding Config" parent="2" id="4" />
+    <folder text="Income Configuration" parent="1" id="5" />
+    <folder text="Representative Payment" parent="5" id="6" />
+    <folder text="Income Category" parent="5" id="7" />
+    <folder text="Income Calculation Configuration" parent="1" id="8" />
+    <folder text="FPL Config" parent="8" id="9" />
+  </rule-folders>
+</root>

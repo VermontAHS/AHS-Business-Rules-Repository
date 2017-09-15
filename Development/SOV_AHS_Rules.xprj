@@ -1,0 +1,815 @@
+<rulebase-project schema-version="1" product-version="10.4.6.76">
+  <automatic-aliasing enabled="true" />
+  <sort-file-explorer enabled="true" />
+  <property-definitions>
+    <attribute-properties>
+      <property-definition name="Entity" data-type="Text" allow-blank="true" compile="false" default-value="" id="Entity">
+        <help-text>
+        </help-text>
+      </property-definition>
+      <property-definition name="PublicName" data-type="Text" allow-blank="true" compile="false" default-value="" id="PublicName">
+        <help-text>
+        </help-text>
+      </property-definition>
+      <property-definition name="Type" data-type="List" allow-blank="true" compile="false" default-value="" id="Type">
+        <help-text>
+        </help-text>
+        <value-list>
+          <value>Text</value>
+          <value>Date</value>
+          <value>Number</value>
+          <value>Boolean</value>
+        </value-list>
+      </property-definition>
+      <property-definition name="Validation/LOV" data-type="Text" allow-blank="true" compile="false" default-value="" id="Validation/LOV">
+        <help-text>
+        </help-text>
+      </property-definition>
+      <property-definition name="MissingInfoType" data-type="List" allow-blank="true" compile="true" default-value="" id="MissingInfoType">
+        <help-text>
+        </help-text>
+        <value-list>
+          <value>Client</value>
+          <value>Worker</value>
+          <value>System</value>
+        </value-list>
+      </property-definition>
+      <property-definition name="OneGateMapping" data-type="Text" allow-blank="true" compile="false" default-value="" id="OneGateMapping">
+        <help-text>
+        </help-text>
+      </property-definition>
+      <property-definition name="Usage" data-type="Text" allow-blank="true" compile="false" default-value="" id="Comment">
+        <help-text>
+        </help-text>
+      </property-definition>
+      <property-definition name="W2New" data-type="Text" allow-blank="true" compile="false" default-value="" id="W2New">
+        <help-text>
+        </help-text>
+      </property-definition>
+      <property-definition name="M/O" data-type="Text" allow-blank="true" compile="false" default-value="" id="Mandatory">
+        <help-text>
+        </help-text>
+      </property-definition>
+      <property-definition name="DefaultValue" data-type="Text" allow-blank="true" compile="false" default-value="" id="DefaultValue">
+        <help-text>
+        </help-text>
+      </property-definition>
+      <property-definition name="IntroducedIn" data-type="List" allow-blank="true" compile="false" default-value="" id="IntroducedIn">
+        <help-text>
+        </help-text>
+        <value-list>
+          <value>V0.1 (2014-04-30)</value>
+          <value>V0.2 (2014-05-14)</value>
+          <value>V0.3 (2014-06-03)</value>
+          <value>V0.4 (2014-06-14)</value>
+          <value>V0.4.3 (2014-07-02)</value>
+          <value>V0.4.4 (2014-07-07)</value>
+          <value>V0.5 (2014-07-09)</value>
+          <value>V0.5.1 (TBC)</value>
+          <value>V0.5.2 (TBC)</value>
+          <value>V0.6</value>
+        </value-list>
+      </property-definition>
+      <property-definition name="SiebelTable" data-type="Text" allow-blank="true" compile="false" default-value="" id="SiebelTable">
+        <help-text>
+        </help-text>
+      </property-definition>
+      <property-definition name="SiebelColumn" data-type="Text" allow-blank="true" compile="false" default-value="" id="SiebelColumn">
+        <help-text>
+        </help-text>
+      </property-definition>
+      <property-definition name="AdditionalInfo" data-type="Text" allow-blank="true" compile="false" default-value="" id="AdditionalInfo">
+        <help-text>
+        </help-text>
+      </property-definition>
+    </attribute-properties>
+    <rule-properties />
+    <screen-properties />
+    <control-properties />
+    <entity-properties />
+    <folder-properties />
+    <project-properties />
+    <relationship-properties />
+    <interactivedocument-properties />
+  </property-definitions>
+  <files>
+    <file name="verbs.xml" />
+    <folder name="00 - Framework">
+      <folder name="01 - Eligibility">
+        <file name="Eligibility Framework.doc" />
+        <file name="Eligibility Framework Props.xsrc" />
+        <file name="Group Framework.doc" />
+        <file name="Financial Framework.doc" />
+        <file name="Income Framework.doc" />
+        <file name="Resource Framework.doc" />
+        <file name="Program Framework.doc" />
+        <file name="Enrollment Framework.doc" />
+        <file name="Expense Framework.doc" />
+      </folder>
+      <folder name="02 - System">
+        <file name="System Framework.doc" />
+        <file name="System Framework Props.xsrc" />
+        <file name="Benefit Framework.doc" />
+      </folder>
+      <folder name="03 - Interpretive">
+        <file name="Temporal Framework.doc" />
+        <file name="Interpretive Framework Props.xsrc" />
+      </folder>
+    </folder>
+    <folder name="01 - Config">
+      <folder name="01 - Source Map">
+        <file name="Framework Source Map.doc" />
+        <file name="DVHA Source Map Props.xsrc" />
+      </folder>
+      <folder name="02 - System Map">
+        <file name="System Map.doc" />
+      </folder>
+      <folder name="00 - Programs">
+        <file name="Program Definition Props.xsrc" />
+        <file name="Program Hierarchy.doc" />
+        <file name="Program Instances.doc" />
+        <file name="Program Requests.doc" />
+        <file name="Program Tables.xls" />
+      </folder>
+    </folder>
+    <folder name="04 - System">
+    </folder>
+    <folder name="03 - Source">
+      <folder name="DVHA">
+        <folder name="DVHA Policy Map">
+          <file name="DVHA Admin Map.doc" />
+          <file name="DVHA Case Mgmt Map.doc" />
+          <file name="DVHA Categorical Map.doc" />
+          <file name="DVHA Financial Config Map.doc" />
+          <file name="DVHA Gross Income Map.doc" />
+          <file name="DVHA Group Map.doc" />
+          <file name="DVHA Net Income Map.doc" />
+          <file name="DVHA NonFinancial Map.doc" />
+          <file name="DVHA Other Financial Map.doc" />
+          <file name="DVHA Overall Map.doc" />
+          <file name="DVHA Resource Map.doc" />
+          <file name="HBEE Map.doc" />
+          <file name="HBEE Map Props.xsrc" />
+        </folder>
+        <folder name="HBEE">
+          <folder name="Pt 2 Sec 6-14">
+            <folder name="Sec 12">
+              <folder name="12.03">
+                <file name="HBEE 12.03 2016-08-01.doc" />
+                <file name="HBEE 12.03 Dates.xls" />
+                <file name="HBEE 12.03 Props.xsrc" />
+                <file name="HBEE 12.03 2016-08-01 Tests.tsc" />
+              </folder>
+              <folder name="12.05">
+                <file name="HBEE 12.05 2014-07-30.doc" />
+                <file name="HBEE 12.05 Dates.xls" />
+                <file name="HBEE 12.05 Props.xsrc" />
+                <file name="HBEE 12.05 2014-07-30 Tests.tsc" />
+              </folder>
+              <folder name="12.06">
+                <file name="HBEE 12.06 2014-07-30.doc" />
+                <file name="HBEE 12.06 Dates.xls" />
+                <file name="HBEE 12.06 Props.xsrc" />
+                <file name="HBEE 12.06 2014-07-30 Tests.tsc" />
+              </folder>
+              <folder name="12.02">
+                <file name="HBEE 12.02 2016-08-01 Tests.tsc" />
+                <file name="HBEE 12.02 2016-08-01.doc" />
+                <file name="HBEE 12.02 Dates.xls" />
+                <file name="HBEE 12.02 Props.xsrc" />
+              </folder>
+            </folder>
+            <folder name="Sec 14">
+              <folder name="14.00">
+                <file name="HBEE 14.00 2014-07-30.doc" />
+                <file name="HBEE 14.00 Dates.xls" />
+                <file name="HBEE 14.00 Props.xsrc" />
+                <file name="HBEE 14.00 2014-07-30 Tests.tsc" />
+              </folder>
+            </folder>
+            <folder name="Sec 7">
+              <folder name="7.03">
+                <file name="HBEE 7.03 2015-07-15.doc" />
+                <file name="HBEE 7.03 Dates.xls" />
+                <file name="HBEE 7.03 Props.xsrc" />
+                <file name="HBEE 7.03 2015-07-15 Tests.tsc" />
+              </folder>
+            </folder>
+            <folder name="Sec 8">
+              <folder name="8.03">
+                <file name="HBEE 8.03 2015-07-15.doc" />
+                <file name="HBEE 8.03 Dates.xls" />
+                <file name="HBEE 8.03 Props.xsrc" />
+                <file name="HBEE 8.03 2015-07-15 Tests.tsc" />
+              </folder>
+              <folder name="8.05">
+                <file name="HBEE 8.05 2015-07-15.doc" />
+                <file name="HBEE 8.05 Props.xsrc" />
+                <file name="HBEE 8.05 2015-07-15 Tests.tsc" />
+                <file name="HBEE 8.05k 2015-07-15 Tests.tsc" />
+                <file name="HBEE 8.05 Dates.xls" />
+              </folder>
+              <folder name="8.06">
+                <file name="HBEE 8.06 2014-07-30.doc" />
+                <file name="HBEE 8.06 Dates.xls" />
+                <file name="HBEE 8.06 Props.xsrc" />
+                <file name="HBEE 8.06 2014-07-30 Tests.tsc" />
+              </folder>
+              <folder name="8.07">
+                <file name="HBEE 8.07 2014-07-30.doc" />
+                <file name="HBEE 8.07 Dates.xls" />
+                <file name="HBEE 8.07 Props.xsrc" />
+                <file name="HBEE 8.07 2014-07-30 Tests.tsc" />
+              </folder>
+            </folder>
+            <folder name="Sec 9">
+              <folder name="9.03">
+                <file name="HBEE 9.03 2015-07-15.doc" />
+                <file name="HBEE 9.03 Dates.xls" />
+                <file name="HBEE 9.03 Props.xsrc" />
+                <file name="HBEE 9.03 2015-07-15 Tests.tsc" />
+              </folder>
+            </folder>
+            <folder name="Sec 13">
+              <folder name="13.02">
+                <file name="HBEE 13.02 2014-07-30 Tests.tsc" />
+                <file name="HBEE 13.02 2014-07-30.doc" />
+                <file name="HBEE 13.02 Dates.xls" />
+                <file name="HBEE 13.02 Props.xsrc" />
+              </folder>
+            </folder>
+          </folder>
+          <folder name="Pt 3 Sec 15-23">
+            <folder name="Sec 16">
+              <folder name="16.02">
+                <file name="HBEE 16.02 2016-08-01.doc" />
+                <file name="HBEE 16.02 Props.xsrc" />
+                <file name="HBEE 16.02 Dates.xls" />
+                <file name="HBEE 16.02 2016-08-01 Tests.tsc" />
+              </folder>
+              <folder name="16.01">
+                <file name="HBEE 16.01 2016-08-01.doc" />
+                <file name="HBEE 16.01 Dates.xls" />
+                <file name="HBEE 16.01 Props.xsrc" />
+                <file name="HBEE 16.01 2016-08-01 Tests.tsc" />
+              </folder>
+            </folder>
+            <folder name="Sec 17">
+              <folder name="17.01">
+                <file name="HBEE 17.01 2014-07-30.doc" />
+                <file name="HBEE 17.01 Props.xsrc" />
+                <file name="HBEE 17.01 Dates.xls" />
+                <file name="HBEE 17.01 2014-07-30 Tests.tsc" />
+              </folder>
+              <folder name="17.02">
+                <file name="HBEE 17.02 2014-07-30.doc" />
+                <file name="HBEE 17.02 Props.xsrc" />
+                <file name="HBEE 17.02 Dates.xls" />
+                <file name="HBEE 17.02 2014-07-30 Tests.tsc" />
+              </folder>
+              <folder name="17.03">
+                <file name="HBEE 17.03 2014-07-30.doc" />
+                <file name="HBEE 17.03 Props.xsrc" />
+                <file name="HBEE 17.03 Dates.xls" />
+                <file name="HBEE 17.03 2014-07-30 Tests.tsc" />
+              </folder>
+            </folder>
+            <folder name="Sec 19">
+              <folder name="19.01">
+                <file name="HBEE 19.01 2014-07-30.doc" />
+                <file name="HBEE 19.01 Props.xsrc" />
+                <file name="HBEE 19.01 Dates.xls" />
+                <file name="HBEE 19.01 2014-07-30 Tests.tsc" />
+              </folder>
+            </folder>
+            <folder name="Sec 20">
+              <folder name="20.01">
+                <file name="HBEE 20.01 2014-07-30.doc" />
+                <file name="HBEE 20.01 Props.xsrc" />
+                <file name="HBEE 20.01 Dates.xls" />
+                <file name="HBEE 20.01 2014-07-30 Tests.tsc" />
+              </folder>
+              <folder name="20.02">
+                <file name="HBEE 20.02 2014-07-30.doc" />
+                <file name="HBEE 20.02 Props.xsrc" />
+                <file name="HBEE 20.02 Dates.xls" />
+                <file name="HBEE 20.02 2014-07-30 Tests.tsc" />
+              </folder>
+              <folder name="20.04">
+                <file name="HBEE 20.04 2014-07-30.doc" />
+                <file name="HBEE 20.04 Props.xsrc" />
+                <file name="HBEE 20.04 Dates.xls" />
+                <file name="HBEE 20.04 2014-07-30 Tests.tsc" />
+              </folder>
+              <folder name="20.00">
+                <file name="HBEE 20.00 2014-07-30 Tests.tsc" />
+                <file name="HBEE 20.00 2014-07-30.doc" />
+                <file name="HBEE 20.00 Dates.xls" />
+                <file name="HBEE 20.00 Props.xsrc" />
+              </folder>
+            </folder>
+            <folder name="Sec 21">
+              <folder name="21.02">
+                <file name="HBEE 21.02 2014-07-30.doc" />
+                <file name="HBEE 21.02 Props.xsrc" />
+                <file name="HBEE 21.02 Dates.xls" />
+                <file name="HBEE 21.02 2014-07-30 Tests.tsc" />
+              </folder>
+              <folder name="21.03">
+                <file name="HBEE 21.03 2014-07-30.doc" />
+                <file name="HBEE 21.03 Props.xsrc" />
+                <file name="HBEE 21.03 Dates.xls" />
+                <file name="HBEE 21.03 2014-07-30 Tests.tsc" />
+              </folder>
+              <folder name="21.05">
+                <file name="HBEE 21.05 2014-07-30.doc" />
+                <file name="HBEE 21.05 Props.xsrc" />
+                <file name="HBEE 21.05 Dates.xls" />
+                <file name="HBEE 21.05 2014-07-30 Tests.tsc" />
+              </folder>
+              <folder name="21.06">
+                <file name="HBEE 21.06 2014-07-30.doc" />
+                <file name="HBEE 21.06 Props.xsrc" />
+                <file name="HBEE 21.06 Dates.xls" />
+                <file name="HBEE 21.06 2014-07-30 Tests.tsc" />
+              </folder>
+              <folder name="21.07">
+                <file name="HBEE 21.07 2014-07-30.doc" />
+                <file name="HBEE 21.07 Props.xsrc" />
+                <file name="HBEE 21.07 Dates.xls" />
+                <file name="HBEE 21.07 2014-07-30 Tests.tsc" />
+              </folder>
+              <folder name="21.08">
+                <file name="HBEE 21.08 2014-07-30.doc" />
+                <file name="HBEE 21.08 Props.xsrc" />
+                <file name="HBEE 21.08 Dates.xls" />
+                <file name="HBEE 21.08 2014-07-30 Tests.tsc" />
+              </folder>
+              <folder name="21.12">
+                <file name="HBEE 21.12 2014-07-30.doc" />
+                <file name="HBEE 21.12 Props.xsrc" />
+                <file name="HBEE 21.12 Dates.xls" />
+                <file name="HBEE 21.12 2014-07-30 Tests.tsc" />
+              </folder>
+              <folder name="21.13">
+                <file name="HBEE 21.13 2014-07-30.doc" />
+                <file name="HBEE 21.13 Props.xsrc" />
+                <file name="HBEE 21.13 Dates.xls" />
+                <file name="HBEE 21.13 2014-07-30 Tests.tsc" />
+              </folder>
+              <folder name="21.00">
+                <file name="HBEE 21.00 2014-07-30 Tests.tsc" />
+                <file name="HBEE 21.00 2014-07-30.doc" />
+                <file name="HBEE 21.00 Dates.xls" />
+                <file name="HBEE 21.00 Props.xsrc" />
+              </folder>
+              <folder name="21.04">
+                <file name="HBEE 21.04 2014-07-30 Tests.tsc" />
+                <file name="HBEE 21.04 2014-07-30.doc" />
+                <file name="HBEE 21.04 Dates.xls" />
+                <file name="HBEE 21.04 Props.xsrc" />
+              </folder>
+              <folder name="21.10">
+                <file name="HBEE 21.10 2014-07-30 Tests.tsc" />
+                <file name="HBEE 21.10 2014-07-30.doc" />
+                <file name="HBEE 21.10 Dates.xls" />
+                <file name="HBEE 21.10 Props.xsrc" />
+              </folder>
+            </folder>
+            <folder name="Sec 23">
+              <folder name="23.01">
+                <file name="HBEE 23.01 2016-08-01.doc" />
+                <file name="HBEE 23.01 Props.xsrc" />
+                <file name="HBEE 23.01 Dates.xls" />
+                <file name="HBEE 23.01 2016-08-01 Tests.tsc" />
+              </folder>
+              <folder name="23.02">
+                <file name="HBEE 23.02 2016-08-01.doc" />
+                <file name="HBEE 23.02 Props.xsrc" />
+                <file name="HBEE 23.02 Dates.xls" />
+                <file name="HBEE 23.02 2016-08-01 Tests.tsc" />
+              </folder>
+              <folder name="23.03">
+                <file name="HBEE 23.03 2016-08-01.doc" />
+                <file name="HBEE 23.03 Props.xsrc" />
+                <file name="HBEE 23.03 Dates.xls" />
+                <file name="HBEE 23.03 2016-08-01 Tests.tsc" />
+              </folder>
+              <folder name="23.04">
+                <file name="HBEE 23.04 2014-07-30.doc" />
+                <file name="HBEE 23.04 Props.xsrc" />
+                <file name="HBEE 23.04 Dates.xls" />
+                <file name="HBEE 23.04 2014-07-30 Tests.tsc" />
+              </folder>
+              <folder name="23.05">
+                <file name="HBEE 23.05 2014-07-30.doc" />
+                <file name="HBEE 23.05 Props.xsrc" />
+                <file name="HBEE 23.05 Dates.xls" />
+                <file name="HBEE 23.05 2014-07-30 Tests.tsc" />
+              </folder>
+            </folder>
+            <folder name="Sec 18">
+              <folder name="18.03">
+                <file name="HBEE 18.03 2014-07-30.doc" />
+                <file name="HBEE 18.03 Dates.xls" />
+                <file name="HBEE 18.03 Props.xsrc" />
+                <file name="HBEE 18.03 2014-07-30 Tests.tsc" />
+              </folder>
+            </folder>
+          </folder>
+          <folder name="Pt 1 Sec 1-5">
+            <folder name="Sec 4">
+              <folder name="4.01">
+                <file name="HBEE 4.01 2014-07-30 Tests.tsc" />
+                <file name="HBEE 4.01 2014-07-30.doc" />
+                <file name="HBEE 4.01 Dates.xls" />
+                <file name="HBEE 4.01 Props.xsrc" />
+              </folder>
+            </folder>
+            <folder name="Sec 3">
+              <folder name="3.00">
+                <file name="HBEE 3.00 2016-08-01 Tests.tsc" />
+                <file name="HBEE 3.00 2016-08-01.doc" />
+                <file name="HBEE 3.00 Dates.xls" />
+                <file name="HBEE 3.00 Props.xsrc" />
+              </folder>
+            </folder>
+            <folder name="Sec 2">
+              <folder name="2.03">
+                <file name="HBEE 2.03 2016-08-01 Tests.tsc" />
+                <file name="HBEE 2.03 2016-08-01.doc" />
+                <file name="HBEE 2.03 Dates.xls" />
+                <file name="HBEE 2.03 Props.xsrc" />
+              </folder>
+            </folder>
+          </folder>
+          <folder name="Pt 5 Sec 28-30">
+            <folder name="Sec 28">
+              <folder name="28.02">
+                <file name="HBEE 28.02 2014-07-30 Tests.tsc" />
+                <file name="HBEE 28.02 2014-07-30.doc" />
+                <file name="HBEE 28.02 Dates.xls" />
+                <file name="HBEE 28.02 Props.xsrc" />
+              </folder>
+              <folder name="28.03">
+                <file name="HBEE 28.03 2015-07-15 Tests.tsc" />
+                <file name="HBEE 28.03 2015-07-15.doc" />
+                <file name="HBEE 28.03 Dates.xls" />
+                <file name="HBEE 28.03 Props.xsrc" />
+              </folder>
+              <folder name="28.04">
+                <file name="HBEE 28.04 2015-07-15 Tests.tsc" />
+                <file name="HBEE 28.04 2015-07-15.doc" />
+                <file name="HBEE 28.04 Dates.xls" />
+                <file name="HBEE 28.04 Props.xsrc" />
+              </folder>
+              <folder name="28.05">
+                <file name="HBEE 28.05 2016-08-01 Tests.tsc" />
+                <file name="HBEE 28.05 2016-08-01.doc" />
+                <file name="HBEE 28.05 Dates.xls" />
+                <file name="HBEE 28.05 Props.xsrc" />
+              </folder>
+            </folder>
+            <folder name="Sec 29">
+              <folder name="29.02">
+                <file name="HBEE 29.02 2014-07-30 Tests.tsc" />
+                <file name="HBEE 29.02 2014-07-30.doc" />
+                <file name="HBEE 29.02 Dates.xls" />
+                <file name="HBEE 29.02 Props.xsrc" />
+              </folder>
+              <folder name="29.03">
+                <file name="HBEE 29.03 2015-07-15 Tests.tsc" />
+                <file name="HBEE 29.03 2015-07-15.doc" />
+                <file name="HBEE 29.03 Dates.xls" />
+                <file name="HBEE 29.03 Props.xsrc" />
+              </folder>
+              <folder name="29.04">
+                <file name="HBEE 29.04 2015-07-15 Tests.tsc" />
+                <file name="HBEE 29.04 2015-07-15.doc" />
+                <file name="HBEE 29.04 Dates.xls" />
+                <file name="HBEE 29.04 Props.xsrc" />
+              </folder>
+              <folder name="29.06">
+                <file name="HBEE 29.06 2014-07-30 Tests.tsc" />
+                <file name="HBEE 29.06 2014-07-30.doc" />
+                <file name="HBEE 29.06 Dates.xls" />
+                <file name="HBEE 29.06 Props.xsrc" />
+              </folder>
+              <folder name="29.08">
+                <file name="HBEE 29.08 2016-08-01 Tests.tsc" />
+                <file name="HBEE 29.08 2016-08-01.doc" />
+                <file name="HBEE 29.08 Dates.xls" />
+                <file name="HBEE 29.08 Props.xsrc" />
+              </folder>
+              <folder name="29.09">
+                <file name="HBEE 29.09 2016-08-01 Tests.tsc" />
+                <file name="HBEE 29.09 2016-08-01.doc" />
+                <file name="HBEE 29.09 Dates.xls" />
+                <file name="HBEE 29.09 Props.xsrc" />
+              </folder>
+              <folder name="29.10">
+                <file name="HBEE 29.10 2015-07-15 Tests.tsc" />
+                <file name="HBEE 29.10 2015-07-15.doc" />
+                <file name="HBEE 29.10 Dates.xls" />
+                <file name="HBEE 29.10 Props.xsrc" />
+              </folder>
+              <folder name="29.12">
+                <file name="HBEE 29.12 2014-07-30 Tests.tsc" />
+                <file name="HBEE 29.12 2014-07-30.doc" />
+                <file name="HBEE 29.12 Dates.xls" />
+                <file name="HBEE 29.12 Props.xsrc" />
+              </folder>
+              <folder name="29.13">
+                <file name="HBEE 29.13 2015-07-15 Tests.tsc" />
+                <file name="HBEE 29.13 2015-07-15.doc" />
+                <file name="HBEE 29.13 Dates.xls" />
+                <file name="HBEE 29.13 Props.xsrc" />
+              </folder>
+              <folder name="29.14">
+                <file name="HBEE 29.14 2016-08-01 Tests.tsc" />
+                <file name="HBEE 29.14 2016-08-01.doc" />
+                <file name="HBEE 29.14 Dates.xls" />
+                <file name="HBEE 29.14 Props.xsrc" />
+              </folder>
+              <folder name="29.15">
+                <file name="HBEE 29.15 2016-08-01 Tests.tsc" />
+                <file name="HBEE 29.15 2016-08-01.doc" />
+                <file name="HBEE 29.15 Dates.xls" />
+                <file name="HBEE 29.15 Props.xsrc" />
+              </folder>
+            </folder>
+            <folder name="Sec 30">
+              <folder name="30.02">
+                <file name="HBEE 30.02 2015-07-15 Tests.tsc" />
+                <file name="HBEE 30.02 2015-07-15.doc" />
+                <file name="HBEE 30.02 Dates.xls" />
+                <file name="HBEE 30.02 Props.xsrc" />
+              </folder>
+              <folder name="30.04">
+                <file name="HBEE 30.04 2015-07-15 Tests.tsc" />
+                <file name="HBEE 30.04 2015-07-15.doc" />
+                <file name="HBEE 30.04 Dates.xls" />
+                <file name="HBEE 30.04 Props.xsrc" />
+              </folder>
+              <folder name="30.05">
+                <file name="HBEE 30.05 2016-08-01 Tests.tsc" />
+                <file name="HBEE 30.05 2016-08-01.doc" />
+                <file name="HBEE 30.05 Dates.xls" />
+                <file name="HBEE 30.05 Props.xsrc" />
+              </folder>
+              <folder name="30.06">
+                <file name="HBEE 30.06 2016-08-01 Tests.tsc" />
+                <file name="HBEE 30.06 2016-08-01.doc" />
+                <file name="HBEE 30.06 Dates.xls" />
+                <file name="HBEE 30.06 Props.xsrc" />
+              </folder>
+              <folder name="30.01">
+                <file name="HBEE 30.01 2015-07-15 Tests.tsc" />
+                <file name="HBEE 30.01 2015-07-15.doc" />
+                <file name="HBEE 30.01 Dates.xls" />
+                <file name="HBEE 30.01 Props.xsrc" />
+              </folder>
+            </folder>
+          </folder>
+          <folder name="Pt 7 Sec 51-79">
+            <folder name="Sec 59">
+              <folder name="59.01">
+                <file name="HBEE 59.01 2014-07-30 Tests.tsc" />
+                <file name="HBEE 59.01 2014-07-30.doc" />
+                <file name="HBEE 59.01 Dates.xls" />
+                <file name="HBEE 59.01 Props.xsrc" />
+              </folder>
+              <folder name="59.02">
+                <file name="HBEE 59.02 2014-07-30 Tests.tsc" />
+                <file name="HBEE 59.02 2014-07-30.doc" />
+                <file name="HBEE 59.02 Dates.xls" />
+                <file name="HBEE 59.02 Props.xsrc" />
+              </folder>
+            </folder>
+            <folder name="Sec 70">
+              <folder name="70.01">
+                <file name="HBEE 70.01 2016-08-01 Tests.tsc" />
+                <file name="HBEE 70.01 2016-08-01.doc" />
+                <file name="HBEE 70.01 Dates.xls" />
+                <file name="HBEE 70.01 Props.xsrc" />
+              </folder>
+            </folder>
+            <folder name="Sec 71">
+              <folder name="71.03">
+                <file name="HBEE 71.03 2016-08-01 Tests.tsc" />
+                <file name="HBEE 71.03 2016-08-01.doc" />
+                <file name="HBEE 71.03 Dates.xls" />
+                <file name="HBEE 71.03 Props.xsrc" />
+              </folder>
+            </folder>
+            <folder name="Sec 73">
+              <folder name="73.06">
+                <file name="HBEE 73.06 2015-07-15 Tests.tsc" />
+                <file name="HBEE 73.06 2015-07-15.doc" />
+                <file name="HBEE 73.06 Dates.xls" />
+                <file name="HBEE 73.06 Props.xsrc" />
+              </folder>
+            </folder>
+          </folder>
+          <folder name="Pt 4 Sec 24-27">
+            <folder name="Sec 25">
+              <folder name="25.03">
+                <file name="HBEE 25.03 2015-07-15 Tests.tsc" />
+                <file name="HBEE 25.03 2015-07-15.doc" />
+                <file name="HBEE 25.03 Dates.xls" />
+                <file name="HBEE 25.03 Props.xsrc" />
+              </folder>
+              <folder name="25.04">
+                <file name="HBEE 25.04 2015-07-15 Tests.tsc" />
+                <file name="HBEE 25.04 2015-07-15.doc" />
+                <file name="HBEE 25.04 Dates.xls" />
+                <file name="HBEE 25.04 Props.xsrc" />
+              </folder>
+              <folder name="25.01">
+                <file name="HBEE 25.01 2015-07-15 Tests.tsc" />
+                <file name="HBEE 25.01 2015-07-15.doc" />
+                <file name="HBEE 25.01 Dates.xls" />
+                <file name="HBEE 25.01 Props.xsrc" />
+              </folder>
+              <folder name="25.05">
+                <file name="HBEE 25.05 2015-07-15 Tests.tsc" />
+                <file name="HBEE 25.05 2015-07-15.doc" />
+                <file name="HBEE 25.05 Dates.xls" />
+                <file name="HBEE 25.05 Props.xsrc" />
+              </folder>
+            </folder>
+          </folder>
+        </folder>
+        <folder name="RMA">
+          <folder name="5110">
+            <file name="RMA 5110 2005-12-01.doc" />
+            <file name="RMA 5110 Dates.xls" />
+            <file name="RMA 5110 Props.xsrc" />
+            <file name="RMA 5110 2005-12-01 Tests.tsc" />
+          </folder>
+          <folder name="5120">
+            <file name="RMA 5120 2005-12-01.doc" />
+            <file name="RMA 5120 Dates.xls" />
+            <file name="RMA 5120 Props.xsrc" />
+            <file name="RMA 5120 2005-12-01 Tests.tsc" />
+          </folder>
+          <folder name="5121">
+            <file name="RMA 5121 2005-12-01.doc" />
+            <file name="RMA 5121 Dates.xls" />
+            <file name="RMA 5121 Props.xsrc" />
+            <file name="RMA 5121 2005-12-01 Tests.tsc" />
+          </folder>
+        </folder>
+        <folder name="Scenarios">
+          <folder name="Sc 001-010">
+            <file name="DVHA Scenario 002.tsc" />
+            <file name="DVHA Scenario 003.tsc" />
+            <file name="DVHA Scenario 004.tsc" />
+            <file name="DVHA Scenario 005.tsc" />
+            <file name="DVHA Scenario 006.tsc" />
+            <file name="DVHA Scenario 007.tsc" />
+            <file name="DVHA Scenario 008.tsc" />
+            <file name="DVHA Scenario 009.tsc" />
+            <file name="DVHA Scenario 010.tsc" />
+            <file name="DVHA Scenario 001.tsc" />
+          </folder>
+          <folder name="Sc 011-020">
+            <file name="DVHA Scenario 011.tsc" />
+            <file name="DVHA Scenario 015.tsc" />
+            <file name="DVHA Scenario 018.tsc" />
+            <file name="DVHA Scenario 019.tsc" />
+            <file name="DVHA Scenario 020.tsc" />
+            <file name="DVHA Scenario 014.tsc" />
+            <file name="DVHA Scenario 016.tsc" />
+            <file name="DVHA Scenario 012.tsc" />
+            <file name="DVHA Scenario 013.tsc" />
+            <file name="DVHA Scenario 017.tsc" />
+          </folder>
+          <folder name="Sc 021-030">
+            <file name="DVHA Scenario 025.tsc" />
+            <file name="DVHA Scenario 021.tsc" />
+            <file name="DVHA Scenario 028.tsc" />
+            <file name="DVHA Scenario 030.tsc" />
+            <file name="DVHA Scenario 022.tsc" />
+            <file name="DVHA Scenario 023.tsc" />
+            <file name="DVHA Scenario 029.tsc" />
+            <file name="DVHA Scenario 027.tsc" />
+            <file name="DVHA Scenario 024.tsc" />
+            <file name="DVHA Scenario 026.tsc" />
+          </folder>
+          <folder name="Sc 031-040">
+            <file name="DVHA Scenario 036.tsc" />
+            <file name="DVHA Scenario 039.tsc" />
+            <file name="DVHA Scenario 038.tsc" />
+            <file name="DVHA Scenario 034.tsc" />
+            <file name="DVHA Scenario 032.tsc" />
+            <file name="DVHA Scenario 035.tsc" />
+            <file name="DVHA Scenario 031.tsc" />
+            <file name="DVHA Scenario 033.tsc" />
+            <file name="DVHA Scenario 040.tsc" />
+            <file name="DVHA Scenario 037.tsc" />
+          </folder>
+          <folder name="Sc 041-050">
+            <file name="DVHA Scenario 041.tsc" />
+            <file name="DVHA Scenario 043.tsc" />
+            <file name="DVHA Scenario 044.tsc" />
+            <file name="DVHA Scenario 047.tsc" />
+            <file name="DVHA Scenario 048.tsc" />
+            <file name="DVHA Scenario 050.tsc" />
+            <file name="DVHA Scenario 046.tsc" />
+            <file name="DVHA Scenario 045.tsc" />
+            <file name="DVHA Scenario 042.tsc" />
+            <file name="DVHA Scenario 049.tsc" />
+          </folder>
+          <folder name="Sc 051-060">
+            <file name="DVHA Scenario 054.tsc" />
+            <file name="DVHA Scenario 051.tsc" />
+            <file name="DVHA Scenario 057.tsc" />
+            <file name="DVHA Scenario 055.tsc" />
+            <file name="DVHA Scenario 052.tsc" />
+            <file name="DVHA Scenario 053.tsc" />
+            <file name="DVHA Scenario 056.tsc" />
+            <file name="DVHA Scenario 058.tsc" />
+            <file name="DVHA Scenario 059.tsc" />
+            <file name="DVHA Scenario 060.tsc" />
+          </folder>
+          <folder name="Sc 061-070">
+            <file name="DVHA Scenario 067.tsc" />
+            <file name="DVHA Scenario 068.tsc" />
+            <file name="DVHA Scenario 069.tsc" />
+            <file name="DVHA Scenario 070.tsc" />
+            <file name="DVHA Scenario 062.tsc" />
+            <file name="DVHA Scenario 064.tsc" />
+            <file name="DVHA Scenario 061.tsc" />
+            <file name="DVHA Scenario 065.tsc" />
+            <file name="DVHA Scenario 066.tsc" />
+            <file name="DVHA Scenario 063.tsc" />
+          </folder>
+          <folder name="Sc 071-080">
+            <file name="DVHA Scenario 071.tsc" />
+            <file name="DVHA Scenario 072.tsc" />
+            <file name="DVHA Scenario 073.tsc" />
+            <file name="DVHA Scenario 074.tsc" />
+            <file name="DVHA Scenario 075.tsc" />
+            <file name="DVHA Scenario 076.tsc" />
+            <file name="DVHA Scenario 077.tsc" />
+            <file name="DVHA Scenario 078.tsc" />
+            <file name="DVHA Scenario 079.tsc" />
+            <file name="DVHA Scenario 080.tsc" />
+          </folder>
+          <folder name="Sc 081-090">
+            <file name="DVHA Scenario 081.tsc" />
+            <file name="DVHA Scenario 082.tsc" />
+            <file name="DVHA Scenario 083.tsc" />
+            <file name="DVHA Scenario 084.tsc" />
+            <file name="DVHA Scenario 085.tsc" />
+            <file name="DVHA Scenario 086.tsc" />
+            <file name="DVHA Scenario 087.tsc" />
+            <file name="DVHA Scenario 088.tsc" />
+            <file name="DVHA Scenario 089.tsc" />
+            <file name="DVHA Scenario 090.tsc" />
+          </folder>
+          <folder name="Sc 091-100">
+            <file name="DVHA Scenario 091.tsc" />
+            <file name="DVHA Scenario 092.tsc" />
+            <file name="DVHA Scenario 093.tsc" />
+            <file name="DVHA Scenario 094.tsc" />
+            <file name="DVHA Scenario 095.tsc" />
+            <file name="DVHA Scenario 096.tsc" />
+            <file name="DVHA Scenario 097.tsc" />
+            <file name="DVHA Scenario 098.tsc" />
+            <file name="DVHA Scenario 099.tsc" />
+            <file name="DVHA Scenario 100.tsc" />
+          </folder>
+        </folder>
+      </folder>
+    </folder>
+    <folder name="02 - Common">
+      <file name="Addresses.doc" />
+      <file name="Age Calculations.doc" />
+      <file name="Common LOVs.doc" />
+      <file name="Common Props.xsrc" />
+      <file name="Interpretive.doc" />
+      <file name="Relationships.doc" />
+      <file name="Resource Valuation.doc" />
+      <file name="States.xls" />
+      <file name="Substitution.doc" />
+      <file name="Common Defaults.doc" />
+      <file name="Holidays.xls" />
+      <folder name="FPL">
+        <file name="FPL Props.xsrc" />
+        <file name="FPL Rules.doc" />
+        <file name="FPL Tables.xls" />
+      </folder>
+      <file name="Taxes.doc" />
+      <file name="Earned and Unearned.doc" />
+    </folder>
+    <folder name="05 - Templates">
+      <file name="Scenario Templates.tsc" />
+    </folder>
+  </files>
+  <source-language code="en-US" />
+  <source-region code="en-US" />
+  <runtime-platform>DotNetEngine</runtime-platform>
+  <is-html-allowable-tags>b,i,del,s,div,p,span,pre,table,td,tr,ol,ul,li,blockquote,font,a,h1,h2,h3,h4,h5,h6,img,hr,br,u</is-html-allowable-tags>
+</rulebase-project>

@@ -1,0 +1,201 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b2" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is expected to file a federal income tax return for the benefit year</base>
+          <parse>s(ver('10.4.6.76'),v(expect,t(simple,present,normal)),ob('the person',singular),o('to file a federal income tax return for the benefit year'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>another tax filer can claim the person as a dependent for a benefit year beginning in the calendar year in which the person's benefit year begins</base>
+          <parse>s(ver('10.4.6.76'),v(claim+can,t(simple,modal,normal)),sb('another tax filer',plural),o('the person as a dependent for a benefit year beginning in the calendar year in which the person''s benefit year begins'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person will file a joint return for the benefit year</base>
+          <parse>s(ver('10.4.6.76'),v(file,t(simple,future,normal)),sb('the person',plural),o('a joint return for the benefit year'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the group member" id="groupmember" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person expects to claim a personal exemption deduction for the group member for the benefit year</base>
+          <parse>s(ver('10.4.6.76'),v(expect,t(simple,present,normal)),sb('the person',singular),o('to claim a personal exemption deduction for the group member for the benefit year'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b5" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's spouse</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s spouse'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's tax dependent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s tax dependent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's spouse's tax dependent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s spouse''s tax dependent'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person's income" id="personsincome" containment-relationship-id="personsincomes" containment-parent-id="person">
+      <attribute name="b7" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is included in taxable gross income</base>
+          <parse>s(ver('10.4.6.76'),v(include,t(simple,present,normal)),ob('the person''s income',singular),o('in taxable gross income'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+  </entities>
+  <relationships>
+    <relationship type="ManyToMany" relationship-id="groupmembersrepresentationsasagroupmember" reverse-relationship-id="groupmember_groupmembersrepresentationsasagroupmember_rev" text="the group member's representations as a group member" source="groupmember" target="groupmember" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="groupmembersrepresentativeperson" reverse-relationship-id="personsrepresentationsasagroupmember" text="the group member's representative person" reverse-text="the person's representations as a group member" source="groupmember" target="person" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" text="the person's group members" reverse-text="the group member's containing person" source="person" target="groupmember" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" text="the person's incomes" reverse-text="the person's income's person" source="person" target="personsincome" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="the person expects to claim a personal exemption deduction for the group member for the benefit year" ruleburst="true" concludes="b1" folder="1" source-offset="23">
+      <rule-xml>
+        <conclude attr-id="b1" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <for>
+                <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+                <attribute attr-id="b2" />
+              </for>
+              <not>
+                <for>
+                  <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+                  <attribute attr-id="b3" />
+                </for>
+              </not>
+              <or>
+                <for scope-id="the other person">
+                  <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                  <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                    <for scope-id="person1">
+                      <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+                      <instance-equals>
+                        <scope-ref id="the other person" />
+                        <scope-ref id="person1" />
+                      </instance-equals>
+                    </for>
+                  </scope-for>
+                </for>
+                <and>
+                  <for>
+                    <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+                    <attribute attr-id="b4" />
+                  </for>
+                  <or>
+                    <not>
+                      <for>
+                        <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+                        <attribute attr-id="b4" />
+                      </for>
+                    </not>
+                    <attribute attr-id="b5" />
+                  </or>
+                </and>
+                <attribute attr-id="b6" />
+                <and>
+                  <for>
+                    <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+                    <attribute attr-id="b4" />
+                  </for>
+                  <or>
+                    <not>
+                      <for>
+                        <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+                        <attribute attr-id="b4" />
+                      </for>
+                    </not>
+                    <attribute attr-id="b11" />
+                  </or>
+                </and>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the group member is the person's spouse's tax dependent" ruleburst="true" concludes="b11" folder="1" source-offset="1178">
+      <rule-xml>
+        <conclude attr-id="b11" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for>
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <exists scope-id="the spouse member">
+                <relationship relationship-id="personsgroupmembers" target-entity-id="groupmember" />
+                <and>
+                  <attribute attr-id="b5" />
+                  <for scope-id="the spouse">
+                    <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+                    <exists scope-id="the spouse's dependent member">
+                      <relationship relationship-id="personsgroupmembers" target-entity-id="groupmember" />
+                      <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                        <exists scope-id="the other group member">
+                          <relationship relationship-id="groupmembersrepresentationsasagroupmember" target-entity-id="groupmember" />
+                          <and>
+                            <instance-equals>
+                              <scope-ref id="the other group member" />
+                              <scope-ref id="the spouse's dependent member" />
+                            </instance-equals>
+                            <scope-for scope-ref="the spouse's dependent member" target-entity-id="groupmember">
+                              <attribute attr-id="b6" />
+                            </scope-for>
+                          </and>
+                        </exists>
+                      </scope-for>
+                    </exists>
+                  </for>
+                </and>
+              </exists>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="the person's income is included in taxable gross income" ruleburst="true" concludes="b7" folder="2" source-offset="2264">
+      <rule-xml>
+        <conclude attr-id="b7" entity-id="personsincome" scope-id="personsincome0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <true-value />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="Personal Exemptions" parent="0" id="1" />
+    <folder text="AGI Calculations" parent="0" id="2" />
+  </rule-folders>
+</root>

@@ -1,0 +1,2709 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="p7" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the annual FPL for the person's need group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p8" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the annual FPL for one person for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p9" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the number of people in the person's need group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p10" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the annual FPL for each additional person for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p12" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the FPL locale for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p13" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the FPL date type for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p14" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the specific date for FPL calculations for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p15" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the specific year for FPL calculations for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p24" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the annual FPL for two people for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p25" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the annual FPL for three people for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p26" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the annual FPL for four people for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p27" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the annual FPL for five people for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p28" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the annual FPL for six people for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p29" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the annual FPL for seven people for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p30" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the annual FPL for eight people for the program</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the poverty guideline" id="povertyguideline" containment-relationship-id="povertyguidelines" containment-parent-id="global">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the poverty guideline is active</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the poverty guideline',singular),o('active'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p1" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline's year as text</base>
+        </text>
+      </attribute>
+      <attribute name="p2" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline</base>
+        </text>
+      </attribute>
+      <attribute name="p3" type="number" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline's year</base>
+        </text>
+      </attribute>
+      <attribute name="p4" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline's start date</base>
+        </text>
+      </attribute>
+      <attribute name="p6" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline's end date</base>
+        </text>
+      </attribute>
+      <attribute name="p18" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for each additional person in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p19" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for each additional person in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p20" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for each additional person in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="p21" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for one person in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p22" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for one person in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p23" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for one person in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="p31" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for two people in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p32" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for two people in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p33" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for two people in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="p34" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for three people in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p35" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for three people in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p36" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for three people in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="p37" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for four people in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p38" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for four people in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p39" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for four people in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="p40" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for five people in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p41" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for five people in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p42" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for five people in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="p43" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for six people in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p44" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for six people in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p45" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for six people in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="p46" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for seven people in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p47" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for seven people in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p48" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for seven people in Hawaii</base>
+        </text>
+      </attribute>
+      <attribute name="p49" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for eight people in the 48 contiguous states and the District of Columbia</base>
+        </text>
+      </attribute>
+      <attribute name="p50" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for eight people in Alaska</base>
+        </text>
+      </attribute>
+      <attribute name="p51" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the poverty guideline for eight people in Hawaii</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global" />
+  </entities>
+  <relationships>
+    <relationship type="OneToMany" relationship-id="povertyguidelines" reverse-relationship-id="global_povertyguidelines_rev" text="the poverty guidelines" source="global" target="povertyguideline" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="the poverty guidelines" ruleburst="true" concludes="InferInstance(povertyguidelines)" folder="1" source-offset="32">
+      <rule-xml>
+        <table-conclude-instance relationship-id="povertyguidelines" source="global" source-scope-id="global0">
+          <row>
+            <identity>
+              <string-value>2017</string-value>
+            </identity>
+            <condition>
+              <true-value />
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <string-value>2016</string-value>
+            </identity>
+            <condition>
+              <true-value />
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <string-value>2015</string-value>
+            </identity>
+            <condition>
+              <true-value />
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <string-value>2014</string-value>
+            </identity>
+            <condition>
+              <true-value />
+            </condition>
+          </row>
+          <row>
+            <identity>
+              <string-value>2013</string-value>
+            </identity>
+            <condition>
+              <true-value />
+            </condition>
+          </row>
+        </table-conclude-instance>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the poverty guideline " ruleburst="true" concludes="p2 = p1 &amp; &quot; FPL&quot;" folder="1" source-offset="325">
+      <rule-xml>
+        <conclude attr-id="p2" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <value>
+            <concatenate>
+              <attribute attr-id="p1" />
+              <string-value><![CDATA[ FPL]]></string-value>
+            </concatenate>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="the poverty guideline's year " ruleburst="true" concludes="p3 = Number(p1)" folder="1" source-offset="415">
+      <rule-xml>
+        <conclude attr-id="p3" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <value>
+            <number>
+              <attribute attr-id="p1" />
+            </number>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="the poverty guideline is active" ruleburst="true" concludes="b1" folder="1" source-offset="511">
+      <rule-xml>
+        <conclude attr-id="b1" entity-id="povertyguideline" scope-id="povertyguideline0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <and>
+              <or>
+                <unknown>
+                  <attribute attr-id="p4" />
+                </unknown>
+                <uncertain>
+                  <attribute attr-id="p4" />
+                </uncertain>
+                <temporal-on-or-after>
+                  <attribute attr-id="p4" />
+                </temporal-on-or-after>
+              </or>
+              <or>
+                <unknown>
+                  <attribute attr-id="p6" />
+                </unknown>
+                <uncertain>
+                  <attribute attr-id="p6" />
+                </uncertain>
+                <temporal-on-or-before>
+                  <attribute attr-id="p6" />
+                </temporal-on-or-before>
+              </or>
+            </and>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="the annual FPL for the person's need group for the program" ruleburst="true" concludes="p7" folder="2" source-offset="1110">
+      <rule-xml>
+        <table-conclude attr-id="p7" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <attribute attr-id="p8" />
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p9" />
+                <number-value>1</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <attribute attr-id="p24" />
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p9" />
+                <number-value>2</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <attribute attr-id="p25" />
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p9" />
+                <number-value>3</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <attribute attr-id="p26" />
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p9" />
+                <number-value>4</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <attribute attr-id="p27" />
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p9" />
+                <number-value>5</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <attribute attr-id="p28" />
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p9" />
+                <number-value>6</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <attribute attr-id="p29" />
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p9" />
+                <number-value>7</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <attribute attr-id="p30" />
+            </value>
+            <condition>
+              <equals>
+                <attribute attr-id="p9" />
+                <number-value>8</number-value>
+              </equals>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <plus>
+                <attribute attr-id="p30" />
+                <multiply>
+                  <attribute attr-id="p10" />
+                  <minus>
+                    <attribute attr-id="p9" />
+                    <number-value>8</number-value>
+                  </minus>
+                </multiply>
+              </plus>
+            </value>
+            <condition>
+              <greater-than>
+                <attribute attr-id="p9" />
+                <number-value>8</number-value>
+              </greater-than>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="the annual FPL for one person for the program" ruleburst="true" concludes="p8" folder="3" source-offset="2562">
+      <rule-xml>
+        <table-conclude attr-id="p8" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p21" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p21" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p21" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p22" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p22" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p22" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p23" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p23" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p23" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="the annual FPL for two people for the program" ruleburst="true" concludes="p24" folder="4" source-offset="5958">
+      <rule-xml>
+        <table-conclude attr-id="p24" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p31" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p31" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p31" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p32" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p32" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p32" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p33" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p33" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p33" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="7" name="the annual FPL for three people for the program" ruleburst="true" concludes="p25" folder="5" source-offset="9357">
+      <rule-xml>
+        <table-conclude attr-id="p25" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p34" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p34" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p34" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p35" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p35" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p35" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p36" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p36" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p36" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="8" name="the annual FPL for four people for the program" ruleburst="true" concludes="p26" folder="6" source-offset="12775">
+      <rule-xml>
+        <table-conclude attr-id="p26" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p37" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p37" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p37" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p38" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p38" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p38" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p39" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p39" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p39" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="9" name="the annual FPL for five people for the program" ruleburst="true" concludes="p27" folder="7" source-offset="16183">
+      <rule-xml>
+        <table-conclude attr-id="p27" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p40" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p40" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p40" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p41" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p41" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p41" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p42" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p42" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p42" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="10" name="the annual FPL for six people for the program" ruleburst="true" concludes="p28" folder="8" source-offset="19590">
+      <rule-xml>
+        <table-conclude attr-id="p28" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p43" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p43" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p43" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p44" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p44" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p44" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p45" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p45" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p45" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="11" name="the annual FPL for seven people for the program" ruleburst="true" concludes="p29" folder="9" source-offset="22989">
+      <rule-xml>
+        <table-conclude attr-id="p29" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p46" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p46" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p46" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p47" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p47" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p47" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p48" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p48" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p48" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="12" name="the annual FPL for eight people for the program" ruleburst="true" concludes="p30" folder="10" source-offset="26408">
+      <rule-xml>
+        <table-conclude attr-id="p30" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p49" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p49" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p49" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p50" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p50" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p50" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p51" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p51" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p51" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="13" name="the annual FPL for each additional person for the program" ruleburst="true" concludes="p10" folder="11" source-offset="29837">
+      <rule-xml>
+        <table-conclude attr-id="p10" entity-id="program" scope-id="program0">
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p18" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p18" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p18" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p19" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p19" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p19" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p20" />
+                  <attribute attr-id="b1" />
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Current</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p20" />
+                  <value-at>
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p14" />
+                    </scope-for>
+                    <attribute attr-id="b1" />
+                  </value-at>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Date</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <scope-for scope-ref="global0" target-entity-id="global">
+                <instance-value-if>
+                  <relationship relationship-id="povertyguidelines" target-entity-id="povertyguideline" />
+                  <attribute attr-id="p20" />
+                  <equals>
+                    <attribute attr-id="p3" />
+                    <scope-for scope-ref="program0" target-entity-id="program">
+                      <attribute attr-id="p15" />
+                    </scope-for>
+                  </equals>
+                </instance-value-if>
+              </scope-for>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p12" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p13" />
+                  <string-value>Specific Year</string-value>
+                </equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="Poverty Guideline Instances" parent="0" id="1" />
+    <folder text="Annual FPL Amount" parent="0" id="2" />
+    <folder text="One Person" parent="2" id="3" />
+    <folder text="Two People" parent="2" id="4" />
+    <folder text="Three People" parent="2" id="5" />
+    <folder text="Four People" parent="2" id="6" />
+    <folder text="Five People" parent="2" id="7" />
+    <folder text="Six People" parent="2" id="8" />
+    <folder text="Seven People" parent="2" id="9" />
+    <folder text="Eight People" parent="2" id="10" />
+    <folder text="Each Additional Person" parent="2" id="11" />
+  </rule-folders>
+</root>

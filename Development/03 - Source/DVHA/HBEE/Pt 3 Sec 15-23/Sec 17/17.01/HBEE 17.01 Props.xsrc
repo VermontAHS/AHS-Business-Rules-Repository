@@ -1,0 +1,615 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b125" type="boolean" public-name="so_personQlfdNonCtznUndHBEE1701dEff073014_b">
+        <text>
+          <base>the person is considered to be a qualified non-citizen under HBEE 17.01(d) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be a qualified non-citizen under HBEE 17.01(d) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b127" type="boolean" public-name="st_HBEE1701d1SatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(d)(1) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(d)(1)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b128" type="boolean" public-name="st_HBEE1701d2SatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(d)(2) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(d)(2)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b129" type="boolean" public-name="st_HBEE1701d2iSatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(d)(2)(i) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(d)(2)(i)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b130" type="boolean" public-name="st_HBEE1701d2iiSatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(d)(2)(ii) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(d)(2)(ii)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b131" type="boolean" public-name="st_HBEE1701d2iiASatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(d)(2)(ii)(A) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(d)(2)(ii)(A)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b132" type="boolean" public-name="st_HBEE1701d2iiBSatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(d)(2)(ii)(B) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(d)(2)(ii)(B)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b133" type="boolean" public-name="st_HBEE1701d2iiCSatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(d)(2)(ii)(C) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(d)(2)(ii)(C)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b134" type="boolean" public-name="st_HBEE1701d3SatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(d)(3) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(d)(3)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b135" type="boolean" public-name="st_HBEE1701d4SatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(d)(4) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(d)(4)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b136" type="boolean" public-name="st_HBEE1701d5SatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(d)(5) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(d)(5)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b137" type="boolean" public-name="st_HBEE1701d6SatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(d)(6) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(d)(6)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b138" type="boolean" public-name="st_HBEE1701d7SatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(d)(7) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(d)(7)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b139" type="boolean" public-name="st_HBEE1701d8SatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(d)(8) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(d)(8)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b140" type="boolean" public-name="st_HBEE1701d9SatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(d)(9) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(d)(9)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b141" type="boolean" public-name="st_HBEE1701d10SatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(d)(10) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(d)(10)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b145" type="boolean" public-name="st_HBEE1701d10iSatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(d)(10)(i) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(d)(10)(i)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b146" type="boolean" public-name="st_HBEE1701d10iiSatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(d)(10)(ii) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(d)(10)(ii)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b148" type="boolean" public-name="si_personAdmtdUSUndINA207UndHBEE1701d2iEff073014_b">
+        <text>
+          <base>the person is a refugee admitted to the United States under section 207 of the INA</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('a refugee admitted to the United States under section 207 of the INA'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b150" type="boolean" public-name="si_personGrntdParoleCubHaitUndHBEE1701d2iiAEff073014_b">
+        <text>
+          <base>the person was granted parole status as a Cuban/Haitian entrant (Status Pending) on or after April 21, 1980</base>
+          <parse>s(ver('10.4.5.40'),v(grant,t(simple,past,normal)),ob('the person',singular),o('parole status as a Cuban/Haitian entrant (Status Pending) on or after April 21, 1980'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b151" type="boolean" public-name="si_personParldIntoUSAft101080UndHBEE1701d2iiAEff073014_b">
+        <text>
+          <base>the person has been paroled into the United States on or after October 10, 1980</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,perfect)),sb('the person',singular),o('paroled into the United States on or after October 10, 1980'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b152" type="boolean" public-name="si_personSbjtRmvlDptUndINAUndHBEE1701d2iiBEff073014_b">
+        <text>
+          <base>the person is the subject of removal, deportation or exclusion proceedings under the Immigration and Nationality Act</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('the subject of removal, deportation or exclusion proceedings under the Immigration and Nationality Act'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b153" type="boolean" public-name="si_personFinOrdOfRmvlHsBnEntrdUndHBEE1701d2iiBEff073014_b">
+        <text>
+          <base>a final, non-appealable, and legally enforceable order of removal, deportation or exclusion has been entered for the person</base>
+          <parse>s(ver('10.4.5.40'),v(enter,t(simple,present,perfect)),ob('a final, non-appealable, and legally enforceable order of removal, deportation or exclusion',singular),o('for the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b154" type="boolean" public-name="si_personHsAplctnAsylmPdgWDHSUndHBEE1701d2iiCEff073014_b">
+        <text>
+          <base>the person has an application for asylum pending with the Department of Homeland Security (DHS)</base>
+          <parse>s(ver('10.4.5.40'),v(have,t(simple,present,normal)),sb('the person',singular),o('an application for asylum pending with the Department of Homeland Security (DHS)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b155" type="boolean" public-name="si_personAmrsnAdmtdUSUndFOEF584UndHBEE1701d3Eff073014_b">
+        <text>
+          <base>the person is an Amerasian, admitted to the United States under Foreign Operations Export Financing, and Related Programs Appropriation Act, 1988 section 584</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('an Amerasian, admitted to the United States under Foreign Operations Export Financing, and Related Programs Appropriation Act, 1988 section 584'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b156" type="boolean" public-name="si_personAsyleeUndINA208UndHBEE1701d4Eff073014_b">
+        <text>
+          <base>the person is considered an asylee under INA 208</base>
+          <parse>s(ver('10.4.5.40'),v(consider,t(simple,present,normal)),ob('the person',singular),o('an asylee under INA 208'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b157" type="boolean" public-name="si_personNonCtznWhsDprtnWthldUndINA243hUndHBEE1701d5iEff073014_b">
+        <text>
+          <base>the person is considered a non-citizen whose deportation has been withheld under section 243(h) of the INA, as in effect prior to April 1, 1997</base>
+          <parse>s(ver('10.4.5.40'),v(consider,t(simple,present,normal)),ob('the person',singular),o('a non-citizen whose deportation has been withheld under section 243(h) of the INA, as in effect prior to April 1, 1997'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b158" type="boolean" public-name="si_personNonCtznWhsDptnWthldUndINA241b3UndHBEE1701d5iiEff073014_b">
+        <text>
+          <base>the person is considered a non-citizen whose deportation has been withheld under section 241(b)(3) of the INA, as amended by section 305(a) of division C of Public Law 104-208</base>
+          <parse>s(ver('10.4.5.40'),v(consider,t(simple,present,normal)),ob('the person',singular),o('a non-citizen whose deportation has been withheld under section 241(b)(3) of the INA, as amended by section 305(a) of division C of Public Law 104-208'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b159" type="boolean" public-name="si_personNonCtznGrntdPrle1YrByUSCISUndINA212d5UndHBEE1701d6Eff073014_b">
+        <text>
+          <base>the person is a non-citizen who has been granted parole for at least one year by the USCIS under INA 212(d)(5)</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('a non-citizen who has been granted parole for at least one year by the USCIS under INA 212(d)(5)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b160" type="boolean" public-name="si_personNonCtznGrntdCndtlEtryUndINA203a7UndHBEE1701d7Eff073014_b">
+        <text>
+          <base>the person is a non-citizen who has been granted conditional entry under section 203(a)(7) of the INA</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('a non-citizen who has been granted conditional entry under section 203(a)(7) of the INA'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b161" type="boolean" public-name="si_personVctmSvrTrfkgPerTVPA107b1UndHBEE1701d9Eff073014_b">
+        <text>
+          <base>the person is a victim of a severe form of trafficking, in accordance with section 107(b)(1) of the Trafficking Victims Protection Act of 2000</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('a victim of a severe form of trafficking, in accordance with section 107(b)(1) of the Trafficking Victims Protection Act of 2000'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b170" type="boolean" public-name="si_personAmIndnMbrFedRcgdTrbPerISDEA4eUndHBEE1701d10iiEff073014_b">
+        <text>
+          <base>the person is an American Indian who is a member of a Federally-recognized Indian tribe, as defined in section 4(e) of the Indian Self-Determination and Education Assistance Act, 25 USC section 450b(e)</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('an American Indian who is a member of a Federally-recognized Indian tribe, as defined in section 4(e) of the Indian Self-Determination and Education Assistance Act, 25 USC section 450b(e)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b171" type="boolean" public-name="st_HBEE1701e1SatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(e)(1) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(e)(1)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b172" type="boolean" public-name="st_HBEE1701e1iSatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(e)(1)(i) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(e)(1)(i)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b173" type="boolean" public-name="st_HBEE1701e1iiSatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(e)(1)(ii) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(e)(1)(ii)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b174" type="boolean" public-name="st_HBEE1701e1iiiSatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(e)(1)(iii) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(e)(1)(iii)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b175" type="boolean" public-name="st_HBEE1701e2SatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(e)(2) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(e)(2)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b197" type="boolean" public-name="so_personLwflyPrstUSUndHBEE1701gEff073014_b">
+        <text>
+          <base>the person is considered to be lawfully present in the United States under HBEE 17.01(g) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be lawfully present in the United States under HBEE 17.01(g) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b200" type="boolean" public-name="st_HBEE1701g1SatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(g)(1) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(g)(1)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b201" type="boolean" public-name="st_HBEE1701g2SatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(g)(2) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(g)(2)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b202" type="boolean" public-name="st_HBEE1701g3SatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(g)(3) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(g)(3)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b203" type="boolean" public-name="st_HBEE1701g4SatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(g)(4) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(g)(4)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b204" type="boolean" public-name="st_HBEE1701g4iSatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(g)(4)(i) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(g)(4)(i)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b205" type="boolean" public-name="st_HBEE1701g4iiSatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(g)(4)(ii) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(g)(4)(ii)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b206" type="boolean" public-name="st_HBEE1701g4iiiSatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(g)(4)(iii) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(g)(4)(iii)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b207" type="boolean" public-name="st_HBEE1701g4ivSatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(g)(4)(iv) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(g)(4)(iv)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b208" type="boolean" public-name="st_HBEE1701g4vSatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(g)(4)(v) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(g)(4)(v)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b209" type="boolean" public-name="st_HBEE1701g4viSatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(g)(4)(vi) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(g)(4)(vi)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b210" type="boolean" public-name="st_HBEE1701g4viiSatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(g)(4)(vii) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(g)(4)(vii)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b211" type="boolean" public-name="st_HBEE1701g4viiiSatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(g)(4)(viii) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(g)(4)(viii)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b212" type="boolean" public-name="st_HBEE1701g5iSatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(g)(5)(i) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(g)(5)(i)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b213" type="boolean" public-name="st_HBEE1701g5iiSatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(g)(5)(ii) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(g)(5)(ii)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b214" type="boolean" public-name="st_HBEE1701g5SatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(g)(5) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(g)(5)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b215" type="boolean" public-name="st_HBEE1701g6SatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(g)(6) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(g)(6)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b216" type="boolean" public-name="st_HBEE1701g67dEff073014_b">
+        <text>
+          <base>HBEE 17.01(g)(7) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(g)(7)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b217" type="boolean" public-name="st_HBEE1701g8SatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(g)(8) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(g)(8)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b218" type="boolean" public-name="st_HBEE1701g9SatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(g)(9) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(g)(9)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b219" type="boolean" public-name="st_HBEE1701g10SatisfiedEff073014_b">
+        <text>
+          <base>HBEE 17.01(g)(10) is satisfied for the person (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(g)(10)',singular),o('for the person (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b220" type="boolean" public-name="si_personVldNonImmStatUSC1101a1517UndHBEE1701g2Eff073014_b">
+        <text>
+          <base>the person is in a valid non-immigrant status, as defined in 8 USC sections 1101(a)(15) or 1101(a)(17)</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('in a valid non-immigrant status, as defined in 8 USC sections 1101(a)(15) or 1101(a)(17)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b221" type="boolean" public-name="si_personPrldIntUSPerUSC1182d5LT1YrUndHBEE1701g3Eff073014_b">
+        <text>
+          <base>the person is paroled into the United States in accordance with 8 USC section 1182(d)(5) for less than 1 year</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('paroled into the United States in accordance with 8 USC section 1182(d)(5) for less than 1 year'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b222" type="boolean" public-name="si_personPrldFrProsDfdInspPdgRmvlPrcdgsUndHBEE1701g3Eff073014_b">
+        <text>
+          <base>the person was paroled for prosecution, for deferred inspection or pending removal proceedings</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,past,normal)),sb('the person',singular),o('paroled for prosecution, for deferred inspection or pending removal proceedings'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b223" type="boolean" public-name="si_personGtdTmpResStatPerUSC1160UndHBEE1701g4iEff073014_b">
+        <text>
+          <base>the person was granted temporary resident status in accordance with 8 USC section 1160 or 1255a</base>
+          <parse>s(ver('10.4.5.40'),v(grant,t(simple,past,normal)),ob('the person',singular),o('temporary resident status in accordance with 8 USC section 1160 or 1255a'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b224" type="boolean" public-name="si_personRtdTPSPerUSC1254aUndHBEE1701g4iiEff073014_b">
+        <text>
+          <base>the person was granted Temporary Protected Status (TPS) in accordance with 8 USC section 1254a and individuals with pending applications for TPS who have been granted employment authorization</base>
+          <parse>s(ver('10.4.5.40'),v(grant,t(simple,past,normal)),ob('the person',singular),o('Temporary Protected Status (TPS) in accordance with 8 USC section 1254a and individuals with pending applications for TPS who have been granted employment authorization'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b225" type="boolean" public-name="si_personGtdEmplyAuthPerCFR274a12cUndHBEE1701g4iiiEff073014_b">
+        <text>
+          <base>the person was granted employment authorization under 8 CFR section 274a.12(c)</base>
+          <parse>s(ver('10.4.5.40'),v(grant,t(simple,past,normal)),ob('the person',singular),o('employment authorization under 8 CFR section 274a.12(c)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b226" type="boolean" public-name="si_personFmlyUntyBenePer101301UndHBEE1701g4ivEff073014_b">
+        <text>
+          <base>the person is a Family Unity beneficiary in accordance with section 301 of 101</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('a Family Unity beneficiary in accordance with section 301 of 101'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b227" type="boolean" public-name="si_personQlfsLwfPresUndDEDUndHBEE1701g4vEff073014_b">
+        <text>
+          <base>the person qualifies as lawfully-present under Deferred Enforced Departure (DED) in accordance with a decision made by the President</base>
+          <parse>s(ver('10.4.5.40'),v(qualify,t(simple,present,normal)),sb('the person',singular),o('as lawfully-present under Deferred Enforced Departure (DED) in accordance with a decision made by the President'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b228" type="boolean" public-name="si_personGtdDfrdActnStatUndHBEE1701g4viEff073014_b">
+        <text>
+          <base>the person was granted Deferred Action status</base>
+          <parse>s(ver('10.4.5.40'),v(grant,t(simple,past,normal)),ob('the person',singular),o('Deferred Action status'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b230" type="boolean" public-name="si_personBnfcyApvdVsaPetPdgAppAdjstStatUndHBEE1701g4viiiEff073014_b">
+        <text>
+          <base>the person is a beneficiary of an approved visa petition who has a pending application for adjustment of status</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('a beneficiary of an approved visa petition who has a pending application for adjustment of status'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b231" type="boolean" public-name="si_personPdgAppAsylmUndUSC1158UndHBEE1701g5iEff073014_b">
+        <text>
+          <base>the person is an individual with a pending application for asylum under 8 USC section 1158</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('an individual with a pending application for asylum under 8 USC section 1158'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b234" type="boolean" public-name="si_personPdgAplFrWthldgRmvlUndCATUndHBEE1701g5iEff073014_b">
+        <text>
+          <base>the person is an individual with a pending application for withholding of removal under the Convention Against Torture</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('an individual with a pending application for withholding of removal under the Convention Against Torture'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b235" type="boolean" public-name="si_personGtdEmplmtAuthUndUSC1231UndHBEE1701g5iEff073014_b">
+        <text>
+          <base>the person has been granted employment authorization under 8 USC section 1231</base>
+          <parse>s(ver('10.4.5.40'),v(grant,t(simple,present,perfect)),ob('the person',singular),o('employment authorization under 8 USC section 1231'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b237" type="boolean" public-name="si_personPdgAplWthldgRmvlUndUSC1231UndHBEE1701g5iiEff073014_b">
+        <text>
+          <base>the person is an individual with a pending application for withholding of removal under 8 USC section 1231</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('an individual with a pending application for withholding of removal under 8 USC section 1231'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b239" type="boolean" public-name="si_personUndAge14_b">
+        <text>
+          <base>the person is under the age of 14</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('under the age of 14'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b243" type="boolean" public-name="si_personGtdWthldgRmvlUndCATUndHBEE1701g6Eff073014_b">
+        <text>
+          <base>the person has been granted withholding of removal under the Convention Against Torture</base>
+          <parse>s(ver('10.4.5.40'),v(grant,t(simple,present,perfect)),ob('the person',singular),o('withholding of removal under the Convention Against Torture'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b244" type="boolean" public-name="si_personChldPdgAppSIJStatPerUSC1101a27JUndHBEE1701g7Eff073014_b">
+        <text>
+          <base>the person is a child who has a pending application for Special Immigrant Juvenile status as described in 8 USC section 1101(a)(27)(J)</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('a child who has a pending application for Special Immigrant Juvenile status as described in 8 USC section 1101(a)(27)(J)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b245" type="boolean" public-name="si_personLwflyPresInAmSamoaUndHBEE1701g8Eff073014_b">
+        <text>
+          <base>the person is considered to be lawfully present in American Samoa under the immigration laws of American Samoa</base>
+          <parse>s(ver('10.4.5.40'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be lawfully present in American Samoa under the immigration laws of American Samoa'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b246" type="boolean" public-name="si_personVctmSvrFrmTfckgPerVTVPAUndHBEE1701g9Eff073014_b">
+        <text>
+          <base>the person is a victim of a severe form of trafficking in persons, in accordance with the Victims of Trafficking and Violence Protection Act of 2000, Public Law 106-386, as amended (22 USC section 7105(b))</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('a victim of a severe form of trafficking in persons, in accordance with the Victims of Trafficking and Violence Protection Act of 2000, Public Law 106-386, as amended (22 USC section 7105(b))'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b247" type="boolean" public-name="si_personDfrdActnUndDHSActnUndHBEE1701g10Eff073014_b">
+        <text>
+          <base>the person is an individual with deferred action under DHS's deferred action for childhood arrivals process, as described in the Secretary of Homeland Security's June 15, 2012 memorandum</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('an individual with deferred action under DHS''s deferred action for childhood arrivals process, as described in the Secretary of Homeland Security''s June 15, 2012 memorandum'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b248" type="boolean" public-name="st_personNonCtznUndHBEE1701hEff073014_b">
+        <text>
+          <base>the person is considered a non-citizen under HBEE 17.01(h) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('a non-citizen under HBEE 17.01(h) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b251" type="boolean" public-name="so_personQlfdBtrdNonCtznUndHBEE1701eEff073014_b">
+        <text>
+          <base>the person is considered a qualified battered non-citizen under HBEE 17.01(e) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('a qualified battered non-citizen under HBEE 17.01(e) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b271" type="boolean" public-name="so_personQlfdNonCtznUndHBEE1701dEff073014_b">
+        <text>
+          <base>the person is considered to be a qualified non-citizen under HBEE 17.01(d) (eff. 07/30/2014)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be a qualified non-citizen under HBEE 17.01(d) (eff. 07/30/2014)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b272" type="boolean" public-name="si_citLPR_b">
+        <text>
+          <base>the person is a lawful, permanent resident of the United States (LPR)</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('a lawful, permanent resident of the United States (LPR)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b273" type="boolean" public-name="si_citAIANCanada_b">
+        <text>
+          <base>the person is an American Indian who was born in Canada</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('an American Indian who was born in Canada'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b274" type="boolean" public-name="si_citStayOfRemoval_b">
+        <text>
+          <base>the person was granted an administrative stay of removal under 8 CFR part 241</base>
+          <parse>s(ver('10.4.5.40'),v(grant,t(simple,past,normal)),ob('the person',singular),o('an administrative stay of removal under 8 CFR part 241'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b275" type="boolean" public-name="so_HBEE17.01gLawfulPres_b">
+        <text>
+          <base>the person is considered to be lawfully present in the United States under HBEE 17.01(g)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be lawfully present in the United States under HBEE 17.01(g)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b276" type="boolean" public-name="so_HBEE17.01dQualNonCit_b">
+        <text>
+          <base>the person is considered to be a qualified non-citizen under HBEE 17.01(d)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be a qualified non-citizen under HBEE 17.01(d)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b277" type="boolean" public-name="so_HBEE17.01d2Refugee_b">
+        <text>
+          <base>the person is considered to be a refugee under HBEE 17.01(d)(2)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('to be a refugee under HBEE 17.01(d)(2)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b278" type="boolean" public-name="si_citUsNat_b">
+        <text>
+          <base>the person is a U.S. Citizen or National</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('a U.S. Citizen or National'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b279" type="boolean" public-name="si_qualNonCitBatteredHBEE17.02e2_b">
+        <text>
+          <base>the person meets the definition of a qualified non-citizen under HBEE 17.01(e)(2) as a battered non-citizen</base>
+          <parse>s(ver('10.4.5.40'),v(meet,t(simple,present,normal)),sb('the person',singular),o('the definition of a qualified non-citizen under HBEE 17.01(e)(2) as a battered non-citizen'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b280" type="boolean" public-name="si_qualNonCitBatteredHBEE17.02e2Parent_b">
+        <text>
+          <base>the person is a parent of a child who has met the definition of a qualified non-citizen under HBEE 17.01(e)(2) as a battered non-citizen</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('a parent of a child who has met the definition of a qualified non-citizen under HBEE 17.01(e)(2) as a battered non-citizen'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b281" type="boolean" public-name="si_qualNonCitBatteredHBEE17.02e2Child_b">
+        <text>
+          <base>the person is a child residing in the same household as someone who has met the definition of a qualified non-citizen under HBEE 17.01(e)(2) as a battered non-citizen</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('a child residing in the same household as someone who has met the definition of a qualified non-citizen under HBEE 17.01(e)(2) as a battered non-citizen'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b282" type="boolean" public-name="si_qualNonCitBattered_b">
+        <text>
+          <base>the person is a qualified battered non-citizen</base>
+          <parse>s(ver('10.4.5.40'),v(be,t(simple,present,normal)),sb('the person',singular),o('a qualified battered non-citizen'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b283" type="boolean" public-name="si_perOneHalfAmerIndianBlood_b">
+        <text>
+          <base>the person is at least one-half American Indian blood</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('at least one-half American Indian blood'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b284" type="boolean" public-name="st_HBEE1701d10SatisfiedPer_b">
+        <text>
+          <base>HBEE 17.01(d)(10) is satisfied for the person</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 17.01(d)(10)',singular),o('for the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b285" type="boolean" public-name="si_perNonCitizenHBEE17.01h_b">
+        <text>
+          <base>the person is considered a non-citizen under HBEE 17.01(h)</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person',singular),o('a non-citizen under HBEE 17.01(h)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

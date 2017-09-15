@@ -1,0 +1,517 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+      <attribute name="p76" type="currency" public-name="si_SSIPayRate2_c">
+        <text>
+          <base>the SSI federal payment rate for a couple</base>
+        </text>
+      </attribute>
+      <attribute name="p77" type="currency" public-name="si_SSIPayRate1_c">
+        <text>
+          <base>the SSI federal payment rate for one person</base>
+        </text>
+      </attribute>
+      <attribute name="p90" type="currency">
+        <text>
+          <base>the earned income disregard under HBEE 29.14(b)(7) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p95" type="number">
+        <text>
+          <base>the remaining earned income disregard percentage under HBEE 29.14(b)(9) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p112" type="currency" public-name="si_PIL1_c">
+        <text>
+          <base>the PIL for one person</base>
+        </text>
+      </attribute>
+      <attribute name="p113" type="currency" public-name="si_SSI-AABDPayRate2_c">
+        <text>
+          <base>the SSI/AABD payment standard for two</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="p106" type="currency" public-name="si_PASSAmt_c">
+        <text>
+          <base>the amount necessary for the person to carry out a Plan to Achieve Self-Support (PASS)</base>
+        </text>
+      </attribute>
+      <attribute name="p124" type="currency" public-name="si_MABDIncome_c">
+        <text>
+          <base>the person's countable MABD income</base>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" public-name="si_student_b">
+        <text>
+          <base>the person is a student</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('a student'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b22" type="boolean" public-name="si_PASSPlan_b">
+        <text>
+          <base>the person has a Plan to Achieve Self-Support (PASS)</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('a Plan to Achieve Self-Support (PASS)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b23" type="boolean" public-name="si_PublicAssistance_b">
+        <text>
+          <base>the person is receiving public assistance</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('receiving public assistance'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p134" type="currency" public-name="si_deemParentsInelig_c">
+        <text>
+          <base>the amount of ineligible parent income to deem to the person</base>
+        </text>
+      </attribute>
+      <attribute name="p135" type="currency" public-name="si_deemParentsElig_c">
+        <text>
+          <base>the amount of eligible parent income to deem to the person</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="p62" type="currency">
+        <text>
+          <base>the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p63" type="currency">
+        <text>
+          <base>the remaining unearned income for the person's financial responsibility group for the program after HBEE 29.14(b)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p64" type="currency">
+        <text>
+          <base>the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p65" type="currency">
+        <text>
+          <base>the remainder of the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p66" type="currency">
+        <text>
+          <base>the remaining unearned income for the person's financial responsibility group for the program after HBEE 29.14(b)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p67" type="currency">
+        <text>
+          <base>the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(3) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p68" type="currency">
+        <text>
+          <base>the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(c)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p71" type="currency">
+        <text>
+          <base>the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(c)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p73" type="currency">
+        <text>
+          <base>the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(c)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p75" type="currency">
+        <text>
+          <base>the unearned income disregard for the person for the program under HBEE 29.14(c)(2)(i) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p78" type="currency">
+        <text>
+          <base>the remainder of the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(3) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p79" type="currency">
+        <text>
+          <base>the remaining unearned income for the person's financial responsibility group for the program after HBEE 29.14(b)(3) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p80" type="currency">
+        <text>
+          <base>the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(4) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p81" type="currency">
+        <text>
+          <base>the remainder of the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(4) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p82" type="currency">
+        <text>
+          <base>the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p83" type="currency">
+        <text>
+          <base>the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p84" type="currency" public-name="so_HBEE29.14Disregard20160801_c">
+        <text>
+          <base>the monthly income disregard for the person's financial responsibility group for the program under HBEE 29.14(a) (eff. 08/01/2016)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="p85" type="currency">
+        <text>
+          <base>the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(5) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p86" type="currency">
+        <text>
+          <base>the remaining earned income for the person's financial responsibility group for the program after HBEE 29.14(b)(5) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p87" type="currency">
+        <text>
+          <base>the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(6) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p88" type="currency">
+        <text>
+          <base>the remaining earned income for the person's financial responsibility group for the program after HBEE 29.14(b)(6) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p89" type="currency">
+        <text>
+          <base>the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(7) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p91" type="currency">
+        <text>
+          <base>the remaining earned income for the person's financial responsibility group for the program after HBEE 29.14(b)(7) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p92" type="currency">
+        <text>
+          <base>the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(8) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p93" type="currency">
+        <text>
+          <base>the remaining earned income for the person's financial responsibility group for the program after HBEE 29.14(b)(8) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p94" type="currency">
+        <text>
+          <base>the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(9) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p96" type="currency">
+        <text>
+          <base>the remaining earned income for the person's financial responsibility group for the program after HBEE 29.14(b)(9) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p97" type="currency">
+        <text>
+          <base>the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(10) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p98" type="currency">
+        <text>
+          <base>the remaining earned income for the person's financial responsibility group for the program after HBEE 29.14(b)(10) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p103" type="currency">
+        <text>
+          <base>the income disregard for the person's financial responsibility group for the program under HBEE 29.14(b) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p104" type="currency">
+        <text>
+          <base>the remaining unearned income for the person's financial responsibility group for the program after HBEE 29.14(b)(4) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p105" type="currency">
+        <text>
+          <base>the income disregard for the person's financial responsibility group for the program under HBEE 29.14(b)(12) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p107" type="currency">
+        <text>
+          <base>the remaining income for the person's financial responsibility group for the program under HBEE 29.14(b)(11) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p117" type="currency">
+        <text>
+          <base>the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(d)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p119" type="currency">
+        <text>
+          <base>the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(d)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p122" type="currency">
+        <text>
+          <base>the deemed unearned income for the person's financial responsibility group for the program under HBEE 29.14(d)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" public-name="st_pgHBEE2914d1AplsEff080116_b">
+        <text>
+          <base>HBEE 29.14(d)(1) applies to the person for the program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14(d)(1)',singular),o('to the person for the program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p125" type="currency">
+        <text>
+          <base>the monthly income disregard for the person's financial responsibility group for the program under HBEE 29.14(a)</base>
+          <parse>
+          </parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" public-name="st_pgHBEE2914e3iiiAplsEff080116_b">
+        <text>
+          <base>HBEE 29.14(e)(3)(iii) applies to the person for the program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14(e)(3)(iii)',singular),o('to the person for the program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" public-name="st_pgPrsnHsMltplElgblChldUndHBEE2914e3iiiEff080116_b">
+        <text>
+          <base>the person has multiple eligible children for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('multiple eligible children for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p130" type="currency">
+        <text>
+          <base>the unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p131" type="currency">
+        <text>
+          <base>the deemed unearned income for the person's financial responsibility group for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p132" type="number">
+        <text>
+          <base>the number of eligible children associated with the person's financial responsibility group for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p137" type="currency">
+        <text>
+          <base>the total monthly countable gross income for the ineligible parents in the person's financial group for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p139" type="currency">
+        <text>
+          <base>the total amount of ineligible parent income deemed to eligible children for the person for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p140" type="currency">
+        <text>
+          <base>the total amount of eligible parent income to deem for the person's financial responsibility group for the program under HBEE 29.14(d)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p141" type="currency">
+        <text>
+          <base>the total unearned income disregard for the person's financial responsibility group for the program under HBEE 29.14(c)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p143" type="currency">
+        <text>
+          <base>the total amount of eligible parent income deemed to eligible children for the person for the program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p144" type="currency">
+        <text>
+          <base>the total amount of eligible parent income allocated to eligible children for the person's financial responsibility group for the program under HBEE 29.14(d)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean" public-name="st_pgPrsHsElgblChldUndHBEE2914d2Eff080116_b">
+        <text>
+          <base>the person has an eligible child for the program under HBEE 29.14(d)(2) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(have,t(simple,present,normal)),sb('the person',singular),o('an eligible child for the program under HBEE 29.14(d)(2) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b35" type="boolean" public-name="st_pgHBEE2914d2AplsEff080116_b">
+        <text>
+          <base>HBEE 29.14(d)(2) applies to the person for the program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14(d)(2)',singular),o('to the person for the program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p146" type="currency">
+        <text>
+          <base>the total amount of ineligible parent earned income allocated the person's financial responsibility group for the program under HBEE 29.14(e)(3)(i) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="b36" type="boolean" public-name="st_pgHBEE2914e3iAplsEff080116_b">
+        <text>
+          <base>HBEE 29.14(e)(3)(i) applies to the person for the program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14(e)(3)(i)',singular),o('to the person for the program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p149" type="currency">
+        <text>
+          <base>the earned income disregard for the person's financial responsibility group for the program under HBEE 29.14(e)(3)(i) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-parent-id="person" containment-relationship-id="personsgroupmembers">
+      <attribute name="b19" type="boolean" public-name="st_gmHBEE2914d1AplsEff080116_b">
+        <text>
+          <base>HBEE 29.14(d)(1) applies to the group member for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14(d)(1)',singular),o('to the group member for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b37" type="boolean" public-name="st_gmHBEE2914e3iAplsEff080116_b">
+        <text>
+          <base>HBEE 29.14(e)(3)(i) applies to the group member for the person (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14(e)(3)(i)',singular),o('to the group member for the person (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-parent-id="groupmember" containment-relationship-id="groupmembersgroupmemberprograms">
+      <attribute name="p109" type="currency">
+        <text>
+          <base>the person's unearned income disregard for the group member for the group member program under HBEE 29.14(c)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p110" type="currency">
+        <text>
+          <base>the person's unearned income disregard for the group member for the group member program under HBEE 29.14(c)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p111" type="currency">
+        <text>
+          <base>the person's earned income disregard for the group member for the group member program under HBEE 29.14(c)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" public-name="st_gmpHBEE2914b12AplsEff080116">
+        <text>
+          <base>HBEE 29.14(b)(12) applies to the group member for the person for the group member program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14(b)(12)',singular),o('to the group member for the person for the group member program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" public-name="st_gmpHBEE2914c2iAplsEff080116">
+        <text>
+          <base>HBEE 29.14(c)(2)(i) applies to the group member for the person for the group member program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14(c)(2)(i)',singular),o('to the group member for the person for the group member program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p126" type="currency">
+        <text>
+          <base>the person's income disregard for the group member for the group member program under HBEE 29.14(b)(12) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p127" type="currency">
+        <text>
+          <base>the person's unearned income disregard for the group member for the group member program under HBEE 29.14(d)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p128" type="currency">
+        <text>
+          <base>the person's earned income disregard for the group member for the group member program under HBEE 29.14(d)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p129" type="currency">
+        <text>
+          <base>the person's deemed unearned income for the group member for the group member program under HBEE 29.14(d)(1) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" public-name="st_gmpHBEE2914e3iiiAplsEff080116">
+        <text>
+          <base>HBEE 29.14(e)(3)(iii) applies to the group member for the person for the group member program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14(e)(3)(iii)',singular),o('to the group member for the person for the group member program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p133" type="number">
+        <text>
+          <base>the group member's count value as an eligible child associated with the person's financial responsibility group for the group member program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" public-name="st_gmpIsElgbChldAssWthFnclGrpUndHBEE2914e3iiiEff080116_b">
+        <text>
+          <base>the group member is an eligible child associated with the person's financial responsibility group for the group member program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('an eligible child associated with the person''s financial responsibility group for the group member program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p136" type="currency">
+        <text>
+          <base>the group member's total monthly countable gross ineligible parent income for the the person's financial group for the group member program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p138" type="currency">
+        <text>
+          <base>the group member's amount of deemed ineligible parent income for the person for the group member program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p142" type="currency">
+        <text>
+          <base>the group member's amount of deemed eligible parent income for the person for the group member program under HBEE 29.14(e)(3)(iii) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" public-name="st_gmpHBEE2914c2iiAplsEff080116">
+        <text>
+          <base>HBEE 29.14(c)(2)(ii) applies to the group member for the person for the group member program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14(c)(2)(ii)',singular),o('to the group member for the person for the group member program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean" public-name="st_gmpHBEE2914c2iiiAplsEff080116">
+        <text>
+          <base>HBEE 29.14(c)(2)(iii) applies to the group member for the person for the group member program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14(c)(2)(iii)',singular),o('to the group member for the person for the group member program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p145" type="currency">
+        <text>
+          <base>the group member's eligible parent income allocated to eligible children for the person for the group member program under HBEE 29.14(d)(2) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean" public-name="st_gmpHBEE2914d2AplsEff080116">
+        <text>
+          <base>HBEE 29.14(d)(2) applies to the group member for the person for the group member program (eff. 08/01/2016)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.14(d)(2)',singular),o('to the group member for the person for the group member program (eff. 08/01/2016)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p147" type="currency">
+        <text>
+          <base>the group member's ineligible parent earned income allocated to the person for the group member program under HBEE 29.14(e)(3)(i) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+      <attribute name="p150" type="currency">
+        <text>
+          <base>the person's earned income disregard for the group member for the group member program under HBEE 29.14(e)(3)(i) (eff. 08/01/2016)</base>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" is-containment="true" public-id="personsgroupmembers" reverse-public-id="groupmemberscontainingperson" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" />
+    <relationship source="groupmember" target="groupmemberprogram" is-containment="true" public-id="groupmembersgroupmemberprograms" reverse-public-id="groupmemberprogramsgroupmember" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

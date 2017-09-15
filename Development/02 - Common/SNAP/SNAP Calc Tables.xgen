@@ -1,0 +1,5827 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+      <attribute name="p1" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the SNAP area</base>
+        </text>
+      </attribute>
+      <attribute name="p2" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the SNAP sub-area</base>
+        </text>
+      </attribute>
+      <attribute name="p3" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the SNAP maximum allotment for 1 person</base>
+        </text>
+      </attribute>
+      <attribute name="p4" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the SNAP maximum allotment for 2 people</base>
+        </text>
+      </attribute>
+      <attribute name="p5" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the SNAP maximum allotment for 3 people</base>
+        </text>
+      </attribute>
+      <attribute name="p6" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the SNAP maximum allotment for 4 people</base>
+        </text>
+      </attribute>
+      <attribute name="p7" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the SNAP maximum allotment for 5 people</base>
+        </text>
+      </attribute>
+      <attribute name="p8" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the SNAP maximum allotment for 6 people</base>
+        </text>
+      </attribute>
+      <attribute name="p9" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the SNAP maximum allotment for 7 people</base>
+        </text>
+      </attribute>
+      <attribute name="p10" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the SNAP maximum allotment for 8 people</base>
+        </text>
+      </attribute>
+      <attribute name="p11" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the SNAP maximum allotment for each additional person</base>
+        </text>
+      </attribute>
+      <attribute name="p12" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the SNAP minimum allotment for 1-2 people</base>
+        </text>
+      </attribute>
+      <attribute name="p13" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the SNAP standard deduction for 1-2 people</base>
+        </text>
+      </attribute>
+      <attribute name="p14" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the SNAP standard deduction for 3 people</base>
+        </text>
+      </attribute>
+      <attribute name="p15" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the SNAP standard deduction for 4 people</base>
+        </text>
+      </attribute>
+      <attribute name="p16" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the SNAP standard deduction for 5 people</base>
+        </text>
+      </attribute>
+      <attribute name="p17" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the SNAP standard deduction for 6+ people</base>
+        </text>
+      </attribute>
+      <attribute name="p18" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the SNAP maximum shelter deduction</base>
+        </text>
+      </attribute>
+      <attribute name="p19" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the SNAP homeless household shelter estimate</base>
+        </text>
+      </attribute>
+      <attribute name="p26" type="date" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en">
+          <base>the calculation date</base>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships />
+  <rules>
+    <rule ruleburst="true" folder="0" name="the SNAP maximum allotment for 1 person" id="1" concludes="p3">
+      <rule-xml>
+        <table-conclude attr-id="p3" entity-id="global" scope-id="global0">
+          <row>
+            <value>
+              <number-value>194</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>227</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>290</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>353</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>332</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>287</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>250</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>189</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>226</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>288</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>351</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>330</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>279</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>243</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>200</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>239</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>304</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>371</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>330</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>295</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>257</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the SNAP maximum allotment for 2 people" id="2" concludes="p4">
+      <rule-xml>
+        <table-conclude attr-id="p4" entity-id="global" scope-id="global0">
+          <row>
+            <value>
+              <number-value>357</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>417</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>532</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>648</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>609</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>526</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>459</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>347</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>415</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>529</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>644</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>605</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>512</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>446</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>367</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>438</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>559</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>680</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>605</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>541</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>472</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the SNAP maximum allotment for 3 people" id="3" concludes="p5">
+      <rule-xml>
+        <table-conclude attr-id="p5" entity-id="global" scope-id="global0">
+          <row>
+            <value>
+              <number-value>511</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>598</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>762</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>928</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>872</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>753</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>657</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>497</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>594</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>758</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>922</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>867</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>733</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>639</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>526</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>627</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>800</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>974</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>867</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>775</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>676</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the SNAP maximum allotment for 4 people" id="4" concludes="p6">
+      <rule-xml>
+        <table-conclude attr-id="p6" entity-id="global" scope-id="global0">
+          <row>
+            <value>
+              <number-value>649</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>759</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>968</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1178</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1107</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>957</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>835</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>632</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>755</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>962</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1172</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1100</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>931</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>812</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>668</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>797</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1016</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1237</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1100</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>985</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>859</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the SNAP maximum allotment for 5 people" id="5" concludes="p7">
+      <rule-xml>
+        <table-conclude attr-id="p7" entity-id="global" scope-id="global0">
+          <row>
+            <value>
+              <number-value>771</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>902</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1150</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1399</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1315</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1136</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>991</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>750</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>896</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1143</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1391</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1307</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1106</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>964</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>793</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>946</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1207</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1469</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1307</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1169</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1020</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the SNAP maximum allotment for 6 people" id="6" concludes="p8">
+      <rule-xml>
+        <table-conclude attr-id="p8" entity-id="global" scope-id="global0">
+          <row>
+            <value>
+              <number-value>925</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1082</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1380</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1679</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1578</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1364</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1189</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>900</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1076</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1372</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1670</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1568</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1327</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1157</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>952</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1135</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1448</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1762</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1568</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1403</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1224</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the SNAP maximum allotment for 7 people" id="7" concludes="p9">
+      <rule-xml>
+        <table-conclude attr-id="p9" entity-id="global" scope-id="global0">
+          <row>
+            <value>
+              <number-value>1022</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1196</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1525</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1856</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1744</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1507</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1315</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>995</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1189</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1516</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1845</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1734</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1467</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1279</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1052</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1255</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1600</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1948</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1734</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1551</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1353</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the SNAP maximum allotment for 8 people" id="8" concludes="p10">
+      <rule-xml>
+        <table-conclude attr-id="p10" entity-id="global" scope-id="global0">
+          <row>
+            <value>
+              <number-value>1169</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1367</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1743</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>2121</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1994</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1723</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1503</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1137</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1359</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1733</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>2109</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1981</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1676</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1462</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1202</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1434</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1829</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>2226</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1981</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1773</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>1546</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the SNAP maximum allotment for each additional person" id="9" concludes="p11">
+      <rule-xml>
+        <table-conclude attr-id="p11" entity-id="global" scope-id="global0">
+          <row>
+            <value>
+              <number-value>146</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>171</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>218</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>265</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>249</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>215</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>188</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>142</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>170</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>217</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>264</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>248</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>210</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>183</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>150</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>179</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>229</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>278</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>248</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>222</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>193</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the SNAP minimum allotment for 1-2 people" id="10" concludes="p12">
+      <rule-xml>
+        <table-conclude attr-id="p12" entity-id="global" scope-id="global0">
+          <row>
+            <value>
+              <number-value>16</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>18</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>23</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>28</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>27</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>23</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>20</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>15</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>18</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>23</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>28</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>26</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>22</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>19</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>16</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>19</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Urban</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>24</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 1</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>30</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <equals>
+                  <attribute attr-id="p2" />
+                  <string-value>Rural 2</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>26</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>24</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>21</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the SNAP standard deduction for 1-2 people" id="11" concludes="p13">
+      <rule-xml>
+        <table-conclude attr-id="p13" entity-id="global" scope-id="global0">
+          <row>
+            <value>
+              <number-value>155</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>266</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>219</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>312</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>137</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>152</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>260</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>215</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>306</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>134</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>152</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>260</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>215</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>306</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>134</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the SNAP standard deduction for 3 people" id="12" concludes="p14">
+      <rule-xml>
+        <table-conclude attr-id="p14" entity-id="global" scope-id="global0">
+          <row>
+            <value>
+              <number-value>155</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>266</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>219</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>312</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>137</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>152</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>260</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>215</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>306</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>135</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>152</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>260</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>215</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>306</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>135</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the SNAP standard deduction for 4 people" id="13" concludes="p15">
+      <rule-xml>
+        <table-conclude attr-id="p15" entity-id="global" scope-id="global0">
+          <row>
+            <value>
+              <number-value>165</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>266</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>219</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>330</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>165</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>163</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>260</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>215</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>326</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>163</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>163</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>260</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>215</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>326</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>163</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the SNAP standard deduction for 5 people" id="14" concludes="p16">
+      <rule-xml>
+        <table-conclude attr-id="p16" entity-id="global" scope-id="global0">
+          <row>
+            <value>
+              <number-value>193</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>266</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>222</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>387</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>193</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>191</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>260</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>220</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>382</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>191</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>191</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>260</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>220</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>382</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>191</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the SNAP standard deduction for 6+ people" id="15" concludes="p17">
+      <rule-xml>
+        <table-conclude attr-id="p17" entity-id="global" scope-id="global0">
+          <row>
+            <value>
+              <number-value>221</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>277</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>255</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>443</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>221</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>219</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>274</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>252</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>438</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>219</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>216</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>274</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>252</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>438</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>219</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the SNAP maximum shelter deduction" id="16" concludes="p18">
+      <rule-xml>
+        <table-conclude attr-id="p18" entity-id="global" scope-id="global0">
+          <row>
+            <value>
+              <number-value>490</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>782</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>660</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>575</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>386</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>478</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>764</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>644</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>561</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>377</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>478</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>48+DC</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>764</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Alaska</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>644</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Hawaii</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>561</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Guam</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>377</number-value>
+            </value>
+            <condition>
+              <and>
+                <equals>
+                  <attribute attr-id="p1" />
+                  <string-value>Virgin Islands</string-value>
+                </equals>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule ruleburst="true" folder="0" name="the SNAP homeless household shelter estimate" id="17" concludes="p19">
+      <rule-xml>
+        <table-conclude attr-id="p19" entity-id="global" scope-id="global0">
+          <row>
+            <value>
+              <number-value>143</number-value>
+            </value>
+            <condition>
+              <and>
+                <or>
+                  <equals>
+                    <attribute attr-id="p1" />
+                    <string-value>48+DC</string-value>
+                  </equals>
+                  <equals>
+                    <attribute attr-id="p1" />
+                    <string-value>Alaska</string-value>
+                  </equals>
+                  <equals>
+                    <attribute attr-id="p1" />
+                    <string-value>Hawaii</string-value>
+                  </equals>
+                  <equals>
+                    <attribute attr-id="p1" />
+                    <string-value>Guam</string-value>
+                  </equals>
+                  <equals>
+                    <attribute attr-id="p1" />
+                    <string-value>Virgin Islands</string-value>
+                  </equals>
+                </or>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2014-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>143</number-value>
+            </value>
+            <condition>
+              <and>
+                <or>
+                  <equals>
+                    <attribute attr-id="p1" />
+                    <string-value>48+DC</string-value>
+                  </equals>
+                  <equals>
+                    <attribute attr-id="p1" />
+                    <string-value>Alaska</string-value>
+                  </equals>
+                  <equals>
+                    <attribute attr-id="p1" />
+                    <string-value>Hawaii</string-value>
+                  </equals>
+                  <equals>
+                    <attribute attr-id="p1" />
+                    <string-value>Guam</string-value>
+                  </equals>
+                  <equals>
+                    <attribute attr-id="p1" />
+                    <string-value>Virgin Islands</string-value>
+                  </equals>
+                </or>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-11-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <row>
+            <value>
+              <number-value>143</number-value>
+            </value>
+            <condition>
+              <and>
+                <or>
+                  <equals>
+                    <attribute attr-id="p1" />
+                    <string-value>48+DC</string-value>
+                  </equals>
+                  <equals>
+                    <attribute attr-id="p1" />
+                    <string-value>Alaska</string-value>
+                  </equals>
+                  <equals>
+                    <attribute attr-id="p1" />
+                    <string-value>Hawaii</string-value>
+                  </equals>
+                  <equals>
+                    <attribute attr-id="p1" />
+                    <string-value>Guam</string-value>
+                  </equals>
+                  <equals>
+                    <attribute attr-id="p1" />
+                    <string-value>Virgin Islands</string-value>
+                  </equals>
+                </or>
+                <greater-than-equals>
+                  <attribute attr-id="p26" />
+                  <date-value>2013-10-01</date-value>
+                </greater-than-equals>
+              </and>
+            </condition>
+          </row>
+          <otherwise>
+            <uncertain-value />
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+</root>

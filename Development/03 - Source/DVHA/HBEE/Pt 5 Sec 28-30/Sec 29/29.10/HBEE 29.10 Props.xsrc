@@ -1,0 +1,136 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+      <attribute name="p5" type="currency" public-name="st_MABDResLmtUndrMedcaidProP2420c1_c">
+        <text>
+          <base>the MABD resource limit under Medicaid Procedures P-2420C(1) for one person</base>
+        </text>
+      </attribute>
+      <attribute name="p6" type="currency" public-name="st_MABDResLmtUndrMedcaidProP2420c2_c">
+        <text>
+          <base>the MABD resource limit under Medicaid Procedures P-2420C(1) for two people</base>
+        </text>
+      </attribute>
+      <attribute name="p7" type="currency" public-name="si_CsraMax_c">
+        <text>
+          <base>the CSRA maximum resource amount</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="p2" type="currency" public-name="so_personTtlCntResExclsionAsIndvdlChildUndrHBEE29.10d_c">
+        <text>
+          <base>the resource exclusion for the person's parents under HBEE 29.10(d)(1) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p8" type="currency" public-name="si_resTransferCsHearing_c">
+        <text>
+          <base>the resource amount allocated to the person's community spouse as set by a fair hearing</base>
+        </text>
+      </attribute>
+      <attribute name="p9" type="currency" public-name="si_resTransferCsCourt_c">
+        <text>
+          <base>the resource amount transferred to the person's community spouse under a court order</base>
+        </text>
+      </attribute>
+      <attribute name="p10" type="currency" public-name="st_HBEE29.10e2ResExclGrp20150715_c">
+        <text>
+          <base>the resource amount allocated to the person's community spouse under HBEE 29.10(e)(2) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="b6" type="boolean" public-name="st_HBEE29.10eApplies20150715_b">
+        <text>
+          <base>HBEE 29.10(e) applies to the person (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.10(e)',singular),o('to the person (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b7" type="boolean" public-name="si_grpFinParentOne_b">
+        <text>
+          <base>the person's financial group includes only one of the person's parents</base>
+          <parse>s(ver('10.4.6.76'),v(include,t(simple,present,normal)),sb('the person''s financial group',singular),o('only one of the person''s parents'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b8" type="boolean" public-name="si_grpFinParentTwo_b">
+        <text>
+          <base>the person's financial group includes two of the person's parents</base>
+          <parse>s(ver('10.4.6.76'),v(include,t(simple,present,normal)),sb('the person''s financial group',singular),o('two of the person''s parents'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b9" type="boolean" public-name="si_recvLTC_b">
+        <text>
+          <base>the person is receiving Medicaid coverage of long-term care service and supports</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('receiving Medicaid coverage of long-term care service and supports'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b11" type="boolean" public-name="si_pIsIntlYrOfEligFrMdcdCvgOfLTC_b">
+        <text>
+          <base>it is the person's initial year of eligibility for Medicaid coverage of long-term care service and supports</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the person''s initial year of eligibility for Medicaid coverage of long-term care service and supports'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="p11" type="currency">
+        <text>
+          <base>the resource exclusion for the person's financial responsibility group for the program under HBEE 29.10(e)(2) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p12" type="currency">
+        <text>
+          <base>the resource exclusion for the person's financial responsibility group for the program under HBEE 29.10 (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p13" type="currency">
+        <text>
+          <base>the resource exclusion for the person's financial responsibility group for the program under HBEE 29.10(d)(1) (eff. 07/15/2015)</base>
+        </text>
+      </attribute>
+      <attribute name="p14" type="currency">
+        <text>
+          <base>the resource exclusion for the person's financial responsibility group for the program under HBEE 29.10</base>
+        </text>
+      </attribute>
+      <attribute name="b10" type="boolean" public-name="so_HBEE29.10d20150715Applies_b">
+        <text>
+          <base>HBEE 29.10(d) applies to the person for the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 29.10(d)',singular),o('to the person for the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>

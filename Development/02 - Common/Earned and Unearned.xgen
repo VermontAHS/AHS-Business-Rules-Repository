@@ -1,0 +1,277 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="p2" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the total monthly countable gross earned income for the person's financial group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p5" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the total monthly countable gross unearned income for the person's financial group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p7" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the total monthly countable gross income attributable to the person's financial group for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p14" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's total monthly countable gross earned income for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p15" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's total monthly countable gross unearned income for the program</base>
+        </text>
+      </attribute>
+      <attribute name="p20" type="currency" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the total monthly countable gross income attributable to the person for the program</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the group member program" id="groupmemberprogram" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+      <attribute name="b3" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is in the person's financial group for the group member program</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('in the person''s financial group for the group member program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p16" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member's total monthly countable gross earned income for the person's financial group for the group member program</base>
+        </text>
+      </attribute>
+      <attribute name="p17" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member's total monthly countable gross unearned income for the person's financial group for the group member program</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the income program" id="incomeprogram" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is considered earned income for the income program</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person''s income',singular),o('earned income for the income program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b2" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income is considered unearned income for the income program</base>
+          <parse>s(ver('10.4.6.76'),v(consider,t(simple,present,normal)),ob('the person''s income',singular),o('unearned income for the income program'))</parse>
+        </text>
+      </attribute>
+      <attribute name="p1" type="text" ruleburst="true" is-used="True" default-gender="neuter">
+        <text lang="en-US">
+          <base>the person's income's category for the income program</base>
+        </text>
+      </attribute>
+      <attribute name="p12" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income's total monthly countable income amount for the income program</base>
+        </text>
+      </attribute>
+      <attribute name="p18" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income's total monthly gross earned income amount for the income program</base>
+        </text>
+      </attribute>
+      <attribute name="p19" type="currency" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person's income's total monthly gross unearned income amount for the income program</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global" />
+    <entity name="the group member" id="groupmember" containment-relationship-id="personsgroupmembers" containment-parent-id="person" />
+    <entity name="the person's income" id="personsincome" containment-relationship-id="personsincomes" containment-parent-id="person" />
+  </entities>
+  <relationships>
+    <relationship type="ManyToMany" relationship-id="groupmemberscontainingpersonsprogramforthegroupmemberprogram" reverse-relationship-id="personscontainedgroupmemberprogramsfortheprogram" text="the group member's containing person's program for the group member program" reverse-text="the person's contained group member programs for the program" source="groupmemberprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="groupmembersprogramforthegroupmemberprogram" reverse-relationship-id="personsrepresentativegroupmemberprogramsfortheprogram" text="the group member's program for the group member program" reverse-text="the person's representative group member programs for the program" source="groupmemberprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="ManyToMany" relationship-id="personsprogramfortheincomeprogram" reverse-relationship-id="personsincomesfortheprogram" text="the person's program for the income program" reverse-text="the person's incomes for the program" source="incomeprogram" target="program" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" text="the group member's group member programs" reverse-text="the group member program's group member" source="groupmember" target="groupmemberprogram" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" text="the person's income's income programs" reverse-text="the person's income for the income program" source="personsincome" target="incomeprogram" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" text="the person's group members" reverse-text="the group member's containing person" source="person" target="groupmember" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" text="the person's incomes" reverse-text="the person's income's person" source="person" target="personsincome" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="the person's income is considered earned income for the income program" ruleburst="true" concludes="b1" folder="2" source-offset="40">
+      <rule-xml>
+        <conclude attr-id="b1" entity-id="incomeprogram" scope-id="incomeprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p1" />
+              <string-value>Earned</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the person's income is considered unearned income for the income program" ruleburst="true" concludes="b2" folder="2" source-offset="201">
+      <rule-xml>
+        <conclude attr-id="b2" entity-id="incomeprogram" scope-id="incomeprogram0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <equals>
+              <attribute attr-id="p1" />
+              <string-value>Unearned</string-value>
+            </equals>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="the total monthly countable gross earned income for the person's financial group for the program " ruleburst="true" concludes="p2 = InstanceSum(personscontainedgroupmemberprogramsfortheprogram,p16)" folder="3" source-offset="390">
+      <rule-xml>
+        <conclude attr-id="p2" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum>
+              <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+              <attribute attr-id="p16" />
+            </instance-sum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="the group member's total monthly countable gross earned income for the person's financial group for the group member program" ruleburst="true" concludes="p16" folder="3" source-offset="815">
+      <rule-xml>
+        <table-conclude attr-id="p16" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <row>
+            <value>
+              <instance-value-if>
+                <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                <attribute attr-id="p14" />
+                <true-value />
+              </instance-value-if>
+            </value>
+            <condition>
+              <attribute attr-id="b3" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="the total monthly countable gross unearned income for the person's financial group for the program " ruleburst="true" concludes="p5 = InstanceSum(personscontainedgroupmemberprogramsfortheprogram,p17) + p7" folder="3" source-offset="1282">
+      <rule-xml>
+        <conclude attr-id="p5" entity-id="program" scope-id="program0">
+          <value>
+            <plus>
+              <instance-sum>
+                <relationship relationship-id="personscontainedgroupmemberprogramsfortheprogram" target-entity-id="groupmemberprogram" />
+                <attribute attr-id="p17" />
+              </instance-sum>
+              <attribute attr-id="p7" />
+            </plus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="the group member's total monthly countable gross unearned income for the person's financial group for the group member program" ruleburst="true" concludes="p17" folder="3" source-offset="1820">
+      <rule-xml>
+        <table-conclude attr-id="p17" entity-id="groupmemberprogram" scope-id="groupmemberprogram0">
+          <row>
+            <value>
+              <instance-value-if>
+                <relationship relationship-id="groupmembersprogramforthegroupmemberprogram" target-entity-id="program" />
+                <attribute attr-id="p15" />
+                <true-value />
+              </instance-value-if>
+            </value>
+            <condition>
+              <attribute attr-id="b3" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="6" name="the person's total monthly countable gross earned income for the program " ruleburst="true" concludes="p14 = InstanceSum(personsincomesfortheprogram,p18)" folder="4" source-offset="2313">
+      <rule-xml>
+        <conclude attr-id="p14" entity-id="program" scope-id="program0">
+          <value>
+            <instance-sum>
+              <relationship relationship-id="personsincomesfortheprogram" target-entity-id="incomeprogram" />
+              <attribute attr-id="p18" />
+            </instance-sum>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="7" name="the person's income's total monthly gross earned income amount for the income program" ruleburst="true" concludes="p18" folder="4" source-offset="2583">
+      <rule-xml>
+        <table-conclude attr-id="p18" entity-id="incomeprogram" scope-id="incomeprogram0">
+          <row>
+            <value>
+              <attribute attr-id="p12" />
+            </value>
+            <condition>
+              <attribute attr-id="b1" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+    <rule id="8" name="the person's total monthly countable gross unearned income for the program " ruleburst="true" concludes="p15 = InstanceSum(personsincomesfortheprogram,p19) + p20" folder="4" source-offset="2861">
+      <rule-xml>
+        <conclude attr-id="p15" entity-id="program" scope-id="program0">
+          <value>
+            <plus>
+              <instance-sum>
+                <relationship relationship-id="personsincomesfortheprogram" target-entity-id="incomeprogram" />
+                <attribute attr-id="p19" />
+              </instance-sum>
+              <attribute attr-id="p20" />
+            </plus>
+          </value>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="9" name="the person's income's total monthly gross unearned income amount for the income program" ruleburst="true" concludes="p19" folder="4" source-offset="3275">
+      <rule-xml>
+        <table-conclude attr-id="p19" entity-id="incomeprogram" scope-id="incomeprogram0">
+          <row>
+            <value>
+              <attribute attr-id="p12" />
+            </value>
+            <condition>
+              <attribute attr-id="b2" />
+            </condition>
+          </row>
+          <otherwise>
+            <number-value>0</number-value>
+          </otherwise>
+        </table-conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="Earned/Unearned Income" parent="0" id="1" />
+    <folder text="Definitions" parent="1" id="2" />
+    <folder text="Group-Level Totals" parent="1" id="3" />
+    <folder text="Person-Level Totals" parent="1" id="4" />
+  </rule-folders>
+</root>

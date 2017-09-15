@@ -1,0 +1,278 @@
+<root schema-version="1" product-version="10.4.6.76">
+  <entities>
+    <entity name="the program" id="program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b1" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 28.04 applies to the program (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 28.04',singular),o('to the program (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b32" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the program is MN-MCA</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the program',singular),o('MN-MCA'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the person" id="person" containment-relationship-id="people" containment-parent-id="global">
+      <attribute name="b15" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is under 21 years of age</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('under 21 years of age'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b16" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is pregnant</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('pregnant'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b30" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is a parent whose own child is living in the household</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('a parent whose own child is living in the household'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b31" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is making monthly (or more frequent) room or board payments</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person',singular),o('making monthly (or more frequent) room or board payments'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b33" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the person is married</base>
+          <parse>s(ver('10.4.6.76'),v(marry,t(simple,present,normal)),ob('the person',singular))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity name="the group member" id="groupmember" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+      <attribute name="b5" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is included in the person's financial responsibility group under HBEE 28.04(b) (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(include,t(simple,present,normal)),ob('the group member',singular),o('in the person''s financial responsibility group under HBEE 28.04(b) (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b18" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's spouse</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s spouse'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b19" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's biological parent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s biological parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b20" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's step-parent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s step-parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b21" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member is the person's adopted parent</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the group member',singular),o('the person''s adopted parent'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b24" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 28.04(b)(1)(i) applies to the group member (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 28.04(b)(1)(i)',singular),o('to the group member (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b25" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 28.04(b)(1)(i) is satisfied for the group member (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 28.04(b)(1)(i)',singular),o('for the group member (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b26" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 28.04(b)(1)(ii) applies to the group member (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(apply,t(simple,present,normal)),sb('HBEE 28.04(b)(1)(ii)',singular),o('to the group member (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b28" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>the group member lives with the person</base>
+          <parse>s(ver('10.4.6.76'),v(live,t(simple,present,normal)),sb('the group member',singular),o('with the person'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b29" type="boolean" ruleburst="true" is-used="True">
+        <text lang="en-US">
+          <base>HBEE 28.04(b)(1)(ii) is satisfied for the group member (eff. 07/15/2015)</base>
+          <parse>s(ver('10.4.6.76'),v(satisfy,t(simple,present,normal)),ob('HBEE 28.04(b)(1)(ii)',singular),o('for the group member (eff. 07/15/2015)'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity ref="global" />
+  </entities>
+  <relationships>
+    <relationship type="ManyToMany" relationship-id="groupmembersrepresentativeperson" reverse-relationship-id="personsrepresentationsasagroupmember" text="the group member's representative person" reverse-text="the person's representations as a group member" source="groupmember" target="person" is-implicit="false" is-containment="false" />
+    <relationship type="OneToMany" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" text="the person's group members" reverse-text="the group member's containing person" source="person" target="groupmember" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="personsprograms" reverse-relationship-id="programsperson" text="the person's programs" reverse-text="the program's person" source="person" target="program" is-implicit="false" is-containment="true" />
+    <relationship type="OneToMany" relationship-id="people" reverse-relationship-id="global_people_rev" text="the people" source="global" target="person" is-implicit="false" is-containment="true" />
+  </relationships>
+  <rules>
+    <rule id="0" name="HBEE 28.04 applies to the program (eff. 07/15/2015)" ruleburst="true" concludes="b1" folder="1" source-offset="91">
+      <rule-xml>
+        <conclude attr-id="b1" entity-id="program" scope-id="program0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b32" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="1" name="the group member is included in the person's financial responsibility group under HBEE 28.04(b) (eff. 07/15/2015)" ruleburst="true" concludes="b5" folder="2" source-offset="269">
+      <rule-xml>
+        <conclude attr-id="b5" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <exists scope-id="the member">
+              <relationship relationship-id="groupmembersrepresentativeperson" target-entity-id="person" />
+              <or>
+                <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                  <for scope-id="person1">
+                    <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+                    <instance-equals>
+                      <scope-ref id="the member" />
+                      <scope-ref id="person1" />
+                    </instance-equals>
+                  </for>
+                </scope-for>
+                <and>
+                  <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                    <attribute attr-id="b24" />
+                  </scope-for>
+                  <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                    <attribute attr-id="b25" />
+                  </scope-for>
+                </and>
+                <and>
+                  <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                    <attribute attr-id="b26" />
+                  </scope-for>
+                  <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                    <attribute attr-id="b29" />
+                  </scope-for>
+                </and>
+              </or>
+            </exists>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="2" name="HBEE 28.04(b)(1)(i) applies to the group member (eff. 07/15/2015)" ruleburst="true" concludes="b24" folder="2" source-offset="1025">
+      <rule-xml>
+        <conclude attr-id="b24" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b18" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="3" name="HBEE 28.04(b)(1)(i) is satisfied for the group member (eff. 07/15/2015)" ruleburst="true" concludes="b25" folder="2" source-offset="1147">
+      <rule-xml>
+        <conclude attr-id="b25" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <attribute attr-id="b28" />
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="4" name="HBEE 28.04(b)(1)(ii) applies to the group member (eff. 07/15/2015)" ruleburst="true" concludes="b26" folder="2" source-offset="1275">
+      <rule-xml>
+        <conclude attr-id="b26" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <or>
+              <attribute attr-id="b19" />
+              <attribute attr-id="b20" />
+              <attribute attr-id="b21" />
+            </or>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+    <rule id="5" name="HBEE 28.04(b)(1)(ii) is satisfied for the group member (eff. 07/15/2015)" ruleburst="true" concludes="b29" folder="2" source-offset="1520">
+      <rule-xml>
+        <conclude attr-id="b29" entity-id="groupmember" scope-id="groupmember0">
+          <value>
+            <true-value />
+          </value>
+          <condition>
+            <for scope-id="the child">
+              <relationship relationship-id="groupmemberscontainingperson" target-entity-id="person" />
+              <and>
+                <not>
+                  <attribute attr-id="b33" />
+                </not>
+                <attribute attr-id="b15" />
+                <scope-for scope-ref="groupmember0" target-entity-id="groupmember">
+                  <attribute attr-id="b28" />
+                </scope-for>
+                <or>
+                  <and>
+                    <not>
+                      <attribute attr-id="b16" />
+                    </not>
+                    <not>
+                      <attribute attr-id="b30" />
+                    </not>
+                  </and>
+                  <and>
+                    <or>
+                      <attribute attr-id="b16" />
+                      <attribute attr-id="b30" />
+                    </or>
+                    <not>
+                      <attribute attr-id="b31" />
+                    </not>
+                  </and>
+                </or>
+              </and>
+            </for>
+          </condition>
+          <otherwise>
+            <false-value />
+          </otherwise>
+        </conclude>
+      </rule-xml>
+    </rule>
+  </rules>
+  <rule-folders>
+    <folder text="28.04 Medically-needy MCA - income eligibility (07/15/2015, 15-02)" parent="0" id="1" />
+    <folder text="Para (b): Financial responsibility of relatives and other individuals" parent="1" id="2" />
+  </rule-folders>
+</root>

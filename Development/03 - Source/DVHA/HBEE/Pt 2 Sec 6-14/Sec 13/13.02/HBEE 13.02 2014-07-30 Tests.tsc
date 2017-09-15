@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-script product-version="10.4.6.76" schema-version="4">
+  <test-case-set>
+    <test-case name="Tiers" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true">
+              <ent-inst-ref ref-id="CSR-AIAN-300" />
+              <ent-inst-ref ref-id="CSR-Tier3" />
+              <ent-inst-ref ref-id="APTC" />
+              <ent-inst-ref ref-id="CSR-Tier1" />
+              <ent-inst-ref ref-id="MCA-Pregnant" />
+              <ent-inst-ref ref-id="CSR-Tier4" />
+              <ent-inst-ref ref-id="MN-MCA" />
+              <ent-inst-ref ref-id="MCA-Adult" />
+              <ent-inst-ref ref-id="MCA-Child" />
+              <ent-inst-ref ref-id="CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="MCA-TMA-1925" />
+              <ent-inst-ref ref-id="VPR" />
+              <ent-inst-ref ref-id="MCA-EXT" />
+              <ent-inst-ref ref-id="QHP" />
+              <ent-inst-ref ref-id="MCA-PCR" />
+              <ent-inst-ref ref-id="CSR-Tier2" />
+            </relationship-inst>
+            <relationship-inst type="existingbenefitplans" complete="false" />
+            <relationship-inst type="caseresults" complete="true">
+              <ent-inst-ref ref-id="Insurance Cost-Sharing Reduction" />
+              <ent-inst-ref ref-id="Insurance Premium Reduction" />
+              <ent-inst-ref ref-id="Insurance Premium Tax Credit" />
+              <ent-inst-ref ref-id="Insurance Exchange Access" />
+              <ent-inst-ref ref-id="Medical Care Benefits" />
+            </relationship-inst>
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="program" entity-text="the program" inferred="yes" identifying-attribute="rb_p_ID">
+        <ent-inst id="Bob|MCA-TMA-1925">
+          <attr-inst name="so_programHBEE1302AppliesEff073014_b" text="HBEE 13.02 applies to the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE13.02Cat20140730_t" text="the person's eligibility category for the program under HBEE 13.02 (eff. 07/30/2014)" type="text">
+            <expected-val>
+              <uncertain-val />
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bob|CSR-Tier4">
+          <attr-inst name="so_programHBEE1302AppliesEff073014_b" text="HBEE 13.02 applies to the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE13.02Cat20140730_t" text="the person's eligibility category for the program under HBEE 13.02 (eff. 07/30/2014)" type="text">
+            <expected-val>
+              <text-val>Tier 4</text-val>
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bob|CSR-Tier1">
+          <attr-inst name="so_programHBEE1302AppliesEff073014_b" text="HBEE 13.02 applies to the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE13.02Cat20140730_t" text="the person's eligibility category for the program under HBEE 13.02 (eff. 07/30/2014)" type="text">
+            <expected-val>
+              <text-val>Tier 1</text-val>
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bob|CSR-Tier2">
+          <attr-inst name="so_programHBEE1302AppliesEff073014_b" text="HBEE 13.02 applies to the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE13.02Cat20140730_t" text="the person's eligibility category for the program under HBEE 13.02 (eff. 07/30/2014)" type="text">
+            <expected-val>
+              <text-val>Tier 2</text-val>
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bob|MN-MCA">
+          <attr-inst name="so_programHBEE1302AppliesEff073014_b" text="HBEE 13.02 applies to the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE13.02Cat20140730_t" text="the person's eligibility category for the program under HBEE 13.02 (eff. 07/30/2014)" type="text">
+            <expected-val>
+              <uncertain-val />
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bob|CSR-Tier3">
+          <attr-inst name="so_programHBEE1302AppliesEff073014_b" text="HBEE 13.02 applies to the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE13.02Cat20140730_t" text="the person's eligibility category for the program under HBEE 13.02 (eff. 07/30/2014)" type="text">
+            <expected-val>
+              <text-val>Tier 3</text-val>
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bob|CSR-AIAN-300">
+          <attr-inst name="so_programHBEE1302AppliesEff073014_b" text="HBEE 13.02 applies to the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE13.02Cat20140730_t" text="the person's eligibility category for the program under HBEE 13.02 (eff. 07/30/2014)" type="text">
+            <expected-val>
+              <uncertain-val />
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bob|MCA-Pregnant">
+          <attr-inst name="so_programHBEE1302AppliesEff073014_b" text="HBEE 13.02 applies to the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE13.02Cat20140730_t" text="the person's eligibility category for the program under HBEE 13.02 (eff. 07/30/2014)" type="text">
+            <expected-val>
+              <uncertain-val />
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bob|APTC">
+          <attr-inst name="so_programHBEE1302AppliesEff073014_b" text="HBEE 13.02 applies to the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE13.02Cat20140730_t" text="the person's eligibility category for the program under HBEE 13.02 (eff. 07/30/2014)" type="text">
+            <expected-val>
+              <uncertain-val />
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bob|MCA-PCR">
+          <attr-inst name="so_programHBEE1302AppliesEff073014_b" text="HBEE 13.02 applies to the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE13.02Cat20140730_t" text="the person's eligibility category for the program under HBEE 13.02 (eff. 07/30/2014)" type="text">
+            <expected-val>
+              <uncertain-val />
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bob|CSR-AIAN-IHP">
+          <attr-inst name="so_programHBEE1302AppliesEff073014_b" text="HBEE 13.02 applies to the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE13.02Cat20140730_t" text="the person's eligibility category for the program under HBEE 13.02 (eff. 07/30/2014)" type="text">
+            <expected-val>
+              <uncertain-val />
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bob|MCA-Adult">
+          <attr-inst name="so_programHBEE1302AppliesEff073014_b" text="HBEE 13.02 applies to the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE13.02Cat20140730_t" text="the person's eligibility category for the program under HBEE 13.02 (eff. 07/30/2014)" type="text">
+            <expected-val>
+              <uncertain-val />
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bob|VPR">
+          <attr-inst name="so_programHBEE1302AppliesEff073014_b" text="HBEE 13.02 applies to the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE13.02Cat20140730_t" text="the person's eligibility category for the program under HBEE 13.02 (eff. 07/30/2014)" type="text">
+            <expected-val>
+              <uncertain-val />
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bob|QHP">
+          <attr-inst name="so_programHBEE1302AppliesEff073014_b" text="HBEE 13.02 applies to the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE13.02Cat20140730_t" text="the person's eligibility category for the program under HBEE 13.02 (eff. 07/30/2014)" type="text">
+            <expected-val>
+              <uncertain-val />
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bob|MCA-Child">
+          <attr-inst name="so_programHBEE1302AppliesEff073014_b" text="HBEE 13.02 applies to the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE13.02Cat20140730_t" text="the person's eligibility category for the program under HBEE 13.02 (eff. 07/30/2014)" type="text">
+            <expected-val>
+              <uncertain-val />
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="Bob|MCA-EXT">
+          <attr-inst name="so_programHBEE1302AppliesEff073014_b" text="HBEE 13.02 applies to the program (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>false</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="so_HBEE13.02Cat20140730_t" text="the person's eligibility category for the program under HBEE 13.02 (eff. 07/30/2014)" type="text">
+            <expected-val>
+              <uncertain-val />
+            </expected-val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_name-first" text="the person's first name" type="text">
+            <val>
+              <text-val>Bob</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_req-iap" text="the person is requesting insurance affordability assistance" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="false" />
+            <relationship-inst type="personsincomes" complete="false" />
+            <relationship-inst type="personsaddresses" complete="false" />
+            <relationship-inst type="personsrequestedbenefits" complete="true">
+              <ent-inst-ref ref-id="Bob|Insurance Cost-Sharing Reduction" />
+              <ent-inst-ref ref-id="Bob|Insurance Premium Reduction" />
+              <ent-inst-ref ref-id="Bob|Insurance Premium Tax Credit" />
+              <ent-inst-ref ref-id="Bob|Insurance Exchange Access" />
+              <ent-inst-ref ref-id="Bob|Medical Care Benefits" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true">
+              <ent-inst-ref ref-id="Bob|Insurance Affordability Assistance" />
+            </relationship-inst>
+            <relationship-inst type="personsrelatedparties" complete="false" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="false" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Bob|Bob" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true">
+              <ent-inst-ref ref-id="Bob|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Bob|VPR" />
+              <ent-inst-ref ref-id="Bob|MCA-PCR" />
+              <ent-inst-ref ref-id="Bob|CSR-AIAN-IHP" />
+              <ent-inst-ref ref-id="Bob|MN-MCA" />
+              <ent-inst-ref ref-id="Bob|QHP" />
+              <ent-inst-ref ref-id="Bob|CSR-AIAN-300" />
+              <ent-inst-ref ref-id="Bob|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Bob|MCA-Child" />
+              <ent-inst-ref ref-id="Bob|CSR-Tier2" />
+              <ent-inst-ref ref-id="Bob|CSR-Tier3" />
+              <ent-inst-ref ref-id="Bob|CSR-Tier1" />
+              <ent-inst-ref ref-id="Bob|MCA-EXT" />
+              <ent-inst-ref ref-id="Bob|CSR-Tier4" />
+              <ent-inst-ref ref-id="Bob|APTC" />
+              <ent-inst-ref ref-id="Bob|MCA-Adult" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Bob|Bob">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true">
+              <ent-inst-ref ref-id="Bob|Bob|MCA-Child" />
+              <ent-inst-ref ref-id="Bob|Bob|APTC" />
+              <ent-inst-ref ref-id="Bob|Bob|CSR-AIAN-300" />
+              <ent-inst-ref ref-id="Bob|Bob|MCA-Pregnant" />
+              <ent-inst-ref ref-id="Bob|Bob|QHP" />
+              <ent-inst-ref ref-id="Bob|Bob|MCA-Adult" />
+              <ent-inst-ref ref-id="Bob|Bob|CSR-Tier3" />
+              <ent-inst-ref ref-id="Bob|Bob|VPR" />
+              <ent-inst-ref ref-id="Bob|Bob|CSR-Tier1" />
+              <ent-inst-ref ref-id="Bob|Bob|MCA-TMA-1925" />
+              <ent-inst-ref ref-id="Bob|Bob|MN-MCA" />
+              <ent-inst-ref ref-id="Bob|Bob|CSR-Tier4" />
+              <ent-inst-ref ref-id="Bob|Bob|MCA-PCR" />
+              <ent-inst-ref ref-id="Bob|Bob|CSR-Tier2" />
+              <ent-inst-ref ref-id="Bob|Bob|MCA-EXT" />
+              <ent-inst-ref ref-id="Bob|Bob|CSR-AIAN-IHP" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmemberprogram" entity-text="the group member program" inferred="yes" identifying-attribute="rb_gmp_ID">
+        <ent-inst id="Bob|Bob|QHP" />
+        <ent-inst id="Bob|Bob|MCA-PCR" />
+        <ent-inst id="Bob|Bob|MCA-EXT" />
+        <ent-inst id="Bob|Bob|APTC" />
+        <ent-inst id="Bob|Bob|MCA-TMA-1925" />
+        <ent-inst id="Bob|Bob|CSR-Tier1" />
+        <ent-inst id="Bob|Bob|MN-MCA" />
+        <ent-inst id="Bob|Bob|CSR-AIAN-300" />
+        <ent-inst id="Bob|Bob|CSR-Tier3" />
+        <ent-inst id="Bob|Bob|MCA-Adult" />
+        <ent-inst id="Bob|Bob|CSR-Tier2" />
+        <ent-inst id="Bob|Bob|CSR-AIAN-IHP" />
+        <ent-inst id="Bob|Bob|MCA-Child" />
+        <ent-inst id="Bob|Bob|VPR" />
+        <ent-inst id="Bob|Bob|CSR-Tier4" />
+        <ent-inst id="Bob|Bob|MCA-Pregnant" />
+      </ent-set>
+      <ent-set entity-type="personsrequestedbenefit" entity-text="the person's requested benefit" inferred="yes" identifying-attribute="rb_reqb_ID">
+        <ent-inst id="Bob|Medical Care Benefits">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob|Medical Care Benefits|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob|Insurance Cost-Sharing Reduction">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob|Insurance Cost-Sharing Reduction|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob|Insurance Premium Tax Credit">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob|Insurance Premium Tax Credit|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob|Insurance Premium Reduction">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob|Insurance Premium Reduction|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Bob|Insurance Exchange Access">
+          <relationship-set>
+            <relationship-inst type="personsrequestedbenefitsresults" complete="true">
+              <ent-inst-ref ref-id="Bob|Insurance Exchange Access|1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="result" entity-text="the result" inferred="yes" identifying-attribute="rb_rslt_ID">
+        <ent-inst id="Bob|Insurance Premium Reduction|1" />
+        <ent-inst id="Bob|Insurance Cost-Sharing Reduction|1" />
+        <ent-inst id="Bob|Medical Care Benefits|1" />
+        <ent-inst id="Bob|Insurance Premium Tax Credit|1" />
+        <ent-inst id="Bob|Insurance Exchange Access|1" />
+      </ent-set>
+      <ent-set entity-type="case-result" entity-text="the case result" inferred="yes" identifying-attribute="o_crslt_type">
+        <ent-inst id="Insurance Premium Reduction" />
+        <ent-inst id="Insurance Cost-Sharing Reduction" />
+        <ent-inst id="Medical Care Benefits" />
+        <ent-inst id="Insurance Exchange Access" />
+        <ent-inst id="Insurance Premium Tax Credit" />
+      </ent-set>
+      <ent-set entity-type="personsrequestforassistance" entity-text="the person's request for assistance" inferred="yes" identifying-attribute="rb_reqa_ID">
+        <ent-inst id="Bob|Insurance Affordability Assistance" />
+      </ent-set>
+      <ent-set entity-type="baseprogram" entity-text="the base program" inferred="yes" identifying-attribute="the_base_program">
+        <ent-inst id="APTC" />
+        <ent-inst id="QHP" />
+        <ent-inst id="MCA-PCR" />
+        <ent-inst id="MCA-Adult" />
+        <ent-inst id="MCA-Child" />
+        <ent-inst id="CSR-AIAN-IHP" />
+        <ent-inst id="CSR-AIAN-300" />
+        <ent-inst id="VPR" />
+        <ent-inst id="MCA-TMA-1925" />
+        <ent-inst id="MCA-Pregnant" />
+        <ent-inst id="CSR-Tier3" />
+        <ent-inst id="CSR-Tier4" />
+        <ent-inst id="MCA-EXT" />
+        <ent-inst id="CSR-Tier1" />
+        <ent-inst id="MN-MCA" />
+        <ent-inst id="CSR-Tier2" />
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2016" />
+        <ent-inst id="2017" />
+      </ent-set>
+    </test-case>
+  </test-case-set>
+  <outcome-set>
+    <outcome name="so_programHBEE1302AppliesEff073014_b" display-name="HBEE 13.02 applies to program" text="HBEE 13.02 applies to the program (eff. 07/30/2014)" type="boolean" entity-type="program" entity-text="the program">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+    <outcome name="so_HBEE13.02Cat20140730_t" display-name="Eligibility Category" text="the person's eligibility category for the program under HBEE 13.02 (eff. 07/30/2014)" type="text" entity-type="program" entity-text="the program">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+  </outcome-set>
+</test-script>

@@ -1,0 +1,4346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-script product-version="10.4.6.76" schema-version="4">
+  <test-case-set>
+    <test-case name="01 - Sat 20.01 - No 20.02" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <attr-inst name="rb_g_calc-date-start" text="the calculation start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_g_primary-ID" text="the primary person's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="true">
+              <ent-inst-ref ref-id="plan 2" />
+              <ent-inst-ref ref-id="plan 4" />
+              <ent-inst-ref ref-id="plan 3" />
+              <ent-inst-ref ref-id="plan 1" />
+            </relationship-inst>
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+              <ent-inst-ref ref-id="person 3" />
+              <ent-inst-ref ref-id="person 2" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="true">
+              <ent-inst-ref ref-id="address 1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_med-disabled" text="the person is disabled" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_ssn-none" text="it is the case that the person does not have a social security number" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="the_person" text="the person" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_mil-vet-honor" text="the person is an honorably discharged veteran" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-blind" text="the person is blind" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1954-12-07</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE20.00Sat20140730_b" text="HBEE 20.00 is satisfied for the person (eff. 07/30/2014)" type="boolean" />
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="true">
+              <ent-inst-ref ref-id="personsresource 1" />
+            </relationship-inst>
+            <relationship-inst type="personsincomes" complete="true">
+              <ent-inst-ref ref-id="personsincome 1" />
+            </relationship-inst>
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 1" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="relatedparty 5" />
+              <ent-inst-ref ref-id="relatedparty 3" />
+              <ent-inst-ref ref-id="relatedparty 2" />
+              <ent-inst-ref ref-id="relatedparty 1" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="true">
+              <ent-inst-ref ref-id="personsexpense 3" />
+              <ent-inst-ref ref-id="personsexpense 1" />
+            </relationship-inst>
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Rick|Rick" />
+              <ent-inst-ref ref-id="Rick|Carl" />
+              <ent-inst-ref ref-id="Rick|Lori" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 3">
+          <attr-inst name="i_per_med-disabled" text="the person is disabled" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_ssn-none" text="it is the case that the person does not have a social security number" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="the_person" text="the person" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_mil-vet-honor" text="the person is an honorably discharged veteran" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-blind" text="the person is blind" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1963-09-09</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE20.00Sat20140730_b" text="HBEE 20.00 is satisfied for the person (eff. 07/30/2014)" type="boolean" />
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="true" />
+            <relationship-inst type="personsincomes" complete="true" />
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 2" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="true">
+              <ent-inst-ref ref-id="personsexpense 2" />
+            </relationship-inst>
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Lori|Lori" />
+              <ent-inst-ref ref-id="Lori|Rick" />
+              <ent-inst-ref ref-id="Lori|Carl" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 2">
+          <attr-inst name="i_per_med-disabled" text="the person is disabled" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_ssn-none" text="it is the case that the person does not have a social security number" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="the_person" text="the person" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-blind" text="the person is blind" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>2002-02-02</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesHomeOwn_b" text="the person lives in the person's own home" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE20.00Sat20140730_b" text="HBEE 20.00 is satisfied for the person (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="st_HBEE20.01Sat_b" text="HBEE 20.01 is satisfied for the person" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE20.02Apply_b" text="HBEE 20.02 applies to the person" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="true" />
+            <relationship-inst type="personsincomes" complete="true" />
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 3" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="relatedparty 4" />
+              <ent-inst-ref ref-id="relatedparty 6" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="true" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Carl|Carl" />
+              <ent-inst-ref ref-id="Carl|Lori" />
+              <ent-inst-ref ref-id="Carl|Rick" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Rick|Lori">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lori|Carl">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lori|Rick">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lori|Lori">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Lori">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Carl">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Rick|Rick">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Rick">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Rick|Carl">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="income" entity-text="the person's income">
+        <ent-inst id="personsincome 1">
+          <attr-inst name="i_inc_type" text="the person's income's type" type="text">
+            <val>
+              <text-val>Worker's Comp</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_inc_freq" text="the person's income's payment frequency" type="text">
+            <val>
+              <text-val>Weekly</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_inc_amt" text="the person's income's amount" type="currency">
+            <val>
+              <currency-val>200.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsincomesincomeprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="expense" entity-text="the person's expense">
+        <ent-inst id="personsexpense 3">
+          <attr-inst name="i_exp_type" text="the person's expense's type" type="text">
+            <val>
+              <text-val>Medical</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_freq" text="the person's expense's payment frequency" type="text">
+            <val>
+              <text-val>Quarterly</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>500.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_date-pay" text="the most recent pay date for the person's expense" type="date">
+            <val>
+              <date-val>2014-10-10</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="personsexpense 1">
+          <attr-inst name="i_exp_type" text="the person's expense's type" type="text">
+            <val>
+              <text-val>Utility</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_freq" text="the person's expense's payment frequency" type="text">
+            <val>
+              <text-val>Bi-Monthly</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>200.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="personsexpense 2">
+          <attr-inst name="i_exp_type" text="the person's expense's type" type="text">
+            <val>
+              <text-val>Housing</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_freq" text="the person's expense's payment frequency" type="text">
+            <val>
+              <text-val>Monthly</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>500.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="resource" entity-text="the person's resource">
+        <ent-inst id="personsresource 1">
+          <attr-inst name="i_res_type" text="the person's resource's type" type="text">
+            <val>
+              <text-val>Precious Metals</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresourcesresourceprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="benefit" entity-text="the existing benefit">
+        <ent-inst id="benefit 1">
+          <attr-inst name="i_b_primary-ID" text="the existing benefit's primary person's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>SNAP</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_bene-amt" text="the existing benefit's benefit amount" type="currency">
+            <val>
+              <currency-val>123.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-enrollment" text="the existing benefit's enrollment status" type="text">
+            <val>
+              <text-val>Enrolled</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-06-30</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 3">
+          <attr-inst name="i_b_primary-ID" text="the existing benefit's primary person's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>SNAP</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_bene-amt" text="the existing benefit's benefit amount" type="currency">
+            <val>
+              <currency-val>123.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-enrollment" text="the existing benefit's enrollment status" type="text">
+            <val>
+              <text-val>Enrolled</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-12-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 2">
+          <attr-inst name="i_b_primary-ID" text="the existing benefit's primary person's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>SNAP</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_bene-amt" text="the existing benefit's benefit amount" type="currency">
+            <val>
+              <currency-val>234.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-enrollment" text="the existing benefit's enrollment status" type="text">
+            <val>
+              <text-val>Enrolled</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-11-30</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-07-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 5">
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>TANF</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 4">
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>SNAP</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 6">
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>TANF</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="plan" entity-text="the existing benefit plan">
+        <ent-inst id="plan 2">
+          <attr-inst name="i_bp_type" text="the existing benefit plan's type" type="text">
+            <val>
+              <text-val>Food Benefits</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-start" text="the existing benefit plan's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_timestamp" text="the existing benefit plan's transaction date time" type="datetime">
+            <val>
+              <datetime-val>2013-12-25T09:09:09</datetime-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-end" text="the existing benefit plan's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="existingbenefitplansexistingbenefits" complete="true">
+              <ent-inst-ref ref-id="benefit 4" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="plan 4">
+          <attr-inst name="i_bp_type" text="the existing benefit plan's type" type="text">
+            <val>
+              <text-val>Financial Benefits</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-start" text="the existing benefit plan's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_timestamp" text="the existing benefit plan's transaction date time" type="datetime">
+            <val>
+              <datetime-val>2014-06-17T12:12:12</datetime-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-end" text="the existing benefit plan's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="existingbenefitplansexistingbenefits" complete="true">
+              <ent-inst-ref ref-id="benefit 6" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="plan 3">
+          <attr-inst name="i_bp_type" text="the existing benefit plan's type" type="text">
+            <val>
+              <text-val>Financial Benefits</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-start" text="the existing benefit plan's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_timestamp" text="the existing benefit plan's transaction date time" type="datetime">
+            <val>
+              <datetime-val>2013-12-25T09:09:09</datetime-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-end" text="the existing benefit plan's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="existingbenefitplansexistingbenefits" complete="true">
+              <ent-inst-ref ref-id="benefit 5" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="plan 1">
+          <attr-inst name="i_bp_type" text="the existing benefit plan's type" type="text">
+            <val>
+              <text-val>Food Benefits</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-start" text="the existing benefit plan's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_timestamp" text="the existing benefit plan's transaction date time" type="datetime">
+            <val>
+              <datetime-val>2014-06-17T12:12:12</datetime-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-end" text="the existing benefit plan's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="existingbenefitplansexistingbenefits" complete="true">
+              <ent-inst-ref ref-id="benefit 1" />
+              <ent-inst-ref ref-id="benefit 3" />
+              <ent-inst-ref ref-id="benefit 2" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person-address" entity-text="the person's address">
+        <ent-inst id="person-address 2">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="false" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person-address 3">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="false" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person-address 1">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="address" entity-text="the address">
+        <ent-inst id="address 1">
+          <attr-inst name="i_addr_state-abbr" text="the address's state" type="text">
+            <val>
+              <text-val>HI</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_addr_street" text="the address's street" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="related-party" entity-text="the related party">
+        <ent-inst id="relatedparty 5">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Purchase and Prepare</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_date-end" text="the end date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2009-09-09</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 4">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Parent</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 3">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Spouse</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_date-start" text="the start date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2012-12-12</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 2">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Purchase and Prepare</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_date-end" text="the end date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2009-09-09</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 1">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Child</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 6">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Purchase and Prepare</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_date-end" text="the end date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2009-09-09</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2016" />
+        <ent-inst id="2017" />
+      </ent-set>
+    </test-case>
+    <test-case name="02 - Sat 20.01 - Sat 20.02" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <attr-inst name="rb_g_calc-date-start" text="the calculation start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_g_primary-ID" text="the primary person's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="true">
+              <ent-inst-ref ref-id="plan 2" />
+              <ent-inst-ref ref-id="plan 4" />
+              <ent-inst-ref ref-id="plan 3" />
+              <ent-inst-ref ref-id="plan 1" />
+            </relationship-inst>
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+              <ent-inst-ref ref-id="person 3" />
+              <ent-inst-ref ref-id="person 2" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="true">
+              <ent-inst-ref ref-id="address 1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_med-disabled" text="the person is disabled" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_ssn-none" text="it is the case that the person does not have a social security number" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="the_person" text="the person" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_mil-vet-honor" text="the person is an honorably discharged veteran" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-blind" text="the person is blind" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1954-12-07</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE20.00Sat20140730_b" text="HBEE 20.00 is satisfied for the person (eff. 07/30/2014)" type="boolean" />
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="true">
+              <ent-inst-ref ref-id="personsresource 1" />
+            </relationship-inst>
+            <relationship-inst type="personsincomes" complete="true">
+              <ent-inst-ref ref-id="personsincome 1" />
+            </relationship-inst>
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 1" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="relatedparty 5" />
+              <ent-inst-ref ref-id="relatedparty 3" />
+              <ent-inst-ref ref-id="relatedparty 2" />
+              <ent-inst-ref ref-id="relatedparty 1" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="true">
+              <ent-inst-ref ref-id="personsexpense 3" />
+              <ent-inst-ref ref-id="personsexpense 1" />
+            </relationship-inst>
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Rick|Rick" />
+              <ent-inst-ref ref-id="Rick|Carl" />
+              <ent-inst-ref ref-id="Rick|Lori" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 3">
+          <attr-inst name="i_per_med-disabled" text="the person is disabled" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_ssn-none" text="it is the case that the person does not have a social security number" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="the_person" text="the person" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_mil-vet-honor" text="the person is an honorably discharged veteran" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-blind" text="the person is blind" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1963-09-09</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE20.00Sat20140730_b" text="HBEE 20.00 is satisfied for the person (eff. 07/30/2014)" type="boolean" />
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="true" />
+            <relationship-inst type="personsincomes" complete="true" />
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 2" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="true">
+              <ent-inst-ref ref-id="personsexpense 2" />
+            </relationship-inst>
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Lori|Lori" />
+              <ent-inst-ref ref-id="Lori|Rick" />
+              <ent-inst-ref ref-id="Lori|Carl" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 2">
+          <attr-inst name="i_per_med-disabled" text="the person is disabled" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_ssn-none" text="it is the case that the person does not have a social security number" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="the_person" text="the person" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-blind" text="the person is blind" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>2002-02-02</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesHomeOwn_b" text="the person lives in the person's own home" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesFacCorrections_b" text="the person is living in a correctional facility" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE20.00Sat20140730_b" text="HBEE 20.00 is satisfied for the person (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="st_HBEE20.01Sat_b" text="HBEE 20.01 is satisfied for the person" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE20.02Apply_b" text="HBEE 20.02 applies to the person" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE20.02Sat_b" text="HBEE 20.02 is satisfied for the person" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="true" />
+            <relationship-inst type="personsincomes" complete="true" />
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 3" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="relatedparty 4" />
+              <ent-inst-ref ref-id="relatedparty 6" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="true" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Carl|Carl" />
+              <ent-inst-ref ref-id="Carl|Lori" />
+              <ent-inst-ref ref-id="Carl|Rick" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Rick|Lori">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Rick|Rick">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Rick|Carl">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Carl">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lori|Rick">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lori|Carl">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Rick">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Lori">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lori|Lori">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="income" entity-text="the person's income">
+        <ent-inst id="personsincome 1">
+          <attr-inst name="i_inc_type" text="the person's income's type" type="text">
+            <val>
+              <text-val>Worker's Comp</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_inc_freq" text="the person's income's payment frequency" type="text">
+            <val>
+              <text-val>Weekly</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_inc_amt" text="the person's income's amount" type="currency">
+            <val>
+              <currency-val>200.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsincomesincomeprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="expense" entity-text="the person's expense">
+        <ent-inst id="personsexpense 3">
+          <attr-inst name="i_exp_type" text="the person's expense's type" type="text">
+            <val>
+              <text-val>Medical</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_freq" text="the person's expense's payment frequency" type="text">
+            <val>
+              <text-val>Quarterly</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>500.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_date-pay" text="the most recent pay date for the person's expense" type="date">
+            <val>
+              <date-val>2014-10-10</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="personsexpense 1">
+          <attr-inst name="i_exp_type" text="the person's expense's type" type="text">
+            <val>
+              <text-val>Utility</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_freq" text="the person's expense's payment frequency" type="text">
+            <val>
+              <text-val>Bi-Monthly</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>200.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="personsexpense 2">
+          <attr-inst name="i_exp_type" text="the person's expense's type" type="text">
+            <val>
+              <text-val>Housing</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_freq" text="the person's expense's payment frequency" type="text">
+            <val>
+              <text-val>Monthly</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>500.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="resource" entity-text="the person's resource">
+        <ent-inst id="personsresource 1">
+          <attr-inst name="i_res_type" text="the person's resource's type" type="text">
+            <val>
+              <text-val>Precious Metals</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresourcesresourceprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="benefit" entity-text="the existing benefit">
+        <ent-inst id="benefit 1">
+          <attr-inst name="i_b_primary-ID" text="the existing benefit's primary person's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>SNAP</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_bene-amt" text="the existing benefit's benefit amount" type="currency">
+            <val>
+              <currency-val>123.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-enrollment" text="the existing benefit's enrollment status" type="text">
+            <val>
+              <text-val>Enrolled</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-06-30</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 3">
+          <attr-inst name="i_b_primary-ID" text="the existing benefit's primary person's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>SNAP</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_bene-amt" text="the existing benefit's benefit amount" type="currency">
+            <val>
+              <currency-val>123.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-enrollment" text="the existing benefit's enrollment status" type="text">
+            <val>
+              <text-val>Enrolled</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-12-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 2">
+          <attr-inst name="i_b_primary-ID" text="the existing benefit's primary person's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>SNAP</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_bene-amt" text="the existing benefit's benefit amount" type="currency">
+            <val>
+              <currency-val>234.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-enrollment" text="the existing benefit's enrollment status" type="text">
+            <val>
+              <text-val>Enrolled</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-11-30</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-07-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 5">
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>TANF</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 4">
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>SNAP</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 6">
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>TANF</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="plan" entity-text="the existing benefit plan">
+        <ent-inst id="plan 2">
+          <attr-inst name="i_bp_type" text="the existing benefit plan's type" type="text">
+            <val>
+              <text-val>Food Benefits</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-start" text="the existing benefit plan's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_timestamp" text="the existing benefit plan's transaction date time" type="datetime">
+            <val>
+              <datetime-val>2013-12-25T09:09:09</datetime-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-end" text="the existing benefit plan's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="existingbenefitplansexistingbenefits" complete="true">
+              <ent-inst-ref ref-id="benefit 4" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="plan 4">
+          <attr-inst name="i_bp_type" text="the existing benefit plan's type" type="text">
+            <val>
+              <text-val>Financial Benefits</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-start" text="the existing benefit plan's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_timestamp" text="the existing benefit plan's transaction date time" type="datetime">
+            <val>
+              <datetime-val>2014-06-17T12:12:12</datetime-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-end" text="the existing benefit plan's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="existingbenefitplansexistingbenefits" complete="true">
+              <ent-inst-ref ref-id="benefit 6" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="plan 3">
+          <attr-inst name="i_bp_type" text="the existing benefit plan's type" type="text">
+            <val>
+              <text-val>Financial Benefits</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-start" text="the existing benefit plan's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_timestamp" text="the existing benefit plan's transaction date time" type="datetime">
+            <val>
+              <datetime-val>2013-12-25T09:09:09</datetime-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-end" text="the existing benefit plan's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="existingbenefitplansexistingbenefits" complete="true">
+              <ent-inst-ref ref-id="benefit 5" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="plan 1">
+          <attr-inst name="i_bp_type" text="the existing benefit plan's type" type="text">
+            <val>
+              <text-val>Food Benefits</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-start" text="the existing benefit plan's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_timestamp" text="the existing benefit plan's transaction date time" type="datetime">
+            <val>
+              <datetime-val>2014-06-17T12:12:12</datetime-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-end" text="the existing benefit plan's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="existingbenefitplansexistingbenefits" complete="true">
+              <ent-inst-ref ref-id="benefit 1" />
+              <ent-inst-ref ref-id="benefit 3" />
+              <ent-inst-ref ref-id="benefit 2" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person-address" entity-text="the person's address">
+        <ent-inst id="person-address 2">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="false" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person-address 3">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="false" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person-address 1">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="address" entity-text="the address">
+        <ent-inst id="address 1">
+          <attr-inst name="i_addr_state-abbr" text="the address's state" type="text">
+            <val>
+              <text-val>HI</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_addr_street" text="the address's street" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="related-party" entity-text="the related party">
+        <ent-inst id="relatedparty 5">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Purchase and Prepare</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_date-end" text="the end date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2009-09-09</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 4">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Parent</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 3">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Spouse</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_date-start" text="the start date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2012-12-12</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 2">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Purchase and Prepare</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_date-end" text="the end date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2009-09-09</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 1">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Child</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 6">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Purchase and Prepare</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_date-end" text="the end date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2009-09-09</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2016" />
+        <ent-inst id="2017" />
+      </ent-set>
+    </test-case>
+    <test-case name="03 - NotSat 20.01 of 20.04" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <attr-inst name="rb_g_calc-date-start" text="the calculation start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_g_primary-ID" text="the primary person's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="true">
+              <ent-inst-ref ref-id="plan 2" />
+              <ent-inst-ref ref-id="plan 4" />
+              <ent-inst-ref ref-id="plan 3" />
+              <ent-inst-ref ref-id="plan 1" />
+            </relationship-inst>
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+              <ent-inst-ref ref-id="person 3" />
+              <ent-inst-ref ref-id="person 2" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="true">
+              <ent-inst-ref ref-id="address 1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_med-disabled" text="the person is disabled" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_ssn-none" text="it is the case that the person does not have a social security number" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="the_person" text="the person" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_mil-vet-honor" text="the person is an honorably discharged veteran" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-blind" text="the person is blind" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1954-12-07</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE20.00Sat20140730_b" text="HBEE 20.00 is satisfied for the person (eff. 07/30/2014)" type="boolean" />
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="true">
+              <ent-inst-ref ref-id="personsresource 1" />
+            </relationship-inst>
+            <relationship-inst type="personsincomes" complete="true">
+              <ent-inst-ref ref-id="personsincome 1" />
+            </relationship-inst>
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 1" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="relatedparty 5" />
+              <ent-inst-ref ref-id="relatedparty 3" />
+              <ent-inst-ref ref-id="relatedparty 2" />
+              <ent-inst-ref ref-id="relatedparty 1" />
+            </relationship-inst>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="true">
+              <ent-inst-ref ref-id="personsexpense 3" />
+              <ent-inst-ref ref-id="personsexpense 1" />
+            </relationship-inst>
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Rick|Rick" />
+              <ent-inst-ref ref-id="Rick|Carl" />
+              <ent-inst-ref ref-id="Rick|Lori" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 3">
+          <attr-inst name="i_per_med-disabled" text="the person is disabled" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_ssn-none" text="it is the case that the person does not have a social security number" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="the_person" text="the person" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_mil-vet-honor" text="the person is an honorably discharged veteran" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-blind" text="the person is blind" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1963-09-09</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE20.00Sat20140730_b" text="HBEE 20.00 is satisfied for the person (eff. 07/30/2014)" type="boolean" />
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="true" />
+            <relationship-inst type="personsincomes" complete="true" />
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 2" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="true">
+              <ent-inst-ref ref-id="personsexpense 2" />
+            </relationship-inst>
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Lori|Lori" />
+              <ent-inst-ref ref-id="Lori|Rick" />
+              <ent-inst-ref ref-id="Lori|Carl" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 2">
+          <attr-inst name="i_per_med-disabled" text="the person is disabled" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_ssn-none" text="it is the case that the person does not have a social security number" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="the_person" text="the person" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-blind" text="the person is blind" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>2002-02-02</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesHomeOwn_b" text="the person lives in the person's own home" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesFacCorrections_b" text="the person is living in a correctional facility" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE20.00Sat20140730_b" text="HBEE 20.00 is satisfied for the person (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2014-07-30">
+                <boolean-val>false</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="st_HBEE20.01Sat_b" text="HBEE 20.01 is satisfied for the person" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE20.04Sat_b" text="HBEE 20.04 is satisfied for the person" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_person_receiving_mediciad_b" text="the person is currently receiving Medicaid benefits" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesInstMedInpatien_b" text="the person is in an inpatient medical institution" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresources" complete="true" />
+            <relationship-inst type="personsincomes" complete="true" />
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 3" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="relatedparty 4" />
+              <ent-inst-ref ref-id="relatedparty 6" />
+            </relationship-inst>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsexpenses" complete="true" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Carl|Carl" />
+              <ent-inst-ref ref-id="Carl|Lori" />
+              <ent-inst-ref ref-id="Carl|Rick" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Carl|Rick">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Rick|Lori">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lori|Lori">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Carl">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Lori">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lori|Carl">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Rick|Carl">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Rick|Rick">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lori|Rick">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="income" entity-text="the person's income">
+        <ent-inst id="personsincome 1">
+          <attr-inst name="i_inc_type" text="the person's income's type" type="text">
+            <val>
+              <text-val>Worker's Comp</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_inc_freq" text="the person's income's payment frequency" type="text">
+            <val>
+              <text-val>Weekly</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_inc_amt" text="the person's income's amount" type="currency">
+            <val>
+              <currency-val>200.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsincomesincomeprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="expense" entity-text="the person's expense">
+        <ent-inst id="personsexpense 3">
+          <attr-inst name="i_exp_type" text="the person's expense's type" type="text">
+            <val>
+              <text-val>Medical</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_freq" text="the person's expense's payment frequency" type="text">
+            <val>
+              <text-val>Quarterly</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>500.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_date-pay" text="the most recent pay date for the person's expense" type="date">
+            <val>
+              <date-val>2014-10-10</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="personsexpense 1">
+          <attr-inst name="i_exp_type" text="the person's expense's type" type="text">
+            <val>
+              <text-val>Utility</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_freq" text="the person's expense's payment frequency" type="text">
+            <val>
+              <text-val>Bi-Monthly</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>200.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="personsexpense 2">
+          <attr-inst name="i_exp_type" text="the person's expense's type" type="text">
+            <val>
+              <text-val>Housing</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_freq" text="the person's expense's payment frequency" type="text">
+            <val>
+              <text-val>Monthly</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>500.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="resource" entity-text="the person's resource">
+        <ent-inst id="personsresource 1">
+          <attr-inst name="i_res_type" text="the person's resource's type" type="text">
+            <val>
+              <text-val>Precious Metals</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresourcesresourceprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="benefit" entity-text="the existing benefit">
+        <ent-inst id="benefit 1">
+          <attr-inst name="i_b_primary-ID" text="the existing benefit's primary person's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>SNAP</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_bene-amt" text="the existing benefit's benefit amount" type="currency">
+            <val>
+              <currency-val>123.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-enrollment" text="the existing benefit's enrollment status" type="text">
+            <val>
+              <text-val>Enrolled</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-06-30</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 3">
+          <attr-inst name="i_b_primary-ID" text="the existing benefit's primary person's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>SNAP</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_bene-amt" text="the existing benefit's benefit amount" type="currency">
+            <val>
+              <currency-val>123.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-enrollment" text="the existing benefit's enrollment status" type="text">
+            <val>
+              <text-val>Enrolled</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-12-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 2">
+          <attr-inst name="i_b_primary-ID" text="the existing benefit's primary person's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>SNAP</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_bene-amt" text="the existing benefit's benefit amount" type="currency">
+            <val>
+              <currency-val>234.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-enrollment" text="the existing benefit's enrollment status" type="text">
+            <val>
+              <text-val>Enrolled</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-11-30</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-07-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 5">
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>TANF</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 4">
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>SNAP</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 6">
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>TANF</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="plan" entity-text="the existing benefit plan">
+        <ent-inst id="plan 2">
+          <attr-inst name="i_bp_type" text="the existing benefit plan's type" type="text">
+            <val>
+              <text-val>Food Benefits</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-start" text="the existing benefit plan's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_timestamp" text="the existing benefit plan's transaction date time" type="datetime">
+            <val>
+              <datetime-val>2013-12-25T09:09:09</datetime-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-end" text="the existing benefit plan's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="existingbenefitplansexistingbenefits" complete="true">
+              <ent-inst-ref ref-id="benefit 4" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="plan 4">
+          <attr-inst name="i_bp_type" text="the existing benefit plan's type" type="text">
+            <val>
+              <text-val>Financial Benefits</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-start" text="the existing benefit plan's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_timestamp" text="the existing benefit plan's transaction date time" type="datetime">
+            <val>
+              <datetime-val>2014-06-17T12:12:12</datetime-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-end" text="the existing benefit plan's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="existingbenefitplansexistingbenefits" complete="true">
+              <ent-inst-ref ref-id="benefit 6" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="plan 3">
+          <attr-inst name="i_bp_type" text="the existing benefit plan's type" type="text">
+            <val>
+              <text-val>Financial Benefits</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-start" text="the existing benefit plan's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_timestamp" text="the existing benefit plan's transaction date time" type="datetime">
+            <val>
+              <datetime-val>2013-12-25T09:09:09</datetime-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-end" text="the existing benefit plan's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="existingbenefitplansexistingbenefits" complete="true">
+              <ent-inst-ref ref-id="benefit 5" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="plan 1">
+          <attr-inst name="i_bp_type" text="the existing benefit plan's type" type="text">
+            <val>
+              <text-val>Food Benefits</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-start" text="the existing benefit plan's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_timestamp" text="the existing benefit plan's transaction date time" type="datetime">
+            <val>
+              <datetime-val>2014-06-17T12:12:12</datetime-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-end" text="the existing benefit plan's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="existingbenefitplansexistingbenefits" complete="true">
+              <ent-inst-ref ref-id="benefit 1" />
+              <ent-inst-ref ref-id="benefit 3" />
+              <ent-inst-ref ref-id="benefit 2" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person-address" entity-text="the person's address">
+        <ent-inst id="person-address 2">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="false" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person-address 3">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="false" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person-address 1">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="address" entity-text="the address">
+        <ent-inst id="address 1">
+          <attr-inst name="i_addr_state-abbr" text="the address's state" type="text">
+            <val>
+              <text-val>HI</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_addr_street" text="the address's street" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="related-party" entity-text="the related party">
+        <ent-inst id="relatedparty 5">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Purchase and Prepare</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_date-end" text="the end date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2009-09-09</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 4">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Parent</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 3">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Spouse</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_date-start" text="the start date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2012-12-12</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 2">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Purchase and Prepare</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_date-end" text="the end date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2009-09-09</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 1">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Child</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 6">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Purchase and Prepare</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_date-end" text="the end date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2009-09-09</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2016" />
+        <ent-inst id="2017" />
+      </ent-set>
+    </test-case>
+    <test-case name="04 - Sat 20.01" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <attr-inst name="rb_g_calc-date-start" text="the calculation start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_g_primary-ID" text="the primary person's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="true">
+              <ent-inst-ref ref-id="plan 2" />
+              <ent-inst-ref ref-id="plan 4" />
+              <ent-inst-ref ref-id="plan 3" />
+              <ent-inst-ref ref-id="plan 1" />
+            </relationship-inst>
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+              <ent-inst-ref ref-id="person 3" />
+              <ent-inst-ref ref-id="person 2" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="true">
+              <ent-inst-ref ref-id="address 1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_med-disabled" text="the person is disabled" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_ssn-none" text="it is the case that the person does not have a social security number" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="the_person" text="the person" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_mil-vet-honor" text="the person is an honorably discharged veteran" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-blind" text="the person is blind" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1954-12-07</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="true">
+              <ent-inst-ref ref-id="personsresource 1" />
+            </relationship-inst>
+            <relationship-inst type="personsincomes" complete="true">
+              <ent-inst-ref ref-id="personsincome 1" />
+            </relationship-inst>
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 1" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="relatedparty 5" />
+              <ent-inst-ref ref-id="relatedparty 3" />
+              <ent-inst-ref ref-id="relatedparty 2" />
+              <ent-inst-ref ref-id="relatedparty 1" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="true">
+              <ent-inst-ref ref-id="personsexpense 3" />
+              <ent-inst-ref ref-id="personsexpense 1" />
+            </relationship-inst>
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Rick|Rick" />
+              <ent-inst-ref ref-id="Rick|Carl" />
+              <ent-inst-ref ref-id="Rick|Lori" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 3">
+          <attr-inst name="i_per_med-disabled" text="the person is disabled" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_ssn-none" text="it is the case that the person does not have a social security number" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="the_person" text="the person" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_mil-vet-honor" text="the person is an honorably discharged veteran" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-blind" text="the person is blind" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1963-09-09</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="true" />
+            <relationship-inst type="personsincomes" complete="true" />
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 2" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="true">
+              <ent-inst-ref ref-id="personsexpense 2" />
+            </relationship-inst>
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Lori|Lori" />
+              <ent-inst-ref ref-id="Lori|Rick" />
+              <ent-inst-ref ref-id="Lori|Carl" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 2">
+          <attr-inst name="i_per_med-disabled" text="the person is disabled" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_ssn-none" text="it is the case that the person does not have a social security number" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="the_person" text="the person" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-blind" text="the person is blind" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>2002-02-02</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesHomeOwn_b" text="the person lives in the person's own home" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesFacCorrections_b" text="the person is living in a correctional facility" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesInstMedInpatien_b" text="the person is in an inpatient medical institution" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE20.00Sat20140730_b" text="HBEE 20.00 is satisfied for the person (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <uncertain-val />
+              <change-point date="2014-07-30">
+                <boolean-val>true</boolean-val>
+              </change-point>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="st_HBEE20.02Sat_b" text="HBEE 20.02 is satisfied for the person" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_personHomeless_b" text="the person is homeless" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="true" />
+            <relationship-inst type="personsincomes" complete="true" />
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 3" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="relatedparty 4" />
+              <ent-inst-ref ref-id="relatedparty 6" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="true" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Carl|Carl" />
+              <ent-inst-ref ref-id="Carl|Lori" />
+              <ent-inst-ref ref-id="Carl|Rick" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Lori|Lori">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Rick|Lori">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Rick">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Rick|Rick">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Lori">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lori|Carl">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Rick|Carl">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lori|Rick">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Carl">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="income" entity-text="the person's income">
+        <ent-inst id="personsincome 1">
+          <attr-inst name="i_inc_type" text="the person's income's type" type="text">
+            <val>
+              <text-val>Worker's Comp</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_inc_freq" text="the person's income's payment frequency" type="text">
+            <val>
+              <text-val>Weekly</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_inc_amt" text="the person's income's amount" type="currency">
+            <val>
+              <currency-val>200.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsincomesincomeprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="expense" entity-text="the person's expense">
+        <ent-inst id="personsexpense 3">
+          <attr-inst name="i_exp_type" text="the person's expense's type" type="text">
+            <val>
+              <text-val>Medical</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_freq" text="the person's expense's payment frequency" type="text">
+            <val>
+              <text-val>Quarterly</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>500.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_date-pay" text="the most recent pay date for the person's expense" type="date">
+            <val>
+              <date-val>2014-10-10</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="personsexpense 1">
+          <attr-inst name="i_exp_type" text="the person's expense's type" type="text">
+            <val>
+              <text-val>Utility</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_freq" text="the person's expense's payment frequency" type="text">
+            <val>
+              <text-val>Bi-Monthly</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>200.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="personsexpense 2">
+          <attr-inst name="i_exp_type" text="the person's expense's type" type="text">
+            <val>
+              <text-val>Housing</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_freq" text="the person's expense's payment frequency" type="text">
+            <val>
+              <text-val>Monthly</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>500.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="resource" entity-text="the person's resource">
+        <ent-inst id="personsresource 1">
+          <attr-inst name="i_res_type" text="the person's resource's type" type="text">
+            <val>
+              <text-val>Precious Metals</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresourcesresourceprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="benefit" entity-text="the existing benefit">
+        <ent-inst id="benefit 1">
+          <attr-inst name="i_b_primary-ID" text="the existing benefit's primary person's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>SNAP</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_bene-amt" text="the existing benefit's benefit amount" type="currency">
+            <val>
+              <currency-val>123.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-enrollment" text="the existing benefit's enrollment status" type="text">
+            <val>
+              <text-val>Enrolled</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-06-30</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 3">
+          <attr-inst name="i_b_primary-ID" text="the existing benefit's primary person's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>SNAP</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_bene-amt" text="the existing benefit's benefit amount" type="currency">
+            <val>
+              <currency-val>123.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-enrollment" text="the existing benefit's enrollment status" type="text">
+            <val>
+              <text-val>Enrolled</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-12-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 2">
+          <attr-inst name="i_b_primary-ID" text="the existing benefit's primary person's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>SNAP</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_bene-amt" text="the existing benefit's benefit amount" type="currency">
+            <val>
+              <currency-val>234.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-enrollment" text="the existing benefit's enrollment status" type="text">
+            <val>
+              <text-val>Enrolled</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-11-30</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-07-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 5">
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>TANF</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 4">
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>SNAP</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 6">
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>TANF</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="plan" entity-text="the existing benefit plan">
+        <ent-inst id="plan 2">
+          <attr-inst name="i_bp_type" text="the existing benefit plan's type" type="text">
+            <val>
+              <text-val>Food Benefits</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-start" text="the existing benefit plan's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_timestamp" text="the existing benefit plan's transaction date time" type="datetime">
+            <val>
+              <datetime-val>2013-12-25T09:09:09</datetime-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-end" text="the existing benefit plan's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="existingbenefitplansexistingbenefits" complete="true">
+              <ent-inst-ref ref-id="benefit 4" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="plan 4">
+          <attr-inst name="i_bp_type" text="the existing benefit plan's type" type="text">
+            <val>
+              <text-val>Financial Benefits</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-start" text="the existing benefit plan's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_timestamp" text="the existing benefit plan's transaction date time" type="datetime">
+            <val>
+              <datetime-val>2014-06-17T12:12:12</datetime-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-end" text="the existing benefit plan's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="existingbenefitplansexistingbenefits" complete="true">
+              <ent-inst-ref ref-id="benefit 6" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="plan 3">
+          <attr-inst name="i_bp_type" text="the existing benefit plan's type" type="text">
+            <val>
+              <text-val>Financial Benefits</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-start" text="the existing benefit plan's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_timestamp" text="the existing benefit plan's transaction date time" type="datetime">
+            <val>
+              <datetime-val>2013-12-25T09:09:09</datetime-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-end" text="the existing benefit plan's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="existingbenefitplansexistingbenefits" complete="true">
+              <ent-inst-ref ref-id="benefit 5" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="plan 1">
+          <attr-inst name="i_bp_type" text="the existing benefit plan's type" type="text">
+            <val>
+              <text-val>Food Benefits</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-start" text="the existing benefit plan's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_timestamp" text="the existing benefit plan's transaction date time" type="datetime">
+            <val>
+              <datetime-val>2014-06-17T12:12:12</datetime-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-end" text="the existing benefit plan's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="existingbenefitplansexistingbenefits" complete="true">
+              <ent-inst-ref ref-id="benefit 1" />
+              <ent-inst-ref ref-id="benefit 3" />
+              <ent-inst-ref ref-id="benefit 2" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person-address" entity-text="the person's address">
+        <ent-inst id="person-address 2">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="false" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person-address 3">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="false" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person-address 1">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="address" entity-text="the address">
+        <ent-inst id="address 1">
+          <attr-inst name="i_addr_state-abbr" text="the address's state" type="text">
+            <val>
+              <text-val>HI</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_addr_street" text="the address's street" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="related-party" entity-text="the related party">
+        <ent-inst id="relatedparty 5">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Purchase and Prepare</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_date-end" text="the end date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2009-09-09</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 4">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Parent</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 3">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Spouse</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_date-start" text="the start date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2012-12-12</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 2">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Purchase and Prepare</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_date-end" text="the end date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2009-09-09</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 1">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Child</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 6">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Purchase and Prepare</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_date-end" text="the end date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2009-09-09</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2016" />
+        <ent-inst id="2017" />
+      </ent-set>
+    </test-case>
+    <test-case name="05 - Sat 20.04 - No 20.02" notes="">
+      <ent-set entity-type="global" entity-text="Global">
+        <ent-inst id="global 1">
+          <attr-inst name="rb_g_calc-date-start" text="the calculation start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_g_primary-ID" text="the primary person's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="povertyguidelines" complete="true">
+              <ent-inst-ref ref-id="2017" />
+              <ent-inst-ref ref-id="2014" />
+              <ent-inst-ref ref-id="2016" />
+              <ent-inst-ref ref-id="2013" />
+              <ent-inst-ref ref-id="2015" />
+            </relationship-inst>
+            <relationship-inst type="baseprograms" complete="true" />
+            <relationship-inst type="existingbenefitplans" complete="true">
+              <ent-inst-ref ref-id="plan 2" />
+              <ent-inst-ref ref-id="plan 4" />
+              <ent-inst-ref ref-id="plan 3" />
+              <ent-inst-ref ref-id="plan 1" />
+            </relationship-inst>
+            <relationship-inst type="caseresults" complete="true" />
+            <relationship-inst type="people" complete="true">
+              <ent-inst-ref ref-id="person 1" />
+              <ent-inst-ref ref-id="person 3" />
+              <ent-inst-ref ref-id="person 2" />
+            </relationship-inst>
+            <relationship-inst type="addresses" complete="true">
+              <ent-inst-ref ref-id="address 1" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person" entity-text="the person">
+        <ent-inst id="person 1">
+          <attr-inst name="i_per_med-disabled" text="the person is disabled" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_ssn-none" text="it is the case that the person does not have a social security number" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="the_person" text="the person" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_mil-vet-honor" text="the person is an honorably discharged veteran" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-blind" text="the person is blind" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1954-12-07</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE20.00Sat20140730_b" text="HBEE 20.00 is satisfied for the person (eff. 07/30/2014)" type="boolean" />
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="true">
+              <ent-inst-ref ref-id="personsresource 1" />
+            </relationship-inst>
+            <relationship-inst type="personsincomes" complete="true">
+              <ent-inst-ref ref-id="personsincome 1" />
+            </relationship-inst>
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 1" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="relatedparty 5" />
+              <ent-inst-ref ref-id="relatedparty 3" />
+              <ent-inst-ref ref-id="relatedparty 2" />
+              <ent-inst-ref ref-id="relatedparty 1" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="true">
+              <ent-inst-ref ref-id="personsexpense 3" />
+              <ent-inst-ref ref-id="personsexpense 1" />
+            </relationship-inst>
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Rick|Rick" />
+              <ent-inst-ref ref-id="Rick|Carl" />
+              <ent-inst-ref ref-id="Rick|Lori" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 3">
+          <attr-inst name="i_per_med-disabled" text="the person is disabled" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_ssn-none" text="it is the case that the person does not have a social security number" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="the_person" text="the person" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_mil-vet-honor" text="the person is an honorably discharged veteran" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-blind" text="the person is blind" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>1963-09-09</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE20.00Sat20140730_b" text="HBEE 20.00 is satisfied for the person (eff. 07/30/2014)" type="boolean" />
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="true" />
+            <relationship-inst type="personsincomes" complete="true" />
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 2" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true" />
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="true">
+              <ent-inst-ref ref-id="personsexpense 2" />
+            </relationship-inst>
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Lori|Lori" />
+              <ent-inst-ref ref-id="Lori|Rick" />
+              <ent-inst-ref ref-id="Lori|Carl" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person 2">
+          <attr-inst name="i_per_med-disabled" text="the person is disabled" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_ssn-none" text="it is the case that the person does not have a social security number" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="the_person" text="the person" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_med-blind" text="the person is blind" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per_dob" text="the person's date of birth" type="date">
+            <val>
+              <date-val>2002-02-02</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="si_livesHomeOwn_b" text="the person lives in the person's own home" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="so_HBEE20.00Sat20140730_b" text="HBEE 20.00 is satisfied for the person (eff. 07/30/2014)" type="boolean">
+            <expected-val>
+              <boolean-val>true</boolean-val>
+            </expected-val>
+          </attr-inst>
+          <attr-inst name="st_HBEE20.01Sat_b" text="HBEE 20.01 is satisfied for the person" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE20.02Apply_b" text="HBEE 20.02 applies to the person" type="boolean">
+            <val>
+              <boolean-val>false</boolean-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="st_HBEE20.04Sat_b" text="HBEE 20.04 is satisfied for the person" type="boolean">
+            <val>
+              <boolean-val>true</boolean-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personstransfers" complete="false" />
+            <relationship-inst type="personsresources" complete="true" />
+            <relationship-inst type="personsincomes" complete="true" />
+            <relationship-inst type="personsaddresses" complete="true">
+              <ent-inst-ref ref-id="person-address 3" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestedbenefits" complete="true" />
+            <relationship-inst type="personsrelatedparties" complete="true">
+              <ent-inst-ref ref-id="relatedparty 4" />
+              <ent-inst-ref ref-id="relatedparty 6" />
+            </relationship-inst>
+            <relationship-inst type="personsrequestsforassistance" complete="true" />
+            <relationship-inst type="personsexpenses" complete="true" />
+            <relationship-inst type="personsgroupmembers" complete="true">
+              <ent-inst-ref ref-id="Carl|Carl" />
+              <ent-inst-ref ref-id="Carl|Lori" />
+              <ent-inst-ref ref-id="Carl|Rick" />
+            </relationship-inst>
+            <relationship-inst type="personsprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="groupmember" entity-text="the group member" inferred="yes" identifying-attribute="rb_gm_ID">
+        <ent-inst id="Lori|Rick">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lori|Carl">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Lori">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Lori|Lori">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Rick">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Carl|Carl">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Rick|Lori">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Rick|Carl">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="Rick|Rick">
+          <relationship-set>
+            <relationship-inst type="groupmembersgroupmemberprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="income" entity-text="the person's income">
+        <ent-inst id="personsincome 1">
+          <attr-inst name="i_inc_type" text="the person's income's type" type="text">
+            <val>
+              <text-val>Worker's Comp</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_inc_freq" text="the person's income's payment frequency" type="text">
+            <val>
+              <text-val>Weekly</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_inc_amt" text="the person's income's amount" type="currency">
+            <val>
+              <currency-val>200.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsincomesincomeprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="expense" entity-text="the person's expense">
+        <ent-inst id="personsexpense 3">
+          <attr-inst name="i_exp_type" text="the person's expense's type" type="text">
+            <val>
+              <text-val>Medical</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_freq" text="the person's expense's payment frequency" type="text">
+            <val>
+              <text-val>Quarterly</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>500.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_date-pay" text="the most recent pay date for the person's expense" type="date">
+            <val>
+              <date-val>2014-10-10</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="personsexpense 1">
+          <attr-inst name="i_exp_type" text="the person's expense's type" type="text">
+            <val>
+              <text-val>Utility</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_freq" text="the person's expense's payment frequency" type="text">
+            <val>
+              <text-val>Bi-Monthly</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>200.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="personsexpense 2">
+          <attr-inst name="i_exp_type" text="the person's expense's type" type="text">
+            <val>
+              <text-val>Housing</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_freq" text="the person's expense's payment frequency" type="text">
+            <val>
+              <text-val>Monthly</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_exp_amt" text="the person's expense's amount" type="currency">
+            <val>
+              <currency-val>500.0</currency-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsexpensesexpenseprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="resource" entity-text="the person's resource">
+        <ent-inst id="personsresource 1">
+          <attr-inst name="i_res_type" text="the person's resource's type" type="text">
+            <val>
+              <text-val>Precious Metals</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="personsresourcesresourceprograms" complete="true" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="benefit" entity-text="the existing benefit">
+        <ent-inst id="benefit 1">
+          <attr-inst name="i_b_primary-ID" text="the existing benefit's primary person's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>SNAP</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_bene-amt" text="the existing benefit's benefit amount" type="currency">
+            <val>
+              <currency-val>123.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-enrollment" text="the existing benefit's enrollment status" type="text">
+            <val>
+              <text-val>Enrolled</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-06-30</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 3">
+          <attr-inst name="i_b_primary-ID" text="the existing benefit's primary person's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>SNAP</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_bene-amt" text="the existing benefit's benefit amount" type="currency">
+            <val>
+              <currency-val>123.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-enrollment" text="the existing benefit's enrollment status" type="text">
+            <val>
+              <text-val>Enrolled</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-12-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 2">
+          <attr-inst name="i_b_primary-ID" text="the existing benefit's primary person's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>SNAP</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_bene-amt" text="the existing benefit's benefit amount" type="currency">
+            <val>
+              <currency-val>234.0</currency-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-enrollment" text="the existing benefit's enrollment status" type="text">
+            <val>
+              <text-val>Enrolled</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-11-30</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-07-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 5">
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>TANF</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 4">
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>SNAP</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="benefit 6">
+          <attr-inst name="i_b_person-ID" text="the existing benefit's recipient's ID" type="text">
+            <val>
+              <text-val>Rick</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-end" text="the existing benefit's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_program-name" text="the existing benefit's program" type="text">
+            <val>
+              <text-val>TANF</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_status-eligibility" text="the existing benefit's eligibility status" type="text">
+            <val>
+              <text-val>Eligible</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_b_date-start" text="the existing benefit's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="plan" entity-text="the existing benefit plan">
+        <ent-inst id="plan 2">
+          <attr-inst name="i_bp_type" text="the existing benefit plan's type" type="text">
+            <val>
+              <text-val>Food Benefits</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-start" text="the existing benefit plan's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_timestamp" text="the existing benefit plan's transaction date time" type="datetime">
+            <val>
+              <datetime-val>2013-12-25T09:09:09</datetime-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-end" text="the existing benefit plan's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="existingbenefitplansexistingbenefits" complete="true">
+              <ent-inst-ref ref-id="benefit 4" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="plan 4">
+          <attr-inst name="i_bp_type" text="the existing benefit plan's type" type="text">
+            <val>
+              <text-val>Financial Benefits</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-start" text="the existing benefit plan's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_timestamp" text="the existing benefit plan's transaction date time" type="datetime">
+            <val>
+              <datetime-val>2014-06-17T12:12:12</datetime-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-end" text="the existing benefit plan's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="existingbenefitplansexistingbenefits" complete="true">
+              <ent-inst-ref ref-id="benefit 6" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="plan 3">
+          <attr-inst name="i_bp_type" text="the existing benefit plan's type" type="text">
+            <val>
+              <text-val>Financial Benefits</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-start" text="the existing benefit plan's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_timestamp" text="the existing benefit plan's transaction date time" type="datetime">
+            <val>
+              <datetime-val>2013-12-25T09:09:09</datetime-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-end" text="the existing benefit plan's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="existingbenefitplansexistingbenefits" complete="true">
+              <ent-inst-ref ref-id="benefit 5" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="plan 1">
+          <attr-inst name="i_bp_type" text="the existing benefit plan's type" type="text">
+            <val>
+              <text-val>Food Benefits</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-start" text="the existing benefit plan's start date" type="date">
+            <val>
+              <date-val>2014-01-01</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_timestamp" text="the existing benefit plan's transaction date time" type="datetime">
+            <val>
+              <datetime-val>2014-06-17T12:12:12</datetime-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_bp_date-end" text="the existing benefit plan's end date" type="date">
+            <val>
+              <date-val>2014-12-31</date-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="existingbenefitplansexistingbenefits" complete="true">
+              <ent-inst-ref ref-id="benefit 1" />
+              <ent-inst-ref ref-id="benefit 3" />
+              <ent-inst-ref ref-id="benefit 2" />
+            </relationship-inst>
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="person-address" entity-text="the person's address">
+        <ent-inst id="person-address 2">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="false" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person-address 3">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="false" />
+          </relationship-set>
+        </ent-inst>
+        <ent-inst id="person-address 1">
+          <attr-inst name="i_per-addr_target-ID" text="the person's address's target address's unique ID" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_per-addr_type" text="the person's address's type" type="text">
+            <val>
+              <text-val>Residential</text-val>
+            </val>
+          </attr-inst>
+          <relationship-set>
+            <relationship-inst type="absencesfromthepersonsaddress" complete="false" />
+          </relationship-set>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="address" entity-text="the address">
+        <ent-inst id="address 1">
+          <attr-inst name="i_addr_state-abbr" text="the address's state" type="text">
+            <val>
+              <text-val>HI</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_addr_street" text="the address's street" type="text">
+            <val>
+              <text-val>123 Main</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="related-party" entity-text="the related party">
+        <ent-inst id="relatedparty 5">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Purchase and Prepare</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_date-end" text="the end date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2009-09-09</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 4">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Parent</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 3">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Spouse</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_date-start" text="the start date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2012-12-12</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 2">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Purchase and Prepare</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_date-end" text="the end date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2009-09-09</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 1">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Child</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Carl</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+        <ent-inst id="relatedparty 6">
+          <attr-inst name="i_rp_type" text="the related party's relationship to the person" type="text">
+            <val>
+              <text-val>Purchase and Prepare</text-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_date-end" text="the end date for the related party's relationship to the person" type="date">
+            <val>
+              <date-val>2009-09-09</date-val>
+            </val>
+          </attr-inst>
+          <attr-inst name="i_rp_target-ID" text="the related party's target person's unique ID" type="text">
+            <val>
+              <text-val>Lori</text-val>
+            </val>
+          </attr-inst>
+        </ent-inst>
+      </ent-set>
+      <ent-set entity-type="povertyguideline" entity-text="the poverty guideline" inferred="yes" identifying-attribute="rb_fpl_year-text">
+        <ent-inst id="2013" />
+        <ent-inst id="2015" />
+        <ent-inst id="2014" />
+        <ent-inst id="2016" />
+        <ent-inst id="2017" />
+      </ent-set>
+    </test-case>
+  </test-case-set>
+  <outcome-set>
+    <outcome name="so_HBEE20.00Sat20140730_b" display-name="HBEE 20.00 is satisfied" text="HBEE 20.00 is satisfied for the person (eff. 07/30/2014)" type="boolean" entity-type="person" entity-text="the person">
+      <default-change-points>
+        <unknown-val />
+      </default-change-points>
+    </outcome>
+  </outcome-set>
+</test-script>

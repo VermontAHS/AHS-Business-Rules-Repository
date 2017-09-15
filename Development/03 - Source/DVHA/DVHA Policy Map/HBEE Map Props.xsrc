@@ -1,0 +1,112 @@
+<root schema-version="1" product-version="10.4.5.40">
+  <entities>
+    <entity ref="global">
+      <attribute name="p1" type="date">
+        <text>
+          <base>the date in the current month after which changes to QHP eligibility are effective on the first day of the month after the following month</base>
+        </text>
+      </attribute>
+      <attribute name="p2" type="date">
+        <text>
+          <base>the 15th day of the current month</base>
+        </text>
+      </attribute>
+      <attribute name="p4" type="date">
+        <text>
+          <base>the last day of the application month</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="person" name="the person" containment-relationship-id="people" containment-parent-id="global">
+    </entity>
+    <entity id="program" name="the program" containment-relationship-id="personsprograms" containment-parent-id="person">
+      <attribute name="b1" type="boolean">
+        <text>
+          <base>the person met the nonfinancial requirements for the program during the month</base>
+          <parse>s(ver('10.4.6.76'),v(meet,t(simple,past,normal)),sb('the person',plural),o('the nonfinancial requirements for the program during the month'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b2" type="boolean">
+        <text>
+          <base>the program should be considered when determining the highest income standard under which the person may be determined eligible using MAGI-based methodologies</base>
+          <parse>s(ver('10.4.6.76'),v(consider+should,t(simple,modal,normal)),ob('the program',singular),o('when determining the highest income standard under which the person may be determined eligible using MAGI-based methodologies'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b3" type="boolean" public-name="si_incUnearnedGrpAllNeedBased_b">
+        <text>
+          <base>it is the case that all of the person's financial responsibility group's unearned income for the program is from sources that give assistance based on financial need</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that all of the person''s financial responsibility group''s unearned income for the program is from sources that give assistance based on financial need'))</parse>
+        </text>
+      </attribute>
+      <attribute name="b4" type="boolean">
+        <text>
+          <base>it is the case that all of the person's unearned income for the program is from sources that give assistance based on financial need</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('it',singular),o('the case that all of the person''s unearned income for the program is from sources that give assistance based on financial need'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="personsincome" name="the person's income" containment-relationship-id="personsincomes" containment-parent-id="person">
+      <attribute name="b5" type="boolean" public-name="si_incNeedBased_b">
+        <text>
+          <base>the person's income is assistance based on financial need</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s income',singular),o('assistance based on financial need'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="incomeprogram" name="the income program" containment-relationship-id="personsincomesincomeprograms" containment-parent-id="personsincome">
+    </entity>
+    <entity id="personsexpense" name="the person's expense" containment-relationship-id="personsexpenses" containment-parent-id="person">
+      <attribute name="b6" type="boolean" public-name="si_expLoan_b">
+        <text>
+          <base>the person's expense is a loan</base>
+          <parse>s(ver('10.4.6.76'),v(be,t(simple,present,normal)),sb('the person''s expense',singular),o('a loan'))</parse>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="expenseprogram" name="the expense program" containment-relationship-id="personsexpensesexpenseprograms" containment-parent-id="personsexpense">
+    </entity>
+    <entity id="personsresource" name="the person's resource" containment-relationship-id="personsresources" containment-parent-id="person">
+    </entity>
+    <entity id="resourceprogram" name="the resource program" containment-relationship-id="personsresourcesresourceprograms" containment-parent-id="personsresource">
+    </entity>
+    <entity id="groupmember" name="the group member" containment-relationship-id="personsgroupmembers" containment-parent-id="person">
+    </entity>
+    <entity id="groupmemberprogram" name="the group member program" containment-relationship-id="groupmembersgroupmemberprograms" containment-parent-id="groupmember">
+    </entity>
+    <entity id="personstransfer" name="the person's transfer" containment-parent-id="person" containment-relationship-id="personstransfers">
+      <attribute name="p3" type="date">
+        <text>
+          <base>the first day of the transfer month for the person's transfer</base>
+        </text>
+      </attribute>
+    </entity>
+    <entity id="povertyguideline" name="the poverty guideline" containment-parent-id="global" containment-relationship-id="povertyguidelines">
+      <attribute name="p5" type="date">
+        <text>
+          <base>the first day of the second month following the poverty guideline's start date</base>
+        </text>
+      </attribute>
+    </entity>
+  </entities>
+  <relationships>
+    <relationship source="global" target="person" text="the people" relationship-id="people" reverse-relationship-id="global_people_rev" reverse-text="" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="program" text="the person's programs" relationship-id="personsprograms" reverse-relationship-id="programsperson" reverse-text="the program's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsincome" text="the person's incomes" relationship-id="personsincomes" reverse-relationship-id="personsincomesperson" reverse-text="the person's income's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsincome" target="incomeprogram" text="the person's income's income programs" relationship-id="personsincomesincomeprograms" reverse-relationship-id="personsincomefortheincomeprogram" reverse-text="the person's income for the income program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsexpense" text="the person's expenses" relationship-id="personsexpenses" reverse-relationship-id="personsexpensesperson" reverse-text="the person's expense's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsexpense" target="expenseprogram" text="the person's expense's expense programs" relationship-id="personsexpensesexpenseprograms" reverse-relationship-id="personsexpensefortheexpenseprogram" reverse-text="the person's expense for the expense program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personsresource" text="the person's resources" relationship-id="personsresources" reverse-relationship-id="personsresourcesperson" reverse-text="the person's resource's person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="personsresource" target="resourceprogram" text="the person's resource's resource programs" relationship-id="personsresourcesresourceprograms" reverse-relationship-id="personsresourcefortheresourceprogram" reverse-text="the person's resource for the resource program" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="groupmember" text="the person's group members" relationship-id="personsgroupmembers" reverse-relationship-id="groupmemberscontainingperson" reverse-text="the group member's containing person" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="groupmember" target="groupmemberprogram" text="the group member's group member programs" relationship-id="groupmembersgroupmemberprograms" reverse-relationship-id="groupmemberprogramsgroupmember" reverse-text="the group member program's group member" type="OneToMany" is-computed="false" is-containment="true" public-id="" reverse-public-id="" />
+    <relationship source="person" target="personstransfer" is-containment="true" public-id="personstransfers" reverse-public-id="personstransfersperson" text="the person's transfers" relationship-id="personstransfers" reverse-relationship-id="personstransfersperson" reverse-text="the person's transfer's person" type="OneToMany" is-computed="false" />
+    <relationship source="global" target="povertyguideline" is-containment="true" public-id="povertyguidelines" reverse-public-id="global_povertyguidelines_rev" text="the poverty guidelines" relationship-id="povertyguidelines" reverse-relationship-id="global_povertyguidelines_rev" reverse-text="" type="OneToMany" is-computed="false" />
+  </relationships>
+  <rules />
+  <interactive-items>
+    <folders />
+    <screens />
+    <documents />
+  </interactive-items>
+  <rule-folders />
+</root>
